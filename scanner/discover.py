@@ -303,6 +303,38 @@ def turkish_classification(item: dict, discovery_sources: set[str], seed_repos: 
     full_name = item.get("repository") or ""
     owner = full_name.split("/", 1)[0] if "/" in full_name else ""
 
+    plugin_count = int(item.get("plugin_count") or 0)
+    tr_lang_count = sum(
+        int(x.get("turkish_language_count") or 0)
+        for x in item.get("plugin_lists", [])
+    )
+    language_total = sum(
+        sum(int(v or 0) for v in (x.get("languages") or {}).values())
+        for x in item.get("plugin_lists", [])
+    )
+    tr_share = (tr_lang_count / language_total) if language_total else 0.0
+
+    repo_text = " ".join([
+        item.get("name") or "",
+        item.get("description") or "",
+        item.get("repository") or "",
+    ]).lower()
+
+    explicit_repo_markers = (
+        "türk", "turk", "türkiye", "turkiye", "kekik",
+        "sinetech.tr", "türkçe", "turkce",
+    )
+    explicit_matches = sorted({m for m in explicit_repo_markers if m in repo_text})
+
+    source_repos = set(item.get("plugin_source_repositories") or [])
+    turkish_source = any(
+        ("kekik" in x.lower()) or ("wio" in x.lower()) or ("turk" in x.lower())
+        for x in source_repos
+    )
+
+    # Scores are kept for sorting/explanation, but inclusion uses the stricter
+    # evidence gate below. This prevents global mixed repos with a few TR
+    # plugins from entering the app feed.
     if full_name in seed_repos:
         score += 100
         reasons.append("trusted-seed")
@@ -311,49 +343,54 @@ def turkish_classification(item: dict, discovery_sources: set[str], seed_repos: 
         score += 35
         reasons.append("trusted-turkish-owner")
 
-    tr_lang_count = sum(
-        int(x.get("turkish_language_count") or 0)
-        for x in item.get("plugin_lists", [])
-    )
     if tr_lang_count:
         score += min(100, 60 + tr_lang_count)
-        reasons.append(f"plugins-language-tr:{tr_lang_count}")
+        reasons.append(f"plugins-language-tr:{tr_lang_count}/{language_total or plugin_count}")
 
-    text_parts = [
-        item.get("name") or "",
-        item.get("description") or "",
-        item.get("repository") or "",
-    ]
+    if explicit_matches:
+        score += 60
+        reasons.append("explicit-turkish-repo:" + ",".join(explicit_matches[:6]))
+
+    text_parts = [repo_text]
     for p in item.get("plugin_lists", []):
         text_parts.append(p.get("text_sample") or "")
     haystack = " ".join(text_parts).lower()
-
     matched = sorted({marker for marker in TR_MARKERS if marker in haystack})
     if matched:
-        score += min(70, 25 + len(matched) * 8)
-        reasons.append("turkish-markers:" + ",".join(matched[:8]))
+        score += min(50, 10 + len(matched) * 5)
+        reasons.append("turkish-content-markers:" + ",".join(matched[:8]))
 
-    if any(
-        source.startswith("repo-search:") and
-        any(k in source.lower() for k in ("türkçe", "turkish", "eklenti", "kekik"))
-        for source in discovery_sources
-    ):
-        score += 20
-        reasons.append("turkish-search-hit")
-
-    # A repo using a known Turkish ecosystem plugin list is relevant even if
-    # its own README/description is sparse.
-    source_repos = set(item.get("plugin_source_repositories") or [])
-    if any(
-        ("kekik" in x.lower()) or ("wio" in x.lower()) or ("turk" in x.lower())
-        for x in source_repos
-    ):
+    if turkish_source:
         score += 35
         reasons.append("turkish-plugin-source")
 
+    search_hit = any(
+        source.startswith("repo-search:") and
+        any(k in source.lower() for k in ("türkçe", "turkish", "eklenti", "kekik"))
+        for source in discovery_sources
+    )
+    if search_hit:
+        score += 10
+        reasons.append("turkish-search-hit")
+
+    strong_language = tr_lang_count > 0 and tr_share >= 0.50
+    explicit_repo = bool(explicit_matches)
+    trusted = full_name in seed_repos or owner in seed_owners
+
+    is_turkish = trusted or strong_language or explicit_repo or turkish_source
+
+    # Explicitly keep broad multi-language repos out unless there is another
+    # strong Turkish-repository signal.
+    if language_total and tr_lang_count and tr_share < 0.20 and not (trusted or explicit_repo or turkish_source):
+        is_turkish = False
+        reasons.append(f"excluded-low-tr-share:{tr_share:.2f}")
+
     return {
-        "is_turkish": score >= 50,
+        "is_turkish": is_turkish,
         "score": score,
+        "tr_language_count": tr_lang_count,
+        "language_total": language_total,
+        "tr_share": round(tr_share, 4),
         "reasons": reasons,
     }
 
