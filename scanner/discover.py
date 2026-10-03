@@ -519,6 +519,112 @@ def compact_for_output(item: dict):
     return out
 
 
+def parse_iso(value: str | None):
+    if not value:
+        return datetime.min.replace(tzinfo=timezone.utc)
+    try:
+        return datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError:
+        return datetime.min.replace(tzinfo=timezone.utc)
+
+
+def fetch_plugin_entries(url: str):
+    raw, _ = text_get(url)
+    if not raw:
+        return []
+    try:
+        payload = json.loads(raw)
+    except json.JSONDecodeError:
+        return []
+    if isinstance(payload, list):
+        return [x for x in payload if isinstance(x, dict)]
+    if isinstance(payload, dict) and isinstance(payload.get("plugins"), list):
+        return [x for x in payload["plugins"] if isinstance(x, dict)]
+    return []
+
+
+def build_cloudstream_bundle(app_ready: list[dict], seed_repos: set[str]):
+    candidates: dict[str, list[tuple[dict, dict]]] = {}
+
+    for repo_item in app_ready:
+        explicit_repo = any(
+            reason.startswith("explicit-turkish-repo:")
+            for reason in (repo_item.get("turkish", {}).get("reasons") or [])
+        )
+        trusted_repo = repo_item.get("repository") in seed_repos
+
+        for plist in repo_item.get("plugin_lists", []):
+            url = plist.get("url")
+            if not isinstance(url, str):
+                continue
+            try:
+                entries = fetch_plugin_entries(url)
+            except requests.RequestException:
+                continue
+
+            for plugin in entries:
+                lang = normalize_language(plugin.get("language"))
+                # Normal rule: only Turkish plugins. If the plugin has no language
+                # metadata, keep it only when its source repo is explicitly Turkish
+                # or trusted.
+                if lang not in TR_LANGUAGE_VALUES:
+                    if lang is not None or not (explicit_repo or trusted_repo):
+                        continue
+
+                key = (
+                    str(plugin.get("internalName") or "").strip()
+                    or str(plugin.get("name") or "").strip()
+                    or str(plugin.get("url") or "").strip()
+                )
+                if not key:
+                    continue
+                candidates.setdefault(key, []).append((plugin, repo_item))
+
+    merged = []
+    for key, variants in candidates.items():
+        def rank(pair):
+            plugin, repo_item = pair
+            version = plugin.get("version")
+            try:
+                version_num = int(version)
+            except (TypeError, ValueError):
+                version_num = -1
+            trusted = 1 if repo_item.get("repository") in seed_repos else 0
+            fresh = parse_iso(repo_item.get("last_plugins_update")).timestamp()
+            tr_score = int(repo_item.get("turkish", {}).get("score") or 0)
+            return (version_num, fresh, trusted, tr_score)
+
+        plugin, source_repo = max(variants, key=rank)
+        out = dict(plugin)
+        out["_csrepoSource"] = source_repo.get("repository")
+        merged.append(out)
+
+    merged.sort(key=lambda x: (
+        str(x.get("name") or x.get("internalName") or "").lower(),
+        str(x.get("internalName") or "").lower(),
+    ))
+
+    # Remove our audit-only field before publishing to CloudStream.
+    published = []
+    for plugin in merged:
+        clean = dict(plugin)
+        clean.pop("_csrepoSource", None)
+        published.append(clean)
+
+    repo_manifest = {
+        "name": "Emir CloudStream",
+        "description": "Otomatik doğrulanan ve tekilleştirilen Türkçe CloudStream eklenti deposu.",
+        "manifestVersion": 1,
+        "pluginLists": [
+            "https://raw.githubusercontent.com/kodlama155-ctrl/csrepo/main/plugins.json"
+        ],
+    }
+
+    save_json(ROOT / "plugins.json", published)
+    save_json(ROOT / "repo.json", repo_manifest)
+    return len(published)
+
+
 def main():
     DATA.mkdir(parents=True, exist_ok=True)
     old_tr = load_json(DATA / "repos.json", [])
@@ -571,6 +677,8 @@ def main():
     # Application feed: only active, non-empty and reachable Turkish repos.
     app_ready = [x for x in turkish if x.get("status") == "active" and (x.get("plugin_count") or 0) > 0]
 
+    published_plugin_count = build_cloudstream_bundle(app_ready, seed_repos)
+
     changes = summarize_changes(old_tr, app_ready)
     save_json(DATA / "candidates.json", sorted(candidates))
     save_json(DATA / "repos.json", app_ready)
@@ -582,6 +690,7 @@ def main():
         "verified_count": len(turkish) + len(global_other),
         "turkish_count": len(turkish),
         "app_ready_count": len(app_ready),
+        "published_plugin_count": published_plugin_count,
         "global_count": len(global_other),
         "changes": changes,
     })
@@ -589,6 +698,7 @@ def main():
     print(
         f"[done] verified={len(turkish) + len(global_other)} "
         f"turkish={len(turkish)} app_ready={len(app_ready)} "
+        f"published_plugins={published_plugin_count} "
         f"global={len(global_other)} changes={len(changes)}"
     )
 
