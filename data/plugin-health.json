@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-03T12:50:08Z",
+  "generated_at": "2026-10-03T13:28:55Z",
   "candidate_plugin_count": 289,
   "healthy_plugin_count": 282,
   "rejected_plugin_count": 7,
-  "fallback_used_count": 14,
+  "fallback_used_count": 12,
   "rejection_attempt_counts": {
-    "http-404": 23,
+    "http-404": 21,
     "status-down": 53
   },
   "checks": {
@@ -306,14 +306,14 @@
       "fallback_used": true,
       "attempts": [
         {
-          "repository": "adilem/cs-kraptor",
-          "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/AsyaMinik.cs3",
+          "repository": "aytzey/cs-kraptor",
+          "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/AsyaMinik.cs3",
           "version": 17,
           "result": "status-down"
         },
         {
-          "repository": "aytzey/cs-kraptor",
-          "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/AsyaMinik.cs3",
+          "repository": "adilem/cs-kraptor",
+          "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/AsyaMinik.cs3",
           "version": 17,
           "result": "status-down"
         },
@@ -804,7 +804,7 @@
       "internal_name": "DDizi - Latte",
       "name": "DDizi - Latte",
       "status": "healthy",
-      "repository": "CennetCehennem/Sinetech",
+      "repository": "GitLatte/Sinetech",
       "url": "https://raw.githubusercontent.com/GitLatte/Sinetech/builds/DDizi - Latte.cs3",
       "version": 4,
       "size": 23749,
@@ -924,7 +924,7 @@
       "internal_name": "DiziFun - Latte",
       "name": "DiziFun - Latte",
       "status": "healthy",
-      "repository": "CennetCehennem/Sinetech",
+      "repository": "GitLatte/Sinetech",
       "url": "https://raw.githubusercontent.com/GitLatte/Sinetech/builds/DiziFun - Latte.cs3",
       "version": 5,
       "size": 24355,
@@ -1526,8 +1526,8 @@
       "internal_name": "Filmmirasım",
       "name": "Filmmirasım",
       "status": "healthy",
-      "repository": "hrtestingx/hrcsrepo",
-      "url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepo/builds/Filmmirasım.cs3",
+      "repository": "ctnkyaumt/cstest",
+      "url": "https://raw.githubusercontent.com/ctnkyaumt/cstest/builds/Filmmirasım.cs3",
       "version": 5,
       "size": 15162,
       "hash_checked": true,
@@ -1707,7 +1707,7 @@
       "internal_name": "GoFilmIzle - Latte",
       "name": "GoFilmIzle - Latte",
       "status": "healthy",
-      "repository": "CennetCehennem/Sinetech",
+      "repository": "GitLatte/Sinetech",
       "url": "https://raw.githubusercontent.com/GitLatte/Sinetech/builds/GoFilmIzle - Latte.cs3",
       "version": 3,
       "size": 27666,
@@ -1763,13 +1763,13 @@
           "result": "status-down"
         },
         {
-          "repository": "Hakanapp1934/hdfilmpro",
+          "repository": "neoser1984/neowatch",
           "url": "https://raw.githubusercontent.com/keyiflerolsun/Kekik-cloudstream/builds/GolgeTV.cs3",
           "version": 4,
           "result": "http-404"
         },
         {
-          "repository": "ahmetsefayuce71-hub/Kekik-cloudstream",
+          "repository": "Hakanapp1934/hdfilmpro",
           "url": "https://raw.githubusercontent.com/keyiflerolsun/Kekik-cloudstream/builds/GolgeTV.cs3",
           "version": 4,
           "result": "http-404"
@@ -1781,13 +1781,13 @@
           "result": "http-404"
         },
         {
-          "repository": "eycommas/Kekik-cloudstream-b",
+          "repository": "ahmetsefayuce71-hub/Kekik-cloudstream",
           "url": "https://raw.githubusercontent.com/keyiflerolsun/Kekik-cloudstream/builds/GolgeTV.cs3",
           "version": 4,
           "result": "http-404"
         },
         {
-          "repository": "neoser1984/neowatch",
+          "repository": "eycommas/Kekik-cloudstream-b",
           "url": "https://raw.githubusercontent.com/keyiflerolsun/Kekik-cloudstream/builds/GolgeTV.cs3",
           "version": 4,
           "result": "http-404"
@@ -1921,18 +1921,6 @@
       "attempts": null
     },
     {
-      "internal_name": "HDFilmIzle",
-      "name": "HDFilmIzle",
-      "status": "healthy",
-      "repository": "Ripplay/cloudstream-repo",
-      "url": "https://raw.githubusercontent.com/Ripplay/cloudstream-repo/builds/HDFilmIzle.cs3",
-      "version": 8,
-      "size": 40634,
-      "hash_checked": true,
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
       "internal_name": "HDFilmizle",
       "name": "HDFilmizle",
       "status": "healthy",
@@ -1940,6 +1928,18 @@
       "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/HDFilmizle.cs3",
       "version": 26,
       "size": 61447,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "HDFilmIzle",
+      "name": "HDFilmIzle",
+      "status": "healthy",
+      "repository": "Ripplay/cloudstream-repo",
+      "url": "https://raw.githubusercontent.com/Ripplay/cloudstream-repo/builds/HDFilmIzle.cs3",
+      "version": 8,
+      "size": 40634,
       "hash_checked": true,
       "fallback_used": false,
       "attempts": null
@@ -2200,7 +2200,7 @@
       "internal_name": "KICK Türkiye - Latte",
       "name": "KICK Türkiye - Latte",
       "status": "healthy",
-      "repository": "CennetCehennem/Sinetech",
+      "repository": "GitLatte/Sinetech",
       "url": "https://raw.githubusercontent.com/GitLatte/Sinetech/builds/KICK Türkiye - Latte.cs3",
       "version": 3,
       "size": 26613,
@@ -2440,7 +2440,7 @@
       "internal_name": "myway TV - Latte",
       "name": "myway TV - Latte",
       "status": "healthy",
-      "repository": "CennetCehennem/Sinetech",
+      "repository": "GitLatte/Sinetech",
       "url": "https://raw.githubusercontent.com/GitLatte/Sinetech/builds/myway TV - Latte.cs3",
       "version": 3,
       "size": 19932,
@@ -2452,7 +2452,7 @@
       "internal_name": "Müzik TV ve Radyo - Latte",
       "name": "Müzik TV ve Radyo - Latte",
       "status": "healthy",
-      "repository": "CennetCehennem/Sinetech",
+      "repository": "GitLatte/Sinetech",
       "url": "https://raw.githubusercontent.com/GitLatte/Sinetech/builds/Müzik TV ve Radyo - Latte.cs3",
       "version": 3,
       "size": 23377,
@@ -2596,7 +2596,7 @@
       "internal_name": "powerboard Dizi - Latte",
       "name": "powerboard Dizi - Latte",
       "status": "healthy",
-      "repository": "CennetCehennem/Sinetech",
+      "repository": "GitLatte/Sinetech",
       "url": "https://raw.githubusercontent.com/GitLatte/Sinetech/builds/powerboard Dizi - Latte.cs3",
       "version": 6,
       "size": 34237,
@@ -2608,7 +2608,7 @@
       "internal_name": "powerboard Sinema - Latte",
       "name": "powerboard Sinema - Latte",
       "status": "healthy",
-      "repository": "CennetCehennem/Sinetech",
+      "repository": "GitLatte/Sinetech",
       "url": "https://raw.githubusercontent.com/GitLatte/Sinetech/builds/powerboard Sinema - Latte.cs3",
       "version": 5,
       "size": 38795,
@@ -2901,21 +2901,8 @@
       "version": 33,
       "size": 77299,
       "hash_checked": true,
-      "fallback_used": true,
-      "attempts": [
-        {
-          "repository": "adilem/cs-kraptor",
-          "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/SineWix.cs3",
-          "version": 33,
-          "result": "http-404"
-        },
-        {
-          "repository": "aytzey/cs-kraptor",
-          "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/SineWix.cs3",
-          "version": 33,
-          "result": "ok"
-        }
-      ]
+      "fallback_used": false,
+      "attempts": null
     },
     {
       "internal_name": "Sinezy",
@@ -3344,7 +3331,7 @@
       "internal_name": "Tv Bahçesi - Latte",
       "name": "Tv Bahçesi - Latte",
       "status": "healthy",
-      "repository": "CennetCehennem/Sinetech",
+      "repository": "GitLatte/Sinetech",
       "url": "https://raw.githubusercontent.com/GitLatte/Sinetech/builds/Tv Bahçesi - Latte.cs3",
       "version": 3,
       "size": 20365,
@@ -3476,7 +3463,7 @@
       "internal_name": "WebDramaTurkey - Latte",
       "name": "WebDramaTurkey - Latte",
       "status": "healthy",
-      "repository": "CennetCehennem/Sinetech",
+      "repository": "GitLatte/Sinetech",
       "url": "https://raw.githubusercontent.com/GitLatte/Sinetech/builds/WebDramaTurkey - Latte.cs3",
       "version": 3,
       "size": 32680,
@@ -3763,6 +3750,18 @@
       "attempts": null
     },
     {
+      "internal_name": "Youtube",
+      "name": "Youtube",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/Youtube.cs3",
+      "version": 39,
+      "size": 109126,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
       "internal_name": "YouTube",
       "name": "YouTube",
       "status": "healthy",
@@ -3775,35 +3774,10 @@
       "attempts": null
     },
     {
-      "internal_name": "Youtube",
-      "name": "Youtube",
-      "status": "healthy",
-      "repository": "aytzey/cs-kraptor",
-      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/Youtube.cs3",
-      "version": 39,
-      "size": 109126,
-      "hash_checked": true,
-      "fallback_used": true,
-      "attempts": [
-        {
-          "repository": "adilem/cs-kraptor",
-          "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/Youtube.cs3",
-          "version": 39,
-          "result": "http-404"
-        },
-        {
-          "repository": "aytzey/cs-kraptor",
-          "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/Youtube.cs3",
-          "version": 39,
-          "result": "ok"
-        }
-      ]
-    },
-    {
       "internal_name": "YouTube Özel - Latte",
       "name": "YouTube Özel - Latte",
       "status": "healthy",
-      "repository": "CennetCehennem/Sinetech",
+      "repository": "GitLatte/Sinetech",
       "url": "https://raw.githubusercontent.com/GitLatte/Sinetech/builds/YouTube Özel - Latte.cs3",
       "version": 1,
       "size": 13644,
@@ -3846,12 +3820,6 @@
           "result": "status-down"
         },
         {
-          "repository": "aliredpr3/KekikCloud-CS",
-          "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/IfsaLog.cs3",
-          "version": 3,
-          "result": "status-down"
-        },
-        {
           "repository": "burak-ayd/cs-Kekik-old",
           "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/IfsaLog.cs3",
           "version": 3,
@@ -3859,6 +3827,12 @@
         },
         {
           "repository": "fsamet/cs-Kekik",
+          "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/IfsaLog.cs3",
+          "version": 3,
+          "result": "status-down"
+        },
+        {
+          "repository": "aliredpr3/KekikCloud-CS",
           "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/IfsaLog.cs3",
           "version": 3,
           "result": "status-down"
