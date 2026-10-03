@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import math
 import os
 import re
 import time
@@ -315,6 +316,7 @@ def plugin_list_info(url: str):
         return {
             "url": url, "reachable": False, "count": 0, "updated_at": None,
             "languages": {}, "turkish_language_count": 0, "text_sample": "",
+            "declared_down_count": 0, "declared_status_count": 0,
         }
     try:
         payload = json.loads(raw)
@@ -322,6 +324,7 @@ def plugin_list_info(url: str):
         return {
             "url": url, "reachable": False, "count": 0, "updated_at": None,
             "languages": {}, "turkish_language_count": 0, "text_sample": "",
+            "declared_down_count": 0, "declared_status_count": 0,
         }
 
     if isinstance(payload, list):
@@ -333,12 +336,21 @@ def plugin_list_info(url: str):
 
     languages = Counter()
     text_bits = []
+    declared_down_count = 0
+    declared_status_count = 0
     for p in plugins:
         if not isinstance(p, dict):
             continue
         lang = normalize_language(p.get("language"))
         if lang:
             languages[lang] += 1
+        try:
+            plugin_status = int(p.get("status"))
+            declared_status_count += 1
+            if plugin_status == 0:
+                declared_down_count += 1
+        except (TypeError, ValueError):
+            pass
         for field in ("name", "internalName", "description"):
             value = p.get(field)
             if isinstance(value, str):
@@ -359,6 +371,8 @@ def plugin_list_info(url: str):
         "source_repository": parsed[0] if parsed else None,
         "languages": dict(sorted(languages.items())),
         "turkish_language_count": tr_count,
+        "declared_down_count": declared_down_count,
+        "declared_status_count": declared_status_count,
         "text_sample": " ".join(text_bits[:80])[:5000],
     }
 
@@ -487,6 +501,7 @@ def inspect_repo(full_name: str, discovery_sources: set[str]):
             plugin_infos.append({
                 "url": str(url), "reachable": False, "count": 0, "updated_at": None,
                 "languages": {}, "turkish_language_count": 0, "text_sample": "",
+            "declared_down_count": 0, "declared_status_count": 0,
             })
             continue
         try:
@@ -495,9 +510,12 @@ def inspect_repo(full_name: str, discovery_sources: set[str]):
             plugin_infos.append({
                 "url": url, "reachable": False, "count": 0, "updated_at": None,
                 "languages": {}, "turkish_language_count": 0, "text_sample": "",
+            "declared_down_count": 0, "declared_status_count": 0,
             })
 
     plugin_count = sum(x.get("count", 0) for x in plugin_infos)
+    declared_down_count = sum(int(x.get("declared_down_count") or 0) for x in plugin_infos)
+    declared_status_count = sum(int(x.get("declared_status_count") or 0) for x in plugin_infos)
     reachable = bool(plugin_infos) and all(x.get("reachable") for x in plugin_infos)
     manifest_updated = latest_commit_for_path(full_name, branch, "repo.json")
     plugin_dates = [x.get("updated_at") for x in plugin_infos if x.get("updated_at")]
@@ -525,6 +543,10 @@ def inspect_repo(full_name: str, discovery_sources: set[str]):
         "manifest_version": manifest.get("manifestVersion", 1),
         "plugin_lists": plugin_infos,
         "plugin_count": plugin_count,
+        "declared_down_count": declared_down_count,
+        "declared_status_count": declared_status_count,
+        "github_stars": int(meta.get("stargazers_count") or 0),
+        "github_forks": int(meta.get("forks_count") or 0),
         "status": status,
         "archived": bool(meta.get("archived")),
         "fork": bool(meta.get("fork")),
@@ -593,6 +615,93 @@ def parse_iso(value: str | None):
         return datetime.fromisoformat(value.replace("Z", "+00:00"))
     except ValueError:
         return datetime.min.replace(tzinfo=timezone.utc)
+
+
+def calculate_repo_score(item: dict):
+    """
+    0-100 ranking score. This is a technical/reliability ordering aid, not a
+    claim that one repository is objectively "better".
+    """
+    plugin_count = int(item.get("plugin_count") or 0)
+    down_count = int(item.get("declared_down_count") or 0)
+
+    # 30 pts: repository's own plugin metadata should not mark entries down.
+    if plugin_count > 0:
+        declared_health_ratio = max(0.0, min(1.0, 1.0 - (down_count / plugin_count)))
+    else:
+        declared_health_ratio = 0.0
+    health_points = 30.0 * declared_health_ratio
+
+    # 25 pts: recent maintenance. Use the freshest useful repository signal.
+    dates = [
+        parse_iso(item.get("last_plugins_update")),
+        parse_iso(item.get("last_manifest_update")),
+        parse_iso(item.get("last_repo_push")),
+    ]
+    freshest = max(dates)
+    if freshest.year <= 1:
+        freshness_days = None
+        freshness_points = 0.0
+    else:
+        freshness_days = max(0.0, (datetime.now(timezone.utc) - freshest).total_seconds() / 86400)
+        if freshness_days <= 7:
+            freshness_points = 25.0
+        elif freshness_days <= 30:
+            freshness_points = 22.0
+        elif freshness_days <= 90:
+            freshness_points = 17.0
+        elif freshness_days <= 180:
+            freshness_points = 12.0
+        elif freshness_days <= 365:
+            freshness_points = 7.0
+        else:
+            freshness_points = 2.0
+
+    # 15 pts: prefer repositories that host their own plugin list/artifacts.
+    originality_points = 0.0
+    if item.get("self_contained"):
+        originality_points += 10.0
+    if not item.get("fork"):
+        originality_points += 5.0
+
+    # 15 pts: modest GitHub popularity signal. Log scaling prevents stars from
+    # dominating the technical signals.
+    stars = max(0, int(item.get("github_stars") or 0))
+    forks = max(0, int(item.get("github_forks") or 0))
+    stars_points = min(10.0, 10.0 * math.log1p(stars) / math.log(101))
+    forks_points = min(5.0, 5.0 * math.log1p(forks) / math.log(51))
+    popularity_points = stars_points + forks_points
+
+    # 10 pts: useful breadth, capped at 50 plugins so giant mirrors do not win.
+    coverage_points = min(10.0, (plugin_count / 50.0) * 10.0)
+
+    # 5 pts: Turkish focus inside this Turkish catalogue.
+    tr_share = float(item.get("turkish", {}).get("tr_share") or 0.0)
+    turkish_focus_points = 5.0 * max(0.0, min(1.0, tr_share))
+
+    components = {
+        "declared_health": round(health_points, 1),
+        "freshness": round(freshness_points, 1),
+        "originality": round(originality_points, 1),
+        "github_popularity": round(popularity_points, 1),
+        "coverage": round(coverage_points, 1),
+        "turkish_focus": round(turkish_focus_points, 1),
+    }
+    score = round(sum(components.values()), 1)
+
+    return {
+        "score": score,
+        "components": components,
+        "metrics": {
+            "declared_down_count": down_count,
+            "plugin_count": plugin_count,
+            "freshness_days": round(freshness_days, 1) if freshness_days is not None else None,
+            "github_stars": stars,
+            "github_forks": forks,
+            "fork": bool(item.get("fork")),
+            "self_contained": bool(item.get("self_contained")),
+        },
+    }
 
 
 def fetch_plugin_entries(url: str):
@@ -886,6 +995,10 @@ def build_repo_catalog(app_ready: list[dict], published_plugin_count: int, seed_
             "repo_url": repo_url,
             "install_url": cloudstream_install_url(repo_url),
             "plugin_count": item.get("plugin_count") or 0,
+            "repo_score": item.get("repo_score") or 0,
+            "repo_score_details": item.get("repo_score_details") or {},
+            "github_stars": item.get("github_stars") or 0,
+            "github_forks": item.get("github_forks") or 0,
             "last_plugins_update": item.get("last_plugins_update"),
             "fork": bool(item.get("fork")),
             "parent": item.get("parent"),
@@ -896,8 +1009,8 @@ def build_repo_catalog(app_ready: list[dict], published_plugin_count: int, seed_
         })
 
     repos.sort(key=lambda x: (
+        -(x.get("repo_score") or 0),
         not x.get("trusted_seed", False),
-        -(x.get("turkish_score") or 0),
         -(x.get("plugin_count") or 0),
         str(x.get("name") or "").lower(),
     ))
@@ -949,7 +1062,7 @@ def build_repo_catalog(app_ready: list[dict], published_plugin_count: int, seed_
             flags.append("ana kaynak")
         if item.get("fork"):
             flags.append("fork")
-        suffix = f" — {item['plugin_count']} eklenti"
+        suffix = f" — RepoScore {item.get('repo_score', 0):.1f}/100 — {item['plugin_count']} eklenti"
         if flags:
             suffix += " — " + ", ".join(flags)
         lines.append(f"- [{item['name']}]({item['install_url']}){suffix}")
@@ -981,6 +1094,9 @@ def main():
 
             cls = turkish_classification(item, sources, seed_repos, seed_owners)
             item["turkish"] = cls
+            ranking = calculate_repo_score(item)
+            item["repo_score"] = ranking["score"]
+            item["repo_score_details"] = ranking
             clean = compact_for_output(item)
 
             if cls["is_turkish"]:
@@ -997,6 +1113,7 @@ def main():
 
     sort_key = lambda x: (
         x.get("status") != "active",
+        -(x.get("repo_score") or 0),
         -(x.get("turkish", {}).get("score") or 0),
         x.get("name") or "",
         x.get("repository") or "",
@@ -1017,6 +1134,18 @@ def main():
     changes = summarize_changes(old_tr, app_ready)
     save_json(DATA / "candidates.json", sorted(candidates))
     save_json(DATA / "repos.json", app_ready)
+    save_json(DATA / "ranking.json", [
+        {
+            "rank": i,
+            "repository": x.get("repository"),
+            "name": x.get("name"),
+            "repo_score": x.get("repo_score"),
+            "repo_score_details": x.get("repo_score_details"),
+            "plugin_count": x.get("plugin_count"),
+            "status": x.get("status"),
+        }
+        for i, x in enumerate(app_ready, 1)
+    ])
     save_json(DATA / "turkish_all.json", turkish)
     save_json(DATA / "global.json", global_other)
     save_json(DATA / "changes.json", {
