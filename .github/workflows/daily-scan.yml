@@ -43,12 +43,12 @@ jobs:
 
       - name: Commit scan results
         run: |
-          if git diff --quiet -- data/repos.json data/global.json data/changes.json; then
+          if git diff --quiet -- data/repos.json data/turkish_all.json data/global.json data/candidates.json data/changes.json; then
             echo "No changes."
             exit 0
           fi
           git config user.name "csrepo-bot"
           git config user.email "csrepo-bot@users.noreply.github.com"
-          git add data/repos.json data/global.json data/changes.json
+          git add data/repos.json data/turkish_all.json data/global.json data/candidates.json data/changes.json
           git commit -m "chore: update CloudStream repo scan"
           git push
