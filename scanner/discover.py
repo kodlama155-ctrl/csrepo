@@ -451,6 +451,7 @@ def inspect_repo(full_name: str, discovery_sources: set[str]):
     return {
         "name": manifest.get("name"),
         "description": manifest.get("description") or meta.get("description"),
+        "icon_url": manifest.get("iconUrl"),
         "repository": full_name,
         "repository_url": meta.get("html_url"),
         "repo_url": repo_json_url,
@@ -625,6 +626,118 @@ def build_cloudstream_bundle(app_ready: list[dict], seed_repos: set[str]):
     return len(published)
 
 
+def cloudstream_install_url(url: str) -> str:
+    if url.startswith("https://"):
+        return "cloudstreamrepo://" + url[len("https://"):]
+    return url
+
+
+def build_repo_catalog(app_ready: list[dict], published_plugin_count: int, seed_repos: set[str]):
+    bundle_url = "https://raw.githubusercontent.com/kodlama155-ctrl/csrepo/main/repo.json"
+    generated_at = now_iso()
+
+    bundle = {
+        "id": "emir-cloudstream-all",
+        "type": "bundle",
+        "name": "Emir CloudStream — Hepsi Bir Arada",
+        "description": "Aktif Türkçe CloudStream eklentilerinin otomatik doğrulanan ve tekilleştirilen birleşik deposu.",
+        "repo_url": bundle_url,
+        "install_url": cloudstream_install_url(bundle_url),
+        "plugin_count": published_plugin_count,
+        "source_repository_count": len(app_ready),
+        "status": "active",
+        "recommended": True,
+    }
+
+    repos = []
+    for item in app_ready:
+        repo_url = item.get("repo_url")
+        if not isinstance(repo_url, str) or not repo_url.startswith(("https://", "http://")):
+            continue
+        repos.append({
+            "id": item.get("repository"),
+            "type": "repository",
+            "name": item.get("name") or item.get("repository"),
+            "description": item.get("description"),
+            "icon_url": item.get("icon_url"),
+            "repository": item.get("repository"),
+            "repository_url": item.get("repository_url"),
+            "repo_url": repo_url,
+            "install_url": cloudstream_install_url(repo_url),
+            "plugin_count": item.get("plugin_count") or 0,
+            "last_plugins_update": item.get("last_plugins_update"),
+            "fork": bool(item.get("fork")),
+            "parent": item.get("parent"),
+            "self_contained": bool(item.get("self_contained")),
+            "trusted_seed": item.get("repository") in seed_repos,
+            "turkish_score": item.get("turkish", {}).get("score") or 0,
+            "status": item.get("status"),
+        })
+
+    repos.sort(key=lambda x: (
+        not x.get("trusted_seed", False),
+        -(x.get("turkish_score") or 0),
+        -(x.get("plugin_count") or 0),
+        str(x.get("name") or "").lower(),
+    ))
+
+    catalog = {
+        "name": "Emir CloudStream — Depoları Seç",
+        "description": "Hepsi Bir Arada deposunu veya istediğiniz Türkçe CloudStream depolarını tek tek seçebilirsiniz.",
+        "generated_at": generated_at,
+        "sections": [
+            {
+                "id": "all",
+                "title": "Hepsi Bir Arada",
+                "items": [bundle],
+            },
+            {
+                "id": "individual",
+                "title": "Tek Tek Depolar",
+                "items": repos,
+            },
+        ],
+    }
+    save_json(DATA / "catalog.json", catalog)
+
+    # Simple official-style repository database: first our bundle, then original repos.
+    repo_urls = [bundle_url]
+    seen = {bundle_url}
+    for item in repos:
+        url = item["repo_url"]
+        if url not in seen:
+            seen.add(url)
+            repo_urls.append(url)
+    save_json(ROOT / "repos-db.json", repo_urls)
+
+    lines = [
+        "# Emir CloudStream — Depoları Seç",
+        "",
+        "İsterseniz tüm Türkçe eklentileri tek depoda, isterseniz kaynak depoları ayrı ayrı ekleyebilirsiniz.",
+        "",
+        "## Hepsi Bir Arada",
+        "",
+        f"- [Emir CloudStream — Hepsi Bir Arada]({bundle['install_url']}) — {published_plugin_count} tekilleştirilmiş eklenti",
+        "",
+        "## Tek Tek Depolar",
+        "",
+    ]
+    for item in repos:
+        flags = []
+        if item.get("trusted_seed"):
+            flags.append("ana kaynak")
+        if item.get("fork"):
+            flags.append("fork")
+        suffix = f" — {item['plugin_count']} eklenti"
+        if flags:
+            suffix += " — " + ", ".join(flags)
+        lines.append(f"- [{item['name']}]({item['install_url']}){suffix}")
+    lines.append("")
+    (ROOT / "catalog.md").write_text("\n".join(lines), encoding="utf-8")
+
+    return len(repos)
+
+
 def main():
     DATA.mkdir(parents=True, exist_ok=True)
     old_tr = load_json(DATA / "repos.json", [])
@@ -678,6 +791,7 @@ def main():
     app_ready = [x for x in turkish if x.get("status") == "active" and (x.get("plugin_count") or 0) > 0]
 
     published_plugin_count = build_cloudstream_bundle(app_ready, seed_repos)
+    catalog_repo_count = build_repo_catalog(app_ready, published_plugin_count, seed_repos)
 
     changes = summarize_changes(old_tr, app_ready)
     save_json(DATA / "candidates.json", sorted(candidates))
@@ -691,6 +805,7 @@ def main():
         "turkish_count": len(turkish),
         "app_ready_count": len(app_ready),
         "published_plugin_count": published_plugin_count,
+        "catalog_repo_count": catalog_repo_count,
         "global_count": len(global_other),
         "changes": changes,
     })
@@ -699,6 +814,7 @@ def main():
         f"[done] verified={len(turkish) + len(global_other)} "
         f"turkish={len(turkish)} app_ready={len(app_ready)} "
         f"published_plugins={published_plugin_count} "
+        f"catalog_repos={catalog_repo_count} "
         f"global={len(global_other)} changes={len(changes)}"
     )
 
