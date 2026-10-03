@@ -1,0 +1,48 @@
+name: CloudStream Repo Scan
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 5 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cloudstream-repo-scan
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Scan repositories
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scanner/discover.py
+
+      - name: Commit scan results
+        run: |
+          if git diff --quiet -- data/repos.json data/changes.json; then
+            echo "No changes."
+            exit 0
+          fi
+          git config user.name "csrepo-bot"
+          git config user.email "csrepo-bot@users.noreply.github.com"
+          git add data/repos.json data/changes.json
+          git commit -m "chore: update CloudStream repo scan"
+          git push
