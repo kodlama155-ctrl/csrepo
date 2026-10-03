@@ -16,7 +16,7 @@ permissions:
 
 concurrency:
   group: cloudstream-repo-scan
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   scan:
