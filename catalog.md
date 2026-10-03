@@ -4,7 +4,7 @@
 
 ## Hepsi Bir Arada
 
-- [Emir CloudStream — Hepsi Bir Arada](cloudstreamrepo://raw.githubusercontent.com/kodlama155-ctrl/csrepo/main/repo.json) — 261 tekilleştirilmiş eklenti
+- [Emir CloudStream — Hepsi Bir Arada](cloudstreamrepo://raw.githubusercontent.com/kodlama155-ctrl/csrepo/main/repo.json) — 249 tekilleştirilmiş eklenti
 
 ## Tek Tek Depolar
 

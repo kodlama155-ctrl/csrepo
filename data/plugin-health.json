@@ -1,0 +1,3511 @@
+{
+  "generated_at": "2026-10-03T10:19:37Z",
+  "candidate_plugin_count": 261,
+  "healthy_plugin_count": 249,
+  "rejected_plugin_count": 12,
+  "fallback_used_count": 16,
+  "rejection_attempt_counts": {
+    "http-404": 18,
+    "status-down": 35
+  },
+  "checks": {
+    "status_zero_rejected": true,
+    "http_200_required": true,
+    "non_empty_required": true,
+    "sha256_verified_when_provided": true,
+    "max_file_bytes": 26214400,
+    "executes_plugin_code": false
+  },
+  "plugins": [
+    {
+      "internal_name": "WioSinema",
+      "name": "0 WioSinema",
+      "status": "healthy",
+      "repository": "pisovo-5031/WioSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/b087c977de78d6de2c509af54f0b5a84fa3dd87d/releases/v58/WioSinema.cs3",
+      "version": 58,
+      "size": 2064098,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "WioSpor",
+      "name": "0 WioSpor",
+      "status": "healthy",
+      "repository": "Wiojelt/WioSpor",
+      "url": "https://raw.githubusercontent.com/Wiojelt/WioSpor/da50820d99f7d23a04a0f21c7d1d5b27f2a11eb9/releases/v38/WioSpor.cs3",
+      "version": 38,
+      "size": 6208175,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "BirdirbirIPTV",
+      "name": "1 v10 Spor",
+      "status": "healthy",
+      "repository": "Wiojelt/WioSpor",
+      "url": "https://raw.githubusercontent.com/Wiojelt/WioSpor/8cf939fb575d63afbc7b71da66d8c24fdfa48bcf/releases/v27/BirdirbirIPTV.cs3",
+      "version": 27,
+      "size": 196184,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "4KFilmIzlesene",
+      "name": "4KFilmIzlesene",
+      "status": "healthy",
+      "repository": "safarxe/CloudStream",
+      "url": "https://raw.githubusercontent.com/safarxe/CloudStream/builds/4KFilmIzlesene.cs3",
+      "version": 6,
+      "size": 12644,
+      "hash_checked": true,
+      "fallback_used": true,
+      "attempts": [
+        {
+          "repository": "arcilingir/Dizi_Film",
+          "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film/builds/4KFilmIzlesene.cs3",
+          "version": 6,
+          "result": "http-404"
+        },
+        {
+          "repository": "safarxe/CloudStream",
+          "url": "https://raw.githubusercontent.com/safarxe/CloudStream/builds/4KFilmIzlesene.cs3",
+          "version": 6,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "internal_name": "AltiYuzAltmisAltiFilmIzle",
+      "name": "AltiYuzAltmisAltiFilmIzle",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/AltiYuzAltmisAltiFilmIzle.cs3",
+      "version": 8,
+      "size": 104563,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "AniArsiv",
+      "name": "AniArsiv",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/AniArsiv.cs3",
+      "version": 1,
+      "size": 18514,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "AnimeciX",
+      "name": "AnimeciX",
+      "status": "healthy",
+      "repository": "Emre-Kahveci/CloudStreamHub",
+      "url": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/AnimeciX.cs3",
+      "version": 103,
+      "size": 132688,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Animeler",
+      "name": "Animeler",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/Animeler.cs3",
+      "version": 42,
+      "size": 52355,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Animely",
+      "name": "Animely",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/Animely.cs3",
+      "version": 5,
+      "size": 40168,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "AnimPow",
+      "name": "AnimPow",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/AnimPow.cs3",
+      "version": 8,
+      "size": 77377,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Anizium",
+      "name": "Anizium",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/Anizium.cs3",
+      "version": 26,
+      "size": 80384,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Anizm",
+      "name": "Anizm",
+      "status": "healthy",
+      "repository": "liberta09/Kekik-cloudstream",
+      "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/Anizm.cs3",
+      "version": 3,
+      "size": 21617,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "AnizmProvider",
+      "name": "Anizm",
+      "status": "healthy",
+      "repository": "Wiojelt/WioAnime",
+      "url": "https://raw.githubusercontent.com/Wiojelt/WioAnime/builds/AnizmProvider.cs3",
+      "version": 20,
+      "size": 185479,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "ArdaSpor",
+      "name": "ArdaSpor",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSpor",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/ArdaSpor.cs3",
+      "version": 11,
+      "size": 137499,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "AslanTV",
+      "name": "AslanTV",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSpor",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/AslanTV.cs3",
+      "version": 10,
+      "size": 212112,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "AsyaAnimeleri",
+      "name": "AsyaAnimeleri",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/AsyaAnimeleri.cs3",
+      "version": 25,
+      "size": 33750,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "AsyaFanatiklerim",
+      "name": "AsyaFanatiklerim",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/AsyaFanatiklerim.cs3",
+      "version": 23,
+      "size": 28606,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "AsyaFilmIzlesene",
+      "name": "AsyaFilmIzlesene",
+      "status": "healthy",
+      "repository": "Sertel392/Makotogecici",
+      "url": "https://raw.githubusercontent.com/Sertel392/Makotogecici/main/AsyaFilmIzlesene.cs3",
+      "version": 2,
+      "size": 9859,
+      "hash_checked": false,
+      "fallback_used": true,
+      "attempts": [
+        {
+          "repository": "MakotoTokioki/Cloudstream-Turkce-Eklentiler",
+          "url": "https://raw.githubusercontent.com/MakotoTokioki/Cloudstream-Turkce-Eklentiler/main/AsyaFilmIzlesene.cs3",
+          "version": 2,
+          "result": "status-down"
+        },
+        {
+          "repository": "tecobaba/Cloudstream-Turkce-Eklentiler",
+          "url": "https://raw.githubusercontent.com/MakotoTokioki/Cloudstream-Turkce-Eklentiler/main/AsyaFilmIzlesene.cs3",
+          "version": 2,
+          "result": "status-down"
+        },
+        {
+          "repository": "Sertel392/Makotogecici",
+          "url": "https://raw.githubusercontent.com/Sertel392/Makotogecici/main/AsyaFilmIzlesene.cs3",
+          "version": 2,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "internal_name": "AsyaWatch",
+      "name": "AsyaWatch",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/AsyaWatch.cs3",
+      "version": 42,
+      "size": 72074,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Atv",
+      "name": "Atv",
+      "status": "healthy",
+      "repository": "lepotane/MRC-builds",
+      "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/Atv.cs3",
+      "version": 7,
+      "size": 30542,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "BCSports",
+      "name": "BCSports",
+      "status": "healthy",
+      "repository": "dr-octagon/BronzeCloud",
+      "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/BCSports_v34.cs3",
+      "version": 34,
+      "size": 106950,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "BelgeselX",
+      "name": "BelgeselX",
+      "status": "healthy",
+      "repository": "Emre-Kahveci/CloudStreamHub",
+      "url": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/BelgeselX.cs3",
+      "version": 104,
+      "size": 127843,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "BelgeselXProvider",
+      "name": "BelgeselX",
+      "status": "healthy",
+      "repository": "qera18/cloudstream-repo",
+      "url": "https://raw.githubusercontent.com/qera18/cloudstream-repo/builds/BelgeselXProvider.cs3",
+      "version": 100,
+      "size": 3091,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "BerkStream",
+      "name": "BerkStream",
+      "status": "healthy",
+      "repository": "berkdemir18/BerkStream-Hub",
+      "url": "https://raw.githubusercontent.com/berkdemir18/BerkStream-Hub/builds/BerkStream.cs3",
+      "version": 37,
+      "size": 1176100,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "BetmatikTV",
+      "name": "BetmatikTV",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSpor",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/BetmatikTV.cs3",
+      "version": 2,
+      "size": 161214,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "BeyazElma",
+      "name": "BeyazElma",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSpor",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/BeyazElma.cs3",
+      "version": 10,
+      "size": 161255,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "BirAsyaDizi",
+      "name": "BirAsyaDizi",
+      "status": "healthy",
+      "repository": "lepotane/MRC-builds",
+      "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/BirAsyaDizi.cs3",
+      "version": 4,
+      "size": 26011,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "BOAT",
+      "name": "BOAT",
+      "status": "healthy",
+      "repository": "dr-octagon/BronzeCloud",
+      "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/BOAT_v33.cs3",
+      "version": 33,
+      "size": 741422,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "CanliKanallar",
+      "name": "CanliKanallar",
+      "status": "healthy",
+      "repository": "neoser1984/cloudstream-extensions",
+      "url": "https://raw.githubusercontent.com/neoser1984/cloudstream-extensions/builds/CanliKanallar.cs3",
+      "version": 1,
+      "size": 13640,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "CanliTV",
+      "name": "CanliTV",
+      "status": "healthy",
+      "repository": "feroxx/Kekik-cloudstream",
+      "url": "https://raw.githubusercontent.com/feroxx/Kekik-cloudstream/builds/CanliTV.cs3",
+      "version": 10,
+      "size": 20480,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "CanliTv",
+      "name": "CanliTv",
+      "status": "healthy",
+      "repository": "Sertel392/Makotogecici",
+      "url": "https://raw.githubusercontent.com/Sertel392/Makotogecici/main/CanliTv.cs3",
+      "version": 4,
+      "size": 13695,
+      "hash_checked": false,
+      "fallback_used": true,
+      "attempts": [
+        {
+          "repository": "CennetCehennem/Aybuz",
+          "url": "https://raw.githubusercontent.com/MakotoTokioki/Cloudstream-Turkce-Eklentiler/main/CanliTv.cs3",
+          "version": 4,
+          "result": "http-404"
+        },
+        {
+          "repository": "MakotoTokioki/Cloudstream-Turkce-Eklentiler",
+          "url": "https://raw.githubusercontent.com/MakotoTokioki/Cloudstream-Turkce-Eklentiler/main/CanliTv.cs3",
+          "version": 4,
+          "result": "status-down"
+        },
+        {
+          "repository": "tecobaba/Cloudstream-Turkce-Eklentiler",
+          "url": "https://raw.githubusercontent.com/MakotoTokioki/Cloudstream-Turkce-Eklentiler/main/CanliTv.cs3",
+          "version": 4,
+          "result": "status-down"
+        },
+        {
+          "repository": "Sertel392/Makotogecici",
+          "url": "https://raw.githubusercontent.com/Sertel392/Makotogecici/main/CanliTv.cs3",
+          "version": 4,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "internal_name": "CineJoy",
+      "name": "CineJoy",
+      "status": "healthy",
+      "repository": "dr-octagon/BronzeCloud",
+      "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/CineJoy_v10.cs3",
+      "version": 10,
+      "size": 91361,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "CineSimkl",
+      "name": "CineSimkl",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/CineSimkl.cs3",
+      "version": 7,
+      "size": 822583,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "CineStream",
+      "name": "CineStream",
+      "status": "healthy",
+      "repository": "dr-octagon/BronzeCloud",
+      "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/CineStream_v532.cs3",
+      "version": 532,
+      "size": 782600,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "CizgiDiziNet",
+      "name": "CizgiDiziNet",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/CizgiDiziNet.cs3",
+      "version": 4,
+      "size": 112316,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "CizgiFilmIzleInfo",
+      "name": "CizgiFilmIzleInfo",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/CizgiFilmIzleInfo.cs3",
+      "version": 3,
+      "size": 106472,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "CizgiFilmTv",
+      "name": "CizgiFilmTv",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/CizgiFilmTv.cs3",
+      "version": 3,
+      "size": 106111,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "CizgiMax",
+      "name": "CizgiMax",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/CizgiMax.cs3",
+      "version": 37,
+      "size": 47530,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "CizgiPortal",
+      "name": "CizgiPortal",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/CizgiPortal.cs3",
+      "version": 3,
+      "size": 106851,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "CizgiSite",
+      "name": "CizgiSite",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/CizgiSite.cs3",
+      "version": 3,
+      "size": 104935,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "CizgiVeDizi",
+      "name": "CizgiVeDizi",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/CizgiVeDizi.cs3",
+      "version": 21,
+      "size": 133256,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "CizgiveDizi",
+      "name": "CizgiveDizi",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/CizgiveDizi.cs3",
+      "version": 51,
+      "size": 43326,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "ClipBox",
+      "name": "ClipBox",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/ClipBox.cs3",
+      "version": 7,
+      "size": 828923,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "CloudStreamHub",
+      "name": "CloudStreamHub",
+      "status": "healthy",
+      "repository": "Emre-Kahveci/CloudStreamHub",
+      "url": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/CloudStreamHub.cs3",
+      "version": 25,
+      "size": 283873,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "CNCVerseDisneyPlus",
+      "name": "CNCVerseDisneyPlus",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/CNCVerseDisneyPlus.cs3",
+      "version": 8,
+      "size": 148074,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "CNCVerseNetflix",
+      "name": "CNCVerseNetflix",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/CNCVerseNetflix.cs3",
+      "version": 8,
+      "size": 148095,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "CNCVersePrimeVideo",
+      "name": "CNCVersePrimeVideo",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/CNCVersePrimeVideo.cs3",
+      "version": 8,
+      "size": 148091,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Crex",
+      "name": "Crex",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSpor",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/Crex.cs3",
+      "version": 9,
+      "size": 138791,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "DaddyLive",
+      "name": "DaddyLive",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSpor",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/DaddyLive.cs3",
+      "version": 5,
+      "size": 109464,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "DDizi",
+      "name": "DDizi",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/DDizi.cs3",
+      "version": 7,
+      "size": 111519,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Ddizi",
+      "name": "Ddizi",
+      "status": "healthy",
+      "repository": "dr-octagon/BronzeCloud",
+      "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/Ddizi_v23.cs3",
+      "version": 23,
+      "size": 20113,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "DDizi - Latte",
+      "name": "DDizi - Latte",
+      "status": "healthy",
+      "repository": "GitLatte/Sinetech",
+      "url": "https://raw.githubusercontent.com/GitLatte/Sinetech/builds/DDizi - Latte.cs3",
+      "version": 4,
+      "size": 23749,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Deokwave",
+      "name": "Deokwave",
+      "status": "healthy",
+      "repository": "Wiojelt/WioAnime",
+      "url": "https://raw.githubusercontent.com/Wiojelt/WioAnime/d5f0857f2d2295cc3126bdb7662765990471a6f5/Deokwave.cs3",
+      "version": 7,
+      "size": 91940,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "DiziAsia",
+      "name": "DiziAsia",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/DiziAsia.cs3",
+      "version": 21,
+      "size": 25726,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "DiziAsya",
+      "name": "DiziAsya",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/DiziAsya.cs3",
+      "version": 28,
+      "size": 39802,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "DiziBal",
+      "name": "DiziBal",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/DiziBal.cs3",
+      "version": 7,
+      "size": 132287,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "DiziBol",
+      "name": "DiziBol",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/7ca0aae7d3f6c6368a8954faab6dea49e49f8c01/DiziBol.cs3",
+      "version": 8,
+      "size": 139406,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "DiziBox",
+      "name": "DiziBox",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/DiziBox.cs3",
+      "version": 38,
+      "size": 41159,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "DiziFilmIzle",
+      "name": "DiziFilmIzle",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/DiziFilmIzle.cs3",
+      "version": 8,
+      "size": 132344,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "DiziFilmORG",
+      "name": "DiziFilmORG",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/DiziFilmORG.cs3",
+      "version": 23,
+      "size": 76765,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "DiziFun - Latte",
+      "name": "DiziFun - Latte",
+      "status": "healthy",
+      "repository": "GitLatte/Sinetech",
+      "url": "https://raw.githubusercontent.com/GitLatte/Sinetech/builds/DiziFun - Latte.cs3",
+      "version": 5,
+      "size": 24355,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Dizigecesi",
+      "name": "Dizigecesi",
+      "status": "healthy",
+      "repository": "Emre-Kahveci/CloudStreamHub",
+      "url": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/Dizigecesi.cs3",
+      "version": 14,
+      "size": 124135,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "DiziGom",
+      "name": "DiziGom",
+      "status": "healthy",
+      "repository": "liberta09/Kekik-cloudstream",
+      "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/DiziGom.cs3",
+      "version": 13,
+      "size": 23845,
+      "hash_checked": true,
+      "fallback_used": true,
+      "attempts": [
+        {
+          "repository": "lepotane/MRC-builds",
+          "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/DiziGom.cs3",
+          "version": 14,
+          "result": "status-down"
+        },
+        {
+          "repository": "liberta09/Kekik-cloudstream",
+          "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/DiziGom.cs3",
+          "version": 13,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "internal_name": "DiziKorea",
+      "name": "DiziKorea",
+      "status": "healthy",
+      "repository": "feroxx/Kekik-cloudstream",
+      "url": "https://raw.githubusercontent.com/feroxx/Kekik-cloudstream/builds/DiziKorea.cs3",
+      "version": 41,
+      "size": 23562,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "DiziLife",
+      "name": "DiziLife",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/DiziLife.cs3",
+      "version": 59,
+      "size": 82747,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Dizilla",
+      "name": "Dizilla",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/Dizilla.cs3",
+      "version": 112,
+      "size": 150199,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "DiziMag",
+      "name": "DiziMag",
+      "status": "healthy",
+      "repository": "liberta09/Kekik-cloudstream",
+      "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/DiziMag.cs3",
+      "version": 22,
+      "size": 29437,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "DiziMom",
+      "name": "DiziMom",
+      "status": "healthy",
+      "repository": "dr-octagon/BronzeCloud",
+      "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/DiziMom_v63.cs3",
+      "version": 63,
+      "size": 34849,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "DiziPal",
+      "name": "DiziPal",
+      "status": "healthy",
+      "repository": "dr-octagon/BronzeCloud",
+      "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/DiziPal_v113.cs3",
+      "version": 113,
+      "size": 29467,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Dizipal",
+      "name": "Dizipal",
+      "status": "healthy",
+      "repository": "manitux-app/cs-plugins",
+      "url": "https://raw.githubusercontent.com/manitux-app/cs-plugins/main/builds/Dizipal.cs3",
+      "version": 6,
+      "size": 67409,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "DiziPal1578",
+      "name": "DiziPal1578",
+      "status": "healthy",
+      "repository": "neoser1984/cloudstream-extensions",
+      "url": "https://raw.githubusercontent.com/neoser1984/cloudstream-extensions/builds/DiziPal1578.cs3",
+      "version": 1,
+      "size": 24877,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "DiziPal2",
+      "name": "DiziPal2",
+      "status": "healthy",
+      "repository": "lepotane/MRC-builds",
+      "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/DiziPal2.cs3",
+      "version": 2,
+      "size": 27820,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "DiziPal2121",
+      "name": "DiziPal2121",
+      "status": "healthy",
+      "repository": "neoser1984/cloudstream-extensions",
+      "url": "https://raw.githubusercontent.com/neoser1984/cloudstream-extensions/builds/DiziPal2121.cs3",
+      "version": 1,
+      "size": 24649,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "DizipalExtended",
+      "name": "DizipalExtended",
+      "status": "healthy",
+      "repository": "faruktunc/frukon",
+      "url": "https://raw.githubusercontent.com/faruktunc/frukon/builds/DizipalExtended.cs3",
+      "version": 1,
+      "size": 17519,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "DiziPalOriginal",
+      "name": "DiziPalOriginal",
+      "status": "healthy",
+      "repository": "dr-octagon/BronzeCloud",
+      "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/DiziPalOriginal_v101.cs3",
+      "version": 101,
+      "size": 27723,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "DiziPalOrijinal",
+      "name": "DiziPalOrijinal",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/DiziPalOrijinal.cs3",
+      "version": 46,
+      "size": 160870,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "DiziPalOrjinal",
+      "name": "DiziPalOrjinal",
+      "status": "healthy",
+      "repository": "neoser1984/cloudstream-extensions",
+      "url": "https://raw.githubusercontent.com/neoser1984/cloudstream-extensions/builds/DiziPalOrjinal.cs3",
+      "version": 2,
+      "size": 16332,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "DiziPod",
+      "name": "DiziPod",
+      "status": "healthy",
+      "repository": "feroxx/Kekik-cloudstream",
+      "url": "https://raw.githubusercontent.com/feroxx/Kekik-cloudstream/builds/DiziPod.cs3",
+      "version": 3,
+      "size": 23522,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Dizipod",
+      "name": "Dizipod",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/Dizipod.cs3",
+      "version": 13,
+      "size": 79347,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "DiziRella",
+      "name": "DiziRella",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/DiziRella.cs3",
+      "version": 7,
+      "size": 132321,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "DiziWatch",
+      "name": "DiziWatch",
+      "status": "healthy",
+      "repository": "faruktunc/frukon",
+      "url": "https://raw.githubusercontent.com/faruktunc/frukon/builds/DiziWatch.cs3",
+      "version": 1,
+      "size": 18815,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Diziyo",
+      "name": "Diziyo",
+      "status": "healthy",
+      "repository": "neoser1984/cloudstream-extensions",
+      "url": "https://raw.githubusercontent.com/neoser1984/cloudstream-extensions/builds/Diziyo.cs3",
+      "version": 1,
+      "size": 15584,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "DiziYo",
+      "name": "DiziYo",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/DiziYo.cs3",
+      "version": 75,
+      "size": 36757,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "DiziYou",
+      "name": "DiziYou",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/DiziYou.cs3",
+      "version": 50,
+      "size": 57071,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "DizizOn",
+      "name": "DizizOn",
+      "status": "healthy",
+      "repository": "neoser1984/cloudstream-extensions",
+      "url": "https://raw.githubusercontent.com/neoser1984/cloudstream-extensions/builds/DizizOn.cs3",
+      "version": 1,
+      "size": 12518,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Dmax",
+      "name": "Dmax",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/Dmax.cs3",
+      "version": 1,
+      "size": 112045,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "DMax",
+      "name": "DMax",
+      "status": "healthy",
+      "repository": "lepotane/MRC-builds",
+      "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/DMax.cs3",
+      "version": 2,
+      "size": 14427,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "DomatesTV",
+      "name": "DomatesTV",
+      "status": "healthy",
+      "repository": "dr-octagon/BronzeCloud",
+      "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/DomatesTV_v7.cs3",
+      "version": 7,
+      "size": 79403,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "DominoTV",
+      "name": "DominoTV",
+      "status": "healthy",
+      "repository": "dr-octagon/BronzeCloud",
+      "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/DominoTV_v7.cs3",
+      "version": 7,
+      "size": 82817,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "DramaDizilerim",
+      "name": "DramaDizilerim",
+      "status": "healthy",
+      "repository": "Emre-Kahveci/CloudStreamHub",
+      "url": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/DramaDizilerim.cs3",
+      "version": 14,
+      "size": 124602,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "FilmBip",
+      "name": "FilmBip",
+      "status": "healthy",
+      "repository": "21nek/nektv",
+      "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/FilmBip.cs3",
+      "version": 11,
+      "size": 14795,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "FilmEkseni",
+      "name": "FilmEkseni",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/FilmEkseni.cs3",
+      "version": 51,
+      "size": 72003,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "FilmHane",
+      "name": "FilmHane",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/FilmHane.cs3",
+      "version": 44,
+      "size": 60863,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "FilmIzleIlk",
+      "name": "FilmIzleIlk",
+      "status": "healthy",
+      "repository": "liberta09/Kekik-cloudstream",
+      "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/FilmIzleIlk.cs3",
+      "version": 6,
+      "size": 22702,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "FilmIzyon",
+      "name": "FilmIzyon",
+      "status": "healthy",
+      "repository": "lepotane/MRC-builds",
+      "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/FilmIzyon.cs3",
+      "version": 6,
+      "size": 24279,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "FilmIzzle",
+      "name": "FilmIzzle",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/FilmIzzle.cs3",
+      "version": 7,
+      "size": 132300,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "FilmKovasi",
+      "name": "FilmKovasi",
+      "status": "healthy",
+      "repository": "liberta09/Kekik-cloudstream",
+      "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/FilmKovasi.cs3",
+      "version": 10,
+      "size": 20665,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "FilmMakinesi",
+      "name": "FilmMakinesi",
+      "status": "healthy",
+      "repository": "Emre-Kahveci/CloudStreamHub",
+      "url": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/FilmMakinesi.cs3",
+      "version": 104,
+      "size": 128306,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Filmmirasım",
+      "name": "Filmmirasım",
+      "status": "healthy",
+      "repository": "hrtestingx/hrcsrepo",
+      "url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepo/builds/Filmmirasım.cs3",
+      "version": 5,
+      "size": 15162,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "FilmModu",
+      "name": "FilmModu",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/FilmModu.cs3",
+      "version": 42,
+      "size": 29725,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "FilmModu 2",
+      "name": "FilmModu 2",
+      "status": "healthy",
+      "repository": "eycommas/kekikmod",
+      "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/FilmModu.cs3",
+      "version": 13,
+      "size": 14631,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Filmzal",
+      "name": "Filmzal",
+      "status": "healthy",
+      "repository": "neoser1984/cloudstream-extensions",
+      "url": "https://raw.githubusercontent.com/neoser1984/cloudstream-extensions/builds/Filmzal.cs3",
+      "version": 1,
+      "size": 22114,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "FlixNetwork",
+      "name": "FlixNetwork",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/FlixNetwork.cs3",
+      "version": 7,
+      "size": 111453,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "FullHDFilm",
+      "name": "FullHDFilm",
+      "status": "healthy",
+      "repository": "dr-octagon/BronzeCloud",
+      "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/FullHDFilm_v37.cs3",
+      "version": 37,
+      "size": 28161,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "FullHDFilmizlesene",
+      "name": "FullHDFilmizlesene",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/FullHDFilmizlesene.cs3",
+      "version": 73,
+      "size": 145784,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "FullHDFilmizlesene 2",
+      "name": "FullHDFilmizlesene 2",
+      "status": "healthy",
+      "repository": "eycommas/kekikmod",
+      "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/FullHDFilmizlesene.cs3",
+      "version": 26,
+      "size": 34067,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "FullHDFilmİzlede",
+      "name": "FullHDFilmİzlede",
+      "status": "healthy",
+      "repository": "liberta09/Kekik-cloudstream",
+      "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/FullHDFilmİzlede.cs3",
+      "version": 5,
+      "size": 17779,
+      "hash_checked": true,
+      "fallback_used": true,
+      "attempts": [
+        {
+          "repository": "arcilingir/Dizi_Film",
+          "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film/builds/FullHDFilmİzlede.cs3",
+          "version": 5,
+          "result": "http-404"
+        },
+        {
+          "repository": "liberta09/Kekik-cloudstream",
+          "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/FullHDFilmİzlede.cs3",
+          "version": 5,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "internal_name": "GinikoCanli",
+      "name": "GinikoCanli",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/GinikoCanli.cs3",
+      "version": 17,
+      "size": 17715,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "GoFilmIzle - Latte",
+      "name": "GoFilmIzle - Latte",
+      "status": "healthy",
+      "repository": "GitLatte/Sinetech",
+      "url": "https://raw.githubusercontent.com/GitLatte/Sinetech/builds/GoFilmIzle - Latte.cs3",
+      "version": 3,
+      "size": 27666,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "GolgeTV",
+      "name": "GolgeTV",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSpor",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/GolgeTV.cs3",
+      "version": 3,
+      "size": 179056,
+      "hash_checked": true,
+      "fallback_used": true,
+      "attempts": [
+        {
+          "repository": "CennetCehennem/Aybuz",
+          "url": "https://raw.githubusercontent.com/MakotoTokioki/Cloudstream-Turkce-Eklentiler/main/GolgeTV.cs3",
+          "version": 14,
+          "result": "status-down"
+        },
+        {
+          "repository": "MakotoTokioki/Cloudstream-Turkce-Eklentiler",
+          "url": "https://raw.githubusercontent.com/MakotoTokioki/Cloudstream-Turkce-Eklentiler/main/GolgeTV.cs3",
+          "version": 14,
+          "result": "status-down"
+        },
+        {
+          "repository": "tecobaba/Cloudstream-Turkce-Eklentiler",
+          "url": "https://raw.githubusercontent.com/MakotoTokioki/Cloudstream-Turkce-Eklentiler/main/GolgeTV.cs3",
+          "version": 14,
+          "result": "status-down"
+        },
+        {
+          "repository": "baristomruk-max/BTVault",
+          "url": "https://raw.githubusercontent.com/baristomruk-max/BTVault/builds/GolgeTV.cs3",
+          "version": 4,
+          "result": "status-down"
+        },
+        {
+          "repository": "Hakanapp1934/hdfilmpro",
+          "url": "https://raw.githubusercontent.com/keyiflerolsun/Kekik-cloudstream/builds/GolgeTV.cs3",
+          "version": 4,
+          "result": "http-404"
+        },
+        {
+          "repository": "Wiojelt/TurkSpor",
+          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/GolgeTV.cs3",
+          "version": 3,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "internal_name": "HdAbla",
+      "name": "HdAbla",
+      "status": "healthy",
+      "repository": "21nek/nektv",
+      "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/HdAbla.cs3",
+      "version": 2,
+      "size": 13721,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "HDFilmCehennemi",
+      "name": "HDFilmCehennemi",
+      "status": "healthy",
+      "repository": "Emre-Kahveci/CloudStreamHub",
+      "url": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/HDFilmCehennemi.cs3",
+      "version": 105,
+      "size": 130520,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "HDFilmCehennemi 2",
+      "name": "HDFilmCehennemi 2",
+      "status": "healthy",
+      "repository": "eycommas/kekikmod",
+      "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/HDFilmCehennemi.cs3",
+      "version": 22,
+      "size": 25407,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "HdFilmCehennemi2",
+      "name": "HdFilmCehennemi2",
+      "status": "healthy",
+      "repository": "lepotane/MRC-builds",
+      "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/HdFilmCehennemi2.cs3",
+      "version": 5,
+      "size": 30786,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "HDFilmCehennemi2",
+      "name": "HDFilmCehennemi2",
+      "status": "healthy",
+      "repository": "liberta09/Kekik-cloudstream",
+      "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/HDFilmCehennemi2.cs3",
+      "version": 8,
+      "size": 27803,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "HDFilmcehennemiLand",
+      "name": "HDFilmcehennemiLand",
+      "status": "healthy",
+      "repository": "dr-octagon/BronzeCloud",
+      "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/HDFilmcehennemiLand_v4.cs3",
+      "version": 4,
+      "size": 51594,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "HdFilmCehennemiProvider",
+      "name": "HdFilmCehennemiProvider",
+      "status": "healthy",
+      "repository": "EmRe-35/cloudstream-eklentim",
+      "url": "https://raw.githubusercontent.com/EmRe-35/cloudstream-eklentim/builds/HdFilmCehennemiProvider.cs3",
+      "version": 1,
+      "size": 66774,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "HDFilmDelisi",
+      "name": "HDFilmDelisi",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/HDFilmDelisi.cs3",
+      "version": 19,
+      "size": 85343,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "HDFilmDiziIzle",
+      "name": "HDFilmDiziIzle",
+      "status": "healthy",
+      "repository": "neoser1984/cloudstream-extensions",
+      "url": "https://raw.githubusercontent.com/neoser1984/cloudstream-extensions/builds/HDFilmDiziIzle.cs3",
+      "version": 1,
+      "size": 19102,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "HDFilmIzle",
+      "name": "HDFilmIzle",
+      "status": "healthy",
+      "repository": "Ripplay/cloudstream-repo",
+      "url": "https://raw.githubusercontent.com/Ripplay/cloudstream-repo/builds/HDFilmIzle.cs3",
+      "version": 8,
+      "size": 40634,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "HDFilmizle",
+      "name": "HDFilmizle",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/HDFilmizle.cs3",
+      "version": 26,
+      "size": 61447,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "HDFilmizleBest",
+      "name": "HDFilmizleBest",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/HDFilmizleBest.cs3",
+      "version": 1,
+      "size": 113507,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "HDFilmIzleInk",
+      "name": "HDFilmIzleInk",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/HDFilmIzleInk.cs3",
+      "version": 7,
+      "size": 130203,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "HDFilmIzleVip",
+      "name": "HDFilmIzleVip",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/HDFilmIzleVip.cs3",
+      "version": 7,
+      "size": 130210,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "HDFilmSitesi",
+      "name": "HDFilmSitesi",
+      "status": "healthy",
+      "repository": "liberta09/Kekik-cloudstream",
+      "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/HDFilmSitesi.cs3",
+      "version": 19,
+      "size": 22922,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Hesgoal",
+      "name": "Hesgoal",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSpor",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/Hesgoal.cs3",
+      "version": 3,
+      "size": 79340,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "HintFilmIzle",
+      "name": "HintFilmIzle",
+      "status": "healthy",
+      "repository": "liberta09/Kekik-cloudstream",
+      "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/HintFilmIzle.cs3",
+      "version": 16,
+      "size": 21885,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "InatBox",
+      "name": "InatBox",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/InatBox.cs3",
+      "version": 59,
+      "size": 49715,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "inatbox-bc",
+      "name": "inatbox-bc",
+      "status": "healthy",
+      "repository": "dr-octagon/BronzeCloud",
+      "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/inatbox-bc_v14.cs3",
+      "version": 14,
+      "size": 48338,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "InatBoxBC",
+      "name": "InatBoxBC",
+      "status": "healthy",
+      "repository": "lepotane/MRC-builds",
+      "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/InatBoxBC.cs3",
+      "version": 2,
+      "size": 53533,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "InatTV",
+      "name": "InatTV",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSpor",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/InatTV.cs3",
+      "version": 10,
+      "size": 134854,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "InterSporTV",
+      "name": "InterSporTV",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSpor",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/InterSporTV.cs3",
+      "version": 10,
+      "size": 161183,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "IzleAI",
+      "name": "IzleAI",
+      "status": "healthy",
+      "repository": "baristomruk-max/BTVault",
+      "url": "https://raw.githubusercontent.com/baristomruk-max/BTVault/builds/IzleAI.cs3",
+      "version": 5,
+      "size": 28488,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "IzleOyna",
+      "name": "IzleOyna",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/IzleOyna.cs3",
+      "version": 3,
+      "size": 101913,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "JestYayin",
+      "name": "JestYayin",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSpor",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/JestYayin.cs3",
+      "version": 3,
+      "size": 177677,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "JetFilmizle",
+      "name": "JetFilmizle",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/JetFilmizle.cs3",
+      "version": 63,
+      "size": 64337,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "JetFilmIzle",
+      "name": "JetFilmIzle",
+      "status": "healthy",
+      "repository": "Emre-Kahveci/CloudStreamHub",
+      "url": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/JetFilmIzle.cs3",
+      "version": 14,
+      "size": 125197,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Kalite18",
+      "name": "Kalite18",
+      "status": "healthy",
+      "repository": "21nek/nektv",
+      "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/Kalite18.cs3",
+      "version": 2,
+      "size": 12776,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "KICK Türkiye - Latte",
+      "name": "KICK Türkiye - Latte",
+      "status": "healthy",
+      "repository": "GitLatte/Sinetech",
+      "url": "https://raw.githubusercontent.com/GitLatte/Sinetech/builds/KICK Türkiye - Latte.cs3",
+      "version": 3,
+      "size": 26613,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "KickTR",
+      "name": "KickTR",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/KickTR.cs3",
+      "version": 18,
+      "size": 40510,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "KoolTV",
+      "name": "Kool TV",
+      "status": "healthy",
+      "repository": "Wiojelt/WioSpor",
+      "url": "https://raw.githubusercontent.com/Wiojelt/WioSpor/builds/KoolTV.cs3",
+      "version": 1,
+      "size": 26410,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "KoreanTurk",
+      "name": "KoreanTurk",
+      "status": "healthy",
+      "repository": "21nek/nektv",
+      "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/KoreanTurk.cs3",
+      "version": 7,
+      "size": 12215,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "KoreFilmizle",
+      "name": "KoreFilmizle",
+      "status": "healthy",
+      "repository": "neoser1984/cloudstream-extensions",
+      "url": "https://raw.githubusercontent.com/neoser1984/cloudstream-extensions/builds/KoreFilmizle.cs3",
+      "version": 1,
+      "size": 16889,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "KralSporHD",
+      "name": "KralSporHD",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSpor",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/KralSporHD.cs3",
+      "version": 4,
+      "size": 135396,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "KraptorPlus",
+      "name": "KraptorPlus",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/KraptorPlus.cs3",
+      "version": 88,
+      "size": 623909,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "KultFilmler",
+      "name": "KultFilmler",
+      "status": "healthy",
+      "repository": "Emre-Kahveci/CloudStreamHub",
+      "url": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/KultFilmler.cs3",
+      "version": 47,
+      "size": 129958,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "KultFilmler 2",
+      "name": "KultFilmler 2",
+      "status": "healthy",
+      "repository": "eycommas/kekikmod",
+      "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/KultFilmler.cs3",
+      "version": 12,
+      "size": 21639,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "LiderFilmIzle",
+      "name": "LiderFilmIzle",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/LiderFilmIzle.cs3",
+      "version": 7,
+      "size": 132333,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "LoveFilm",
+      "name": "LoveFilm",
+      "status": "healthy",
+      "repository": "lepotane/MRC-builds",
+      "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/LoveFilm.cs3",
+      "version": 6,
+      "size": 36398,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "MacKeyfi",
+      "name": "MacKeyfi",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSpor",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/MacKeyfi.cs3",
+      "version": 10,
+      "size": 161215,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "MahsunSports",
+      "name": "MahsunSports",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSpor",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/MahsunSports.cs3",
+      "version": 9,
+      "size": 137726,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "MegaWio",
+      "name": "MegaWio",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/MegaWio.cs3",
+      "version": 2,
+      "size": 12527,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "MinikaCocuk",
+      "name": "MinikaCocuk",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/MinikaCocuk.cs3",
+      "version": 3,
+      "size": 111987,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "MinikaGO",
+      "name": "MinikaGO",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/MinikaGO.cs3",
+      "version": 3,
+      "size": 111984,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "MirrorVerse",
+      "name": "MirrorVerse",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/MirrorVerse.cs3",
+      "version": 39,
+      "size": 140095,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "MRC-Live",
+      "name": "MRC-Live",
+      "status": "healthy",
+      "repository": "lepotane/MRC-builds",
+      "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/MRC-Live.cs3",
+      "version": 2,
+      "size": 29020,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "MRC-Naughty",
+      "name": "MRC-Naughty",
+      "status": "healthy",
+      "repository": "lepotane/MRC-builds",
+      "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/MRC-Naughty.cs3",
+      "version": 1,
+      "size": 38310,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "MRC-Plus",
+      "name": "MRC-Plus",
+      "status": "healthy",
+      "repository": "lepotane/MRC-builds",
+      "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/MRC-Plus.cs3",
+      "version": 1,
+      "size": 35742,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "myway TV - Latte",
+      "name": "myway TV - Latte",
+      "status": "healthy",
+      "repository": "GitLatte/Sinetech",
+      "url": "https://raw.githubusercontent.com/GitLatte/Sinetech/builds/myway TV - Latte.cs3",
+      "version": 3,
+      "size": 19932,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Müzik TV ve Radyo - Latte",
+      "name": "Müzik TV ve Radyo - Latte",
+      "status": "healthy",
+      "repository": "GitLatte/Sinetech",
+      "url": "https://raw.githubusercontent.com/GitLatte/Sinetech/builds/Müzik TV ve Radyo - Latte.cs3",
+      "version": 3,
+      "size": 23377,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "NetFilmizle",
+      "name": "NetFilmizle",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/NetFilmizle.cs3",
+      "version": 1,
+      "size": 122025,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "NetShort",
+      "name": "NetShort",
+      "status": "healthy",
+      "repository": "Wiojelt/WioDrama",
+      "url": "https://github.com/Wiojelt/WioDrama/releases/download/wiodrama-artifacts-2026-09-23/NetShort.cs3",
+      "version": 2,
+      "size": 29902,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "NetVGold",
+      "name": "NetVGold",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSpor",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/NetVGold.cs3",
+      "version": 3,
+      "size": 173304,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Ntvs",
+      "name": "Ntvs",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSpor",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/Ntvs.cs3",
+      "version": 5,
+      "size": 109433,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "OnePaceTr",
+      "name": "OnePaceTr",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/OnePaceTr.cs3",
+      "version": 14,
+      "size": 31616,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "OpenAnime",
+      "name": "OpenAnime",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/OpenAnime.cs3",
+      "version": 29,
+      "size": 75101,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "OwnedSites",
+      "name": "OwnedSites",
+      "status": "healthy",
+      "repository": "Ripplay/cloudstream-repo",
+      "url": "https://raw.githubusercontent.com/Ripplay/cloudstream-repo/builds/OwnedSites.cs3",
+      "version": 2,
+      "size": 45209,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "PapazSports",
+      "name": "PapazSports",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSpor",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/PapazSports.cs3",
+      "version": 2,
+      "size": 132420,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "PatronHD",
+      "name": "PatronHD",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSpor",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/PatronHD.cs3",
+      "version": 15,
+      "size": 103070,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "PornoAnne",
+      "name": "PornoAnne",
+      "status": "healthy",
+      "repository": "21nek/nektv",
+      "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/PornoAnne.cs3",
+      "version": 3,
+      "size": 11636,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "powerboard Dizi - Latte",
+      "name": "powerboard Dizi - Latte",
+      "status": "healthy",
+      "repository": "GitLatte/Sinetech",
+      "url": "https://raw.githubusercontent.com/GitLatte/Sinetech/builds/powerboard Dizi - Latte.cs3",
+      "version": 6,
+      "size": 34237,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "powerboard Sinema - Latte",
+      "name": "powerboard Sinema - Latte",
+      "status": "healthy",
+      "repository": "GitLatte/Sinetech",
+      "url": "https://raw.githubusercontent.com/GitLatte/Sinetech/builds/powerboard Sinema - Latte.cs3",
+      "version": 5,
+      "size": 38795,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "powerDizi",
+      "name": "powerDizi",
+      "status": "healthy",
+      "repository": "liberta09/Kekik-cloudstream",
+      "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/powerDizi.cs3",
+      "version": 3,
+      "size": 20507,
+      "hash_checked": true,
+      "fallback_used": true,
+      "attempts": [
+        {
+          "repository": "arcilingir/Dizi_Film",
+          "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film/builds/powerDizi.cs3",
+          "version": 3,
+          "result": "http-404"
+        },
+        {
+          "repository": "liberta09/Kekik-cloudstream",
+          "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/powerDizi.cs3",
+          "version": 3,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "internal_name": "PowerSinema",
+      "name": "PowerSinema",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/PowerSinema.cs3",
+      "version": 1,
+      "size": 113880,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "powerSinema",
+      "name": "powerSinema",
+      "status": "healthy",
+      "repository": "liberta09/Kekik-cloudstream",
+      "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/powerSinema.cs3",
+      "version": 3,
+      "size": 20489,
+      "hash_checked": true,
+      "fallback_used": true,
+      "attempts": [
+        {
+          "repository": "arcilingir/Dizi_Film",
+          "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film/builds/powerSinema.cs3",
+          "version": 3,
+          "result": "http-404"
+        },
+        {
+          "repository": "liberta09/Kekik-cloudstream",
+          "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/powerSinema.cs3",
+          "version": 3,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "internal_name": "Puhu",
+      "name": "Puhu",
+      "status": "healthy",
+      "repository": "dr-octagon/BronzeCloud",
+      "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/Puhu_v4.cs3",
+      "version": 4,
+      "size": 36202,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "RareFilmm",
+      "name": "RareFilmm",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/RareFilmm.cs3",
+      "version": 7,
+      "size": 108209,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "RecTV",
+      "name": "RecTV",
+      "status": "healthy",
+      "repository": "feroxx/Kekik-cloudstream",
+      "url": "https://raw.githubusercontent.com/patr0nq/personal_cloudstream/builds/RecTV.cs3",
+      "version": 113,
+      "size": 40221,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "rectv-bc",
+      "name": "rectv-bc",
+      "status": "healthy",
+      "repository": "dr-octagon/BronzeCloud",
+      "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/rectv-bc_v9.cs3",
+      "version": 9,
+      "size": 50760,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "RecTVBC",
+      "name": "RecTVBC",
+      "status": "healthy",
+      "repository": "lepotane/MRC-builds",
+      "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/RecTVBC.cs3",
+      "version": 5,
+      "size": 44771,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Reeltu",
+      "name": "Reeltu",
+      "status": "healthy",
+      "repository": "dr-octagon/BronzeCloud",
+      "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/Reeltu_v9.cs3",
+      "version": 9,
+      "size": 77362,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "RoketDizi",
+      "name": "RoketDizi",
+      "status": "healthy",
+      "repository": "liberta09/Kekik-cloudstream",
+      "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/RoketDizi.cs3",
+      "version": 15,
+      "size": 40717,
+      "hash_checked": true,
+      "fallback_used": true,
+      "attempts": [
+        {
+          "repository": "arcilingir/Dizi_Film",
+          "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film/builds/RoketDizi.cs3",
+          "version": 15,
+          "result": "http-404"
+        },
+        {
+          "repository": "liberta09/Kekik-cloudstream",
+          "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/RoketDizi.cs3",
+          "version": 15,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "internal_name": "SeiCode",
+      "name": "SeiCode",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/SeiCode.cs3",
+      "version": 26,
+      "size": 40339,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "SelcukFlix",
+      "name": "SelcukFlix",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/SelcukFlix.cs3",
+      "version": 50,
+      "size": 66978,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "SelcukSports",
+      "name": "SelcukSports",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSpor",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/SelcukSports.cs3",
+      "version": 12,
+      "size": 133437,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "SetFilm",
+      "name": "SetFilm",
+      "status": "healthy",
+      "repository": "manitux-app/cs-plugins",
+      "url": "https://raw.githubusercontent.com/manitux-app/cs-plugins/main/builds/SetFilm.cs3",
+      "version": 4,
+      "size": 56860,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "SetFilmIzle",
+      "name": "SetFilmIzle",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/SetFilmIzle.cs3",
+      "version": 43,
+      "size": 69971,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "SezonlukDizi",
+      "name": "SezonlukDizi",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/SezonlukDizi.cs3",
+      "version": 41,
+      "size": 103386,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Showtv",
+      "name": "Showtv",
+      "status": "healthy",
+      "repository": "lepotane/MRC-builds",
+      "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/Showtv.cs3",
+      "version": 3,
+      "size": 25851,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Sinefy",
+      "name": "Sinefy",
+      "status": "healthy",
+      "repository": "lepotane/MRC-builds",
+      "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/Sinefy.cs3",
+      "version": 3,
+      "size": 21761,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "SinemaCX",
+      "name": "SinemaCX",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/SinemaCX.cs3",
+      "version": 36,
+      "size": 27445,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "SinemaGG",
+      "name": "SinemaGG",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/SinemaGG.cs3",
+      "version": 1,
+      "size": 109651,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Sinemakolik",
+      "name": "Sinemakolik",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/Sinemakolik.cs3",
+      "version": 1,
+      "size": 120344,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Sinewix",
+      "name": "Sinewix",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/Sinewix.cs3",
+      "version": 8,
+      "size": 117964,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "SineWix",
+      "name": "SineWix",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/SineWix.cs3",
+      "version": 33,
+      "size": 77299,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Sinezy",
+      "name": "Sinezy",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/Sinezy.cs3",
+      "version": 41,
+      "size": 27917,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Startv",
+      "name": "Startv",
+      "status": "healthy",
+      "repository": "lepotane/MRC-builds",
+      "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/Startv.cs3",
+      "version": 4,
+      "size": 33823,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Streamed",
+      "name": "Streamed",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSpor",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/Streamed.cs3",
+      "version": 3,
+      "size": 127154,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "SuperFilmGeldi",
+      "name": "SuperFilmGeldi",
+      "status": "healthy",
+      "repository": "liberta09/Kekik-cloudstream",
+      "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/SuperFilmGeldi.cs3",
+      "version": 25,
+      "size": 22471,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Taraftarium24",
+      "name": "Taraftarium24",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSpor",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/Taraftarium24.cs3",
+      "version": 13,
+      "size": 135077,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "TLC",
+      "name": "TLC",
+      "status": "healthy",
+      "repository": "lepotane/MRC-builds",
+      "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/TLC.cs3",
+      "version": 2,
+      "size": 14440,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Tlctr",
+      "name": "Tlctr",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/Tlctr.cs3",
+      "version": 7,
+      "size": 106352,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "TLCtr",
+      "name": "TLCtr",
+      "status": "healthy",
+      "repository": "dr-octagon/BronzeCloud",
+      "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/TLCtr_v20.cs3",
+      "version": 20,
+      "size": 14279,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "TorrentFilm",
+      "name": "TorrentFilm",
+      "status": "healthy",
+      "repository": "Sertel392/Makotogecici",
+      "url": "https://raw.githubusercontent.com/Sertel392/Makotogecici/main/TorrentFilm.cs3",
+      "version": 2,
+      "size": 19290,
+      "hash_checked": false,
+      "fallback_used": true,
+      "attempts": [
+        {
+          "repository": "CennetCehennem/Aybuz",
+          "url": "https://raw.githubusercontent.com/MakotoTokioki/Cloudstream-Turkce-Eklentiler/main/TorrentFilm.cs3",
+          "version": 2,
+          "result": "http-404"
+        },
+        {
+          "repository": "MakotoTokioki/Cloudstream-Turkce-Eklentiler",
+          "url": "https://raw.githubusercontent.com/MakotoTokioki/Cloudstream-Turkce-Eklentiler/main/TorrentFilm.cs3",
+          "version": 2,
+          "result": "status-down"
+        },
+        {
+          "repository": "tecobaba/Cloudstream-Turkce-Eklentiler",
+          "url": "https://raw.githubusercontent.com/MakotoTokioki/Cloudstream-Turkce-Eklentiler/main/TorrentFilm.cs3",
+          "version": 2,
+          "result": "status-down"
+        },
+        {
+          "repository": "Sertel392/Makotogecici",
+          "url": "https://raw.githubusercontent.com/Sertel392/Makotogecici/main/TorrentFilm.cs3",
+          "version": 2,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "internal_name": "TRanimaci",
+      "name": "TRanimaci",
+      "status": "healthy",
+      "repository": "feroxx/Kekik-cloudstream",
+      "url": "https://raw.githubusercontent.com/feroxx/Kekik-cloudstream/builds/TRanimaci.cs3",
+      "version": 19,
+      "size": 16863,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "TrAnimeIzle",
+      "name": "TrAnimeIzle",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/TrAnimeIzle.cs3",
+      "version": 16,
+      "size": 70901,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "TRasyalog",
+      "name": "TRasyalog",
+      "status": "healthy",
+      "repository": "feroxx/Kekik-cloudstream",
+      "url": "https://raw.githubusercontent.com/feroxx/Kekik-cloudstream/builds/TRasyalog.cs3",
+      "version": 65,
+      "size": 15594,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "TrDiziIzle",
+      "name": "TrDiziIzle",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/TrDiziIzle.cs3",
+      "version": 7,
+      "size": 132296,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Trdiziizle",
+      "name": "Trdiziizle",
+      "status": "healthy",
+      "repository": "dr-octagon/BronzeCloud",
+      "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/Trdiziizle_v4.cs3",
+      "version": 4,
+      "size": 32036,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "TRGoals",
+      "name": "TRGoals",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSpor",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/TRGoals.cs3",
+      "version": 2,
+      "size": 173457,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "TurkAnime",
+      "name": "TurkAnime",
+      "status": "healthy",
+      "repository": "Emre-Kahveci/CloudStreamHub",
+      "url": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/TurkAnime.cs3",
+      "version": 109,
+      "size": 131932,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Turkdizileri",
+      "name": "Turkdizileri",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/Turkdizileri.cs3",
+      "version": 34,
+      "size": 166809,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "TurkishCineStream",
+      "name": "TurkishCineStream",
+      "status": "healthy",
+      "repository": "Wiojelt/WioCinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/WioCinema/builds/TurkishCineStream.cs3",
+      "version": 483,
+      "size": 806301,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "TurkishMix",
+      "name": "TurkishMix",
+      "status": "healthy",
+      "repository": "hrtestingx/hrcsrepo",
+      "url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepo/builds/TurkishMix.cs3",
+      "version": 10,
+      "size": 475398,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "TurkishW",
+      "name": "TurkishW",
+      "status": "healthy",
+      "repository": "ctnkyaumt/cstest",
+      "url": "https://raw.githubusercontent.com/ctnkyaumt/cstest/builds/TurkishW.cs3",
+      "version": 83,
+      "size": 498596,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "TurkiyeTV",
+      "name": "TurkiyeTV",
+      "status": "healthy",
+      "repository": "Eikosa/tv",
+      "url": "https://raw.githubusercontent.com/Eikosa/tv/builds/TurkiyeTV.cs3",
+      "version": 8,
+      "size": 44089,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Tv Bahçesi - Latte",
+      "name": "Tv Bahçesi - Latte",
+      "status": "healthy",
+      "repository": "GitLatte/Sinetech",
+      "url": "https://raw.githubusercontent.com/GitLatte/Sinetech/builds/Tv Bahçesi - Latte.cs3",
+      "version": 3,
+      "size": 20365,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Tv8",
+      "name": "Tv8",
+      "status": "healthy",
+      "repository": "lepotane/MRC-builds",
+      "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/Tv8.cs3",
+      "version": 2,
+      "size": 19859,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "TvDiziler",
+      "name": "TvDiziler",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/TvDiziler.cs3",
+      "version": 19,
+      "size": 36778,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "UgurFilm",
+      "name": "UgurFilm",
+      "status": "healthy",
+      "repository": "21nek/nektv",
+      "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/UgurFilm.cs3",
+      "version": 13,
+      "size": 20875,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "UltraFilmizle",
+      "name": "UltraFilmizle",
+      "status": "healthy",
+      "repository": "lepotane/MRC-builds",
+      "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/UltraFilmizle.cs3",
+      "version": 14,
+      "size": 30874,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Vavoo",
+      "name": "Vavoo",
+      "status": "healthy",
+      "repository": "dr-octagon/BronzeCloud",
+      "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/Vavoo_v5.cs3",
+      "version": 5,
+      "size": 38623,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "vavooSpor",
+      "name": "vavooSpor",
+      "status": "healthy",
+      "repository": "liberta09/Kekik-cloudstream",
+      "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/vavooSpor.cs3",
+      "version": 2,
+      "size": 20514,
+      "hash_checked": true,
+      "fallback_used": true,
+      "attempts": [
+        {
+          "repository": "arcilingir/Dizi_Film",
+          "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film/builds/vavooSpor.cs3",
+          "version": 2,
+          "result": "http-404"
+        },
+        {
+          "repository": "liberta09/Kekik-cloudstream",
+          "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/vavooSpor.cs3",
+          "version": 2,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "internal_name": "VivoXSpor",
+      "name": "VivoXSpor",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSpor",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/VivoXSpor.cs3",
+      "version": 4,
+      "size": 119179,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "VionTV",
+      "name": "VİONTV",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSpor",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/VionTV.cs3",
+      "version": 1,
+      "size": 115738,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Watch2Movies",
+      "name": "Watch2Movies",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/5b41ae19abbc419106af1ddf08c7bc68134138c1/Watch2Movies.cs3",
+      "version": 7,
+      "size": 115231,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "WebDramaTurkey",
+      "name": "WebDramaTurkey",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/WebDramaTurkey.cs3",
+      "version": 40,
+      "size": 55103,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "WebDramaTurkey - Latte",
+      "name": "WebDramaTurkey - Latte",
+      "status": "healthy",
+      "repository": "GitLatte/Sinetech",
+      "url": "https://raw.githubusercontent.com/GitLatte/Sinetech/builds/WebDramaTurkey - Latte.cs3",
+      "version": 3,
+      "size": 32680,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "WebdramaTurkey2",
+      "name": "WebdramaTurkey2",
+      "status": "healthy",
+      "repository": "lepotane/MRC-builds",
+      "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/WebdramaTurkey2.cs3",
+      "version": 4,
+      "size": 51636,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "WebteIzle",
+      "name": "WebteIzle",
+      "status": "healthy",
+      "repository": "safarxe/CloudStream",
+      "url": "https://raw.githubusercontent.com/safarxe/CloudStream/builds/WebteIzle.cs3",
+      "version": 59,
+      "size": 35303,
+      "hash_checked": true,
+      "fallback_used": true,
+      "attempts": [
+        {
+          "repository": "arcilingir/Dizi_Film",
+          "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film/builds/WebteIzle.cs3",
+          "version": 59,
+          "result": "http-404"
+        },
+        {
+          "repository": "safarxe/CloudStream",
+          "url": "https://raw.githubusercontent.com/safarxe/CloudStream/builds/WebteIzle.cs3",
+          "version": 59,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "internal_name": "Webteizle",
+      "name": "Webteizle",
+      "status": "healthy",
+      "repository": "blackhope01/cloudstream-plugins",
+      "url": "https://raw.githubusercontent.com/blackhope01/cloudstream-plugins/builds/Webteizle.cs3",
+      "version": 1,
+      "size": 28924,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "WFilmizle",
+      "name": "WFilmizle",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/WFilmizle.cs3",
+      "version": 24,
+      "size": 59842,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "WFilmİzle",
+      "name": "WFilmİzle",
+      "status": "healthy",
+      "repository": "liberta09/Kekik-cloudstream",
+      "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/WFilmİzle.cs3",
+      "version": 7,
+      "size": 17216,
+      "hash_checked": true,
+      "fallback_used": true,
+      "attempts": [
+        {
+          "repository": "arcilingir/Dizi_Film",
+          "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film/builds/WFilmİzle.cs3",
+          "version": 7,
+          "result": "http-404"
+        },
+        {
+          "repository": "liberta09/Kekik-cloudstream",
+          "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/WFilmİzle.cs3",
+          "version": 7,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "internal_name": "WioAsya",
+      "name": "WioAsya",
+      "status": "healthy",
+      "repository": "Wiojelt/WioAsya",
+      "url": "https://github.com/Wiojelt/WioAsya/releases/download/wioasya-artifacts-2026-10-03/WioAsya.cs3",
+      "version": 3,
+      "size": 2122548,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "XPrime",
+      "name": "XPrime",
+      "status": "healthy",
+      "repository": "liberta09/Kekik-cloudstream",
+      "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/XPrime.cs3",
+      "version": 6,
+      "size": 31075,
+      "hash_checked": true,
+      "fallback_used": true,
+      "attempts": [
+        {
+          "repository": "arcilingir/Dizi_Film",
+          "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film/builds/XPrime.cs3",
+          "version": 6,
+          "result": "http-404"
+        },
+        {
+          "repository": "liberta09/Kekik-cloudstream",
+          "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/XPrime.cs3",
+          "version": 6,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "internal_name": "YabanciDizi",
+      "name": "YabanciDizi",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/YabanciDizi.cs3",
+      "version": 19,
+      "size": 41052,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "YabanciDiziProvider",
+      "name": "YabanciDiziProvider",
+      "status": "healthy",
+      "repository": "EmRe-35/cloudstream-eklentim",
+      "url": "https://raw.githubusercontent.com/EmRe-35/cloudstream-eklentim/builds/YabanciDiziProvider.cs3",
+      "version": 1,
+      "size": 6736,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "YeniKaynak",
+      "name": "YeniKaynak",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/YeniKaynak.cs3",
+      "version": 12,
+      "size": 29294,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "yenikaynak",
+      "name": "yenikaynak",
+      "status": "healthy",
+      "repository": "cugucugu/mixue",
+      "url": "https://raw.githubusercontent.com/cugucugu/mixue/builds/yenikaynak.cs3",
+      "version": 1,
+      "size": 11599,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "YerelDiziler",
+      "name": "YerelDiziler",
+      "status": "healthy",
+      "repository": "Sertel392/Makotogecici",
+      "url": "https://raw.githubusercontent.com/Sertel392/Makotogecici/main/YerelDiziler.cs3",
+      "version": 14,
+      "size": 50752,
+      "hash_checked": false,
+      "fallback_used": true,
+      "attempts": [
+        {
+          "repository": "MakotoTokioki/Cloudstream-Turkce-Eklentiler",
+          "url": "https://raw.githubusercontent.com/MakotoTokioki/Cloudstream-Turkce-Eklentiler/main/YerelDiziler.cs3",
+          "version": 14,
+          "result": "status-down"
+        },
+        {
+          "repository": "tecobaba/Cloudstream-Turkce-Eklentiler",
+          "url": "https://raw.githubusercontent.com/MakotoTokioki/Cloudstream-Turkce-Eklentiler/main/YerelDiziler.cs3",
+          "version": 14,
+          "result": "status-down"
+        },
+        {
+          "repository": "Sertel392/Makotogecici",
+          "url": "https://raw.githubusercontent.com/Sertel392/Makotogecici/main/YerelDiziler.cs3",
+          "version": 14,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "internal_name": "YerelProgramlar",
+      "name": "YerelProgramlar",
+      "status": "healthy",
+      "repository": "Sertel392/Makotogecici",
+      "url": "https://raw.githubusercontent.com/Sertel392/Makotogecici/main/YerelProgramlar.cs3",
+      "version": 1,
+      "size": 77654,
+      "hash_checked": false,
+      "fallback_used": true,
+      "attempts": [
+        {
+          "repository": "CennetCehennem/Aybuz",
+          "url": "https://raw.githubusercontent.com/MakotoTokioki/Cloudstream-Turkce-Eklentiler/main/YerelProgramlar.cs3",
+          "version": 1,
+          "result": "http-404"
+        },
+        {
+          "repository": "MakotoTokioki/Cloudstream-Turkce-Eklentiler",
+          "url": "https://raw.githubusercontent.com/MakotoTokioki/Cloudstream-Turkce-Eklentiler/main/YerelProgramlar.cs3",
+          "version": 1,
+          "result": "status-down"
+        },
+        {
+          "repository": "tecobaba/Cloudstream-Turkce-Eklentiler",
+          "url": "https://raw.githubusercontent.com/MakotoTokioki/Cloudstream-Turkce-Eklentiler/main/YerelProgramlar.cs3",
+          "version": 1,
+          "result": "status-down"
+        },
+        {
+          "repository": "Sertel392/Makotogecici",
+          "url": "https://raw.githubusercontent.com/Sertel392/Makotogecici/main/YerelProgramlar.cs3",
+          "version": 1,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "internal_name": "YerliDizi",
+      "name": "YerliDizi",
+      "status": "healthy",
+      "repository": "apkbir/test",
+      "url": "https://raw.githubusercontent.com/apkbir/test/builds/Turkish123.cs3",
+      "version": 1,
+      "size": 12933,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "YesilCamTv",
+      "name": "YesilCamTv",
+      "status": "healthy",
+      "repository": "Emre-Kahveci/CloudStreamHub",
+      "url": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/YesilCamTv.cs3",
+      "version": 25,
+      "size": 125082,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "YesilcamTV",
+      "name": "YesilcamTV",
+      "status": "healthy",
+      "repository": "manitux-app/cs-plugins",
+      "url": "https://raw.githubusercontent.com/manitux-app/cs-plugins/main/builds/YesilcamTV.cs3",
+      "version": 3,
+      "size": 47192,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "YouTube",
+      "name": "YouTube",
+      "status": "healthy",
+      "repository": "baristomruk-max/BTVault",
+      "url": "https://raw.githubusercontent.com/baristomruk-max/BTVault/builds/YouTube.cs3",
+      "version": 4,
+      "size": 17089,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "Youtube",
+      "name": "Youtube",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/Youtube.cs3",
+      "version": 39,
+      "size": 109126,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "YouTube Özel - Latte",
+      "name": "YouTube Özel - Latte",
+      "status": "healthy",
+      "repository": "GitLatte/Sinetech",
+      "url": "https://raw.githubusercontent.com/GitLatte/Sinetech/builds/YouTube Özel - Latte.cs3",
+      "version": 1,
+      "size": 13644,
+      "hash_checked": false,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "YTS",
+      "name": "YTS",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/YTS.cs3",
+      "version": 43,
+      "size": 92944,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "ZbahisTV",
+      "name": "ZbahisTV",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSpor",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/ZbahisTV.cs3",
+      "version": 10,
+      "size": 161205,
+      "hash_checked": true,
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "AsyaMinik",
+      "status": "rejected",
+      "attempts": [
+        {
+          "repository": "aytzey/cs-kraptor",
+          "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/AsyaMinik.cs3",
+          "version": 17,
+          "result": "status-down"
+        }
+      ]
+    },
+    {
+      "internal_name": "Exxen",
+      "status": "rejected",
+      "attempts": [
+        {
+          "repository": "MakotoTokioki/Cloudstream-Turkce-Eklentiler",
+          "url": "https://raw.githubusercontent.com/MakotoTokioki/Cloudstream-Turkce-Eklentiler/main/Exxen.cs3",
+          "version": 3,
+          "result": "status-down"
+        },
+        {
+          "repository": "tecobaba/Cloudstream-Turkce-Eklentiler",
+          "url": "https://raw.githubusercontent.com/MakotoTokioki/Cloudstream-Turkce-Eklentiler/main/Exxen.cs3",
+          "version": 3,
+          "result": "status-down"
+        }
+      ]
+    },
+    {
+      "internal_name": "Filmİzlesene",
+      "status": "rejected",
+      "attempts": [
+        {
+          "repository": "arcilingir/Dizi_Film",
+          "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film/builds/Filmİzlesene.cs3",
+          "version": 3,
+          "result": "status-down"
+        },
+        {
+          "repository": "liberta09/Kekik-cloudstream",
+          "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/Filmİzlesene.cs3",
+          "version": 3,
+          "result": "status-down"
+        },
+        {
+          "repository": "safarxe/CloudStream",
+          "url": "https://raw.githubusercontent.com/safarxe/CloudStream/builds/Filmİzlesene.cs3",
+          "version": 3,
+          "result": "status-down"
+        }
+      ]
+    },
+    {
+      "internal_name": "Gain",
+      "status": "rejected",
+      "attempts": [
+        {
+          "repository": "MakotoTokioki/Cloudstream-Turkce-Eklentiler",
+          "url": "https://raw.githubusercontent.com/MakotoTokioki/Cloudstream-Turkce-Eklentiler/main/Gain.cs3",
+          "version": 1,
+          "result": "status-down"
+        },
+        {
+          "repository": "tecobaba/Cloudstream-Turkce-Eklentiler",
+          "url": "https://raw.githubusercontent.com/MakotoTokioki/Cloudstream-Turkce-Eklentiler/main/Gain.cs3",
+          "version": 1,
+          "result": "status-down"
+        }
+      ]
+    },
+    {
+      "internal_name": "IfsaLog",
+      "status": "rejected",
+      "attempts": [
+        {
+          "repository": "21nek/nektv",
+          "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/IfsaLog.cs3",
+          "version": 3,
+          "result": "status-down"
+        }
+      ]
+    },
+    {
+      "internal_name": "Kanal 7",
+      "status": "rejected",
+      "attempts": [
+        {
+          "repository": "CennetCehennem/Aybuz",
+          "url": "https://raw.githubusercontent.com/MakotoTokioki/Cloudstream-Turkce-Eklentiler/main/Kanal 7.cs3",
+          "version": 1,
+          "result": "http-404"
+        },
+        {
+          "repository": "MakotoTokioki/Cloudstream-Turkce-Eklentiler",
+          "url": "https://raw.githubusercontent.com/MakotoTokioki/Cloudstream-Turkce-Eklentiler/main/Kanal 7.cs3",
+          "version": 1,
+          "result": "status-down"
+        },
+        {
+          "repository": "tecobaba/Cloudstream-Turkce-Eklentiler",
+          "url": "https://raw.githubusercontent.com/MakotoTokioki/Cloudstream-Turkce-Eklentiler/main/Kanal 7.cs3",
+          "version": 1,
+          "result": "status-down"
+        },
+        {
+          "repository": "Sertel392/Makotogecici",
+          "url": "https://raw.githubusercontent.com/Sertel392/Makotogecici/main/Kanal 7.cs3",
+          "version": 1,
+          "result": "http-404"
+        }
+      ]
+    },
+    {
+      "internal_name": "KanalD",
+      "status": "rejected",
+      "attempts": [
+        {
+          "repository": "lepotane/MRC-builds",
+          "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/KanalD.cs3",
+          "version": 2,
+          "result": "status-down"
+        }
+      ]
+    },
+    {
+      "internal_name": "NeonSpor",
+      "status": "rejected",
+      "attempts": [
+        {
+          "repository": "eycommas/kekikmod",
+          "url": "https://raw.githubusercontent.com/sarapcanagii/Pitipitii/builds/NeonSpor.cs3",
+          "version": 9,
+          "result": "http-404"
+        }
+      ]
+    },
+    {
+      "internal_name": "SSportPlus",
+      "status": "rejected",
+      "attempts": [
+        {
+          "repository": "CennetCehennem/Aybuz",
+          "url": "https://raw.githubusercontent.com/MakotoTokioki/Cloudstream-Turkce-Eklentiler/main/SSportPlus.cs3",
+          "version": 8,
+          "result": "http-404"
+        },
+        {
+          "repository": "MakotoTokioki/Cloudstream-Turkce-Eklentiler",
+          "url": "https://raw.githubusercontent.com/MakotoTokioki/Cloudstream-Turkce-Eklentiler/main/SSportPlus.cs3",
+          "version": 8,
+          "result": "status-down"
+        },
+        {
+          "repository": "tecobaba/Cloudstream-Turkce-Eklentiler",
+          "url": "https://raw.githubusercontent.com/MakotoTokioki/Cloudstream-Turkce-Eklentiler/main/SSportPlus.cs3",
+          "version": 8,
+          "result": "status-down"
+        }
+      ]
+    },
+    {
+      "internal_name": "Tabii",
+      "status": "rejected",
+      "attempts": [
+        {
+          "repository": "CennetCehennem/Aybuz",
+          "url": "https://raw.githubusercontent.com/MakotoTokioki/Cloudstream-Turkce-Eklentiler/main/Tabii.cs3",
+          "version": 9,
+          "result": "http-404"
+        },
+        {
+          "repository": "MakotoTokioki/Cloudstream-Turkce-Eklentiler",
+          "url": "https://raw.githubusercontent.com/MakotoTokioki/Cloudstream-Turkce-Eklentiler/main/Tabii.cs3",
+          "version": 9,
+          "result": "status-down"
+        },
+        {
+          "repository": "tecobaba/Cloudstream-Turkce-Eklentiler",
+          "url": "https://raw.githubusercontent.com/MakotoTokioki/Cloudstream-Turkce-Eklentiler/main/Tabii.cs3",
+          "version": 9,
+          "result": "status-down"
+        }
+      ]
+    },
+    {
+      "internal_name": "Tafdi",
+      "status": "rejected",
+      "attempts": [
+        {
+          "repository": "arcilingir/Dizi_Film",
+          "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film/builds/Tafdi.cs3",
+          "version": 3,
+          "result": "status-down"
+        },
+        {
+          "repository": "liberta09/Kekik-cloudstream",
+          "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/Tafdi.cs3",
+          "version": 3,
+          "result": "status-down"
+        },
+        {
+          "repository": "safarxe/CloudStream",
+          "url": "https://raw.githubusercontent.com/safarxe/CloudStream/builds/Tafdi.cs3",
+          "version": 3,
+          "result": "status-down"
+        }
+      ]
+    },
+    {
+      "internal_name": "TmdbProvider",
+      "status": "rejected",
+      "attempts": [
+        {
+          "repository": "blackhope01/cloudstream-plugins",
+          "url": "https://raw.githubusercontent.com/blackhope01/cloudstream-plugins/builds/TmdbProvider.cs3",
+          "version": 1,
+          "result": "status-down"
+        }
+      ]
+    }
+  ]
+}
