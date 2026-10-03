@@ -749,8 +749,9 @@ def build_cloudstream_bundle(app_ready: list[dict], seed_repos: set[str]):
     ))
 
     repo_manifest = {
-        "name": "Emir CloudStream",
+        "name": "EmirTV",
         "description": "Otomatik doğrulanan ve tekilleştirilen Türkçe CloudStream eklenti deposu.",
+        "iconUrl": "https://raw.githubusercontent.com/kodlama155-ctrl/csrepo/main/assets/emirtv-icon.png",
         "manifestVersion": 1,
         "pluginLists": [
             "https://raw.githubusercontent.com/kodlama155-ctrl/csrepo/main/plugins.json"
@@ -794,7 +795,7 @@ def build_repo_catalog(app_ready: list[dict], published_plugin_count: int, seed_
     bundle = {
         "id": "emir-cloudstream-all",
         "type": "bundle",
-        "name": "Emir CloudStream — Hepsi Bir Arada",
+        "name": "EmirTV — Hepsi Bir Arada",
         "description": "Aktif Türkçe CloudStream eklentilerinin otomatik doğrulanan ve tekilleştirilen birleşik deposu.",
         "repo_url": bundle_url,
         "install_url": cloudstream_install_url(bundle_url),
@@ -837,7 +838,7 @@ def build_repo_catalog(app_ready: list[dict], published_plugin_count: int, seed_
     ))
 
     catalog = {
-        "name": "Emir CloudStream — Depoları Seç",
+        "name": "EmirTV — Depoları Seç",
         "description": "Hepsi Bir Arada deposunu veya istediğiniz Türkçe CloudStream depolarını tek tek seçebilirsiniz.",
         "generated_at": generated_at,
         "sections": [
@@ -866,13 +867,13 @@ def build_repo_catalog(app_ready: list[dict], published_plugin_count: int, seed_
     save_json(ROOT / "repos-db.json", repo_urls)
 
     lines = [
-        "# Emir CloudStream — Depoları Seç",
+        "# EmirTV — Depoları Seç",
         "",
         "İsterseniz tüm Türkçe eklentileri tek depoda, isterseniz kaynak depoları ayrı ayrı ekleyebilirsiniz.",
         "",
         "## Hepsi Bir Arada",
         "",
-        f"- [Emir CloudStream — Hepsi Bir Arada]({bundle['install_url']}) — {published_plugin_count} tekilleştirilmiş eklenti",
+        f"- [EmirTV — Hepsi Bir Arada]({bundle['install_url']}) — {published_plugin_count} tekilleştirilmiş eklenti",
         "",
         "## Tek Tek Depolar",
         "",
