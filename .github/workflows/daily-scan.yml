@@ -49,6 +49,6 @@ jobs:
           fi
           git config user.name "csrepo-bot"
           git config user.email "csrepo-bot@users.noreply.github.com"
-          git add repo.json plugins.json repos-db.json catalog.md data/catalog.json data/repos.json data/turkish_all.json data/global.json data/candidates.json data/changes.json
+          git add repo.json plugins.json repos-db.json catalog.md data/catalog.json data/plugin-health.json data/repos.json data/turkish_all.json data/global.json data/candidates.json data/changes.json
           git commit -m "chore: update CloudStream repo scan"
           git push
