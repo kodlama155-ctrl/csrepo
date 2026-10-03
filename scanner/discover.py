@@ -36,7 +36,6 @@ SEARCH_QUERIES = [
 # Global code search is intentionally broad. Valid non-Turkish repositories found
 # here are kept in data/global.json instead of polluting the Turkish feed.
 CODE_QUERIES = [
-    'filename:repo.json "pluginLists" "CloudStream"',
     'filename:repo.json "pluginLists" "Türkçe"',
 ]
 
@@ -111,6 +110,12 @@ def discover_candidates() -> dict[str, set[str]]:
     seeds = load_json(DATA / "seeds.json", [])
     for item in seeds:
         add(item["repository"], "seed")
+
+    # Persistent registry: once a repository is discovered, keep checking it even
+    # if GitHub Search is temporarily rate-limited or stops returning it.
+    for full_name in load_json(DATA / "candidates.json", []):
+        if isinstance(full_name, str):
+            add(full_name, "registry")
 
     for query in SEARCH_QUERIES:
         try:
@@ -526,21 +531,28 @@ def main():
         x.get("repository") or "",
     ))
 
-    changes = summarize_changes(old_tr, turkish)
-    save_json(DATA / "repos.json", turkish)
+    # Application feed: only active, non-empty and reachable Turkish repos.
+    app_ready = [x for x in turkish if x.get("status") == "active" and (x.get("plugin_count") or 0) > 0]
+
+    changes = summarize_changes(old_tr, app_ready)
+    save_json(DATA / "candidates.json", sorted(candidates))
+    save_json(DATA / "repos.json", app_ready)
+    save_json(DATA / "turkish_all.json", turkish)
     save_json(DATA / "global.json", global_other)
     save_json(DATA / "changes.json", {
         "generated_at": now_iso(),
         "candidate_count": len(candidates),
         "verified_count": len(turkish) + len(global_other),
         "turkish_count": len(turkish),
+        "app_ready_count": len(app_ready),
         "global_count": len(global_other),
         "changes": changes,
     })
 
     print(
         f"[done] verified={len(turkish) + len(global_other)} "
-        f"turkish={len(turkish)} global={len(global_other)} changes={len(changes)}"
+        f"turkish={len(turkish)} app_ready={len(app_ready)} "
+        f"global={len(global_other)} changes={len(changes)}"
     )
 
 
