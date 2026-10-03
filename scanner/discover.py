@@ -5,6 +5,7 @@ import json
 import os
 import re
 import time
+from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import quote, urlparse
@@ -32,10 +33,26 @@ SEARCH_QUERIES = [
     "cloudstream repo Türkçe in:name,description",
 ]
 
+# Global code search is intentionally broad. Valid non-Turkish repositories found
+# here are kept in data/global.json instead of polluting the Turkish feed.
 CODE_QUERIES = [
     'filename:repo.json "pluginLists" "CloudStream"',
     'filename:repo.json "pluginLists" "Türkçe"',
 ]
+
+TR_LANGUAGE_VALUES = {
+    "tr", "tr-tr", "tur", "turkish", "turkce", "türkçe", "turkiye", "türkiye"
+}
+
+# Strong Turkish ecosystem/content markers. Avoid generic words such as "film"
+# by themselves because they are common in many languages.
+TR_MARKERS = (
+    "türk", "turk", "kekik", "eklenti", "sağlayıcı", "saglayici", "yayın",
+    "yayin", "dizi", "izle", "belgesel", "çizgi", "cizgi", "inatbox",
+    "rectv", "dizipal", "hdfilmcehennemi", "filmmakinesi", "turkanime",
+    "sezonlukdizi", "sinewix", "sinema", "wiosinema", "wioanime",
+    "wiodrama", "wioasya", "wiokids", "wiospor", "turkspor",
+)
 
 SESSION = requests.Session()
 SESSION.headers.update(HEADERS)
@@ -103,7 +120,6 @@ def discover_candidates() -> dict[str, set[str]]:
         except requests.RequestException as e:
             print(f"[warn] repository search failed: {query}: {e}")
 
-    # Code search catches repositories whose name/description does not say CloudStream.
     for query in CODE_QUERIES:
         try:
             result = api_get("/search/code", {"q": query, "per_page": 100, "page": 1})
@@ -113,8 +129,7 @@ def discover_candidates() -> dict[str, set[str]]:
         except requests.RequestException as e:
             print(f"[warn] code search failed: {query}: {e}")
 
-    # Expand owners of trusted seed repos. This is what prevents sibling projects
-    # such as WioSinema/WioAnime/WioDrama from being missed.
+    # Expand owners of trusted Turkish seeds so sibling projects are not missed.
     seed_owners = sorted({x["repository"].split("/", 1)[0] for x in seeds})
     for owner in seed_owners:
         try:
@@ -216,21 +231,47 @@ def validate_manifest(full_name: str, branch: str):
     return raw_url, manifest
 
 
+def normalize_language(value) -> str | None:
+    if not isinstance(value, str):
+        return None
+    v = value.strip().lower().replace("_", "-")
+    return v or None
+
+
 def plugin_list_info(url: str):
     raw, _ = text_get(url)
     if raw is None:
-        return {"url": url, "reachable": False, "count": 0, "updated_at": None}
+        return {
+            "url": url, "reachable": False, "count": 0, "updated_at": None,
+            "languages": {}, "turkish_language_count": 0, "text_sample": "",
+        }
     try:
         payload = json.loads(raw)
     except json.JSONDecodeError:
-        return {"url": url, "reachable": False, "count": 0, "updated_at": None}
+        return {
+            "url": url, "reachable": False, "count": 0, "updated_at": None,
+            "languages": {}, "turkish_language_count": 0, "text_sample": "",
+        }
 
     if isinstance(payload, list):
-        count = len(payload)
+        plugins = payload
     elif isinstance(payload, dict) and isinstance(payload.get("plugins"), list):
-        count = len(payload["plugins"])
+        plugins = payload["plugins"]
     else:
-        count = 0
+        plugins = []
+
+    languages = Counter()
+    text_bits = []
+    for p in plugins:
+        if not isinstance(p, dict):
+            continue
+        lang = normalize_language(p.get("language"))
+        if lang:
+            languages[lang] += 1
+        for field in ("name", "internalName", "description"):
+            value = p.get(field)
+            if isinstance(value, str):
+                text_bits.append(value)
 
     updated_at = None
     parsed = parse_raw_github(url)
@@ -238,21 +279,84 @@ def plugin_list_info(url: str):
         repo_full, ref, path = parsed
         updated_at = latest_commit_for_path(repo_full, ref, path)
 
+    tr_count = sum(count for lang, count in languages.items() if lang in TR_LANGUAGE_VALUES)
     return {
         "url": url,
         "reachable": True,
-        "count": count,
+        "count": len(plugins),
         "updated_at": updated_at,
         "source_repository": parsed[0] if parsed else None,
+        "languages": dict(sorted(languages.items())),
+        "turkish_language_count": tr_count,
+        "text_sample": " ".join(text_bits[:80])[:5000],
+    }
+
+
+def turkish_classification(item: dict, discovery_sources: set[str], seed_repos: set[str], seed_owners: set[str]):
+    reasons = []
+    score = 0
+    full_name = item.get("repository") or ""
+    owner = full_name.split("/", 1)[0] if "/" in full_name else ""
+
+    if full_name in seed_repos:
+        score += 100
+        reasons.append("trusted-seed")
+
+    if owner in seed_owners:
+        score += 35
+        reasons.append("trusted-turkish-owner")
+
+    tr_lang_count = sum(
+        int(x.get("turkish_language_count") or 0)
+        for x in item.get("plugin_lists", [])
+    )
+    if tr_lang_count:
+        score += min(100, 60 + tr_lang_count)
+        reasons.append(f"plugins-language-tr:{tr_lang_count}")
+
+    text_parts = [
+        item.get("name") or "",
+        item.get("description") or "",
+        item.get("repository") or "",
+    ]
+    for p in item.get("plugin_lists", []):
+        text_parts.append(p.get("text_sample") or "")
+    haystack = " ".join(text_parts).lower()
+
+    matched = sorted({marker for marker in TR_MARKERS if marker in haystack})
+    if matched:
+        score += min(70, 25 + len(matched) * 8)
+        reasons.append("turkish-markers:" + ",".join(matched[:8]))
+
+    if any(
+        source.startswith("repo-search:") and
+        any(k in source.lower() for k in ("türkçe", "turkish", "eklenti", "kekik"))
+        for source in discovery_sources
+    ):
+        score += 20
+        reasons.append("turkish-search-hit")
+
+    # A repo using a known Turkish ecosystem plugin list is relevant even if
+    # its own README/description is sparse.
+    source_repos = set(item.get("plugin_source_repositories") or [])
+    if any(
+        ("kekik" in x.lower()) or ("wio" in x.lower()) or ("turk" in x.lower())
+        for x in source_repos
+    ):
+        score += 35
+        reasons.append("turkish-plugin-source")
+
+    return {
+        "is_turkish": score >= 50,
+        "score": score,
+        "reasons": reasons,
     }
 
 
 def inspect_repo(full_name: str, discovery_sources: set[str]):
     owner, repo = full_name.split("/", 1)
     meta = api_get(f"/repos/{owner}/{repo}", allow_404=True)
-    if not meta:
-        return None
-    if meta.get("private"):
+    if not meta or meta.get("private"):
         return None
 
     manifest_hit = None
@@ -272,12 +376,18 @@ def inspect_repo(full_name: str, discovery_sources: set[str]):
     plugin_infos = []
     for url in manifest.get("pluginLists", []):
         if not isinstance(url, str) or not url.startswith(("https://", "http://")):
-            plugin_infos.append({"url": str(url), "reachable": False, "count": 0, "updated_at": None})
+            plugin_infos.append({
+                "url": str(url), "reachable": False, "count": 0, "updated_at": None,
+                "languages": {}, "turkish_language_count": 0, "text_sample": "",
+            })
             continue
         try:
             plugin_infos.append(plugin_list_info(url))
         except requests.RequestException:
-            plugin_infos.append({"url": url, "reachable": False, "count": 0, "updated_at": None})
+            plugin_infos.append({
+                "url": url, "reachable": False, "count": 0, "updated_at": None,
+                "languages": {}, "turkish_language_count": 0, "text_sample": "",
+            })
 
     plugin_count = sum(x.get("count", 0) for x in plugin_infos)
     reachable = bool(plugin_infos) and all(x.get("reachable") for x in plugin_infos)
@@ -355,42 +465,83 @@ def summarize_changes(old: list[dict], new: list[dict]):
     return changes
 
 
+def compact_for_output(item: dict):
+    # text_sample is only needed internally for language classification.
+    out = dict(item)
+    cleaned = []
+    for p in out.get("plugin_lists", []):
+        q = dict(p)
+        q.pop("text_sample", None)
+        cleaned.append(q)
+    out["plugin_lists"] = cleaned
+    return out
+
+
 def main():
     DATA.mkdir(parents=True, exist_ok=True)
-    old = load_json(DATA / "repos.json", [])
+    old_tr = load_json(DATA / "repos.json", [])
+    seeds = load_json(DATA / "seeds.json", [])
+    seed_repos = {x["repository"] for x in seeds}
+    seed_owners = {x.split("/", 1)[0] for x in seed_repos}
+
     candidates = discover_candidates()
     print(f"[info] candidates: {len(candidates)}")
 
-    results = []
+    turkish = []
+    global_other = []
+
     for i, (full_name, sources) in enumerate(sorted(candidates.items()), 1):
         try:
             item = inspect_repo(full_name, sources)
-            if item:
-                results.append(item)
-                print(f"[ok] {full_name}: {item['status']} / {item['plugin_count']} plugins")
-            else:
+            if not item:
                 print(f"[skip] {full_name}: no valid CloudStream repo.json")
+                continue
+
+            cls = turkish_classification(item, sources, seed_repos, seed_owners)
+            item["turkish"] = cls
+            clean = compact_for_output(item)
+
+            if cls["is_turkish"]:
+                turkish.append(clean)
+                print(f"[tr] {full_name}: {item['status']} / {item['plugin_count']} plugins / score={cls['score']}")
+            else:
+                global_other.append(clean)
+                print(f"[global] {full_name}: {item['status']} / {item['plugin_count']} plugins")
         except Exception as e:
             print(f"[warn] {full_name}: {type(e).__name__}: {e}")
+
         if i % 20 == 0:
             time.sleep(1)
 
-    results.sort(key=lambda x: (
+    sort_key = lambda x: (
+        x.get("status") != "active",
+        -(x.get("turkish", {}).get("score") or 0),
+        x.get("name") or "",
+        x.get("repository") or "",
+    )
+    turkish.sort(key=sort_key)
+    global_other.sort(key=lambda x: (
         x.get("status") != "active",
         x.get("name") or "",
         x.get("repository") or "",
     ))
 
-    changes = summarize_changes(old, results)
-    save_json(DATA / "repos.json", results)
+    changes = summarize_changes(old_tr, turkish)
+    save_json(DATA / "repos.json", turkish)
+    save_json(DATA / "global.json", global_other)
     save_json(DATA / "changes.json", {
         "generated_at": now_iso(),
         "candidate_count": len(candidates),
-        "verified_count": len(results),
+        "verified_count": len(turkish) + len(global_other),
+        "turkish_count": len(turkish),
+        "global_count": len(global_other),
         "changes": changes,
     })
 
-    print(f"[done] verified={len(results)} changes={len(changes)}")
+    print(
+        f"[done] verified={len(turkish) + len(global_other)} "
+        f"turkish={len(turkish)} global={len(global_other)} changes={len(changes)}"
+    )
 
 
 if __name__ == "__main__":
