@@ -1,5 +1,2298 @@
 [
   {
+    "name": "AMSC French",
+    "description": "Updating the Cloudstream French Provider.",
+    "repository": "mouradchaouche/cloudstream-frenchrepo",
+    "repository_url": "https://github.com/mouradchaouche/cloudstream-frenchrepo",
+    "repo_url": "https://raw.githubusercontent.com/mouradchaouche/cloudstream-frenchrepo/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 2,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/mouradchaouche/cloudstream-frenchrepo/main/plugins.json",
+        "reachable": true,
+        "count": 7,
+        "updated_at": "2026-07-14T11:34:36Z",
+        "source_repository": "mouradchaouche/cloudstream-frenchrepo",
+        "languages": {
+          "fr": 6
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 7,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "mouradchaouche/cloudstream-frenchrepo"
+    ],
+    "last_repo_push": "2026-07-14T11:34:36Z",
+    "last_manifest_update": "2026-04-25T13:03:54Z",
+    "last_plugins_update": "2026-07-14T11:34:36Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:14:51Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "AnimeON",
+    "description": "Cloudstream AnimeON Plugin Repository",
+    "repository": "deleteBlack666/cloudstream-extensions-uk",
+    "repository_url": "https://github.com/deleteBlack666/cloudstream-extensions-uk",
+    "repo_url": "https://raw.githubusercontent.com/deleteBlack666/cloudstream-extensions-uk/master/repo.json",
+    "manifest_branch": "master",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/deleteBlack666/cloudstream-extensions-uk/builds/plugins.json",
+        "reachable": true,
+        "count": 1,
+        "updated_at": "2026-06-29T10:03:45Z",
+        "source_repository": "deleteBlack666/cloudstream-extensions-uk",
+        "languages": {
+          "uk": 1
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 1,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "deleteBlack666/cloudstream-extensions-uk"
+    ],
+    "last_repo_push": "2026-06-29T10:03:46Z",
+    "last_manifest_update": "2026-05-30T18:50:30Z",
+    "last_plugins_update": "2026-06-29T10:03:45Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:14:12Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "AnimeX",
+    "description": "A curated collection of CloudStream extensions for anime and donghua, with Indonesian subtitles",
+    "repository": "HatsuneMikuUwU/AnimeX",
+    "repository_url": "https://github.com/HatsuneMikuUwU/AnimeX",
+    "repo_url": "https://raw.githubusercontent.com/HatsuneMikuUwU/AnimeX/master/repo.json",
+    "manifest_branch": "master",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/HatsuneMikuUwU/AnimeX/builds/plugins.json",
+        "reachable": true,
+        "count": 17,
+        "updated_at": "2026-09-26T22:17:24Z",
+        "source_repository": "HatsuneMikuUwU/AnimeX",
+        "languages": {
+          "id": 17
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 17,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "HatsuneMikuUwU/AnimeX"
+    ],
+    "last_repo_push": "2026-09-28T22:07:25Z",
+    "last_manifest_update": "2026-09-21T02:05:42Z",
+    "last_plugins_update": "2026-09-26T22:17:24Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:13:00Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "Aniyomi Compat",
+    "description": "Use Aniyomi Extensions in CloudStream!",
+    "repository": "CranberrySoup/AniyomiCompatExtension",
+    "repository_url": "https://github.com/CranberrySoup/AniyomiCompatExtension",
+    "repo_url": "https://raw.githubusercontent.com/CranberrySoup/AniyomiCompatExtension/master/repo.json",
+    "manifest_branch": "master",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/CranberrySoup/AniyomiCompatExtension/builds/plugins.json",
+        "reachable": true,
+        "count": 1,
+        "updated_at": "2026-03-15T17:04:46Z",
+        "source_repository": "CranberrySoup/AniyomiCompatExtension",
+        "languages": {},
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 1,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "CranberrySoup/AniyomiCompatExtension"
+    ],
+    "last_repo_push": "2026-03-15T17:04:47Z",
+    "last_manifest_update": "2023-08-23T02:33:13Z",
+    "last_plugins_update": "2026-03-15T17:04:46Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:12:52Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "Arabic CloudStream Repo",
+    "description": "Arabic CloudStream extensions - FaselHD, Akwam, Anime4up and more",
+    "repository": "ramailo1/arprov",
+    "repository_url": "https://github.com/ramailo1/arprov",
+    "repo_url": "https://raw.githubusercontent.com/ramailo1/arprov/builds/repo.json",
+    "manifest_branch": "builds",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/ramailo1/arprov/builds/plugins.json",
+        "reachable": true,
+        "count": 25,
+        "updated_at": "2026-08-29T17:43:09Z",
+        "source_repository": "ramailo1/arprov",
+        "languages": {
+          "ar": 25
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 25,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "ramailo1/arprov"
+    ],
+    "last_repo_push": "2026-08-29T17:43:10Z",
+    "last_manifest_update": "2026-08-29T17:43:09Z",
+    "last_plugins_update": "2026-08-29T17:43:09Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:15:00Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "Arabico",
+    "description": "Updating the CloudStream Arabic Provider.",
+    "repository": "blackoff23/ArabicoX",
+    "repository_url": "https://github.com/blackoff23/ArabicoX",
+    "repo_url": "https://raw.githubusercontent.com/blackoff23/ArabicoX/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/blackoff23/ArabicoX/main/plugins.json",
+        "reachable": true,
+        "count": 29,
+        "updated_at": "2026-01-20T03:21:39Z",
+        "source_repository": "blackoff23/ArabicoX",
+        "languages": {
+          "ar": 29
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 29,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "blackoff23/ArabicoX"
+    ],
+    "last_repo_push": "2026-01-20T10:52:19Z",
+    "last_manifest_update": "2026-01-20T03:11:23Z",
+    "last_plugins_update": "2026-01-20T03:21:39Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:14:01Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "BDIX CloudStream Extensions",
+    "description": "DhakaFlix and FtpBd providers for CloudStream",
+    "repository": "salmanbappi/cloudstream-extensions",
+    "repository_url": "https://github.com/salmanbappi/cloudstream-extensions",
+    "repo_url": "https://raw.githubusercontent.com/salmanbappi/cloudstream-extensions/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/salmanbappi/cloudstream-extensions/builds/plugins.json",
+        "reachable": true,
+        "count": 3,
+        "updated_at": "2026-04-28T19:33:03Z",
+        "source_repository": "salmanbappi/cloudstream-extensions",
+        "languages": {},
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 3,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "salmanbappi/cloudstream-extensions"
+    ],
+    "last_repo_push": "2026-04-28T19:33:04Z",
+    "last_manifest_update": "2025-12-28T21:55:21Z",
+    "last_plugins_update": "2026-04-28T19:33:03Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:15:10Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "CS-yonkou-plugins",
+    "description": "Multi-language movies, series, live TV, anime and audiobooks - CloudStream extensions by yonkou",
+    "repository": "yonkou0/test",
+    "repository_url": "https://github.com/yonkou0/test",
+    "repo_url": "https://raw.githubusercontent.com/yonkou0/test/builds/repo.json",
+    "manifest_branch": "builds",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/yonkou0/CS-yonkou-plugins/builds/plugins.json",
+        "reachable": true,
+        "count": 13,
+        "updated_at": "2026-09-06T12:33:18Z",
+        "source_repository": "yonkou0/CS-yonkou-plugins",
+        "languages": {
+          "bn": 1,
+          "en": 1,
+          "ta": 10,
+          "te": 1
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 13,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": false,
+    "plugin_source_repositories": [
+      "yonkou0/CS-yonkou-plugins"
+    ],
+    "last_repo_push": "2026-09-06T12:33:20Z",
+    "last_manifest_update": "2026-09-06T12:33:18Z",
+    "last_plugins_update": "2026-09-06T12:33:18Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:15:31Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "CakesTwix Providers Repository Codeberg",
+    "description": "Cloudstream Ukraine Plugin Repository",
+    "repository": "CakesTwix/cloudstream-extensions-uk",
+    "repository_url": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "repo_url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/master/repo.json",
+    "manifest_branch": "master",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/refs/heads/builds/plugins.json",
+        "reachable": true,
+        "count": 21,
+        "updated_at": null,
+        "source_repository": "CakesTwix/cloudstream-extensions-uk",
+        "languages": {
+          "uk": 21
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 21,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "CakesTwix/cloudstream-extensions-uk"
+    ],
+    "last_repo_push": "2026-09-29T20:10:52Z",
+    "last_manifest_update": "2026-07-02T19:43:33Z",
+    "last_plugins_update": null,
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:12:49Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "Chzzk",
+    "description": "네이버 치지직 라이브 / 다시보기 / 클립 CloudStream 플러그인",
+    "repository": "ouor/cloudstream-chzzk",
+    "repository_url": "https://github.com/ouor/cloudstream-chzzk",
+    "repo_url": "https://raw.githubusercontent.com/ouor/cloudstream-chzzk/master/repo.json",
+    "manifest_branch": "master",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/ouor/cloudstream-chzzk/builds/plugins.json",
+        "reachable": true,
+        "count": 1,
+        "updated_at": "2026-04-25T22:04:19Z",
+        "source_repository": "ouor/cloudstream-chzzk",
+        "languages": {
+          "ko": 1
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 1,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "ouor/cloudstream-chzzk"
+    ],
+    "last_repo_push": "2026-04-25T22:04:19Z",
+    "last_manifest_update": "2026-04-25T17:58:51Z",
+    "last_plugins_update": "2026-04-25T22:04:19Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:14:56Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "CloudStream FR",
+    "description": "Addons CloudStream FR - French-Stream et Movix",
+    "repository": "Nikola17/cloudstream-frenchstream",
+    "repository_url": "https://github.com/Nikola17/cloudstream-frenchstream",
+    "repo_url": "https://raw.githubusercontent.com/Nikola17/cloudstream-frenchstream/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/Nikola17/cloudstream-frenchstream/builds/plugins.json",
+        "reachable": true,
+        "count": 4,
+        "updated_at": "2026-08-09T16:07:49Z",
+        "source_repository": "Nikola17/cloudstream-frenchstream",
+        "languages": {
+          "fr": 4
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 4,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "Nikola17/cloudstream-frenchstream"
+    ],
+    "last_repo_push": "2026-08-09T16:07:50Z",
+    "last_manifest_update": "2026-05-24T22:44:54Z",
+    "last_plugins_update": "2026-08-09T16:07:49Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:13:12Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "CloudStream RUUA",
+    "description": "Curated RU/UA audio providers for CloudStream RUUA",
+    "repository": "lxnhere/cloudstream-ruua-extensions",
+    "repository_url": "https://github.com/lxnhere/cloudstream-ruua-extensions",
+    "repo_url": "https://raw.githubusercontent.com/lxnhere/cloudstream-ruua-extensions/master/repo.json",
+    "manifest_branch": "master",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/lxnhere/cloudstream-ruua-extensions/builds/plugins.json",
+        "reachable": true,
+        "count": 22,
+        "updated_at": "2026-08-07T20:43:14Z",
+        "source_repository": "lxnhere/cloudstream-ruua-extensions",
+        "languages": {
+          "ru": 3,
+          "uk": 19
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 22,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "lxnhere/cloudstream-ruua-extensions"
+    ],
+    "last_repo_push": "2026-08-07T20:43:15Z",
+    "last_manifest_update": "2026-08-05T17:02:48Z",
+    "last_plugins_update": "2026-08-07T20:43:14Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:14:47Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "Cloudstream",
+    "description": "Cloudstream extension Repository",
+    "repository": "khad1r/cloudstream-ext",
+    "repository_url": "https://github.com/khad1r/cloudstream-ext",
+    "repo_url": "https://raw.githubusercontent.com/khad1r/cloudstream-ext/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/khad1r/cloudstream-ext/builds/plugins.json",
+        "reachable": true,
+        "count": 2,
+        "updated_at": "2026-09-24T03:17:40Z",
+        "source_repository": "khad1r/cloudstream-ext",
+        "languages": {
+          "id": 2
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 2,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "khad1r/cloudstream-ext"
+    ],
+    "last_repo_push": "2026-09-24T03:17:41Z",
+    "last_manifest_update": "2026-07-16T01:37:53Z",
+    "last_plugins_update": "2026-09-24T03:17:40Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:14:38Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "Cloudstream Extensions Repository",
+    "description": "Custom Cloudstream 3 Plugins Repository including Hello Meghalaya and Movies123BD",
+    "repository": "AkrielMrong/cloudstream-extensions",
+    "repository_url": "https://github.com/AkrielMrong/cloudstream-extensions",
+    "repo_url": "https://raw.githubusercontent.com/AkrielMrong/cloudstream-extensions/master/repo.json",
+    "manifest_branch": "master",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/AkrielMrong/cloudstream-extensions/builds/plugins.json",
+        "reachable": true,
+        "count": 2,
+        "updated_at": "2026-09-12T22:43:39Z",
+        "source_repository": "AkrielMrong/cloudstream-extensions",
+        "languages": {
+          "en": 2
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 2,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "AkrielMrong/cloudstream-extensions"
+    ],
+    "last_repo_push": "2026-09-12T22:43:40Z",
+    "last_manifest_update": "2026-09-12T21:56:20Z",
+    "last_plugins_update": "2026-09-12T22:43:39Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:12:46Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "Cloudstream Polish Providers",
+    "description": "Repozytorium wtyczek Cloudstream dla języka polskiego",
+    "repository": "C10udburst/cloudstream-pl",
+    "repository_url": "https://github.com/C10udburst/cloudstream-pl",
+    "repo_url": "https://raw.githubusercontent.com/C10udburst/cloudstream-pl/master/repo.json",
+    "manifest_branch": "master",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/C10udburst/cloudstream-pl/builds/plugins.json",
+        "reachable": true,
+        "count": 1,
+        "updated_at": "2026-07-02T18:47:46Z",
+        "source_repository": "C10udburst/cloudstream-pl",
+        "languages": {
+          "pl": 1
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 1,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "C10udburst/cloudstream-pl"
+    ],
+    "last_repo_push": "2026-07-02T18:47:47Z",
+    "last_manifest_update": "2026-07-02T18:45:50Z",
+    "last_plugins_update": "2026-07-02T18:47:46Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:12:48Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "Cloudstream providers repository",
+    "description": "Cloudstream extension Repository",
+    "repository": "recloudstream/extensions",
+    "repository_url": "https://github.com/recloudstream/extensions",
+    "repo_url": "https://raw.githubusercontent.com/recloudstream/extensions/master/repo.json",
+    "manifest_branch": "master",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/recloudstream/extensions/builds/plugins.json",
+        "reachable": true,
+        "count": 5,
+        "updated_at": "2026-05-22T23:11:41Z",
+        "source_repository": "recloudstream/extensions",
+        "languages": {},
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 5,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "recloudstream/extensions"
+    ],
+    "last_repo_push": "2026-05-22T23:11:41Z",
+    "last_manifest_update": "2023-05-23T07:25:20Z",
+    "last_plugins_update": "2026-05-22T23:11:41Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:15:02Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "DistantIPTV",
+    "description": "Cloudstream's Best IPTV Extension Repository",
+    "repository": "WellCodeIsDelicious/Cloudstream-IPTV-Extensions",
+    "repository_url": "https://github.com/WellCodeIsDelicious/Cloudstream-IPTV-Extensions",
+    "repo_url": "https://raw.githubusercontent.com/WellCodeIsDelicious/Cloudstream-IPTV-Extensions/master/repo.json",
+    "manifest_branch": "master",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/WellCodeIsDelicious/Cloudstream-IPTV-Extensions/builds/plugins.json",
+        "reachable": true,
+        "count": 1,
+        "updated_at": "2024-01-05T16:12:30Z",
+        "source_repository": "WellCodeIsDelicious/Cloudstream-IPTV-Extensions",
+        "languages": {
+          "universal": 1
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 1,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "WellCodeIsDelicious/Cloudstream-IPTV-Extensions"
+    ],
+    "last_repo_push": "2024-01-05T16:12:31Z",
+    "last_manifest_update": "2024-01-04T16:09:22Z",
+    "last_plugins_update": "2024-01-05T16:12:30Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:13:23Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "Emal's Repo",
+    "description": "A plugin repository for CloudStream.",
+    "repository": "emal-sa/EmalSa-Cloud-Stream-Extension",
+    "repository_url": "https://github.com/emal-sa/EmalSa-Cloud-Stream-Extension",
+    "repo_url": "https://raw.githubusercontent.com/emal-sa/EmalSa-Cloud-Stream-Extension/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/emal-sa/EmalSa-Cloud-Stream-Extension/builds/plugins.json",
+        "reachable": true,
+        "count": 1,
+        "updated_at": "2026-05-16T21:20:49Z",
+        "source_repository": "emal-sa/EmalSa-Cloud-Stream-Extension",
+        "languages": {
+          "it": 1
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 1,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "emal-sa/EmalSa-Cloud-Stream-Extension"
+    ],
+    "last_repo_push": "2026-05-16T21:20:50Z",
+    "last_manifest_update": "2026-05-16T17:22:19Z",
+    "last_plugins_update": "2026-05-16T21:20:49Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:14:15Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "Fojik CloudStream Repository",
+    "description": "Fojik CloudStream extensions",
+    "repository": "zenitsu007-create/fojik-cloudstream",
+    "repository_url": "https://github.com/zenitsu007-create/fojik-cloudstream",
+    "repo_url": "https://raw.githubusercontent.com/zenitsu007-create/fojik-cloudstream/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/zenitsu007-create/fojik-cloudstream/builds/plugins.json",
+        "reachable": true,
+        "count": 1,
+        "updated_at": "2026-09-07T21:42:40Z",
+        "source_repository": "zenitsu007-create/fojik-cloudstream",
+        "languages": {
+          "en": 1
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 1,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "zenitsu007-create/fojik-cloudstream"
+    ],
+    "last_repo_push": "2026-09-07T21:42:40Z",
+    "last_manifest_update": "2026-09-07T21:25:05Z",
+    "last_plugins_update": "2026-09-07T21:42:40Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:15:44Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "French providers repository",
+    "description": "AfterDark, Frembed, Flemmix/Wiflix & Xalaflix",
+    "repository": "yorik100/Cloudstream",
+    "repository_url": "https://github.com/yorik100/Cloudstream",
+    "repo_url": "https://raw.githubusercontent.com/yorik100/Cloudstream/builds/repo.json",
+    "manifest_branch": "builds",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/yorik100/Cloudstream/builds/plugins.json",
+        "reachable": true,
+        "count": 4,
+        "updated_at": "2026-09-20T23:48:38Z",
+        "source_repository": "yorik100/Cloudstream",
+        "languages": {
+          "fr": 4
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 4,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "yorik100/Cloudstream"
+    ],
+    "last_repo_push": "2026-10-02T15:35:06Z",
+    "last_manifest_update": "2026-09-20T23:48:38Z",
+    "last_plugins_update": "2026-09-20T23:48:38Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:15:32Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "GramFlix Extensions",
+    "description": "Pack d'extensions GramFlix pour Cloudstream",
+    "repository": "tOntOnbOuLii/GramFlix",
+    "repository_url": "https://github.com/tOntOnbOuLii/GramFlix",
+    "repo_url": "https://raw.githubusercontent.com/tOntOnbOuLii/GramFlix/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/tOntOnbOuLii/GramFlix/main/plugins.json",
+        "reachable": true,
+        "count": 24,
+        "updated_at": "2026-02-25T22:12:39Z",
+        "source_repository": "tOntOnbOuLii/GramFlix",
+        "languages": {
+          "fr": 24
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 24,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "tOntOnbOuLii/GramFlix"
+    ],
+    "last_repo_push": "2026-05-17T17:30:47Z",
+    "last_manifest_update": "2025-12-10T22:26:42Z",
+    "last_plugins_update": "2026-02-25T22:12:39Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:15:14Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "Hexated providers repository",
+    "description": "Providers from all country",
+    "repository": "JoeTinnySpace/cloudstream-extensions-hexated",
+    "repository_url": "https://github.com/JoeTinnySpace/cloudstream-extensions-hexated",
+    "repo_url": "https://raw.githubusercontent.com/JoeTinnySpace/cloudstream-extensions-hexated/builds/repo.json",
+    "manifest_branch": "builds",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/JoeTinnySpace/Cloudstream_Kerala/refs/heads/builds/plugins.json",
+        "reachable": true,
+        "count": 86,
+        "updated_at": null,
+        "source_repository": "JoeTinnySpace/Cloudstream_Kerala",
+        "languages": {
+          "bn": 1,
+          "de": 4,
+          "en": 38,
+          "fil": 1,
+          "fr": 1,
+          "hi": 25,
+          "id": 4,
+          "ko": 1,
+          "mx": 3,
+          "pt-br": 1,
+          "ta": 3,
+          "te": 2,
+          "zh": 2
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 86,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": false,
+    "plugin_source_repositories": [
+      "JoeTinnySpace/Cloudstream_Kerala"
+    ],
+    "last_repo_push": "2026-02-18T22:02:19Z",
+    "last_manifest_update": "2026-02-18T22:02:18Z",
+    "last_plugins_update": null,
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:13:03Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "Jemeforme Mega Repo",
+    "description": "Plusieurs repositories CloudStream",
+    "repository": "jemeforme1988-hash/cloudstream-repo",
+    "repository_url": "https://github.com/jemeforme1988-hash/cloudstream-repo",
+    "repo_url": "https://raw.githubusercontent.com/jemeforme1988-hash/cloudstream-repo/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://jemeforme1988-hash.github.io/cloudstream-repo/plugins.json",
+        "reachable": true,
+        "count": 5,
+        "updated_at": null,
+        "source_repository": null,
+        "languages": {},
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 5,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": false,
+    "plugin_source_repositories": [],
+    "last_repo_push": "2026-05-11T01:37:30Z",
+    "last_manifest_update": "2026-05-11T01:36:17Z",
+    "last_plugins_update": null,
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:14:36Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "JoyFlix Official",
+    "description": "JoyFlix All-in-One Extensions Repository",
+    "repository": "jehadjoy15-stack/joyflix-cloud",
+    "repository_url": "https://github.com/jehadjoy15-stack/joyflix-cloud",
+    "repo_url": "https://raw.githubusercontent.com/jehadjoy15-stack/joyflix-cloud/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/refs/heads/builds/plugins.json",
+        "reachable": true,
+        "count": 84,
+        "updated_at": null,
+        "source_repository": "phisher98/cloudstream-extensions-phisher",
+        "languages": {
+          "bn": 2,
+          "de": 4,
+          "en": 34,
+          "fil": 1,
+          "fr": 1,
+          "hi": 28,
+          "id": 4,
+          "ko": 1,
+          "mx": 2,
+          "pl": 1,
+          "pt-br": 1,
+          "ta": 2,
+          "zh": 3
+        },
+        "turkish_language_count": 0
+      },
+      {
+        "url": "https://raw.githubusercontent.com/SaurabhKaperwan/CSX/builds/plugins.json",
+        "reachable": true,
+        "count": 5,
+        "updated_at": "2026-09-08T06:40:19Z",
+        "source_repository": "SaurabhKaperwan/CSX",
+        "languages": {
+          "en": 1,
+          "hi": 3
+        },
+        "turkish_language_count": 0
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Gian-Fr/ItalianProvider/builds/plugins.json",
+        "reachable": true,
+        "count": 2,
+        "updated_at": "2025-09-03T20:25:10Z",
+        "source_repository": "Gian-Fr/ItalianProvider",
+        "languages": {
+          "it": 2
+        },
+        "turkish_language_count": 0
+      },
+      {
+        "url": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/plugins.json",
+        "reachable": true,
+        "count": 18,
+        "updated_at": "2026-09-10T00:33:04Z",
+        "source_repository": "redowan99/Redowan-CloudStream",
+        "languages": {
+          "bn": 10,
+          "en": 4,
+          "hi": 4
+        },
+        "turkish_language_count": 0
+      },
+      {
+        "url": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+        "reachable": true,
+        "count": 70,
+        "updated_at": "2026-10-02T08:55:16Z",
+        "source_repository": "phisher98/CXXX",
+        "languages": {
+          "en": 61,
+          "hi": 6,
+          "vi": 2
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 179,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": false,
+    "plugin_source_repositories": [
+      "Gian-Fr/ItalianProvider",
+      "SaurabhKaperwan/CSX",
+      "phisher98/CXXX",
+      "phisher98/cloudstream-extensions-phisher",
+      "redowan99/Redowan-CloudStream"
+    ],
+    "last_repo_push": "2026-10-03T00:13:40Z",
+    "last_manifest_update": "2026-10-03T00:09:55Z",
+    "last_plugins_update": "2026-10-02T08:55:16Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:14:35Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "KKPhim Genres",
+    "description": "KKPhim CloudStream provider organized by genre",
+    "repository": "longseespace/cloudstream-provider",
+    "repository_url": "https://github.com/longseespace/cloudstream-provider",
+    "repo_url": "https://raw.githubusercontent.com/longseespace/cloudstream-provider/builds/repo.json",
+    "manifest_branch": "builds",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/longseespace/cloudstream-provider/builds/plugins.json",
+        "reachable": true,
+        "count": 1,
+        "updated_at": "2026-07-31T09:46:34Z",
+        "source_repository": "longseespace/cloudstream-provider",
+        "languages": {
+          "vi": 1
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 1,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "longseespace/cloudstream-provider"
+    ],
+    "last_repo_push": "2026-07-31T09:46:35Z",
+    "last_manifest_update": "2026-07-31T09:46:34Z",
+    "last_plugins_update": "2026-07-31T09:46:34Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:14:44Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "LowSpeed Repository",
+    "description": "Live TV extensions for CloudStream",
+    "repository": "Rodro-eng/cdProject",
+    "repository_url": "https://github.com/Rodro-eng/cdProject",
+    "repo_url": "https://raw.githubusercontent.com/Rodro-eng/cdProject/builds/repo.json",
+    "manifest_branch": "builds",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/Rodro-eng/cdProject/builds/plugins.json",
+        "reachable": true,
+        "count": 7,
+        "updated_at": "2026-08-07T16:21:21Z",
+        "source_repository": "Rodro-eng/cdProject",
+        "languages": {
+          "bn": 2,
+          "en": 1,
+          "es": 1,
+          "hi": 3
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 7,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "Rodro-eng/cdProject"
+    ],
+    "last_repo_push": "2026-08-07T16:21:22Z",
+    "last_manifest_update": "2026-08-07T16:21:21Z",
+    "last_plugins_update": "2026-08-07T16:21:21Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:13:16Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 33,
+      "reasons": [
+        "turkish-markers:rectv"
+      ]
+    }
+  },
+  {
+    "name": "Luna712's CloudStream extension repository",
+    "description": "Luna712's CloudStream Extension Repository",
+    "repository": "Luna712/Luna712-CloudStream-Extensions",
+    "repository_url": "https://github.com/Luna712/Luna712-CloudStream-Extensions",
+    "repo_url": "https://raw.githubusercontent.com/Luna712/Luna712-CloudStream-Extensions/master/repo.json",
+    "manifest_branch": "master",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/Luna712/Luna712-CloudStream-Extensions/builds/plugins.json",
+        "reachable": true,
+        "count": 2,
+        "updated_at": "2026-04-24T20:21:31Z",
+        "source_repository": "Luna712/Luna712-CloudStream-Extensions",
+        "languages": {},
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 2,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "Luna712/Luna712-CloudStream-Extensions"
+    ],
+    "last_repo_push": "2026-08-31T22:09:55Z",
+    "last_manifest_update": "2024-07-21T02:27:33Z",
+    "last_plugins_update": "2026-04-24T20:21:31Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:13:08Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "M3U Live",
+    "description": "Live-stream M3U extensions for CloudStream.",
+    "repository": "Shishir1035/bdtv-cloudstream-extension",
+    "repository_url": "https://github.com/Shishir1035/bdtv-cloudstream-extension",
+    "repo_url": "https://raw.githubusercontent.com/Shishir1035/bdtv-cloudstream-extension/builds/repo.json",
+    "manifest_branch": "builds",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/Shishir1035/bdtv-cloudstream-extension/builds/plugins.json",
+        "reachable": true,
+        "count": 9,
+        "updated_at": "2026-06-20T13:37:12Z",
+        "source_repository": "Shishir1035/bdtv-cloudstream-extension",
+        "languages": {},
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 9,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "Shishir1035/bdtv-cloudstream-extension"
+    ],
+    "last_repo_push": "2026-06-20T13:37:13Z",
+    "last_manifest_update": "2026-06-20T13:37:12Z",
+    "last_plugins_update": "2026-06-20T13:37:12Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:13:20Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "MFan Provider",
+    "description": "MFan Provider zh",
+    "repository": "wanderspecter/cloudstream-providers-repo",
+    "repository_url": "https://github.com/wanderspecter/cloudstream-providers-repo",
+    "repo_url": "https://raw.githubusercontent.com/wanderspecter/cloudstream-providers-repo/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://github.com/wanderspecter/cloudstream-providers-repo/raw/main/plugin.json",
+        "reachable": true,
+        "count": 2,
+        "updated_at": null,
+        "source_repository": null,
+        "languages": {
+          "zh": 2
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 2,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": false,
+    "plugin_source_repositories": [],
+    "last_repo_push": "2024-06-03T15:35:09Z",
+    "last_manifest_update": "2024-05-31T09:56:40Z",
+    "last_plugins_update": null,
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:15:29Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "NguonC",
+    "description": "Extension NguonC cho CloudStream",
+    "repository": "dungkun2506-byte/NguonC-feed",
+    "repository_url": "https://github.com/dungkun2506-byte/NguonC-feed",
+    "repo_url": "https://raw.githubusercontent.com/dungkun2506-byte/NguonC-feed/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/dungkun2506-byte/NguonC-feed/builds/plugins.json",
+        "reachable": true,
+        "count": 1,
+        "updated_at": "2026-09-28T16:52:45Z",
+        "source_repository": "dungkun2506-byte/NguonC-feed",
+        "languages": {},
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 1,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "dungkun2506-byte/NguonC-feed"
+    ],
+    "last_repo_push": "2026-09-28T16:52:47Z",
+    "last_manifest_update": "2026-09-27T19:58:56Z",
+    "last_plugins_update": "2026-09-28T16:52:45Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:14:14Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "Niloy's BDIX Repo",
+    "description": "Local BDIX FTP plugins for Cloudstream",
+    "repository": "Niloy-Sarker/niloy-cloudstream",
+    "repository_url": "https://github.com/Niloy-Sarker/niloy-cloudstream",
+    "repo_url": "https://raw.githubusercontent.com/Niloy-Sarker/niloy-cloudstream/master/repo.json",
+    "manifest_branch": "master",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/Niloy-Sarker/niloy-cloudstream/builds/plugins.json",
+        "reachable": true,
+        "count": 6,
+        "updated_at": "2026-09-04T18:08:21Z",
+        "source_repository": "Niloy-Sarker/niloy-cloudstream",
+        "languages": {
+          "bn": 3,
+          "en": 2,
+          "hi": 1
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 6,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "Niloy-Sarker/niloy-cloudstream"
+    ],
+    "last_repo_push": "2026-10-02T15:40:25Z",
+    "last_manifest_update": "2026-05-26T17:45:48Z",
+    "last_plugins_update": "2026-09-04T18:08:21Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:13:13Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "Optimized CR3 Repository (Self-Hosted)",
+    "description": "ForgeScript V2 generated. All .cs3 hosted in this repo. Enable NSFW in CloudStream.",
+    "repository": "toxicwind/optimized-cr3-repo",
+    "repository_url": "https://github.com/toxicwind/optimized-cr3-repo",
+    "repo_url": "https://raw.githubusercontent.com/toxicwind/optimized-cr3-repo/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/toxicwind/optimized-cr3-repo/main/plugins.json",
+        "reachable": true,
+        "count": 20,
+        "updated_at": "2026-05-25T05:14:52Z",
+        "source_repository": "toxicwind/optimized-cr3-repo",
+        "languages": {
+          "en": 17,
+          "vi": 3
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 20,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "toxicwind/optimized-cr3-repo"
+    ],
+    "last_repo_push": "2026-09-30T01:00:27Z",
+    "last_manifest_update": "2026-05-25T05:14:52Z",
+    "last_plugins_update": "2026-05-25T05:14:52Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:15:24Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "Personal CloudStream Repo",
+    "description": "Private CloudStream plugins for personal use",
+    "repository": "riddicknguyen-collab/temp-plugin-cs3",
+    "repository_url": "https://github.com/riddicknguyen-collab/temp-plugin-cs3",
+    "repo_url": "https://raw.githubusercontent.com/riddicknguyen-collab/temp-plugin-cs3/builds/repo.json",
+    "manifest_branch": "builds",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://github.com/riddicknguyen-collab/temp-plugin-cs3/raw/refs/heads/builds/plugins.json",
+        "reachable": true,
+        "count": 3,
+        "updated_at": null,
+        "source_repository": null,
+        "languages": {
+          "en": 1,
+          "vi": 2
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 3,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": false,
+    "plugin_source_repositories": [],
+    "last_repo_push": "2026-09-10T08:58:16Z",
+    "last_manifest_update": "2026-09-10T08:53:45Z",
+    "last_plugins_update": null,
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:15:07Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "Phim Việt Nam",
+    "description": null,
+    "repository": "leeshin5757/cloudstream-plugin-vn",
+    "repository_url": "https://github.com/leeshin5757/cloudstream-plugin-vn",
+    "repo_url": "https://raw.githubusercontent.com/leeshin5757/cloudstream-plugin-vn/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/leeshin5757/cloudstream-plugin-vn/main/plugins.json",
+        "reachable": true,
+        "count": 23,
+        "updated_at": "2025-10-07T09:45:59Z",
+        "source_repository": "leeshin5757/cloudstream-plugin-vn",
+        "languages": {
+          "vi": 22
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 23,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "leeshin5757/cloudstream-plugin-vn"
+    ],
+    "last_repo_push": "2026-07-11T12:44:43Z",
+    "last_manifest_update": "2025-06-10T16:22:32Z",
+    "last_plugins_update": "2025-10-07T09:45:59Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:14:39Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "Redowan's BDIX repository",
+    "description": "Redowan's BDIX repository",
+    "repository": "redowan99/Redowan-CloudStream",
+    "repository_url": "https://github.com/redowan99/Redowan-CloudStream",
+    "repo_url": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/master/repo.json",
+    "manifest_branch": "master",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/plugins.json",
+        "reachable": true,
+        "count": 18,
+        "updated_at": "2026-09-10T00:33:04Z",
+        "source_repository": "redowan99/Redowan-CloudStream",
+        "languages": {
+          "bn": 10,
+          "en": 4,
+          "hi": 4
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 18,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "redowan99/Redowan-CloudStream"
+    ],
+    "last_repo_push": "2026-09-10T00:33:05Z",
+    "last_manifest_update": "2024-08-11T09:13:09Z",
+    "last_plugins_update": "2026-09-10T00:33:04Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:15:03Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "Vibemax Repository",
+    "description": "CloudStream extension for vibemax.to - Watch movies & TV shows with multiple servers",
+    "repository": "crafteraadarsh/vibemax",
+    "repository_url": "https://github.com/crafteraadarsh/vibemax",
+    "repo_url": "https://raw.githubusercontent.com/crafteraadarsh/vibemax/builds/repo.json",
+    "manifest_branch": "builds",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/crafteraadarsh/vibemax/builds/plugins.json",
+        "reachable": true,
+        "count": 1,
+        "updated_at": "2026-02-18T11:27:51Z",
+        "source_repository": "crafteraadarsh/vibemax",
+        "languages": {
+          "en": 1
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 1,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "crafteraadarsh/vibemax"
+    ],
+    "last_repo_push": "2026-02-18T11:27:51Z",
+    "last_manifest_update": "2026-02-18T11:27:51Z",
+    "last_plugins_update": "2026-02-18T11:27:51Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:14:06Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "Vietnamese Extension",
+    "description": "https://t.me/cloudstream_extension_vn",
+    "repository": "nad72644/sabo",
+    "repository_url": "https://github.com/nad72644/sabo",
+    "repo_url": "https://raw.githubusercontent.com/nad72644/sabo/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/nad72644/sabo/refs/heads/main/plugins.json",
+        "reachable": true,
+        "count": 3,
+        "updated_at": null,
+        "source_repository": "nad72644/sabo",
+        "languages": {},
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 3,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "nad72644/sabo"
+    ],
+    "last_repo_push": "2025-02-24T17:52:27Z",
+    "last_manifest_update": "2024-10-21T07:52:53Z",
+    "last_plugins_update": null,
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:14:53Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "Vietnamese Extension",
+    "description": "https://t.me/cloudstream_extension_vn",
+    "repository": "tommebp/aquaman",
+    "repository_url": "https://github.com/tommebp/aquaman",
+    "repo_url": "https://raw.githubusercontent.com/tommebp/aquaman/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/tommebp/aquaman/refs/heads/main/plugins.json",
+        "reachable": true,
+        "count": 20,
+        "updated_at": null,
+        "source_repository": "tommebp/aquaman",
+        "languages": {},
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 20,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "tommebp/aquaman"
+    ],
+    "last_repo_push": "2024-11-15T02:46:00Z",
+    "last_manifest_update": "2024-10-27T02:33:48Z",
+    "last_plugins_update": null,
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:15:19Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "Vietnamese Extension",
+    "description": "https://t.me/cloudstream_extension_vn",
+    "repository": "tongbinhnguyen/filmtnb",
+    "repository_url": "https://github.com/tongbinhnguyen/filmtnb",
+    "repo_url": "https://raw.githubusercontent.com/tongbinhnguyen/filmtnb/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/tongbinhnguyen/filmtnb/refs/heads/main/plugins.json",
+        "reachable": true,
+        "count": 21,
+        "updated_at": null,
+        "source_repository": "tongbinhnguyen/filmtnb",
+        "languages": {},
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 21,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "tongbinhnguyen/filmtnb"
+    ],
+    "last_repo_push": "2024-11-25T16:27:10Z",
+    "last_manifest_update": "2024-11-25T16:20:56Z",
+    "last_plugins_update": null,
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:15:20Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "Vietnamese Extension",
+    "description": "https://t.me/cloudstream_extension_vn",
+    "repository": "tongnguyenbinh/FILM-CINEMAX",
+    "repository_url": "https://github.com/tongnguyenbinh/FILM-CINEMAX",
+    "repo_url": "https://raw.githubusercontent.com/tongnguyenbinh/FILM-CINEMAX/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/tongnguyenbinh/FILM-CINEMAX/refs/heads/main/plugin.json",
+        "reachable": true,
+        "count": 6,
+        "updated_at": null,
+        "source_repository": "tongnguyenbinh/FILM-CINEMAX",
+        "languages": {},
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 6,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "tongnguyenbinh/FILM-CINEMAX"
+    ],
+    "last_repo_push": "2024-12-07T18:09:42Z",
+    "last_manifest_update": "2024-12-07T18:07:12Z",
+    "last_plugins_update": null,
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:15:22Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "Vietnamese Extension",
+    "description": "https://t.me/cloudstream_extension_vn",
+    "repository": "tongnguyenbinh/film",
+    "repository_url": "https://github.com/tongnguyenbinh/film",
+    "repo_url": "https://raw.githubusercontent.com/tongnguyenbinh/film/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/tongnguyenbinh/film/refs/heads/main/plugins.json",
+        "reachable": true,
+        "count": 6,
+        "updated_at": null,
+        "source_repository": "tongnguyenbinh/film",
+        "languages": {},
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 6,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "tongnguyenbinh/film"
+    ],
+    "last_repo_push": "2026-01-17T08:27:25Z",
+    "last_manifest_update": "2024-11-25T16:45:07Z",
+    "last_plugins_update": null,
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:15:23Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "Vietnamese Movie Extension",
+    "description": "Kho phim Việt Nam - ThuVienHD, ThuVienCine, Google Sheet",
+    "repository": "forcef5/cloudstream-vietnamese-plugins",
+    "repository_url": "https://github.com/forcef5/cloudstream-vietnamese-plugins",
+    "repo_url": "https://raw.githubusercontent.com/forcef5/cloudstream-vietnamese-plugins/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/forcef5/cloudstream-vietnamese-plugins/main/plugins.json",
+        "reachable": true,
+        "count": 3,
+        "updated_at": "2026-04-16T10:02:22Z",
+        "source_repository": "forcef5/cloudstream-vietnamese-plugins",
+        "languages": {},
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 3,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "forcef5/cloudstream-vietnamese-plugins"
+    ],
+    "last_repo_push": "2026-04-17T09:56:41Z",
+    "last_manifest_update": "2026-04-16T10:02:22Z",
+    "last_plugins_update": "2026-04-16T10:02:22Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:14:25Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "ViralLinksProvider",
+    "description": "ViralLinksProvider - CloudStream Extension",
+    "repository": "senkuboy0-cyber/ViralLinksProvider",
+    "repository_url": "https://github.com/senkuboy0-cyber/ViralLinksProvider",
+    "repo_url": "https://raw.githubusercontent.com/senkuboy0-cyber/ViralLinksProvider/builds/repo.json",
+    "manifest_branch": "builds",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/senkuboy0-cyber/ViralLinksProvider/builds/plugins.json",
+        "reachable": true,
+        "count": 1,
+        "updated_at": "2026-09-05T16:22:08Z",
+        "source_repository": "senkuboy0-cyber/ViralLinksProvider",
+        "languages": {
+          "en": 1
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 1,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "senkuboy0-cyber/ViralLinksProvider"
+    ],
+    "last_repo_push": "2026-09-05T16:22:09Z",
+    "last_manifest_update": "2026-08-31T15:09:11Z",
+    "last_plugins_update": "2026-09-05T16:22:08Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:15:11Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "VscCloud",
+    "description": "Repo ekstensi CloudStream",
+    "repository": "vsckky/vsc",
+    "repository_url": "https://github.com/vsckky/vsc",
+    "repo_url": "https://raw.githubusercontent.com/vsckky/vsc/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/vsckky/vsc/main/extension/zropper/plugin.json",
+        "reachable": true,
+        "count": 28,
+        "updated_at": "2026-02-16T15:19:44Z",
+        "source_repository": "vsckky/vsc",
+        "languages": {
+          "id": 26,
+          "zh": 1
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 28,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "vsckky/vsc"
+    ],
+    "last_repo_push": "2026-02-22T14:55:16Z",
+    "last_manifest_update": "2026-02-10T13:24:10Z",
+    "last_plugins_update": "2026-02-16T15:19:44Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:15:28Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "YP CloudStream Extensions",
+    "description": "CloudStream extensions maintained by YoovanP.",
+    "repository": "YoovanP/cloudstream-extensions-yp",
+    "repository_url": "https://github.com/YoovanP/cloudstream-extensions-yp",
+    "repo_url": "https://raw.githubusercontent.com/YoovanP/cloudstream-extensions-yp/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/YoovanP/cloudstream-extensions-yp/builds/plugins.json",
+        "reachable": true,
+        "count": 32,
+        "updated_at": "2026-05-27T12:00:45Z",
+        "source_repository": "YoovanP/cloudstream-extensions-yp",
+        "languages": {
+          "en": 32
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 32,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "YoovanP/cloudstream-extensions-yp"
+    ],
+    "last_repo_push": "2026-05-28T11:07:09Z",
+    "last_manifest_update": "2026-05-23T06:23:49Z",
+    "last_plugins_update": "2026-05-27T12:00:45Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:13:39Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "byimam2nd Repo",
+    "description": "byimam2nd Repository - CloudStream Extensions",
+    "repository": "byimam2nd/oce",
+    "repository_url": "https://github.com/byimam2nd/oce",
+    "repo_url": "https://raw.githubusercontent.com/byimam2nd/oce/master/repo.json",
+    "manifest_branch": "master",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://github.com/byimam2nd/oce/releases/latest/download/plugins.json",
+        "reachable": true,
+        "count": 8,
+        "updated_at": null,
+        "source_repository": null,
+        "languages": {
+          "id": 8
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 8,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": false,
+    "plugin_source_repositories": [],
+    "last_repo_push": "2026-10-02T23:14:39Z",
+    "last_manifest_update": "2026-05-11T08:08:03Z",
+    "last_plugins_update": null,
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:14:05Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "cstr-sp",
+    "description": "Custom Cloudstream Extensions",
+    "repository": "ctnkyaumt/cstr-sp",
+    "repository_url": "https://github.com/ctnkyaumt/cstr-sp",
+    "repo_url": "https://raw.githubusercontent.com/ctnkyaumt/cstr-sp/builds/repo.json",
+    "manifest_branch": "builds",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/ctnkyaumt/cstr-sp/builds/plugins.json",
+        "reachable": true,
+        "count": 1,
+        "updated_at": "2026-08-26T19:26:16Z",
+        "source_repository": "ctnkyaumt/cstr-sp",
+        "languages": {
+          "en": 1
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 1,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "ctnkyaumt/cstr-sp"
+    ],
+    "last_repo_push": "2026-08-26T19:26:17Z",
+    "last_manifest_update": "2026-06-17T19:47:10Z",
+    "last_plugins_update": "2026-08-26T19:26:16Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:14:08Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "movieflick",
+    "description": "movieflick CloudStream Extensions | 149",
+    "repository": "msujoy149/Movie-Flick",
+    "repository_url": "https://github.com/msujoy149/Movie-Flick",
+    "repo_url": "https://raw.githubusercontent.com/msujoy149/Movie-Flick/builds/repo.json",
+    "manifest_branch": "builds",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/msujoy149/Movie-Flick/builds/plugins.json",
+        "reachable": true,
+        "count": 15,
+        "updated_at": "2026-09-21T19:27:09Z",
+        "source_repository": "msujoy149/Movie-Flick",
+        "languages": {
+          "bn": 9,
+          "bn-in": 1,
+          "en": 1,
+          "hi": 3
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 15,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "msujoy149/Movie-Flick"
+    ],
+    "last_repo_push": "2026-09-21T19:27:10Z",
+    "last_manifest_update": "2026-09-03T14:58:54Z",
+    "last_plugins_update": "2026-09-21T19:27:09Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:14:52Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "movix-cloudstream",
+    "description": "Extension Cloudstream Movix pour sources streaming FR.",
+    "repository": "blizzx4644/Movix-cloudstream",
+    "repository_url": "https://github.com/blizzx4644/Movix-cloudstream",
+    "repo_url": "https://raw.githubusercontent.com/blizzx4644/Movix-cloudstream/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://github.com/blizzx4644/Movix-cloudstream/raw/refs/heads/main/plugins.json",
+        "reachable": true,
+        "count": 1,
+        "updated_at": null,
+        "source_repository": null,
+        "languages": {
+          "fr": 1
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 1,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": false,
+    "plugin_source_repositories": [],
+    "last_repo_push": "2026-06-24T11:56:51Z",
+    "last_manifest_update": "2026-06-24T01:38:01Z",
+    "last_plugins_update": null,
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:14:02Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "nonton-indo",
+    "description": "CloudStream 3 Extensions untuk Situs Streaming Indonesia",
+    "repository": "ExtremeBoyGG/nonton-indo",
+    "repository_url": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "repo_url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/repo.json",
+    "manifest_branch": "builds",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/plugins.json",
+        "reachable": true,
+        "count": 16,
+        "updated_at": "2026-09-27T08:31:49Z",
+        "source_repository": "ExtremeBoyGG/nonton-indo",
+        "languages": {
+          "en": 1,
+          "id": 15
+        },
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 16,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "ExtremeBoyGG/nonton-indo"
+    ],
+    "last_repo_push": "2026-09-27T08:31:49Z",
+    "last_manifest_update": "2026-09-27T08:31:49Z",
+    "last_plugins_update": "2026-09-27T08:31:49Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:12:56Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "Українські джерела",
+    "description": "Українські фільми, серіали, мультфільми та дорами. Порти провайдерів CloudStream.",
+    "repository": "vladislawfox/skystream-ukrainian",
+    "repository_url": "https://github.com/vladislawfox/skystream-ukrainian",
+    "repo_url": "https://raw.githubusercontent.com/vladislawfox/skystream-ukrainian/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/vladislawfox/skystream-ukrainian/main/dist/plugins.json",
+        "reachable": true,
+        "count": 15,
+        "updated_at": "2026-09-27T00:41:46Z",
+        "source_repository": "vladislawfox/skystream-ukrainian",
+        "languages": {},
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 15,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "vladislawfox/skystream-ukrainian"
+    ],
+    "last_repo_push": "2026-09-27T00:44:36Z",
+    "last_manifest_update": "2026-09-17T20:35:39Z",
+    "last_plugins_update": "2026-09-27T00:41:46Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:15:26Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "Adam Knight Extensions",
+    "description": "Custom extensions for Cloudstream by Adam Knight",
+    "repository": "admknight/CloudstreamExtensions",
+    "repository_url": "https://github.com/admknight/CloudstreamExtensions",
+    "repo_url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/repo.json",
+    "manifest_branch": "builds",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/plugins.json",
+        "reachable": true,
+        "count": 0,
+        "updated_at": "2026-09-09T03:44:51Z",
+        "source_repository": "admknight/CloudstreamExtensions",
+        "languages": {},
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 0,
+    "status": "empty",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "admknight/CloudstreamExtensions"
+    ],
+    "last_repo_push": "2026-10-03T04:23:00Z",
+    "last_manifest_update": "2026-05-29T19:25:42Z",
+    "last_plugins_update": "2026-09-09T03:44:51Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:13:42Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
     "name": "AfacanTv Mega Repo",
     "description": "AfacanTv CloudStream extensions",
     "repository": "eymencraftoffical-gif/AfacanTv",
@@ -28,15 +2321,246 @@
     "last_manifest_update": "2026-08-28T18:46:21Z",
     "last_plugins_update": null,
     "discovered_by": [
+      "registry",
       "repo-search:cloudstream Türkçe in:name,description"
     ],
-    "checked_at": "2026-10-03T08:09:37Z",
+    "checked_at": "2026-10-03T08:14:19Z",
     "turkish": {
       "is_turkish": false,
       "score": 20,
       "reasons": [
         "turkish-search-hit"
       ]
+    }
+  },
+  {
+    "name": "Arjuna Extensions",
+    "description": "Cloudstream Anime Extensions",
+    "repository": "arjunaedi07/PluginSaya5774",
+    "repository_url": "https://github.com/arjunaedi07/PluginSaya5774",
+    "repo_url": "https://raw.githubusercontent.com/arjunaedi07/PluginSaya5774/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/arjunaedi07/PluginSaya/builds/plugins.json",
+        "reachable": false,
+        "count": 0,
+        "updated_at": null,
+        "languages": {},
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 0,
+    "status": "broken",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": false,
+    "plugin_source_repositories": [],
+    "last_repo_push": "2026-02-27T04:04:42Z",
+    "last_manifest_update": "2026-02-27T03:02:20Z",
+    "last_plugins_update": null,
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:13:50Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "Cloudstream providers repository",
+    "description": "Cloudstream extension Repository",
+    "repository": "Joseflion/josef",
+    "repository_url": "https://github.com/Joseflion/josef",
+    "repo_url": "https://raw.githubusercontent.com/Joseflion/josef/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/Joseflion/josef/builds/plugins.json",
+        "reachable": false,
+        "count": 0,
+        "updated_at": null,
+        "languages": {},
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 0,
+    "status": "broken",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": false,
+    "plugin_source_repositories": [],
+    "last_repo_push": "2023-11-26T03:12:51Z",
+    "last_manifest_update": "2023-11-26T03:12:51Z",
+    "last_plugins_update": null,
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:13:04Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "Cloudstream providers repository",
+    "description": "Cloudstream extension Repository",
+    "repository": "cugucugu/cstr",
+    "repository_url": "https://github.com/cugucugu/cstr",
+    "repo_url": "https://raw.githubusercontent.com/cugucugu/cstr/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/cugucugu/cstr/builds/plugins.json",
+        "reachable": false,
+        "count": 0,
+        "updated_at": null,
+        "languages": {},
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 0,
+    "status": "broken",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": false,
+    "plugin_source_repositories": [],
+    "last_repo_push": "2025-06-27T12:19:50Z",
+    "last_manifest_update": "2025-06-27T12:19:21Z",
+    "last_plugins_update": null,
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:14:09Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "DDizi.im Repository",
+    "description": "DDizi.im için Cloudstream eklentisi",
+    "repository": "azrailankara/ddizi-extension",
+    "repository_url": "https://github.com/azrailankara/ddizi-extension",
+    "repo_url": "https://raw.githubusercontent.com/azrailankara/ddizi-extension/master/repo.json",
+    "manifest_branch": "master",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/azrailankara/ddizi-extension/builds/plugins.json",
+        "reachable": false,
+        "count": 0,
+        "updated_at": null,
+        "languages": {},
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 0,
+    "status": "broken",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": false,
+    "plugin_source_repositories": [],
+    "last_repo_push": "2025-01-23T12:23:05Z",
+    "last_manifest_update": "2025-01-23T12:00:16Z",
+    "last_plugins_update": null,
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:13:55Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 41,
+      "reasons": [
+        "turkish-markers:dizi,eklenti"
+      ]
+    }
+  },
+  {
+    "name": "ExtCloud",
+    "description": "Cloudstream extensions collection",
+    "repository": "Indonesiajie/Cloudstream",
+    "repository_url": "https://github.com/Indonesiajie/Cloudstream",
+    "repo_url": "https://raw.githubusercontent.com/Indonesiajie/Cloudstream/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/Pendztagram/ex/builds/plugins.json",
+        "reachable": false,
+        "count": 0,
+        "updated_at": null,
+        "languages": {},
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 0,
+    "status": "broken",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": false,
+    "plugin_source_repositories": [],
+    "last_repo_push": "2026-04-13T03:06:53Z",
+    "last_manifest_update": "2026-04-08T06:45:11Z",
+    "last_plugins_update": null,
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:13:02Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "French Only Repo",
+    "description": "Mon dépôt CloudStream FR — films & séries en VF/VOSTFR",
+    "repository": "abdellatifb11/cs3-french-plugins",
+    "repository_url": "https://github.com/abdellatifb11/cs3-french-plugins",
+    "repo_url": "https://raw.githubusercontent.com/abdellatifb11/cs3-french-plugins/google/repo.json",
+    "manifest_branch": "google",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/abdellatifb11/cs3-french-plugins/main/plugins.json",
+        "reachable": false,
+        "count": 0,
+        "updated_at": null,
+        "languages": {},
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 0,
+    "status": "broken",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": false,
+    "plugin_source_repositories": [],
+    "last_repo_push": "2026-09-28T22:30:53Z",
+    "last_manifest_update": "2025-07-28T03:22:26Z",
+    "last_plugins_update": null,
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:13:40Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
     }
   },
   {
@@ -138,14 +2662,404 @@
     "last_manifest_update": "2026-02-12T09:48:22Z",
     "last_plugins_update": "2025-10-03T20:09:57Z",
     "discovered_by": [
+      "registry",
       "repo-search:cloudstream eklenti in:name,description"
     ],
-    "checked_at": "2026-10-03T08:10:00Z",
+    "checked_at": "2026-10-03T08:15:42Z",
     "turkish": {
       "is_turkish": false,
       "score": 20,
       "reasons": [
         "turkish-search-hit"
+      ]
+    }
+  },
+  {
+    "name": "My CloudStream Repository",
+    "description": "Personal CloudStream extensions",
+    "repository": "By-Void-X/ByVoid-Anime-CloudStream",
+    "repository_url": "https://github.com/By-Void-X/ByVoid-Anime-CloudStream",
+    "repo_url": "https://raw.githubusercontent.com/By-Void-X/ByVoid-Anime-CloudStream/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/YOUR_GITHUB_USER/YOUR_REPO/builds/plugins.json",
+        "reachable": false,
+        "count": 0,
+        "updated_at": null,
+        "languages": {},
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 0,
+    "status": "broken",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": false,
+    "plugin_source_repositories": [],
+    "last_repo_push": "2026-08-25T22:42:44Z",
+    "last_manifest_update": "2026-08-25T14:16:19Z",
+    "last_plugins_update": null,
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:12:47Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "MyCloudstreamRepo",
+    "description": "Mera pehla CloudStream repository",
+    "repository": "MKGamer222/MyCloudstreamRepo",
+    "repository_url": "https://github.com/MKGamer222/MyCloudstreamRepo",
+    "repo_url": "https://raw.githubusercontent.com/MKGamer222/MyCloudstreamRepo/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/MKGamer222/MyCloudStreamRepo/main/plugins.json",
+        "reachable": true,
+        "count": 0,
+        "updated_at": "2025-03-31T21:44:50Z",
+        "source_repository": "MKGamer222/MyCloudStreamRepo",
+        "languages": {},
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 0,
+    "status": "empty",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": false,
+    "plugin_source_repositories": [
+      "MKGamer222/MyCloudStreamRepo"
+    ],
+    "last_repo_push": "2025-03-31T21:44:50Z",
+    "last_manifest_update": "2025-03-31T21:02:21Z",
+    "last_plugins_update": "2025-03-31T21:44:50Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:13:10Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "Narek Repo",
+    "description": "Repo d'extensions FR by Narek",
+    "repository": "Npsk698/CloudStream-MyExtension",
+    "repository_url": "https://github.com/Npsk698/CloudStream-MyExtension",
+    "repo_url": "https://raw.githubusercontent.com/Npsk698/CloudStream-MyExtension/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/Npsk698/CloudStream-MyExtension/main/plugins.json",
+        "reachable": false,
+        "count": 0,
+        "updated_at": null,
+        "languages": {},
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 0,
+    "status": "broken",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": false,
+    "plugin_source_repositories": [],
+    "last_repo_push": "2025-10-18T17:56:47Z",
+    "last_manifest_update": "2025-10-18T17:10:56Z",
+    "last_plugins_update": null,
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:13:14Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "Telebox Repository",
+    "description": "CloudStream extension for Telebox/Linkbox cloud storage service",
+    "repository": "IbrahimElrifi/Box",
+    "repository_url": "https://github.com/IbrahimElrifi/Box",
+    "repo_url": "https://raw.githubusercontent.com/IbrahimElrifi/Box/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/IbrahimElrifi/TeleboxProvider/main/plugins.json",
+        "reachable": false,
+        "count": 0,
+        "updated_at": null,
+        "languages": {},
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 0,
+    "status": "broken",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": false,
+    "plugin_source_repositories": [],
+    "last_repo_push": "2026-05-21T16:01:07Z",
+    "last_manifest_update": "2026-05-21T00:55:52Z",
+    "last_plugins_update": null,
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:13:01Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "Trepo",
+    "description": "Adult / NSFW CloudStream providers by antonioallomedia-blip",
+    "repository": "antonioallomedia-blip/trepo",
+    "repository_url": "https://github.com/antonioallomedia-blip/trepo",
+    "repo_url": "https://raw.githubusercontent.com/antonioallomedia-blip/trepo/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/antonioallomedia-blip/trepo/builds/plugins.json",
+        "reachable": true,
+        "count": 0,
+        "updated_at": "2026-09-17T22:10:33Z",
+        "source_repository": "antonioallomedia-blip/trepo",
+        "languages": {},
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 0,
+    "status": "empty",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "antonioallomedia-blip/trepo"
+    ],
+    "last_repo_push": "2026-09-18T05:43:12Z",
+    "last_manifest_update": "2026-09-17T20:03:54Z",
+    "last_plugins_update": "2026-09-17T22:10:33Z",
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:13:47Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "UFO Grendizer Extension Repository",
+    "description": "Extension to watch UFO Grendizer anime on CloudStream",
+    "repository": "tar-cloudstr/ufo",
+    "repository_url": "https://github.com/tar-cloudstr/ufo",
+    "repo_url": "https://raw.githubusercontent.com/tar-cloudstr/ufo/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/tar-cloudstr/ufo/main/build/plugins.json",
+        "reachable": false,
+        "count": 0,
+        "updated_at": null,
+        "languages": {},
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 0,
+    "status": "broken",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": false,
+    "plugin_source_repositories": [],
+    "last_repo_push": "2025-02-14T20:21:54Z",
+    "last_manifest_update": "2025-02-14T20:21:54Z",
+    "last_plugins_update": null,
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:15:16Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "Vietnamese Extension",
+    "description": "https://t.me/cloudstream_extension_vn",
+    "repository": "TNB88/filmcinema",
+    "repository_url": "https://github.com/TNB88/filmcinema",
+    "repo_url": "https://raw.githubusercontent.com/TNB88/filmcinema/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/TNB88/18/refs/heads/main/plugins.json",
+        "reachable": false,
+        "count": 0,
+        "updated_at": null,
+        "languages": {},
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 0,
+    "status": "broken",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": false,
+    "plugin_source_repositories": [],
+    "last_repo_push": "2025-05-21T14:21:35Z",
+    "last_manifest_update": "2025-05-21T14:21:35Z",
+    "last_plugins_update": null,
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:13:21Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "Xtreme'x BDIX",
+    "description": "Xtreme'x BDIX CloudStream extensions",
+    "repository": "helal-c/cloudstream-bdix-repo",
+    "repository_url": "https://github.com/helal-c/cloudstream-bdix-repo",
+    "repo_url": "https://raw.githubusercontent.com/helal-c/cloudstream-bdix-repo/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/helal-c/cloudstream-bdix-repo/builds/plugins.json",
+        "reachable": false,
+        "count": 0,
+        "updated_at": null,
+        "languages": {},
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 0,
+    "status": "broken",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": false,
+    "plugin_source_repositories": [],
+    "last_repo_push": "2026-08-20T04:33:14Z",
+    "last_manifest_update": "2026-08-20T04:32:49Z",
+    "last_plugins_update": null,
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:14:29Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "Zee5 Cloudstream Repo",
+    "description": "Live TV + VOD Extension for Zee5",
+    "repository": "Kaificreation/rahiliptv",
+    "repository_url": "https://github.com/Kaificreation/rahiliptv",
+    "repo_url": "https://raw.githubusercontent.com/Kaificreation/rahiliptv/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "{'name': 'Zee5Cloudstream', 'url': './Zee5Cloudstream/build.gradle.kts'}",
+        "reachable": false,
+        "count": 0,
+        "updated_at": null,
+        "languages": {},
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 0,
+    "status": "broken",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": false,
+    "plugin_source_repositories": [],
+    "last_repo_push": "2025-05-14T06:45:22Z",
+    "last_manifest_update": "2025-05-14T06:43:41Z",
+    "last_plugins_update": null,
+    "discovered_by": [
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:13:06Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "fs",
+    "description": "Türkçe",
+    "repository": "fsamet/fs",
+    "repository_url": "https://github.com/fsamet/fs",
+    "repo_url": "https://raw.githubusercontent.com/fsamet/fs/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/fs/Cloudstream-Turkce-Eklentiler/main/plugins.json",
+        "reachable": false,
+        "count": 0,
+        "updated_at": null,
+        "languages": {},
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 0,
+    "status": "broken",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": false,
+    "plugin_source_repositories": [],
+    "last_repo_push": "2025-06-24T15:27:32Z",
+    "last_manifest_update": "2025-06-24T15:27:30Z",
+    "last_plugins_update": null,
+    "discovered_by": [
+      "code-search:filename:repo.json \"pluginLists\" \"Türkçe\"",
+      "registry"
+    ],
+    "checked_at": "2026-10-03T08:14:26Z",
+    "turkish": {
+      "is_turkish": false,
+      "score": 33,
+      "reasons": [
+        "turkish-markers:türk"
       ]
     }
   }
