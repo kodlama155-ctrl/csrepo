@@ -1,0 +1,1442 @@
+[
+  {
+    "name": "WioSinema",
+    "description": "CloudStream için TMDB v3 destekli birleşik Türkçe sinema ve dizi eklentisi.",
+    "repository": "Wiojelt/WioSinema",
+    "repository_url": "https://github.com/Wiojelt/WioSinema",
+    "repo_url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/builds/repo.json",
+    "manifest_branch": "builds",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/refs/heads/builds/plugins.json",
+        "reachable": true,
+        "count": 35,
+        "updated_at": null,
+        "source_repository": "Wiojelt/WioSinema",
+        "languages": {
+          "tr": 35
+        },
+        "turkish_language_count": 35
+      }
+    ],
+    "plugin_count": 35,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "Wiojelt/WioSinema"
+    ],
+    "last_repo_push": "2026-10-02T22:19:06Z",
+    "last_manifest_update": "2026-10-01T17:27:39Z",
+    "last_plugins_update": null,
+    "discovered_by": [
+      "owner-expand:Wiojelt",
+      "repo-search:cloudstream Türkçe in:name,description",
+      "seed"
+    ],
+    "checked_at": "2026-10-03T08:09:28Z",
+    "turkish": {
+      "is_turkish": true,
+      "score": 355,
+      "reasons": [
+        "trusted-seed",
+        "trusted-turkish-owner",
+        "plugins-language-tr:35",
+        "turkish-markers:belgesel,dizi,dizipal,eklenti,filmmakinesi,hdfilmcehennemi,inatbox,izle",
+        "turkish-search-hit",
+        "turkish-plugin-source"
+      ]
+    }
+  },
+  {
+    "name": "TurkSinema",
+    "description": "Türkçe film, dizi ve belgesel sağlayıcıları",
+    "repository": "Wiojelt/TurkSinema",
+    "repository_url": "https://github.com/Wiojelt/TurkSinema",
+    "repo_url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/4a2e42f4e1b18435aa8366409dcb410f47b89469/plugins.json",
+        "reachable": true,
+        "count": 67,
+        "updated_at": "2026-10-02T20:24:43Z",
+        "source_repository": "Wiojelt/TurkSinema",
+        "languages": {
+          "all": 3,
+          "en": 1,
+          "tr": 63
+        },
+        "turkish_language_count": 63
+      }
+    ],
+    "plugin_count": 67,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "Wiojelt/TurkSinema"
+    ],
+    "last_repo_push": "2026-10-02T20:27:21Z",
+    "last_manifest_update": "2026-10-02T20:27:19Z",
+    "last_plugins_update": "2026-10-02T20:24:43Z",
+    "discovered_by": [
+      "owner-expand:Wiojelt",
+      "seed"
+    ],
+    "checked_at": "2026-10-03T08:09:20Z",
+    "turkish": {
+      "is_turkish": true,
+      "score": 340,
+      "reasons": [
+        "trusted-seed",
+        "trusted-turkish-owner",
+        "plugins-language-tr:63",
+        "turkish-markers:belgesel,cizgi,dizi,dizipal,izle,sağlayıcı,sinema,turk",
+        "turkish-plugin-source"
+      ]
+    }
+  },
+  {
+    "name": "Turkish Providers Repository | @feroxxcs3",
+    "description": "Türkçe içerikli eklenti havuzu",
+    "repository": "feroxx/Kekik-cloudstream",
+    "repository_url": "https://github.com/feroxx/Kekik-cloudstream",
+    "repo_url": "https://raw.githubusercontent.com/feroxx/Kekik-cloudstream/builds/repo.json",
+    "manifest_branch": "builds",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/feroxx/Kekik-cloudstream/builds/plugins.json",
+        "reachable": true,
+        "count": 37,
+        "updated_at": "2026-10-02T06:46:50Z",
+        "source_repository": "feroxx/Kekik-cloudstream",
+        "languages": {
+          "en": 2,
+          "tr": 35
+        },
+        "turkish_language_count": 35
+      }
+    ],
+    "plugin_count": 37,
+    "status": "active",
+    "archived": false,
+    "fork": true,
+    "parent": "keyiflerolsun/Kekik-cloudstream",
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "feroxx/Kekik-cloudstream"
+    ],
+    "last_repo_push": "2026-10-02T06:46:51Z",
+    "last_manifest_update": "2026-10-02T06:46:50Z",
+    "last_plugins_update": "2026-10-02T06:46:50Z",
+    "discovered_by": [
+      "owner-expand:feroxx",
+      "seed"
+    ],
+    "checked_at": "2026-10-03T08:09:38Z",
+    "turkish": {
+      "is_turkish": true,
+      "score": 335,
+      "reasons": [
+        "trusted-seed",
+        "trusted-turkish-owner",
+        "plugins-language-tr:35",
+        "turkish-markers:belgesel,cizgi,dizi,dizipal,eklenti,filmmakinesi,hdfilmcehennemi,inatbox",
+        "turkish-plugin-source"
+      ]
+    }
+  },
+  {
+    "name": "MRC - CloudStream Türkçe Eklenti Deposu",
+    "description": "CloudStream 3 için Türkçe dizi, film ve anime eklentileri.",
+    "repository": "lepotane/MRC-builds",
+    "repository_url": "https://github.com/lepotane/MRC-builds",
+    "repo_url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/repo.json",
+    "manifest_branch": "builds",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/plugins.json",
+        "reachable": true,
+        "count": 72,
+        "updated_at": "2026-10-03T00:35:55Z",
+        "source_repository": "lepotane/MRC-builds",
+        "languages": {
+          "en": 5,
+          "it": 1,
+          "mx": 2,
+          "tr": 64
+        },
+        "turkish_language_count": 64
+      }
+    ],
+    "plugin_count": 72,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "lepotane/MRC-builds"
+    ],
+    "last_repo_push": "2026-10-03T00:35:55Z",
+    "last_manifest_update": "2026-09-29T09:24:16Z",
+    "last_plugins_update": "2026-10-03T00:35:55Z",
+    "discovered_by": [
+      "owner-expand:lepotane",
+      "repo-search:cloudstream Türkçe in:name,description",
+      "seed"
+    ],
+    "checked_at": "2026-10-03T08:09:43Z",
+    "turkish": {
+      "is_turkish": true,
+      "score": 325,
+      "reasons": [
+        "trusted-seed",
+        "trusted-turkish-owner",
+        "plugins-language-tr:64",
+        "turkish-markers:belgesel,cizgi,dizi,dizipal,eklenti,izle,türk,yayın",
+        "turkish-search-hit"
+      ]
+    }
+  },
+  {
+    "name": "TurkSpor",
+    "description": "Canlı spor kaynakları ve domain yenileme",
+    "repository": "Wiojelt/TurkSpor",
+    "repository_url": "https://github.com/Wiojelt/TurkSpor",
+    "repo_url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/plugins.json",
+        "reachable": true,
+        "count": 32,
+        "updated_at": "2026-09-25T09:53:05Z",
+        "source_repository": "Wiojelt/TurkSpor",
+        "languages": {
+          "en": 3,
+          "tr": 29
+        },
+        "turkish_language_count": 29
+      }
+    ],
+    "plugin_count": 32,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "Wiojelt/TurkSpor"
+    ],
+    "last_repo_push": "2026-10-02T09:54:55Z",
+    "last_manifest_update": "2026-09-29T13:49:37Z",
+    "last_plugins_update": "2026-09-25T09:53:05Z",
+    "discovered_by": [
+      "owner-expand:Wiojelt",
+      "seed"
+    ],
+    "checked_at": "2026-10-03T08:09:21Z",
+    "turkish": {
+      "is_turkish": true,
+      "score": 324,
+      "reasons": [
+        "trusted-seed",
+        "trusted-turkish-owner",
+        "plugins-language-tr:29",
+        "turkish-markers:kekik,turk,turkspor,yayin,yayın",
+        "turkish-plugin-source"
+      ]
+    }
+  },
+  {
+    "name": "WioSpor",
+    "description": "Renk gruplarıyla düzenlenmiş canlı TV ve spor kanalları",
+    "repository": "Wiojelt/WioSpor",
+    "repository_url": "https://github.com/Wiojelt/WioSpor",
+    "repo_url": "https://raw.githubusercontent.com/Wiojelt/WioSpor/builds/repo.json",
+    "manifest_branch": "builds",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/Wiojelt/WioSpor/refs/heads/builds/plugins.json",
+        "reachable": true,
+        "count": 26,
+        "updated_at": null,
+        "source_repository": "Wiojelt/WioSpor",
+        "languages": {
+          "en": 2,
+          "tr": 24
+        },
+        "turkish_language_count": 24
+      }
+    ],
+    "plugin_count": 26,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "Wiojelt/WioSpor"
+    ],
+    "last_repo_push": "2026-10-01T18:07:09Z",
+    "last_manifest_update": "2026-09-29T14:12:20Z",
+    "last_plugins_update": null,
+    "discovered_by": [
+      "owner-expand:Wiojelt",
+      "seed"
+    ],
+    "checked_at": "2026-10-03T08:09:28Z",
+    "turkish": {
+      "is_turkish": true,
+      "score": 324,
+      "reasons": [
+        "trusted-seed",
+        "trusted-turkish-owner",
+        "plugins-language-tr:24",
+        "turkish-markers:eklenti,inatbox,kekik,rectv,wiospor,yayin,yayın",
+        "turkish-plugin-source"
+      ]
+    }
+  },
+  {
+    "name": "MegaWio",
+    "description": "MegaWio - Toplu Depo Yükleyici",
+    "repository": "Wiojelt/WioLand",
+    "repository_url": "https://github.com/Wiojelt/WioLand",
+    "repo_url": "https://raw.githubusercontent.com/Wiojelt/WioLand/builds/repo.json",
+    "manifest_branch": "builds",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/Wiojelt/WioLand/builds/plugins.json",
+        "reachable": true,
+        "count": 1,
+        "updated_at": "2026-09-28T23:16:32Z",
+        "source_repository": "Wiojelt/WioLand",
+        "languages": {
+          "tr": 1
+        },
+        "turkish_language_count": 1
+      }
+    ],
+    "plugin_count": 1,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "Wiojelt/WioLand"
+    ],
+    "last_repo_push": "2026-09-29T13:53:30Z",
+    "last_manifest_update": "2026-09-29T13:53:31Z",
+    "last_plugins_update": "2026-09-28T23:16:32Z",
+    "discovered_by": [
+      "owner-expand:Wiojelt",
+      "repo-search:cloudstream eklenti in:name,description",
+      "seed"
+    ],
+    "checked_at": "2026-10-03T08:09:27Z",
+    "turkish": {
+      "is_turkish": true,
+      "score": 321,
+      "reasons": [
+        "trusted-seed",
+        "trusted-turkish-owner",
+        "plugins-language-tr:1",
+        "turkish-markers:sinema,wioanime,wioasya,wiodrama,wiokids,wiosinema,wiospor",
+        "turkish-search-hit",
+        "turkish-plugin-source"
+      ]
+    }
+  },
+  {
+    "name": "BTVault",
+    "description": "CloudStream Turkce Eklenti Deposu - 41 provider (25 aktif): film, dizi, anime, belgesel, canli TV",
+    "repository": "baristomruk-max/BTVault",
+    "repository_url": "https://github.com/baristomruk-max/BTVault",
+    "repo_url": "https://raw.githubusercontent.com/baristomruk-max/BTVault/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/baristomruk-max/BTVault/builds/plugins.json",
+        "reachable": true,
+        "count": 41,
+        "updated_at": "2026-09-29T21:07:11Z",
+        "source_repository": "baristomruk-max/BTVault",
+        "languages": {
+          "en": 7,
+          "hi": 2,
+          "ru": 1,
+          "tr": 31
+        },
+        "turkish_language_count": 31
+      }
+    ],
+    "plugin_count": 41,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "baristomruk-max/BTVault"
+    ],
+    "last_repo_push": "2026-09-29T21:07:13Z",
+    "last_manifest_update": "2026-09-25T16:29:23Z",
+    "last_plugins_update": "2026-09-29T21:07:11Z",
+    "discovered_by": [
+      "owner-expand:baristomruk-max",
+      "repo-search:cloudstream Türkçe in:name,description",
+      "repo-search:cloudstream eklenti in:name,description",
+      "seed"
+    ],
+    "checked_at": "2026-10-03T08:09:33Z",
+    "turkish": {
+      "is_turkish": true,
+      "score": 316,
+      "reasons": [
+        "trusted-seed",
+        "trusted-turkish-owner",
+        "plugins-language-tr:31",
+        "turkish-markers:belgesel,cizgi,dizi,dizipal,eklenti,filmmakinesi,hdfilmcehennemi,inatbox",
+        "turkish-search-hit"
+      ]
+    }
+  },
+  {
+    "name": "WioAnime",
+    "description": "CloudStream anime sağlayıcıları",
+    "repository": "Wiojelt/WioAnime",
+    "repository_url": "https://github.com/Wiojelt/WioAnime",
+    "repo_url": "https://raw.githubusercontent.com/Wiojelt/WioAnime/builds/repo.json",
+    "manifest_branch": "builds",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/Wiojelt/WioAnime/builds/plugins.json",
+        "reachable": true,
+        "count": 10,
+        "updated_at": "2026-09-29T10:02:47Z",
+        "source_repository": "Wiojelt/WioAnime",
+        "languages": {
+          "tr": 10
+        },
+        "turkish_language_count": 10
+      }
+    ],
+    "plugin_count": 10,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "Wiojelt/WioAnime"
+    ],
+    "last_repo_push": "2026-09-29T13:53:25Z",
+    "last_manifest_update": "2026-09-29T13:53:26Z",
+    "last_plugins_update": "2026-09-29T10:02:47Z",
+    "discovered_by": [
+      "owner-expand:Wiojelt",
+      "seed"
+    ],
+    "checked_at": "2026-10-03T08:09:22Z",
+    "turkish": {
+      "is_turkish": true,
+      "score": 310,
+      "reasons": [
+        "trusted-seed",
+        "trusted-turkish-owner",
+        "plugins-language-tr:10",
+        "turkish-markers:izle,sağlayıcı,turk,turkanime,türk,wioanime",
+        "turkish-plugin-source"
+      ]
+    }
+  },
+  {
+    "name": "WioKids",
+    "description": "CloudStream providers for cartoons, animation and kids content.",
+    "repository": "Wiojelt/WioKids",
+    "repository_url": "https://github.com/Wiojelt/WioKids",
+    "repo_url": "https://raw.githubusercontent.com/Wiojelt/WioKids/builds/repo.json",
+    "manifest_branch": "builds",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/Wiojelt/WioKids/main/plugins.json?v=clean-20260929b",
+        "reachable": true,
+        "count": 10,
+        "updated_at": "2026-09-29T10:50:05Z",
+        "source_repository": "Wiojelt/WioKids",
+        "languages": {
+          "tr": 10
+        },
+        "turkish_language_count": 10
+      }
+    ],
+    "plugin_count": 10,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "Wiojelt/WioKids"
+    ],
+    "last_repo_push": "2026-09-29T13:49:18Z",
+    "last_manifest_update": "2026-09-29T13:46:37Z",
+    "last_plugins_update": "2026-09-29T10:50:05Z",
+    "discovered_by": [
+      "owner-expand:Wiojelt",
+      "seed"
+    ],
+    "checked_at": "2026-10-03T08:09:26Z",
+    "turkish": {
+      "is_turkish": true,
+      "score": 310,
+      "reasons": [
+        "trusted-seed",
+        "trusted-turkish-owner",
+        "plugins-language-tr:10",
+        "turkish-markers:cizgi,dizi,izle,sağlayıcı,sinema,turk,türk,wiokids",
+        "turkish-plugin-source"
+      ]
+    }
+  },
+  {
+    "name": "WioAsya",
+    "description": "CloudStream Asya dizisi ve filmi sağlayıcıları",
+    "repository": "Wiojelt/WioAsya",
+    "repository_url": "https://github.com/Wiojelt/WioAsya",
+    "repo_url": "https://raw.githubusercontent.com/Wiojelt/WioAsya/builds/repo.json",
+    "manifest_branch": "builds",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/Wiojelt/WioAsya/builds/plugins.json",
+        "reachable": true,
+        "count": 7,
+        "updated_at": "2026-10-02T22:18:01Z",
+        "source_repository": "Wiojelt/WioAsya",
+        "languages": {
+          "tr": 7
+        },
+        "turkish_language_count": 7
+      }
+    ],
+    "plugin_count": 7,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "Wiojelt/WioAsya"
+    ],
+    "last_repo_push": "2026-10-02T22:18:07Z",
+    "last_manifest_update": "2026-09-29T13:53:29Z",
+    "last_plugins_update": "2026-10-02T22:18:01Z",
+    "discovered_by": [
+      "owner-expand:Wiojelt",
+      "seed"
+    ],
+    "checked_at": "2026-10-03T08:09:23Z",
+    "turkish": {
+      "is_turkish": true,
+      "score": 307,
+      "reasons": [
+        "trusted-seed",
+        "trusted-turkish-owner",
+        "plugins-language-tr:7",
+        "turkish-markers:dizi,sağlayıcı,sinema,turk,türk,wioasya",
+        "turkish-plugin-source"
+      ]
+    }
+  },
+  {
+    "name": "CloudStream TR",
+    "description": "CloudStream Turkish Repository — Revival of Turkish providers with modern upstream architecture, active link resolution, and automated builds.",
+    "repository": "Emre-Kahveci/CloudStreamHub",
+    "repository_url": "https://github.com/Emre-Kahveci/CloudStreamHub",
+    "repo_url": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/repo.json",
+    "manifest_branch": "builds",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/plugins.json",
+        "reachable": true,
+        "count": 24,
+        "updated_at": "2026-10-01T19:27:23Z",
+        "source_repository": "Emre-Kahveci/CloudStreamHub",
+        "languages": {
+          "en": 3,
+          "tr": 21
+        },
+        "turkish_language_count": 21
+      }
+    ],
+    "plugin_count": 24,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "Emre-Kahveci/CloudStreamHub"
+    ],
+    "last_repo_push": "2026-10-01T19:27:24Z",
+    "last_manifest_update": "2026-09-11T22:59:06Z",
+    "last_plugins_update": "2026-10-01T19:27:23Z",
+    "discovered_by": [
+      "owner-expand:Emre-Kahveci",
+      "repo-search:cloudstream Turkish in:name,description",
+      "seed"
+    ],
+    "checked_at": "2026-10-03T08:09:14Z",
+    "turkish": {
+      "is_turkish": true,
+      "score": 306,
+      "reasons": [
+        "trusted-seed",
+        "trusted-turkish-owner",
+        "plugins-language-tr:21",
+        "turkish-markers:belgesel,dizi,eklenti,filmmakinesi,hdfilmcehennemi,izle,sağlayıcı,sezonlukdizi",
+        "turkish-search-hit"
+      ]
+    }
+  },
+  {
+    "name": "Oygy8b5F Cloudstream Repo",
+    "description": "20 Türkçe film ve dizi kaynağı içeren Cloudstream eklenti reposu",
+    "repository": "Ripplay/cloudstream-repo",
+    "repository_url": "https://github.com/Ripplay/cloudstream-repo",
+    "repo_url": "https://raw.githubusercontent.com/Ripplay/cloudstream-repo/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/Ripplay/cloudstream-repo/builds/plugins.json",
+        "reachable": true,
+        "count": 13,
+        "updated_at": "2026-08-24T21:48:05Z",
+        "source_repository": "Ripplay/cloudstream-repo",
+        "languages": {
+          "tr": 13
+        },
+        "turkish_language_count": 13
+      }
+    ],
+    "plugin_count": 13,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "Ripplay/cloudstream-repo"
+    ],
+    "last_repo_push": "2026-08-24T21:48:06Z",
+    "last_manifest_update": "2026-08-24T20:58:31Z",
+    "last_plugins_update": "2026-08-24T21:48:05Z",
+    "discovered_by": [
+      "owner-expand:Ripplay",
+      "repo-search:cloudstream Türkçe in:name,description",
+      "repo-search:cloudstream repo Türkçe in:name,description",
+      "seed"
+    ],
+    "checked_at": "2026-10-03T08:09:17Z",
+    "turkish": {
+      "is_turkish": true,
+      "score": 298,
+      "reasons": [
+        "trusted-seed",
+        "trusted-turkish-owner",
+        "plugins-language-tr:13",
+        "turkish-markers:dizi,dizipal,eklenti,filmmakinesi,hdfilmcehennemi,izle,sinema,türk",
+        "turkish-search-hit"
+      ]
+    }
+  },
+  {
+    "name": "Manitux Cloudstream Plugins",
+    "description": "Cloudstream için Manitux eklenti deposu",
+    "repository": "manitux-app/cs-plugins",
+    "repository_url": "https://github.com/manitux-app/cs-plugins",
+    "repo_url": "https://raw.githubusercontent.com/manitux-app/cs-plugins/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/manitux-app/cs-plugins/main/builds/plugins.json",
+        "reachable": true,
+        "count": 11,
+        "updated_at": "2026-09-26T14:20:02Z",
+        "source_repository": "manitux-app/cs-plugins",
+        "languages": {
+          "tr": 11
+        },
+        "turkish_language_count": 11
+      }
+    ],
+    "plugin_count": 11,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "manitux-app/cs-plugins"
+    ],
+    "last_repo_push": "2026-10-01T13:25:10Z",
+    "last_manifest_update": "2026-08-31T18:51:21Z",
+    "last_plugins_update": "2026-09-26T14:20:02Z",
+    "discovered_by": [
+      "owner-expand:manitux-app",
+      "repo-search:cloudstream Türkçe in:name,description",
+      "seed"
+    ],
+    "checked_at": "2026-10-03T08:09:47Z",
+    "turkish": {
+      "is_turkish": true,
+      "score": 296,
+      "reasons": [
+        "trusted-seed",
+        "trusted-turkish-owner",
+        "plugins-language-tr:11",
+        "turkish-markers:dizi,dizipal,eklenti,filmmakinesi,hdfilmcehennemi,izle,turk,türk",
+        "turkish-search-hit"
+      ]
+    }
+  },
+  {
+    "name": "WioDrama",
+    "description": "CloudStream kısa drama sağlayıcıları",
+    "repository": "Wiojelt/WioDrama",
+    "repository_url": "https://github.com/Wiojelt/WioDrama",
+    "repo_url": "https://raw.githubusercontent.com/Wiojelt/WioDrama/builds/repo.json",
+    "manifest_branch": "builds",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/Wiojelt/WioDrama/builds/plugins.json",
+        "reachable": true,
+        "count": 2,
+        "updated_at": "2026-09-25T21:03:55Z",
+        "source_repository": "Wiojelt/WioDrama",
+        "languages": {
+          "tr": 2
+        },
+        "turkish_language_count": 2
+      }
+    ],
+    "plugin_count": 2,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "Wiojelt/WioDrama"
+    ],
+    "last_repo_push": "2026-09-29T13:53:23Z",
+    "last_manifest_update": "2026-09-29T13:53:24Z",
+    "last_plugins_update": "2026-09-25T21:03:55Z",
+    "discovered_by": [
+      "owner-expand:Wiojelt",
+      "seed"
+    ],
+    "checked_at": "2026-10-03T08:09:25Z",
+    "turkish": {
+      "is_turkish": true,
+      "score": 289,
+      "reasons": [
+        "trusted-seed",
+        "trusted-turkish-owner",
+        "plugins-language-tr:2",
+        "turkish-markers:dizi,sağlayıcı,türk,wiodrama",
+        "turkish-plugin-source"
+      ]
+    }
+  },
+  {
+    "name": "gsrepo",
+    "description": "gsrepo Türkçe CloudStream eklenti havuzu",
+    "repository": "liberta09/Kekik-cloudstream",
+    "repository_url": "https://github.com/liberta09/Kekik-cloudstream",
+    "repo_url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/repo.json",
+    "manifest_branch": "builds",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/HintFilmIzle.json",
+        "reachable": true,
+        "count": 1,
+        "updated_at": "2026-08-27T18:39:01Z",
+        "source_repository": "liberta09/Kekik-cloudstream",
+        "languages": {
+          "tr": 1
+        },
+        "turkish_language_count": 1
+      },
+      {
+        "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/plugins.json",
+        "reachable": true,
+        "count": 60,
+        "updated_at": "2026-08-31T01:46:51Z",
+        "source_repository": "liberta09/Kekik-cloudstream",
+        "languages": {
+          "en": 2,
+          "tr": 58
+        },
+        "turkish_language_count": 58
+      }
+    ],
+    "plugin_count": 61,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "liberta09/Kekik-cloudstream"
+    ],
+    "last_repo_push": "2026-08-31T01:46:52Z",
+    "last_manifest_update": "2026-08-29T19:13:12Z",
+    "last_plugins_update": "2026-08-31T01:46:51Z",
+    "discovered_by": [
+      "repo-search:Kekik cloudstream in:name,description"
+    ],
+    "checked_at": "2026-10-03T08:09:45Z",
+    "turkish": {
+      "is_turkish": true,
+      "score": 225,
+      "reasons": [
+        "plugins-language-tr:59",
+        "turkish-markers:belgesel,cizgi,dizi,dizipal,eklenti,filmmakinesi,hdfilmcehennemi,izle",
+        "turkish-search-hit",
+        "turkish-plugin-source"
+      ]
+    }
+  },
+  {
+    "name": "WioSinema",
+    "description": "CloudStream için TMDB v3 destekli birleşik Türkçe sinema ve dizi eklentisi.",
+    "repository": "pisovo-5031/WioSinema",
+    "repository_url": "https://github.com/pisovo-5031/WioSinema",
+    "repo_url": "https://raw.githubusercontent.com/pisovo-5031/WioSinema/builds/repo.json",
+    "manifest_branch": "builds",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/builds/plugins.json?v=31",
+        "reachable": true,
+        "count": 35,
+        "updated_at": "2026-10-01T21:22:57Z",
+        "source_repository": "Wiojelt/WioSinema",
+        "languages": {
+          "tr": 35
+        },
+        "turkish_language_count": 35
+      }
+    ],
+    "plugin_count": 35,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": false,
+    "plugin_source_repositories": [
+      "Wiojelt/WioSinema"
+    ],
+    "last_repo_push": "2026-09-23T10:51:56Z",
+    "last_manifest_update": "2026-09-21T22:39:00Z",
+    "last_plugins_update": "2026-10-01T21:22:57Z",
+    "discovered_by": [
+      "repo-search:cloudstream Türkçe in:name,description"
+    ],
+    "checked_at": "2026-10-03T08:09:48Z",
+    "turkish": {
+      "is_turkish": true,
+      "score": 220,
+      "reasons": [
+        "plugins-language-tr:35",
+        "turkish-markers:belgesel,dizi,dizipal,eklenti,filmmakinesi,hdfilmcehennemi,inatbox,izle",
+        "turkish-search-hit",
+        "turkish-plugin-source"
+      ]
+    }
+  },
+  {
+    "name": "Makoto'nun Cloudstream Reposu",
+    "description": "Türkçe Cloudstream eklentiler listesi",
+    "repository": "MakotoTokioki/Cloudstream-Turkce-Eklentiler",
+    "repository_url": "https://github.com/MakotoTokioki/Cloudstream-Turkce-Eklentiler",
+    "repo_url": "https://raw.githubusercontent.com/MakotoTokioki/Cloudstream-Turkce-Eklentiler/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/MakotoTokioki/Cloudstream-Turkce-Eklentiler/main/plugins.json",
+        "reachable": true,
+        "count": 21,
+        "updated_at": "2025-05-28T16:29:53Z",
+        "source_repository": "MakotoTokioki/Cloudstream-Turkce-Eklentiler",
+        "languages": {
+          "tr": 21
+        },
+        "turkish_language_count": 21
+      }
+    ],
+    "plugin_count": 21,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "MakotoTokioki/Cloudstream-Turkce-Eklentiler"
+    ],
+    "last_repo_push": "2025-05-28T16:29:53Z",
+    "last_manifest_update": "2025-05-28T16:28:26Z",
+    "last_plugins_update": "2025-05-28T16:29:53Z",
+    "discovered_by": [
+      "repo-search:cloudstream eklenti in:name,description"
+    ],
+    "checked_at": "2026-10-03T08:09:16Z",
+    "turkish": {
+      "is_turkish": true,
+      "score": 206,
+      "reasons": [
+        "plugins-language-tr:21",
+        "turkish-markers:cizgi,dizi,eklenti,inatbox,izle,rectv,sinewix,turk",
+        "turkish-search-hit",
+        "turkish-plugin-source"
+      ]
+    }
+  },
+  {
+    "name": "Makoto'nun Cloudstream Reposu",
+    "description": "Türkçe Cloudstream eklentiler listesi",
+    "repository": "tecobaba/Cloudstream-Turkce-Eklentiler",
+    "repository_url": "https://github.com/tecobaba/Cloudstream-Turkce-Eklentiler",
+    "repo_url": "https://raw.githubusercontent.com/tecobaba/Cloudstream-Turkce-Eklentiler/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/MakotoTokioki/Cloudstream-Turkce-Eklentiler/main/plugins.json",
+        "reachable": true,
+        "count": 21,
+        "updated_at": "2025-05-28T16:29:53Z",
+        "source_repository": "MakotoTokioki/Cloudstream-Turkce-Eklentiler",
+        "languages": {
+          "tr": 21
+        },
+        "turkish_language_count": 21
+      }
+    ],
+    "plugin_count": 21,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": false,
+    "plugin_source_repositories": [
+      "MakotoTokioki/Cloudstream-Turkce-Eklentiler"
+    ],
+    "last_repo_push": "2025-05-04T17:14:47Z",
+    "last_manifest_update": "2025-04-05T11:48:47Z",
+    "last_plugins_update": "2025-05-28T16:29:53Z",
+    "discovered_by": [
+      "repo-search:cloudstream Türkçe in:name,description",
+      "repo-search:cloudstream eklenti in:name,description"
+    ],
+    "checked_at": "2026-10-03T08:09:50Z",
+    "turkish": {
+      "is_turkish": true,
+      "score": 206,
+      "reasons": [
+        "plugins-language-tr:21",
+        "turkish-markers:cizgi,dizi,eklenti,inatbox,izle,rectv,sinewix,turk",
+        "turkish-search-hit",
+        "turkish-plugin-source"
+      ]
+    }
+  },
+  {
+    "name": "WioCinema",
+    "description": "Global movie and series providers",
+    "repository": "Wiojelt/WioCinema",
+    "repository_url": "https://github.com/Wiojelt/WioCinema",
+    "repo_url": "https://raw.githubusercontent.com/Wiojelt/WioCinema/builds/repo.json",
+    "manifest_branch": "builds",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/Wiojelt/WioCinema/builds/plugins.json?v=cinestream-487-30dc64362870",
+        "reachable": true,
+        "count": 11,
+        "updated_at": "2026-09-29T15:53:37Z",
+        "source_repository": "Wiojelt/WioCinema",
+        "languages": {
+          "all": 3,
+          "en": 3,
+          "tr": 5
+        },
+        "turkish_language_count": 5
+      }
+    ],
+    "plugin_count": 11,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "Wiojelt/WioCinema"
+    ],
+    "last_repo_push": "2026-09-29T15:53:39Z",
+    "last_manifest_update": "2026-09-29T15:53:37Z",
+    "last_plugins_update": "2026-09-29T15:53:37Z",
+    "discovered_by": [
+      "owner-expand:Wiojelt"
+    ],
+    "checked_at": "2026-10-03T08:09:24Z",
+    "turkish": {
+      "is_turkish": true,
+      "score": 200,
+      "reasons": [
+        "trusted-turkish-owner",
+        "plugins-language-tr:5",
+        "turkish-markers:dizi,sağlayıcı,sinema,turk,türk",
+        "turkish-plugin-source"
+      ]
+    }
+  },
+  {
+    "name": "Galip TV",
+    "description": "Kisisel Turkce icerik havuzu (film, dizi, belgesel, spor, canli TV)",
+    "repository": "galipgokalp/tv-cloudstream",
+    "repository_url": "https://github.com/galipgokalp/tv-cloudstream",
+    "repo_url": "https://raw.githubusercontent.com/galipgokalp/tv-cloudstream/builds/repo.json",
+    "manifest_branch": "builds",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/galipgokalp/tv-cloudstream/builds/plugins.json",
+        "reachable": true,
+        "count": 2,
+        "updated_at": "2026-08-11T22:23:58Z",
+        "source_repository": "galipgokalp/tv-cloudstream",
+        "languages": {
+          "tr": 2
+        },
+        "turkish_language_count": 2
+      }
+    ],
+    "plugin_count": 2,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "galipgokalp/tv-cloudstream"
+    ],
+    "last_repo_push": "2026-10-03T05:11:08Z",
+    "last_manifest_update": "2026-05-21T03:38:37Z",
+    "last_plugins_update": "2026-08-11T22:23:58Z",
+    "discovered_by": [
+      "repo-search:cloudstream Türkçe in:name,description",
+      "repo-search:cloudstream eklenti in:name,description"
+    ],
+    "checked_at": "2026-10-03T08:09:40Z",
+    "turkish": {
+      "is_turkish": true,
+      "score": 152,
+      "reasons": [
+        "plugins-language-tr:2",
+        "turkish-markers:belgesel,dizi,filmmakinesi,izle,sinema,turk,türk",
+        "turkish-search-hit"
+      ]
+    }
+  },
+  {
+    "name": "HR Cloudstream Repo v1",
+    "description": "HR Cloudstream eklenti deposu.",
+    "repository": "hrtestingx/hrcsrepo",
+    "repository_url": "https://github.com/hrtestingx/hrcsrepo",
+    "repo_url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepo/master/repo.json",
+    "manifest_branch": "master",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepo/refs/heads/builds/plugins.json",
+        "reachable": true,
+        "count": 2,
+        "updated_at": null,
+        "source_repository": "hrtestingx/hrcsrepo",
+        "languages": {
+          "tr": 2
+        },
+        "turkish_language_count": 2
+      }
+    ],
+    "plugin_count": 2,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "hrtestingx/hrcsrepo"
+    ],
+    "last_repo_push": "2026-10-01T22:40:49Z",
+    "last_manifest_update": "2026-10-01T19:57:57Z",
+    "last_plugins_update": null,
+    "discovered_by": [
+      "repo-search:cloudstream eklenti in:name,description"
+    ],
+    "checked_at": "2026-10-03T08:09:42Z",
+    "turkish": {
+      "is_turkish": true,
+      "score": 139,
+      "reasons": [
+        "plugins-language-tr:2",
+        "turkish-markers:dizi,eklenti,sinema,turk",
+        "turkish-search-hit"
+      ]
+    }
+  },
+  {
+    "name": "cstest",
+    "description": "CloudStream eklenti deposu.",
+    "repository": "ctnkyaumt/cstest",
+    "repository_url": "https://github.com/ctnkyaumt/cstest",
+    "repo_url": "https://raw.githubusercontent.com/ctnkyaumt/cstest/master/repo.json",
+    "manifest_branch": "master",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/ctnkyaumt/cstest/refs/heads/builds/plugins.json",
+        "reachable": true,
+        "count": 3,
+        "updated_at": null,
+        "source_repository": "ctnkyaumt/cstest",
+        "languages": {
+          "en": 1,
+          "tr": 2
+        },
+        "turkish_language_count": 2
+      }
+    ],
+    "plugin_count": 3,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "ctnkyaumt/cstest"
+    ],
+    "last_repo_push": "2026-10-02T19:30:50Z",
+    "last_manifest_update": "2026-07-12T10:02:33Z",
+    "last_plugins_update": null,
+    "discovered_by": [
+      "repo-search:cloudstream eklenti in:name,description"
+    ],
+    "checked_at": "2026-10-03T08:09:36Z",
+    "turkish": {
+      "is_turkish": true,
+      "score": 139,
+      "reasons": [
+        "plugins-language-tr:2",
+        "turkish-markers:dizi,eklenti,sinema,turk",
+        "turkish-search-hit"
+      ]
+    }
+  },
+  {
+    "name": "EmRe-35 Cloudstream Eklentileri",
+    "description": "Custom Cloudstream Provider Repository",
+    "repository": "EmRe-35/cloudstream-eklentim",
+    "repository_url": "https://github.com/EmRe-35/cloudstream-eklentim",
+    "repo_url": "https://raw.githubusercontent.com/EmRe-35/cloudstream-eklentim/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/EmRe-35/cloudstream-eklentim/builds/plugins.json",
+        "reachable": true,
+        "count": 2,
+        "updated_at": "2026-09-28T14:54:24Z",
+        "source_repository": "EmRe-35/cloudstream-eklentim",
+        "languages": {
+          "tr": 2
+        },
+        "turkish_language_count": 2
+      }
+    ],
+    "plugin_count": 2,
+    "status": "active",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": true,
+    "plugin_source_repositories": [
+      "EmRe-35/cloudstream-eklentim"
+    ],
+    "last_repo_push": "2026-09-28T15:09:55Z",
+    "last_manifest_update": "2026-09-22T04:54:31Z",
+    "last_plugins_update": "2026-09-28T14:54:24Z",
+    "discovered_by": [
+      "repo-search:cloudstream eklenti in:name,description"
+    ],
+    "checked_at": "2026-10-03T08:09:13Z",
+    "turkish": {
+      "is_turkish": true,
+      "score": 131,
+      "reasons": [
+        "plugins-language-tr:2",
+        "turkish-markers:dizi,eklenti,hdfilmcehennemi",
+        "turkish-search-hit"
+      ]
+    }
+  },
+  {
+    "name": "Türkçe Cloudstream Eklentileri",
+    "description": "DizibaL, Belgesel & Yaşam, Canlı TV ve daha fazlasını içeren Türkçe eklenti havuzu.",
+    "repository": "adilem/cloudstream-cagi-eklenti",
+    "repository_url": "https://github.com/adilem/cloudstream-cagi-eklenti",
+    "repo_url": "https://raw.githubusercontent.com/adilem/cloudstream-cagi-eklenti/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/caca1403/cloudstream-cagi-eklenti/main/plugins.json?v=1",
+        "reachable": false,
+        "count": 0,
+        "updated_at": null,
+        "languages": {},
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 0,
+    "status": "broken",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": false,
+    "plugin_source_repositories": [],
+    "last_repo_push": "2026-07-08T17:58:23Z",
+    "last_manifest_update": "2026-06-14T15:38:33Z",
+    "last_plugins_update": null,
+    "discovered_by": [
+      "repo-search:cloudstream eklenti in:name,description"
+    ],
+    "checked_at": "2026-10-03T08:09:30Z",
+    "turkish": {
+      "is_turkish": true,
+      "score": 77,
+      "reasons": [
+        "turkish-markers:belgesel,dizi,eklenti,türk",
+        "turkish-search-hit"
+      ]
+    }
+  },
+  {
+    "name": "Ahmet CloudStream Reposu",
+    "description": "Türkçe ve uluslararası içerikler için CloudStream eklenti havuzu",
+    "repository": "ahmetsefayuce71-hub/cloudstream",
+    "repository_url": "https://github.com/ahmetsefayuce71-hub/cloudstream",
+    "repo_url": "https://raw.githubusercontent.com/ahmetsefayuce71-hub/cloudstream/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/ahmet/cloudstream/builds/plugins.json",
+        "reachable": false,
+        "count": 0,
+        "updated_at": null,
+        "languages": {},
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 0,
+    "status": "broken",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": false,
+    "plugin_source_repositories": [],
+    "last_repo_push": "2026-08-22T17:38:10Z",
+    "last_manifest_update": "2026-08-22T17:30:39Z",
+    "last_plugins_update": null,
+    "discovered_by": [
+      "repo-search:cloudstream Türkçe in:name,description",
+      "repo-search:cloudstream eklenti in:name,description"
+    ],
+    "checked_at": "2026-10-03T08:09:31Z",
+    "turkish": {
+      "is_turkish": true,
+      "score": 61,
+      "reasons": [
+        "turkish-markers:eklenti,türk",
+        "turkish-search-hit"
+      ]
+    }
+  },
+  {
+    "name": "Mahmut CloudStream",
+    "description": "Mahmut'un CloudStream eklenti deposu",
+    "repository": "mahmutkacan/cloudstream-turk",
+    "repository_url": "https://github.com/mahmutkacan/cloudstream-turk",
+    "repo_url": "https://raw.githubusercontent.com/mahmutkacan/cloudstream-turk/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/mahmutkacan/cloudstream-turk/main/plugins.json",
+        "reachable": false,
+        "count": 0,
+        "updated_at": null,
+        "languages": {},
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 0,
+    "status": "broken",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": false,
+    "plugin_source_repositories": [],
+    "last_repo_push": "2026-09-07T20:39:15Z",
+    "last_manifest_update": "2026-09-07T20:39:14Z",
+    "last_plugins_update": null,
+    "discovered_by": [
+      "repo-search:cloudstream Türkçe in:name,description"
+    ],
+    "checked_at": "2026-10-03T08:09:46Z",
+    "turkish": {
+      "is_turkish": true,
+      "score": 61,
+      "reasons": [
+        "turkish-markers:eklenti,turk",
+        "turkish-search-hit"
+      ]
+    }
+  },
+  {
+    "name": "TR-Kaan Plugin Paketi",
+    "description": "Türkçe Dublaj, Altyazı, Dizi ve +18 içerikler",
+    "repository": "Kaann2567/trkaan-cs-plugin",
+    "repository_url": "https://github.com/Kaann2567/trkaan-cs-plugin",
+    "repo_url": "https://raw.githubusercontent.com/Kaann2567/trkaan-cs-plugin/main/repo.json",
+    "manifest_branch": "main",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "{'name': 'TR Film Sitesi', 'url': 'https://raw.githubusercontent.com/Kaan2567/trkaan-cs-plugin/main/plugins/film1/manifest.json'}",
+        "reachable": false,
+        "count": 0,
+        "updated_at": null,
+        "languages": {},
+        "turkish_language_count": 0
+      },
+      {
+        "url": "{'name': 'TR Dizi Sitesi', 'url': 'https://raw.githubusercontent.com/Kaan2567/trkaan-cs-plugin/main/plugins/dizi1/manifest.json'}",
+        "reachable": false,
+        "count": 0,
+        "updated_at": null,
+        "languages": {},
+        "turkish_language_count": 0
+      },
+      {
+        "url": "{'name': 'TR +18 Sitesi', 'url': 'https://raw.githubusercontent.com/Kaan2567/trkaan-cs-plugin/main/plugins/adult1/manifest.json'}",
+        "reachable": false,
+        "count": 0,
+        "updated_at": null,
+        "languages": {},
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 0,
+    "status": "broken",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": false,
+    "plugin_source_repositories": [],
+    "last_repo_push": "2025-06-10T13:25:15Z",
+    "last_manifest_update": "2025-06-10T13:25:14Z",
+    "last_plugins_update": null,
+    "discovered_by": [
+      "repo-search:cloudstream Türkçe in:name,description"
+    ],
+    "checked_at": "2026-10-03T08:09:15Z",
+    "turkish": {
+      "is_turkish": true,
+      "score": 61,
+      "reasons": [
+        "turkish-markers:dizi,türk",
+        "turkish-search-hit"
+      ]
+    }
+  },
+  {
+    "name": "TMDB CloudStream Repository | @ggottes",
+    "description": "CloudStream için TMDB kaynaklı özel eklenti.",
+    "repository": "ggottes/cs-GOTTES",
+    "repository_url": "https://github.com/ggottes/cs-GOTTES",
+    "repo_url": "https://raw.githubusercontent.com/ggottes/cs-GOTTES/master/repo.json",
+    "manifest_branch": "master",
+    "manifest_version": 1,
+    "plugin_lists": [
+      {
+        "url": "https://raw.githubusercontent.com/ggottes/cs-GOTTES/builds/plugins.json",
+        "reachable": false,
+        "count": 0,
+        "updated_at": null,
+        "languages": {},
+        "turkish_language_count": 0
+      }
+    ],
+    "plugin_count": 0,
+    "status": "broken",
+    "archived": false,
+    "fork": false,
+    "parent": null,
+    "self_contained": false,
+    "plugin_source_repositories": [],
+    "last_repo_push": "2025-10-22T22:41:55Z",
+    "last_manifest_update": "2025-10-22T22:11:58Z",
+    "last_plugins_update": null,
+    "discovered_by": [
+      "repo-search:cloudstream eklenti in:name,description"
+    ],
+    "checked_at": "2026-10-03T08:09:41Z",
+    "turkish": {
+      "is_turkish": true,
+      "score": 53,
+      "reasons": [
+        "turkish-markers:eklenti",
+        "turkish-search-hit"
+      ]
+    }
+  }
+]
