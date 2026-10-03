@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 import re
@@ -544,6 +545,111 @@ def fetch_plugin_entries(url: str):
     return []
 
 
+PLUGIN_MAX_BYTES = 25 * 1024 * 1024
+
+
+def plugin_variant_rank(plugin: dict, repo_item: dict, seed_repos: set[str]):
+    version = plugin.get("version")
+    try:
+        version_num = int(version)
+    except (TypeError, ValueError):
+        version_num = -1
+    trusted = 1 if repo_item.get("repository") in seed_repos else 0
+    fresh = parse_iso(repo_item.get("last_plugins_update")).timestamp()
+    tr_score = int(repo_item.get("turkish", {}).get("score") or 0)
+    return (version_num, fresh, trusted, tr_score)
+
+
+def validate_plugin_file(plugin: dict, cache: dict[str, dict]):
+    status = plugin.get("status")
+    try:
+        status_num = int(status)
+    except (TypeError, ValueError):
+        return {"ok": False, "reason": "invalid-status"}
+    if status_num == 0:
+        return {"ok": False, "reason": "status-down"}
+
+    url = plugin.get("url")
+    if not isinstance(url, str) or not url.startswith(("https://", "http://")):
+        return {"ok": False, "reason": "invalid-url"}
+
+    expected_hash = plugin.get("fileHash")
+    cache_key = f"{url}|{expected_hash or ''}"
+    if cache_key in cache:
+        return cache[cache_key]
+
+    # Never send GITHUB_TOKEN to third-party plugin hosts.
+    headers = {
+        "User-Agent": "csrepo-plugin-health-check",
+        "Accept": "application/octet-stream,*/*",
+    }
+
+    try:
+        with requests.get(url, headers=headers, stream=True, timeout=(10, 35), allow_redirects=True) as r:
+            if r.status_code != 200:
+                result = {"ok": False, "reason": f"http-{r.status_code}"}
+                cache[cache_key] = result
+                return result
+
+            content_length = r.headers.get("Content-Length")
+            if content_length:
+                try:
+                    if int(content_length) <= 0:
+                        result = {"ok": False, "reason": "empty-file"}
+                        cache[cache_key] = result
+                        return result
+                    if int(content_length) > PLUGIN_MAX_BYTES:
+                        result = {"ok": False, "reason": "file-too-large"}
+                        cache[cache_key] = result
+                        return result
+                except ValueError:
+                    pass
+
+            digest = hashlib.sha256()
+            size = 0
+            for chunk in r.iter_content(chunk_size=128 * 1024):
+                if not chunk:
+                    continue
+                size += len(chunk)
+                if size > PLUGIN_MAX_BYTES:
+                    result = {"ok": False, "reason": "file-too-large"}
+                    cache[cache_key] = result
+                    return result
+                digest.update(chunk)
+
+            if size == 0:
+                result = {"ok": False, "reason": "empty-file"}
+                cache[cache_key] = result
+                return result
+
+            actual_hash = "sha256-" + digest.hexdigest()
+            if isinstance(expected_hash, str) and expected_hash.startswith("sha256-"):
+                if actual_hash.lower() != expected_hash.strip().lower():
+                    result = {
+                        "ok": False,
+                        "reason": "hash-mismatch",
+                        "size": size,
+                        "expected_hash": expected_hash,
+                        "actual_hash": actual_hash,
+                    }
+                    cache[cache_key] = result
+                    return result
+
+            result = {
+                "ok": True,
+                "reason": "ok",
+                "size": size,
+                "hash_checked": bool(isinstance(expected_hash, str) and expected_hash.startswith("sha256-")),
+                "actual_hash": actual_hash,
+            }
+            cache[cache_key] = result
+            return result
+    except requests.RequestException as e:
+        result = {"ok": False, "reason": "request-error", "error": type(e).__name__}
+        cache[cache_key] = result
+        return result
+
+
 def build_cloudstream_bundle(app_ready: list[dict], seed_repos: set[str]):
     candidates: dict[str, list[tuple[dict, dict]]] = {}
 
@@ -565,9 +671,6 @@ def build_cloudstream_bundle(app_ready: list[dict], seed_repos: set[str]):
 
             for plugin in entries:
                 lang = normalize_language(plugin.get("language"))
-                # Normal rule: only Turkish plugins. If the plugin has no language
-                # metadata, keep it only when its source repo is explicitly Turkish
-                # or trusted.
                 if lang not in TR_LANGUAGE_VALUES:
                     if lang is not None or not (explicit_repo or trusted_repo):
                         continue
@@ -581,36 +684,69 @@ def build_cloudstream_bundle(app_ready: list[dict], seed_repos: set[str]):
                     continue
                 candidates.setdefault(key, []).append((plugin, repo_item))
 
-    merged = []
+    published = []
+    health_rows = []
+    file_cache: dict[str, dict] = {}
+    rejection_counts = Counter()
+    fallback_count = 0
+
     for key, variants in candidates.items():
-        def rank(pair):
-            plugin, repo_item = pair
-            version = plugin.get("version")
-            try:
-                version_num = int(version)
-            except (TypeError, ValueError):
-                version_num = -1
-            trusted = 1 if repo_item.get("repository") in seed_repos else 0
-            fresh = parse_iso(repo_item.get("last_plugins_update")).timestamp()
-            tr_score = int(repo_item.get("turkish", {}).get("score") or 0)
-            return (version_num, fresh, trusted, tr_score)
+        ranked = sorted(
+            variants,
+            key=lambda pair: plugin_variant_rank(pair[0], pair[1], seed_repos),
+            reverse=True,
+        )
 
-        plugin, source_repo = max(variants, key=rank)
-        out = dict(plugin)
-        out["_csrepoSource"] = source_repo.get("repository")
-        merged.append(out)
+        selected = None
+        attempts = []
+        for variant_index, (plugin, source_repo) in enumerate(ranked):
+            check = validate_plugin_file(plugin, file_cache)
+            attempts.append({
+                "repository": source_repo.get("repository"),
+                "url": plugin.get("url"),
+                "version": plugin.get("version"),
+                "result": check.get("reason"),
+            })
+            if check.get("ok"):
+                selected = (plugin, source_repo, check, variant_index)
+                break
+            rejection_counts[check.get("reason") or "unknown"] += 1
 
-    merged.sort(key=lambda x: (
+        if not selected:
+            health_rows.append({
+                "internal_name": key,
+                "status": "rejected",
+                "attempts": attempts,
+            })
+            continue
+
+        plugin, source_repo, check, variant_index = selected
+        if variant_index > 0:
+            fallback_count += 1
+
+        clean = dict(plugin)
+        published.append(clean)
+        health_rows.append({
+            "internal_name": key,
+            "name": plugin.get("name"),
+            "status": "healthy",
+            "repository": source_repo.get("repository"),
+            "url": plugin.get("url"),
+            "version": plugin.get("version"),
+            "size": check.get("size"),
+            "hash_checked": check.get("hash_checked", False),
+            "fallback_used": variant_index > 0,
+            "attempts": attempts if variant_index > 0 else None,
+        })
+
+    published.sort(key=lambda x: (
         str(x.get("name") or x.get("internalName") or "").lower(),
         str(x.get("internalName") or "").lower(),
     ))
-
-    # Remove our audit-only field before publishing to CloudStream.
-    published = []
-    for plugin in merged:
-        clean = dict(plugin)
-        clean.pop("_csrepoSource", None)
-        published.append(clean)
+    health_rows.sort(key=lambda x: (
+        x.get("status") != "healthy",
+        str(x.get("name") or x.get("internal_name") or "").lower(),
+    ))
 
     repo_manifest = {
         "name": "Emir CloudStream",
@@ -621,9 +757,28 @@ def build_cloudstream_bundle(app_ready: list[dict], seed_repos: set[str]):
         ],
     }
 
+    health = {
+        "generated_at": now_iso(),
+        "candidate_plugin_count": len(candidates),
+        "healthy_plugin_count": len(published),
+        "rejected_plugin_count": len(candidates) - len(published),
+        "fallback_used_count": fallback_count,
+        "rejection_attempt_counts": dict(sorted(rejection_counts.items())),
+        "checks": {
+            "status_zero_rejected": True,
+            "http_200_required": True,
+            "non_empty_required": True,
+            "sha256_verified_when_provided": True,
+            "max_file_bytes": PLUGIN_MAX_BYTES,
+            "executes_plugin_code": False,
+        },
+        "plugins": health_rows,
+    }
+
     save_json(ROOT / "plugins.json", published)
     save_json(ROOT / "repo.json", repo_manifest)
-    return len(published)
+    save_json(DATA / "plugin-health.json", health)
+    return len(published), health["rejected_plugin_count"], fallback_count
 
 
 def cloudstream_install_url(url: str) -> str:
@@ -790,7 +945,7 @@ def main():
     # Application feed: only active, non-empty and reachable Turkish repos.
     app_ready = [x for x in turkish if x.get("status") == "active" and (x.get("plugin_count") or 0) > 0]
 
-    published_plugin_count = build_cloudstream_bundle(app_ready, seed_repos)
+    published_plugin_count, rejected_plugin_count, plugin_fallback_count = build_cloudstream_bundle(app_ready, seed_repos)
     catalog_repo_count = build_repo_catalog(app_ready, published_plugin_count, seed_repos)
 
     changes = summarize_changes(old_tr, app_ready)
@@ -805,6 +960,8 @@ def main():
         "turkish_count": len(turkish),
         "app_ready_count": len(app_ready),
         "published_plugin_count": published_plugin_count,
+        "rejected_plugin_count": rejected_plugin_count,
+        "plugin_fallback_count": plugin_fallback_count,
         "catalog_repo_count": catalog_repo_count,
         "global_count": len(global_other),
         "changes": changes,
@@ -814,6 +971,8 @@ def main():
         f"[done] verified={len(turkish) + len(global_other)} "
         f"turkish={len(turkish)} app_ready={len(app_ready)} "
         f"published_plugins={published_plugin_count} "
+        f"rejected_plugins={rejected_plugin_count} "
+        f"fallbacks={plugin_fallback_count} "
         f"catalog_repos={catalog_repo_count} "
         f"global={len(global_other)} changes={len(changes)}"
     )
