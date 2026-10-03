@@ -103,10 +103,45 @@ def save_json(path: Path, value):
 
 def discover_candidates() -> dict[str, set[str]]:
     found: dict[str, set[str]] = {}
+    self_repository = os.getenv("GITHUB_REPOSITORY", "kodlama155-ctrl/csrepo")
 
     def add(full_name: str, source: str):
-        if "/" in full_name:
+        if "/" in full_name and full_name != self_repository:
             found.setdefault(full_name, set()).add(source)
+
+    def looks_like_repo_manifest(raw: str | None) -> bool:
+        if not raw:
+            return False
+        try:
+            payload = json.loads(raw)
+        except json.JSONDecodeError:
+            return False
+        return (
+            isinstance(payload, dict)
+            and isinstance(payload.get("name"), str)
+            and bool(payload.get("name"))
+            and isinstance(payload.get("pluginLists"), list)
+            and bool(payload.get("pluginLists"))
+        )
+
+    def probe_manifest(full_name: str, default_branch: str | None) -> bool:
+        owner, repo_name = full_name.split("/", 1)
+        branches = []
+        for branch in (default_branch, "builds", "main", "master"):
+            if branch and branch not in branches:
+                branches.append(branch)
+        for branch in branches:
+            url = (
+                f"https://raw.githubusercontent.com/{owner}/{repo_name}/"
+                f"{quote(branch, safe='')}/repo.json"
+            )
+            try:
+                raw, _ = text_get(url)
+            except requests.RequestException:
+                continue
+            if looks_like_repo_manifest(raw):
+                return True
+        return False
 
     seeds = load_json(DATA / "seeds.json", [])
     for item in seeds:
@@ -135,9 +170,26 @@ def discover_candidates() -> dict[str, set[str]]:
         except requests.RequestException as e:
             print(f"[warn] code search failed: {query}: {e}")
 
-    # Expand owners of trusted Turkish seeds so sibling projects are not missed.
-    seed_owners = sorted({x["repository"].split("/", 1)[0] for x in seeds})
-    for owner in seed_owners:
+    # Search sibling repositories without trusting their names/descriptions.
+    # Owners are learned from seeds and previously verified Turkish repos.
+    known_repositories = {
+        x.get("repository")
+        for x in seeds
+        if isinstance(x, dict) and isinstance(x.get("repository"), str)
+    }
+    for data_file in ("repos.json", "turkish_all.json"):
+        for item in load_json(DATA / data_file, []):
+            full_name = item.get("repository") if isinstance(item, dict) else None
+            if isinstance(full_name, str) and "/" in full_name:
+                known_repositories.add(full_name)
+
+    known_owners = sorted({
+        full_name.split("/", 1)[0]
+        for full_name in known_repositories
+        if isinstance(full_name, str) and "/" in full_name
+    })
+
+    for owner in known_owners:
         try:
             page = 1
             while page <= 3:
@@ -147,11 +199,24 @@ def discover_candidates() -> dict[str, set[str]]:
                 if not repos:
                     break
                 for item in repos:
+                    full_name = item.get("full_name")
+                    if not isinstance(full_name, str) or full_name == self_repository:
+                        continue
+
                     name = item.get("name", "")
                     desc = item.get("description") or ""
                     haystack = f"{name} {desc}".lower()
+
+                    # Fast path for obviously named CloudStream projects.
                     if any(k in haystack for k in ("cloudstream", "wio", "kekik", "cs-plugin", "csrepo")):
-                        add(item["full_name"], f"owner-expand:{owner}")
+                        add(full_name, f"owner-expand:{owner}")
+                        continue
+
+                    # Generic names such as "emir" are detected by their actual
+                    # repo.json structure instead of repository metadata.
+                    if full_name not in found and probe_manifest(full_name, item.get("default_branch")):
+                        add(full_name, f"owner-manifest:{owner}")
+
                 if len(repos) < 100:
                     break
                 page += 1
