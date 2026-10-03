@@ -4,7 +4,7 @@
 
 ## Hepsi Bir Arada
 
-- [EmirTV — Hepsi Bir Arada](cloudstreamrepo://raw.githubusercontent.com/kodlama155-ctrl/csrepo/main/repo.json) — 250 tekilleştirilmiş eklenti
+- [EmirTV — Hepsi Bir Arada](cloudstreamrepo://raw.githubusercontent.com/kodlama155-ctrl/csrepo/main/repo.json) — 282 tekilleştirilmiş eklenti
 
 ## Tek Tek Depolar
 
@@ -26,30 +26,60 @@
 - [Emir Repository](cloudstreamrepo://raw.githubusercontent.com/kodlama155-ctrl/emir/main/repo.json) — 1 eklenti — ana kaynak
 - [gsrepo](cloudstreamrepo://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/repo.json) — 61 eklenti
 - [WioSinema](cloudstreamrepo://raw.githubusercontent.com/pisovo-5031/WioSinema/builds/repo.json) — 37 eklenti
-- [EmirTV](cloudstreamrepo://raw.githubusercontent.com/kodlama155-ctrl/csrepo/main/repo.json) — 249 eklenti
+- [TurkSinema](cloudstreamrepo://raw.githubusercontent.com/arcilingir/TurkSinema/main/repo.json) — 67 eklenti — fork
+- [TurkSinema](cloudstreamrepo://raw.githubusercontent.com/pisovo-5031/TurkSinema/main/repo.json) — 67 eklenti
 - [Turkish Providers Repository | @KekikAkademi](cloudstreamrepo://raw.githubusercontent.com/21nek/nektv/main/repo.json) — 43 eklenti
+- [Turkish Providers Repository | @KekikAkademi](cloudstreamrepo://raw.githubusercontent.com/aliredpr3/KekikCloud-CS/master/repo.json) — 43 eklenti — fork
+- [Turkish Providers Repository | @KekikAkademi](cloudstreamrepo://raw.githubusercontent.com/burak-ayd/cs-Kekik-old/master/repo.json) — 43 eklenti — fork
+- [Turkish Providers Repository | @KekikAkademi](cloudstreamrepo://raw.githubusercontent.com/fsamet/cs-Kekik/master/repo.json) — 43 eklenti — fork
+- [Turkish Providers Repository | @feroxxcs3](cloudstreamrepo://raw.githubusercontent.com/MakotoTokioki/Kekik-cloudstream/builds/repo.json) — 37 eklenti — fork
 - [Turkish Providers Repository | @feroxxcs3](cloudstreamrepo://raw.githubusercontent.com/burak-ayd/cloudstream-repo/builds/repo.json) — 37 eklenti
 - [Turkish Providers Repository | @KekikAkademi](cloudstreamrepo://raw.githubusercontent.com/Hakanapp1934/hdfilmpro/main/repo.json) — 41 eklenti
+- [Turkish Providers Repository | @KekikAkademi](cloudstreamrepo://raw.githubusercontent.com/ahmetsefayuce71-hub/Kekik-cloudstream/master/repo.json) — 41 eklenti — fork
+- [Turkish Providers Repository | @KekikAkademi](cloudstreamrepo://raw.githubusercontent.com/apkbir/Kekik-cloudstream/master/repo.json) — 41 eklenti — fork
+- [Turkish Providers Repository | @KekikAkademi](cloudstreamrepo://raw.githubusercontent.com/eycommas/Kekik-cloudstream-b/master/repo.json) — 41 eklenti — fork
+- [Turkish Providers Repository | @KekikAkademi](cloudstreamrepo://raw.githubusercontent.com/neoser1984/neowatch/master/repo.json) — 41 eklenti — fork
 - [Makoto'nun Cloudstream Reposu](cloudstreamrepo://raw.githubusercontent.com/MakotoTokioki/Cloudstream-Turkce-Eklentiler/main/repo.json) — 21 eklenti
 - [Makoto'nun Cloudstream Reposu](cloudstreamrepo://raw.githubusercontent.com/tecobaba/Cloudstream-Turkce-Eklentiler/main/repo.json) — 21 eklenti
 - [CS Türkçe içerikli eklenti havuzu | @KekikMOD](cloudstreamrepo://raw.githubusercontent.com/eycommas/kekikmod/main/repo.json) — 26 eklenti
 - [ailantus](cloudstreamrepo://raw.githubusercontent.com/ailantus/Kekik/master/repo.json) — 21 eklenti
+- [Makoto'nun Cloudstream Reposu](cloudstreamrepo://raw.githubusercontent.com/fsamet/Cloudstream-Turkce-Eklentiler/main/repo.json) — 21 eklenti — fork
 - [Aybuz](cloudstreamrepo://raw.githubusercontent.com/CennetCehennem/Aybuz/main/repo.json) — 17 eklenti
+- [Aybuz](cloudstreamrepo://raw.githubusercontent.com/fsamet/Aybuz/main/repo.json) — 17 eklenti — fork
+- [TurkSpor](cloudstreamrepo://raw.githubusercontent.com/arcilingir/TurkSpor/main/repo.json) — 32 eklenti — fork
+- [TurkSpor](cloudstreamrepo://raw.githubusercontent.com/pisovo-5031/TurkSpor/main/repo.json) — 32 eklenti
+- [Turkish Providers Repository | @nane](cloudstreamrepo://raw.githubusercontent.com/ailantus/nane/master/repo.json) — 84 eklenti — fork
 - [DiziFilm](cloudstreamrepo://raw.githubusercontent.com/arcilingir/Dizi_Film/builds/repo.json) — 52 eklenti
 - [BronzeCloud](cloudstreamrepo://raw.githubusercontent.com/dr-octagon/BronzeCloud/builds/repo.json) — 44 eklenti
+- [arcilingir](cloudstreamrepo://raw.githubusercontent.com/arcilingir/Dizi_Film_2/master/repo.json) — 41 eklenti
+- [arcilingir](cloudstreamrepo://raw.githubusercontent.com/arcilingir/nik-cloudstream/master/repo.json) — 41 eklenti — fork
 - [NeO Eklenti Deposu](cloudstreamrepo://raw.githubusercontent.com/neoser1984/cloudstream-extensions/builds/repo.json) — 31 eklenti
+- [Test Deposu](cloudstreamrepo://raw.githubusercontent.com/Wiojelt/test/builds/repo.json) — 12 eklenti
+- [CloudStream TR](cloudstreamrepo://raw.githubusercontent.com/arcilingir/CloudStreamHub/main/repo.json) — 24 eklenti — fork
 - [Makoto'nun Cloudstream Reposu](cloudstreamrepo://raw.githubusercontent.com/Sertel392/Makotogecici/main/repo.json) — 18 eklenti
+- [Makoto'nun Cloudstream Reposu](cloudstreamrepo://raw.githubusercontent.com/pisovo-5031/Makotogecici/main/repo.json) — 18 eklenti — fork
 - [Türkçe Stream Eklentileri](cloudstreamrepo://raw.githubusercontent.com/asistan-emrah/turkce-cloudstream/builds/repo.json) — 1 eklenti
 - [blackhope01](cloudstreamrepo://raw.githubusercontent.com/blackhope01/cloudstream-plugins/main/repo.json) — 13 eklenti
+- [Kraptor’s Turkish Repo | @kraptor123](cloudstreamrepo://raw.githubusercontent.com/pisovo-5031/cs-kraptor/builds/repo.json) — 1 eklenti — fork
 - [Turkish Providers Repository |](cloudstreamrepo://raw.githubusercontent.com/apkbir/test/main/repo.json) — 10 eklenti
 - [Galip TV](cloudstreamrepo://raw.githubusercontent.com/galipgokalp/tv-cloudstream/builds/repo.json) — 2 eklenti
+- [Latte - Sinetech.TR](cloudstreamrepo://raw.githubusercontent.com/CennetCehennem/Sinetech/main/repo.json) — 12 eklenti — fork
 - [Latte - Sinetech.TR](cloudstreamrepo://raw.githubusercontent.com/GitLatte/Sinetech/main/repo.json) — 12 eklenti
 - [Latte - Sinetech.TR](cloudstreamrepo://raw.githubusercontent.com/aliredpr3/Sinetech-Latte/main/repo.json) — 12 eklenti
+- [Latte - Sinetech.TR](cloudstreamrepo://raw.githubusercontent.com/cugucugu/Sinetech/main/repo.json) — 12 eklenti — fork
+- [Latte - Sinetech.TR](cloudstreamrepo://raw.githubusercontent.com/cugucugu/Sinetech-Latte/main/repo.json) — 12 eklenti — fork
 - [WioCinema](cloudstreamrepo://raw.githubusercontent.com/Wiojelt/WioCinema/builds/repo.json) — 11 eklenti
 - [frukon](cloudstreamrepo://raw.githubusercontent.com/faruktunc/frukon/builds/repo.json) — 5 eklenti
+- [WioSpor](cloudstreamrepo://raw.githubusercontent.com/arcilingir/WioSpor/main/repo.json) — 26 eklenti — fork
 - [BerkStream](cloudstreamrepo://raw.githubusercontent.com/berkdemir18/BerkStream-Hub/builds/repo.json) — 1 eklenti
+- [HR Cloudstream Repo Full](cloudstreamrepo://raw.githubusercontent.com/hrtestingx/hrcsrepofull/master/repo.json) — 97 eklenti
+- [Sessiz !!!](cloudstreamrepo://raw.githubusercontent.com/Sertel392/gencler/master/repo.json) — 74 eklenti — fork
+- [Sessiz !!!](cloudstreamrepo://raw.githubusercontent.com/adilem/MyTV/master/repo.json) — 74 eklenti — fork
 - [Safarxe CloudStream](cloudstreamrepo://raw.githubusercontent.com/safarxe/CloudStream/builds/repo.json) — 52 eklenti
+- [Kraptor'un CloudStream Reposu | @kraptor123](cloudstreamrepo://raw.githubusercontent.com/adilem/cs-kraptor/master/repo.json) — 67 eklenti — fork
 - [Kraptor'un CloudStream Reposu | @kraptor123](cloudstreamrepo://raw.githubusercontent.com/aytzey/cs-kraptor/master/repo.json) — 67 eklenti
+- [Kraptor'un CloudStream Reposu | @kraptor123](cloudstreamrepo://raw.githubusercontent.com/qera18/cs-kraptor/master/repo.json) — 67 eklenti — fork
+- [WioSpor](cloudstreamrepo://raw.githubusercontent.com/pisovo-5031/WioSpor/main/repo.json) — 2 eklenti
 - [SALOORepo](cloudstreamrepo://raw.githubusercontent.com/Saloo1575/SalooRepo/builds/repo.json) — 7 eklenti
 - [mixue](cloudstreamrepo://raw.githubusercontent.com/cugucugu/mixue/builds/repo.json) — 7 eklenti
 - [cstest](cloudstreamrepo://raw.githubusercontent.com/ctnkyaumt/cstest/master/repo.json) — 3 eklenti
@@ -58,3 +88,7 @@
 - [Türkiye Türkçe Canlı TV](cloudstreamrepo://raw.githubusercontent.com/Eikosa/tv/builds/repo.json) — 1 eklenti
 - [cloudstream-repo](cloudstreamrepo://raw.githubusercontent.com/qera18/cloudstream-repo/builds/repo.json) — 1 eklenti
 - [Yunus60 Repository](cloudstreamrepo://raw.githubusercontent.com/yunus60/cloudstream-providers/main/repo.json) — 1 eklenti
+- [NediyoOluuum](cloudstreamrepo://raw.githubusercontent.com/CennetCehennem/Xrepo/main/repo.json) — 4 eklenti — fork
+- [CloudStream Sync Repository](cloudstreamrepo://raw.githubusercontent.com/burak-ayd/cloudstream-sync/main/repo.json) — 1 eklenti
+- [CloudSync Repository](cloudstreamrepo://raw.githubusercontent.com/burak-ayd/CloudSync/main/repo.json) — 1 eklenti
+- [Manitux Plugin Repository](cloudstreamrepo://raw.githubusercontent.com/manitux-app/manitux-plugins/main/repo.json) — 2 eklenti
