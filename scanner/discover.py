@@ -121,19 +121,21 @@ def extract_short_addresses(text: str) -> list[str]:
     found = []
 
     def add(value: str):
-        value = value.strip().strip("\`*_.,;:()[]{}<>")
+        value = value.strip().strip(chr(96) + "*_.,;:()[]{}<>")
         if value and value not in found:
             found.append(value)
 
-    for value in re.findall(r"https?://(?:www\\.)?py\\.md/[A-Za-z0-9._~-]+", text, flags=re.I):
+    for value in re.findall(r"https?://(?:www\.)?py\.md/[A-Za-z0-9._~-]+", text, flags=re.I):
         add(value)
-    for value in re.findall(r"https?://(?:www\\.)?tinyurl\\.com/[A-Za-z0-9._~/?=&%-]+", text, flags=re.I):
+    for value in re.findall(r"https?://(?:www\.)?tinyurl\.com/[A-Za-z0-9._~/?=&%-]+", text, flags=re.I):
         add(value)
-    for value in re.findall(r"(?<![\\w])![A-Za-z0-9][A-Za-z0-9_-]{1,40}", text):
+    for value in re.findall(r"(?<![\w])![A-Za-z0-9][A-Za-z0-9_-]{1,40}", text):
         add(value)
 
     label_re = re.compile(
-        r"(?im)^\\s*(?:[-*]\\s*)?(?:\\*\\*)?(?:k[ıi]sa\\s*kod|k[ıi]sakod)(?:\\*\\*)?\\s*:\\s*\`?(!?[A-Za-z0-9][A-Za-z0-9_-]{1,40})"
+        r"(?im)^\s*(?:[-*]\s*)?(?:\*\*)?(?:k[ıi]sa\s*kod|k[ıi]sakod)(?:\*\*)?\s*:\s*"
+        + chr(96)
+        + r"?(!?[A-Za-z0-9][A-Za-z0-9_-]{1,40})"
     )
     for match in label_re.finditer(text):
         add(match.group(1))
@@ -160,7 +162,7 @@ def readme_short_addresses(full_name: str, preferred_branches: list[str | None])
 
 
 def markdown_cell(value) -> str:
-    return str(value or "").replace("|", "\\|").replace("\\n", " ").strip()
+    return str(value or "").replace("|", "\\|").replace("\n", " ").strip()
 
 
 def build_main_readme(repos: list[dict], bundle: dict, generated_at: str):
@@ -173,8 +175,8 @@ def build_main_readme(repos: list[dict], bundle: dict, generated_at: str):
         "",
         "Bu tablo bot tarafından otomatik güncellenir. Kısa kod/adresler kaynak repoların README dosyalarından tespit edilir.",
         "",
-        f"**Son tarama:** \`{generated_at}\`  ",
-        f"**EmirTV birleşik depo:** \`https://py.md/emirtv\` · \`!emirtv\` · **{bundle.get('plugin_count', 0)} eklenti**",
+        f"**Son tarama:** <code>{generated_at}</code>  ",
+        f"**EmirTV birleşik depo:** <code>https://py.md/emirtv</code> · <code>!emirtv</code> · **{bundle.get('plugin_count', 0)} eklenti**",
         "",
         "| Repo | Durum | Eklenti | Kısa kod / adres | Uzun repo.json |",
         "|---|---|---:|---|---|",
@@ -185,9 +187,9 @@ def build_main_readme(repos: list[dict], bundle: dict, generated_at: str):
         repository_url = item.get("repository_url") or ""
         repo_label = f"[{repo_name}]({repository_url})" if repository_url else repo_name
         shorts = item.get("short_addresses") or []
-        short_text = "<br>".join(f"\`{markdown_cell(x)}\`" for x in shorts) if shorts else "—"
+        short_text = "<br>".join(f"<code>{markdown_cell(x)}</code>" for x in shorts) if shorts else "—"
         repo_url = markdown_cell(item.get("repo_url"))
-        long_text = f"\`{repo_url}\`" if repo_url else "—"
+        long_text = f"<code>{repo_url}</code>" if repo_url else "—"
         lines.append(
             f"| {repo_label} | {markdown_cell(item.get('status') or 'active')} | {int(item.get('plugin_count') or 0)} | {short_text} | {long_text} |"
         )
