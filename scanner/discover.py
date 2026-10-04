@@ -102,6 +102,121 @@ def save_json(path: Path, value):
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+IMPORTANT_REPOSITORIES = (
+    "Wiojelt/TurkSinema",
+    "Wiojelt/WioSinema",
+    "feroxx/Kekik-cloudstream",
+    "lepotane/MRC-builds",
+    "Wiojelt/TurkSpor",
+    "Emre-Kahveci/CloudStreamHub",
+    "manitux-app/cs-plugins",
+)
+
+README_AUTO_START = "<!-- AUTO_REPOS_START -->"
+README_AUTO_END = "<!-- AUTO_REPOS_END -->"
+
+
+def extract_short_addresses(text: str) -> list[str]:
+    """Extract source-published CloudStream short codes/URLs from README text."""
+    found = []
+
+    def add(value: str):
+        value = value.strip().strip("\`*_.,;:()[]{}<>")
+        if value and value not in found:
+            found.append(value)
+
+    for value in re.findall(r"https?://(?:www\\.)?py\\.md/[A-Za-z0-9._~-]+", text, flags=re.I):
+        add(value)
+    for value in re.findall(r"https?://(?:www\\.)?tinyurl\\.com/[A-Za-z0-9._~/?=&%-]+", text, flags=re.I):
+        add(value)
+    for value in re.findall(r"(?<![\\w])![A-Za-z0-9][A-Za-z0-9_-]{1,40}", text):
+        add(value)
+
+    label_re = re.compile(
+        r"(?im)^\\s*(?:[-*]\\s*)?(?:\\*\\*)?(?:k[ıi]sa\\s*kod|k[ıi]sakod)(?:\\*\\*)?\\s*:\\s*\`?(!?[A-Za-z0-9][A-Za-z0-9_-]{1,40})"
+    )
+    for match in label_re.finditer(text):
+        add(match.group(1))
+
+    return found
+
+
+def readme_short_addresses(full_name: str, preferred_branches: list[str | None]) -> list[str]:
+    owner, repo = full_name.split("/", 1)
+    branches = []
+    for branch in preferred_branches:
+        if branch and branch not in branches:
+            branches.append(branch)
+
+    for branch in branches:
+        url = f"https://raw.githubusercontent.com/{owner}/{repo}/{quote(branch, safe='')}/README.md"
+        try:
+            raw, _ = text_get(url)
+        except requests.RequestException:
+            raw = None
+        if raw:
+            return extract_short_addresses(raw)
+    return []
+
+
+def markdown_cell(value) -> str:
+    return str(value or "").replace("|", "\\|").replace("\\n", " ").strip()
+
+
+def build_main_readme(repos: list[dict], bundle: dict, generated_at: str):
+    by_repo = {item.get("repository"): item for item in repos}
+    featured = [by_repo[x] for x in IMPORTANT_REPOSITORIES if x in by_repo]
+
+    lines = [
+        README_AUTO_START,
+        "## 📦 Güncel Önemli Türkçe CloudStream Repoları",
+        "",
+        "Bu tablo bot tarafından otomatik güncellenir. Kısa kod/adresler kaynak repoların README dosyalarından tespit edilir.",
+        "",
+        f"**Son tarama:** \`{generated_at}\`  ",
+        f"**EmirTV birleşik depo:** \`https://py.md/emirtv\` · \`!emirtv\` · **{bundle.get('plugin_count', 0)} eklenti**",
+        "",
+        "| Repo | Durum | Eklenti | Kısa kod / adres | Uzun repo.json |",
+        "|---|---|---:|---|---|",
+    ]
+
+    for item in featured:
+        repo_name = markdown_cell(item.get("name") or item.get("repository"))
+        repository_url = item.get("repository_url") or ""
+        repo_label = f"[{repo_name}]({repository_url})" if repository_url else repo_name
+        shorts = item.get("short_addresses") or []
+        short_text = "<br>".join(f"\`{markdown_cell(x)}\`" for x in shorts) if shorts else "—"
+        repo_url = markdown_cell(item.get("repo_url"))
+        long_text = f"\`{repo_url}\`" if repo_url else "—"
+        lines.append(
+            f"| {repo_label} | {markdown_cell(item.get('status') or 'active')} | {int(item.get('plugin_count') or 0)} | {short_text} | {long_text} |"
+        )
+
+    lines.extend([
+        "",
+        "Tüm doğrulanmış depolar için [catalog.md](catalog.md) dosyasına bakın.",
+        README_AUTO_END,
+    ])
+    auto_block = "\n".join(lines)
+
+    readme_path = ROOT / "README.md"
+    try:
+        current = readme_path.read_text(encoding="utf-8")
+    except FileNotFoundError:
+        current = "# csrepo\nCloudStream repo discovery and validation bot\n\n## Kısa Repo Adresleri\n\n- https://py.md/emirtv\n- !emirtv\n"
+
+    if README_AUTO_START in current and README_AUTO_END in current:
+        before = current.split(README_AUTO_START, 1)[0].rstrip()
+        after = current.split(README_AUTO_END, 1)[1].lstrip()
+        new_text = before + "\n\n" + auto_block
+        if after:
+            new_text += "\n\n" + after
+    else:
+        new_text = current.rstrip() + "\n\n" + auto_block
+
+    readme_path.write_text(new_text.rstrip() + "\n", encoding="utf-8")
+
+
 def discover_candidates() -> dict[str, set[str]]:
     found: dict[str, set[str]] = {}
     self_repository = os.getenv("GITHUB_REPOSITORY", "kodlama155-ctrl/csrepo")
@@ -1000,6 +1115,7 @@ def build_repo_catalog(app_ready: list[dict], published_plugin_count: int, seed_
             "github_stars": item.get("github_stars") or 0,
             "github_forks": item.get("github_forks") or 0,
             "last_plugins_update": item.get("last_plugins_update"),
+            "short_addresses": item.get("short_addresses") or [],
             "fork": bool(item.get("fork")),
             "parent": item.get("parent"),
             "self_contained": bool(item.get("self_contained")),
@@ -1068,6 +1184,7 @@ def build_repo_catalog(app_ready: list[dict], published_plugin_count: int, seed_
         lines.append(f"- [{item['name']}]({item['install_url']}){suffix}")
     lines.append("")
     (ROOT / "catalog.md").write_text("\n".join(lines), encoding="utf-8")
+    build_main_readme(repos, bundle, generated_at)
 
     return len(repos)
 
@@ -1094,6 +1211,13 @@ def main():
 
             cls = turkish_classification(item, sources, seed_repos, seed_owners)
             item["turkish"] = cls
+            if cls["is_turkish"]:
+                item["short_addresses"] = readme_short_addresses(
+                    full_name,
+                    [item.get("manifest_branch"), "main", "master", "builds"],
+                )
+            else:
+                item["short_addresses"] = []
             ranking = calculate_repo_score(item)
             item["repo_score"] = ranking["score"]
             item["repo_score_details"] = ranking
