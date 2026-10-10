@@ -938,7 +938,7 @@ def query_ttnet_dns(host: str) -> list[str]:
                 q += bytes([len(part)]) + part.encode("ascii")
             q += b"\x00\x00\x01\x00\x01"
             s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-            s.settimeout(2.0)
+            s.settimeout(0.8)
             s.sendto(q, (dns_ip, 53))
             data, _ = s.recvfrom(512)
             s.close()
