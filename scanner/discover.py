@@ -883,7 +883,7 @@ IGNORED_PROVIDER_DOMAINS = {
     "xml.org", "apache.org", "kotlinlang.org", "googletagmanager.com",
     "facebook.com", "twitter.com", "instagram.com", "youtube.com", "example.com",
     "127.0.0.1", "localhost", "jikan.moe", "themoviedb.org", "tmdb.org",
-    "jsdelivr.net", "wikimedia.org"
+    "jsdelivr.net", "wikimedia.org", "invidious.io", "strawpoll.com", "f5.si", "wsrv.nl", "weserv.nl", "statically.io", "tinyurl.com", "bit.ly", "imgur.com"
 }
 
 
@@ -956,7 +956,7 @@ def is_provider_dead(urls: list[str], domain_cache: dict[str, tuple[bool, str]],
         }
         try:
             r = requests.get(u, headers=headers, timeout=4, allow_redirects=True)
-            if r.status_code in (404, 410, 502, 504):
+            if r.status_code in (404, 410, 451) or r.status_code >= 500:
                 entry = (True, f"{host}:http-{r.status_code}")
                 if lock:
                     with lock:
