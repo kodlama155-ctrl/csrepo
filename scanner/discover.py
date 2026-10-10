@@ -905,6 +905,50 @@ def extract_provider_urls(dex_bytes: bytes, plugin_name: str) -> list[str]:
     return matched if matched else list(cleaned)[:3]
 
 
+import struct
+
+
+def query_ttnet_dns(host: str) -> list[str]:
+    """Query Türk Telekom DNS resolvers directly to catch BTK domain sinkholes globally."""
+    ips = []
+    for dns_ip in ("195.175.39.39", "195.175.39.40"):
+        try:
+            q = b"\xaa\xaa\x01\x00\x00\x01\x00\x00\x00\x00\x00\x00"
+            for part in host.split("."):
+                if not part:
+                    continue
+                q += bytes([len(part)]) + part.encode("ascii")
+            q += b"\x00\x00\x01\x00\x01"
+            s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+            s.settimeout(2.0)
+            s.sendto(q, (dns_ip, 53))
+            data, _ = s.recvfrom(512)
+            s.close()
+            idx = 12
+            while idx < len(data) and data[idx] != 0:
+                idx += data[idx] + 1
+            idx += 5
+            while idx < len(data):
+                if data[idx] & 0xc0 == 0xc0:
+                    idx += 2
+                else:
+                    while idx < len(data) and data[idx] != 0:
+                        idx += data[idx] + 1
+                    idx += 1
+                if idx + 10 > len(data):
+                    break
+                rtype, rclass, ttl, rdlen = struct.unpack(">HHIH", data[idx:idx+10])
+                idx += 10
+                if rtype == 1 and rdlen == 4 and idx + 4 <= len(data):
+                    ips.append(socket.inet_ntoa(data[idx:idx+4]))
+                idx += rdlen
+            if ips:
+                break
+        except Exception:
+            continue
+    return ips
+
+
 def is_provider_dead(urls: list[str], domain_cache: dict[str, tuple[bool, str]], lock: threading.Lock | None = None) -> tuple[bool, str]:
     if not urls:
         return False, "no-urls"
@@ -929,9 +973,30 @@ def is_provider_dead(urls: list[str], domain_cache: dict[str, tuple[bool, str]],
             reasons.append(reason)
             continue
 
+        # 1. Query Türk Telekom DNS directly over UDP (catches BTK sinkholes even on GitHub Actions)
+        try:
+            tt_ips = query_ttnet_dns(host)
+            is_btk = False
+            for tip in tt_ips:
+                if tip == "195.175.254.2" or tip.startswith("195.175.254.") or tip == "213.14.227.50" or tip.startswith("213.14.227."):
+                    entry = (True, f"{host}:btk-blocked-sinkhole:{tip}")
+                    if lock:
+                        with lock:
+                            domain_cache[host] = entry
+                    else:
+                        domain_cache[host] = entry
+                    reasons.append(entry[1])
+                    is_btk = True
+                    break
+            if is_btk:
+                continue
+        except Exception:
+            pass
+
+        # 2. Local DNS check
         try:
             resolved_ip = socket.gethostbyname(host)
-            if resolved_ip == "195.175.254.2" or resolved_ip.startswith("195.175.254."):
+            if resolved_ip == "195.175.254.2" or resolved_ip.startswith("195.175.254.") or resolved_ip == "213.14.227.50":
                 entry = (True, f"{host}:btk-blocked-sinkhole")
                 if lock:
                     with lock:
