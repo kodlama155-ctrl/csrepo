@@ -951,7 +951,7 @@ def is_provider_dead(urls: list[str], domain_cache: dict[str, tuple[bool, str]],
             continue
 
         headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 12; CloudStream/4.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
         }
         try:
@@ -967,6 +967,23 @@ def is_provider_dead(urls: list[str], domain_cache: dict[str, tuple[bool, str]],
                 continue
 
             body = r.text[:20000].lower()
+            error_markers = [
+                "500 | server error", "500 server error", "internal server error",
+                "siteye ulaşılamıyor", "siteye ulasilamiyor",
+                "error 520", "error 521", "error 522", "error 523", "error 524",
+                "web server is down", "error 1020", "access denied", "attention required! | cloudflare"
+            ]
+            found_err = next((m for m in error_markers if m in body), None)
+            if found_err:
+                entry = (True, f"{host}:error-page:{found_err}")
+                if lock:
+                    with lock:
+                        domain_cache[host] = entry
+                else:
+                    domain_cache[host] = entry
+                reasons.append(entry[1])
+                continue
+
             park_markers = [
                 "domain satılıktır", "domain satiliktir", "alan adı satılıktır", "satılık domain",
                 "domain for sale", "domain is for sale", "this domain is for sale",
