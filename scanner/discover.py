@@ -883,11 +883,42 @@ IGNORED_PROVIDER_DOMAINS = {
     "xml.org", "apache.org", "kotlinlang.org", "googletagmanager.com",
     "facebook.com", "twitter.com", "instagram.com", "youtube.com", "example.com",
     "127.0.0.1", "localhost", "jikan.moe", "themoviedb.org", "tmdb.org",
-    "jsdelivr.net", "wikimedia.org", "invidious.io", "strawpoll.com", "f5.si", "wsrv.nl", "weserv.nl", "statically.io", "tinyurl.com", "bit.ly", "imgur.com"
+    "jsdelivr.net", "wikimedia.org", "invidious.io", "strawpoll.com", "f5.si",
+    "wsrv.nl", "weserv.nl", "statically.io", "tinyurl.com", "bit.ly", "imgur.com",
+    "vidmoly.to", "vidmoly.net", "vidmoly.biz", "vidmoly.me", "fembed.com",
+    "mixdrop.co", "streamtape.com", "uqload.com", "filemoon.sx", "doodstream.com"
 }
 
 
-def extract_provider_urls(dex_bytes: bytes, plugin_name: str) -> list[str]:
+DYNAMIC_DOMAIN_LIST_CACHE: dict[str, dict[str, str]] = {}
+DYNAMIC_DOMAIN_LOCK = threading.Lock()
+
+
+def get_dynamic_domain_list(url: str) -> dict[str, str]:
+    with DYNAMIC_DOMAIN_LOCK:
+        if url in DYNAMIC_DOMAIN_LIST_CACHE:
+            return DYNAMIC_DOMAIN_LIST_CACHE[url]
+    mapping: dict[str, str] = {}
+    try:
+        r = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
+        if r.status_code == 200:
+            for line in r.text.splitlines():
+                line = line.strip().lstrip("|")
+                if ":" in line:
+                    k, v = line.split(":", 1)
+                    k_norm = re.sub(r"[^a-zA-Z0-9]", "", k.lower())
+                    v_clean = v.strip()
+                    if not v_clean.startswith("http"):
+                        v_clean = "https://" + v_clean.lstrip("/")
+                    mapping[k_norm] = v_clean
+    except Exception:
+        pass
+    with DYNAMIC_DOMAIN_LOCK:
+        DYNAMIC_DOMAIN_LIST_CACHE[url] = mapping
+    return mapping
+
+
+def extract_provider_urls(dex_bytes: bytes, plugin_name: str, internal_name: str = "", icon_url: str = "") -> tuple[list[str], bool]:
     raw_urls = re.findall(rb'https?://[a-zA-Z0-9\.\-_]+(?::\d+)?(?:/[a-zA-Z0-9\.\-_]*)*', dex_bytes)
     raw_domains = re.findall(rb'(?:[a-zA-Z0-9-]+\.)+(?:com|net|org|tv|me|pw|xyz|top|site|online|info|cc|to|is|io|fun|pro|club|live)', dex_bytes)
     cleaned = set()
@@ -912,6 +943,40 @@ def extract_provider_urls(dex_bytes: bytes, plugin_name: str) -> list[str]:
         except Exception:
             pass
 
+    # Inspect dynamic domain list files (e.g. eklenti_domainleri.txt)
+    dynamic_txt_matches = re.findall(rb'https?://[a-zA-Z0-9\.\-_/]+(?:domain[a-zA-Z0-9\.\-_/]*\.txt)', dex_bytes, re.IGNORECASE)
+    dynamic_txt_matches += re.findall(rb'https?://raw\.githubusercontent\.com/[a-zA-Z0-9\.\-_/]+\.txt', dex_bytes)
+
+    requires_dynamic = False
+    dynamic_found = False
+    for txt_b in set(dynamic_txt_matches):
+        txt_url = txt_b.decode("ascii", errors="ignore")
+        if "proxy" in txt_url.lower():
+            continue
+        mapping = get_dynamic_domain_list(txt_url)
+        if mapping:
+            requires_dynamic = True
+            norm_name = re.sub(r"[^a-zA-Z0-9]", "", plugin_name.lower())
+            norm_internal = re.sub(r"[^a-zA-Z0-9]", "", internal_name.lower())
+            target_domain = mapping.get(norm_name) or mapping.get(norm_internal)
+            if target_domain:
+                cleaned.add(target_domain)
+                dynamic_found = True
+
+    # If the plugin explicitly relies on a dynamic domain endpoint but has no configured entry and no fallback provider domain
+    dynamic_missing = bool(requires_dynamic and not dynamic_found and not cleaned)
+
+    # Optional fallback to iconUrl domain if candidate list is completely empty
+    if not cleaned and icon_url:
+        try:
+            parsed_icon = urlparse(icon_url)
+            icon_domain = parsed_icon.netloc.split(":")[0].lower()
+            if icon_domain and len(icon_domain) > 4 and "." in icon_domain:
+                if not any(icon_domain == ign or icon_domain.endswith("." + ign) for ign in IGNORED_PROVIDER_DOMAINS):
+                    cleaned.add("https://" + icon_domain)
+        except Exception:
+            pass
+
     # Exclude CDN/media/image subdomains if primary root domains exist
     primary_domains = [
         u for u in cleaned
@@ -920,7 +985,7 @@ def extract_provider_urls(dex_bytes: bytes, plugin_name: str) -> list[str]:
     candidates = primary_domains if primary_domains else list(cleaned)
     norm_name = re.sub(r"[^a-zA-Z0-9]", "", plugin_name.lower())
     matched = [u for u in candidates if norm_name and norm_name in u.lower()]
-    return matched if matched else candidates[:4]
+    return (matched if matched else candidates[:4]), dynamic_missing
 
 
 import struct
@@ -1235,7 +1300,23 @@ def validate_plugin_file(
 
                     if domain_cache is not None:
                         dex_bytes = z.read("classes.dex")
-                        candidate_urls = extract_provider_urls(dex_bytes, plugin.get("name") or "")
+                        candidate_urls, dynamic_missing = extract_provider_urls(
+                            dex_bytes,
+                            plugin.get("name") or "",
+                            plugin.get("internalName") or "",
+                            plugin.get("iconUrl") or "",
+                        )
+                        if dynamic_missing:
+                            result = {
+                                "ok": False,
+                                "reason": "provider-dead:dynamic-domain-missing",
+                                "dead_urls": [],
+                                "size": size,
+                                "actual_hash": actual_hash,
+                            }
+                            _put_cache(cache, cache_key, result, cache_lock)
+                            return result
+
                         dead, dead_reason = is_provider_dead(candidate_urls, domain_cache, domain_lock)
                         if dead:
                             result = {
