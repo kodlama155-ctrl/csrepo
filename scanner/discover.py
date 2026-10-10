@@ -930,7 +930,16 @@ def is_provider_dead(urls: list[str], domain_cache: dict[str, tuple[bool, str]],
             continue
 
         try:
-            socket.gethostbyname(host)
+            resolved_ip = socket.gethostbyname(host)
+            if resolved_ip == "195.175.254.2" or resolved_ip.startswith("195.175.254."):
+                entry = (True, f"{host}:btk-blocked-sinkhole")
+                if lock:
+                    with lock:
+                        domain_cache[host] = entry
+                else:
+                    domain_cache[host] = entry
+                reasons.append(entry[1])
+                continue
         except Exception:
             entry = (True, f"{host}:dns-error")
             if lock:
@@ -959,12 +968,16 @@ def is_provider_dead(urls: list[str], domain_cache: dict[str, tuple[bool, str]],
 
             body = r.text[:20000].lower()
             park_markers = [
-                "domain satılıktır", "domain for sale", "bu alan adı satılıktır",
-                "buy this domain", "parked domain", "is parked free, courtesy of"
+                "domain satılıktır", "domain satiliktir", "alan adı satılıktır", "satılık domain",
+                "domain for sale", "domain is for sale", "this domain is for sale",
+                "buy this domain", "parked domain", "domain parked", "is parked free",
+                "contact the owner", "hugedomains", "afternic", "dan.com", "sedo.com",
+                "domain has expired", "account suspended", "cgi-sys/defaultwebpage",
+                "default website page"
             ]
             found_park = next((m for m in park_markers if m in body), None)
             if found_park:
-                entry = (True, f"{host}:parked-domain")
+                entry = (True, f"{host}:parked-domain:{found_park}")
                 if lock:
                     with lock:
                         domain_cache[host] = entry
@@ -980,7 +993,7 @@ def is_provider_dead(urls: list[str], domain_cache: dict[str, tuple[bool, str]],
             else:
                 domain_cache[host] = entry
             return False, entry[1]
-        except (requests.exceptions.ConnectTimeout, requests.exceptions.ConnectionError):
+        except requests.exceptions.RequestException:
             entry = (True, f"{host}:unreachable")
             if lock:
                 with lock:
@@ -990,14 +1003,14 @@ def is_provider_dead(urls: list[str], domain_cache: dict[str, tuple[bool, str]],
             reasons.append(entry[1])
             continue
         except Exception:
-            # TLS quirk / read timeout -> server is responding, assume alive
-            entry = (False, f"{host}:alive-unverified")
+            entry = (True, f"{host}:unreachable-error")
             if lock:
                 with lock:
                     domain_cache[host] = entry
             else:
                 domain_cache[host] = entry
-            return False, entry[1]
+            reasons.append(entry[1])
+            continue
 
     return True, "; ".join(reasons) if reasons else "all-urls-dead"
 
