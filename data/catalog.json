@@ -1,7 +1,7 @@
 {
   "name": "EmirTV — Depoları Seç",
   "description": "Hepsi Bir Arada deposunu veya istediğiniz Türkçe CloudStream depolarını tek tek seçebilirsiniz.",
-  "generated_at": "2026-10-10T18:10:31Z",
+  "generated_at": "2026-10-10T18:36:51Z",
   "sections": [
     {
       "id": "all",
@@ -14,7 +14,7 @@
           "description": "Aktif Türkçe CloudStream eklentilerinin otomatik doğrulanan ve tekilleştirilen birleşik deposu.",
           "repo_url": "https://raw.githubusercontent.com/kodlama155-ctrl/csrepo/main/repo.json",
           "install_url": "cloudstreamrepo://raw.githubusercontent.com/kodlama155-ctrl/csrepo/main/repo.json",
-          "plugin_count": 264,
+          "plugin_count": 259,
           "source_repository_count": 88,
           "status": "active",
           "recommended": true
@@ -95,7 +95,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 42,
-              "freshness_days": 0.3,
+              "freshness_days": 0.0,
               "github_stars": 27,
               "github_forks": 1,
               "fork": false,
@@ -274,7 +274,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 27,
-              "freshness_days": 1.0,
+              "freshness_days": 1.1,
               "github_stars": 23,
               "github_forks": 1,
               "fork": false,
@@ -319,7 +319,7 @@
             "metrics": {
               "declared_down_count": 2,
               "plugin_count": 67,
-              "freshness_days": 0.2,
+              "freshness_days": 0.3,
               "github_stars": 3,
               "github_forks": 0,
               "fork": false,
@@ -364,7 +364,7 @@
             "metrics": {
               "declared_down_count": 2,
               "plugin_count": 52,
-              "freshness_days": 0.4,
+              "freshness_days": 0.0,
               "github_stars": 2,
               "github_forks": 0,
               "fork": false,
@@ -380,49 +380,6 @@
           "self_contained": true,
           "trusted_seed": false,
           "turkish_score": 150,
-          "status": "active"
-        },
-        {
-          "id": "Emre-Kahveci/CloudStreamHub",
-          "type": "repository",
-          "name": "CloudStream TR",
-          "description": "CloudStream Turkish Repository — Revival of Turkish providers with modern upstream architecture, active link resolution, and automated builds.",
-          "icon_url": null,
-          "repository": "Emre-Kahveci/CloudStreamHub",
-          "repository_url": "https://github.com/Emre-Kahveci/CloudStreamHub",
-          "repo_url": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/repo.json",
-          "install_url": "cloudstreamrepo://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/repo.json",
-          "plugin_count": 23,
-          "repo_score": 84.8,
-          "repo_score_details": {
-            "score": 84.8,
-            "components": {
-              "declared_health": 30.0,
-              "freshness": 25.0,
-              "originality": 15.0,
-              "github_popularity": 5.9,
-              "coverage": 4.6,
-              "turkish_focus": 4.3
-            },
-            "metrics": {
-              "declared_down_count": 0,
-              "plugin_count": 23,
-              "freshness_days": 7.0,
-              "github_stars": 7,
-              "github_forks": 2,
-              "fork": false,
-              "self_contained": true
-            }
-          },
-          "github_stars": 7,
-          "github_forks": 2,
-          "last_plugins_update": "2026-10-03T18:24:21Z",
-          "short_addresses": [],
-          "fork": false,
-          "parent": null,
-          "self_contained": true,
-          "trusted_seed": true,
-          "turkish_score": 335,
           "status": "active"
         },
         {
@@ -599,6 +556,49 @@
           "self_contained": true,
           "trusted_seed": true,
           "turkish_score": 286,
+          "status": "active"
+        },
+        {
+          "id": "Emre-Kahveci/CloudStreamHub",
+          "type": "repository",
+          "name": "CloudStream TR",
+          "description": "CloudStream Turkish Repository — Revival of Turkish providers with modern upstream architecture, active link resolution, and automated builds.",
+          "icon_url": null,
+          "repository": "Emre-Kahveci/CloudStreamHub",
+          "repository_url": "https://github.com/Emre-Kahveci/CloudStreamHub",
+          "repo_url": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/repo.json",
+          "install_url": "cloudstreamrepo://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/repo.json",
+          "plugin_count": 23,
+          "repo_score": 81.8,
+          "repo_score_details": {
+            "score": 81.8,
+            "components": {
+              "declared_health": 30.0,
+              "freshness": 22.0,
+              "originality": 15.0,
+              "github_popularity": 5.9,
+              "coverage": 4.6,
+              "turkish_focus": 4.3
+            },
+            "metrics": {
+              "declared_down_count": 0,
+              "plugin_count": 23,
+              "freshness_days": 7.0,
+              "github_stars": 7,
+              "github_forks": 2,
+              "fork": false,
+              "self_contained": true
+            }
+          },
+          "github_stars": 7,
+          "github_forks": 2,
+          "last_plugins_update": "2026-10-03T18:24:21Z",
+          "short_addresses": [],
+          "fork": false,
+          "parent": null,
+          "self_contained": true,
+          "trusted_seed": true,
+          "turkish_score": 335,
           "status": "active"
         },
         {
@@ -850,7 +850,7 @@
           },
           "github_stars": 0,
           "github_forks": 0,
-          "last_plugins_update": "2026-10-10T17:56:14Z",
+          "last_plugins_update": "2026-10-10T18:22:57Z",
           "short_addresses": [],
           "fork": false,
           "parent": null,
@@ -1797,7 +1797,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 13,
-              "freshness_days": 46.8,
+              "freshness_days": 46.9,
               "github_stars": 6,
               "github_forks": 0,
               "fork": false,
@@ -1885,7 +1885,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 5,
-              "freshness_days": 25.0,
+              "freshness_days": 25.1,
               "github_stars": 0,
               "github_forks": 0,
               "fork": false,
@@ -2237,7 +2237,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 74,
-              "freshness_days": 25.8,
+              "freshness_days": 25.9,
               "github_stars": 1,
               "github_forks": 0,
               "fork": true,
@@ -2280,7 +2280,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 1,
-              "freshness_days": 31.4,
+              "freshness_days": 31.5,
               "github_stars": 0,
               "github_forks": 0,
               "fork": false,
@@ -2516,49 +2516,6 @@
           "status": "active"
         },
         {
-          "id": "arcilingir/CloudStreamHub",
-          "type": "repository",
-          "name": "CloudStream TR",
-          "description": "CloudStream Turkish Repository — Revival of Turkish providers with modern upstream architecture, active link resolution, and automated builds.",
-          "icon_url": null,
-          "repository": "arcilingir/CloudStreamHub",
-          "repository_url": "https://github.com/arcilingir/CloudStreamHub",
-          "repo_url": "https://raw.githubusercontent.com/arcilingir/CloudStreamHub/main/repo.json",
-          "install_url": "cloudstreamrepo://raw.githubusercontent.com/arcilingir/CloudStreamHub/main/repo.json",
-          "plugin_count": 23,
-          "repo_score": 63.9,
-          "repo_score_details": {
-            "score": 63.9,
-            "components": {
-              "declared_health": 30.0,
-              "freshness": 25.0,
-              "originality": 0.0,
-              "github_popularity": 0.0,
-              "coverage": 4.6,
-              "turkish_focus": 4.3
-            },
-            "metrics": {
-              "declared_down_count": 0,
-              "plugin_count": 23,
-              "freshness_days": 7.0,
-              "github_stars": 0,
-              "github_forks": 0,
-              "fork": true,
-              "self_contained": false
-            }
-          },
-          "github_stars": 0,
-          "github_forks": 0,
-          "last_plugins_update": "2026-10-03T18:24:21Z",
-          "short_addresses": [],
-          "fork": true,
-          "parent": "Emre-Kahveci/CloudStreamHub",
-          "self_contained": false,
-          "trusted_seed": false,
-          "turkish_score": 190,
-          "status": "active"
-        },
-        {
           "id": "Eikosa/tv",
           "type": "repository",
           "name": "Türkiye Türkçe Canlı TV",
@@ -2628,7 +2585,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 2,
-              "freshness_days": 17.3,
+              "freshness_days": 17.4,
               "github_stars": 0,
               "github_forks": 0,
               "fork": false,
@@ -2673,7 +2630,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 26,
-              "freshness_days": 362.9,
+              "freshness_days": 363.0,
               "github_stars": 0,
               "github_forks": 0,
               "fork": false,
@@ -2689,6 +2646,49 @@
           "self_contained": true,
           "trusted_seed": false,
           "turkish_score": 231,
+          "status": "active"
+        },
+        {
+          "id": "arcilingir/CloudStreamHub",
+          "type": "repository",
+          "name": "CloudStream TR",
+          "description": "CloudStream Turkish Repository — Revival of Turkish providers with modern upstream architecture, active link resolution, and automated builds.",
+          "icon_url": null,
+          "repository": "arcilingir/CloudStreamHub",
+          "repository_url": "https://github.com/arcilingir/CloudStreamHub",
+          "repo_url": "https://raw.githubusercontent.com/arcilingir/CloudStreamHub/main/repo.json",
+          "install_url": "cloudstreamrepo://raw.githubusercontent.com/arcilingir/CloudStreamHub/main/repo.json",
+          "plugin_count": 23,
+          "repo_score": 60.9,
+          "repo_score_details": {
+            "score": 60.9,
+            "components": {
+              "declared_health": 30.0,
+              "freshness": 22.0,
+              "originality": 0.0,
+              "github_popularity": 0.0,
+              "coverage": 4.6,
+              "turkish_focus": 4.3
+            },
+            "metrics": {
+              "declared_down_count": 0,
+              "plugin_count": 23,
+              "freshness_days": 7.0,
+              "github_stars": 0,
+              "github_forks": 0,
+              "fork": true,
+              "self_contained": false
+            }
+          },
+          "github_stars": 0,
+          "github_forks": 0,
+          "last_plugins_update": "2026-10-03T18:24:21Z",
+          "short_addresses": [],
+          "fork": true,
+          "parent": "Emre-Kahveci/CloudStreamHub",
+          "self_contained": false,
+          "trusted_seed": false,
+          "turkish_score": 190,
           "status": "active"
         },
         {
@@ -2761,7 +2761,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 18,
-              "freshness_days": 419.2,
+              "freshness_days": 419.3,
               "github_stars": 2,
               "github_forks": 4,
               "fork": false,
@@ -2976,7 +2976,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 7,
-              "freshness_days": 464.2,
+              "freshness_days": 464.3,
               "github_stars": 2,
               "github_forks": 0,
               "fork": false,
@@ -3105,7 +3105,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 10,
-              "freshness_days": 976.0,
+              "freshness_days": 976.1,
               "github_stars": 0,
               "github_forks": 0,
               "fork": false,
@@ -3148,7 +3148,7 @@
             "metrics": {
               "declared_down_count": 1,
               "plugin_count": 43,
-              "freshness_days": 319.2,
+              "freshness_days": 319.3,
               "github_stars": 1,
               "github_forks": 0,
               "fork": true,
@@ -3234,7 +3234,7 @@
             "metrics": {
               "declared_down_count": 1,
               "plugin_count": 43,
-              "freshness_days": 319.2,
+              "freshness_days": 319.3,
               "github_stars": 0,
               "github_forks": 0,
               "fork": true,
@@ -3320,7 +3320,7 @@
             "metrics": {
               "declared_down_count": 1,
               "plugin_count": 17,
-              "freshness_days": 419.4,
+              "freshness_days": 419.5,
               "github_stars": 1,
               "github_forks": 1,
               "fork": false,
@@ -3621,7 +3621,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 18,
-              "freshness_days": 419.2,
+              "freshness_days": 419.3,
               "github_stars": 0,
               "github_forks": 0,
               "fork": true,
