@@ -11,6 +11,8 @@ from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import quote, urlparse
+import concurrent.futures
+import threading
 
 import requests
 
@@ -851,7 +853,28 @@ def plugin_variant_rank(plugin: dict, repo_item: dict, seed_repos: set[str]):
     return (version_num, fresh, trusted, tr_score)
 
 
-def validate_plugin_file(plugin: dict, cache: dict[str, dict]):
+def normalize_sha256(value: str | None) -> str | None:
+    if not isinstance(value, str):
+        return None
+    cleaned = value.strip()
+    if cleaned.lower().startswith("sha256-"):
+        cleaned = cleaned[7:]
+    elif cleaned.lower().startswith("sha256:"):
+        cleaned = cleaned[7:]
+    if re.fullmatch(r"[a-fA-F0-9]{64}", cleaned):
+        return cleaned.lower()
+    return None
+
+
+def _put_cache(cache: dict[str, dict], key: str, value: dict, lock: threading.Lock | None):
+    if lock:
+        with lock:
+            cache[key] = value
+    else:
+        cache[key] = value
+
+
+def validate_plugin_file(plugin: dict, cache: dict[str, dict], cache_lock: threading.Lock | None = None):
     status = plugin.get("status")
     try:
         status_num = int(status)
@@ -864,14 +887,20 @@ def validate_plugin_file(plugin: dict, cache: dict[str, dict]):
     if not isinstance(url, str) or not url.startswith(("https://", "http://")):
         return {"ok": False, "reason": "invalid-url"}
 
-    expected_hash = plugin.get("fileHash")
-    cache_key = f"{url}|{expected_hash or ''}"
-    if cache_key in cache:
-        return cache[cache_key]
+    expected_raw = plugin.get("fileHash")
+    expected_norm = normalize_sha256(expected_raw)
+    cache_key = f"{url}|{expected_norm or ''}"
+    if cache_lock:
+        with cache_lock:
+            if cache_key in cache:
+                return cache[cache_key]
+    else:
+        if cache_key in cache:
+            return cache[cache_key]
 
-    # Never send GITHUB_TOKEN to third-party plugin hosts.
+    # Standard Android/CloudStream User-Agent to avoid anti-bot/WAF blocking
     headers = {
-        "User-Agent": "csrepo-plugin-health-check",
+        "User-Agent": "Mozilla/5.0 (Linux; Android 12; CloudStream/4.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
         "Accept": "application/octet-stream,*/*",
     }
 
@@ -879,7 +908,7 @@ def validate_plugin_file(plugin: dict, cache: dict[str, dict]):
         with requests.get(url, headers=headers, stream=True, timeout=(10, 35), allow_redirects=True) as r:
             if r.status_code != 200:
                 result = {"ok": False, "reason": f"http-{r.status_code}"}
-                cache[cache_key] = result
+                _put_cache(cache, cache_key, result, cache_lock)
                 return result
 
             content_length = r.headers.get("Content-Length")
@@ -887,11 +916,11 @@ def validate_plugin_file(plugin: dict, cache: dict[str, dict]):
                 try:
                     if int(content_length) <= 0:
                         result = {"ok": False, "reason": "empty-file"}
-                        cache[cache_key] = result
+                        _put_cache(cache, cache_key, result, cache_lock)
                         return result
                     if int(content_length) > PLUGIN_MAX_BYTES:
                         result = {"ok": False, "reason": "file-too-large"}
-                        cache[cache_key] = result
+                        _put_cache(cache, cache_key, result, cache_lock)
                         return result
                 except ValueError:
                     pass
@@ -904,40 +933,41 @@ def validate_plugin_file(plugin: dict, cache: dict[str, dict]):
                 size += len(chunk)
                 if size > PLUGIN_MAX_BYTES:
                     result = {"ok": False, "reason": "file-too-large"}
-                    cache[cache_key] = result
+                    _put_cache(cache, cache_key, result, cache_lock)
                     return result
                 digest.update(chunk)
 
             if size == 0:
                 result = {"ok": False, "reason": "empty-file"}
-                cache[cache_key] = result
+                _put_cache(cache, cache_key, result, cache_lock)
                 return result
 
-            actual_hash = "sha256-" + digest.hexdigest()
-            if isinstance(expected_hash, str) and expected_hash.startswith("sha256-"):
-                if actual_hash.lower() != expected_hash.strip().lower():
+            actual_hex = digest.hexdigest().lower()
+            actual_hash = f"sha256-{actual_hex}"
+            if expected_norm is not None:
+                if actual_hex != expected_norm:
                     result = {
                         "ok": False,
                         "reason": "hash-mismatch",
                         "size": size,
-                        "expected_hash": expected_hash,
+                        "expected_hash": expected_raw,
                         "actual_hash": actual_hash,
                     }
-                    cache[cache_key] = result
+                    _put_cache(cache, cache_key, result, cache_lock)
                     return result
 
             result = {
                 "ok": True,
                 "reason": "ok",
                 "size": size,
-                "hash_checked": bool(isinstance(expected_hash, str) and expected_hash.startswith("sha256-")),
+                "hash_checked": bool(expected_norm is not None),
                 "actual_hash": actual_hash,
             }
-            cache[cache_key] = result
+            _put_cache(cache, cache_key, result, cache_lock)
             return result
     except requests.RequestException as e:
         result = {"ok": False, "reason": "request-error", "error": type(e).__name__}
-        cache[cache_key] = result
+        _put_cache(cache, cache_key, result, cache_lock)
         return result
 
 
@@ -966,20 +996,44 @@ def build_cloudstream_bundle(app_ready: list[dict], seed_repos: set[str]):
                     if lang is not None or not (explicit_repo or trusted_repo):
                         continue
 
-                key = (
+                raw_key = (
                     str(plugin.get("internalName") or "").strip()
                     or str(plugin.get("name") or "").strip()
                     or str(plugin.get("url") or "").strip()
                 )
-                if not key:
+                if not raw_key:
                     continue
+
+                norm_key = raw_key.lower()
+                m = re.match(r"^0\s+([a-zA-Z].*)", norm_key)
+                key = m.group(1).strip() if m else norm_key
                 candidates.setdefault(key, []).append((plugin, repo_item))
 
     published = []
     health_rows = []
     file_cache: dict[str, dict] = {}
+    cache_lock = threading.Lock()
     rejection_counts = Counter()
     fallback_count = 0
+
+    # Pre-validate top candidate of each plugin in parallel
+    top_candidates = []
+    for variants in candidates.values():
+        ranked = sorted(
+            variants,
+            key=lambda pair: plugin_variant_rank(pair[0], pair[1], seed_repos),
+            reverse=True,
+        )
+        if ranked:
+            top_candidates.append(ranked[0][0])
+
+    if top_candidates:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+            futures = [
+                executor.submit(validate_plugin_file, p, file_cache, cache_lock)
+                for p in top_candidates
+            ]
+            concurrent.futures.wait(futures)
 
     for key, variants in candidates.items():
         ranked = sorted(
@@ -991,7 +1045,7 @@ def build_cloudstream_bundle(app_ready: list[dict], seed_repos: set[str]):
         selected = None
         attempts = []
         for variant_index, (plugin, source_repo) in enumerate(ranked):
-            check = validate_plugin_file(plugin, file_cache)
+            check = validate_plugin_file(plugin, file_cache, cache_lock)
             attempts.append({
                 "repository": source_repo.get("repository"),
                 "url": plugin.get("url"),
@@ -1016,6 +1070,12 @@ def build_cloudstream_bundle(app_ready: list[dict], seed_repos: set[str]):
             fallback_count += 1
 
         clean = dict(plugin)
+        # Always inject verified actual hash and size calculated from downloaded bytes
+        if check.get("actual_hash"):
+            clean["fileHash"] = check["actual_hash"]
+        if check.get("size"):
+            clean["fileSize"] = check["size"]
+
         published.append(clean)
         health_rows.append({
             "internal_name": key,
