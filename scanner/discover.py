@@ -889,6 +889,7 @@ IGNORED_PROVIDER_DOMAINS = {
 
 def extract_provider_urls(dex_bytes: bytes, plugin_name: str) -> list[str]:
     raw_urls = re.findall(rb'https?://[a-zA-Z0-9\.\-_]+(?::\d+)?(?:/[a-zA-Z0-9\.\-_]*)*', dex_bytes)
+    raw_domains = re.findall(rb'(?:[a-zA-Z0-9-]+\.)+(?:com|net|org|tv|me|pw|xyz|top|site|online|info|cc|to|is|io|fun|pro|club|live)', dex_bytes)
     cleaned = set()
     for u in raw_urls:
         try:
@@ -900,9 +901,26 @@ def extract_provider_urls(dex_bytes: bytes, plugin_name: str) -> list[str]:
                 cleaned.add("https://" + domain)
         except Exception:
             pass
+    for d in raw_domains:
+        try:
+            domain = d.decode("ascii", errors="ignore").strip().lower()
+            if any(domain == ign or domain.endswith("." + ign) for ign in IGNORED_PROVIDER_DOMAINS):
+                continue
+            if "." in domain and len(domain) > 4:
+                # Prioritize root domains over CDN/subdomains for main health check
+                cleaned.add("https://" + domain)
+        except Exception:
+            pass
+
+    # Exclude CDN/media/image subdomains if primary root domains exist
+    primary_domains = [
+        u for u in cleaned
+        if not any(u.startswith(f"https://{prefix}.") for prefix in ("cdn", "static", "media", "image", "images", "assets", "img"))
+    ]
+    candidates = primary_domains if primary_domains else list(cleaned)
     norm_name = re.sub(r"[^a-zA-Z0-9]", "", plugin_name.lower())
-    matched = [u for u in cleaned if norm_name and norm_name in u.lower()]
-    return matched if matched else list(cleaned)[:3]
+    matched = [u for u in candidates if norm_name and norm_name in u.lower()]
+    return matched if matched else candidates[:4]
 
 
 import struct
