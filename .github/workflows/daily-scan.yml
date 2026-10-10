@@ -8,6 +8,7 @@ on:
     paths:
       - "scanner/**"
       - "data/seeds.json"
+      - "data/blacklist.json"
       - "requirements.txt"
       - ".github/workflows/daily-scan.yml"
 

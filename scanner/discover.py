@@ -11,6 +11,9 @@ from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import quote, urlparse
+import io
+import socket
+import zipfile
 import concurrent.futures
 import threading
 
@@ -874,7 +877,157 @@ def _put_cache(cache: dict[str, dict], key: str, value: dict, lock: threading.Lo
         cache[key] = value
 
 
-def validate_plugin_file(plugin: dict, cache: dict[str, dict], cache_lock: threading.Lock | None = None):
+IGNORED_PROVIDER_DOMAINS = {
+    "schema.org", "w3.org", "android.com", "google.com", "googleapis.com",
+    "github.com", "raw.githubusercontent.com", "gitlab.com", "cloudflare.com",
+    "xml.org", "apache.org", "kotlinlang.org", "googletagmanager.com",
+    "facebook.com", "twitter.com", "instagram.com", "youtube.com", "example.com",
+    "127.0.0.1", "localhost", "jikan.moe", "themoviedb.org", "tmdb.org",
+    "jsdelivr.net", "wikimedia.org"
+}
+
+
+def extract_provider_urls(dex_bytes: bytes, plugin_name: str) -> list[str]:
+    raw_urls = re.findall(rb'https?://[a-zA-Z0-9\.\-_]+(?::\d+)?(?:/[a-zA-Z0-9\.\-_]*)*', dex_bytes)
+    cleaned = set()
+    for u in raw_urls:
+        try:
+            s = u.decode("ascii", errors="ignore").strip().rstrip("/")
+            domain = s.split("://", 1)[1].split("/", 1)[0].split(":", 1)[0].lower()
+            if any(domain == ign or domain.endswith("." + ign) for ign in IGNORED_PROVIDER_DOMAINS):
+                continue
+            if "." in domain and len(domain) > 4:
+                cleaned.add("https://" + domain)
+        except Exception:
+            pass
+    norm_name = re.sub(r"[^a-zA-Z0-9]", "", plugin_name.lower())
+    matched = [u for u in cleaned if norm_name and norm_name in u.lower()]
+    return matched if matched else list(cleaned)[:3]
+
+
+def is_provider_dead(urls: list[str], domain_cache: dict[str, tuple[bool, str]], lock: threading.Lock | None = None) -> tuple[bool, str]:
+    if not urls:
+        return False, "no-urls"
+    reasons = []
+    for u in urls:
+        parsed = urlparse(u)
+        host = parsed.netloc.split(":")[0]
+        if not host:
+            continue
+
+        cached = None
+        if lock:
+            with lock:
+                cached = domain_cache.get(host)
+        else:
+            cached = domain_cache.get(host)
+
+        if cached is not None:
+            dead, reason = cached
+            if not dead:
+                return False, reason
+            reasons.append(reason)
+            continue
+
+        try:
+            socket.gethostbyname(host)
+        except Exception:
+            entry = (True, f"{host}:dns-error")
+            if lock:
+                with lock:
+                    domain_cache[host] = entry
+            else:
+                domain_cache[host] = entry
+            reasons.append(entry[1])
+            continue
+
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        }
+        try:
+            r = requests.get(u, headers=headers, timeout=4, allow_redirects=True)
+            if r.status_code in (404, 410, 502, 504):
+                entry = (True, f"{host}:http-{r.status_code}")
+                if lock:
+                    with lock:
+                        domain_cache[host] = entry
+                else:
+                    domain_cache[host] = entry
+                reasons.append(entry[1])
+                continue
+
+            body = r.text[:20000].lower()
+            park_markers = [
+                "domain satılıktır", "domain for sale", "bu alan adı satılıktır",
+                "buy this domain", "parked domain", "is parked free, courtesy of"
+            ]
+            found_park = next((m for m in park_markers if m in body), None)
+            if found_park:
+                entry = (True, f"{host}:parked-domain")
+                if lock:
+                    with lock:
+                        domain_cache[host] = entry
+                else:
+                    domain_cache[host] = entry
+                reasons.append(entry[1])
+                continue
+
+            entry = (False, f"{host}:alive")
+            if lock:
+                with lock:
+                    domain_cache[host] = entry
+            else:
+                domain_cache[host] = entry
+            return False, entry[1]
+        except (requests.exceptions.ConnectTimeout, requests.exceptions.ConnectionError):
+            entry = (True, f"{host}:unreachable")
+            if lock:
+                with lock:
+                    domain_cache[host] = entry
+            else:
+                domain_cache[host] = entry
+            reasons.append(entry[1])
+            continue
+        except Exception:
+            # TLS quirk / read timeout -> server is responding, assume alive
+            entry = (False, f"{host}:alive-unverified")
+            if lock:
+                with lock:
+                    domain_cache[host] = entry
+            else:
+                domain_cache[host] = entry
+            return False, entry[1]
+
+    return True, "; ".join(reasons) if reasons else "all-urls-dead"
+
+
+def load_blacklist() -> set[str]:
+    p = DATA / "blacklist.json"
+    if p.is_file():
+        try:
+            with open(p, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                if isinstance(data, list):
+                    return {str(x).strip().lower() for x in data if x}
+        except Exception:
+            pass
+    return set()
+
+
+def validate_plugin_file(
+    plugin: dict,
+    cache: dict[str, dict],
+    cache_lock: threading.Lock | None = None,
+    domain_cache: dict[str, tuple[bool, str]] | None = None,
+    domain_lock: threading.Lock | None = None,
+    blacklist: set[str] | None = None,
+):
+    plugin_name = str(plugin.get("name") or "").strip().lower()
+    internal_name = str(plugin.get("internalName") or "").strip().lower()
+    if blacklist and (plugin_name in blacklist or internal_name in blacklist):
+        return {"ok": False, "reason": "blacklisted"}
+
     status = plugin.get("status")
     try:
         status_num = int(status)
@@ -898,7 +1051,6 @@ def validate_plugin_file(plugin: dict, cache: dict[str, dict], cache_lock: threa
         if cache_key in cache:
             return cache[cache_key]
 
-    # Standard Android/CloudStream User-Agent to avoid anti-bot/WAF blocking
     headers = {
         "User-Agent": "Mozilla/5.0 (Linux; Android 12; CloudStream/4.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
         "Accept": "application/octet-stream,*/*",
@@ -925,7 +1077,7 @@ def validate_plugin_file(plugin: dict, cache: dict[str, dict], cache_lock: threa
                 except ValueError:
                     pass
 
-            digest = hashlib.sha256()
+            chunks = []
             size = 0
             for chunk in r.iter_content(chunk_size=128 * 1024):
                 if not chunk:
@@ -935,15 +1087,18 @@ def validate_plugin_file(plugin: dict, cache: dict[str, dict], cache_lock: threa
                     result = {"ok": False, "reason": "file-too-large"}
                     _put_cache(cache, cache_key, result, cache_lock)
                     return result
-                digest.update(chunk)
+                chunks.append(chunk)
 
             if size == 0:
                 result = {"ok": False, "reason": "empty-file"}
                 _put_cache(cache, cache_key, result, cache_lock)
                 return result
 
+            content_bytes = b"".join(chunks)
+            digest = hashlib.sha256(content_bytes)
             actual_hex = digest.hexdigest().lower()
             actual_hash = f"sha256-{actual_hex}"
+
             if expected_norm is not None:
                 if actual_hex != expected_norm:
                     result = {
@@ -955,6 +1110,34 @@ def validate_plugin_file(plugin: dict, cache: dict[str, dict], cache_lock: threa
                     }
                     _put_cache(cache, cache_key, result, cache_lock)
                     return result
+
+            # Deep verification: Valid ZIP with manifest.json and classes.dex
+            try:
+                with zipfile.ZipFile(io.BytesIO(content_bytes)) as z:
+                    names = z.namelist()
+                    if "manifest.json" not in names or "classes.dex" not in names:
+                        result = {"ok": False, "reason": "corrupted-cs3-missing-dex"}
+                        _put_cache(cache, cache_key, result, cache_lock)
+                        return result
+
+                    if domain_cache is not None:
+                        dex_bytes = z.read("classes.dex")
+                        candidate_urls = extract_provider_urls(dex_bytes, plugin.get("name") or "")
+                        dead, dead_reason = is_provider_dead(candidate_urls, domain_cache, domain_lock)
+                        if dead:
+                            result = {
+                                "ok": False,
+                                "reason": f"provider-dead:{dead_reason}",
+                                "dead_urls": candidate_urls,
+                                "size": size,
+                                "actual_hash": actual_hash,
+                            }
+                            _put_cache(cache, cache_key, result, cache_lock)
+                            return result
+            except zipfile.BadZipFile:
+                result = {"ok": False, "reason": "bad-zip-file"}
+                _put_cache(cache, cache_key, result, cache_lock)
+                return result
 
             result = {
                 "ok": True,
@@ -1013,6 +1196,9 @@ def build_cloudstream_bundle(app_ready: list[dict], seed_repos: set[str]):
     health_rows = []
     file_cache: dict[str, dict] = {}
     cache_lock = threading.Lock()
+    domain_cache: dict[str, tuple[bool, str]] = {}
+    domain_lock = threading.Lock()
+    blacklist = load_blacklist()
     rejection_counts = Counter()
     fallback_count = 0
 
@@ -1030,7 +1216,15 @@ def build_cloudstream_bundle(app_ready: list[dict], seed_repos: set[str]):
     if top_candidates:
         with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
             futures = [
-                executor.submit(validate_plugin_file, p, file_cache, cache_lock)
+                executor.submit(
+                    validate_plugin_file,
+                    p,
+                    file_cache,
+                    cache_lock,
+                    domain_cache,
+                    domain_lock,
+                    blacklist,
+                )
                 for p in top_candidates
             ]
             concurrent.futures.wait(futures)
@@ -1045,7 +1239,14 @@ def build_cloudstream_bundle(app_ready: list[dict], seed_repos: set[str]):
         selected = None
         attempts = []
         for variant_index, (plugin, source_repo) in enumerate(ranked):
-            check = validate_plugin_file(plugin, file_cache, cache_lock)
+            check = validate_plugin_file(
+                plugin,
+                file_cache,
+                cache_lock,
+                domain_cache,
+                domain_lock,
+                blacklist,
+            )
             attempts.append({
                 "repository": source_repo.get("repository"),
                 "url": plugin.get("url"),
@@ -1121,6 +1322,8 @@ def build_cloudstream_bundle(app_ready: list[dict], seed_repos: set[str]):
             "http_200_required": True,
             "non_empty_required": True,
             "sha256_verified_when_provided": True,
+            "dex_and_manifest_verified": True,
+            "provider_domain_health_verified": True,
             "max_file_bytes": PLUGIN_MAX_BYTES,
             "executes_plugin_code": False,
         },
