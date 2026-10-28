@@ -3747,9 +3747,9 @@
     "authors": [
       "Wiojelt"
     ],
-    "repositoryUrl": "https://github.com/Wiojelt/WioDrama",
-    "url": "https://raw.githubusercontent.com/Wiojelt/WioDrama/builds/mtDRAMA.cs3?v=fa87a3ceebd1",
-    "iconUrl": "https://raw.githubusercontent.com/Wiojelt/WioDrama/main/assets/mtDRAMA.png",
+    "repositoryUrl": "https://github.com/Wiojelt/test",
+    "url": "https://raw.githubusercontent.com/Wiojelt/test/builds/mtDRAMA.cs3?v=fa87a3ceebd1",
+    "iconUrl": "https://raw.githubusercontent.com/Wiojelt/test/main/assets/mtDRAMA.png",
     "tvTypes": [
       "AsianDrama",
       "TvSeries"
@@ -3757,7 +3757,9 @@
     "language": "tr",
     "status": 1,
     "fileSize": 110034,
-    "fileHash": "sha256-fa87a3ceebd18e39df64ae92d8fc0381ea126537fcd6a69a572d93e0ff5822e7"
+    "fileHash": "sha256-fa87a3ceebd18e39df64ae92d8fc0381ea126537fcd6a69a572d93e0ff5822e7",
+    "apiVersion": 1,
+    "hash": "fa87a3ceebd18e39df64ae92d8fc0381ea126537fcd6a69a572d93e0ff5822e7"
   },
   {
     "iconUrl": "https://raw.githubusercontent.com/GitLatte/temporarylists/refs/heads/main/img/mywaytv.png",
@@ -3951,13 +3953,13 @@
     "name": "oiDRAMA",
     "internalName": "OiDrama",
     "version": 2,
-    "description": "oiDRAMA • Popüler dikey kısa drama ve trend dizi akışları.",
+    "description": "oiDRAMA · Popüler dikey kısa drama ve trend dizi akışları.",
     "authors": [
       "Wiojelt"
     ],
-    "repositoryUrl": "https://github.com/Wiojelt/WioDrama",
-    "url": "https://raw.githubusercontent.com/Wiojelt/WioDrama/builds/oiDRAMA.cs3?v=ed246f08fd54",
-    "iconUrl": "https://raw.githubusercontent.com/Wiojelt/WioDrama/main/assets/oiDRAMA.png",
+    "repositoryUrl": "https://github.com/Wiojelt/test",
+    "url": "https://raw.githubusercontent.com/Wiojelt/test/builds/oiDRAMA.cs3?v=ed246f08fd54",
+    "iconUrl": "https://raw.githubusercontent.com/Wiojelt/test/main/assets/oiDRAMA.png",
     "tvTypes": [
       "AsianDrama",
       "TvSeries"
@@ -3965,7 +3967,8 @@
     "language": "tr",
     "status": 1,
     "fileSize": 112112,
-    "fileHash": "sha256-ed246f08fd547974de1d9ad2a705b576ad075a773f65ddaf0a1c340af8ee493a"
+    "fileHash": "sha256-ed246f08fd547974de1d9ad2a705b576ad075a773f65ddaf0a1c340af8ee493a",
+    "apiVersion": 1
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=ok.ru&sz=%size%",
@@ -4674,6 +4677,26 @@
     "name": "SporPaketi"
   },
   {
+    "url": "https://raw.githubusercontent.com/baristomruk-max/BTVault/builds/SporTV.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "SporTV",
+    "internalName": "SporTV",
+    "authors": [
+      "BTcozum"
+    ],
+    "description": "SporTV - Canli spor kanallari (TRT Spor, beIN Sports, Eurosport, NBA TV ve daha fazlasi)",
+    "fileSize": 13714,
+    "repositoryUrl": "https://github.com/baristomruk-max/BTVault",
+    "language": "tr",
+    "tvTypes": [
+      "Live"
+    ],
+    "iconUrl": "https://www.google.com/s2/favicons?domain=trtspor.com.tr&sz=%size%",
+    "apiVersion": 1,
+    "fileHash": "sha256-f14b71bfebd63fb4fe601605017cdb07d95ec9cb6542794f9aad690d00e6c222"
+  },
+  {
     "iconUrl": "https://www.google.com/s2/favicons?sz=128&domain=startv.com.tr",
     "fileHash": "sha256-b7ca0a35f7d0e2bf097ab4c22422496096455582a6ebc5fad34a8475eb67d0d2",
     "apiVersion": 1,
@@ -4798,24 +4821,24 @@
     "name": "Tabii"
   },
   {
-    "url": "https://raw.githubusercontent.com/baristomruk-max/BTVault/builds/Tafdi.cs3",
-    "status": 1,
-    "version": 1,
-    "name": "Tafdi",
-    "internalName": "Tafdi",
-    "authors": [
-      "BTcozum"
-    ],
-    "description": "Tafdi - Turkce altyazili film izle",
-    "fileSize": 12628,
-    "repositoryUrl": "https://github.com/baristomruk-max/BTVault",
-    "language": "tr",
-    "tvTypes": [
-      "Movie"
-    ],
-    "iconUrl": "https://www.google.com/s2/favicons?domain=tafdi.net&sz=%size%",
+    "iconUrl": "https://www.google.com/s2/favicons?domain=tabii.com&sz=%size%",
+    "fileHash": "sha256-fbfb2fd9783f9d7185ffeaa2ecd5a4cbabc1f4795b654e4b948bac10960af811",
     "apiVersion": 1,
-    "fileHash": "sha256-decda02eeba4cf420e37e94a8ab934fd16554cd12f63957fde6915c91e3966c5"
+    "repositoryUrl": "https://github.com/karayel90/cloudplug",
+    "fileSize": 71480,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "karayel90"
+    ],
+    "tvTypes": [
+      "Live"
+    ],
+    "version": 37,
+    "internalName": "TabiiProvider",
+    "description": "Türkiye'nin canlı TV kanalları: tabii kanalları (TRT 1, TRT 2, TRT Spor, TRT Haber, TRT Çocuk, TRT Belgesel, TRT Müzik, TRT Türk, TRT Kürdi, TRT Arapî, TRT Avaz, TRT WORLD, TRT Genç, TRT eba), doğrudan HLS spor kanalları (beIN SPORTS, S Sport, Tivibu Spor) ve TR Kanalları (TV8, ATV, Star TV, DMAX ve daha fazlası; topluluk M3U listesinden otomatik güncellenir).",
+    "url": "https://raw.githubusercontent.com/karayel90/cloudplug/builds/TabiiProvider.cs3",
+    "name": "TabiiProvider"
   },
   {
     "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/Taraftarium24.cs3?v=e56f19bb0def",
@@ -5731,25 +5754,25 @@
     "fileHash": "sha256-586308b681482fbcec597adfc7982929e1ba3f79e326ed8e3779e725acd1a241"
   },
   {
-    "url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepofull/builds/YesilCamTv.cs3",
+    "iconUrl": "https://www.google.com/s2/favicons?sz=128&domain=yesilcamtv.com.tr",
+    "fileHash": "sha256-34d91d269f5d9da6b8357f54717d62a74fa2f88a7ee736167d29e0982e4b5768",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/Emre-Kahveci/CloudStreamHub",
+    "fileSize": 149413,
     "status": 1,
-    "version": 8,
-    "name": "YesilCamTv",
-    "internalName": "YesilCamTv",
+    "language": "tr",
     "authors": [
+      "CloudStreamTR",
       "kraptor"
     ],
-    "description": "YesilCamTv film ve dizi içerikleri sağlayıcısı.",
-    "fileSize": 20768,
-    "repositoryUrl": "https://github.com/hrtestingx/hrcsrepofull",
-    "language": "tr",
     "tvTypes": [
-      "Movie",
-      "TvSeries"
+      "Movie"
     ],
-    "iconUrl": "https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.yesilcamtv.com&size=128",
-    "apiVersion": 1,
-    "fileHash": "sha256-4776724690ddda487544f4f6ac672aff641d6e4e30bca5c8c4b7a4f7bc59ec98"
+    "version": 31,
+    "internalName": "YesilCamTv",
+    "description": "Yeşilçam klasik Türk sineması filmleri ve arşiv",
+    "url": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/YesilCamTv.cs3",
+    "name": "YesilCamTv"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=youtube.com&sz=%size%",
