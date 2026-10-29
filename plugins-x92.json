@@ -1226,17 +1226,17 @@
     "name": "DiziFilmIzle"
   },
   {
-    "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/DiziFilmORG.cs3",
+    "url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepofull/builds/DiziFilmORG.cs3",
     "status": 1,
-    "version": 23,
+    "version": 17,
     "name": "DiziFilmORG",
     "internalName": "DiziFilmORG",
     "authors": [
       "ByAyzen"
     ],
     "description": "En yeni ve popüler yerli yabancı filmleri Türkçe dublaj ve altyazılı seçeneklerle Full HD kalitede, tek parça ve kesintisiz Dizifilm.org’da izle.",
-    "fileSize": 76765,
-    "repositoryUrl": "https://github.com/aytzey/cs-kraptor",
+    "fileSize": 70643,
+    "repositoryUrl": "https://github.com/hrtestingx/hrcsrepofull",
     "language": "tr",
     "tvTypes": [
       "Movie",
@@ -1244,7 +1244,7 @@
     ],
     "iconUrl": "https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://dizifilm.org/dizi/breaking-bad/sezon-1/bolum-2&size=128",
     "apiVersion": 1,
-    "fileHash": "sha256-34b20c74a281a0770e4c57cfaea48c2175ebd96023be95e4034f89ec2a450c35"
+    "fileHash": "sha256-2695a3c9ebf406560de704b3fcee6f56e0d7dcb6148550d7ce8174b5e50ce789"
   },
   {
     "iconUrl": "https://dizifun3.com/images/data/darklogo.png",
@@ -1836,6 +1836,33 @@
     "iconUrl": "https://www.google.com/s2/favicons?domain=filmizle.ink&sz=%size%",
     "apiVersion": 1,
     "fileHash": "sha256-33a59c5a2e09ff2ccd6ef2ebf4727826473098e60bb99e525498650d0f6bd149"
+  },
+  {
+    "name": "FilmDiziProvider",
+    "internalName": "FilmDiziProvider",
+    "version": 5,
+    "description": "DPI & SNI Korumalı, DoH Destekli Türkçe Dublaj Öncelikli Film ve Dizi Sağlayıcısı",
+    "authors": [
+      "crysisdaye"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries",
+      "Anime",
+      "Documentary"
+    ],
+    "language": "tr",
+    "iconUrl": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/refs/heads/master/.github/icons/logo/kraptorfaviconicon.png",
+    "status": 1,
+    "apiVersion": 1,
+    "requiresVpn": false,
+    "repositoryUrl": "https://github.com/sanjarkola-collab/cloudstream-turkce-repo",
+    "sourceRepos": [
+      "DPI & DoH Korumalı (Özel Süper Sağlayıcı)"
+    ],
+    "fileSize": 59167,
+    "fileHash": "sha256-8a35f2e6f3d23adfa9f5ff9cbbc41a70481565e401ac9770bc7a87ff3856141a",
+    "url": "https://cdn.jsdelivr.net/gh/sanjarkola-collab/cloudstream-turkce-dist@main/plugins/FilmDiziProvider.cs3"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=filmdozu.com&sz=%size%",
@@ -2698,6 +2725,27 @@
     "fileHash": "sha256-5bcc850b3e06a4323e5746a0c2730741347001f4785d174405ab867842524957"
   },
   {
+    "url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepo/builds/HRAnime.cs3",
+    "status": 1,
+    "version": 4,
+    "name": "HR Anime",
+    "internalName": "HRAnime",
+    "authors": [
+      "hrtestingx"
+    ],
+    "description": "HR Anime - Toplu Türkçe Anime Kaynakları",
+    "fileSize": 152900,
+    "repositoryUrl": "https://github.com/hrtestingx/hrcsrepo",
+    "language": "tr",
+    "tvTypes": [
+      "Anime",
+      "Others"
+    ],
+    "iconUrl": "https://raw.githubusercontent.com/hrtestingx/hrcsrepo/hrcslogo/hrcsanime.webp",
+    "apiVersion": 1,
+    "fileHash": "sha256-84f4fbc16bc124d008d5a4e8778f2cd3aeb9b0dbc318bb324e7c51032a6f49c6"
+  },
+  {
     "url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepo/builds/HRAsianDrama.cs3",
     "status": 1,
     "version": 6,
@@ -2932,28 +2980,6 @@
     "description": "İnatBoxYedek: InatBox ana eklentisinden ayrı, test ve yedek amaçlı sağlayıcı.",
     "url": "https://raw.githubusercontent.com/Kayracs3/Kayra/builds/InatBoxYedek.cs3",
     "name": "InatBoxYedek"
-  },
-  {
-    "iconUrl": "https://www.google.com/s2/favicons?domain=dizilabmedia.click&sz=%size%",
-    "fileHash": "sha256-a961aac51fd4ecc0534e70ff18f71bb35292933494168f76a61defa38fe578f3",
-    "apiVersion": 1,
-    "repositoryUrl": "https://github.com/miskin1702/aslan-pub",
-    "fileSize": 44975,
-    "status": 1,
-    "language": "tr",
-    "authors": [
-      "Aslan"
-    ],
-    "tvTypes": [
-      "Live",
-      "Movie",
-      "TvSeries"
-    ],
-    "version": 7,
-    "internalName": "InatTVBox",
-    "description": "İnat TV Box — Canlı Spor, Exxen, BluTV, Disney+, Netflix, GAİN, Tabii ve Sinema",
-    "url": "https://raw.githubusercontent.com/miskin1702/aslan-pub/main/InatTVBox.cs3",
-    "name": "InatTVBox"
   },
   {
     "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/InterSporTV.cs3?v=edb8f888196e",
@@ -3415,6 +3441,30 @@
     "iconUrl": "https://www.google.com/s2/favicons?domain=liderfilmizle.com&sz=128",
     "apiVersion": 1,
     "fileHash": "sha256-3547650abc3b787462fb290f6ed3e545dff4e92fdbf8b413b7408506dcff16b4"
+  },
+  {
+    "name": "LiveIptvProvider",
+    "internalName": "LiveIptvProvider",
+    "version": 6,
+    "description": "[CanliTv | 35 Ulusal Kanal | Yedekli HLS] Kesintisiz Spor (BeIN, Tivibu, S Sport, Exxen), Ulusal, Sinema, Belgesel ve Haber. Resmi CDN, Vavoo ve Kral-Türk çoklu kaynak desteği.",
+    "authors": [
+      "crysisdaye"
+    ],
+    "tvTypes": [
+      "Live"
+    ],
+    "language": "tr",
+    "iconUrl": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/refs/heads/master/.github/icons/logo/kraptorfaviconicon.png",
+    "status": 1,
+    "apiVersion": 1,
+    "requiresVpn": false,
+    "repositoryUrl": "https://github.com/sanjarkola-collab/cloudstream-turkce-repo",
+    "sourceRepos": [
+      "DPI & DoH Korumalı (Özel Süper Sağlayıcı)"
+    ],
+    "fileSize": 68535,
+    "fileHash": "sha256-5fa00d3f89445065b73965e81350f757aea2dfd77e6fae5b8814d386526d858c",
+    "url": "https://cdn.jsdelivr.net/gh/sanjarkola-collab/cloudstream-turkce-dist@main/plugins/LiveIptvProvider.cs3"
   },
   {
     "name": "loveDRAMA",
@@ -4812,6 +4862,26 @@
     "name": "Tabii"
   },
   {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=tabii.com&sz=%size%",
+    "fileHash": "sha256-fbfb2fd9783f9d7185ffeaa2ecd5a4cbabc1f4795b654e4b948bac10960af811",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/karayel90/cloudplug",
+    "fileSize": 71480,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "karayel90"
+    ],
+    "tvTypes": [
+      "Live"
+    ],
+    "version": 37,
+    "internalName": "TabiiProvider",
+    "description": "Türkiye'nin canlı TV kanalları: tabii kanalları (TRT 1, TRT 2, TRT Spor, TRT Haber, TRT Çocuk, TRT Belgesel, TRT Müzik, TRT Türk, TRT Kürdi, TRT Arapî, TRT Avaz, TRT WORLD, TRT Genç, TRT eba), doğrudan HLS spor kanalları (beIN SPORTS, S Sport, Tivibu Spor) ve TR Kanalları (TV8, ATV, Star TV, DMAX ve daha fazlası; topluluk M3U listesinden otomatik güncellenir).",
+    "url": "https://raw.githubusercontent.com/karayel90/cloudplug/builds/TabiiProvider.cs3",
+    "name": "TabiiProvider"
+  },
+  {
     "url": "https://raw.githubusercontent.com/baristomruk-max/BTVault/builds/Tafdi.cs3",
     "status": 1,
     "version": 1,
@@ -5141,6 +5211,31 @@
     "fileHash": "sha256-64e1cc192e3c0287bfe0cd7a2a73b17f0c6778bbdd82b856b7a5561f579320d7"
   },
   {
+    "name": "TurkceRepoAutoInstaller",
+    "internalName": "TurkceRepoAutoInstaller",
+    "version": 5,
+    "description": "CloudStream Türkçe Deposu: Canlı TV ve Türkçe Dublaj VOD sağlayıcıları tek pakette",
+    "authors": [
+      "crysisdaye"
+    ],
+    "tvTypes": [
+      "Live",
+      "Movie"
+    ],
+    "language": "tr",
+    "iconUrl": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/refs/heads/master/.github/icons/logo/kraptorfaviconicon.png",
+    "status": 1,
+    "apiVersion": 1,
+    "requiresVpn": false,
+    "repositoryUrl": "https://github.com/sanjarkola-collab/cloudstream-turkce-repo",
+    "sourceRepos": [
+      "DPI & DoH Korumalı (Özel Süper Sağlayıcı)"
+    ],
+    "fileSize": 95304,
+    "fileHash": "sha256-6a57ce3270ad097f43f99ccaf6439fe8d1d1d779ed5718362d6b77c9d969abb6",
+    "url": "https://cdn.jsdelivr.net/gh/sanjarkola-collab/cloudstream-turkce-dist@main/plugins/TurkceRepoAutoInstaller.cs3"
+  },
+  {
     "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/Turkdizileri.cs3",
     "status": 1,
     "version": 34,
@@ -5159,6 +5254,30 @@
     "iconUrl": "https://i.imgur.com/Cff8v6J.png",
     "apiVersion": 1,
     "fileHash": "sha256-b29876955e08a76d88f3421972ee8d1af5f1b581963439ed09ea3cf4906feb2b"
+  },
+  {
+    "name": "TurkDublajVodProvider",
+    "internalName": "TurkDublajVodProvider",
+    "version": 6,
+    "description": "[%100 Türkçe Dublaj | 9.500+ Film] Sıfır torrent, sıfır reklam, sıfır altyazı. Jetfilmizle & FilmModu doğrudan 4K/1080p kesintisiz HLS/MP4 akışı.",
+    "authors": [
+      "crysisdaye"
+    ],
+    "tvTypes": [
+      "Movie"
+    ],
+    "language": "tr",
+    "iconUrl": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/refs/heads/master/.github/icons/logo/kraptorfaviconicon.png",
+    "status": 1,
+    "apiVersion": 1,
+    "requiresVpn": false,
+    "repositoryUrl": "https://github.com/sanjarkola-collab/cloudstream-turkce-repo",
+    "sourceRepos": [
+      "DPI & DoH Korumalı (Özel Süper Sağlayıcı)"
+    ],
+    "fileSize": 60163,
+    "fileHash": "sha256-7793265ce901429c51d679decc01172c6fe1deec04a682bea1306fe8ea572d37",
+    "url": "https://cdn.jsdelivr.net/gh/sanjarkola-collab/cloudstream-turkce-dist@main/plugins/TurkDublajVodProvider.cs3"
   },
   {
     "fileHash": "sha256-75efe917d508687f65e6ba3cbbe34b3ac246d7c3c80edc8bbace005dcdc2e662",
