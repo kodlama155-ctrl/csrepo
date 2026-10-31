@@ -6,6 +6,7 @@ on:
   pull_request:
     paths:
       - ".github/workflows/android-emulator-smoke.yml"
+      - "scanner/benchmark_ten_plugins.py"
   workflow_dispatch:
 
 permissions:
@@ -23,6 +24,9 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v4
+
+      - name: Install Python benchmark dependency
+        run: python3 -m pip install -r requirements.txt
 
       - name: Enable KVM access
         run: |
@@ -43,3 +47,12 @@ jobs:
             booted="$(adb shell getprop sys.boot_completed | tr -d '\r')"
             test "$booted" = "1"
             echo "Android emulator boot succeeded (sys.boot_completed=1)"
+            python3 scanner/benchmark_ten_plugins.py
+
+      - name: Upload benchmark results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ten-plugin-preflight-benchmark
+          path: data/ten-plugin-preflight-benchmark.json
+          if-no-files-found: warn
