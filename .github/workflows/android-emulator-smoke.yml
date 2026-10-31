@@ -42,10 +42,8 @@ jobs:
           target: default
           disable-animations: true
           script: |
-            set -eu
             adb devices -l
-            booted="$(adb shell getprop sys.boot_completed | tr -d '\r')"
-            test "$booted" = "1"
+            adb shell getprop sys.boot_completed | tr -d '\r' | grep -qx '1'
             echo "Android emulator boot succeeded (sys.boot_completed=1)"
             python3 scanner/benchmark_ten_plugins.py
 
