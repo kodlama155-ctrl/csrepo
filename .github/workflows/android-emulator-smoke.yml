@@ -1,0 +1,56 @@
+# Stage 1: verify that the standard public GitHub Actions runner can boot Android.
+# This workflow does NOT load third-party plugins or modify CSRepo catalog data.
+name: Android Emulator Smoke Test
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/android-emulator-smoke.yml"
+      - "scanner/benchmark_ten_plugins.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: android-emulator-smoke-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  emulator-boot:
+    name: Android 13 boot check
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Install Python benchmark dependency
+        run: python3 -m pip install -r requirements.txt
+
+      - name: Enable KVM access
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+
+      - name: Boot Android and verify ADB
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 33
+          arch: x86_64
+          target: default
+          disable-animations: true
+          script: |
+            adb devices -l
+            adb shell getprop sys.boot_completed | tr -d '\r' | grep -qx '1'
+            echo "Android emulator boot succeeded (sys.boot_completed=1)"
+            python3 scanner/benchmark_ten_plugins.py
+
+      - name: Upload benchmark results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ten-plugin-preflight-benchmark
+          path: data/ten-plugin-preflight-benchmark.json
+          if-no-files-found: warn
