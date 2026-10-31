@@ -38,7 +38,7 @@ jobs:
           target: default
           disable-animations: true
           script: |
-            set -euo pipefail
+            set -eu
             adb devices -l
             booted="$(adb shell getprop sys.boot_completed | tr -d '\r')"
             test "$booted" = "1"
