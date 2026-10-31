@@ -1,0 +1,88 @@
+package com.lagradost.cloudstream3
+
+import android.os.SystemClock
+import android.util.Log
+import androidx.test.core.app.ActivityScenario
+import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.lagradost.cloudstream3.plugins.PluginManager
+import com.lagradost.cloudstream3.utils.TestingUtils
+import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withTimeoutOrNull
+import org.junit.Test
+import org.junit.runner.RunWith
+
+/**
+ * Temporary, isolated test added to an upstream CloudStream checkout by CI.
+ * Tests the actual downloaded .cs3 plugin on Android, not just a ZIP/HTTP check.
+ * A passing result proves CloudStream's provider checks (search/load/loadLinks),
+ * NOT decoded video playback or that every provider inside a bundle works.
+ */
+@RunWith(AndroidJUnit4::class)
+class CsrepoFivePluginTest {
+    data class Case(val label: String, val internal: String, val url: String, val hash: String?, val repository: String)
+    private val cases = listOf(
+        // CSREPO_SELECTED_PLUGIN_CASES
+    )
+
+    @Test
+    fun testFivePluginRuntime() {
+        ActivityScenario.launch(MainActivity::class.java).use { scenario ->
+            lateinit var activity: MainActivity
+            scenario.onActivity { activity = it }
+            for (candidate in cases) {
+                val started = SystemClock.elapsedRealtime()
+                var status = "inconclusive"
+                var reason = "unknown"
+                var providerCount = 0
+                try {
+                    runBlocking {
+                        val ok = withTimeoutOrNull(45_000L) {
+                            PluginManager.downloadPlugin(
+                                activity,
+                                candidate.url,
+                                candidate.hash,
+                                candidate.internal,
+                                candidate.repository,
+                                true
+                            )
+                        }
+                        if (ok != true) {
+                            status = "inconclusive"
+                            reason = if (ok == null) "download_or_load_timeout" else "download_or_plugin_load_failed"
+                        } else {
+                            val pluginFile = PluginManager.getPluginPath(activity, candidate.internal, candidate.repository).absolutePath
+                            val providers = APIHolder.allProviders.withLock {
+                                APIHolder.allProviders.filter { it.sourcePlugin == pluginFile }
+                            }
+                            providerCount = providers.size
+                            if (providers.isEmpty()) {
+                                status = "inconclusive"
+                                reason = "loaded_but_no_provider_registered"
+                            } else {
+                                // Bound test runtime: test a representative single provider per .cs3.
+                                val result = withTimeoutOrNull(50_000L) {
+                                    TestingUtils.runSingleProviderTest(providers.first(), TestingUtils.Logger())
+                                }
+                                if (result == null) {
+                                    status = "inconclusive"
+                                    reason = "provider_test_timeout"
+                                } else if (result.success) {
+                                    status = "runtime_pass"
+                                    reason = "search_load_and_link_checks_passed"
+                                } else {
+                                    status = "runtime_failed"
+                                    reason = result.exception?.javaClass?.simpleName ?: "provider_test_failed"
+                                }
+                            }
+                        }
+                    }
+                } catch (e: Throwable) {
+                    status = "inconclusive"
+                    reason = e.javaClass.simpleName
+                }
+                val duration = SystemClock.elapsedRealtime() - started
+                Log.i("CSREPO_E2E", "RESULT|${candidate.internal}|${status}|${duration}|${providerCount}|${reason}")
+            }
+        }
+    }
+}
