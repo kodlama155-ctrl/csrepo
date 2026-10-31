@@ -1,0 +1,80 @@
+# Prototype only. Builds upstream CloudStream in an ephemeral GitHub runner,
+# then loads exactly five CSRepo .cs3 plugins and invokes their real provider APIs.
+# No repository/catalog mutation. No secrets are passed to plugin code.
+name: Five CloudStream Runtime Provider Tests
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/five-cloudstream-providers.yml"
+      - "scanner/CsrepoFivePluginTest.kt.txt"
+      - "scanner/generate_five_runtime_test.py"
+      - "scanner/parse_five_runtime_test.py"
+      - "scanner/run_five_runtime_test.sh"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: five-cloudstream-providers-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  provider-runtime:
+    name: Five real CloudStream provider checks
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - name: Check out CSRepo without persisted credentials
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Check out pinned CloudStream sources
+        uses: actions/checkout@v4
+        with:
+          repository: recloudstream/cloudstream
+          ref: 5024ace2922a148d38df2a816b483b529789cf58
+          path: cloudstream
+          persist-credentials: false
+
+      - name: Select five plugins and create instrumentation tests
+        run: python3 scanner/generate_five_runtime_test.py cloudstream
+
+      - name: Prepare JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Cache Gradle dependencies
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Enable KVM
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+
+      - name: Boot Android and execute five plugin provider tests
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 33
+          arch: x86_64
+          target: default
+          disable-animations: true
+          script: bash scanner/run_five_runtime_test.sh
+
+      - name: Upload runtime results and Gradle diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: five-cloudstream-provider-runtime
+          if-no-files-found: warn
+          path: |
+            five-plugin-selection.json
+            five-provider-runtime-results.json
+            five-provider-logcat.txt
+            five-provider-gradle.log
+          retention-days: 7
