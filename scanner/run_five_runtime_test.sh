@@ -8,7 +8,7 @@ chmod +x ./gradlew
 echo "Running five-plugin CloudStream Android runtime checks..."
 echo "This can take time on an empty Gradle cache. Per-provider limits: 45s load + 50s runtime."
 timeout --signal=TERM --kill-after=10s 1500s \
-  ./gradlew :app:connectedDebugAndroidTest \
+  ./gradlew :app:connectedStableDebugAndroidTest \
   -Pandroid.testInstrumentationRunnerArguments.class=com.lagradost.cloudstream3.CsrepoFivePluginTest \
   --no-daemon --console=plain > ../five-provider-gradle.log 2>&1
 GRADLE_STATUS=$?
