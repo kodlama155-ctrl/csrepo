@@ -1,7 +1,7 @@
 {
   "name": "EmirTV — Depoları Seç",
   "description": "Hepsi Bir Arada deposunu veya istediğiniz Türkçe CloudStream depolarını tek tek seçebilirsiniz.",
-  "generated_at": "2026-11-01T13:38:51Z",
+  "generated_at": "2026-11-01T14:14:24Z",
   "sections": [
     {
       "id": "all",
@@ -14,7 +14,7 @@
           "description": "Aktif Türkçe CloudStream eklentilerinin otomatik doğrulanan ve tekilleştirilen birleşik deposu.",
           "repo_url": "https://raw.githubusercontent.com/kodlama155-ctrl/csrepo/main/repo-x92.json",
           "install_url": "cloudstreamrepo://raw.githubusercontent.com/kodlama155-ctrl/csrepo/main/repo-x92.json",
-          "plugin_count": 209,
+          "plugin_count": 259,
           "source_repository_count": 72,
           "status": "active",
           "recommended": true
@@ -183,7 +183,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 37,
-              "freshness_days": 3.6,
+              "freshness_days": 3.7,
               "github_stars": 50,
               "github_forks": 14,
               "fork": true,
@@ -226,7 +226,7 @@
             "metrics": {
               "declared_down_count": 2,
               "plugin_count": 67,
-              "freshness_days": 1.6,
+              "freshness_days": 1.7,
               "github_stars": 4,
               "github_forks": 2,
               "fork": false,
@@ -361,7 +361,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 66,
-              "freshness_days": 1.2,
+              "freshness_days": 1.3,
               "github_stars": 3,
               "github_forks": 0,
               "fork": false,
@@ -499,7 +499,7 @@
           },
           "github_stars": 4,
           "github_forks": 0,
-          "last_plugins_update": "2026-11-01T12:12:57Z",
+          "last_plugins_update": "2026-11-01T13:41:08Z",
           "short_addresses": [],
           "fork": false,
           "parent": null,
@@ -755,7 +755,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 14,
-              "freshness_days": 3.5,
+              "freshness_days": 3.6,
               "github_stars": 4,
               "github_forks": 0,
               "fork": false,
@@ -798,7 +798,7 @@
             "metrics": {
               "declared_down_count": 3,
               "plugin_count": 97,
-              "freshness_days": 29.9,
+              "freshness_days": 30.0,
               "github_stars": 0,
               "github_forks": 0,
               "fork": false,
@@ -1159,7 +1159,7 @@
           },
           "github_stars": 0,
           "github_forks": 0,
-          "last_plugins_update": "2026-11-01T13:18:55Z",
+          "last_plugins_update": "2026-11-01T13:41:52Z",
           "short_addresses": [],
           "fork": false,
           "parent": null,
@@ -1252,49 +1252,6 @@
           "self_contained": true,
           "trusted_seed": false,
           "turkish_score": 194,
-          "status": "active"
-        },
-        {
-          "id": "galipgokalp/tv-cloudstream",
-          "type": "repository",
-          "name": "Galip TV",
-          "description": "Kisisel Turkce icerik havuzu (film, dizi, belgesel, spor, canli TV)",
-          "icon_url": null,
-          "repository": "galipgokalp/tv-cloudstream",
-          "repository_url": "https://github.com/galipgokalp/tv-cloudstream",
-          "repo_url": "https://raw.githubusercontent.com/galipgokalp/tv-cloudstream/builds/repo.json",
-          "install_url": "cloudstreamrepo://raw.githubusercontent.com/galipgokalp/tv-cloudstream/builds/repo.json",
-          "plugin_count": 2,
-          "repo_score": 77.8,
-          "repo_score_details": {
-            "score": 77.8,
-            "components": {
-              "declared_health": 30.0,
-              "freshness": 25.0,
-              "originality": 15.0,
-              "github_popularity": 2.4,
-              "coverage": 0.4,
-              "turkish_focus": 5.0
-            },
-            "metrics": {
-              "declared_down_count": 0,
-              "plugin_count": 2,
-              "freshness_days": 7.0,
-              "github_stars": 2,
-              "github_forks": 0,
-              "fork": false,
-              "self_contained": true
-            }
-          },
-          "github_stars": 2,
-          "github_forks": 0,
-          "last_plugins_update": "2026-08-11T22:23:58Z",
-          "short_addresses": [],
-          "fork": false,
-          "parent": null,
-          "self_contained": true,
-          "trusted_seed": false,
-          "turkish_score": 177,
           "status": "active"
         },
         {
@@ -1857,6 +1814,49 @@
           "status": "active"
         },
         {
+          "id": "galipgokalp/tv-cloudstream",
+          "type": "repository",
+          "name": "Galip TV",
+          "description": "Kisisel Turkce icerik havuzu (film, dizi, belgesel, spor, canli TV)",
+          "icon_url": null,
+          "repository": "galipgokalp/tv-cloudstream",
+          "repository_url": "https://github.com/galipgokalp/tv-cloudstream",
+          "repo_url": "https://raw.githubusercontent.com/galipgokalp/tv-cloudstream/builds/repo.json",
+          "install_url": "cloudstreamrepo://raw.githubusercontent.com/galipgokalp/tv-cloudstream/builds/repo.json",
+          "plugin_count": 2,
+          "repo_score": 74.8,
+          "repo_score_details": {
+            "score": 74.8,
+            "components": {
+              "declared_health": 30.0,
+              "freshness": 22.0,
+              "originality": 15.0,
+              "github_popularity": 2.4,
+              "coverage": 0.4,
+              "turkish_focus": 5.0
+            },
+            "metrics": {
+              "declared_down_count": 0,
+              "plugin_count": 2,
+              "freshness_days": 7.0,
+              "github_stars": 2,
+              "github_forks": 0,
+              "fork": false,
+              "self_contained": true
+            }
+          },
+          "github_stars": 2,
+          "github_forks": 0,
+          "last_plugins_update": "2026-08-11T22:23:58Z",
+          "short_addresses": [],
+          "fork": false,
+          "parent": null,
+          "self_contained": true,
+          "trusted_seed": false,
+          "turkish_score": 177,
+          "status": "active"
+        },
+        {
           "id": "pisovo-5031/TurkSinema",
           "type": "repository",
           "name": "TurkSinema",
@@ -2098,7 +2098,7 @@
             "metrics": {
               "declared_down_count": 1,
               "plugin_count": 45,
-              "freshness_days": 5.6,
+              "freshness_days": 5.7,
               "github_stars": 0,
               "github_forks": 0,
               "fork": false,
@@ -2319,7 +2319,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 37,
-              "freshness_days": 8.6,
+              "freshness_days": 8.7,
               "github_stars": 0,
               "github_forks": 0,
               "fork": false,
@@ -2493,7 +2493,7 @@
             "metrics": {
               "declared_down_count": 1,
               "plugin_count": 45,
-              "freshness_days": 5.6,
+              "freshness_days": 5.7,
               "github_stars": 0,
               "github_forks": 0,
               "fork": true,
@@ -2538,7 +2538,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 2,
-              "freshness_days": 33.9,
+              "freshness_days": 34.0,
               "github_stars": 0,
               "github_forks": 0,
               "fork": false,
@@ -2843,7 +2843,7 @@
             "metrics": {
               "declared_down_count": 2,
               "plugin_count": 67,
-              "freshness_days": 79.8,
+              "freshness_days": 79.9,
               "github_stars": 0,
               "github_forks": 3,
               "fork": true,
@@ -2931,7 +2931,7 @@
             "metrics": {
               "declared_down_count": 2,
               "plugin_count": 67,
-              "freshness_days": 79.8,
+              "freshness_days": 79.9,
               "github_stars": 0,
               "github_forks": 0,
               "fork": true,
@@ -3062,7 +3062,7 @@
             "metrics": {
               "declared_down_count": 1,
               "plugin_count": 43,
-              "freshness_days": 47.8,
+              "freshness_days": 47.9,
               "github_stars": 0,
               "github_forks": 0,
               "fork": true,
@@ -3105,7 +3105,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 2,
-              "freshness_days": 39.1,
+              "freshness_days": 39.2,
               "github_stars": 0,
               "github_forks": 0,
               "fork": false,
