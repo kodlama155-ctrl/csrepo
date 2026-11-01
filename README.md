@@ -32,7 +32,7 @@ sonuçlarını ayrıca gönderir.
 
 Bu tablo bot tarafından otomatik güncellenir. Kısa kod/adresler kaynak repoların README dosyalarından tespit edilir.
 
-**Son tarama:** <code>2026-11-01T10:08:34Z</code>
+**Son tarama:** <code>2026-11-01T11:56:32Z</code>
 
 | Repo | Durum | Eklenti | Kısa kod / adres | Uzun repo.json |
 |---|---|---:|---|---|
