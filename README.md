@@ -1,12 +1,38 @@
 # csrepo
 CloudStream repo discovery and validation bot
 
+## Adım adım tarama
+
+Komutları `csrepo` klasöründe çalıştırın. Her aşamanın sonucu yerelde saklanır.
+
+| Komut | Yapılan iş |
+|---|---|
+| `python scanner/discover.py --stage 1` | Depoları bulur. |
+| `python scanner/discover.py --stage 2` | Bulunan depoları inceler; aynı anda en fazla 4 depo. |
+| `python scanner/discover.py --stage 3` | Eklenti dosyalarını ve kaynak sitelere erişimi kontrol eder. |
+| `python scanner/discover.py --stage 4` | Kontrol edilmiş sonuçlarla yereldeki ana listeyi günceller. |
+| `python scanner/discover.py --status` | Kayıtlı aşamaları, tarihlerini ve sürelerini gösterir. |
+
+İlk üç aşama ana listeyi değiştirmez. Örneğin, eklenti kontrolünü tekrar denemek
+için yalnızca `--stage 3` çalıştırın; sonucu listeye almak için ardından `--stage 4`
+çalıştırın. Aşama 3 video oynatmaz; dosya ve site erişimi kontrolü yapar.
+
+Bir aşamayı yenilerseniz sonraki aşamalar da yeniden çalıştırılmalıdır. Başarısız
+denemeler son başarılı kaydı korur. Gerekli kayıt yoksa bot hangi aşamanın önce
+çalıştırılması gerektiğini söyler. Ara sonuçlar Git'e eklenmeyen `.scan-state/`
+klasöründedir; dosyaları eksik veya değişmiş sonuçlar ana listeye alınmaz.
+
+`python scanner/discover.py --from-stage 3` üçüncü aşamadan sona kadar devam eder.
+`python scanner/discover.py` veya `--stage all` bütün aşamaları sırayla çalıştırır.
+Bu komutlar GitHub'a gönderim yapmaz; mevcut GitHub iş akışı başarılı tam tarama
+sonuçlarını ayrıca gönderir.
+
 <!-- AUTO_REPOS_START -->
 ## 📦 Güncel Önemli Türkçe CloudStream Repoları
 
 Bu tablo bot tarafından otomatik güncellenir. Kısa kod/adresler kaynak repoların README dosyalarından tespit edilir.
 
-**Son tarama:** <code>2026-11-01T05:55:12Z</code>
+**Son tarama:** <code>2026-11-01T10:08:34Z</code>
 
 | Repo | Durum | Eklenti | Kısa kod / adres | Uzun repo.json |
 |---|---|---:|---|---|

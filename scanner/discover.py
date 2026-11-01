@@ -8,12 +8,16 @@ import os
 import re
 import time
 from collections import Counter
-from datetime import datetime, timezone
+from contextlib import contextmanager
+from contextvars import ContextVar, copy_context
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from urllib.parse import quote, urlparse
+from urllib.parse import parse_qsl, quote, urlparse
 import io
 import socket
+import struct
 import zipfile
+import zlib
 import concurrent.futures
 import threading
 
@@ -23,14 +27,14 @@ API = "https://api.github.com"
 TOKEN = os.getenv("GITHUB_TOKEN", "").strip()
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
+MAX_REPO_IDLE_DAYS = 365
+REPO_WORKERS = 4
 
 HEADERS = {
     "Accept": "application/vnd.github+json",
     "X-GitHub-Api-Version": "2022-11-28",
     "User-Agent": "csrepo-cloudstream-finder",
 }
-if TOKEN:
-    HEADERS["Authorization"] = f"Bearer {TOKEN}"
 
 SEARCH_QUERIES = [
     "cloudstream Türkçe in:name,description",
@@ -62,6 +66,8 @@ TR_MARKERS = (
 
 SESSION = requests.Session()
 SESSION.headers.update(HEADERS)
+_PLUGIN_LIST_CACHE = ContextVar("plugin_list_cache", default=None)
+_HTTP_SESSION = threading.local()
 
 
 def now_iso() -> str:
@@ -70,8 +76,12 @@ def now_iso() -> str:
 
 def api_get(path_or_url: str, params=None, allow_404=False):
     url = path_or_url if path_or_url.startswith("http") else f"{API}{path_or_url}"
+    parsed_url = urlparse(url)
+    headers = {}
+    if TOKEN and parsed_url.scheme == "https" and parsed_url.netloc == "api.github.com":
+        headers["Authorization"] = f"Bearer {TOKEN}"
     for attempt in range(3):
-        r = SESSION.get(url, params=params, timeout=25)
+        r = getattr(_HTTP_SESSION, "value", SESSION).get(url, params=params, headers=headers, timeout=25)
         if r.status_code == 404 and allow_404:
             return None
         if r.status_code in (403, 429) and attempt < 2:
@@ -84,7 +94,7 @@ def api_get(path_or_url: str, params=None, allow_404=False):
 
 def text_get(url: str):
     for attempt in range(3):
-        r = SESSION.get(url, timeout=25)
+        r = getattr(_HTTP_SESSION, "value", SESSION).get(url, timeout=25)
         if r.status_code == 404:
             return None, None
         if r.status_code in (403, 429) and attempt < 2:
@@ -93,6 +103,63 @@ def text_get(url: str):
         r.raise_for_status()
         return r.text, r.headers.get("Last-Modified")
     return None, None
+
+
+@contextmanager
+def shared_plugin_lists():
+    token = _PLUGIN_LIST_CACHE.set({"bodies": {}, "updates": {}, "locks": {}, "lock": threading.Lock()})
+    try:
+        yield
+    finally:
+        _PLUGIN_LIST_CACHE.reset(token)
+
+
+@contextmanager
+def plugin_list_cache_entry(section, key):
+    cache = _PLUGIN_LIST_CACHE.get()
+    if cache is None:
+        yield None
+        return
+    with cache["lock"]:
+        lock = cache["locks"].setdefault((section, key), threading.Lock())
+    with lock:
+        yield cache[section]
+
+
+@contextmanager
+def timed_phase(label: str):
+    started = time.perf_counter()
+    completed = False
+    print(f"[phase] {label}", flush=True)
+    try:
+        yield
+        completed = True
+    finally:
+        elapsed = time.perf_counter() - started
+        status = "" if completed else " (tamamlanamadı)"
+        print(f"[time] {label}: {elapsed:.1f} sn{status}", flush=True)
+
+
+def plugin_list_cache_key(url: str):
+    parsed_url = urlparse(url)
+    if (parsed_url.scheme == "https" and parsed_url.netloc == "raw.githubusercontent.com"
+            and all(key in {"t", "v"} for key, _ in parse_qsl(parsed_url.query, keep_blank_values=True))):
+        parsed = parse_raw_github(url)
+        if parsed:
+            repo_full, ref, path = parsed
+            return "github-raw", repo_full.lower(), ref, path
+    return "url", url
+
+
+def plugin_list_text(url: str):
+    key = plugin_list_cache_key(url)
+    with plugin_list_cache_entry("bodies", key) as cache:
+        if cache is not None and key in cache:
+            return cache[key]
+        result = text_get(url)
+        if cache is not None and result[0] is not None:
+            cache[key] = result
+        return result
 
 
 def load_json(path: Path, default):
@@ -170,7 +237,7 @@ def markdown_cell(value) -> str:
     return str(value or "").replace("|", "\\|").replace("\n", " ").strip()
 
 
-def build_main_readme(repos: list[dict], bundle: dict, generated_at: str):
+def build_main_readme(repos: list[dict], bundle: dict, generated_at: str, *, output_root: Path | None = None):
     by_repo = {item.get("repository"): item for item in repos}
     featured = [by_repo[x] for x in IMPORTANT_REPOSITORIES if x in by_repo]
 
@@ -220,7 +287,8 @@ def build_main_readme(repos: list[dict], bundle: dict, generated_at: str):
     else:
         new_text = current.rstrip() + "\n\n" + auto_block
 
-    readme_path.write_text(new_text.rstrip() + "\n", encoding="utf-8")
+    target = (output_root / "README.md") if output_root is not None else readme_path
+    target.write_text(new_text.rstrip() + "\n", encoding="utf-8")
 
 
 def discover_candidates() -> dict[str, set[str]]:
@@ -279,6 +347,8 @@ def discover_candidates() -> dict[str, set[str]]:
         try:
             result = api_get("/search/repositories", {"q": query, "per_page": 100, "page": 1})
             for item in result.get("items", []):
+                if repo_is_stale(item.get("pushed_at")):
+                    continue
                 add(item["full_name"], f"repo-search:{query}")
         except requests.RequestException as e:
             print(f"[warn] repository search failed: {query}: {e}")
@@ -323,6 +393,8 @@ def discover_candidates() -> dict[str, set[str]]:
                 for item in repos:
                     full_name = item.get("full_name")
                     if not isinstance(full_name, str) or full_name == self_repository:
+                        continue
+                    if repo_is_stale(item.get("pushed_at")):
                         continue
 
                     name = item.get("name", "")
@@ -384,14 +456,25 @@ def latest_commit_for_path(full_name: str, ref: str, path: str):
 def parse_raw_github(url: str):
     try:
         p = urlparse(url)
-        if p.netloc != "raw.githubusercontent.com":
-            return None
         parts = [x for x in p.path.split("/") if x]
+        if p.netloc == "github.com":
+            if len(parts) < 5 or parts[2] != "raw":
+                return None
+            parts = parts[:2] + parts[3:]
+        elif p.netloc == "cdn.jsdelivr.net":
+            if len(parts) < 4 or parts[0] != "gh":
+                return None
+            repo, separator, ref = parts[2].partition("@")
+            if not separator or not repo or not ref:
+                return None
+            parts = [parts[1], repo, ref, *parts[3:]]
+        elif p.netloc != "raw.githubusercontent.com":
+            return None
         if len(parts) < 4:
             return None
         owner, repo = parts[0], parts[1]
         rest = parts[2:]
-        if len(rest) >= 5 and rest[0] == "refs" and rest[1] == "heads":
+        if len(rest) >= 4 and rest[0] == "refs" and rest[1] == "heads":
             ref = rest[2]
             file_path = "/".join(rest[3:])
         else:
@@ -431,8 +514,23 @@ def normalize_language(value) -> str | None:
     return v or None
 
 
-def plugin_list_info(url: str):
-    raw, _ = text_get(url)
+def plugin_list_update_info(url: str):
+    parsed = parse_raw_github(url)
+    if not parsed:
+        return None, None
+    repo_full, ref, path = parsed
+    key = repo_full.lower(), ref, path
+    with plugin_list_cache_entry("updates", key) as cache:
+        if cache is not None and key in cache:
+            return cache[key], repo_full
+        updated_at = latest_commit_for_path(repo_full, ref, path)
+        if cache is not None and updated_at is not None:
+            cache[key] = updated_at
+        return updated_at, repo_full
+
+
+def plugin_list_info(url: str, update_info=None):
+    raw, _ = plugin_list_text(url)
     if raw is None:
         return {
             "url": url, "reachable": False, "count": 0, "updated_at": None,
@@ -477,11 +575,7 @@ def plugin_list_info(url: str):
             if isinstance(value, str):
                 text_bits.append(value)
 
-    updated_at = None
-    parsed = parse_raw_github(url)
-    if parsed:
-        repo_full, ref, path = parsed
-        updated_at = latest_commit_for_path(repo_full, ref, path)
+    updated_at, source_repository = update_info if update_info is not None else plugin_list_update_info(url)
 
     tr_count = sum(count for lang, count in languages.items() if lang in TR_LANGUAGE_VALUES)
     return {
@@ -489,7 +583,7 @@ def plugin_list_info(url: str):
         "reachable": True,
         "count": len(plugins),
         "updated_at": updated_at,
-        "source_repository": parsed[0] if parsed else None,
+        "source_repository": source_repository,
         "languages": dict(sorted(languages.items())),
         "turkish_language_count": tr_count,
         "declared_down_count": declared_down_count,
@@ -598,24 +692,56 @@ def turkish_classification(item: dict, discovery_sources: set[str], seed_repos: 
 
 def inspect_repo(full_name: str, discovery_sources: set[str]):
     owner, repo = full_name.split("/", 1)
-    meta = api_get(f"/repos/{owner}/{repo}", allow_404=True)
+    try:
+        meta = api_get(f"/repos/{owner}/{repo}", allow_404=True)
+    except requests.HTTPError as error:
+        if error.response is not None and error.response.status_code == 451:
+            print(f"[skip] {full_name}: GitHub repository access blocked (HTTP 451)")
+            return None
+        raise
     if not meta or meta.get("private"):
         return None
+    if repo_is_stale(meta.get("pushed_at")):
+        return {
+            "repository": full_name,
+            "status": "stale",
+            "skip_reason": "repository-not-updated",
+            "last_repo_push": meta["pushed_at"],
+            "checked_at": now_iso(),
+        }
 
     manifest_hit = None
+    manifest_error = None
     for branch in branch_names(full_name, meta.get("default_branch") or "main"):
         try:
             hit = validate_manifest(full_name, branch)
-        except requests.RequestException:
+        except requests.RequestException as error:
+            manifest_error = error
             hit = None
         if hit:
             manifest_hit = (branch, *hit)
             break
 
     if not manifest_hit:
+        if manifest_error is not None:
+            raise manifest_error
         return None
 
     branch, repo_json_url, manifest = manifest_hit
+    list_updates = {}
+    for url in manifest.get("pluginLists", []):
+        if isinstance(url, str) and url.startswith(("https://", "http://")) and url not in list_updates:
+            list_updates[url] = plugin_list_update_info(url)
+    if list_updates and all(repo_is_stale(info[0]) for info in list_updates.values()):
+        return {
+            "repository": full_name,
+            "status": "stale",
+            "skip_reason": "plugin-lists-not-updated",
+            "last_repo_push": meta.get("pushed_at"),
+            "last_plugins_update": max(info[0] for info in list_updates.values()),
+            "checked_at": now_iso(),
+        }
+
     plugin_infos = []
     for url in manifest.get("pluginLists", []):
         if not isinstance(url, str) or not url.startswith(("https://", "http://")):
@@ -626,12 +752,15 @@ def inspect_repo(full_name: str, discovery_sources: set[str]):
             })
             continue
         try:
-            plugin_infos.append(plugin_list_info(url))
-        except requests.RequestException:
+            plugin_infos.append(plugin_list_info(url, list_updates[url]))
+        except requests.HTTPError as error:
+            if error.response is None or error.response.status_code != 403:
+                raise
             plugin_infos.append({
                 "url": url, "reachable": False, "count": 0, "updated_at": None,
                 "languages": {}, "turkish_language_count": 0, "text_sample": "",
-            "declared_down_count": 0, "declared_status_count": 0,
+                "declared_down_count": 0, "declared_status_count": 0,
+                "check_error": "http-403",
             })
 
     plugin_count = sum(x.get("count", 0) for x in plugin_infos)
@@ -646,6 +775,8 @@ def inspect_repo(full_name: str, discovery_sources: set[str]):
 
     if meta.get("archived"):
         status = "archived"
+    elif any(x.get("check_error") for x in plugin_infos):
+        status = "access-blocked"
     elif not reachable:
         status = "broken"
     elif plugin_count == 0:
@@ -680,6 +811,40 @@ def inspect_repo(full_name: str, discovery_sources: set[str]):
         "discovered_by": sorted(discovery_sources),
         "checked_at": now_iso(),
     }
+
+
+def inspect_repositories(candidates: dict[str, set[str]]):
+    """Inspect a few repositories concurrently; return results in stable order."""
+    if not candidates:
+        return
+    sessions = []
+    session_lock = threading.Lock()
+
+    def initialize_worker():
+        session = requests.Session()
+        session.headers.update(HEADERS)
+        _HTTP_SESSION.value = session
+        with session_lock:
+            sessions.append(session)
+
+    try:
+        with concurrent.futures.ThreadPoolExecutor(
+            max_workers=min(REPO_WORKERS, len(candidates)), initializer=initialize_worker,
+        ) as executor:
+            tasks = [
+                (name, executor.submit(copy_context().run, inspect_repo, name, sources))
+                for name, sources in sorted(candidates.items())
+            ]
+            for name, future in tasks:
+                try:
+                    item = future.result()
+                except Exception as error:
+                    yield name, None, error
+                else:
+                    yield name, item, None
+    finally:
+        for session in sessions:
+            session.close()
 
 
 def summarize_changes(old: list[dict], new: list[dict]):
@@ -736,6 +901,16 @@ def parse_iso(value: str | None):
         return datetime.fromisoformat(value.replace("Z", "+00:00"))
     except ValueError:
         return datetime.min.replace(tzinfo=timezone.utc)
+
+
+def repo_is_stale(last_push: str | None, checked_at: datetime | None = None) -> bool:
+    if not isinstance(last_push, str):
+        return False
+    pushed_at = parse_iso(last_push)
+    if pushed_at.year <= 1 or pushed_at.tzinfo is None:
+        return False
+    checked_at = checked_at or datetime.now(timezone.utc)
+    return pushed_at <= checked_at - timedelta(days=MAX_REPO_IDLE_DAYS)
 
 
 def calculate_repo_score(item: dict):
@@ -826,7 +1001,7 @@ def calculate_repo_score(item: dict):
 
 
 def fetch_plugin_entries(url: str):
-    raw, _ = text_get(url)
+    raw, _ = plugin_list_text(url)
     if not raw:
         return []
     try:
@@ -885,7 +1060,8 @@ IGNORED_PROVIDER_DOMAINS = {
     "jsdelivr.net", "wikimedia.org", "invidious.io", "strawpoll.com", "f5.si",
     "wsrv.nl", "weserv.nl", "statically.io", "tinyurl.com", "bit.ly", "imgur.com",
     "vidmoly.to", "vidmoly.net", "vidmoly.biz", "vidmoly.me", "fembed.com",
-    "mixdrop.co", "streamtape.com", "uqload.com", "filemoon.sx", "doodstream.com"
+    "mixdrop.co", "streamtape.com", "uqload.com", "filemoon.sx", "doodstream.com",
+    "res.cloudinary.com", "bp.blogspot.com",
 }
 
 
@@ -917,77 +1093,243 @@ def get_dynamic_domain_list(url: str) -> dict[str, str]:
     return mapping
 
 
+def dex_provider_metadata(data: bytes, *, related_to: set[str] | None = None):
+    """Read literal MainAPI.mainUrl assignments/getters without executing DEX code."""
+    if len(data) < 112 or not data.startswith(b"dex\n"):
+        return [], {}
+    order = ">" if data[40:44] == b"\x12\x34\x56\x78" else "<"
+
+    def uint(offset):
+        return struct.unpack_from(order + "I", data, offset)[0]
+
+    def ushort(offset):
+        return struct.unpack_from(order + "H", data, offset)[0]
+
+    def leb(offset):
+        value = 0
+        for shift in range(0, 35, 7):
+            byte = data[offset]
+            offset += 1
+            value |= (byte & 127) << shift
+            if not byte & 128:
+                return value, offset
+        raise ValueError("Invalid DEX integer")
+
+    def table(header, width):
+        count, offset = uint(header), uint(header + 4)
+        if count and (offset < 112 or offset > len(data) or count > (len(data) - offset) // width):
+            raise ValueError("Invalid DEX table")
+        return range(offset, offset + count * width, width)
+
+    try:
+        strings = []
+        for item in table(56, 4):
+            _, start = leb(uint(item))
+            end = data.find(b"\0", start)
+            if end < 0:
+                raise ValueError("Unterminated DEX string")
+            strings.append(data[start:end].decode("utf-8", errors="replace"))
+        types = [strings[uint(item)] for item in table(64, 4)]
+        fields = [(types[ushort(item)], strings[uint(item + 4)]) for item in table(80, 8)]
+        field_types = [types[ushort(item + 2)] for item in table(80, 8)]
+        methods = [(types[ushort(item)], strings[uint(item + 4)]) for item in table(88, 8)]
+        classes = {}
+        for item in table(96, 32):
+            parent = uint(item + 8)
+            classes[types[uint(item)]] = (types[parent] if parent != 0xFFFFFFFF else "", uint(item + 24))
+
+        def provider_class(name):
+            seen = set()
+            while name and name not in seen:
+                if name == "Lcom/lagradost/cloudstream3/MainAPI;":
+                    return True
+                seen.add(name)
+                name = classes.get(name, ("", 0))[0]
+            return False
+
+        widths = [0] * 256
+        for start, end, width in ((0x0A, 0x13, 1), (0x1D, 0x1F, 1), (0x1F, 0x21, 2),
+                                   (0x2D, 0x3E, 2), (0x44, 0x6E, 2), (0x6E, 0x73, 3),
+                                   (0x74, 0x79, 3), (0x7B, 0x90, 1), (0x90, 0xB0, 2),
+                                   (0xB0, 0xD0, 1), (0xD0, 0xE3, 2)):
+            widths[start:end] = [width] * (end - start)
+        for op, width in {0: 1, 1: 1, 2: 2, 3: 3, 4: 1, 5: 2, 6: 3, 7: 1, 8: 2, 9: 3,
+                          0x13: 2, 0x14: 3, 0x15: 2, 0x16: 2, 0x17: 3, 0x18: 5, 0x19: 2,
+                          0x1A: 2, 0x1B: 3, 0x1C: 2, 0x21: 1, 0x22: 2, 0x23: 2,
+                          0x24: 3, 0x25: 3, 0x26: 3, 0x27: 1, 0x28: 1, 0x29: 2,
+                          0x2A: 3, 0x2B: 3, 0x2C: 3, 0xFA: 4, 0xFB: 4, 0xFC: 3,
+                          0xFD: 3, 0xFE: 2, 0xFF: 2}.items():
+            widths[op] = width
+
+        def instructions(code):
+            count = uint(code + 12)
+            if count > (len(data) - code - 16) // 2:
+                raise ValueError("Invalid DEX instructions")
+            words = struct.unpack_from(order + "H" * count, data, code + 16)
+            position = 0
+            while position < len(words):
+                word = words[position]
+                op, width = word & 255, widths[word & 255]
+                if not width or position + width > len(words) or (op == 0 and word != 0):
+                    break
+                yield op, word, words[position + 1:position + width]
+                position += width
+
+        def literal_urls(code, method):
+            receiver = ushort(code) - ushort(code + 2)
+            pending, assigned = None, None
+            found = []
+            for op, word, operands in instructions(code):
+                if op in (0x1A, 0x1B):
+                    index = operands[0]
+                    if op == 0x1B:
+                        index |= operands[1] << 16
+                    pending = word >> 8, strings[index]
+                else:
+                    if op == 0x5B and word >> 12 == receiver and fields[operands[0]][1] == "mainUrl":
+                        register = (word >> 8) & 15
+                        assigned = pending[1] if pending is not None and pending[0] == register else None
+                    elif pending is not None and op == 0x11 and method == "getMainUrl" and word >> 8 == pending[0]:
+                        found.append(pending[1])
+                    pending = None
+            if method == "<init>" and assigned is not None:
+                found.append(assigned)
+            return found
+
+        def class_methods(offset):
+            if not offset:
+                return
+            counts = []
+            for _ in range(4):
+                count, offset = leb(offset)
+                counts.append(count)
+            if sum(counts[:2]) > len(fields) or sum(counts[2:]) > len(methods):
+                raise ValueError("Invalid DEX class data")
+            for _ in range(sum(counts[:2])):
+                _, offset = leb(offset)
+                _, offset = leb(offset)
+            for count in counts[2:]:
+                index = 0
+                for _ in range(count):
+                    delta, offset = leb(offset)
+                    index += delta
+                    _, offset = leb(offset)
+                    code, offset = leb(offset)
+                    yield *methods[index], code
+
+        selected_classes = classes
+        if related_to is not None:
+            # Follow local class references, including intermediate aggregators/lambdas.
+            # Unreferenced providers and arbitrary URL strings are not fallback sites.
+            selected_classes = {}
+            pending = list(related_to)
+            while pending:
+                name = pending.pop()
+                if name not in classes or name in selected_classes:
+                    continue
+                parent, offset = selected_classes[name] = classes[name]
+                pending.append(parent)
+                for index, (owner, _) in enumerate(fields):
+                    if owner == name:
+                        pending.append(field_types[index])
+                for owner, _, code in class_methods(offset):
+                    if owner != name or not code:
+                        continue
+                    for op, _, operands in instructions(code):
+                        if op in (0x1C, 0x1F, 0x20, 0x22, 0x23, 0x24, 0x25):
+                            pending.append(types[operands[0]])
+                        elif 0x52 <= op <= 0x6D:
+                            index = operands[0]
+                            pending.extend((fields[index][0], field_types[index]))
+                        elif 0x6E <= op <= 0x72 or 0x74 <= op <= 0x78:
+                            pending.append(methods[operands[0]][0])
+
+        declared = {}
+        for name, (_, offset) in selected_classes.items():
+            if not provider_class(name):
+                continue
+            known = any(owner == name and field == "mainUrl" for owner, field in fields)
+            found = []
+            for owner, method, code in class_methods(offset):
+                if owner == name and method == "getMainUrl":
+                    known = True
+                if code and owner == name and method in ("<init>", "getMainUrl"):
+                    found.extend(literal_urls(code, method))
+            if known or found:
+                declared[name] = found
+        return strings, declared
+    except (IndexError, ValueError, struct.error):
+        return [], {}
+
+
+def provider_site_url(value: str) -> str | None:
+    try:
+        parsed = urlparse(value)
+        domain = (parsed.hostname or "").lower()
+        if (parsed.scheme not in ("http", "https") or "." not in domain or len(domain) <= 4
+                or any(char.isspace() for char in value)
+                or any(domain == ign or domain.endswith("." + ign) for ign in IGNORED_PROVIDER_DOMAINS)):
+            return None
+        if (re.search(r"\.(?:png|jpe?g|gif|webp|svg|ico|avif)(?:$|/)", parsed.path, re.IGNORECASE)
+                or any(part in parsed.path.lower() for part in ("/picons/", "/logos/", "/image/fetch/", "/image/upload/", "/favicon"))):
+            return None
+        return value.rstrip("/") if not parsed.query else value
+    except ValueError:
+        return None
+
+
 def extract_provider_urls(dex_bytes: bytes, plugin_name: str, internal_name: str = "", icon_url: str = "") -> tuple[list[str], bool]:
-    raw_urls = re.findall(rb'https?://[a-zA-Z0-9\.\-_]+(?::\d+)?(?:/[a-zA-Z0-9\.\-_]*)*', dex_bytes)
-    raw_domains = re.findall(rb'(?:[a-zA-Z0-9-]+\.)+(?:com|net|org|tv|me|pw|xyz|top|site|online|info|cc|to|is|io|fun|pro|club|live)', dex_bytes)
-    cleaned = set()
-    for u in raw_urls:
+    strings, declared = dex_provider_metadata(dex_bytes)
+    if not strings:
+        if len(dex_bytes) >= 112 and dex_bytes.startswith(b"dex\n") and any(dex_bytes[56:60]):
+            return [], False
+        strings = [value.decode("ascii", errors="ignore")
+                   for value in re.findall(rb'https?://[^\x00\s<>"\x27]+', dex_bytes)]
+    values = [value for value in strings if value.startswith(("https://", "http://"))]
+    names = {re.sub(r"[^a-z0-9]", "", value.lower()) for value in (plugin_name, internal_name) if value}
+    names |= {name.removesuffix("provider") for name in tuple(names)}
+    names.discard("")
+    dynamic_urls = set()
+    for value in values:
         try:
-            s = u.decode("ascii", errors="ignore").strip().rstrip("/")
-            domain = s.split("://", 1)[1].split("/", 1)[0].split(":", 1)[0].lower()
-            if any(domain == ign or domain.endswith("." + ign) for ign in IGNORED_PROVIDER_DOMAINS):
-                continue
-            if "." in domain and len(domain) > 4:
-                cleaned.add("https://" + domain)
-        except Exception:
-            pass
-    for d in raw_domains:
-        try:
-            domain = d.decode("ascii", errors="ignore").strip().lower()
-            if any(domain == ign or domain.endswith("." + ign) for ign in IGNORED_PROVIDER_DOMAINS):
-                continue
-            if "." in domain and len(domain) > 4:
-                # Prioritize root domains over CDN/subdomains for main health check
-                cleaned.add("https://" + domain)
-        except Exception:
-            pass
-
-    # Inspect dynamic domain list files (e.g. eklenti_domainleri.txt)
-    dynamic_txt_matches = re.findall(rb'https?://[a-zA-Z0-9\.\-_/]+(?:domain[a-zA-Z0-9\.\-_/]*\.txt)', dex_bytes, re.IGNORECASE)
-    dynamic_txt_matches += re.findall(rb'https?://raw\.githubusercontent\.com/[a-zA-Z0-9\.\-_/]+\.txt', dex_bytes)
-
-    requires_dynamic = False
-    dynamic_found = False
-    for txt_b in set(dynamic_txt_matches):
-        txt_url = txt_b.decode("ascii", errors="ignore")
-        if "proxy" in txt_url.lower():
+            filename = urlparse(value).path.rsplit("/", 1)[-1].lower()
+            if filename.endswith(".txt") and ("domain" in filename or "adres" in filename) and "proxy" not in filename:
+                dynamic_urls.add(value)
+        except ValueError:
             continue
-        mapping = get_dynamic_domain_list(txt_url)
-        if mapping:
-            requires_dynamic = True
-            norm_name = re.sub(r"[^a-zA-Z0-9]", "", plugin_name.lower())
-            norm_internal = re.sub(r"[^a-zA-Z0-9]", "", internal_name.lower())
-            target_domain = mapping.get(norm_name) or mapping.get(norm_internal)
-            if target_domain:
-                cleaned.add(target_domain)
-                dynamic_found = True
+    mapped = set()
+    for url in sorted(dynamic_urls):
+        mapping = get_dynamic_domain_list(url)
+        for name in names:
+            target = provider_site_url(mapping.get(name, ""))
+            if target:
+                mapped.add(target)
+    if mapped:
+        return sorted(mapped), False
 
-    # If the plugin explicitly relies on a dynamic domain endpoint but has no configured entry and no fallback provider domain
-    dynamic_missing = bool(requires_dynamic and not dynamic_found and not cleaned)
+    matching = {owner: urls for owner, urls in declared.items()
+                if re.sub(r"[^a-z0-9]", "", owner.rsplit("/", 1)[-1].rstrip(";").lower()).removesuffix("provider") in names}
+    selected = matching if matching else declared
+    sites = {site for urls in selected.values() for value in urls if (site := provider_site_url(value))}
+    if matching and not sites:
+        _, related = dex_provider_metadata(dex_bytes, related_to=set(matching))
+        sites = {site for urls in related.values() for value in urls if (site := provider_site_url(value))}
+    if sites:
+        return sorted(sites), False
+    if dynamic_urls:
+        return [], True
+    if declared:
+        return [], False
 
-    # Optional fallback to iconUrl domain if candidate list is completely empty
-    if not cleaned and icon_url:
-        try:
-            parsed_icon = urlparse(icon_url)
-            icon_domain = parsed_icon.netloc.split(":")[0].lower()
-            if icon_domain and len(icon_domain) > 4 and "." in icon_domain:
-                if not any(icon_domain == ign or icon_domain.endswith("." + ign) for ign in IGNORED_PROVIDER_DOMAINS):
-                    cleaned.add("https://" + icon_domain)
-        except Exception:
-            pass
-
-    # Exclude CDN/media/image subdomains if primary root domains exist
-    primary_domains = [
-        u for u in cleaned
-        if not any(u.startswith(f"https://{prefix}.") for prefix in ("cdn", "static", "media", "image", "images", "assets", "img"))
-    ]
-    candidates = primary_domains if primary_domains else list(cleaned)
-    norm_name = re.sub(r"[^a-zA-Z0-9]", "", plugin_name.lower())
-    matched = [u for u in candidates if norm_name and norm_name in u.lower()]
-    return (matched if matched else candidates[:4]), dynamic_missing
-
-
-import struct
+    candidates = set()
+    for value in values:
+        site = provider_site_url(value)
+        if site:
+            parsed = urlparse(site)
+            candidates.add(f"{parsed.scheme}://{parsed.netloc}")
+    candidates = sorted(candidates)
+    matched = [url for url in candidates if any(name and name in url.lower() for name in names)]
+    return (matched if matched else candidates[:4]), False
 
 
 def query_ttnet_dns(host: str) -> list[str]:
@@ -1037,16 +1379,16 @@ def is_provider_dead(urls: list[str], domain_cache: dict[str, tuple[bool, str]],
     reasons = []
     for u in urls:
         parsed = urlparse(u)
-        host = parsed.netloc.split(":")[0]
+        host = parsed.hostname
         if not host:
             continue
 
         cached = None
         if lock:
             with lock:
-                cached = domain_cache.get(host)
+                cached = domain_cache.get(u)
         else:
-            cached = domain_cache.get(host)
+            cached = domain_cache.get(u)
 
         if cached is not None:
             dead, reason = cached
@@ -1064,9 +1406,9 @@ def is_provider_dead(urls: list[str], domain_cache: dict[str, tuple[bool, str]],
                     entry = (True, f"{host}:btk-blocked-sinkhole:{tip}")
                     if lock:
                         with lock:
-                            domain_cache[host] = entry
+                            domain_cache[u] = entry
                     else:
-                        domain_cache[host] = entry
+                        domain_cache[u] = entry
                     reasons.append(entry[1])
                     is_btk = True
                     break
@@ -1082,18 +1424,18 @@ def is_provider_dead(urls: list[str], domain_cache: dict[str, tuple[bool, str]],
                 entry = (True, f"{host}:btk-blocked-sinkhole")
                 if lock:
                     with lock:
-                        domain_cache[host] = entry
+                        domain_cache[u] = entry
                 else:
-                    domain_cache[host] = entry
+                    domain_cache[u] = entry
                 reasons.append(entry[1])
                 continue
         except Exception:
             entry = (True, f"{host}:dns-error")
             if lock:
                 with lock:
-                    domain_cache[host] = entry
+                    domain_cache[u] = entry
             else:
-                domain_cache[host] = entry
+                domain_cache[u] = entry
             reasons.append(entry[1])
             continue
 
@@ -1103,13 +1445,13 @@ def is_provider_dead(urls: list[str], domain_cache: dict[str, tuple[bool, str]],
         }
         try:
             r = requests.get(u, headers=headers, timeout=4, allow_redirects=True)
-            if r.status_code in (404, 410, 451) or r.status_code >= 500:
+            if not 200 <= r.status_code < 300:
                 entry = (True, f"{host}:http-{r.status_code}")
                 if lock:
                     with lock:
-                        domain_cache[host] = entry
+                        domain_cache[u] = entry
                 else:
-                    domain_cache[host] = entry
+                    domain_cache[u] = entry
                 reasons.append(entry[1])
                 continue
 
@@ -1125,9 +1467,9 @@ def is_provider_dead(urls: list[str], domain_cache: dict[str, tuple[bool, str]],
                 entry = (True, f"{host}:error-page:{found_err}")
                 if lock:
                     with lock:
-                        domain_cache[host] = entry
+                        domain_cache[u] = entry
                 else:
-                    domain_cache[host] = entry
+                    domain_cache[u] = entry
                 reasons.append(entry[1])
                 continue
 
@@ -1144,35 +1486,35 @@ def is_provider_dead(urls: list[str], domain_cache: dict[str, tuple[bool, str]],
                 entry = (True, f"{host}:parked-domain:{found_park}")
                 if lock:
                     with lock:
-                        domain_cache[host] = entry
+                        domain_cache[u] = entry
                 else:
-                    domain_cache[host] = entry
+                    domain_cache[u] = entry
                 reasons.append(entry[1])
                 continue
 
             entry = (False, f"{host}:alive")
             if lock:
                 with lock:
-                    domain_cache[host] = entry
+                    domain_cache[u] = entry
             else:
-                domain_cache[host] = entry
+                domain_cache[u] = entry
             return False, entry[1]
         except requests.exceptions.RequestException:
             entry = (True, f"{host}:unreachable")
             if lock:
                 with lock:
-                    domain_cache[host] = entry
+                    domain_cache[u] = entry
             else:
-                domain_cache[host] = entry
+                domain_cache[u] = entry
             reasons.append(entry[1])
             continue
         except Exception:
             entry = (True, f"{host}:unreachable-error")
             if lock:
                 with lock:
-                    domain_cache[host] = entry
+                    domain_cache[u] = entry
             else:
-                domain_cache[host] = entry
+                domain_cache[u] = entry
             reasons.append(entry[1])
             continue
 
@@ -1190,6 +1532,22 @@ def load_blacklist() -> set[str]:
         except Exception:
             pass
     return set()
+
+
+def valid_dex_header(data: bytes) -> bool:
+    """Verify stable DEX headers and integrity fields without executing code."""
+    if len(data) < 112 or not re.fullmatch(rb"dex\n0(?:35|37|38|39|40)\x00", data[:8]):
+        return False
+    endian = int.from_bytes(data[40:44], "little")
+    if endian not in (0x12345678, 0x78563412):
+        return False
+    byteorder = "big" if endian == 0x78563412 else "little"
+    return (
+        int.from_bytes(data[32:36], byteorder) == len(data)
+        and int.from_bytes(data[36:40], byteorder) == 112
+        and data[12:32] == hashlib.sha1(data[32:]).digest()
+        and int.from_bytes(data[8:12], byteorder) == zlib.adler32(data[12:])
+    )
 
 
 def validate_plugin_file(
@@ -1219,6 +1577,8 @@ def validate_plugin_file(
 
     expected_raw = plugin.get("fileHash")
     expected_norm = normalize_sha256(expected_raw)
+    if expected_raw is not None and expected_norm is None:
+        return {"ok": False, "reason": "invalid-file-hash"}
     cache_key = f"{url}|{expected_norm or ''}"
     if cache_lock:
         with cache_lock:
@@ -1288,7 +1648,9 @@ def validate_plugin_file(
                     _put_cache(cache, cache_key, result, cache_lock)
                     return result
 
-            # Deep verification: Valid ZIP with manifest.json and classes.dex
+            provider_check = "not-checked"
+            provider_reason = None
+            # Verify the required archive contents before checking candidate URLs.
             try:
                 with zipfile.ZipFile(io.BytesIO(content_bytes)) as z:
                     names = z.namelist()
@@ -1297,8 +1659,28 @@ def validate_plugin_file(
                         _put_cache(cache, cache_key, result, cache_lock)
                         return result
 
+                    if any(names.count(name) != 1 or z.getinfo(name).file_size > PLUGIN_MAX_BYTES
+                           for name in ("manifest.json", "classes.dex")):
+                        result = {"ok": False, "reason": "invalid-plugin-archive"}
+                        _put_cache(cache, cache_key, result, cache_lock)
+                        return result
+                    try:
+                        manifest = json.loads(z.read("manifest.json"))
+                    except (json.JSONDecodeError, UnicodeDecodeError):
+                        manifest = None
+                    if (not isinstance(manifest, dict)
+                            or not isinstance(manifest.get("pluginClassName"), str)
+                            or not manifest["pluginClassName"].strip()):
+                        result = {"ok": False, "reason": "invalid-plugin-manifest"}
+                        _put_cache(cache, cache_key, result, cache_lock)
+                        return result
+                    dex_bytes = z.read("classes.dex")
+                    if not valid_dex_header(dex_bytes):
+                        result = {"ok": False, "reason": "invalid-dex"}
+                        _put_cache(cache, cache_key, result, cache_lock)
+                        return result
+
                     if domain_cache is not None:
-                        dex_bytes = z.read("classes.dex")
                         candidate_urls, dynamic_missing = extract_provider_urls(
                             dex_bytes,
                             plugin.get("name") or "",
@@ -1306,27 +1688,12 @@ def validate_plugin_file(
                             plugin.get("iconUrl") or "",
                         )
                         if dynamic_missing:
-                            result = {
-                                "ok": False,
-                                "reason": "provider-dead:dynamic-domain-missing",
-                                "dead_urls": [],
-                                "size": size,
-                                "actual_hash": actual_hash,
-                            }
-                            _put_cache(cache, cache_key, result, cache_lock)
-                            return result
-
-                        dead, dead_reason = is_provider_dead(candidate_urls, domain_cache, domain_lock)
-                        if dead:
-                            result = {
-                                "ok": False,
-                                "reason": f"provider-dead:{dead_reason}",
-                                "dead_urls": candidate_urls,
-                                "size": size,
-                                "actual_hash": actual_hash,
-                            }
-                            _put_cache(cache, cache_key, result, cache_lock)
-                            return result
+                            provider_check = "unverified"
+                            provider_reason = "dynamic-domain-missing"
+                        else:
+                            dead, provider_reason = is_provider_dead(candidate_urls, domain_cache, domain_lock)
+                            # Embedded URLs are candidates, not proof of the address used at runtime.
+                            provider_check = "reachable" if candidate_urls and not dead else "unverified"
             except zipfile.BadZipFile:
                 result = {"ok": False, "reason": "bad-zip-file"}
                 _put_cache(cache, cache_key, result, cache_lock)
@@ -1338,6 +1705,8 @@ def validate_plugin_file(
                 "size": size,
                 "hash_checked": bool(expected_norm is not None),
                 "actual_hash": actual_hash,
+                "provider_check": provider_check,
+                "provider_reason": provider_reason,
             }
             _put_cache(cache, cache_key, result, cache_lock)
             return result
@@ -1347,7 +1716,7 @@ def validate_plugin_file(
         return result
 
 
-def build_cloudstream_bundle(app_ready: list[dict], seed_repos: set[str]):
+def build_cloudstream_bundle(app_ready: list[dict], seed_repos: set[str], *, output_root: Path | None = None):
     candidates: dict[str, list[tuple[dict, dict]]] = {}
 
     for repo_item in app_ready:
@@ -1361,10 +1730,9 @@ def build_cloudstream_bundle(app_ready: list[dict], seed_repos: set[str]):
             url = plist.get("url")
             if not isinstance(url, str):
                 continue
-            try:
-                entries = fetch_plugin_entries(url)
-            except requests.RequestException:
-                continue
+            entries = fetch_plugin_entries(url)
+            if not entries and (plist.get("count") or 0) > 0:
+                raise RuntimeError("Plugin list changed or could not be read; previous results retained.")
 
             for plugin in entries:
                 lang = normalize_language(plugin.get("language"))
@@ -1421,6 +1789,8 @@ def build_cloudstream_bundle(app_ready: list[dict], seed_repos: set[str]):
                 for p in top_candidates
             ]
             concurrent.futures.wait(futures)
+            for future in futures:
+                future.result()
 
     for key, variants in candidates.items():
         ranked = sorted(
@@ -1440,16 +1810,24 @@ def build_cloudstream_bundle(app_ready: list[dict], seed_repos: set[str]):
                 domain_lock,
                 blacklist,
             )
+            reason = check.get("reason") or ""
+            if reason in ("request-error", "http-408", "http-425", "http-429") or reason.startswith("http-5"):
+                raise RuntimeError("Plugin download could not be verified; previous results retained.")
+            publishable = bool(check.get("ok")) and check.get("provider_check") == "reachable"
+            if check.get("ok") and not publishable:
+                reason = "provider-unverified"
             attempts.append({
                 "repository": source_repo.get("repository"),
                 "url": plugin.get("url"),
                 "version": plugin.get("version"),
-                "result": check.get("reason"),
+                "result": reason,
+                "provider_check": check.get("provider_check", "not-checked"),
+                "provider_reason": check.get("provider_reason"),
             })
-            if check.get("ok"):
+            if publishable:
                 selected = (plugin, source_repo, check, variant_index)
                 break
-            rejection_counts[check.get("reason") or "unknown"] += 1
+            rejection_counts[reason or "unknown"] += 1
 
         if not selected:
             health_rows.append({
@@ -1480,9 +1858,14 @@ def build_cloudstream_bundle(app_ready: list[dict], seed_repos: set[str]):
             "version": plugin.get("version"),
             "size": check.get("size"),
             "hash_checked": check.get("hash_checked", False),
+            "provider_check": check.get("provider_check", "not-checked"),
+            "provider_reason": check.get("provider_reason"),
             "fallback_used": variant_index > 0,
             "attempts": attempts if variant_index > 0 else None,
         })
+
+    if not published:
+        raise RuntimeError("No verified plugins; previous results retained.")
 
     published.sort(key=lambda x: (
         str(x.get("name") or x.get("internalName") or "").lower(),
@@ -1519,6 +1902,7 @@ def build_cloudstream_bundle(app_ready: list[dict], seed_repos: set[str]):
         "healthy_plugin_count": len(published),
         "rejected_plugin_count": len(candidates) - len(published),
         "fallback_used_count": fallback_count,
+        "provider_unverified_count": sum(row.get("provider_check") != "reachable" for row in health_rows if row["status"] == "healthy"),
         "rejection_attempt_counts": dict(sorted(rejection_counts.items())),
         "checks": {
             "status_zero_rejected": True,
@@ -1526,20 +1910,22 @@ def build_cloudstream_bundle(app_ready: list[dict], seed_repos: set[str]):
             "non_empty_required": True,
             "sha256_verified_when_provided": True,
             "dex_and_manifest_verified": True,
-            "provider_domain_health_verified": True,
+            "provider_domain_health_verified": False,
+            "provider_checks_are_advisory": False,
+            "provider_reachable_required": True,
             "max_file_bytes": PLUGIN_MAX_BYTES,
             "executes_plugin_code": False,
         },
         "plugins": health_rows,
     }
 
-    # Save to private secret files
-    save_json(ROOT / PRIVATE_PLUGINS, published)
-    save_json(ROOT / PRIVATE_MANIFEST, repo_manifest)
-    # Neutralize legacy public files
-    save_json(ROOT / "plugins.json", [])
-    save_json(ROOT / "repo.json", legacy_manifest)
-    save_json(DATA / "plugin-health.json", health)
+    target_root = ROOT if output_root is None else output_root
+    target_data = DATA if output_root is None else output_root / "data"
+    save_json(target_root / PRIVATE_PLUGINS, published)
+    save_json(target_root / PRIVATE_MANIFEST, repo_manifest)
+    save_json(target_root / "plugins.json", [])
+    save_json(target_root / "repo.json", legacy_manifest)
+    save_json(target_data / "plugin-health.json", health)
     return len(published), health["rejected_plugin_count"], fallback_count
 
 
@@ -1549,8 +1935,10 @@ def cloudstream_install_url(url: str) -> str:
     return url
 
 
-def build_repo_catalog(app_ready: list[dict], published_plugin_count: int, seed_repos: set[str]):
-    bundle_url = "https://raw.githubusercontent.com/kodlama155-ctrl/csrepo/main/repo.json"
+def build_repo_catalog(app_ready: list[dict], published_plugin_count: int, seed_repos: set[str], *, output_root: Path | None = None):
+    target_root = ROOT if output_root is None else output_root
+    target_data = DATA if output_root is None else output_root / "data"
+    bundle_url = "https://raw.githubusercontent.com/kodlama155-ctrl/csrepo/main/repo-x92.json"
     generated_at = now_iso()
 
     bundle = {
@@ -1620,7 +2008,7 @@ def build_repo_catalog(app_ready: list[dict], published_plugin_count: int, seed_
             },
         ],
     }
-    save_json(DATA / "catalog.json", catalog)
+    save_json(target_data / "catalog.json", catalog)
 
     # Simple official-style repository database: original repos.
     repo_urls = []
@@ -1630,7 +2018,7 @@ def build_repo_catalog(app_ready: list[dict], published_plugin_count: int, seed_
         if url not in seen:
             seen.add(url)
             repo_urls.append(url)
-    save_json(ROOT / "repos-db.json", repo_urls)
+    save_json(target_root / "repos-db.json", repo_urls)
 
     lines = [
         "# Türkçe CloudStream Depo Kataloğu",
@@ -1651,33 +2039,32 @@ def build_repo_catalog(app_ready: list[dict], published_plugin_count: int, seed_
             suffix += " — " + ", ".join(flags)
         lines.append(f"- [{item['name']}]({item['install_url']}){suffix}")
     lines.append("")
-    (ROOT / "catalog.md").write_text("\n".join(lines), encoding="utf-8")
-    build_main_readme(repos, bundle, generated_at)
+    (target_root / "catalog.md").write_text("\n".join(lines), encoding="utf-8")
+    build_main_readme(repos, bundle, generated_at, output_root=output_root)
 
     return len(repos)
 
 
-def main():
-    DATA.mkdir(parents=True, exist_ok=True)
-    old_tr = load_json(DATA / "repos.json", [])
-    seeds = load_json(DATA / "seeds.json", [])
+def inspect_candidates(candidates: dict[str, set[str]], old_tr: list[dict], seeds: list[dict]):
+    previous_active_repos = {item.get("repository") for item in old_tr}
     seed_repos = {x["repository"] for x in seeds}
     seed_owners = {x.split("/", 1)[0] for x in seed_repos}
-
-    candidates = discover_candidates()
-    print(f"[info] candidates: {len(candidates)}")
-
-    turkish = []
-    global_other = []
-
-    for i, (full_name, sources) in enumerate(sorted(candidates.items()), 1):
+    turkish, global_other, stale_repositories, inspection_failures = [], [], [], []
+    for i, (full_name, item, error) in enumerate(inspect_repositories(candidates), 1):
         try:
-            item = inspect_repo(full_name, sources)
+            if error is not None:
+                raise error
+            if item and item.get("status") == "access-blocked" and full_name in previous_active_repos:
+                raise RuntimeError("Previously active repository access denied; previous results retained.")
             if not item:
                 print(f"[skip] {full_name}: no valid CloudStream repo.json")
                 continue
+            if item.get("status") == "stale":
+                stale_repositories.append(item)
+                print(f"[skip] {full_name}: {item.get('skip_reason', 'stale')} ({MAX_REPO_IDLE_DAYS} days)")
+                continue
 
-            cls = turkish_classification(item, sources, seed_repos, seed_owners)
+            cls = turkish_classification(item, candidates[full_name], seed_repos, seed_owners)
             item["turkish"] = cls
             if cls["is_turkish"]:
                 item["short_addresses"] = readme_short_addresses(
@@ -1698,10 +2085,14 @@ def main():
                 global_other.append(clean)
                 print(f"[global] {full_name}: {item['status']} / {item['plugin_count']} plugins")
         except Exception as e:
+            inspection_failures.append(full_name)
             print(f"[warn] {full_name}: {type(e).__name__}: {e}")
 
         if i % 20 == 0:
             time.sleep(1)
+
+    if inspection_failures:
+        raise RuntimeError(f"Scan incomplete: {len(inspection_failures)} repositories could not be checked; previous results retained.")
 
     sort_key = lambda x: (
         x.get("status") != "active",
@@ -1719,14 +2110,28 @@ def main():
 
     # Application feed: only active, non-empty and reachable Turkish repos.
     app_ready = [x for x in turkish if x.get("status") == "active" and (x.get("plugin_count") or 0) > 0]
+    if not app_ready:
+        raise RuntimeError("No active repositories verified; previous results retained.")
 
-    published_plugin_count, rejected_plugin_count, plugin_fallback_count = build_cloudstream_bundle(app_ready, seed_repos)
-    catalog_repo_count = build_repo_catalog(app_ready, published_plugin_count, seed_repos)
+    return {"turkish": turkish, "global_other": global_other,
+            "stale_repositories": stale_repositories, "app_ready": app_ready}
+
+
+def write_scan_outputs(candidates, inspection, old_tr, seeds, bundle_counts, *, output_root=None):
+    target_data = DATA if output_root is None else output_root / "data"
+    turkish = inspection["turkish"]
+    global_other = inspection["global_other"]
+    stale_repositories = inspection["stale_repositories"]
+    app_ready = inspection["app_ready"]
+    seed_repos = {x["repository"] for x in seeds}
+    published_plugin_count, rejected_plugin_count, plugin_fallback_count = bundle_counts
+
+    catalog_repo_count = build_repo_catalog(app_ready, published_plugin_count, seed_repos, output_root=output_root)
 
     changes = summarize_changes(old_tr, app_ready)
-    save_json(DATA / "candidates.json", sorted(candidates))
-    save_json(DATA / "repos.json", app_ready)
-    save_json(DATA / "ranking.json", [
+    save_json(target_data / "candidates.json", sorted(candidates))
+    save_json(target_data / "repos.json", app_ready)
+    save_json(target_data / "ranking.json", [
         {
             "rank": i,
             "repository": x.get("repository"),
@@ -1738,11 +2143,13 @@ def main():
         }
         for i, x in enumerate(app_ready, 1)
     ])
-    save_json(DATA / "turkish_all.json", turkish)
-    save_json(DATA / "global.json", global_other)
-    save_json(DATA / "changes.json", {
+    save_json(target_data / "turkish_all.json", turkish)
+    save_json(target_data / "global.json", global_other)
+    save_json(target_data / "changes.json", {
         "generated_at": now_iso(),
         "candidate_count": len(candidates),
+        "stale_repo_count": len(stale_repositories),
+        "stale_repositories": stale_repositories,
         "verified_count": len(turkish) + len(global_other),
         "turkish_count": len(turkish),
         "app_ready_count": len(app_ready),
@@ -1754,16 +2161,29 @@ def main():
         "changes": changes,
     })
 
-    print(
-        f"[done] verified={len(turkish) + len(global_other)} "
-        f"turkish={len(turkish)} app_ready={len(app_ready)} "
-        f"published_plugins={published_plugin_count} "
-        f"rejected_plugins={rejected_plugin_count} "
-        f"fallbacks={plugin_fallback_count} "
-        f"catalog_repos={catalog_repo_count} "
-        f"global={len(global_other)} changes={len(changes)}"
-    )
+    return catalog_repo_count
+
+
+def stage_runner():
+    try:
+        from scanner import stages
+    except ModuleNotFoundError as error:
+        if error.name != "scanner":
+            raise
+        import stages
+    return stages
+
+
+def main():
+    return stage_runner().run_stages(globals())
+
+
+def cli(argv=None):
+    return stage_runner().run_cli(globals(), argv)
 
 
 if __name__ == "__main__":
-    main()
+    import sys
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+    cli()
