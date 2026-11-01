@@ -44,6 +44,9 @@ jobs:
       - name: Scan repositories
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Re-ask sites that block this runner (403/451) from a Turkish Globalping probe.
+          CSREPO_TR_PROBE: "1"
+          GLOBALPING_TOKEN: ${{ secrets.GLOBALPING_TOKEN }}
         run: python scanner/discover.py
 
       - name: Commit scan results
