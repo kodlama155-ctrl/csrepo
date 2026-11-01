@@ -5,7 +5,7 @@ import struct
 import unittest
 import zlib
 from pathlib import Path
-from unittest.mock import patch
+from unittest.mock import Mock, patch
 
 
 SCANNER_PATH = Path(__file__).resolve().parents[1] / "scanner" / "discover.py"
@@ -155,6 +155,33 @@ class ProviderAddressTests(unittest.TestCase):
             urls, missing = self.scanner.extract_provider_urls(dex, "Example")
         self.assertEqual(urls, ["https://fresh.invalid/base"])
         self.assertFalse(missing)
+
+    def test_json_domain_list_address_is_used(self):
+        json_list = "https://raw.githubusercontent.com/example/domains/main/domains.json"
+        dex = (json_list + "\0https://example-old.invalid\0").encode()
+        with patch.object(self.scanner, "get_dynamic_domain_list", return_value={"example": "https://fresh.invalid"}) as load:
+            urls, missing = self.scanner.extract_provider_urls(dex, "Example")
+        load.assert_called_once_with(json_list)
+        self.assertEqual(urls, ["https://fresh.invalid"])
+        self.assertFalse(missing)
+
+    def test_json_domain_list_reads_only_top_level_addresses(self):
+        response = Mock(status_code=200)
+        response.json.return_value = {
+            "_updated": "2026-10-30T04:50:35Z",
+            "Example Site": "https://fresh.invalid",
+            "Nested": {"candidates": ["https://nested.invalid"]},
+            "mirrors": ["https://mirror.invalid"],
+        }
+        with patch.object(self.scanner.requests, "get", return_value=response):
+            mapping = self.scanner.get_dynamic_domain_list("https://example.invalid/domains.json")
+        self.assertEqual(mapping, {"examplesite": "https://fresh.invalid"})
+
+    def test_invalid_json_domain_list_has_no_addresses(self):
+        response = Mock(status_code=200)
+        response.json.side_effect = ValueError("not json")
+        with patch.object(self.scanner.requests, "get", return_value=response):
+            self.assertEqual(self.scanner.get_dynamic_domain_list("https://example.invalid/domains.json"), {})
 
     def test_image_hosts_and_image_paths_are_not_sites(self):
         dex = (b"https://res.cloudinary.com/demo/image/fetch/\0"

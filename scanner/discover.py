@@ -1077,15 +1077,24 @@ def get_dynamic_domain_list(url: str) -> dict[str, str]:
     try:
         r = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
         if r.status_code == 200:
-            for line in r.text.splitlines():
-                line = line.strip().lstrip("|")
-                if ":" in line:
-                    k, v = line.split(":", 1)
-                    k_norm = re.sub(r"[^a-zA-Z0-9]", "", k.lower())
-                    v_clean = v.strip()
-                    if not v_clean.startswith("http"):
-                        v_clean = "https://" + v_clean.lstrip("/")
-                    mapping[k_norm] = v_clean
+            if urlparse(url).path.lower().endswith(".json"):
+                # JSON lists: only top-level "Name": "https://site" entries are plugin addresses.
+                try:
+                    document = r.json()
+                except ValueError:
+                    document = None
+                pairs = [(k, v) for k, v in document.items()
+                         if isinstance(v, str) and v.strip().startswith(("http://", "https://"))
+                         ] if isinstance(document, dict) else []
+            else:
+                lines = (line.strip().lstrip("|") for line in r.text.splitlines())
+                pairs = [line.split(":", 1) for line in lines if ":" in line]
+            for k, v in pairs:
+                k_norm = re.sub(r"[^a-zA-Z0-9]", "", k.lower())
+                v_clean = v.strip()
+                if not v_clean.startswith("http"):
+                    v_clean = "https://" + v_clean.lstrip("/")
+                mapping[k_norm] = v_clean
     except Exception:
         pass
     with DYNAMIC_DOMAIN_LOCK:
@@ -1293,7 +1302,7 @@ def extract_provider_urls(dex_bytes: bytes, plugin_name: str, internal_name: str
     for value in values:
         try:
             filename = urlparse(value).path.rsplit("/", 1)[-1].lower()
-            if filename.endswith(".txt") and ("domain" in filename or "adres" in filename) and "proxy" not in filename:
+            if filename.endswith((".txt", ".json")) and ("domain" in filename or "adres" in filename) and "proxy" not in filename:
                 dynamic_urls.add(value)
         except ValueError:
             continue
