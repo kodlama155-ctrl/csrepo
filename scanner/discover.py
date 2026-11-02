@@ -1139,6 +1139,40 @@ DYNAMIC_DOMAIN_LIST_CACHE: dict[str, dict[str, str]] = {}
 DYNAMIC_DOMAIN_LOCK = threading.Lock()
 
 
+DOMAIN_LIST_URL_KEYS = ("url", "canonical", "mainUrl", "candidates", "gateways", "domains", "mirrors")
+DOMAIN_LIST_CONTAINERS = ("sources", "providers")
+
+
+def domain_list_pairs(document) -> list[tuple[str, str]]:
+    """(name, first address) pairs from the JSON domain-list layouts plugins publish:
+    {"Name": "https://site"}, {"Name": ["https://site", ...]},
+    {"key": {"name": "Name", "url": "https://site"}}, {"providers": {"Name": {"canonical": ...}}},
+    {"sources": {"name": {"candidates": [...]}}}."""
+    if not isinstance(document, dict):
+        return []
+
+    def first_url(value):
+        if isinstance(value, str):
+            return value.strip() if value.strip().startswith(("http://", "https://")) else None
+        if isinstance(value, list):
+            return next((url for item in value if isinstance(item, str) and (url := first_url(item))), None)
+        if isinstance(value, dict):
+            return next((url for key in DOMAIN_LIST_URL_KEYS if (url := first_url(value.get(key)))), None)
+        return None
+
+    pairs = []
+    for container in DOMAIN_LIST_CONTAINERS:
+        pairs.extend(domain_list_pairs(document.get(container)))
+    for key, value in document.items():
+        # Structural keys ("mirrors", "sources", ...) are not plugin names.
+        if key in DOMAIN_LIST_CONTAINERS or key in DOMAIN_LIST_URL_KEYS or not (url := first_url(value)):
+            continue
+        pairs.append((str(key), url))
+        if isinstance(value, dict) and isinstance(value.get("name"), str) and value["name"].strip():
+            pairs.append((value["name"], url))
+    return pairs
+
+
 def get_dynamic_domain_list(url: str) -> dict[str, str]:
     with DYNAMIC_DOMAIN_LOCK:
         if url in DYNAMIC_DOMAIN_LIST_CACHE:
@@ -1148,14 +1182,11 @@ def get_dynamic_domain_list(url: str) -> dict[str, str]:
         r = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
         if r.status_code == 200:
             if urlparse(url).path.lower().endswith(".json"):
-                # JSON lists: only top-level "Name": "https://site" entries are plugin addresses.
                 try:
                     document = r.json()
                 except ValueError:
                     document = None
-                pairs = [(k, v) for k, v in document.items()
-                         if isinstance(v, str) and v.strip().startswith(("http://", "https://"))
-                         ] if isinstance(document, dict) else []
+                pairs = domain_list_pairs(document)
             else:
                 lines = (line.strip().lstrip("|") for line in r.text.splitlines())
                 pairs = [line.split(":", 1) for line in lines if ":" in line]
@@ -1357,6 +1388,15 @@ def provider_site_url(value: str) -> str | None:
         return None
 
 
+def is_playlist_url(value: str) -> bool:
+    try:
+        parsed = urlparse(value)
+    except ValueError:
+        return False
+    return (parsed.scheme == "https" and "." in (parsed.hostname or "")
+            and parsed.path.lower().endswith((".m3u", ".m3u8")) and not any(c.isspace() for c in value))
+
+
 def extract_provider_urls(dex_bytes: bytes, plugin_name: str, internal_name: str = "", icon_url: str = "") -> tuple[list[str], bool]:
     strings, declared = dex_provider_metadata(dex_bytes)
     if not strings:
@@ -1395,6 +1435,10 @@ def extract_provider_urls(dex_bytes: bytes, plugin_name: str, internal_name: str
         sites = {site for urls in related.values() for value in urls if (site := provider_site_url(value))}
     if sites:
         return sorted(sites), False
+    # Playlist providers (mainUrl is an .m3u file, often on GitHub): the playlist is what must open.
+    playlists = {value for urls in selected.values() for value in urls if is_playlist_url(value)}
+    if playlists:
+        return sorted(playlists), False
     if dynamic_urls:
         return [], True
     if declared:

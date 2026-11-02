@@ -165,17 +165,31 @@ class ProviderAddressTests(unittest.TestCase):
         self.assertEqual(urls, ["https://fresh.invalid"])
         self.assertFalse(missing)
 
-    def test_json_domain_list_reads_only_top_level_addresses(self):
+    def test_json_domain_list_reads_published_layouts_but_not_structural_keys(self):
         response = Mock(status_code=200)
         response.json.return_value = {
             "_updated": "2026-10-30T04:50:35Z",
+            "schemaVersion": 1,
             "Example Site": "https://fresh.invalid",
-            "Nested": {"candidates": ["https://nested.invalid"]},
+            "Nested": {"candidates": ["https://nested.invalid", "https://nested2.invalid"]},
+            "Listed": ["not-a-url", "https://listed.invalid"],
+            "hdfilm": {"name": "HDFilm Plus", "url": "https://hd.invalid", "status": "ONLINE"},
+            "sources": {"sport": {"gateways": ["https://sport.invalid/"]}},
+            "providers": {"Kult": {"canonical": "https://kult.invalid", "allowedHosts": ["kult.invalid"]}},
             "mirrors": ["https://mirror.invalid"],
         }
         with patch.object(self.scanner.requests, "get", return_value=response):
             mapping = self.scanner.get_dynamic_domain_list("https://example.invalid/domains.json")
-        self.assertEqual(mapping, {"examplesite": "https://fresh.invalid"})
+        self.assertEqual(mapping, {
+            "examplesite": "https://fresh.invalid", "nested": "https://nested.invalid",
+            "listed": "https://listed.invalid", "hdfilm": "https://hd.invalid", "hdfilmplus": "https://hd.invalid",
+            "sport": "https://sport.invalid/", "kult": "https://kult.invalid",
+        })
+
+    def test_playlist_provider_is_checked_by_its_playlist_url(self):
+        playlist = "https://raw.githubusercontent.com/example/lists/main/tv.m3u"
+        urls, missing = self.scanner.extract_provider_urls(declared_url_dex(playlist), "Example")
+        self.assertEqual((urls, missing), ([playlist], False))
 
     def test_invalid_json_domain_list_has_no_addresses(self):
         response = Mock(status_code=200)
