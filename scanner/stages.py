@@ -24,7 +24,7 @@ BUNDLE_FILES = (
 OUTPUT_FILES = BUNDLE_FILES + (
     "README.md", "repos-db.json", "catalog.md", "data/catalog.json", "data/ranking.json",
     "data/repos.json", "data/turkish_all.json", "data/global.json", "data/candidates.json", "data/changes.json",
-    "data/owner-probes.json",
+    "data/owner-probes.json", "data/code-search.json",
 )
 
 
@@ -169,12 +169,14 @@ class StageStore:
                 seeds = self.api["load_json"](self.api["DATA"] / "seeds.json", [])
                 probes = self.api["load_json"](self.api["DATA"] / "owner-probes.json", {})
                 probes = probes if isinstance(probes, dict) else {}
-                candidates = self.api["discover_candidates"](probe_memory=probes)
+                code_search = self.api["load_json"](self.api["DATA"] / "code-search.json", {})
+                code_search = code_search if isinstance(code_search, dict) else {}
+                candidates = self.api["discover_candidates"](probe_memory=probes, search_memory=code_search)
                 if not candidates:
                     raise RuntimeError("Depo bulunamadı; önceki sonuçlar korundu.")
                 payload = {
                     "candidates": {name: sorted(sources) for name, sources in sorted(candidates.items())},
-                    "old_repos": old_repos, "seeds": seeds, "owner_probes": probes,
+                    "old_repos": old_repos, "seeds": seeds, "owner_probes": probes, "code_search": code_search,
                 }
                 print(f"[info] candidates: {len(candidates)}")
             elif stage == 2:
@@ -207,7 +209,7 @@ class StageStore:
                     catalog_count = self.api["write_scan_outputs"](
                         first["candidates"], inspection, first["old_repos"], first["seeds"],
                         parent["payload"]["bundle_counts"], output_root=prepared,
-                        owner_probes=first.get("owner_probes", {}),
+                        owner_probes=first.get("owner_probes", {}), code_search=first.get("code_search", {}),
                     )
                     payload = {"catalog_repo_count": catalog_count,
                                "output_hashes": {name: hashlib.sha256((prepared / name).read_bytes()).hexdigest()

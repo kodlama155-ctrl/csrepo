@@ -49,6 +49,7 @@ SEARCH_QUERIES = [
 CODE_QUERIES = [
     'filename:repo.json "pluginLists" "Türkçe"',
 ]
+CODE_SEARCH_INTERVAL = timedelta(hours=24)
 
 TR_LANGUAGE_VALUES = {
     "tr", "tr-tr", "tur", "turkish", "turkce", "türkçe", "turkiye", "türkiye"
@@ -320,11 +321,14 @@ def build_main_readme(repos: list[dict], bundle: dict, generated_at: str, *, out
     target.write_text(new_text.rstrip() + "\n", encoding="utf-8")
 
 
-def discover_candidates(probe_memory: dict | None = None) -> dict[str, set[str]]:
+def discover_candidates(probe_memory: dict | None = None,
+                        search_memory: dict | None = None) -> dict[str, set[str]]:
     """probe_memory maps repository -> pushed_at of its last definite "no repo.json" probe.
 
     When given, it is read and replaced in place with this scan's results so unchanged
     repositories are not probed again; a new push always triggers a fresh probe.
+    search_memory holds {"last_success": iso}; code search is skipped until it is
+    CODE_SEARCH_INTERVAL old and updated in place after a fully successful search.
     """
     found: dict[str, set[str]] = {}
     previous_probes = dict(probe_memory or {})
@@ -392,14 +396,24 @@ def discover_candidates(probe_memory: dict | None = None) -> dict[str, set[str]]
         except requests.RequestException as e:
             print(f"[warn] repository search failed: {query}: {e}")
 
-    for query in CODE_QUERIES:
-        try:
-            result = api_get("/search/code", {"q": query, "per_page": 100, "page": 1})
-            for item in result.get("items", []):
-                add(item["repository"]["full_name"], f"code-search:{query}")
-            time.sleep(1)
-        except requests.RequestException as e:
-            print(f"[warn] code search failed: {query}: {e}")
+    # Code search is easily rate-limited; repositories it found stay in the registry,
+    # so one successful search per CODE_SEARCH_INTERVAL is enough.
+    last_code_search = parse_iso((search_memory or {}).get("last_success"))
+    if search_memory is not None and datetime.now(timezone.utc) - last_code_search < CODE_SEARCH_INTERVAL:
+        print(f"[info] code search skipped; last success {search_memory['last_success']}")
+    else:
+        code_search_ok = bool(CODE_QUERIES)
+        for query in CODE_QUERIES:
+            try:
+                result = api_get("/search/code", {"q": query, "per_page": 100, "page": 1})
+                for item in result.get("items", []):
+                    add(item["repository"]["full_name"], f"code-search:{query}")
+                time.sleep(1)
+            except requests.RequestException as e:
+                code_search_ok = False
+                print(f"[warn] code search failed: {query}: {e}")
+        if search_memory is not None and code_search_ok:
+            search_memory["last_success"] = now_iso()
 
     # Search sibling repositories without trusting their names/descriptions.
     # Owners are learned from seeds and previously verified Turkish repos.
@@ -2345,7 +2359,7 @@ def inspect_candidates(candidates: dict[str, set[str]], old_tr: list[dict], seed
 
 
 def write_scan_outputs(candidates, inspection, old_tr, seeds, bundle_counts, *, output_root=None,
-                       owner_probes=None):
+                       owner_probes=None, code_search=None):
     target_data = DATA if output_root is None else output_root / "data"
     turkish = inspection["turkish"]
     global_other = inspection["global_other"]
@@ -2360,6 +2374,7 @@ def write_scan_outputs(candidates, inspection, old_tr, seeds, bundle_counts, *, 
     save_json(target_data / "candidates.json", sorted(candidates))
     # Repositories checked and found without repo.json, keyed to their last push.
     save_json(target_data / "owner-probes.json", dict(sorted((owner_probes or {}).items())))
+    save_json(target_data / "code-search.json", code_search or {})
     save_json(target_data / "repos.json", app_ready)
     save_json(target_data / "ranking.json", [
         {
