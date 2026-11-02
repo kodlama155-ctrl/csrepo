@@ -1992,34 +1992,39 @@ def build_cloudstream_bundle(app_ready: list[dict], seed_repos: set[str], *, out
     rejection_counts = Counter()
     fallback_count = 0
 
-    # Pre-validate top candidate of each plugin in parallel
-    top_candidates = []
-    for variants in candidates.values():
-        ranked = sorted(
-            variants,
-            key=lambda pair: plugin_variant_rank(pair[0], pair[1], seed_repos),
-            reverse=True,
-        )
-        if ranked:
-            top_candidates.append(ranked[0][0])
-
-    if top_candidates:
-        with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
-            futures = [
-                executor.submit(
+    # Pre-validate in parallel, one variant rank per round: round N checks the N-th best
+    # variant only for plugins with no publishable variant yet. This downloads the same
+    # files the sequential selection below would, but in parallel; selection reads the cache.
+    ranked_variants = {
+        key: sorted(variants, key=lambda pair: plugin_variant_rank(pair[0], pair[1], seed_repos), reverse=True)
+        for key, variants in candidates.items()
+    }
+    pending = [key for key, ranked in ranked_variants.items() if ranked]
+    depth = 0
+    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+        while pending:
+            batch = [key for key in pending if depth < len(ranked_variants[key])]
+            futures = {
+                key: executor.submit(
                     validate_plugin_file,
-                    p,
+                    ranked_variants[key][depth][0],
                     file_cache,
                     cache_lock,
                     domain_cache,
                     domain_lock,
                     blacklist,
                 )
-                for p in top_candidates
-            ]
-            concurrent.futures.wait(futures)
-            for future in futures:
-                future.result()
+                for key in batch
+            }
+            pending = []
+            for key, future in futures.items():
+                check = future.result()
+                reason = check.get("reason") or ""
+                if reason in ("request-error", "http-408", "http-425", "http-429") or reason.startswith("http-5"):
+                    continue  # Selection below stops the scan on this result; do not fetch more.
+                if not (check.get("ok") and check.get("provider_check") == "reachable"):
+                    pending.append(key)
+            depth += 1
 
     for key, variants in candidates.items():
         ranked = sorted(
