@@ -291,8 +291,15 @@ def build_main_readme(repos: list[dict], bundle: dict, generated_at: str, *, out
     target.write_text(new_text.rstrip() + "\n", encoding="utf-8")
 
 
-def discover_candidates() -> dict[str, set[str]]:
+def discover_candidates(probe_memory: dict | None = None) -> dict[str, set[str]]:
+    """probe_memory maps repository -> pushed_at of its last definite "no repo.json" probe.
+
+    When given, it is read and replaced in place with this scan's results so unchanged
+    repositories are not probed again; a new push always triggers a fresh probe.
+    """
     found: dict[str, set[str]] = {}
+    previous_probes = dict(probe_memory or {})
+    current_probes: dict[str, str] = {}
     self_repository = os.getenv("GITHUB_REPOSITORY", "kodlama155-ctrl/csrepo")
 
     def add(full_name: str, source: str):
@@ -314,12 +321,14 @@ def discover_candidates() -> dict[str, set[str]]:
             and bool(payload.get("pluginLists"))
         )
 
-    def probe_manifest(full_name: str, default_branch: str | None) -> bool:
+    def probe_manifest(full_name: str, default_branch: str | None) -> bool | None:
+        """True: manifest found. False: every branch answered without one. None: a request failed."""
         owner, repo_name = full_name.split("/", 1)
         branches = []
         for branch in (default_branch, "builds", "main", "master"):
             if branch and branch not in branches:
                 branches.append(branch)
+        failed = False
         for branch in branches:
             url = (
                 f"https://raw.githubusercontent.com/{owner}/{repo_name}/"
@@ -328,10 +337,11 @@ def discover_candidates() -> dict[str, set[str]]:
             try:
                 raw, _ = text_get(url)
             except requests.RequestException:
+                failed = True
                 continue
             if looks_like_repo_manifest(raw):
                 return True
-        return False
+        return None if failed else False
 
     seeds = load_json(DATA / "seeds.json", [])
     for item in seeds:
@@ -408,15 +418,31 @@ def discover_candidates() -> dict[str, set[str]]:
 
                     # Generic names such as "emir" are detected by their actual
                     # repo.json structure instead of repository metadata.
-                    if full_name not in found and probe_manifest(full_name, item.get("default_branch")):
+                    if full_name in found:
+                        continue
+                    pushed_at = item.get("pushed_at")
+                    if isinstance(pushed_at, str) and previous_probes.get(full_name) == pushed_at:
+                        # Not pushed since the last definite negative probe.
+                        current_probes[full_name] = pushed_at
+                        continue
+                    probe = probe_manifest(full_name, item.get("default_branch"))
+                    if probe:
                         add(full_name, f"owner-manifest:{owner}")
+                    elif probe is False and isinstance(pushed_at, str):
+                        current_probes[full_name] = pushed_at
 
                 if len(repos) < 100:
                     break
                 page += 1
         except requests.RequestException as e:
             print(f"[warn] owner expansion failed: {owner}: {e}")
+            # Keep memory for owners that could not be listed this time.
+            current_probes.update({name: pushed for name, pushed in previous_probes.items()
+                                   if name.split("/", 1)[0] == owner})
 
+    if probe_memory is not None:
+        probe_memory.clear()
+        probe_memory.update(sorted(current_probes.items()))
     return found
 
 
@@ -2204,6 +2230,7 @@ def inspect_candidates(candidates: dict[str, set[str]], old_tr: list[dict], seed
     seed_repos = {x["repository"] for x in seeds}
     seed_owners = {x.split("/", 1)[0] for x in seed_repos}
     turkish, global_other, stale_repositories, inspection_failures = [], [], [], []
+    skipped = []
     for i, (full_name, item, error) in enumerate(inspect_repositories(candidates), 1):
         try:
             if error is not None:
@@ -2212,6 +2239,9 @@ def inspect_candidates(candidates: dict[str, set[str]], old_tr: list[dict], seed
                 raise RuntimeError("Previously active repository access denied; previous results retained.")
             if not item:
                 print(f"[skip] {full_name}: no valid CloudStream repo.json")
+                # Covers missing/private repositories, HTTP 451 and absent or invalid repo.json.
+                skipped.append({"repository": full_name, "reason": "no-valid-repo-json",
+                                "discovered_by": sorted(candidates[full_name])})
                 continue
             if item.get("status") == "stale":
                 stale_repositories.append(item)
@@ -2268,10 +2298,11 @@ def inspect_candidates(candidates: dict[str, set[str]], old_tr: list[dict], seed
         raise RuntimeError("No active repositories verified; previous results retained.")
 
     return {"turkish": turkish, "global_other": global_other,
-            "stale_repositories": stale_repositories, "app_ready": app_ready}
+            "stale_repositories": stale_repositories, "app_ready": app_ready, "skipped": skipped}
 
 
-def write_scan_outputs(candidates, inspection, old_tr, seeds, bundle_counts, *, output_root=None):
+def write_scan_outputs(candidates, inspection, old_tr, seeds, bundle_counts, *, output_root=None,
+                       owner_probes=None):
     target_data = DATA if output_root is None else output_root / "data"
     turkish = inspection["turkish"]
     global_other = inspection["global_other"]
@@ -2284,6 +2315,8 @@ def write_scan_outputs(candidates, inspection, old_tr, seeds, bundle_counts, *, 
 
     changes = summarize_changes(old_tr, app_ready)
     save_json(target_data / "candidates.json", sorted(candidates))
+    # Repositories checked and found without repo.json, keyed to their last push.
+    save_json(target_data / "owner-probes.json", dict(sorted((owner_probes or {}).items())))
     save_json(target_data / "repos.json", app_ready)
     save_json(target_data / "ranking.json", [
         {

@@ -176,7 +176,7 @@ class ScanStageTests(unittest.TestCase):
         self.assertEqual(self.store.load(4)["stage"], 4)
 
     def test_sources_changed_during_discovery_do_not_create_a_checkpoint(self):
-        def discover():
+        def discover(probe_memory=None):
             self.scanner.save_json(self.scanner.DATA / "seeds.json", [{"repository": "other/repo"}])
             return {"example/repo": {"seed"}}
 

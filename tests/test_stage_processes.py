@@ -63,7 +63,7 @@ class StageProcessTests(unittest.TestCase):
                 "s=importlib.util.module_from_spec(spec); spec.loader.exec_module(s)\n"
                 "s.ROOT=Path(__file__).parent; s.DATA=s.ROOT/'data'\n"
                 "def forbidden(*args, **kwargs): raise AssertionError('Earlier stage was repeated')\n"
-                "s.discover_candidates=(lambda: {'example/repo': {'seed'}}) if sys.argv[1]=='1' else forbidden\n"
+                "s.discover_candidates=(lambda probe_memory=None: {'example/repo': {'seed'}}) if sys.argv[1]=='1' else forbidden\n"
                 f"s.inspect_repo=(lambda *args: {{'repository':'example/repo', 'name':'Example', 'status':'active',"
                 f"'plugin_count':1, 'repo_url':{(base + '/repo.json')!r}, 'plugin_lists':[{{'url':{(base + '/plugins.json')!r},"
                 "'count':1,'reachable':True,'languages':{'tr':1},'turkish_language_count':1}]}) "
