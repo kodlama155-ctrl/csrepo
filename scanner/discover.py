@@ -1896,6 +1896,11 @@ def validate_plugin_file(
         return result
 
 
+# Provider check results that reflect a scanner limitation rather than a dead site.
+# Plugins with only these results stay published, marked provider_check="unverified".
+CHECKER_LIMIT_REASONS = frozenset({"dynamic-domain-missing", "no-urls"})
+
+
 def build_cloudstream_bundle(app_ready: list[dict], seed_repos: set[str], *, output_root: Path | None = None):
     candidates: dict[str, list[tuple[dict, dict]]] = {}
 
@@ -1980,6 +1985,7 @@ def build_cloudstream_bundle(app_ready: list[dict], seed_repos: set[str], *, out
         )
 
         selected = None
+        unverifiable = None
         attempts = []
         for variant_index, (plugin, source_repo) in enumerate(ranked):
             check = validate_plugin_file(
@@ -2007,7 +2013,14 @@ def build_cloudstream_bundle(app_ready: list[dict], seed_repos: set[str], *, out
             if publishable:
                 selected = (plugin, source_repo, check, variant_index)
                 break
+            if (unverifiable is None and check.get("ok")
+                    and check.get("provider_reason") in CHECKER_LIMIT_REASONS):
+                unverifiable = (plugin, source_repo, check, variant_index)
             rejection_counts[reason or "unknown"] += 1
+
+        if not selected and unverifiable:
+            # File checks passed; only the scanner could not find a site address to test.
+            selected = unverifiable
 
         if not selected:
             health_rows.append({
@@ -2093,6 +2106,7 @@ def build_cloudstream_bundle(app_ready: list[dict], seed_repos: set[str], *, out
             "provider_domain_health_verified": False,
             "provider_checks_are_advisory": False,
             "provider_reachable_required": True,
+            "provider_unverifiable_allowed": sorted(CHECKER_LIMIT_REASONS),
             "max_file_bytes": PLUGIN_MAX_BYTES,
             "executes_plugin_code": False,
         },

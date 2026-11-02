@@ -104,14 +104,16 @@ class ProviderPublicationTests(unittest.TestCase):
                 self.assertIn(expected, rejected["attempts"][0]["provider_reason"])
                 self.assertEqual(health["provider_unverified_count"], 0)
 
-    def test_plugin_without_site_address_is_not_published(self):
+    def test_plugin_without_site_address_is_published_as_unverified(self):
         counts, published, health = self.build([self.good, self.bad], {
             self.good["url"]: provider_package(self.good_site), self.bad["url"]: package(),
         })
-        self.assertEqual([p["internalName"] for p in published], ["Good"])
-        self.assertEqual(counts, (1, 1, 0))
-        rejected = next(row for row in health["plugins"] if row["status"] == "rejected")
-        self.assertEqual(rejected["attempts"][0]["provider_reason"], "no-urls")
+        self.assertEqual(sorted(p["internalName"] for p in published), ["Blocked", "Good"])
+        self.assertEqual(counts, (2, 0, 0))
+        row = next(row for row in health["plugins"] if row["internal_name"] == "blocked")
+        self.assertEqual((row["status"], row["provider_check"], row["provider_reason"]),
+                         ("healthy", "unverified", "no-urls"))
+        self.assertEqual(health["provider_unverified_count"], 1)
 
     def test_aggregator_is_published_only_when_a_referenced_provider_is_reachable(self):
         wrapper = dict(self.bad, name="0 Wrapper", internalName="Wrapper")
@@ -142,15 +144,16 @@ class ProviderPublicationTests(unittest.TestCase):
         self.assertFalse(health["checks"]["provider_checks_are_advisory"])
         self.assertTrue(health["checks"]["provider_reachable_required"])
 
-    def test_missing_dynamic_address_is_not_published(self):
+    def test_missing_dynamic_address_is_published_as_unverified(self):
         with patch.object(self.scanner, "extract_provider_urls", side_effect=lambda data, name, *args:
                           ([self.good_site], False) if name == "Good" else ([], True)):
             counts, published, health = self.build([self.good, self.bad], {
                 self.good["url"]: package(), self.bad["url"]: package(),
             })
-        self.assertEqual([p["internalName"] for p in published], ["Good"])
-        rejected = next(row for row in health["plugins"] if row["status"] == "rejected")
-        self.assertEqual(rejected["attempts"][0]["provider_reason"], "dynamic-domain-missing")
+        self.assertEqual(sorted(p["internalName"] for p in published), ["Blocked", "Good"])
+        row = next(row for row in health["plugins"] if row["internal_name"] == "blocked")
+        self.assertEqual((row["status"], row["provider_check"], row["provider_reason"]),
+                         ("healthy", "unverified", "dynamic-domain-missing"))
 
     def test_all_unverified_plugins_preserve_existing_outputs(self):
         previous = self.scanner.ROOT / "plugins-x92.json"
