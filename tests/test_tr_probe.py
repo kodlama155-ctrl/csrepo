@@ -147,6 +147,18 @@ class TurkishProbeTests(unittest.TestCase):
                 self.assertTrue(all("Authorization" not in call.kwargs["headers"] for call in later))
                 self.assertNotIn("secret-value", output.getvalue())
 
+    def test_first_measurement_logs_token_presence_once_without_value(self):
+        for token, expected in (("secret-value", "token: var"), ("", "token: yok")):
+            with self.subTest(token=bool(token)):
+                scanner = self.load_with_token(token)
+                output = io.StringIO()
+                with patch.object(scanner.requests, "post", return_value=api_response(500)), \
+                     contextlib.redirect_stdout(output):
+                    scanner.globalping_http("https://first.invalid")
+                    scanner.globalping_http("https://second.invalid")
+                self.assertEqual(output.getvalue().count(expected), 1)
+                self.assertNotIn("secret-value", output.getvalue())
+
     def test_no_token_sends_no_authorization(self):
         with patch.object(self.scanner.requests, "post", return_value=api_response(500)) as post:
             self.scanner.globalping_http("https://provider.invalid")

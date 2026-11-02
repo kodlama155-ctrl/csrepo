@@ -1412,6 +1412,10 @@ def globalping_http(url: str):
         if _TR_PROBE["stopped"] or _TR_PROBE["used"] >= TR_PROBE_MAX_MEASUREMENTS:
             return None
         _TR_PROBE["used"] += 1
+        first_measurement = _TR_PROBE["used"] == 1
+    if first_measurement:
+        # Presence only; the token value itself is never printed.
+        print(f"[tr] Globalping başladı; token: {'var' if GLOBALPING_TOKEN else 'yok'}")
     request = {"method": "GET", "path": parsed.path or "/"}
     if parsed.query:
         request["query"] = parsed.query
