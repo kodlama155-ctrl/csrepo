@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-02T12:28:38Z",
+  "generated_at": "2026-11-02T12:45:12Z",
   "candidate_plugin_count": 423,
-  "healthy_plugin_count": 361,
-  "rejected_plugin_count": 62,
+  "healthy_plugin_count": 359,
+  "rejected_plugin_count": 64,
   "fallback_used_count": 39,
   "provider_unverified_count": 70,
   "rejection_attempt_counts": {
@@ -11,7 +11,7 @@
     "hash-mismatch": 10,
     "http-404": 64,
     "invalid-status": 8,
-    "provider-unverified": 537,
+    "provider-unverified": 544,
     "status-down": 32
   },
   "checks": {
@@ -446,7 +446,7 @@
       "repository": "berkdemir18/BerkStream-Hub",
       "url": "https://raw.githubusercontent.com/berkdemir18/BerkStream-Hub/builds/BerkStream.cs3",
       "version": 47,
-      "size": 1702983,
+      "size": 1696904,
       "hash_checked": false,
       "provider_check": "reachable",
       "provider_reason": "a.prectv71.lol:alive",
@@ -691,20 +691,6 @@
       "attempts": null
     },
     {
-      "internal_name": "cizgiportal",
-      "name": "CizgiPortal",
-      "status": "healthy",
-      "repository": "Wiojelt/TurkSinema",
-      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/144e7fcfe582da2da5e571144f2ae5fc8b85da2f/CizgiPortal.cs3",
-      "version": 3,
-      "size": 108572,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "www.cizgiportal.net:alive",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
       "internal_name": "cizgisite",
       "name": "CizgiSite",
       "status": "healthy",
@@ -869,20 +855,6 @@
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "deokwave.com:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "dexter",
-      "name": "Dexter",
-      "status": "healthy",
-      "repository": "Wiojelt/TurkSpor",
-      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/Dexter.cs3?v=84b89555038d",
-      "version": 1,
-      "size": 169006,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "dexter.pw:alive-tr",
       "fallback_used": false,
       "attempts": null
     },
@@ -8559,6 +8531,44 @@
       ]
     },
     {
+      "internal_name": "cizgiportal",
+      "status": "rejected",
+      "attempts": [
+        {
+          "repository": "Wiojelt/TurkSinema",
+          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/144e7fcfe582da2da5e571144f2ae5fc8b85da2f/CizgiPortal.cs3",
+          "version": 3,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.cizgiportal.net:unreachable"
+        },
+        {
+          "repository": "pisovo-5031/TurkSinema",
+          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/144e7fcfe582da2da5e571144f2ae5fc8b85da2f/CizgiPortal.cs3",
+          "version": 3,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.cizgiportal.net:unreachable"
+        },
+        {
+          "repository": "arcilingir/TurkSinema",
+          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/144e7fcfe582da2da5e571144f2ae5fc8b85da2f/CizgiPortal.cs3",
+          "version": 3,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.cizgiportal.net:unreachable"
+        },
+        {
+          "repository": "Wiojelt/WioKids",
+          "url": "https://raw.githubusercontent.com/Wiojelt/WioKids/builds/CizgiPortal.cs3?v=1efaa41704c6",
+          "version": 3,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.cizgiportal.net:unreachable"
+        }
+      ]
+    },
+    {
       "internal_name": "cncversedisneyplus",
       "status": "rejected",
       "attempts": [
@@ -8568,7 +8578,7 @@
           "version": 8,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "net52.cc:unreachable"
+          "provider_reason": "net52.cc:http-404"
         },
         {
           "repository": "pisovo-5031/TurkSinema",
@@ -8576,7 +8586,7 @@
           "version": 8,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "net52.cc:unreachable"
+          "provider_reason": "net52.cc:http-404"
         },
         {
           "repository": "arcilingir/TurkSinema",
@@ -8584,7 +8594,7 @@
           "version": 8,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "net52.cc:unreachable"
+          "provider_reason": "net52.cc:http-404"
         }
       ]
     },
@@ -8675,6 +8685,36 @@
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "crex1.vercel.app:http-404"
+        }
+      ]
+    },
+    {
+      "internal_name": "dexter",
+      "status": "rejected",
+      "attempts": [
+        {
+          "repository": "Wiojelt/TurkSpor",
+          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/Dexter.cs3?v=84b89555038d",
+          "version": 1,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "dexter.pw:http-403"
+        },
+        {
+          "repository": "pisovo-5031/TurkSpor",
+          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/Dexter.cs3?v=84b89555038d",
+          "version": 1,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "dexter.pw:http-403"
+        },
+        {
+          "repository": "arcilingir/TurkSpor",
+          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/Dexter.cs3?v=84b89555038d",
+          "version": 1,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "dexter.pw:http-403"
         }
       ]
     },
@@ -9362,7 +9402,7 @@
           "version": 39,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "net52.cc:unreachable"
+          "provider_reason": "net52.cc:http-404"
         },
         {
           "repository": "adilem/cs-kraptor",
@@ -9386,7 +9426,7 @@
           "version": 31,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "net52.cc:unreachable"
+          "provider_reason": "net52.cc:http-404"
         }
       ]
     },
