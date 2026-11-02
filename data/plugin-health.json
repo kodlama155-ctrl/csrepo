@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-02T05:40:48Z",
+  "generated_at": "2026-11-02T06:22:20Z",
   "candidate_plugin_count": 423,
-  "healthy_plugin_count": 292,
-  "rejected_plugin_count": 131,
+  "healthy_plugin_count": 293,
+  "rejected_plugin_count": 130,
   "fallback_used_count": 27,
   "provider_unverified_count": 0,
   "rejection_attempt_counts": {
@@ -11,7 +11,7 @@
     "hash-mismatch": 10,
     "http-404": 60,
     "invalid-status": 8,
-    "provider-unverified": 504,
+    "provider-unverified": 501,
     "status-down": 32
   },
   "checks": {
@@ -747,7 +747,7 @@
       "size": 40724,
       "hash_checked": false,
       "provider_check": "reachable",
-      "provider_reason": "dizi83.life:alive",
+      "provider_reason": "dizi82.life:alive",
       "fallback_used": false,
       "attempts": null
     },
@@ -2036,7 +2036,7 @@
       "size": 47825,
       "hash_checked": false,
       "provider_check": "reachable",
-      "provider_reason": "filmizleyim.com:alive",
+      "provider_reason": "filmizle.now:alive",
       "fallback_used": false,
       "attempts": null
     },
@@ -4857,6 +4857,20 @@
       "attempts": null
     },
     {
+      "internal_name": "watch2movies",
+      "name": "Watch2Movies",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/144e7fcfe582da2da5e571144f2ae5fc8b85da2f/Watch2Movies.cs3",
+      "version": 7,
+      "size": 116683,
+      "hash_checked": true,
+      "provider_check": "reachable",
+      "provider_reason": "movies2watch.mx:alive",
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
       "internal_name": "webdramaturkey",
       "name": "WebDramaTurkey",
       "status": "healthy",
@@ -7048,7 +7062,7 @@
           "version": 73,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "hrtestingx/hrcsrepofull",
@@ -7056,7 +7070,7 @@
           "version": 73,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "adilem/cs-kraptor",
@@ -7080,7 +7094,7 @@
           "version": 37,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "feroxx/Kekik-cloudstream",
@@ -7088,7 +7102,7 @@
           "version": 33,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "qera18/apple",
@@ -7096,7 +7110,7 @@
           "version": 33,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "liberta09/Kekik-cloudstream",
@@ -7104,7 +7118,7 @@
           "version": 33,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "21nek/nektv",
@@ -7128,7 +7142,7 @@
           "version": 20,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "arcilingir/CloudStreamHub",
@@ -7136,7 +7150,7 @@
           "version": 20,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "manitux-app/cs-plugins",
@@ -7144,7 +7158,7 @@
           "version": 13,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "Bymesut1/cs-plugins",
@@ -7152,7 +7166,7 @@
           "version": 13,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "Ripplay/cloudstream-repo",
@@ -7160,7 +7174,7 @@
           "version": 12,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "arcilingir/Dizi_Film_2",
@@ -7208,7 +7222,7 @@
           "version": 10,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "pisovo-5031/TurkSinema",
@@ -7216,7 +7230,7 @@
           "version": 10,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "arcilingir/TurkSinema",
@@ -7224,7 +7238,7 @@
           "version": 10,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "Wiojelt/WioSinema",
@@ -7232,7 +7246,7 @@
           "version": 10,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "pisovo-5031/WioSinema",
@@ -7240,7 +7254,7 @@
           "version": 10,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "bilhan50/BilhanTR",
@@ -7248,7 +7262,7 @@
           "version": 9,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "Sertel392/gencler",
@@ -7256,7 +7270,7 @@
           "version": 8,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "Bymesut1/Eklenti",
@@ -7264,7 +7278,7 @@
           "version": 8,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "adilem/MyTV",
@@ -7272,7 +7286,7 @@
           "version": 8,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "berr49300/cloudstream-film-repo",
@@ -7280,7 +7294,7 @@
           "version": 7,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "JustSadY/Cloudstream-Lykia",
@@ -7288,7 +7302,7 @@
           "version": 6,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "lepotane/MRC-builds",
@@ -7296,7 +7310,7 @@
           "version": 6,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "baristomruk-max/BTVault",
@@ -7304,7 +7318,7 @@
           "version": 6,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "galipgokalp/tv-cloudstream",
@@ -7312,7 +7326,7 @@
           "version": 6,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.mx:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.mx:http-404"
         },
         {
           "repository": "neoser1984/neowatch",
@@ -7320,7 +7334,7 @@
           "version": 5,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "Kayracs3/Kayra",
@@ -7328,7 +7342,7 @@
           "version": 4,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "F0Rextasy/bigbullapp-cs",
@@ -7336,7 +7350,7 @@
           "version": 3,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "Bymesut1/Kartaloglu-cs",
@@ -7344,7 +7358,7 @@
           "version": 2,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "miskin1702/aslan-pub",
@@ -9995,36 +10009,6 @@
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "no-urls"
-        }
-      ]
-    },
-    {
-      "internal_name": "watch2movies",
-      "status": "rejected",
-      "attempts": [
-        {
-          "repository": "Wiojelt/TurkSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/144e7fcfe582da2da5e571144f2ae5fc8b85da2f/Watch2Movies.cs3",
-          "version": 7,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "movies2watch.mx:unreachable"
-        },
-        {
-          "repository": "pisovo-5031/TurkSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/144e7fcfe582da2da5e571144f2ae5fc8b85da2f/Watch2Movies.cs3",
-          "version": 7,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "movies2watch.mx:unreachable"
-        },
-        {
-          "repository": "arcilingir/TurkSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/144e7fcfe582da2da5e571144f2ae5fc8b85da2f/Watch2Movies.cs3",
-          "version": 7,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "movies2watch.mx:unreachable"
         }
       ]
     },
