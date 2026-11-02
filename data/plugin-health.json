@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-02T12:45:12Z",
-  "candidate_plugin_count": 423,
-  "healthy_plugin_count": 359,
-  "rejected_plugin_count": 64,
+  "generated_at": "2026-11-02T13:09:25Z",
+  "candidate_plugin_count": 399,
+  "healthy_plugin_count": 336,
+  "rejected_plugin_count": 63,
   "fallback_used_count": 39,
   "provider_unverified_count": 70,
   "rejection_attempt_counts": {
@@ -11,7 +11,7 @@
     "hash-mismatch": 10,
     "http-404": 64,
     "invalid-status": 8,
-    "provider-unverified": 544,
+    "provider-unverified": 542,
     "status-down": 32
   },
   "checks": {
@@ -691,13 +691,27 @@
       "attempts": null
     },
     {
+      "internal_name": "cizgiportal",
+      "name": "CizgiPortal",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/144e7fcfe582da2da5e571144f2ae5fc8b85da2f/CizgiPortal.cs3",
+      "version": 3,
+      "size": 108572,
+      "hash_checked": true,
+      "provider_check": "reachable",
+      "provider_reason": "www.cizgiportal.net:alive",
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
       "internal_name": "cizgisite",
       "name": "CizgiSite",
       "status": "healthy",
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/CizgiSite.cs3",
-      "version": 3,
-      "size": 22174,
+      "version": 4,
+      "size": 22299,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "www.cizgi.site:alive",
@@ -855,6 +869,20 @@
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "deokwave.com:alive-tr",
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "dexter",
+      "name": "Dexter",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSpor",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/Dexter.cs3?v=84b89555038d",
+      "version": 1,
+      "size": 169006,
+      "hash_checked": true,
+      "provider_check": "reachable",
+      "provider_reason": "dexter.pw:alive-tr",
       "fallback_used": false,
       "attempts": null
     },
@@ -4066,48 +4094,6 @@
       "attempts": null
     },
     {
-      "internal_name": "inat4k01exo",
-      "name": "Inat4k01Exo",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Inat4k01Exo.cs3",
-      "version": 1,
-      "size": 61536,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "4k.filmizleeeee.cfd:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inat4k01web",
-      "name": "Inat4k01Web",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Inat4k01Web.cs3",
-      "version": 1,
-      "size": 61531,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "4k.filmizleeeee.cfd:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inat4k02web",
-      "name": "Inat4k02Web",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Inat4k02Web.cs3",
-      "version": 1,
-      "size": 61523,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "4k.filmizleeeee.cfd:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
       "internal_name": "inat4k03exo",
       "name": "Inat4k03Exo",
       "status": "healthy",
@@ -4136,34 +4122,6 @@
       "attempts": null
     },
     {
-      "internal_name": "inat4k04exo",
-      "name": "Inat4k04Exo",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Inat4k04Exo.cs3",
-      "version": 1,
-      "size": 61533,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "4k.filmizleeeee.cfd:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inat4k04web",
-      "name": "Inat4k04Web",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Inat4k04Web.cs3",
-      "version": 1,
-      "size": 61525,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "4k.filmizleeeee.cfd:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
       "internal_name": "inat4k06exo",
       "name": "Inat4k06Exo",
       "status": "healthy",
@@ -4178,34 +4136,6 @@
       "attempts": null
     },
     {
-      "internal_name": "inat4k06web",
-      "name": "Inat4k06Web",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Inat4k06Web.cs3",
-      "version": 1,
-      "size": 61525,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "4k.filmizleeeee.cfd:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inat4k07web",
-      "name": "Inat4k07Web",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Inat4k07Web.cs3",
-      "version": 1,
-      "size": 61522,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "4k.filmizleeeee.cfd:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
       "internal_name": "inatamazonprime",
       "name": "InatAmazonPrime",
       "status": "healthy",
@@ -4213,20 +4143,6 @@
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatAmazonPrime.cs3",
       "version": 1,
       "size": 61536,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "diziboxen.help:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inatbelgesel",
-      "name": "InatBelgesel",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatBelgesel.cs3",
-      "version": 1,
-      "size": 61537,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "diziboxen.help:alive-tr",
@@ -4304,48 +4220,6 @@
       "attempts": null
     },
     {
-      "internal_name": "inatcocuk",
-      "name": "InatCocuk",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatCocuk.cs3",
-      "version": 1,
-      "size": 61478,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "diziboxen.help:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inatderbiler",
-      "name": "InatDerbiler",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatDerbiler.cs3",
-      "version": 1,
-      "size": 61506,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "sprboxs.bar:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inatdini",
-      "name": "InatDini",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatDini.cs3",
-      "version": 1,
-      "size": 61488,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "diziboxen.help:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
       "internal_name": "inatdisney",
       "name": "InatDisney",
       "status": "healthy",
@@ -4353,20 +4227,6 @@
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatDisney.cs3",
       "version": 1,
       "size": 61498,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "diziboxen.help:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inatebatv",
-      "name": "InatEbaTv",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatEbaTv.cs3",
-      "version": 1,
-      "size": 61479,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "diziboxen.help:alive-tr",
@@ -4402,20 +4262,6 @@
       "attempts": null
     },
     {
-      "internal_name": "inathaber",
-      "name": "InatHaber",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatHaber.cs3",
-      "version": 1,
-      "size": 61488,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "diziboxen.help:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
       "internal_name": "inathbomax",
       "name": "InatHboMax",
       "status": "healthy",
@@ -4423,62 +4269,6 @@
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatHboMax.cs3",
       "version": 1,
       "size": 61484,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "diziboxen.help:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inatliste1tr",
-      "name": "InatListe1Tr",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatListe1Tr.cs3",
-      "version": 1,
-      "size": 61489,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "diziboxen.help:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inatliste2glb",
-      "name": "InatListe2Glb",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatListe2Glb.cs3",
-      "version": 1,
-      "size": 61496,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "diziboxen.help:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inatliste3tr",
-      "name": "InatListe3Tr",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatListe3Tr.cs3",
-      "version": 1,
-      "size": 61490,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "diziboxen.help:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inatmubi",
-      "name": "InatMubi",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatMubi.cs3",
-      "version": 1,
-      "size": 61487,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "diziboxen.help:alive-tr",
@@ -4500,48 +4290,6 @@
       "attempts": null
     },
     {
-      "internal_name": "inatpremium",
-      "name": "InatPremium",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatPremium.cs3",
-      "version": 1,
-      "size": 61431,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "inattv257.cfd:alive",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inatsinema",
-      "name": "InatSinema",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatSinema.cs3",
-      "version": 1,
-      "size": 61445,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "diziboxen.help:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inatspor",
-      "name": "InatSpor",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatSpor.cs3",
-      "version": 1,
-      "size": 61422,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "sprboxs.bar:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
       "internal_name": "inattabii",
       "name": "InatTabii",
       "status": "healthy",
@@ -4556,20 +4304,6 @@
       "attempts": null
     },
     {
-      "internal_name": "inattod",
-      "name": "InatTod",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatTod.cs3",
-      "version": 1,
-      "size": 61409,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "sprboxs.bar:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
       "internal_name": "inattvbox",
       "name": "InatTVBox",
       "status": "healthy",
@@ -4580,48 +4314,6 @@
       "hash_checked": true,
       "provider_check": "unverified",
       "provider_reason": "no-urls",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inatulusal",
-      "name": "InatUlusal",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatUlusal.cs3",
-      "version": 1,
-      "size": 61435,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "diziboxen.help:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inatyabancidiziler",
-      "name": "InatYabanciDiziler",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatYabanciDiziler.cs3",
-      "version": 1,
-      "size": 61425,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "diziboxen.help:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inatyerlidiziler",
-      "name": "InatYerliDiziler",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatYerliDiziler.cs3",
-      "version": 1,
-      "size": 61434,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "diziboxen.help:alive-tr",
       "fallback_used": false,
       "attempts": null
     },
@@ -5271,20 +4963,6 @@
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "kultfilmler.net:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "leotv",
-      "name": "LeoTV",
-      "status": "healthy",
-      "repository": "Wiojelt/WioSpor",
-      "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/LeoTV.cs3?v=dbce2939ae71",
-      "version": 2,
-      "size": 157849,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "leograndtv11.com:alive",
       "fallback_used": false,
       "attempts": null
     },
@@ -8531,44 +8209,6 @@
       ]
     },
     {
-      "internal_name": "cizgiportal",
-      "status": "rejected",
-      "attempts": [
-        {
-          "repository": "Wiojelt/TurkSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/144e7fcfe582da2da5e571144f2ae5fc8b85da2f/CizgiPortal.cs3",
-          "version": 3,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.cizgiportal.net:unreachable"
-        },
-        {
-          "repository": "pisovo-5031/TurkSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/144e7fcfe582da2da5e571144f2ae5fc8b85da2f/CizgiPortal.cs3",
-          "version": 3,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.cizgiportal.net:unreachable"
-        },
-        {
-          "repository": "arcilingir/TurkSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/144e7fcfe582da2da5e571144f2ae5fc8b85da2f/CizgiPortal.cs3",
-          "version": 3,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.cizgiportal.net:unreachable"
-        },
-        {
-          "repository": "Wiojelt/WioKids",
-          "url": "https://raw.githubusercontent.com/Wiojelt/WioKids/builds/CizgiPortal.cs3?v=1efaa41704c6",
-          "version": 3,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.cizgiportal.net:unreachable"
-        }
-      ]
-    },
-    {
       "internal_name": "cncversedisneyplus",
       "status": "rejected",
       "attempts": [
@@ -8685,36 +8325,6 @@
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "crex1.vercel.app:http-404"
-        }
-      ]
-    },
-    {
-      "internal_name": "dexter",
-      "status": "rejected",
-      "attempts": [
-        {
-          "repository": "Wiojelt/TurkSpor",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/Dexter.cs3?v=84b89555038d",
-          "version": 1,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "dexter.pw:http-403"
-        },
-        {
-          "repository": "pisovo-5031/TurkSpor",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/Dexter.cs3?v=84b89555038d",
-          "version": 1,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "dexter.pw:http-403"
-        },
-        {
-          "repository": "arcilingir/TurkSpor",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/Dexter.cs3?v=84b89555038d",
-          "version": 1,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "dexter.pw:http-403"
         }
       ]
     },
@@ -9275,6 +8885,52 @@
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "easyapi.sh:http-404"
+        }
+      ]
+    },
+    {
+      "internal_name": "leotv",
+      "status": "rejected",
+      "attempts": [
+        {
+          "repository": "Wiojelt/WioSpor",
+          "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/LeoTV.cs3?v=dbce2939ae71",
+          "version": 2,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "leograndtv11.com:unreachable"
+        },
+        {
+          "repository": "arcilingir/WioSpor",
+          "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/LeoTV.cs3?v=dbce2939ae71",
+          "version": 2,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "leograndtv11.com:unreachable"
+        },
+        {
+          "repository": "Wiojelt/TurkSpor",
+          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/LeoTV.cs3?v=dbce2939ae71",
+          "version": 2,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "leograndtv11.com:unreachable"
+        },
+        {
+          "repository": "pisovo-5031/TurkSpor",
+          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/LeoTV.cs3?v=dbce2939ae71",
+          "version": 2,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "leograndtv11.com:unreachable"
+        },
+        {
+          "repository": "arcilingir/TurkSpor",
+          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/LeoTV.cs3?v=dbce2939ae71",
+          "version": 2,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "leograndtv11.com:unreachable"
         }
       ]
     },
