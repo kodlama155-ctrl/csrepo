@@ -74,6 +74,28 @@ def now_iso() -> str:
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
 
+# Code search allows 10 requests per minute; its window resets within ~60 s.
+RATE_LIMIT_MAX_WAIT = 65
+
+
+def rate_limit_wait(response_headers) -> int | None:
+    """Seconds GitHub asks us to wait (retry-after, or reset when remaining is 0); None if not a rate limit."""
+    retry_after = response_headers.get("retry-after")
+    if retry_after and retry_after.isdigit():
+        return int(retry_after)
+    reset = response_headers.get("x-ratelimit-reset")
+    if response_headers.get("x-ratelimit-remaining") == "0" and reset and reset.isdigit():
+        return max(1, int(reset) - int(time.time()) + 1)
+    return None
+
+
+def rate_limit_summary(response_headers) -> str:
+    fields = ("x-ratelimit-resource", "x-ratelimit-limit", "x-ratelimit-remaining", "retry-after")
+    reset = response_headers.get("x-ratelimit-reset")
+    reset_in = f" reset_in={int(reset) - int(time.time())}s" if reset and reset.isdigit() else ""
+    return " ".join(f"{name.removeprefix('x-ratelimit-')}={response_headers.get(name)}" for name in fields) + reset_in
+
+
 def api_get(path_or_url: str, params=None, allow_404=False):
     url = path_or_url if path_or_url.startswith("http") else f"{API}{path_or_url}"
     parsed_url = urlparse(url)
@@ -85,11 +107,18 @@ def api_get(path_or_url: str, params=None, allow_404=False):
         if r.status_code == 404 and allow_404:
             return None
         if r.status_code in (403, 429) and attempt < 2:
-            time.sleep(2 + attempt * 3)
+            wait = rate_limit_wait(r.headers)
+            if wait is None:
+                wait = 2 + attempt * 3
+            elif wait > RATE_LIMIT_MAX_WAIT:
+                break  # Too long to wait inside a scan; report the limit below.
+            time.sleep(wait)
             continue
-        r.raise_for_status()
-        return r.json()
-    return None
+        break
+    if r.status_code in (403, 429) and rate_limit_wait(r.headers) is not None:
+        print(f"[warn] GitHub rate limit: {rate_limit_summary(r.headers)}", flush=True)
+    r.raise_for_status()
+    return r.json()
 
 
 def text_get(url: str):
