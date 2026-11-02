@@ -32,7 +32,7 @@ class CodeSearchIntervalTests(unittest.TestCase):
         return found, [call.args[0] for call in calls.call_args_list]
 
     def test_recent_success_skips_code_search(self):
-        recent = (datetime.now(timezone.utc) - timedelta(hours=23)).isoformat()
+        recent = (datetime.now(timezone.utc) - timedelta(hours=19)).isoformat()
         memory = {"last_success": recent}
         found, calls = self.discover(memory, lambda *args, **kwargs: CODE_RESULT)
         self.assertNotIn("/search/code", calls)
@@ -40,7 +40,7 @@ class CodeSearchIntervalTests(unittest.TestCase):
         self.assertNotIn("example/found", found)
 
     def test_old_or_missing_success_runs_and_records_search(self):
-        old = (datetime.now(timezone.utc) - timedelta(hours=25)).isoformat()
+        old = (datetime.now(timezone.utc) - timedelta(hours=21)).isoformat()
         for memory in ({"last_success": old}, {}):
             with self.subTest(memory=dict(memory)):
                 found, calls = self.discover(memory, lambda *args, **kwargs: CODE_RESULT)

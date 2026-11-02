@@ -49,7 +49,8 @@ SEARCH_QUERIES = [
 CODE_QUERIES = [
     'filename:repo.json "pluginLists" "Türkçe"',
 ]
-CODE_SEARCH_INTERVAL = timedelta(hours=24)
+# Below 24 h so the daily search does not drift past delayed 6-hourly scans.
+CODE_SEARCH_INTERVAL = timedelta(hours=20)
 
 TR_LANGUAGE_VALUES = {
     "tr", "tr-tr", "tur", "turkish", "turkce", "türkçe", "turkiye", "türkiye"
