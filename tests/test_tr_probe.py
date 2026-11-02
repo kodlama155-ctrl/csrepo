@@ -1,3 +1,13 @@
+"""Turkish Globalping re-check tests. Every Globalping answer here is a mock.
+
+NOTE for anyone reading the CI log: these tests deliberately simulate failures, so the
+"Test scanner" step prints lines such as
+    [tr] Globalping cevap vermedi (ConnectionError) ...
+    [tr] Globalping durduruldu: kota doldu (HTTP 429) ...
+    [tr] Globalping başladı; token: yok / var
+They come from mocks, not from the real API. Only "[tr]" lines printed in the
+"Scan repositories" step describe the real scan.
+"""
 import contextlib
 import importlib.util
 import io
