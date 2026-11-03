@@ -2209,6 +2209,11 @@ def build_cloudstream_bundle(app_ready: list[dict], seed_repos: set[str], *, out
     target_root = ROOT if output_root is None else output_root
     target_data = DATA if output_root is None else output_root / "data"
     save_json(target_root / PRIVATE_PLUGINS, published)
+    live_published = [
+        plugin for plugin in published
+        if isinstance(plugin.get("tvTypes"), list) and "Live" in plugin["tvTypes"]
+    ]
+    save_json(target_data / "live-plugins.json", live_published)
     save_json(target_root / PRIVATE_MANIFEST, repo_manifest)
     save_json(target_root / "plugins.json", [])
     save_json(target_root / "repo.json", legacy_manifest)
@@ -2419,6 +2424,7 @@ def write_scan_outputs(candidates, inspection, old_tr, seeds, bundle_counts, *, 
     published_plugin_count, rejected_plugin_count, plugin_fallback_count = bundle_counts
 
     catalog_repo_count = build_repo_catalog(app_ready, published_plugin_count, seed_repos, output_root=output_root)
+    live_plugin_count = len(load_json(target_data / "live-plugins.json", []))
 
     changes = summarize_changes(old_tr, app_ready)
     save_json(target_data / "candidates.json", sorted(candidates))
@@ -2449,6 +2455,7 @@ def write_scan_outputs(candidates, inspection, old_tr, seeds, bundle_counts, *, 
         "turkish_count": len(turkish),
         "app_ready_count": len(app_ready),
         "published_plugin_count": published_plugin_count,
+        "live_plugin_count": live_plugin_count,
         "rejected_plugin_count": rejected_plugin_count,
         "plugin_fallback_count": plugin_fallback_count,
         "catalog_repo_count": catalog_repo_count,

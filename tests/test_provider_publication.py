@@ -164,6 +164,18 @@ class ProviderPublicationTests(unittest.TestCase):
         after = {p.relative_to(self.scanner.ROOT): p.read_bytes() for p in self.scanner.ROOT.rglob("*") if p.is_file()}
         self.assertEqual(after, before)
 
+    def test_live_plugins_get_their_own_published_list(self):
+        live = dict(self.good, name="Live Good", internalName="LiveGood",
+                    url="https://example.invalid/live.cs3", tvTypes=["Live"])
+        vod = dict(self.good, name="Vod", internalName="Vod",
+                   url="https://example.invalid/vod.cs3", tvTypes=["Movie"])
+        self.build([live, vod], {
+            live["url"]: provider_package(self.good_site),
+            vod["url"]: provider_package(self.good_site),
+        })
+        rows = json.loads((self.scanner.DATA / "live-plugins.json").read_text(encoding="utf-8"))
+        self.assertEqual([row["internalName"] for row in rows], ["LiveGood"])
+
     def test_file_only_success_cannot_bypass_site_requirement(self):
         def check(plugin, *args):
             result = {"ok": True, "reason": "ok"}

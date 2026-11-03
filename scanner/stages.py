@@ -19,7 +19,8 @@ LABELS = {
     4: "Sonuçları hazırlama",
 }
 BUNDLE_FILES = (
-    "plugins-x92.json", "repo-x92.json", "plugins.json", "repo.json", "data/plugin-health.json",
+    "plugins-x92.json", "repo-x92.json", "plugins.json", "repo.json",
+    "data/plugin-health.json", "data/live-plugins.json",
 )
 OUTPUT_FILES = BUNDLE_FILES + (
     "README.md", "repos-db.json", "catalog.md", "data/catalog.json", "data/ranking.json",
@@ -216,7 +217,8 @@ class StageStore:
                                                  for name in OUTPUT_FILES}}
                     summary = json.loads((prepared / "data/changes.json").read_text(encoding="utf-8"))
                     fields = {"verified": "verified_count", "turkish": "turkish_count", "app_ready": "app_ready_count",
-                              "published_plugins": "published_plugin_count", "rejected_plugins": "rejected_plugin_count",
+                              "published_plugins": "published_plugin_count", "live_plugins": "live_plugin_count",
+                              "rejected_plugins": "rejected_plugin_count",
                               "fallbacks": "plugin_fallback_count", "catalog_repos": "catalog_repo_count",
                               "global": "global_count", "stale": "stale_repo_count"}
                     summary_text = "[done] " + " ".join(f"{key}={summary[value]}" for key, value in fields.items())

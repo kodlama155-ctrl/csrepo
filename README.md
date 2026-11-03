@@ -27,6 +27,10 @@ klasöründedir; dosyaları eksik veya değişmiş sonuçlar ana listeye alınma
 Bu komutlar GitHub'a gönderim yapmaz; mevcut GitHub iş akışı başarılı tam tarama
 sonuçlarını ayrıca gönderir.
 
+Doğrulanmış canlı TV eklentileri ayrıca `data/live-plugins.json` dosyasına yazılır.
+Bu dosya yalnızca `tvTypes` alanında `Live` bulunan eklentileri içerir; tüketiciler
+tam eklenti listesini ayrıştırmadan yalnızca bu listeyi okuyabilir.
+
 <!-- AUTO_REPOS_START -->
 ## 📦 Güncel Önemli Türkçe CloudStream Repoları
 
