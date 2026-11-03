@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T07:11:11Z",
+  "generated_at": "2026-11-03T14:02:01Z",
   "candidate_plugin_count": 400,
   "healthy_plugin_count": 337,
   "rejected_plugin_count": 63,
@@ -754,11 +754,11 @@
       "internal_name": "ddizi",
       "name": "Ddizi",
       "status": "healthy",
-      "repository": "feroxx/Kekik-cloudstream",
-      "url": "https://raw.githubusercontent.com/feroxx/Kekik-cloudstream/builds/Ddizi.cs3",
+      "repository": "dr-octagon/BronzeCloud",
+      "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/Ddizi_v24.cs3",
       "version": 24,
-      "size": 20108,
-      "hash_checked": true,
+      "size": 26372,
+      "hash_checked": false,
       "provider_check": "reachable",
       "provider_reason": "www.ddizi.tel:alive",
       "fallback_used": false,
@@ -1592,16 +1592,16 @@
       "fallback_used": true,
       "attempts": [
         {
-          "repository": "feroxx/Kekik-cloudstream",
-          "url": "https://raw.githubusercontent.com/feroxx/Kekik-cloudstream/builds/DiziMom.cs3",
+          "repository": "dr-octagon/BronzeCloud",
+          "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/DiziMom_v64.cs3",
           "version": 64,
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "www.dizidad.com:unreachable"
         },
         {
-          "repository": "dr-octagon/BronzeCloud",
-          "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/DiziMom_v64.cs3",
+          "repository": "feroxx/Kekik-cloudstream",
+          "url": "https://raw.githubusercontent.com/feroxx/Kekik-cloudstream/builds/DiziMom.cs3",
           "version": 64,
           "result": "provider-unverified",
           "provider_check": "unverified",
@@ -1748,9 +1748,9 @@
       "name": "DiziPalOriginal",
       "status": "healthy",
       "repository": "dr-octagon/BronzeCloud",
-      "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/DiziPalOriginal_v105.cs3",
-      "version": 105,
-      "size": 45053,
+      "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/DiziPalOriginal_v106.cs3",
+      "version": 106,
+      "size": 49423,
       "hash_checked": false,
       "provider_check": "reachable",
       "provider_reason": "dizipal2146.com:alive",
@@ -1766,8 +1766,8 @@
         },
         {
           "repository": "dr-octagon/BronzeCloud",
-          "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/DiziPalOriginal_v105.cs3",
-          "version": 105,
+          "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/DiziPalOriginal_v106.cs3",
+          "version": 106,
           "result": "ok",
           "provider_check": "reachable",
           "provider_reason": "dizipal2146.com:alive"
@@ -1899,7 +1899,7 @@
       "status": "healthy",
       "repository": "Bymesut1/Kartaloglu-cs",
       "url": "https://raw.githubusercontent.com/Bymesut1/Kartaloglu-cs/builds/DiziSol.cs3",
-      "version": 10,
+      "version": 12,
       "size": 99425,
       "hash_checked": true,
       "provider_check": "reachable",
@@ -4907,8 +4907,8 @@
       "status": "healthy",
       "repository": "Kayracs3/Kayra",
       "url": "https://raw.githubusercontent.com/Kayracs3/Kayra/builds/Newtv.cs3",
-      "version": 11,
-      "size": 30400,
+      "version": 12,
+      "size": 30094,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "beyazelma78.com:alive-tr",
@@ -6993,6 +6993,14 @@
           "provider_reason": "yabancidizi.so:http-403"
         },
         {
+          "repository": "dr-octagon/BronzeCloud",
+          "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/YabanciDizi_v7.cs3",
+          "version": 7,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "yabancidizi.news:http-403"
+        },
+        {
           "repository": "Wiojelt/TurkSinema",
           "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/bf2b244c70301234d85709f030154440d2a95439/YabanciDizi.cs3",
           "version": 7,
@@ -7011,14 +7019,6 @@
         {
           "repository": "arcilingir/TurkSinema",
           "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/bf2b244c70301234d85709f030154440d2a95439/YabanciDizi.cs3",
-          "version": 7,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "yabancidizi.news:http-403"
-        },
-        {
-          "repository": "dr-octagon/BronzeCloud",
-          "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/YabanciDizi_v7.cs3",
           "version": 7,
           "result": "provider-unverified",
           "provider_check": "unverified",
