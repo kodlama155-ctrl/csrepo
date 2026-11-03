@@ -1,7 +1,7 @@
 {
   "name": "EmirTV — Depoları Seç",
   "description": "Hepsi Bir Arada deposunu veya istediğiniz Türkçe CloudStream depolarını tek tek seçebilirsiniz.",
-  "generated_at": "2026-11-02T15:29:08Z",
+  "generated_at": "2026-11-03T00:53:54Z",
   "sections": [
     {
       "id": "all",
@@ -14,7 +14,7 @@
           "description": "Aktif Türkçe CloudStream eklentilerinin otomatik doğrulanan ve tekilleştirilen birleşik deposu.",
           "repo_url": "https://raw.githubusercontent.com/kodlama155-ctrl/csrepo/main/repo-x92.json",
           "install_url": "cloudstreamrepo://raw.githubusercontent.com/kodlama155-ctrl/csrepo/main/repo-x92.json",
-          "plugin_count": 336,
+          "plugin_count": 335,
           "source_repository_count": 72,
           "status": "active",
           "recommended": true
@@ -36,30 +36,30 @@
           "repo_url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/repo.json",
           "install_url": "cloudstreamrepo://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/repo.json",
           "plugin_count": 107,
-          "repo_score": 94.3,
+          "repo_score": 94.2,
           "repo_score_details": {
-            "score": 94.3,
+            "score": 94.2,
             "components": {
               "declared_health": 30.0,
               "freshness": 25.0,
               "originality": 15.0,
-              "github_popularity": 9.7,
+              "github_popularity": 9.6,
               "coverage": 10.0,
               "turkish_focus": 4.6
             },
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 107,
-              "freshness_days": 0.0,
-              "github_stars": 38,
+              "freshness_days": 0.1,
+              "github_stars": 37,
               "github_forks": 3,
               "fork": false,
               "self_contained": true
             }
           },
-          "github_stars": 38,
+          "github_stars": 37,
           "github_forks": 3,
-          "last_plugins_update": "2026-11-02T15:21:51Z",
+          "last_plugins_update": "2026-11-02T21:34:22Z",
           "short_addresses": [
             "!turksinema"
           ],
@@ -81,28 +81,28 @@
           "repo_url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/repo.json",
           "install_url": "cloudstreamrepo://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/repo.json",
           "plugin_count": 45,
-          "repo_score": 91.3,
+          "repo_score": 91.2,
           "repo_score_details": {
-            "score": 91.3,
+            "score": 91.2,
             "components": {
               "declared_health": 29.3,
               "freshness": 25.0,
               "originality": 15.0,
-              "github_popularity": 8.4,
+              "github_popularity": 8.3,
               "coverage": 9.0,
               "turkish_focus": 4.6
             },
             "metrics": {
               "declared_down_count": 1,
               "plugin_count": 45,
-              "freshness_days": 0.2,
-              "github_stars": 31,
+              "freshness_days": 0.6,
+              "github_stars": 30,
               "github_forks": 1,
               "fork": false,
               "self_contained": true
             }
           },
-          "github_stars": 31,
+          "github_stars": 30,
           "github_forks": 1,
           "last_plugins_update": "2026-10-26T22:09:08Z",
           "short_addresses": [
@@ -125,31 +125,31 @@
           "repository_url": "https://github.com/F0Rextasy/bigbullapp-cs",
           "repo_url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/master/repo.json",
           "install_url": "cloudstreamrepo://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/master/repo.json",
-          "plugin_count": 95,
-          "repo_score": 90.6,
+          "plugin_count": 93,
+          "repo_score": 91.1,
           "repo_score_details": {
-            "score": 90.6,
+            "score": 91.1,
             "components": {
               "declared_health": 30.0,
               "freshness": 25.0,
               "originality": 15.0,
-              "github_popularity": 5.6,
+              "github_popularity": 6.1,
               "coverage": 10.0,
               "turkish_focus": 5.0
             },
             "metrics": {
               "declared_down_count": 0,
-              "plugin_count": 95,
-              "freshness_days": 0.0,
-              "github_stars": 8,
+              "plugin_count": 93,
+              "freshness_days": 0.2,
+              "github_stars": 10,
               "github_forks": 1,
               "fork": false,
               "self_contained": true
             }
           },
-          "github_stars": 8,
+          "github_stars": 10,
           "github_forks": 1,
-          "last_plugins_update": "2026-11-02T14:06:00Z",
+          "last_plugins_update": "2026-11-02T18:57:01Z",
           "short_addresses": [],
           "fork": false,
           "parent": null,
@@ -183,14 +183,14 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 37,
-              "freshness_days": 0.8,
-              "github_stars": 51,
+              "freshness_days": 0.2,
+              "github_stars": 50,
               "github_forks": 14,
               "fork": true,
               "self_contained": true
             }
           },
-          "github_stars": 51,
+          "github_stars": 50,
           "github_forks": 14,
           "last_plugins_update": "2026-11-01T19:50:33Z",
           "short_addresses": [],
@@ -199,51 +199,6 @@
           "self_contained": true,
           "trusted_seed": true,
           "turkish_score": 375,
-          "status": "active"
-        },
-        {
-          "id": "aytzey/cs-kraptor",
-          "type": "repository",
-          "name": "Kraptor'un CloudStream Reposu | @kraptor123",
-          "description": "Tüm linklerim: https://linktr.ee/kraptorcs",
-          "icon_url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/refs/heads/master/.github/icons/logo/kraptorfavicon.png",
-          "repository": "aytzey/cs-kraptor",
-          "repository_url": "https://github.com/aytzey/cs-kraptor",
-          "repo_url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/master/repo.json",
-          "install_url": "cloudstreamrepo://raw.githubusercontent.com/aytzey/cs-kraptor/master/repo.json",
-          "plugin_count": 67,
-          "repo_score": 88.9,
-          "repo_score_details": {
-            "score": 88.9,
-            "components": {
-              "declared_health": 29.1,
-              "freshness": 25.0,
-              "originality": 15.0,
-              "github_popularity": 4.9,
-              "coverage": 10.0,
-              "turkish_focus": 4.9
-            },
-            "metrics": {
-              "declared_down_count": 2,
-              "plugin_count": 67,
-              "freshness_days": 0.7,
-              "github_stars": 4,
-              "github_forks": 2,
-              "fork": false,
-              "self_contained": true
-            }
-          },
-          "github_stars": 4,
-          "github_forks": 2,
-          "last_plugins_update": "2026-10-24T09:15:08Z",
-          "short_addresses": [
-            "!Kraptor"
-          ],
-          "fork": false,
-          "parent": null,
-          "self_contained": true,
-          "trusted_seed": false,
-          "turkish_score": 145,
           "status": "active"
         },
         {
@@ -257,28 +212,28 @@
           "repo_url": "https://raw.githubusercontent.com/Wiojelt/WioSpor/builds/repo.json",
           "install_url": "cloudstreamrepo://raw.githubusercontent.com/Wiojelt/WioSpor/builds/repo.json",
           "plugin_count": 29,
-          "repo_score": 88.6,
+          "repo_score": 88.5,
           "repo_score_details": {
-            "score": 88.6,
+            "score": 88.5,
             "components": {
               "declared_health": 30.0,
               "freshness": 25.0,
               "originality": 15.0,
-              "github_popularity": 8.1,
+              "github_popularity": 8.0,
               "coverage": 5.8,
               "turkish_focus": 4.7
             },
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 29,
-              "freshness_days": 4.7,
-              "github_stars": 27,
+              "freshness_days": 5.0,
+              "github_stars": 26,
               "github_forks": 1,
               "fork": false,
               "self_contained": true
             }
           },
-          "github_stars": 27,
+          "github_stars": 26,
           "github_forks": 1,
           "last_plugins_update": "2026-10-28T23:42:28Z",
           "short_addresses": [
@@ -292,6 +247,51 @@
           "status": "active"
         },
         {
+          "id": "aytzey/cs-kraptor",
+          "type": "repository",
+          "name": "Kraptor'un CloudStream Reposu | @kraptor123",
+          "description": "Tüm linklerim: https://linktr.ee/kraptorcs",
+          "icon_url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/refs/heads/master/.github/icons/logo/kraptorfavicon.png",
+          "repository": "aytzey/cs-kraptor",
+          "repository_url": "https://github.com/aytzey/cs-kraptor",
+          "repo_url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/master/repo.json",
+          "install_url": "cloudstreamrepo://raw.githubusercontent.com/aytzey/cs-kraptor/master/repo.json",
+          "plugin_count": 67,
+          "repo_score": 88.4,
+          "repo_score_details": {
+            "score": 88.4,
+            "components": {
+              "declared_health": 29.1,
+              "freshness": 25.0,
+              "originality": 15.0,
+              "github_popularity": 4.4,
+              "coverage": 10.0,
+              "turkish_focus": 4.9
+            },
+            "metrics": {
+              "declared_down_count": 2,
+              "plugin_count": 67,
+              "freshness_days": 0.4,
+              "github_stars": 3,
+              "github_forks": 2,
+              "fork": false,
+              "self_contained": true
+            }
+          },
+          "github_stars": 3,
+          "github_forks": 2,
+          "last_plugins_update": "2026-10-24T09:15:08Z",
+          "short_addresses": [
+            "!Kraptor"
+          ],
+          "fork": false,
+          "parent": null,
+          "self_contained": true,
+          "trusted_seed": false,
+          "turkish_score": 145,
+          "status": "active"
+        },
+        {
           "id": "Wiojelt/WioSinema",
           "type": "repository",
           "name": "WioSinema",
@@ -302,28 +302,28 @@
           "repo_url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/builds/repo.json",
           "install_url": "cloudstreamrepo://raw.githubusercontent.com/Wiojelt/WioSinema/builds/repo.json",
           "plugin_count": 37,
-          "repo_score": 88.4,
+          "repo_score": 88.3,
           "repo_score_details": {
-            "score": 88.4,
+            "score": 88.3,
             "components": {
               "declared_health": 30.0,
               "freshness": 25.0,
               "originality": 15.0,
-              "github_popularity": 6.1,
+              "github_popularity": 6.0,
               "coverage": 7.4,
               "turkish_focus": 4.9
             },
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 37,
-              "freshness_days": 4.7,
-              "github_stars": 16,
+              "freshness_days": 5.1,
+              "github_stars": 15,
               "github_forks": 0,
               "fork": false,
               "self_contained": true
             }
           },
-          "github_stars": 16,
+          "github_stars": 15,
           "github_forks": 0,
           "last_plugins_update": "2026-10-28T21:39:49Z",
           "short_addresses": [
@@ -361,7 +361,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 66,
-              "freshness_days": 2.3,
+              "freshness_days": 2.7,
               "github_stars": 3,
               "github_forks": 0,
               "fork": false,
@@ -404,7 +404,7 @@
             "metrics": {
               "declared_down_count": 2,
               "plugin_count": 52,
-              "freshness_days": 0.2,
+              "freshness_days": 0.0,
               "github_stars": 2,
               "github_forks": 0,
               "fork": false,
@@ -420,92 +420,6 @@
           "self_contained": true,
           "trusted_seed": false,
           "turkish_score": 150,
-          "status": "active"
-        },
-        {
-          "id": "Emre-Kahveci/CloudStreamHub",
-          "type": "repository",
-          "name": "CloudStream TR",
-          "description": "CloudStream Turkish Repository — Revival of Turkish providers with modern upstream architecture, active link resolution, and automated builds.",
-          "icon_url": null,
-          "repository": "Emre-Kahveci/CloudStreamHub",
-          "repository_url": "https://github.com/Emre-Kahveci/CloudStreamHub",
-          "repo_url": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/repo.json",
-          "install_url": "cloudstreamrepo://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/repo.json",
-          "plugin_count": 25,
-          "repo_score": 85.8,
-          "repo_score_details": {
-            "score": 85.8,
-            "components": {
-              "declared_health": 30.0,
-              "freshness": 25.0,
-              "originality": 15.0,
-              "github_popularity": 6.4,
-              "coverage": 5.0,
-              "turkish_focus": 4.4
-            },
-            "metrics": {
-              "declared_down_count": 0,
-              "plugin_count": 25,
-              "freshness_days": 6.7,
-              "github_stars": 9,
-              "github_forks": 2,
-              "fork": false,
-              "self_contained": true
-            }
-          },
-          "github_stars": 9,
-          "github_forks": 2,
-          "last_plugins_update": "2026-10-26T22:56:22Z",
-          "short_addresses": [],
-          "fork": false,
-          "parent": null,
-          "self_contained": true,
-          "trusted_seed": true,
-          "turkish_score": 337,
-          "status": "active"
-        },
-        {
-          "id": "neoser1984/neowatch",
-          "type": "repository",
-          "name": "NeO | Türkçe Eklentiler",
-          "description": "Türkçe içerikli eklenti havuzu",
-          "icon_url": null,
-          "repository": "neoser1984/neowatch",
-          "repository_url": "https://github.com/neoser1984/neowatch",
-          "repo_url": "https://raw.githubusercontent.com/neoser1984/neowatch/main/repo.json",
-          "install_url": "cloudstreamrepo://raw.githubusercontent.com/neoser1984/neowatch/main/repo.json",
-          "plugin_count": 36,
-          "repo_score": 85.3,
-          "repo_score_details": {
-            "score": 85.3,
-            "components": {
-              "declared_health": 30.0,
-              "freshness": 25.0,
-              "originality": 15.0,
-              "github_popularity": 3.5,
-              "coverage": 7.2,
-              "turkish_focus": 4.6
-            },
-            "metrics": {
-              "declared_down_count": 0,
-              "plugin_count": 36,
-              "freshness_days": 1.1,
-              "github_stars": 4,
-              "github_forks": 0,
-              "fork": false,
-              "self_contained": true
-            }
-          },
-          "github_stars": 4,
-          "github_forks": 0,
-          "last_plugins_update": "2026-11-01T13:41:08Z",
-          "short_addresses": [],
-          "fork": false,
-          "parent": null,
-          "self_contained": true,
-          "trusted_seed": false,
-          "turkish_score": 213,
           "status": "active"
         },
         {
@@ -533,7 +447,7 @@
             "metrics": {
               "declared_down_count": 8,
               "plugin_count": 73,
-              "freshness_days": 10.8,
+              "freshness_days": 11.2,
               "github_stars": 16,
               "github_forks": 1,
               "fork": false,
@@ -555,6 +469,49 @@
           "status": "active"
         },
         {
+          "id": "neoser1984/neowatch",
+          "type": "repository",
+          "name": "NeO | Türkçe Eklentiler",
+          "description": "Türkçe içerikli eklenti havuzu",
+          "icon_url": null,
+          "repository": "neoser1984/neowatch",
+          "repository_url": "https://github.com/neoser1984/neowatch",
+          "repo_url": "https://raw.githubusercontent.com/neoser1984/neowatch/main/repo.json",
+          "install_url": "cloudstreamrepo://raw.githubusercontent.com/neoser1984/neowatch/main/repo.json",
+          "plugin_count": 36,
+          "repo_score": 84.8,
+          "repo_score_details": {
+            "score": 84.8,
+            "components": {
+              "declared_health": 30.0,
+              "freshness": 25.0,
+              "originality": 15.0,
+              "github_popularity": 3.0,
+              "coverage": 7.2,
+              "turkish_focus": 4.6
+            },
+            "metrics": {
+              "declared_down_count": 0,
+              "plugin_count": 36,
+              "freshness_days": 0.2,
+              "github_stars": 3,
+              "github_forks": 0,
+              "fork": false,
+              "self_contained": true
+            }
+          },
+          "github_stars": 3,
+          "github_forks": 0,
+          "last_plugins_update": "2026-11-01T13:41:08Z",
+          "short_addresses": [],
+          "fork": false,
+          "parent": null,
+          "self_contained": true,
+          "trusted_seed": false,
+          "turkish_score": 213,
+          "status": "active"
+        },
+        {
           "id": "Kayracs3/Kayra",
           "type": "repository",
           "name": "Turkish Providers Repository | @KekikAkademi @Kayracs3",
@@ -564,37 +521,80 @@
           "repository_url": "https://github.com/Kayracs3/Kayra",
           "repo_url": "https://raw.githubusercontent.com/Kayracs3/Kayra/master/repo.json",
           "install_url": "cloudstreamrepo://raw.githubusercontent.com/Kayracs3/Kayra/master/repo.json",
-          "plugin_count": 38,
-          "repo_score": 84.9,
+          "plugin_count": 39,
+          "repo_score": 84.2,
           "repo_score_details": {
-            "score": 84.9,
+            "score": 84.2,
             "components": {
               "declared_health": 30.0,
               "freshness": 25.0,
               "originality": 15.0,
-              "github_popularity": 2.4,
-              "coverage": 7.6,
+              "github_popularity": 1.5,
+              "coverage": 7.8,
               "turkish_focus": 4.9
             },
             "metrics": {
               "declared_down_count": 0,
-              "plugin_count": 38,
-              "freshness_days": 0.7,
-              "github_stars": 2,
+              "plugin_count": 39,
+              "freshness_days": 0.0,
+              "github_stars": 1,
               "github_forks": 0,
               "fork": false,
               "self_contained": true
             }
           },
-          "github_stars": 2,
+          "github_stars": 1,
           "github_forks": 0,
-          "last_plugins_update": "2026-11-01T19:18:58Z",
+          "last_plugins_update": "2026-11-02T23:55:57Z",
           "short_addresses": [],
           "fork": false,
           "parent": null,
           "self_contained": true,
           "trusted_seed": false,
-          "turkish_score": 207,
+          "turkish_score": 208,
+          "status": "active"
+        },
+        {
+          "id": "Emre-Kahveci/CloudStreamHub",
+          "type": "repository",
+          "name": "CloudStream TR",
+          "description": "CloudStream Turkish Repository — Revival of Turkish providers with modern upstream architecture, active link resolution, and automated builds.",
+          "icon_url": null,
+          "repository": "Emre-Kahveci/CloudStreamHub",
+          "repository_url": "https://github.com/Emre-Kahveci/CloudStreamHub",
+          "repo_url": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/repo.json",
+          "install_url": "cloudstreamrepo://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/repo.json",
+          "plugin_count": 25,
+          "repo_score": 82.8,
+          "repo_score_details": {
+            "score": 82.8,
+            "components": {
+              "declared_health": 30.0,
+              "freshness": 22.0,
+              "originality": 15.0,
+              "github_popularity": 6.4,
+              "coverage": 5.0,
+              "turkish_focus": 4.4
+            },
+            "metrics": {
+              "declared_down_count": 0,
+              "plugin_count": 25,
+              "freshness_days": 7.1,
+              "github_stars": 9,
+              "github_forks": 2,
+              "fork": false,
+              "self_contained": true
+            }
+          },
+          "github_stars": 9,
+          "github_forks": 2,
+          "last_plugins_update": "2026-10-26T22:56:22Z",
+          "short_addresses": [],
+          "fork": false,
+          "parent": null,
+          "self_contained": true,
+          "trusted_seed": true,
+          "turkish_score": 337,
           "status": "active"
         },
         {
@@ -608,28 +608,28 @@
           "repo_url": "https://raw.githubusercontent.com/Wiojelt/WioLand/builds/repo.json",
           "install_url": "cloudstreamrepo://raw.githubusercontent.com/Wiojelt/WioLand/builds/repo.json",
           "plugin_count": 1,
-          "repo_score": 82.9,
+          "repo_score": 82.7,
           "repo_score_details": {
-            "score": 82.9,
+            "score": 82.7,
             "components": {
               "declared_health": 30.0,
               "freshness": 25.0,
               "originality": 15.0,
-              "github_popularity": 7.7,
+              "github_popularity": 7.5,
               "coverage": 0.2,
               "turkish_focus": 5.0
             },
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 1,
-              "freshness_days": 0.4,
-              "github_stars": 17,
+              "freshness_days": 0.1,
+              "github_stars": 16,
               "github_forks": 2,
               "fork": false,
               "self_contained": true
             }
           },
-          "github_stars": 17,
+          "github_stars": 16,
           "github_forks": 2,
           "last_plugins_update": "2026-10-26T21:34:44Z",
           "short_addresses": [
@@ -667,7 +667,7 @@
             "metrics": {
               "declared_down_count": 1,
               "plugin_count": 41,
-              "freshness_days": 0.4,
+              "freshness_days": 0.2,
               "github_stars": 0,
               "github_forks": 0,
               "fork": false,
@@ -695,22 +695,22 @@
           "repository_url": "https://github.com/Wiojelt/WioDrama",
           "repo_url": "https://raw.githubusercontent.com/Wiojelt/WioDrama/builds/repo.json",
           "install_url": "cloudstreamrepo://raw.githubusercontent.com/Wiojelt/WioDrama/builds/repo.json",
-          "plugin_count": 16,
-          "repo_score": 81.7,
+          "plugin_count": 18,
+          "repo_score": 82.1,
           "repo_score_details": {
-            "score": 81.7,
+            "score": 82.1,
             "components": {
               "declared_health": 30.0,
               "freshness": 25.0,
               "originality": 15.0,
               "github_popularity": 3.5,
-              "coverage": 3.2,
+              "coverage": 3.6,
               "turkish_focus": 5.0
             },
             "metrics": {
               "declared_down_count": 0,
-              "plugin_count": 16,
-              "freshness_days": 0.0,
+              "plugin_count": 18,
+              "freshness_days": 0.1,
               "github_stars": 4,
               "github_forks": 0,
               "fork": false,
@@ -719,13 +719,13 @@
           },
           "github_stars": 4,
           "github_forks": 0,
-          "last_plugins_update": "2026-11-02T15:16:54Z",
+          "last_plugins_update": "2026-11-02T21:32:08Z",
           "short_addresses": [],
           "fork": false,
           "parent": null,
           "self_contained": true,
           "trusted_seed": true,
-          "turkish_score": 276,
+          "turkish_score": 283,
           "status": "active"
         },
         {
@@ -739,28 +739,28 @@
           "repo_url": "https://raw.githubusercontent.com/manitux-app/cs-plugins/main/repo.json",
           "install_url": "cloudstreamrepo://raw.githubusercontent.com/manitux-app/cs-plugins/main/repo.json",
           "plugin_count": 9,
-          "repo_score": 80.7,
+          "repo_score": 80.5,
           "repo_score_details": {
-            "score": 80.7,
+            "score": 80.5,
             "components": {
               "declared_health": 30.0,
               "freshness": 22.0,
               "originality": 15.0,
-              "github_popularity": 6.9,
+              "github_popularity": 6.7,
               "coverage": 1.8,
               "turkish_focus": 5.0
             },
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 9,
-              "freshness_days": 7.9,
-              "github_stars": 15,
+              "freshness_days": 8.3,
+              "github_stars": 14,
               "github_forks": 1,
               "fork": false,
               "self_contained": true
             }
           },
-          "github_stars": 15,
+          "github_stars": 14,
           "github_forks": 1,
           "last_plugins_update": "2026-10-25T17:58:27Z",
           "short_addresses": [
@@ -771,49 +771,6 @@
           "self_contained": true,
           "trusted_seed": true,
           "turkish_score": 259,
-          "status": "active"
-        },
-        {
-          "id": "sanjarkola-collab/cloudstream-turkce-dist",
-          "type": "repository",
-          "name": "CloudStream Türkçe Eklentileri",
-          "description": "DPI & DoH Korumalı %100 Saf Kotlin Türkçe Canlı TV, Dublaj VOD ve Film/Dizi Sağlayıcıları",
-          "icon_url": null,
-          "repository": "sanjarkola-collab/cloudstream-turkce-dist",
-          "repository_url": "https://github.com/sanjarkola-collab/cloudstream-turkce-dist",
-          "repo_url": "https://raw.githubusercontent.com/sanjarkola-collab/cloudstream-turkce-dist/main/repo.json",
-          "install_url": "cloudstreamrepo://raw.githubusercontent.com/sanjarkola-collab/cloudstream-turkce-dist/main/repo.json",
-          "plugin_count": 13,
-          "repo_score": 80.6,
-          "repo_score_details": {
-            "score": 80.6,
-            "components": {
-              "declared_health": 30.0,
-              "freshness": 25.0,
-              "originality": 15.0,
-              "github_popularity": 3.0,
-              "coverage": 2.6,
-              "turkish_focus": 5.0
-            },
-            "metrics": {
-              "declared_down_count": 0,
-              "plugin_count": 13,
-              "freshness_days": 1.9,
-              "github_stars": 3,
-              "github_forks": 0,
-              "fork": false,
-              "self_contained": true
-            }
-          },
-          "github_stars": 3,
-          "github_forks": 0,
-          "last_plugins_update": "2026-10-31T18:30:14Z",
-          "short_addresses": [],
-          "fork": false,
-          "parent": null,
-          "self_contained": true,
-          "trusted_seed": false,
-          "turkish_score": 228,
           "status": "active"
         },
         {
@@ -841,7 +798,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 7,
-              "freshness_days": 6.3,
+              "freshness_days": 6.7,
               "github_stars": 8,
               "github_forks": 0,
               "fork": false,
@@ -860,6 +817,49 @@
           "status": "active"
         },
         {
+          "id": "sanjarkola-collab/cloudstream-turkce-dist",
+          "type": "repository",
+          "name": "CloudStream Türkçe Eklentileri",
+          "description": "DPI & DoH Korumalı %100 Saf Kotlin Türkçe Canlı TV, Dublaj VOD ve Film/Dizi Sağlayıcıları",
+          "icon_url": null,
+          "repository": "sanjarkola-collab/cloudstream-turkce-dist",
+          "repository_url": "https://github.com/sanjarkola-collab/cloudstream-turkce-dist",
+          "repo_url": "https://raw.githubusercontent.com/sanjarkola-collab/cloudstream-turkce-dist/main/repo.json",
+          "install_url": "cloudstreamrepo://raw.githubusercontent.com/sanjarkola-collab/cloudstream-turkce-dist/main/repo.json",
+          "plugin_count": 13,
+          "repo_score": 80.0,
+          "repo_score_details": {
+            "score": 80.0,
+            "components": {
+              "declared_health": 30.0,
+              "freshness": 25.0,
+              "originality": 15.0,
+              "github_popularity": 2.4,
+              "coverage": 2.6,
+              "turkish_focus": 5.0
+            },
+            "metrics": {
+              "declared_down_count": 0,
+              "plugin_count": 13,
+              "freshness_days": 0.1,
+              "github_stars": 2,
+              "github_forks": 0,
+              "fork": false,
+              "self_contained": true
+            }
+          },
+          "github_stars": 2,
+          "github_forks": 0,
+          "last_plugins_update": "2026-10-31T18:30:14Z",
+          "short_addresses": [],
+          "fork": false,
+          "parent": null,
+          "self_contained": true,
+          "trusted_seed": false,
+          "turkish_score": 228,
+          "status": "active"
+        },
+        {
           "id": "Wiojelt/test",
           "type": "repository",
           "name": "TurkStream Studio Test",
@@ -869,22 +869,22 @@
           "repository_url": "https://github.com/Wiojelt/test",
           "repo_url": "https://raw.githubusercontent.com/Wiojelt/test/builds/repo.json",
           "install_url": "cloudstreamrepo://raw.githubusercontent.com/Wiojelt/test/builds/repo.json",
-          "plugin_count": 16,
-          "repo_score": 80.3,
+          "plugin_count": 13,
+          "repo_score": 79.6,
           "repo_score_details": {
-            "score": 80.3,
+            "score": 79.6,
             "components": {
               "declared_health": 30.0,
               "freshness": 25.0,
               "originality": 15.0,
               "github_popularity": 2.4,
-              "coverage": 3.2,
-              "turkish_focus": 4.7
+              "coverage": 2.6,
+              "turkish_focus": 4.6
             },
             "metrics": {
               "declared_down_count": 0,
-              "plugin_count": 16,
-              "freshness_days": 0.0,
+              "plugin_count": 13,
+              "freshness_days": 0.1,
               "github_stars": 2,
               "github_forks": 0,
               "fork": false,
@@ -893,13 +893,13 @@
           },
           "github_stars": 2,
           "github_forks": 0,
-          "last_plugins_update": "2026-11-02T15:16:40Z",
+          "last_plugins_update": "2026-11-02T21:31:53Z",
           "short_addresses": [],
           "fork": false,
           "parent": null,
           "self_contained": true,
           "trusted_seed": false,
-          "turkish_score": 255,
+          "turkish_score": 252,
           "status": "active"
         },
         {
@@ -913,28 +913,28 @@
           "repo_url": "https://raw.githubusercontent.com/blackhope01/cloudstream-plugins/main/repo.json",
           "install_url": "cloudstreamrepo://raw.githubusercontent.com/blackhope01/cloudstream-plugins/main/repo.json",
           "plugin_count": 13,
-          "repo_score": 79.4,
+          "repo_score": 79.3,
           "repo_score_details": {
-            "score": 79.4,
+            "score": 79.3,
             "components": {
               "declared_health": 25.4,
               "freshness": 25.0,
               "originality": 15.0,
-              "github_popularity": 6.4,
+              "github_popularity": 6.3,
               "coverage": 2.6,
               "turkish_focus": 5.0
             },
             "metrics": {
               "declared_down_count": 2,
               "plugin_count": 13,
-              "freshness_days": 0.7,
-              "github_stars": 18,
+              "freshness_days": 1.1,
+              "github_stars": 17,
               "github_forks": 0,
               "fork": false,
               "self_contained": true
             }
           },
-          "github_stars": 18,
+          "github_stars": 17,
           "github_forks": 0,
           "last_plugins_update": "2026-09-07T22:41:30Z",
           "short_addresses": [
@@ -945,49 +945,6 @@
           "self_contained": true,
           "trusted_seed": false,
           "turkish_score": 183,
-          "status": "active"
-        },
-        {
-          "id": "miskin1702/aslan-pub",
-          "type": "repository",
-          "name": "Aslan - Türkçe Yayın Eklentileri",
-          "description": "Türkçe film, dizi, canlı TV ve spor yayın sağlayıcıları. CloudStream 3 için optimize edilmiş yerli eklenti deposu.",
-          "icon_url": null,
-          "repository": "miskin1702/aslan-pub",
-          "repository_url": "https://github.com/miskin1702/aslan-pub",
-          "repo_url": "https://raw.githubusercontent.com/miskin1702/aslan-pub/main/repo.json",
-          "install_url": "cloudstreamrepo://raw.githubusercontent.com/miskin1702/aslan-pub/main/repo.json",
-          "plugin_count": 14,
-          "repo_score": 79.3,
-          "repo_score_details": {
-            "score": 79.3,
-            "components": {
-              "declared_health": 30.0,
-              "freshness": 25.0,
-              "originality": 15.0,
-              "github_popularity": 1.5,
-              "coverage": 2.8,
-              "turkish_focus": 5.0
-            },
-            "metrics": {
-              "declared_down_count": 0,
-              "plugin_count": 14,
-              "freshness_days": 6.8,
-              "github_stars": 1,
-              "github_forks": 0,
-              "fork": false,
-              "self_contained": true
-            }
-          },
-          "github_stars": 1,
-          "github_forks": 0,
-          "last_plugins_update": "2026-10-26T20:18:00Z",
-          "short_addresses": [],
-          "fork": false,
-          "parent": null,
-          "self_contained": true,
-          "trusted_seed": false,
-          "turkish_score": 194,
           "status": "active"
         },
         {
@@ -1015,7 +972,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 19,
-              "freshness_days": 0.1,
+              "freshness_days": 0.0,
               "github_stars": 0,
               "github_forks": 0,
               "fork": false,
@@ -1024,7 +981,7 @@
           },
           "github_stars": 0,
           "github_forks": 0,
-          "last_plugins_update": "2026-11-02T11:49:14Z",
+          "last_plugins_update": "2026-11-03T00:39:02Z",
           "short_addresses": [],
           "fork": false,
           "parent": null,
@@ -1044,28 +1001,28 @@
           "repo_url": "https://raw.githubusercontent.com/baristomruk-max/BTVault/main/repo.json",
           "install_url": "cloudstreamrepo://raw.githubusercontent.com/baristomruk-max/BTVault/main/repo.json",
           "plugin_count": 64,
-          "repo_score": 78.7,
+          "repo_score": 78.4,
           "repo_score_details": {
-            "score": 78.7,
+            "score": 78.4,
             "components": {
               "declared_health": 23.0,
               "freshness": 22.0,
               "originality": 15.0,
-              "github_popularity": 4.5,
+              "github_popularity": 4.2,
               "coverage": 10.0,
               "turkish_focus": 4.2
             },
             "metrics": {
               "declared_down_count": 15,
               "plugin_count": 64,
-              "freshness_days": 14.3,
-              "github_stars": 7,
+              "freshness_days": 14.7,
+              "github_stars": 6,
               "github_forks": 0,
               "fork": false,
               "self_contained": true
             }
           },
-          "github_stars": 7,
+          "github_stars": 6,
           "github_forks": 0,
           "last_plugins_update": "2026-10-19T08:57:35Z",
           "short_addresses": [],
@@ -1087,28 +1044,28 @@
           "repo_url": "https://raw.githubusercontent.com/berkdemir18/BerkStream-Hub/builds/repo.json",
           "install_url": "cloudstreamrepo://raw.githubusercontent.com/berkdemir18/BerkStream-Hub/builds/repo.json",
           "plugin_count": 1,
-          "repo_score": 78.2,
+          "repo_score": 77.6,
           "repo_score_details": {
-            "score": 78.2,
+            "score": 77.6,
             "components": {
               "declared_health": 30.0,
               "freshness": 25.0,
               "originality": 15.0,
-              "github_popularity": 3.0,
+              "github_popularity": 2.4,
               "coverage": 0.2,
               "turkish_focus": 5.0
             },
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 1,
-              "freshness_days": 0.1,
-              "github_stars": 3,
+              "freshness_days": 0.5,
+              "github_stars": 2,
               "github_forks": 0,
               "fork": false,
               "self_contained": true
             }
           },
-          "github_stars": 3,
+          "github_stars": 2,
           "github_forks": 0,
           "last_plugins_update": "2026-11-02T12:28:05Z",
           "short_addresses": [],
@@ -1117,92 +1074,6 @@
           "self_contained": true,
           "trusted_seed": false,
           "turkish_score": 166,
-          "status": "active"
-        },
-        {
-          "id": "miskin1702/aslan-dist",
-          "type": "repository",
-          "name": "Aslan - Türkçe Yayın Eklentileri",
-          "description": "Türkçe film, dizi, canlı TV ve spor yayın sağlayıcıları. CloudStream 3 için optimize edilmiş yerli eklenti deposu.",
-          "icon_url": null,
-          "repository": "miskin1702/aslan-dist",
-          "repository_url": "https://github.com/miskin1702/aslan-dist",
-          "repo_url": "https://raw.githubusercontent.com/miskin1702/aslan-dist/builds/repo.json",
-          "install_url": "cloudstreamrepo://raw.githubusercontent.com/miskin1702/aslan-dist/builds/repo.json",
-          "plugin_count": 14,
-          "repo_score": 77.8,
-          "repo_score_details": {
-            "score": 77.8,
-            "components": {
-              "declared_health": 30.0,
-              "freshness": 25.0,
-              "originality": 15.0,
-              "github_popularity": 0.0,
-              "coverage": 2.8,
-              "turkish_focus": 5.0
-            },
-            "metrics": {
-              "declared_down_count": 0,
-              "plugin_count": 14,
-              "freshness_days": 6.9,
-              "github_stars": 0,
-              "github_forks": 0,
-              "fork": false,
-              "self_contained": true
-            }
-          },
-          "github_stars": 0,
-          "github_forks": 0,
-          "last_plugins_update": "2026-10-26T16:55:04Z",
-          "short_addresses": [],
-          "fork": false,
-          "parent": null,
-          "self_contained": true,
-          "trusted_seed": false,
-          "turkish_score": 194,
-          "status": "active"
-        },
-        {
-          "id": "Wiojelt/WioAsya",
-          "type": "repository",
-          "name": "WioAsya",
-          "description": "CloudStream Asya dizisi ve filmi sağlayıcıları",
-          "icon_url": "https://raw.githubusercontent.com/Wiojelt/WioAsya/main/assets/logo.png?v=1791640914",
-          "repository": "Wiojelt/WioAsya",
-          "repository_url": "https://github.com/Wiojelt/WioAsya",
-          "repo_url": "https://raw.githubusercontent.com/Wiojelt/WioAsya/builds/repo.json",
-          "install_url": "cloudstreamrepo://raw.githubusercontent.com/Wiojelt/WioAsya/builds/repo.json",
-          "plugin_count": 7,
-          "repo_score": 77.3,
-          "repo_score_details": {
-            "score": 77.3,
-            "components": {
-              "declared_health": 30.0,
-              "freshness": 22.0,
-              "originality": 15.0,
-              "github_popularity": 3.9,
-              "coverage": 1.4,
-              "turkish_focus": 5.0
-            },
-            "metrics": {
-              "declared_down_count": 0,
-              "plugin_count": 7,
-              "freshness_days": 10.6,
-              "github_stars": 5,
-              "github_forks": 0,
-              "fork": false,
-              "self_contained": true
-            }
-          },
-          "github_stars": 5,
-          "github_forks": 0,
-          "last_plugins_update": "2026-10-23T00:15:01Z",
-          "short_addresses": [],
-          "fork": false,
-          "parent": null,
-          "self_contained": true,
-          "trusted_seed": true,
-          "turkish_score": 287,
           "status": "active"
         },
         {
@@ -1230,7 +1101,7 @@
             "metrics": {
               "declared_down_count": 2,
               "plugin_count": 61,
-              "freshness_days": 63.6,
+              "freshness_days": 64.0,
               "github_stars": 1,
               "github_forks": 0,
               "fork": false,
@@ -1273,7 +1144,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 63,
-              "freshness_days": 0.4,
+              "freshness_days": 0.3,
               "github_stars": 2,
               "github_forks": 0,
               "fork": false,
@@ -1289,6 +1160,49 @@
           "self_contained": false,
           "trusted_seed": false,
           "turkish_score": 210,
+          "status": "active"
+        },
+        {
+          "id": "Wiojelt/WioAsya",
+          "type": "repository",
+          "name": "WioAsya",
+          "description": "CloudStream Asya dizisi ve filmi sağlayıcıları",
+          "icon_url": "https://raw.githubusercontent.com/Wiojelt/WioAsya/main/assets/logo.png?v=1791640914",
+          "repository": "Wiojelt/WioAsya",
+          "repository_url": "https://github.com/Wiojelt/WioAsya",
+          "repo_url": "https://raw.githubusercontent.com/Wiojelt/WioAsya/builds/repo.json",
+          "install_url": "cloudstreamrepo://raw.githubusercontent.com/Wiojelt/WioAsya/builds/repo.json",
+          "plugin_count": 7,
+          "repo_score": 76.9,
+          "repo_score_details": {
+            "score": 76.9,
+            "components": {
+              "declared_health": 30.0,
+              "freshness": 22.0,
+              "originality": 15.0,
+              "github_popularity": 3.5,
+              "coverage": 1.4,
+              "turkish_focus": 5.0
+            },
+            "metrics": {
+              "declared_down_count": 0,
+              "plugin_count": 7,
+              "freshness_days": 11.0,
+              "github_stars": 4,
+              "github_forks": 0,
+              "fork": false,
+              "self_contained": true
+            }
+          },
+          "github_stars": 4,
+          "github_forks": 0,
+          "last_plugins_update": "2026-10-23T00:15:01Z",
+          "short_addresses": [],
+          "fork": false,
+          "parent": null,
+          "self_contained": true,
+          "trusted_seed": true,
+          "turkish_score": 287,
           "status": "active"
         },
         {
@@ -1316,7 +1230,7 @@
             "metrics": {
               "declared_down_count": 2,
               "plugin_count": 52,
-              "freshness_days": 37.8,
+              "freshness_days": 38.2,
               "github_stars": 0,
               "github_forks": 1,
               "fork": false,
@@ -1359,7 +1273,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 1,
-              "freshness_days": 5.7,
+              "freshness_days": 6.1,
               "github_stars": 1,
               "github_forks": 0,
               "fork": false,
@@ -1375,55 +1289,6 @@
           "self_contained": true,
           "trusted_seed": false,
           "turkish_score": 161,
-          "status": "active"
-        },
-        {
-          "id": "hrtestingx/hrcsrepo",
-          "type": "repository",
-          "name": "HR Cloudstream Repo v1",
-          "description": "HR Cloudstream eklenti deposu.",
-          "icon_url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepo/hrcslogo/hrcslogo.webp",
-          "repository": "hrtestingx/hrcsrepo",
-          "repository_url": "https://github.com/hrtestingx/hrcsrepo",
-          "repo_url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepo/master/repo.json",
-          "install_url": "cloudstreamrepo://raw.githubusercontent.com/hrtestingx/hrcsrepo/master/repo.json",
-          "plugin_count": 8,
-          "repo_score": 76.6,
-          "repo_score_details": {
-            "score": 76.6,
-            "components": {
-              "declared_health": 30.0,
-              "freshness": 22.0,
-              "originality": 15.0,
-              "github_popularity": 3.0,
-              "coverage": 1.6,
-              "turkish_focus": 5.0
-            },
-            "metrics": {
-              "declared_down_count": 0,
-              "plugin_count": 8,
-              "freshness_days": 8.0,
-              "github_stars": 3,
-              "github_forks": 0,
-              "fork": false,
-              "self_contained": true
-            }
-          },
-          "github_stars": 3,
-          "github_forks": 0,
-          "last_plugins_update": "2026-10-25T15:42:57Z",
-          "short_addresses": [
-            "!hrcsrepo",
-            "!hrcs",
-            "!6231",
-            "!TIP",
-            "!IMPORTANT"
-          ],
-          "fork": false,
-          "parent": null,
-          "self_contained": true,
-          "trusted_seed": false,
-          "turkish_score": 113,
           "status": "active"
         },
         {
@@ -1451,7 +1316,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 10,
-              "freshness_days": 13.8,
+              "freshness_days": 14.2,
               "github_stars": 2,
               "github_forks": 0,
               "fork": false,
@@ -1494,7 +1359,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 23,
-              "freshness_days": 5.3,
+              "freshness_days": 5.6,
               "github_stars": 1,
               "github_forks": 0,
               "fork": false,
@@ -1537,7 +1402,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 12,
-              "freshness_days": 54.1,
+              "freshness_days": 54.4,
               "github_stars": 13,
               "github_forks": 2,
               "fork": false,
@@ -1553,6 +1418,55 @@
           "self_contained": true,
           "trusted_seed": false,
           "turkish_score": 176,
+          "status": "active"
+        },
+        {
+          "id": "hrtestingx/hrcsrepo",
+          "type": "repository",
+          "name": "HR Cloudstream Repo v1",
+          "description": "HR Cloudstream eklenti deposu.",
+          "icon_url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepo/hrcslogo/hrcslogo.webp",
+          "repository": "hrtestingx/hrcsrepo",
+          "repository_url": "https://github.com/hrtestingx/hrcsrepo",
+          "repo_url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepo/master/repo.json",
+          "install_url": "cloudstreamrepo://raw.githubusercontent.com/hrtestingx/hrcsrepo/master/repo.json",
+          "plugin_count": 8,
+          "repo_score": 76.0,
+          "repo_score_details": {
+            "score": 76.0,
+            "components": {
+              "declared_health": 30.0,
+              "freshness": 22.0,
+              "originality": 15.0,
+              "github_popularity": 2.4,
+              "coverage": 1.6,
+              "turkish_focus": 5.0
+            },
+            "metrics": {
+              "declared_down_count": 0,
+              "plugin_count": 8,
+              "freshness_days": 8.4,
+              "github_stars": 2,
+              "github_forks": 0,
+              "fork": false,
+              "self_contained": true
+            }
+          },
+          "github_stars": 2,
+          "github_forks": 0,
+          "last_plugins_update": "2026-10-25T15:42:57Z",
+          "short_addresses": [
+            "!hrcsrepo",
+            "!hrcs",
+            "!6231",
+            "!TIP",
+            "!IMPORTANT"
+          ],
+          "fork": false,
+          "parent": null,
+          "self_contained": true,
+          "trusted_seed": false,
+          "turkish_score": 113,
           "status": "active"
         },
         {
@@ -1580,7 +1494,7 @@
             "metrics": {
               "declared_down_count": 3,
               "plugin_count": 97,
-              "freshness_days": 31.0,
+              "freshness_days": 31.4,
               "github_stars": 0,
               "github_forks": 0,
               "fork": false,
@@ -1623,7 +1537,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 4,
-              "freshness_days": 1.9,
+              "freshness_days": 2.3,
               "github_stars": 0,
               "github_forks": 0,
               "fork": false,
@@ -1666,7 +1580,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 1,
-              "freshness_days": 0.1,
+              "freshness_days": 0.0,
               "github_stars": 0,
               "github_forks": 0,
               "fork": false,
@@ -1682,49 +1596,6 @@
           "self_contained": true,
           "trusted_seed": true,
           "turkish_score": 211,
-          "status": "active"
-        },
-        {
-          "id": "Wiojelt/WioAnime",
-          "type": "repository",
-          "name": "WioAnime",
-          "description": "CloudStream anime sağlayıcıları",
-          "icon_url": "https://raw.githubusercontent.com/Wiojelt/WioAnime/main/assets/logo-20261004.png?rev=2",
-          "repository": "Wiojelt/WioAnime",
-          "repository_url": "https://github.com/Wiojelt/WioAnime",
-          "repo_url": "https://raw.githubusercontent.com/Wiojelt/WioAnime/builds/repo.json",
-          "install_url": "cloudstreamrepo://raw.githubusercontent.com/Wiojelt/WioAnime/builds/repo.json",
-          "plugin_count": 10,
-          "repo_score": 74.9,
-          "repo_score_details": {
-            "score": 74.9,
-            "components": {
-              "declared_health": 27.0,
-              "freshness": 22.0,
-              "originality": 15.0,
-              "github_popularity": 3.9,
-              "coverage": 2.0,
-              "turkish_focus": 5.0
-            },
-            "metrics": {
-              "declared_down_count": 1,
-              "plugin_count": 10,
-              "freshness_days": 13.8,
-              "github_stars": 5,
-              "github_forks": 0,
-              "fork": false,
-              "self_contained": true
-            }
-          },
-          "github_stars": 5,
-          "github_forks": 0,
-          "last_plugins_update": "2026-10-18T21:06:38Z",
-          "short_addresses": [],
-          "fork": false,
-          "parent": null,
-          "self_contained": true,
-          "trusted_seed": true,
-          "turkish_score": 280,
           "status": "active"
         },
         {
@@ -1752,7 +1623,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 7,
-              "freshness_days": 7.1,
+              "freshness_days": 7.5,
               "github_stars": 1,
               "github_forks": 0,
               "fork": false,
@@ -1768,6 +1639,92 @@
           "self_contained": true,
           "trusted_seed": false,
           "turkish_score": 107,
+          "status": "active"
+        },
+        {
+          "id": "miskin1702/aslan-dist",
+          "type": "repository",
+          "name": "Aslan - Türkçe Yayın Eklentileri",
+          "description": "Türkçe film, dizi, canlı TV ve spor yayın sağlayıcıları. CloudStream 3 için optimize edilmiş yerli eklenti deposu.",
+          "icon_url": null,
+          "repository": "miskin1702/aslan-dist",
+          "repository_url": "https://github.com/miskin1702/aslan-dist",
+          "repo_url": "https://raw.githubusercontent.com/miskin1702/aslan-dist/builds/repo.json",
+          "install_url": "cloudstreamrepo://raw.githubusercontent.com/miskin1702/aslan-dist/builds/repo.json",
+          "plugin_count": 14,
+          "repo_score": 74.8,
+          "repo_score_details": {
+            "score": 74.8,
+            "components": {
+              "declared_health": 30.0,
+              "freshness": 22.0,
+              "originality": 15.0,
+              "github_popularity": 0.0,
+              "coverage": 2.8,
+              "turkish_focus": 5.0
+            },
+            "metrics": {
+              "declared_down_count": 0,
+              "plugin_count": 14,
+              "freshness_days": 7.3,
+              "github_stars": 0,
+              "github_forks": 0,
+              "fork": false,
+              "self_contained": true
+            }
+          },
+          "github_stars": 0,
+          "github_forks": 0,
+          "last_plugins_update": "2026-10-26T16:55:04Z",
+          "short_addresses": [],
+          "fork": false,
+          "parent": null,
+          "self_contained": true,
+          "trusted_seed": false,
+          "turkish_score": 194,
+          "status": "active"
+        },
+        {
+          "id": "miskin1702/aslan-pub",
+          "type": "repository",
+          "name": "Aslan - Türkçe Yayın Eklentileri",
+          "description": "Türkçe film, dizi, canlı TV ve spor yayın sağlayıcıları. CloudStream 3 için optimize edilmiş yerli eklenti deposu.",
+          "icon_url": null,
+          "repository": "miskin1702/aslan-pub",
+          "repository_url": "https://github.com/miskin1702/aslan-pub",
+          "repo_url": "https://raw.githubusercontent.com/miskin1702/aslan-pub/main/repo.json",
+          "install_url": "cloudstreamrepo://raw.githubusercontent.com/miskin1702/aslan-pub/main/repo.json",
+          "plugin_count": 14,
+          "repo_score": 74.8,
+          "repo_score_details": {
+            "score": 74.8,
+            "components": {
+              "declared_health": 30.0,
+              "freshness": 22.0,
+              "originality": 15.0,
+              "github_popularity": 0.0,
+              "coverage": 2.8,
+              "turkish_focus": 5.0
+            },
+            "metrics": {
+              "declared_down_count": 0,
+              "plugin_count": 14,
+              "freshness_days": 7.2,
+              "github_stars": 0,
+              "github_forks": 0,
+              "fork": false,
+              "self_contained": true
+            }
+          },
+          "github_stars": 0,
+          "github_forks": 0,
+          "last_plugins_update": "2026-10-26T20:18:00Z",
+          "short_addresses": [],
+          "fork": false,
+          "parent": null,
+          "self_contained": true,
+          "trusted_seed": false,
+          "turkish_score": 194,
           "status": "active"
         },
         {
@@ -1795,7 +1752,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 3,
-              "freshness_days": 14.9,
+              "freshness_days": 15.2,
               "github_stars": 5,
               "github_forks": 0,
               "fork": false,
@@ -1838,7 +1795,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 2,
-              "freshness_days": 8.1,
+              "freshness_days": 8.5,
               "github_stars": 2,
               "github_forks": 0,
               "fork": false,
@@ -1881,7 +1838,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 107,
-              "freshness_days": 0.0,
+              "freshness_days": 0.1,
               "github_stars": 0,
               "github_forks": 0,
               "fork": false,
@@ -1890,7 +1847,7 @@
           },
           "github_stars": 0,
           "github_forks": 0,
-          "last_plugins_update": "2026-11-02T15:21:51Z",
+          "last_plugins_update": "2026-11-02T21:34:22Z",
           "short_addresses": [
             "!turksinema"
           ],
@@ -1926,7 +1883,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 14,
-              "freshness_days": 12.4,
+              "freshness_days": 12.8,
               "github_stars": 3,
               "github_forks": 0,
               "fork": false,
@@ -1942,6 +1899,49 @@
           "self_contained": true,
           "trusted_seed": false,
           "turkish_score": 170,
+          "status": "active"
+        },
+        {
+          "id": "Wiojelt/WioAnime",
+          "type": "repository",
+          "name": "WioAnime",
+          "description": "CloudStream anime sağlayıcıları",
+          "icon_url": "https://raw.githubusercontent.com/Wiojelt/WioAnime/main/assets/logo-20261004.png?rev=2",
+          "repository": "Wiojelt/WioAnime",
+          "repository_url": "https://github.com/Wiojelt/WioAnime",
+          "repo_url": "https://raw.githubusercontent.com/Wiojelt/WioAnime/builds/repo.json",
+          "install_url": "cloudstreamrepo://raw.githubusercontent.com/Wiojelt/WioAnime/builds/repo.json",
+          "plugin_count": 10,
+          "repo_score": 74.5,
+          "repo_score_details": {
+            "score": 74.5,
+            "components": {
+              "declared_health": 27.0,
+              "freshness": 22.0,
+              "originality": 15.0,
+              "github_popularity": 3.5,
+              "coverage": 2.0,
+              "turkish_focus": 5.0
+            },
+            "metrics": {
+              "declared_down_count": 1,
+              "plugin_count": 10,
+              "freshness_days": 14.2,
+              "github_stars": 4,
+              "github_forks": 0,
+              "fork": false,
+              "self_contained": true
+            }
+          },
+          "github_stars": 4,
+          "github_forks": 0,
+          "last_plugins_update": "2026-10-18T21:06:38Z",
+          "short_addresses": [],
+          "fork": false,
+          "parent": null,
+          "self_contained": true,
+          "trusted_seed": true,
+          "turkish_score": 280,
           "status": "active"
         },
         {
@@ -1969,7 +1969,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 13,
-              "freshness_days": 69.7,
+              "freshness_days": 70.1,
               "github_stars": 6,
               "github_forks": 0,
               "fork": false,
@@ -2012,7 +2012,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 7,
-              "freshness_days": 13.8,
+              "freshness_days": 14.2,
               "github_stars": 0,
               "github_forks": 0,
               "fork": false,
@@ -2028,51 +2028,6 @@
           "self_contained": true,
           "trusted_seed": false,
           "turkish_score": 172,
-          "status": "active"
-        },
-        {
-          "id": "pisovo-5031/TurkSpor",
-          "type": "repository",
-          "name": "TurkSpor",
-          "description": "Canlı spor kaynakları ve domain yenileme",
-          "icon_url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/main/assets/logo.png",
-          "repository": "pisovo-5031/TurkSpor",
-          "repository_url": "https://github.com/pisovo-5031/TurkSpor",
-          "repo_url": "https://raw.githubusercontent.com/pisovo-5031/TurkSpor/main/repo.json",
-          "install_url": "cloudstreamrepo://raw.githubusercontent.com/pisovo-5031/TurkSpor/main/repo.json",
-          "plugin_count": 45,
-          "repo_score": 72.9,
-          "repo_score_details": {
-            "score": 72.9,
-            "components": {
-              "declared_health": 29.3,
-              "freshness": 25.0,
-              "originality": 5.0,
-              "github_popularity": 0.0,
-              "coverage": 9.0,
-              "turkish_focus": 4.6
-            },
-            "metrics": {
-              "declared_down_count": 1,
-              "plugin_count": 45,
-              "freshness_days": 6.7,
-              "github_stars": 0,
-              "github_forks": 0,
-              "fork": false,
-              "self_contained": false
-            }
-          },
-          "github_stars": 0,
-          "github_forks": 0,
-          "last_plugins_update": "2026-10-26T22:09:08Z",
-          "short_addresses": [
-            "!turkspor"
-          ],
-          "fork": false,
-          "parent": null,
-          "self_contained": false,
-          "trusted_seed": false,
-          "turkish_score": 240,
           "status": "active"
         },
         {
@@ -2100,7 +2055,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 1,
-              "freshness_days": 28.9,
+              "freshness_days": 29.3,
               "github_stars": 0,
               "github_forks": 0,
               "fork": false,
@@ -2143,7 +2098,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 4,
-              "freshness_days": 8.0,
+              "freshness_days": 8.4,
               "github_stars": 0,
               "github_forks": 0,
               "fork": false,
@@ -2186,7 +2141,7 @@
             "metrics": {
               "declared_down_count": 15,
               "plugin_count": 36,
-              "freshness_days": 0.4,
+              "freshness_days": 0.2,
               "github_stars": 1,
               "github_forks": 0,
               "fork": false,
@@ -2204,6 +2159,51 @@
           "self_contained": true,
           "trusted_seed": false,
           "turkish_score": 207,
+          "status": "active"
+        },
+        {
+          "id": "pisovo-5031/TurkSpor",
+          "type": "repository",
+          "name": "TurkSpor",
+          "description": "Canlı spor kaynakları ve domain yenileme",
+          "icon_url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/main/assets/logo.png",
+          "repository": "pisovo-5031/TurkSpor",
+          "repository_url": "https://github.com/pisovo-5031/TurkSpor",
+          "repo_url": "https://raw.githubusercontent.com/pisovo-5031/TurkSpor/main/repo.json",
+          "install_url": "cloudstreamrepo://raw.githubusercontent.com/pisovo-5031/TurkSpor/main/repo.json",
+          "plugin_count": 45,
+          "repo_score": 69.9,
+          "repo_score_details": {
+            "score": 69.9,
+            "components": {
+              "declared_health": 29.3,
+              "freshness": 22.0,
+              "originality": 5.0,
+              "github_popularity": 0.0,
+              "coverage": 9.0,
+              "turkish_focus": 4.6
+            },
+            "metrics": {
+              "declared_down_count": 1,
+              "plugin_count": 45,
+              "freshness_days": 7.1,
+              "github_stars": 0,
+              "github_forks": 0,
+              "fork": false,
+              "self_contained": false
+            }
+          },
+          "github_stars": 0,
+          "github_forks": 0,
+          "last_plugins_update": "2026-10-26T22:09:08Z",
+          "short_addresses": [
+            "!turkspor"
+          ],
+          "fork": false,
+          "parent": null,
+          "self_contained": false,
+          "trusted_seed": false,
+          "turkish_score": 240,
           "status": "active"
         },
         {
@@ -2231,7 +2231,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 107,
-              "freshness_days": 0.0,
+              "freshness_days": 0.1,
               "github_stars": 0,
               "github_forks": 0,
               "fork": true,
@@ -2240,7 +2240,7 @@
           },
           "github_stars": 0,
           "github_forks": 0,
-          "last_plugins_update": "2026-11-02T15:21:51Z",
+          "last_plugins_update": "2026-11-02T21:34:22Z",
           "short_addresses": [
             "!turksinema"
           ],
@@ -2276,7 +2276,7 @@
             "metrics": {
               "declared_down_count": 1,
               "plugin_count": 41,
-              "freshness_days": 32.1,
+              "freshness_days": 32.5,
               "github_stars": 0,
               "github_forks": 0,
               "fork": true,
@@ -2319,7 +2319,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 37,
-              "freshness_days": 9.7,
+              "freshness_days": 10.1,
               "github_stars": 0,
               "github_forks": 0,
               "fork": false,
@@ -2364,7 +2364,7 @@
             "metrics": {
               "declared_down_count": 1,
               "plugin_count": 43,
-              "freshness_days": 8.4,
+              "freshness_days": 8.8,
               "github_stars": 0,
               "github_forks": 0,
               "fork": false,
@@ -2407,7 +2407,7 @@
             "metrics": {
               "declared_down_count": 2,
               "plugin_count": 58,
-              "freshness_days": 5.2,
+              "freshness_days": 5.5,
               "github_stars": 0,
               "github_forks": 0,
               "fork": true,
@@ -2450,7 +2450,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 73,
-              "freshness_days": 19.1,
+              "freshness_days": 19.5,
               "github_stars": 1,
               "github_forks": 0,
               "fork": true,
@@ -2466,51 +2466,6 @@
           "self_contained": false,
           "trusted_seed": false,
           "turkish_score": 150,
-          "status": "active"
-        },
-        {
-          "id": "arcilingir/TurkSpor",
-          "type": "repository",
-          "name": "TurkSpor",
-          "description": "Canlı spor kaynakları ve domain yenileme",
-          "icon_url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/main/assets/logo.png",
-          "repository": "arcilingir/TurkSpor",
-          "repository_url": "https://github.com/arcilingir/TurkSpor",
-          "repo_url": "https://raw.githubusercontent.com/arcilingir/TurkSpor/main/repo.json",
-          "install_url": "cloudstreamrepo://raw.githubusercontent.com/arcilingir/TurkSpor/main/repo.json",
-          "plugin_count": 45,
-          "repo_score": 67.9,
-          "repo_score_details": {
-            "score": 67.9,
-            "components": {
-              "declared_health": 29.3,
-              "freshness": 25.0,
-              "originality": 0.0,
-              "github_popularity": 0.0,
-              "coverage": 9.0,
-              "turkish_focus": 4.6
-            },
-            "metrics": {
-              "declared_down_count": 1,
-              "plugin_count": 45,
-              "freshness_days": 6.7,
-              "github_stars": 0,
-              "github_forks": 0,
-              "fork": true,
-              "self_contained": false
-            }
-          },
-          "github_stars": 0,
-          "github_forks": 0,
-          "last_plugins_update": "2026-10-26T22:09:08Z",
-          "short_addresses": [
-            "!turkspor"
-          ],
-          "fork": true,
-          "parent": "Wiojelt/TurkSpor",
-          "self_contained": false,
-          "trusted_seed": false,
-          "turkish_score": 240,
           "status": "active"
         },
         {
@@ -2538,7 +2493,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 2,
-              "freshness_days": 35.0,
+              "freshness_days": 35.4,
               "github_stars": 0,
               "github_forks": 0,
               "fork": false,
@@ -2581,7 +2536,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 1,
-              "freshness_days": 54.3,
+              "freshness_days": 54.7,
               "github_stars": 0,
               "github_forks": 0,
               "fork": false,
@@ -2624,7 +2579,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 73,
-              "freshness_days": 19.1,
+              "freshness_days": 19.5,
               "github_stars": 0,
               "github_forks": 0,
               "fork": true,
@@ -2667,7 +2622,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 73,
-              "freshness_days": 19.1,
+              "freshness_days": 19.5,
               "github_stars": 0,
               "github_forks": 0,
               "fork": true,
@@ -2686,31 +2641,31 @@
           "status": "active"
         },
         {
-          "id": "arcilingir/WioSpor",
+          "id": "arcilingir/TurkSpor",
           "type": "repository",
-          "name": "WioSpor",
-          "description": "Renk gruplarıyla düzenlenmiş canlı TV ve spor kanalları",
-          "icon_url": "https://raw.githubusercontent.com/Wiojelt/WioSpor/main/assets/logo.png?v=3",
-          "repository": "arcilingir/WioSpor",
-          "repository_url": "https://github.com/arcilingir/WioSpor",
-          "repo_url": "https://raw.githubusercontent.com/arcilingir/WioSpor/main/repo.json",
-          "install_url": "cloudstreamrepo://raw.githubusercontent.com/arcilingir/WioSpor/main/repo.json",
-          "plugin_count": 28,
-          "repo_score": 65.2,
+          "name": "TurkSpor",
+          "description": "Canlı spor kaynakları ve domain yenileme",
+          "icon_url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/main/assets/logo.png",
+          "repository": "arcilingir/TurkSpor",
+          "repository_url": "https://github.com/arcilingir/TurkSpor",
+          "repo_url": "https://raw.githubusercontent.com/arcilingir/TurkSpor/main/repo.json",
+          "install_url": "cloudstreamrepo://raw.githubusercontent.com/arcilingir/TurkSpor/main/repo.json",
+          "plugin_count": 45,
+          "repo_score": 64.9,
           "repo_score_details": {
-            "score": 65.2,
+            "score": 64.9,
             "components": {
-              "declared_health": 30.0,
-              "freshness": 25.0,
+              "declared_health": 29.3,
+              "freshness": 22.0,
               "originality": 0.0,
               "github_popularity": 0.0,
-              "coverage": 5.6,
+              "coverage": 9.0,
               "turkish_focus": 4.6
             },
             "metrics": {
-              "declared_down_count": 0,
-              "plugin_count": 28,
-              "freshness_days": 6.7,
+              "declared_down_count": 1,
+              "plugin_count": 45,
+              "freshness_days": 7.1,
               "github_stars": 0,
               "github_forks": 0,
               "fork": true,
@@ -2719,58 +2674,15 @@
           },
           "github_stars": 0,
           "github_forks": 0,
-          "last_plugins_update": "2026-10-26T23:19:54Z",
+          "last_plugins_update": "2026-10-26T22:09:08Z",
           "short_addresses": [
-            "!wiospor"
+            "!turkspor"
           ],
           "fork": true,
-          "parent": "Wiojelt/WioSpor",
+          "parent": "Wiojelt/TurkSpor",
           "self_contained": false,
           "trusted_seed": false,
-          "turkish_score": 156,
-          "status": "active"
-        },
-        {
-          "id": "arcilingir/CloudStreamHub",
-          "type": "repository",
-          "name": "CloudStream TR",
-          "description": "CloudStream Turkish Repository — Revival of Turkish providers with modern upstream architecture, active link resolution, and automated builds.",
-          "icon_url": null,
-          "repository": "arcilingir/CloudStreamHub",
-          "repository_url": "https://github.com/arcilingir/CloudStreamHub",
-          "repo_url": "https://raw.githubusercontent.com/arcilingir/CloudStreamHub/main/repo.json",
-          "install_url": "cloudstreamrepo://raw.githubusercontent.com/arcilingir/CloudStreamHub/main/repo.json",
-          "plugin_count": 25,
-          "repo_score": 64.4,
-          "repo_score_details": {
-            "score": 64.4,
-            "components": {
-              "declared_health": 30.0,
-              "freshness": 25.0,
-              "originality": 0.0,
-              "github_popularity": 0.0,
-              "coverage": 5.0,
-              "turkish_focus": 4.4
-            },
-            "metrics": {
-              "declared_down_count": 0,
-              "plugin_count": 25,
-              "freshness_days": 6.7,
-              "github_stars": 0,
-              "github_forks": 0,
-              "fork": true,
-              "self_contained": false
-            }
-          },
-          "github_stars": 0,
-          "github_forks": 0,
-          "last_plugins_update": "2026-10-26T22:56:22Z",
-          "short_addresses": [],
-          "fork": true,
-          "parent": "Emre-Kahveci/CloudStreamHub",
-          "self_contained": false,
-          "trusted_seed": false,
-          "turkish_score": 192,
+          "turkish_score": 240,
           "status": "active"
         },
         {
@@ -2798,7 +2710,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 1,
-              "freshness_days": 57.7,
+              "freshness_days": 58.1,
               "github_stars": 1,
               "github_forks": 0,
               "fork": false,
@@ -2843,7 +2755,7 @@
             "metrics": {
               "declared_down_count": 2,
               "plugin_count": 67,
-              "freshness_days": 80.9,
+              "freshness_days": 81.3,
               "github_stars": 0,
               "github_forks": 3,
               "fork": true,
@@ -2859,6 +2771,94 @@
           "self_contained": false,
           "trusted_seed": false,
           "turkish_score": 145,
+          "status": "active"
+        },
+        {
+          "id": "arcilingir/WioSpor",
+          "type": "repository",
+          "name": "WioSpor",
+          "description": "Renk gruplarıyla düzenlenmiş canlı TV ve spor kanalları",
+          "icon_url": "https://raw.githubusercontent.com/Wiojelt/WioSpor/main/assets/logo.png?v=3",
+          "repository": "arcilingir/WioSpor",
+          "repository_url": "https://github.com/arcilingir/WioSpor",
+          "repo_url": "https://raw.githubusercontent.com/arcilingir/WioSpor/main/repo.json",
+          "install_url": "cloudstreamrepo://raw.githubusercontent.com/arcilingir/WioSpor/main/repo.json",
+          "plugin_count": 28,
+          "repo_score": 62.2,
+          "repo_score_details": {
+            "score": 62.2,
+            "components": {
+              "declared_health": 30.0,
+              "freshness": 22.0,
+              "originality": 0.0,
+              "github_popularity": 0.0,
+              "coverage": 5.6,
+              "turkish_focus": 4.6
+            },
+            "metrics": {
+              "declared_down_count": 0,
+              "plugin_count": 28,
+              "freshness_days": 7.1,
+              "github_stars": 0,
+              "github_forks": 0,
+              "fork": true,
+              "self_contained": false
+            }
+          },
+          "github_stars": 0,
+          "github_forks": 0,
+          "last_plugins_update": "2026-10-26T23:19:54Z",
+          "short_addresses": [
+            "!wiospor"
+          ],
+          "fork": true,
+          "parent": "Wiojelt/WioSpor",
+          "self_contained": false,
+          "trusted_seed": false,
+          "turkish_score": 156,
+          "status": "active"
+        },
+        {
+          "id": "arcilingir/CloudStreamHub",
+          "type": "repository",
+          "name": "CloudStream TR",
+          "description": "CloudStream Turkish Repository — Revival of Turkish providers with modern upstream architecture, active link resolution, and automated builds.",
+          "icon_url": null,
+          "repository": "arcilingir/CloudStreamHub",
+          "repository_url": "https://github.com/arcilingir/CloudStreamHub",
+          "repo_url": "https://raw.githubusercontent.com/arcilingir/CloudStreamHub/main/repo.json",
+          "install_url": "cloudstreamrepo://raw.githubusercontent.com/arcilingir/CloudStreamHub/main/repo.json",
+          "plugin_count": 25,
+          "repo_score": 61.4,
+          "repo_score_details": {
+            "score": 61.4,
+            "components": {
+              "declared_health": 30.0,
+              "freshness": 22.0,
+              "originality": 0.0,
+              "github_popularity": 0.0,
+              "coverage": 5.0,
+              "turkish_focus": 4.4
+            },
+            "metrics": {
+              "declared_down_count": 0,
+              "plugin_count": 25,
+              "freshness_days": 7.1,
+              "github_stars": 0,
+              "github_forks": 0,
+              "fork": true,
+              "self_contained": false
+            }
+          },
+          "github_stars": 0,
+          "github_forks": 0,
+          "last_plugins_update": "2026-10-26T22:56:22Z",
+          "short_addresses": [],
+          "fork": true,
+          "parent": "Emre-Kahveci/CloudStreamHub",
+          "self_contained": false,
+          "trusted_seed": false,
+          "turkish_score": 192,
           "status": "active"
         },
         {
@@ -2886,7 +2886,7 @@
             "metrics": {
               "declared_down_count": 2,
               "plugin_count": 67,
-              "freshness_days": 80.9,
+              "freshness_days": 81.3,
               "github_stars": 0,
               "github_forks": 0,
               "fork": true,
@@ -2929,7 +2929,7 @@
             "metrics": {
               "declared_down_count": 2,
               "plugin_count": 52,
-              "freshness_days": 37.8,
+              "freshness_days": 38.2,
               "github_stars": 0,
               "github_forks": 0,
               "fork": true,
@@ -2972,7 +2972,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 2,
-              "freshness_days": 140.2,
+              "freshness_days": 140.6,
               "github_stars": 3,
               "github_forks": 0,
               "fork": false,
@@ -3017,7 +3017,7 @@
             "metrics": {
               "declared_down_count": 1,
               "plugin_count": 43,
-              "freshness_days": 48.9,
+              "freshness_days": 49.3,
               "github_stars": 0,
               "github_forks": 0,
               "fork": true,
@@ -3060,7 +3060,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 9,
-              "freshness_days": 7.9,
+              "freshness_days": 8.3,
               "github_stars": 0,
               "github_forks": 0,
               "fork": true,
@@ -3105,7 +3105,7 @@
             "metrics": {
               "declared_down_count": 0,
               "plugin_count": 2,
-              "freshness_days": 40.2,
+              "freshness_days": 40.6,
               "github_stars": 0,
               "github_forks": 0,
               "fork": false,
@@ -3150,7 +3150,7 @@
             "metrics": {
               "declared_down_count": 1,
               "plugin_count": 1,
-              "freshness_days": 20.7,
+              "freshness_days": 21.1,
               "github_stars": 4,
               "github_forks": 0,
               "fork": false,
