@@ -170,11 +170,14 @@ class ScanSafetyTests(unittest.TestCase):
         plugins = json.loads((self.root / "plugins-x92.json").read_text(encoding="utf-8"))
         changes = json.loads((self.scanner.DATA / "changes.json").read_text(encoding="utf-8"))
         catalog = json.loads((self.scanner.DATA / "catalog.json").read_text(encoding="utf-8"))
+        manifest = json.loads((self.root / "repo-x92.json").read_text(encoding="utf-8"))
         self.assertEqual(len(plugins), 1)
         self.assertEqual(plugins[0]["fileSize"], 123)
         self.assertEqual(changes["app_ready_count"], 1)
         self.assertEqual(changes["published_plugin_count"], 1)
         self.assertEqual(catalog["sections"][0]["items"][0]["plugin_count"], len(plugins))
+        # Clients show how long ago the list was scanned, so the manifest must carry a real timestamp.
+        self.assertGreater(self.scanner.parse_iso(manifest["generated_at"]).year, 1)
 
     def test_verified_older_variant_is_still_used_for_bad_hash(self):
         newer = dict(self.plugin, version=2, url="https://example.invalid/new.cs3", fileHash="0" * 64)

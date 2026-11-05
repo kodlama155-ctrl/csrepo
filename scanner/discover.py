@@ -2170,6 +2170,8 @@ def build_cloudstream_bundle(app_ready: list[dict], seed_repos: set[str], *, out
         "description": "Otomatik doğrulanan ve tekilleştirilen Türkçe CloudStream eklenti deposu.",
         "iconUrl": "https://raw.githubusercontent.com/kodlama155-ctrl/csrepo/main/assets/emirtv-icon.png",
         "manifestVersion": 1,
+        # The list was scanned now; clients can tell a fresh list from a stale one.
+        "generated_at": now_iso(),
         "pluginLists": [
             f"https://raw.githubusercontent.com/kodlama155-ctrl/csrepo/main/{PRIVATE_PLUGINS}"
         ],
