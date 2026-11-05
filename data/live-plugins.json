@@ -18,7 +18,7 @@
     "fileSize": 837265,
     "fileHash": "sha256-9f820774e1ff9e9b3dda8d12e5037a29050ab308f9481948805643c16cf503df",
     "apiVersion": 1,
-    "hash": "e3762002859555e66e89f8c148cecdbc04043ad3bb796bfe5747badce9802e1c"
+    "hash": "9f820774e1ff9e9b3dda8d12e5037a29050ab308f9481948805643c16cf503df"
   },
   {
     "name": "1 v10 Spor",
@@ -785,28 +785,6 @@
     "fileHash": "sha256-edb8f888196e357a04edc46ef115f9b129ba7f68719ff41f8ebc0bd2d05b10f1"
   },
   {
-    "url": "https://cdn.jsdelivr.net/gh/dr-octagon/BronzeCloud@builds/inatbox-bc_v20.cs3",
-    "status": 1,
-    "version": 20,
-    "name": "İnatBox BC",
-    "internalName": "İnatBox BC",
-    "authors": [
-      "Dr.Octagon"
-    ],
-    "description": "İnatBox BronzeCloud Edition - Canlı kanallar, spor ve diziler burada.",
-    "fileSize": 68483,
-    "repositoryUrl": "https://github.com/dr-octagon/Cloudstream-BronzeCloud",
-    "language": "tr",
-    "tvTypes": [
-      "Movie",
-      "TvSeries",
-      "Live"
-    ],
-    "iconUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh3vCp6N1K4bECoYRQD-cisJF2_6V_Hk01ZhDmoPR2JuM8O5qr4MqrPO1munM9cRlleBBSK6odYhLtDBWv4E3vhPhynlmS5hVVtJZShHoGA5REQ8_3v8SIlccTEqzVQu2UJyNYQdJNrKIfWy66RQeT0D-CcmFCbHPz5023H6p2v5fv4NVloZ5Rqo_yGrIY/s320/iNat-Box-App.png",
-    "apiVersion": 1,
-    "fileHash": "sha256-b661548e667ddb481eb9afdb07493481003d69360ff0804749a656c0831938e7"
-  },
-  {
     "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/JestYayin.cs3?v=b42b08a9105f",
     "status": 3,
     "version": 3,
@@ -923,6 +901,26 @@
     "iconUrl": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/main/assets/providers/KralSporHD.png",
     "apiVersion": 1,
     "fileHash": "sha256-62c6cd0bd05570fa39c84f529de619ac61fe2b2d7fab83603311ab4af35ebb29"
+  },
+  {
+    "name": "LeoTV",
+    "internalName": "LeoTV",
+    "version": 2,
+    "description": "LeoTV / LeoGrand canlı spor ve TV yayınları (Dinamik AES-CBC akış çözücü)",
+    "authors": [
+      "Wiojelt"
+    ],
+    "repositoryUrl": "https://github.com/Wiojelt/WioSpor",
+    "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/LeoTV.cs3?v=dbce2939ae71",
+    "iconUrl": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/main/assets/providers/LeoTV.png",
+    "tvTypes": [
+      "Live"
+    ],
+    "language": "tr",
+    "status": 3,
+    "fileSize": 157849,
+    "fileHash": "sha256-dbce2939ae71d3d7e2f3ba69eab4e09a36689050eca6e5a91202280afddb9b3e",
+    "apiVersion": 1
   },
   {
     "url": "https://raw.githubusercontent.com/sanjarkola-collab/cloudstream-turkce-dist/main/plugins/LiveIptvProvider.cs3",
@@ -1258,7 +1256,7 @@
     ],
     "iconUrl": "https://rectv.org.tr/wp-content/uploads/2024/11/rectv-modified.webp",
     "apiVersion": 1,
-    "fileHash": "sha256-3be1efe1abedf0a23bbe07d9f1ccb82c675aeaf1021d45074a2e7a03157ecdf0"
+    "fileHash": "sha256-3f0da708863905ca8c185a1684de6cb6195e04b895364d4a93eab3c342325149"
   },
   {
     "iconUrl": "https://rectv.org.tr/wp-content/uploads/2024/11/rectv-modified.webp",
@@ -1780,23 +1778,23 @@
     "name": "TVNET"
   },
   {
-    "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/Vavoo_v8.cs3",
+    "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/Vavoo_v9.cs3",
     "status": 1,
-    "version": 8,
+    "version": 9,
     "name": "Vavoo",
     "internalName": "Vavoo",
     "authors": [
       "Dr.Octagon"
     ],
     "description": "Vavoo canlı TV eklentisi. Türkiye ve Arnavutluk kanalları kategorili olarak listelenir.",
-    "fileSize": 52692,
+    "fileSize": 52689,
     "repositoryUrl": "https://github.com/dr-octagon/Cloudstream-BronzeCloud",
     "tvTypes": [
       "Live"
     ],
     "iconUrl": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/master/Vavoo/Vavoo.jpg",
     "apiVersion": 1,
-    "fileHash": "sha256-8b9ab76c2966e233eeb9c6b9ef88ef93d1d029f2807da2c86d09f7a618e2398f"
+    "fileHash": "sha256-0ff74465ff319c6de377fa045b25ed1236081fc9b6700c2dfe80e13b8e722f3a"
   },
   {
     "url": "https://raw.githubusercontent.com/baristomruk-max/BTVault/builds/vavooSpor.cs3",
