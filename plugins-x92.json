@@ -482,24 +482,24 @@
     "apiVersion": 1
   },
   {
-    "url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepofull/builds/Atv.cs3",
-    "status": 1,
-    "version": 8,
-    "name": "Atv",
-    "internalName": "Atv",
-    "authors": [
-      "kraptor"
-    ],
-    "description": "Atv canlı yayın ve dizi/program içerikleri.",
-    "fileSize": 28085,
-    "repositoryUrl": "https://github.com/hrtestingx/hrcsrepofull",
-    "language": "tr",
-    "tvTypes": [
-      "Live"
-    ],
-    "iconUrl": "https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.atv.com&size=128",
+    "iconUrl": "https://www.google.com/s2/favicons?domain=atv.com.tr&sz=%size%",
+    "fileHash": "sha256-5399a6fab647293d998c39fe2db9c81d8026a3b9a4558876ca2503c8de25cebb",
     "apiVersion": 1,
-    "fileHash": "sha256-a5313ccf55212f685bc962a04c4a6ea878fa9a64572d07c4db3917615c2ea624"
+    "repositoryUrl": "https://github.com/F0Rextasy/bigbullapp-cs",
+    "fileSize": 27055,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "F0Rextasy"
+    ],
+    "tvTypes": [
+      "TvSeries"
+    ],
+    "version": 4,
+    "internalName": "ATV",
+    "description": "ATV — Güncel ve klasik ATV dizileri (doğrudan MP4/HLS)",
+    "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/ATV.cs3",
+    "name": "ATV"
   },
   {
     "iconUrl": "https://iatv.tmgrup.com.tr/site/v1/i/atv_logo165x60.jpg",
@@ -691,9 +691,9 @@
     "name": "BloombergHT"
   },
   {
-    "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/BOAT_v77.cs3",
+    "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/BOAT_v78.cs3",
     "status": 1,
-    "version": 77,
+    "version": 78,
     "name": "BOAT",
     "internalName": "BOAT",
     "authors": [
@@ -713,7 +713,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/logos/boat_v2.png",
     "apiVersion": 1,
-    "fileHash": "sha256-ccd8dfb0747137b91d7564b2f2b6b62b5a36405faa7240e84f0ab96b2d236406"
+    "fileHash": "sha256-48cfc79b7a39e39b1c569498101a75f0c8256dbf43a4179f0461d2e2b9927161"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=canlidizi.sbs&sz=%size%",
@@ -843,6 +843,28 @@
     "iconUrl": "https://www.google.com/s2/favicons?domain=cizgifilmizle.info&sz=128",
     "apiVersion": 1,
     "fileHash": "sha256-920e4ba209a722233db05b6b4620deb779afda46964331cd61f987b36de3b11b"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/36471a864731fdcf3d74bc858aec89c1c3d51136/CizgiFilmTv.cs3",
+    "status": 1,
+    "version": 3,
+    "name": "CizgiFilmTv",
+    "internalName": "CizgiFilmTv",
+    "authors": [
+      "Wiojelt"
+    ],
+    "description": "WioKids · Cizgifilm.tv çizgi film kataloğu",
+    "fileSize": 107818,
+    "repositoryUrl": "https://github.com/Wiojelt/TurkSinema",
+    "language": "tr",
+    "tvTypes": [
+      "Cartoon",
+      "TvSeries",
+      "Movie"
+    ],
+    "iconUrl": "https://www.google.com/s2/favicons?domain=cizgifilm.tv&sz=128",
+    "apiVersion": 1,
+    "fileHash": "sha256-f79fbf79313915f019c93aa99e9cfb982e22a00953965b90ba956d4128d192af"
   },
   {
     "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/CizgiMax.cs3",
@@ -1395,27 +1417,6 @@
     "description": "DiziboxIzle — güncel yabancı dizi (diziboxizle.com)",
     "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/DiziboxIzle.cs3",
     "name": "DiziboxIzle"
-  },
-  {
-    "iconUrl": "https://www.google.com/s2/favicons?domain=diziboxtv.com&sz=%size%",
-    "fileHash": "sha256-1d4140b201c4b278f1b8f40b1eac6b94a9f9a6c358fabfbfbdfa322c5dae1a1b",
-    "apiVersion": 1,
-    "repositoryUrl": "https://github.com/F0Rextasy/bigbullapp-cs",
-    "fileSize": 35110,
-    "status": 1,
-    "language": "tr",
-    "authors": [
-      "F0Rextasy"
-    ],
-    "tvTypes": [
-      "Movie",
-      "TvSeries"
-    ],
-    "version": 3,
-    "internalName": "DiziBoxTv",
-    "description": "DiziBoxTv — Türkçe içerik (autopilot)",
-    "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/DiziBoxTv.cs3",
-    "name": "DiziBoxTv"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=dizican.cc&sz=%size%",
@@ -3101,27 +3102,25 @@
     "fileHash": "sha256-a178d4f6c910114a2e3a1e608a08e3257ab2257ba9dcfe565045a0dccd88c668"
   },
   {
-    "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/36471a864731fdcf3d74bc858aec89c1c3d51136/HDFilmizleBest.cs3",
-    "status": 3,
-    "version": 1,
-    "name": "HDFilmizleBest",
-    "internalName": "HDFilmizleBest",
-    "authors": [
-      "Wiojelt"
-    ],
-    "description": "H D Filmizle Best · TurkSinema ayrı sağlayıcı paketi",
-    "fileSize": 114929,
-    "repositoryUrl": "https://github.com/Wiojelt/TurkSinema",
+    "iconUrl": "https://www.google.com/s2/favicons?domain=hdfilmizle.best&sz=%size%",
+    "fileHash": "sha256-0149ce841f17b99fe3e43faa3a5719f0f3e382bea419cdc06e065bbb18347d82",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/F0Rextasy/bigbullapp-cs",
+    "fileSize": 36179,
+    "status": 1,
     "language": "tr",
+    "authors": [
+      "F0Rextasy"
+    ],
     "tvTypes": [
       "Movie",
-      "TvSeries",
-      "Anime",
-      "Documentary"
+      "TvSeries"
     ],
-    "iconUrl": "https://www.google.com/s2/favicons?domain=www.hdfilmizle.best&sz=128",
-    "apiVersion": 1,
-    "fileHash": "sha256-a9a142a4715bd92b3440fdfa3207e9532ea0e1c2c5ed367617db23435b8cf72f"
+    "version": 1,
+    "internalName": "HDFilmizleBest",
+    "description": "HDFilmizleBest — Türkçe içerik (autopilot)",
+    "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/HDFilmizleBest.cs3",
+    "name": "HDFilmizleBest"
   },
   {
     "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/36471a864731fdcf3d74bc858aec89c1c3d51136/HDFilmIzleInk.cs3",
@@ -4464,26 +4463,25 @@
     "apiVersion": 1
   },
   {
-    "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/36471a864731fdcf3d74bc858aec89c1c3d51136/MinikaCocuk.cs3",
-    "status": 1,
-    "version": 3,
-    "name": "MinikaCocuk",
-    "internalName": "MinikaCocuk",
-    "authors": [
-      "Wiojelt"
-    ],
-    "description": "WioKids · Minika Çocuk resmî program ve video kataloğu",
-    "fileSize": 113561,
-    "repositoryUrl": "https://github.com/Wiojelt/TurkSinema",
-    "language": "tr",
-    "tvTypes": [
-      "Cartoon",
-      "TvSeries",
-      "Movie"
-    ],
-    "iconUrl": "https://www.google.com/s2/favicons?domain=minikacocuk.com.tr&sz=128",
+    "iconUrl": "https://www.google.com/s2/favicons?domain=minikacocuk.com.tr&sz=%size%",
+    "fileHash": "sha256-62fe793dcaad91a56c56b93f4f5507e32323b61d036a5f00aa8bad7c419f6a63",
     "apiVersion": 1,
-    "fileHash": "sha256-e8e399326fdabf12a93b92e11e3aead40ab4a15f4012d25c85cfb08b39ddd6f1"
+    "repositoryUrl": "https://github.com/F0Rextasy/bigbullapp-cs",
+    "fileSize": 21274,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "F0Rextasy"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 8,
+    "internalName": "MinikaCocuk",
+    "description": "MinikaCocuk — Türkçe çocuk çizgi filmleri",
+    "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/MinikaCocuk.cs3",
+    "name": "MinikaCocuk"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=minikago.com.tr&sz=%size%",
@@ -5168,7 +5166,7 @@
     ],
     "iconUrl": "https://rectv.org.tr/wp-content/uploads/2024/11/rectv-modified.webp",
     "apiVersion": 1,
-    "fileHash": "sha256-3f0da708863905ca8c185a1684de6cb6195e04b895364d4a93eab3c342325149"
+    "fileHash": "sha256-6467da47b8385b1f54e7070cfc85c6761fd3c7be8ce4ba86190eac3eceff13dc"
   },
   {
     "iconUrl": "https://rectv.org.tr/wp-content/uploads/2024/11/rectv-modified.webp",
