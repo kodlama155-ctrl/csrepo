@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-11-06T19:16:11Z",
+  "generated_at": "2026-11-07T05:39:46Z",
   "candidate_plugin_count": 400,
-  "healthy_plugin_count": 339,
-  "rejected_plugin_count": 61,
-  "fallback_used_count": 35,
+  "healthy_plugin_count": 337,
+  "rejected_plugin_count": 63,
+  "fallback_used_count": 34,
   "provider_unverified_count": 58,
   "rejection_attempt_counts": {
     "blacklisted": 24,
     "corrupted-cs3-missing-dex": 1,
     "hash-mismatch": 8,
-    "http-404": 58,
+    "http-404": 56,
     "invalid-status": 9,
-    "provider-unverified": 447,
-    "status-down": 31
+    "provider-unverified": 442,
+    "status-down": 33
   },
   "checks": {
     "status_zero_rejected": true,
@@ -556,8 +556,8 @@
       "name": "BOAT",
       "status": "healthy",
       "repository": "dr-octagon/BronzeCloud",
-      "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/BOAT_v78.cs3",
-      "version": 78,
+      "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/BOAT_v79.cs3",
+      "version": 79,
       "size": 746131,
       "hash_checked": false,
       "provider_check": "unverified",
@@ -1327,20 +1327,6 @@
       "attempts": null
     },
     {
-      "internal_name": "diziboxtv",
-      "name": "DiziBoxTv",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/DiziBoxTv.cs3",
-      "version": 3,
-      "size": 35110,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "diziboxtv.com:alive",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
       "internal_name": "dizican",
       "name": "DiziCaN",
       "status": "healthy",
@@ -1791,6 +1777,14 @@
           "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film/builds/DiziMom.cs3",
           "version": 27,
           "result": "http-404",
+          "provider_check": "not-checked",
+          "provider_reason": null
+        },
+        {
+          "repository": "baristomruk-max/BTVault",
+          "url": "https://raw.githubusercontent.com/baristomruk-max/BTVault/builds/DiziMom.cs3",
+          "version": 15,
+          "result": "status-down",
           "provider_check": "not-checked",
           "provider_reason": null
         },
@@ -2816,7 +2810,7 @@
         {
           "repository": "galipgokalp/tv-cloudstream",
           "url": "https://raw.githubusercontent.com/galipgokalp/tv-cloudstream/builds/FilmMakinesi.cs3",
-          "version": 9,
+          "version": 10,
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "filmmakinesi.to:http-451"
@@ -3396,6 +3390,14 @@
           "provider_reason": "www.hdfilmcehennemi.nl:http-451"
         },
         {
+          "repository": "baristomruk-max/BTVault",
+          "url": "https://raw.githubusercontent.com/baristomruk-max/BTVault/builds/HDFilmCehennemi.cs3",
+          "version": 19,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.hdfilmcehennemi.nl:http-451"
+        },
+        {
           "repository": "neoser1984/neowatch",
           "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/HDFilmCehennemi.cs3",
           "version": 19,
@@ -3412,17 +3414,9 @@
           "provider_reason": "www.hdfilmcehennemi.nl:http-451"
         },
         {
-          "repository": "baristomruk-max/BTVault",
-          "url": "https://raw.githubusercontent.com/baristomruk-max/BTVault/builds/HDFilmCehennemi.cs3",
-          "version": 19,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.hdfilmcehennemi.nl:http-451"
-        },
-        {
           "repository": "F0Rextasy/bigbullapp-cs",
           "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/HDFilmCehennemi.cs3",
-          "version": 8,
+          "version": 9,
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "www.hdfilmcehennemi.nl:http-451"
@@ -4092,11 +4086,11 @@
       "status": "healthy",
       "repository": "baristomruk-max/BTVault",
       "url": "https://raw.githubusercontent.com/baristomruk-max/BTVault/builds/IzleAI.cs3",
-      "version": 5,
-      "size": 29482,
+      "version": 6,
+      "size": 29488,
       "hash_checked": true,
       "provider_check": "reachable",
-      "provider_reason": "selcukflix.com:alive-tr",
+      "provider_reason": "selcukflix.app:alive-tr",
       "fallback_used": false,
       "attempts": null
     },
@@ -5732,69 +5726,6 @@
       "attempts": null
     },
     {
-      "internal_name": "tafdi",
-      "name": "Tafdi",
-      "status": "healthy",
-      "repository": "baristomruk-max/BTVault",
-      "url": "https://raw.githubusercontent.com/baristomruk-max/BTVault/builds/Tafdi.cs3",
-      "version": 1,
-      "size": 12628,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "tafdi.net:alive",
-      "fallback_used": true,
-      "attempts": [
-        {
-          "repository": "arcilingir/Dizi_Film",
-          "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film/builds/Tafdi.cs3",
-          "version": 3,
-          "result": "status-down",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
-          "repository": "Bymesut1/Dizi_Film",
-          "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film/builds/Tafdi.cs3",
-          "version": 3,
-          "result": "status-down",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
-          "repository": "qera18/apple",
-          "url": "https://raw.githubusercontent.com/csprofesor/nik-cloudstream/builds/Tafdi.cs3",
-          "version": 3,
-          "result": "status-down",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
-          "repository": "liberta09/Kekik-cloudstream",
-          "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/Tafdi.cs3",
-          "version": 3,
-          "result": "status-down",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
-          "repository": "safarxe/CloudStream",
-          "url": "https://raw.githubusercontent.com/safarxe/CloudStream/builds/Tafdi.cs3",
-          "version": 3,
-          "result": "status-down",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
-          "repository": "baristomruk-max/BTVault",
-          "url": "https://raw.githubusercontent.com/baristomruk-max/BTVault/builds/Tafdi.cs3",
-          "version": 1,
-          "result": "ok",
-          "provider_check": "reachable",
-          "provider_reason": "tafdi.net:alive"
-        }
-      ]
-    },
-    {
       "internal_name": "taraftarium24",
       "name": "Taraftarium24",
       "status": "healthy",
@@ -6644,11 +6575,11 @@
       "status": "healthy",
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Yabancidizi.cs3",
-      "version": 7,
-      "size": 35290,
+      "version": 8,
+      "size": 36678,
       "hash_checked": true,
       "provider_check": "reachable",
-      "provider_reason": "yabancidizi.live:alive",
+      "provider_reason": "yabancidizi.watch:alive-tr",
       "fallback_used": true,
       "attempts": [
         {
@@ -6724,76 +6655,12 @@
           "provider_reason": "yabancidizi.news:http-403"
         },
         {
-          "repository": "arcilingir/Dizi_Film_2",
-          "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film_2/builds/YabanciDizi.cs3",
-          "version": 8,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "yabancidizi.so:http-403"
-        },
-        {
-          "repository": "arcilingir/nik-cloudstream",
-          "url": "https://raw.githubusercontent.com/arcilingir/nik-cloudstream/builds/YabanciDizi.cs3",
-          "version": 8,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "yabancidizi.so:http-403"
-        },
-        {
-          "repository": "arcilingir/Dizi_Film",
-          "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film/builds/YabanciDizi.cs3",
-          "version": 8,
-          "result": "http-404",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
-          "repository": "Bymesut1/Dizi_Film",
-          "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film/builds/YabanciDizi.cs3",
-          "version": 8,
-          "result": "http-404",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
-          "repository": "qera18/apple",
-          "url": "https://raw.githubusercontent.com/csprofesor/nik-cloudstream/builds/YabanciDizi.cs3",
-          "version": 8,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "yabancidizi.so:http-403"
-        },
-        {
-          "repository": "liberta09/Kekik-cloudstream",
-          "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/YabanciDizi.cs3",
-          "version": 8,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "yabancidizi.so:http-403"
-        },
-        {
-          "repository": "safarxe/CloudStream",
-          "url": "https://raw.githubusercontent.com/safarxe/CloudStream/builds/YabanciDizi.cs3",
-          "version": 8,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "yabancidizi.so:http-403"
-        },
-        {
-          "repository": "dr-octagon/BronzeCloud",
-          "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/YabanciDizi_v7.cs3",
-          "version": 7,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "yabancidizi.news:http-403"
-        },
-        {
           "repository": "F0Rextasy/bigbullapp-cs",
           "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Yabancidizi.cs3",
-          "version": 7,
+          "version": 8,
           "result": "ok",
           "provider_check": "reachable",
-          "provider_reason": "yabancidizi.live:alive"
+          "provider_reason": "yabancidizi.watch:alive-tr"
         }
       ]
     },
@@ -7011,7 +6878,7 @@
         {
           "repository": "baristomruk-max/BTVault",
           "url": "https://raw.githubusercontent.com/baristomruk-max/BTVault/builds/4KFilmIzlesene.cs3",
-          "version": 1,
+          "version": 2,
           "result": "blacklisted",
           "provider_check": "not-checked",
           "provider_reason": null
@@ -7304,8 +7171,8 @@
       "attempts": [
         {
           "repository": "dr-octagon/BronzeCloud",
-          "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/CineStream_v577.cs3",
-          "version": 577,
+          "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/CineStream_v578.cs3",
+          "version": 578,
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "cinemeta-catalogs.strem.io:http-404"
@@ -7465,6 +7332,20 @@
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "www.dizibox.live:http-403"
+        }
+      ]
+    },
+    {
+      "internal_name": "diziboxtv",
+      "status": "rejected",
+      "attempts": [
+        {
+          "repository": "F0Rextasy/bigbullapp-cs",
+          "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/DiziBoxTv.cs3",
+          "version": 3,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "diziboxtv.com:unreachable"
         }
       ]
     },
@@ -7963,6 +7844,14 @@
           "provider_reason": "www.fullhdfilmizlesene.now:http-403"
         },
         {
+          "repository": "galipgokalp/tv-cloudstream",
+          "url": "https://raw.githubusercontent.com/galipgokalp/tv-cloudstream/builds/FullHDFilmizlesene.cs3",
+          "version": 8,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+        },
+        {
           "repository": "Sertel392/gencler",
           "url": "https://raw.githubusercontent.com/UmayTrade/MyTV/builds/FullHDFilmizlesene.cs3",
           "version": 8,
@@ -7995,6 +7884,14 @@
           "provider_reason": "www.fullhdfilmizlesene.now:http-403"
         },
         {
+          "repository": "baristomruk-max/BTVault",
+          "url": "https://raw.githubusercontent.com/baristomruk-max/BTVault/builds/FullHDFilmizlesene.cs3",
+          "version": 6,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+        },
+        {
           "repository": "JustSadY/Cloudstream-Lykia",
           "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/FullHDFilmizlesene.cs3",
           "version": 6,
@@ -8009,22 +7906,6 @@
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "www.fullhdfilmizlesene.now:http-403"
-        },
-        {
-          "repository": "baristomruk-max/BTVault",
-          "url": "https://raw.githubusercontent.com/baristomruk-max/BTVault/builds/FullHDFilmizlesene.cs3",
-          "version": 6,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
-        },
-        {
-          "repository": "galipgokalp/tv-cloudstream",
-          "url": "https://raw.githubusercontent.com/galipgokalp/tv-cloudstream/builds/FullHDFilmizlesene.cs3",
-          "version": 6,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.mx:http-403"
         },
         {
           "repository": "neoser1984/neowatch",
@@ -8731,6 +8612,60 @@
           "url": "https://raw.githubusercontent.com/MakotoTokioki/MakotoSkystream/plugins/dist/com.makototokioki.startv.sky",
           "version": 2,
           "result": "invalid-status",
+          "provider_check": "not-checked",
+          "provider_reason": null
+        }
+      ]
+    },
+    {
+      "internal_name": "tafdi",
+      "status": "rejected",
+      "attempts": [
+        {
+          "repository": "arcilingir/Dizi_Film",
+          "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film/builds/Tafdi.cs3",
+          "version": 3,
+          "result": "status-down",
+          "provider_check": "not-checked",
+          "provider_reason": null
+        },
+        {
+          "repository": "Bymesut1/Dizi_Film",
+          "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film/builds/Tafdi.cs3",
+          "version": 3,
+          "result": "status-down",
+          "provider_check": "not-checked",
+          "provider_reason": null
+        },
+        {
+          "repository": "qera18/apple",
+          "url": "https://raw.githubusercontent.com/csprofesor/nik-cloudstream/builds/Tafdi.cs3",
+          "version": 3,
+          "result": "status-down",
+          "provider_check": "not-checked",
+          "provider_reason": null
+        },
+        {
+          "repository": "liberta09/Kekik-cloudstream",
+          "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/Tafdi.cs3",
+          "version": 3,
+          "result": "status-down",
+          "provider_check": "not-checked",
+          "provider_reason": null
+        },
+        {
+          "repository": "safarxe/CloudStream",
+          "url": "https://raw.githubusercontent.com/safarxe/CloudStream/builds/Tafdi.cs3",
+          "version": 3,
+          "result": "status-down",
+          "provider_check": "not-checked",
+          "provider_reason": null
+        },
+        {
+          "repository": "baristomruk-max/BTVault",
+          "url": "https://raw.githubusercontent.com/baristomruk-max/BTVault/builds/Tafdi.cs3",
+          "version": 2,
+          "result": "status-down",
           "provider_check": "not-checked",
           "provider_reason": null
         }
