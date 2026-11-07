@@ -610,26 +610,6 @@
     "fileHash": "sha256-b6304052c9e77ea36c957e55e66e2706aba4a1023cdf350fb019609fab09b8a8"
   },
   {
-    "url": "https://raw.githubusercontent.com/Wiojelt/WioSpor/builds/BeyazElma.cs3",
-    "status": 3,
-    "version": 12,
-    "name": "BeyazElma",
-    "internalName": "BeyazElma",
-    "authors": [
-      "Wiojelt"
-    ],
-    "description": "ğŸŸ¢ Kaynak: BeyazElma Â· EmeÄŸi iÃ§in teÅŸekkÃ¼rler â™¥ Â· @wiojelt",
-    "fileSize": 219121,
-    "repositoryUrl": "https://github.com/Wiojelt/WioSpor",
-    "language": "tr",
-    "tvTypes": [
-      "Live"
-    ],
-    "iconUrl": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/main/assets/providers/BeyazElma.png",
-    "apiVersion": 1,
-    "fileHash": "sha256-4948e352375d04fad0510847b0127aa8226176e7ac1aaf048ae7ff7d058adcd6"
-  },
-  {
     "iconUrl": "https://www.google.com/s2/favicons?domain=beyaztv.com.tr&sz=%size%",
     "fileHash": "sha256-bd9b059807566bca45ffc48f55eca969133642614859e73652c7d02b7e0d748f",
     "apiVersion": 1,
@@ -691,9 +671,9 @@
     "name": "BloombergHT"
   },
   {
-    "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/BOAT_v79.cs3",
+    "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/BOAT_v80.cs3",
     "status": 1,
-    "version": 79,
+    "version": 80,
     "name": "BOAT",
     "internalName": "BOAT",
     "authors": [
@@ -713,7 +693,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/logos/boat_v2.png",
     "apiVersion": 1,
-    "fileHash": "sha256-7421ad29601c58295edc71a1b729e2f2359f36722a3998c9c150221205eb2a14"
+    "fileHash": "sha256-ea0325f20497f850b1e5c3f992c1a4d0ff1cd0d81c21c9593a11dd2152eae8f9"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=canlidizi.sbs&sz=%size%",
@@ -776,6 +756,26 @@
     "description": "CanliYayinKanallari — Türkçe canlı TV (seçilmiş HLS)",
     "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/CanliYayinKanallari.cs3",
     "name": "CanliYayinKanallari"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/main/Catcast.cs3?v=5a332e04a042",
+    "status": 1,
+    "version": 3,
+    "name": "Catcast TV",
+    "internalName": "Catcast",
+    "authors": [
+      "Wiojelt"
+    ],
+    "description": "Catcast TV · Sadece Türkçe Canlı Kanallar (Ulusal, Haber, Sinema, Dizi, Spor, Müzik, Çocuk, Belgesel)",
+    "fileSize": 123479,
+    "repositoryUrl": "https://github.com/Wiojelt/WioSinema",
+    "language": "tr",
+    "tvTypes": [
+      "Live"
+    ],
+    "iconUrl": "https://raw.githubusercontent.com/Wiojelt/test/builds/assets/catcast.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-5a332e04a042d061baf516bc240e945cb3e93953653d95b48e5a557a317c9684"
   },
   {
     "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/CineJoy_v10.cs3",
@@ -867,9 +867,9 @@
     "fileHash": "sha256-f79fbf79313915f019c93aa99e9cfb982e22a00953965b90ba956d4128d192af"
   },
   {
-    "url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepofull/builds/CizgiMax.cs3",
+    "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/CizgiMax.cs3",
     "status": 1,
-    "version": 33,
+    "version": 37,
     "name": "CizgiMax",
     "internalName": "CizgiMax",
     "authors": [
@@ -877,15 +877,37 @@
       "ByAyzen"
     ],
     "description": "ÇizgiMax ile Çizgi Film izlemek artık daha kolay, donmadan full hd ve reklamsız bir sitedir, içerisinde 700 den fazla çizgi film olan, Bu site bu işi profesyonelce yapıyor.",
-    "fileSize": 40875,
-    "repositoryUrl": "https://github.com/hrtestingx/hrcsrepofull",
+    "fileSize": 47530,
+    "repositoryUrl": "https://github.com/aytzey/cs-kraptor",
     "language": "tr",
     "tvTypes": [
       "Cartoon"
     ],
     "iconUrl": "https://www.google.com/s2/favicons?sz=64&domain=cizgimax.online",
     "apiVersion": 1,
-    "fileHash": "sha256-71a7d7866e295ee11c9dd7ae13fbea603dfba53e423b54d071c88f6a1c03d73d"
+    "fileHash": "sha256-b99aa1c2b6c1c73264c4769786a15bba41c9fb6444a2ce18bab60a809a785161"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/sanjarkola-collab/cloudstream-turkce-dist/main/plugins/CizgiMaxProvider.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "CizgiMaxProvider",
+    "internalName": "CizgiMaxProvider",
+    "authors": [
+      "sanjarkola",
+      "BTcozum",
+      "keyiflerolsun"
+    ],
+    "description": "[ÇizgiMax | Türkçe Çizgi Dizi] 700'den fazla nostaljik ve güncel çizgi dizi & animasyon serisi donmadan full HD Türkçe dublaj ile.",
+    "fileSize": 132588,
+    "repositoryUrl": "https://github.com/sanjarkola-collab/cloudstream-turkce-dist",
+    "language": "tr",
+    "tvTypes": [
+      "Cartoon"
+    ],
+    "iconUrl": "https://www.google.com/s2/favicons?domain=cizgimax.online&sz=%size%",
+    "apiVersion": 1,
+    "fileHash": "sha256-7a6b6885ee72a136aaab8e14caf30ff3774374e5d47e55af0780556a2ffa6b88"
   },
   {
     "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/36471a864731fdcf3d74bc858aec89c1c3d51136/CizgiPortal.cs3",
@@ -1886,7 +1908,7 @@
     "name": "DiziPalGuncel"
   },
   {
-    "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/36471a864731fdcf3d74bc858aec89c1c3d51136/DiziPalHub.cs3",
+    "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/main/DiziPalHub.cs3?v=434d1102cd81",
     "status": 3,
     "version": 26,
     "name": "DiziPalHub",
@@ -1895,7 +1917,7 @@
       "Wiojelt"
     ],
     "description": "DiziPal Hub · Son Bölümler, 1592, 2225, DDiziPal ve Orjinal 15 kaynakları tek merkezde",
-    "fileSize": 234497,
+    "fileSize": 234477,
     "repositoryUrl": "https://github.com/Wiojelt/WioSinema",
     "language": "tr",
     "tvTypes": [
@@ -1906,22 +1928,22 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/Wiojelt/WioSinema/main/assets/DiziPalHub.png",
     "apiVersion": 1,
-    "fileHash": "sha256-9cd75c6132e73da36676da15d90b2b85f6a2dde462bf36d675bdea7e05c3bfff"
+    "fileHash": "sha256-434d1102cd812e176efe0d853aa05a27c1d640d4f392593ddaf8d6003d178530",
+    "hash": "434d1102cd812e176efe0d853aa05a27c1d640d4f392593ddaf8d6003d178530"
   },
   {
-    "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/DiziPalOriginal_v106.cs3",
+    "url": "https://raw.githubusercontent.com/feroxx/Kekik-cloudstream/builds/DiziPalOriginal.cs3",
     "status": 1,
-    "version": 106,
+    "version": 112,
     "name": "DiziPalOriginal",
     "internalName": "DiziPalOriginal",
     "authors": [
       "keyiflerolsun",
-      "muratcesmecioglu",
-      "Dr.Octagon"
+      "muratcesmecioglu"
     ],
     "description": "en yeni dizileri güvenli ve hızlı şekilde sunar.",
-    "fileSize": 49423,
-    "repositoryUrl": "https://github.com/dr-octagon/Cloudstream-BronzeCloud",
+    "fileSize": 27830,
+    "repositoryUrl": "https://github.com/feroxx/Kekik-cloudstream",
     "language": "tr",
     "tvTypes": [
       "TvSeries",
@@ -1929,7 +1951,7 @@
     ],
     "iconUrl": "https://chessplyimages.cfd/uploads/site/favicon-32x32.png",
     "apiVersion": 1,
-    "fileHash": "sha256-ac2f22a772fa39f0c5bf1765934d3f73184b7524a87d23dc3f4f2d6b2c9744a7"
+    "fileHash": "sha256-a75c1d30b79eeda844ce7f773246b74f9c6e7f1bc035d4424e9d0305e2820347"
   },
   {
     "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/DiziPalOrijinal.cs3",
@@ -2288,6 +2310,28 @@
     "iconUrl": "https://raw.githubusercontent.com/Wiojelt/test/main/assets/eloDRAMA.png",
     "apiVersion": 1,
     "fileHash": "sha256-0daba418e5fe16a8805ae376930f32d19e00f23ddff3a2957f70637d65645e4c"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/FilmciBaba_v1.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "FilmciBaba",
+    "internalName": "FilmciBaba",
+    "authors": [
+      "Dr.Octagon",
+      "wGodfather"
+    ],
+    "description": "Filmci Baba (filmizle.ink) film ve dizi eklentisi. Sonsuz kaydırma, Hotstream ve altyazı desteği içerir.",
+    "fileSize": 39592,
+    "repositoryUrl": "https://github.com/dr-octagon/Cloudstream-BronzeCloud",
+    "language": "tr",
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "iconUrl": "https://www.google.com/s2/favicons?domain=filmizle.ink&sz=%size%",
+    "apiVersion": 1,
+    "fileHash": "sha256-33a59c5a2e09ff2ccd6ef2ebf4727826473098e60bb99e525498650d0f6bd149"
   },
   {
     "url": "https://raw.githubusercontent.com/sanjarkola-collab/cloudstream-turkce-dist/main/plugins/FilmDiziProvider.cs3",
@@ -3085,28 +3129,30 @@
     "fileHash": "sha256-a178d4f6c910114a2e3a1e608a08e3257ab2257ba9dcfe565045a0dccd88c668"
   },
   {
-    "iconUrl": "https://www.google.com/s2/favicons?domain=hdfilmizle.best&sz=%size%",
-    "fileHash": "sha256-a67284f8d36ea366e4381cbbd3923a70708bbf65f5b2bb03abf3a1c9929e58ca",
-    "apiVersion": 1,
-    "repositoryUrl": "https://github.com/F0Rextasy/bigbullapp-cs",
-    "fileSize": 36730,
-    "status": 1,
-    "language": "tr",
+    "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/main/HDFilmizleBest.cs3?v=a3fde6548985",
+    "status": 3,
+    "version": 1,
+    "name": "HDFilmizleBest",
+    "internalName": "HDFilmizleBest",
     "authors": [
-      "F0Rextasy"
+      "Wiojelt"
     ],
+    "description": "H D Filmizle Best · TurkSinema ayrı sağlayıcı paketi",
+    "fileSize": 114918,
+    "repositoryUrl": "https://github.com/Wiojelt/WioSinema",
+    "language": "tr",
     "tvTypes": [
       "Movie",
-      "TvSeries"
+      "TvSeries",
+      "Anime",
+      "Documentary"
     ],
-    "version": 1,
-    "internalName": "HDFilmizleBest",
-    "description": "HDFilmizleBest — Türkçe içerik",
-    "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/HDFilmizleBest.cs3",
-    "name": "HDFilmizleBest"
+    "iconUrl": "https://www.google.com/s2/favicons?domain=www.hdfilmizle.best&sz=128",
+    "apiVersion": 1,
+    "fileHash": "sha256-a3fde654898531666627f70f96724ba741045772008af3a97c9ed7a994b8ed6d"
   },
   {
-    "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/36471a864731fdcf3d74bc858aec89c1c3d51136/HDFilmIzleInk.cs3",
+    "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/main/HDFilmIzleInk.cs3?v=e79a966fa1fa",
     "status": 3,
     "version": 7,
     "name": "HDFilmIzleInk",
@@ -3116,7 +3162,7 @@
     ],
     "description": "HDFilmİzle Ink · TurkSinema ayrı sağlayıcı paketi",
     "fileSize": 132138,
-    "repositoryUrl": "https://github.com/Wiojelt/TurkSinema",
+    "repositoryUrl": "https://github.com/Wiojelt/WioSinema",
     "language": "tr",
     "tvTypes": [
       "Movie",
@@ -3129,7 +3175,7 @@
     "fileHash": "sha256-e79a966fa1fae26f9ca37be24150a22b186e8c74b8557c995b813ae5f596fb5f"
   },
   {
-    "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/36471a864731fdcf3d74bc858aec89c1c3d51136/HDFilmIzleVip.cs3",
+    "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/main/HDFilmIzleVip.cs3?v=934583ab1da7",
     "status": 3,
     "version": 7,
     "name": "HDFilmIzleVip",
@@ -3139,7 +3185,7 @@
     ],
     "description": "HDFilmİzle Vip · TurkSinema ayrı sağlayıcı paketi",
     "fileSize": 132156,
-    "repositoryUrl": "https://github.com/Wiojelt/TurkSinema",
+    "repositoryUrl": "https://github.com/Wiojelt/WioSinema",
     "language": "tr",
     "tvTypes": [
       "Movie",
@@ -4196,7 +4242,7 @@
     "apiVersion": 1
   },
   {
-    "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/36471a864731fdcf3d74bc858aec89c1c3d51136/LiderFilmIzle.cs3",
+    "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/main/LiderFilmIzle.cs3?v=3547650abc3b",
     "status": 3,
     "version": 7,
     "name": "LiderFilmIzle",
@@ -4205,8 +4251,8 @@
       "Wiojelt"
     ],
     "description": "LiderFilmİzle · TurkSinema ayrı sağlayıcı paketi",
-    "fileSize": 139233,
-    "repositoryUrl": "https://github.com/Wiojelt/TurkSinema",
+    "fileSize": 137142,
+    "repositoryUrl": "https://github.com/Wiojelt/WioSinema",
     "language": "tr",
     "tvTypes": [
       "Movie",
@@ -4216,7 +4262,7 @@
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=liderfilmizle.com&sz=128",
     "apiVersion": 1,
-    "fileHash": "sha256-931ce5044aa15690f6468b1a256e1aa88d054b20140a1d258383d63892d610ea"
+    "fileHash": "sha256-3547650abc3b787462fb290f6ed3e545dff4e92fdbf8b413b7408506dcff16b4"
   },
   {
     "url": "https://raw.githubusercontent.com/sanjarkola-collab/cloudstream-turkce-dist/main/plugins/LiveIptvProvider.cs3",
@@ -4735,26 +4781,6 @@
     "fileHash": "sha256-d1bf7dcba3da7b13d21850505d7a3e297c0b5cf890fba0d3acfba352a0114b73"
   },
   {
-    "iconUrl": "https://tv.newtane.com/favicon.ico",
-    "fileHash": "sha256-86ec634bb10b081fa60b2846572eeaa7eb27f8754bf44a679944e0fa08065bba",
-    "apiVersion": 1,
-    "repositoryUrl": "https://github.com/Kayracs3/Kayra",
-    "fileSize": 30094,
-    "status": 1,
-    "language": "tr",
-    "authors": [
-      "Kayracs3"
-    ],
-    "tvTypes": [
-      "Live"
-    ],
-    "version": 12,
-    "internalName": "Newtv",
-    "description": "BeyazElma canlı TV sağlayıcısı",
-    "url": "https://raw.githubusercontent.com/Kayracs3/Kayra/builds/Newtv.cs3",
-    "name": "Newtv"
-  },
-  {
     "url": "https://raw.githubusercontent.com/Wiojelt/WioSpor/builds/NewTVLive.cs3?v=8c6a381eb8c0",
     "status": 3,
     "version": 4,
@@ -5155,7 +5181,7 @@
     ],
     "iconUrl": "https://rectv.org.tr/wp-content/uploads/2024/11/rectv-modified.webp",
     "apiVersion": 1,
-    "fileHash": "sha256-b490c9d256a8ce0f98606a0c379d81b833b0f3a8c557726aa154733f97abbe9d"
+    "fileHash": "sha256-f434c6884acdc7b11fbced3db0a08b9f9912c7a90ef1bf4be48fe99084a9a0be"
   },
   {
     "iconUrl": "https://rectv.org.tr/wp-content/uploads/2024/11/rectv-modified.webp",
@@ -6533,6 +6559,48 @@
     "name": "UlkeTV"
   },
   {
+    "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/UltraFilm_v3.cs3",
+    "status": 1,
+    "version": 3,
+    "name": "UltraFilm",
+    "internalName": "UltraFilm",
+    "authors": [
+      "Dr.Octagon",
+      "wGodfather"
+    ],
+    "description": "UltraFilm film eklentisi. Sonsuz kaydırma, çoklu kaynak, Hotstream ve YouTube fragman desteği içerir.",
+    "fileSize": 39783,
+    "repositoryUrl": "https://github.com/dr-octagon/Cloudstream-BronzeCloud",
+    "language": "tr",
+    "tvTypes": [
+      "Movie"
+    ],
+    "iconUrl": "https://www.google.com/s2/favicons?domain=ufilmizle.com&sz=%size%",
+    "apiVersion": 1,
+    "fileHash": "sha256-4d14050fd772565e8b78a7d7f62c028bbb2c1ac27977cea6f9b523a663c5adaf"
+  },
+  {
+    "iconUrl": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://ufilmizle.com/&size=128",
+    "fileHash": "sha256-a71ec7703b4e7fdc3658ae391f16fe952e433933f239e20ffd3923157a801b44",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/lepotane/MRC-builds",
+    "fileSize": 30874,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "MRC"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 14,
+    "internalName": "UltraFilmizle",
+    "description": "UltraFilmizle - 1080p ve 4K yerli/yabancÃƒÆ’Ã¢â‚¬ÂÃƒâ€šÃ‚Â± film izleme.",
+    "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/UltraFilmizle.cs3",
+    "name": "UltraFilmizle"
+  },
+  {
     "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/Vavoo_v9.cs3",
     "status": 1,
     "version": 9,
@@ -7013,5 +7081,26 @@
     "iconUrl": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/main/assets/providers/ZbahisTV.png",
     "apiVersion": 1,
     "fileHash": "sha256-390973708658c0debebe7f76d6d7f6be3b788dc57d4d2ef18789aa45b71dfd63"
+  },
+  {
+    "iconUrl": "https://raw.githubusercontent.com/Bymesut1/Kartaloglu-cs/main/Zdizi/zd-icon.png",
+    "fileHash": "sha256-8db2044f5f163f8dfd2b6b8ea907679a957fa87b6445da0c2098bc29a0d22bef",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/Bymesut1/Kartaloglu-cs",
+    "fileSize": 95331,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "Bymesut1"
+    ],
+    "tvTypes": [
+      "TvSeries",
+      "Movie"
+    ],
+    "version": 14,
+    "internalName": "Zdizi",
+    "description": "Zdizi: yabancı dizi ve film izle (Türkçe altyazı / dublaj)",
+    "url": "https://raw.githubusercontent.com/Bymesut1/Kartaloglu-cs/builds/Zdizi.cs3",
+    "name": "Zdizi"
   }
 ]
