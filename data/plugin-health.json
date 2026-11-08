@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-08T05:42:06Z",
-  "candidate_plugin_count": 418,
-  "healthy_plugin_count": 354,
-  "rejected_plugin_count": 64,
-  "fallback_used_count": 34,
+  "generated_at": "2026-11-08T21:58:19Z",
+  "candidate_plugin_count": 394,
+  "healthy_plugin_count": 333,
+  "rejected_plugin_count": 61,
+  "fallback_used_count": 35,
   "provider_unverified_count": 60,
   "rejection_attempt_counts": {
     "blacklisted": 24,
@@ -11,7 +11,7 @@
     "hash-mismatch": 13,
     "http-404": 56,
     "invalid-status": 9,
-    "provider-unverified": 461,
+    "provider-unverified": 450,
     "status-down": 33
   },
   "checks": {
@@ -79,8 +79,8 @@
       "status": "healthy",
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/AniArsiv.cs3",
-      "version": 3,
-      "size": 29072,
+      "version": 4,
+      "size": 29924,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "aniarsiv.com:alive-tr",
@@ -219,8 +219,8 @@
       "status": "healthy",
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/AsyaBox.cs3",
-      "version": 2,
-      "size": 35929,
+      "version": 3,
+      "size": 36729,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "asyabox.co:alive",
@@ -233,8 +233,8 @@
       "status": "healthy",
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/AsyaDizi.cs3",
-      "version": 2,
-      "size": 35843,
+      "version": 3,
+      "size": 37102,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "asyadizi.com:alive-tr",
@@ -247,8 +247,8 @@
       "status": "healthy",
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Asyadizileriizle.cs3",
-      "version": 2,
-      "size": 35268,
+      "version": 3,
+      "size": 36721,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "asyadizileriizle.com:alive",
@@ -289,8 +289,8 @@
       "status": "healthy",
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/AsyaLog.cs3",
-      "version": 7,
-      "size": 30292,
+      "version": 8,
+      "size": 31697,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "asyalog.co:alive",
@@ -393,7 +393,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/ATV.cs3",
       "version": 4,
-      "size": 29759,
+      "size": 30129,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "www.atv.com.tr:alive",
@@ -496,6 +496,20 @@
       "attempts": null
     },
     {
+      "internal_name": "beyazelma",
+      "name": "BeyazElma",
+      "status": "healthy",
+      "repository": "Wiojelt/WioSpor",
+      "url": "https://raw.githubusercontent.com/Wiojelt/WioSpor/builds/BeyazElma.cs3",
+      "version": 12,
+      "size": 219121,
+      "hash_checked": true,
+      "provider_check": "reachable",
+      "provider_reason": "beyazelma78.com:alive",
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
       "internal_name": "beyaztv",
       "name": "BeyazTV",
       "status": "healthy",
@@ -542,8 +556,8 @@
       "name": "BOAT",
       "status": "healthy",
       "repository": "dr-octagon/BronzeCloud",
-      "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/BOAT_v80.cs3",
-      "version": 80,
+      "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/BOAT_v81.cs3",
+      "version": 81,
       "size": 746131,
       "hash_checked": false,
       "provider_check": "unverified",
@@ -557,8 +571,8 @@
       "status": "healthy",
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/CanliDizi.cs3",
-      "version": 2,
-      "size": 33151,
+      "version": 3,
+      "size": 36492,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "canlidizi.sbs:alive",
@@ -585,8 +599,8 @@
       "status": "healthy",
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/CanliYayinKanallari.cs3",
-      "version": 4,
-      "size": 17889,
+      "version": 5,
+      "size": 19903,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "www.tabii.com:alive",
@@ -712,7 +726,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/CizgiSite.cs3",
       "version": 7,
-      "size": 27391,
+      "size": 27820,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "www.cizgi.site:alive",
@@ -865,8 +879,8 @@
       "status": "healthy",
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/DDizimag.cs3",
-      "version": 4,
-      "size": 32478,
+      "version": 5,
+      "size": 32886,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "ddizimag.icu:alive",
@@ -921,8 +935,8 @@
       "status": "healthy",
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/DiziAbi.cs3",
-      "version": 2,
-      "size": 33153,
+      "version": 3,
+      "size": 36495,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "www.diziabi.net:alive",
@@ -964,7 +978,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Dizibaba.cs3",
       "version": 4,
-      "size": 22702,
+      "size": 23147,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "dizibaba.net:alive",
@@ -1279,6 +1293,14 @@
           "provider_reason": "www.dizibox.live:http-403"
         },
         {
+          "repository": "Kayracs3/Kayra",
+          "url": "https://raw.githubusercontent.com/Kayracs3/Kayra/builds/DiziBox.cs3",
+          "version": 8,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.dizibox.live:http-403"
+        },
+        {
           "repository": "neoser1984/neowatch",
           "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/DiziBox.cs3",
           "version": 5,
@@ -1318,8 +1340,8 @@
       "status": "healthy",
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/DiziboxIzle.cs3",
-      "version": 8,
-      "size": 34002,
+      "version": 9,
+      "size": 34497,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "diziboxizle.com:alive",
@@ -1332,8 +1354,8 @@
       "status": "healthy",
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/DiziBoxTv.cs3",
-      "version": 3,
-      "size": 37974,
+      "version": 4,
+      "size": 38534,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "diziboxtv.com:alive",
@@ -1346,8 +1368,8 @@
       "status": "healthy",
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/DiziCaN.cs3",
-      "version": 7,
-      "size": 36468,
+      "version": 8,
+      "size": 38200,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "dizican.cc:alive-tr",
@@ -1388,8 +1410,8 @@
       "status": "healthy",
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/DiziFilmIzle.cs3",
-      "version": 3,
-      "size": 33878,
+      "version": 4,
+      "size": 34328,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "dizifilmizle.to:alive-tr",
@@ -1422,7 +1444,7 @@
         {
           "repository": "F0Rextasy/bigbullapp-cs",
           "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/DiziFilmIzle.cs3",
-          "version": 3,
+          "version": 4,
           "result": "ok",
           "provider_check": "reachable",
           "provider_reason": "dizifilmizle.to:alive-tr"
@@ -1450,7 +1472,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Dizifon.cs3",
       "version": 4,
-      "size": 36102,
+      "size": 36544,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "www.dizifon.cc:alive",
@@ -1537,7 +1559,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Dizikorea3.cs3",
       "version": 7,
-      "size": 32405,
+      "size": 32913,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "dizikorea3.com:alive",
@@ -1565,7 +1587,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Dizilab.cs3",
       "version": 5,
-      "size": 23826,
+      "size": 24326,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "dizilab.cc:alive-tr",
@@ -1944,8 +1966,8 @@
       "status": "healthy",
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Dizirella.cs3",
-      "version": 2,
-      "size": 33124,
+      "version": 3,
+      "size": 33926,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "dizirella.one:alive-tr",
@@ -2002,7 +2024,7 @@
         {
           "repository": "F0Rextasy/bigbullapp-cs",
           "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Dizirella.cs3",
-          "version": 2,
+          "version": 3,
           "result": "ok",
           "provider_check": "reachable",
           "provider_reason": "dizirella.one:alive-tr"
@@ -2140,8 +2162,8 @@
       "status": "healthy",
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/DMAX.cs3",
-      "version": 2,
-      "size": 24323,
+      "version": 3,
+      "size": 24932,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "www.dmax.com.tr:alive",
@@ -2158,7 +2180,7 @@
         {
           "repository": "F0Rextasy/bigbullapp-cs",
           "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/DMAX.cs3",
-          "version": 2,
+          "version": 3,
           "result": "ok",
           "provider_check": "reachable",
           "provider_reason": "www.dmax.com.tr:alive"
@@ -2575,7 +2597,7 @@
       "repository": "Kayracs3/Kayra",
       "url": "https://raw.githubusercontent.com/Kayracs3/Kayra/builds/FilmKutusu.cs3",
       "version": 1,
-      "size": 22257,
+      "size": 22466,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "filmkoridoru.com:alive",
@@ -3539,8 +3561,8 @@
       "status": "healthy",
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/HDFilmDiziIzle.cs3",
-      "version": 4,
-      "size": 45917,
+      "version": 5,
+      "size": 46312,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "www.hdfilmdiziizle.com:alive-tr",
@@ -3567,8 +3589,8 @@
       "status": "healthy",
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/HDFilmizleBest.cs3",
-      "version": 1,
-      "size": 39004,
+      "version": 2,
+      "size": 39315,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "www.hdfilmizle.best:alive",
@@ -3644,6 +3666,37 @@
       "provider_reason": "dynamic-domain-missing",
       "fallback_used": false,
       "attempts": null
+    },
+    {
+      "internal_name": "hintfilmizle",
+      "name": "HintFilmIzle",
+      "status": "healthy",
+      "repository": "liberta09/Kekik-cloudstream",
+      "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/HintFilmIzle.cs3",
+      "version": 16,
+      "size": 21885,
+      "hash_checked": true,
+      "provider_check": "reachable",
+      "provider_reason": "www.hintfilmizle.com:alive-tr",
+      "fallback_used": true,
+      "attempts": [
+        {
+          "repository": "qera18/apple",
+          "url": "https://raw.githubusercontent.com/csprofesor/nik-cloudstream/builds/HintFilmIzle.cs3",
+          "version": 41,
+          "result": "hash-mismatch",
+          "provider_check": "not-checked",
+          "provider_reason": null
+        },
+        {
+          "repository": "liberta09/Kekik-cloudstream",
+          "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/HintFilmIzle.cs3",
+          "version": 16,
+          "result": "ok",
+          "provider_check": "reachable",
+          "provider_reason": "www.hintfilmizle.com:alive-tr"
+        }
+      ]
     },
     {
       "internal_name": "hranime",
@@ -3772,34 +3825,6 @@
       "attempts": null
     },
     {
-      "internal_name": "inatamazonprime",
-      "name": "InatAmazonPrime",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatAmazonPrime.cs3",
-      "version": 1,
-      "size": 67036,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "diziboxen.help:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inatbelgesel",
-      "name": "InatBelgesel",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatBelgesel.cs3",
-      "version": 2,
-      "size": 67022,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "diziboxen.help:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
       "internal_name": "inatbox",
       "name": "InatBox",
       "status": "healthy",
@@ -3887,268 +3912,16 @@
       "attempts": null
     },
     {
-      "internal_name": "inatcocuk",
-      "name": "InatCocuk",
+      "internal_name": "inattv",
+      "name": "InatTV",
       "status": "healthy",
       "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatCocuk.cs3",
+      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatTV.cs3",
       "version": 2,
-      "size": 67004,
+      "size": 65229,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "diziboxen.help:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inatderbiler",
-      "name": "InatDerbiler",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatDerbiler.cs3",
-      "version": 2,
-      "size": 67001,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "sprboxs.bar:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inatdini",
-      "name": "InatDini",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatDini.cs3",
-      "version": 2,
-      "size": 67004,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "diziboxen.help:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inatdisney",
-      "name": "InatDisney",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatDisney.cs3",
-      "version": 1,
-      "size": 67016,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "diziboxen.help:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inatebatv",
-      "name": "InatEbaTv",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatEbaTv.cs3",
-      "version": 2,
-      "size": 67006,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "diziboxen.help:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inatexxen",
-      "name": "InatExxen",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatExxen.cs3",
-      "version": 1,
-      "size": 67020,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "diziboxen.help:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inatgain",
-      "name": "InatGain",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatGain.cs3",
-      "version": 1,
-      "size": 67013,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "diziboxen.help:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inathaber",
-      "name": "InatHaber",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatHaber.cs3",
-      "version": 2,
-      "size": 67018,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "diziboxen.help:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inathbomax",
-      "name": "InatHboMax",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatHboMax.cs3",
-      "version": 1,
-      "size": 67024,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "diziboxen.help:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inatliste1tr",
-      "name": "InatListe1Tr",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatListe1Tr.cs3",
-      "version": 2,
-      "size": 67035,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "diziboxen.help:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inatliste2glb",
-      "name": "InatListe2Glb",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatListe2Glb.cs3",
-      "version": 2,
-      "size": 67046,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "diziboxen.help:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inatliste3tr",
-      "name": "InatListe3Tr",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatListe3Tr.cs3",
-      "version": 2,
-      "size": 67048,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "diziboxen.help:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inatmubi",
-      "name": "InatMubi",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatMubi.cs3",
-      "version": 2,
-      "size": 67013,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "diziboxen.help:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inatnetflix",
-      "name": "InatNetflix",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatNetflix.cs3",
-      "version": 1,
-      "size": 67024,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "diziboxen.help:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inatpremium",
-      "name": "InatPremium",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatPremium.cs3",
-      "version": 2,
-      "size": 66993,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "inattv257.cfd:alive",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inatsinema",
-      "name": "InatSinema",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatSinema.cs3",
-      "version": 2,
-      "size": 66992,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "diziboxen.help:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inatspor",
-      "name": "InatSpor",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatSpor.cs3",
-      "version": 2,
-      "size": 66988,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "sprboxs.bar:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inattabii",
-      "name": "InatTabii",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatTabii.cs3",
-      "version": 1,
-      "size": 66995,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "diziboxen.help:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inattod",
-      "name": "InatTod",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatTod.cs3",
-      "version": 2,
-      "size": 67001,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "sprboxs.bar:alive-tr",
       "fallback_used": false,
       "attempts": null
     },
@@ -4163,62 +3936,6 @@
       "hash_checked": true,
       "provider_check": "unverified",
       "provider_reason": "no-urls",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inatulusal",
-      "name": "InatUlusal",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatUlusal.cs3",
-      "version": 2,
-      "size": 67007,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "diziboxen.help:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inatyabancidiziler",
-      "name": "InatYabanciDiziler",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatYabanciDiziler.cs3",
-      "version": 2,
-      "size": 67012,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "diziboxen.help:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inatyerlidiziler",
-      "name": "InatYerliDiziler",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatYerliDiziler.cs3",
-      "version": 2,
-      "size": 67022,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "diziboxen.help:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "inatyerlifilmler",
-      "name": "InatYerliFilmler",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatYerliFilmler.cs3",
-      "version": 2,
-      "size": 67023,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "diziboxen.help:alive-tr",
       "fallback_used": false,
       "attempts": null
     },
@@ -4368,8 +4085,8 @@
       "status": "healthy",
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/KanalD.cs3",
-      "version": 2,
-      "size": 24686,
+      "version": 3,
+      "size": 26363,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "www.kanald.com.tr:alive",
@@ -4386,7 +4103,7 @@
         {
           "repository": "F0Rextasy/bigbullapp-cs",
           "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/KanalD.cs3",
-          "version": 2,
+          "version": 3,
           "result": "ok",
           "provider_check": "reachable",
           "provider_reason": "www.kanald.com.tr:alive"
@@ -4719,7 +4436,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/MinikaCocuk.cs3",
       "version": 8,
-      "size": 24145,
+      "size": 24638,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "www.minikacocuk.com.tr:alive",
@@ -4732,8 +4449,8 @@
       "status": "healthy",
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/MinikaGO.cs3",
-      "version": 5,
-      "size": 22695,
+      "version": 6,
+      "size": 23169,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "www.minikago.com.tr:alive",
@@ -4936,7 +4653,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/NetFilmizle.cs3",
       "version": 4,
-      "size": 25631,
+      "size": 26059,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "netfilmizle.com:alive",
@@ -4968,6 +4685,20 @@
       "hash_checked": true,
       "provider_check": "unverified",
       "provider_reason": "dynamic-domain-missing",
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "newtv",
+      "name": "Newtv",
+      "status": "healthy",
+      "repository": "Kayracs3/Kayra",
+      "url": "https://raw.githubusercontent.com/Kayracs3/Kayra/builds/Newtv.cs3",
+      "version": 12,
+      "size": 30094,
+      "hash_checked": true,
+      "provider_check": "reachable",
+      "provider_reason": "beyazelma78.com:alive",
       "fallback_used": false,
       "attempts": null
     },
@@ -5299,8 +5030,8 @@
       "status": "healthy",
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/PuhuTV.cs3",
-      "version": 1,
-      "size": 35661,
+      "version": 2,
+      "size": 36268,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "puhutv.com:alive",
@@ -5465,10 +5196,10 @@
       "internal_name": "sezonlukdizi",
       "name": "SezonlukDizi",
       "status": "healthy",
-      "repository": "aytzey/cs-kraptor",
-      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/SezonlukDizi.cs3",
-      "version": 41,
-      "size": 103386,
+      "repository": "Bymesut1/Kartaloglu-cs",
+      "url": "https://raw.githubusercontent.com/Bymesut1/Kartaloglu-cs/builds/SezonlukDizi.cs3",
+      "version": 48,
+      "size": 158259,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "sezonlukdizi.cc:alive",
@@ -5561,12 +5292,12 @@
     },
     {
       "internal_name": "showtv",
-      "name": "Showtv",
+      "name": "ShowTV",
       "status": "healthy",
-      "repository": "lepotane/MRC-builds",
-      "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/Showtv.cs3",
+      "repository": "F0Rextasy/bigbullapp-cs",
+      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/ShowTV.cs3",
       "version": 3,
-      "size": 25851,
+      "size": 23881,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "www.showtv.com.tr:alive",
@@ -5581,8 +5312,8 @@
           "provider_reason": "dynamic-domain-missing"
         },
         {
-          "repository": "lepotane/MRC-builds",
-          "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/Showtv.cs3",
+          "repository": "F0Rextasy/bigbullapp-cs",
+          "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/ShowTV.cs3",
           "version": 3,
           "result": "ok",
           "provider_check": "reachable",
@@ -5672,7 +5403,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Sinemakolik.cs3",
       "version": 2,
-      "size": 25794,
+      "size": 26223,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "sinemakolik.com:alive",
@@ -5727,8 +5458,8 @@
       "status": "healthy",
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/SonAnime.cs3",
-      "version": 3,
-      "size": 37889,
+      "version": 4,
+      "size": 38342,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "sonanime.com:alive-tr",
@@ -6371,8 +6102,8 @@
       "status": "healthy",
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/TurkceDizi.cs3",
-      "version": 5,
-      "size": 41323,
+      "version": 6,
+      "size": 44962,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "turkcedizi.com:alive",
@@ -6538,12 +6269,12 @@
     },
     {
       "internal_name": "tv8",
-      "name": "Tv8",
+      "name": "TV8",
       "status": "healthy",
-      "repository": "lepotane/MRC-builds",
-      "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/Tv8.cs3",
+      "repository": "F0Rextasy/bigbullapp-cs",
+      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/TV8.cs3",
       "version": 2,
-      "size": 19859,
+      "size": 23084,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "www.tv8.com.tr:alive",
@@ -6558,8 +6289,8 @@
           "provider_reason": "dynamic-domain-missing"
         },
         {
-          "repository": "lepotane/MRC-builds",
-          "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/Tv8.cs3",
+          "repository": "F0Rextasy/bigbullapp-cs",
+          "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/TV8.cs3",
           "version": 2,
           "result": "ok",
           "provider_check": "reachable",
@@ -6742,7 +6473,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/WebdramaTurkey2.cs3",
       "version": 5,
-      "size": 37305,
+      "size": 37772,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "webdramaturkey2.com:alive",
@@ -6755,8 +6486,8 @@
       "status": "healthy",
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Weboo.cs3",
-      "version": 1,
-      "size": 32735,
+      "version": 2,
+      "size": 35659,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "weboo.com.tr:alive",
@@ -6854,7 +6585,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Yabancidizi.cs3",
       "version": 8,
-      "size": 39103,
+      "size": 39640,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "yabancidizi.watch:alive-tr",
@@ -7278,7 +7009,7 @@
         {
           "repository": "F0Rextasy/bigbullapp-cs",
           "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Animeler.cs3",
-          "version": 7,
+          "version": 8,
           "result": "blacklisted",
           "provider_check": "not-checked",
           "provider_reason": null
@@ -7406,52 +7137,6 @@
       ]
     },
     {
-      "internal_name": "beyazelma",
-      "status": "rejected",
-      "attempts": [
-        {
-          "repository": "Wiojelt/WioSpor",
-          "url": "https://raw.githubusercontent.com/Wiojelt/WioSpor/builds/BeyazElma.cs3",
-          "version": 12,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "beyazelma78.com:unreachable"
-        },
-        {
-          "repository": "arcilingir/WioSpor",
-          "url": "https://raw.githubusercontent.com/Wiojelt/WioSpor/builds/BeyazElma.cs3",
-          "version": 12,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "beyazelma78.com:unreachable"
-        },
-        {
-          "repository": "Wiojelt/TurkSpor",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/BeyazElma.cs3?v=4948e352375d",
-          "version": 12,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "beyazelma78.com:unreachable"
-        },
-        {
-          "repository": "pisovo-5031/TurkSpor",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/BeyazElma.cs3?v=4948e352375d",
-          "version": 12,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "beyazelma78.com:unreachable"
-        },
-        {
-          "repository": "arcilingir/TurkSpor",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/BeyazElma.cs3?v=4948e352375d",
-          "version": 12,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "beyazelma78.com:unreachable"
-        }
-      ]
-    },
-    {
       "internal_name": "ciftd2m",
       "status": "rejected",
       "attempts": [
@@ -7495,8 +7180,8 @@
       "attempts": [
         {
           "repository": "dr-octagon/BronzeCloud",
-          "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/CineStream_v579.cs3",
-          "version": 579,
+          "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/CineStream_v580.cs3",
+          "version": 580,
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "cinemeta-catalogs.strem.io:http-404"
@@ -7951,7 +7636,7 @@
           "version": 73,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "hrtestingx/hrcsrepofull",
@@ -7959,7 +7644,7 @@
           "version": 73,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "adilem/cs-kraptor",
@@ -7983,7 +7668,7 @@
           "version": 37,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "feroxx/Kekik-cloudstream",
@@ -7991,7 +7676,7 @@
           "version": 33,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "qera18/apple",
@@ -7999,7 +7684,7 @@
           "version": 33,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "liberta09/Kekik-cloudstream",
@@ -8007,7 +7692,7 @@
           "version": 33,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "21nek/nektv",
@@ -8031,7 +7716,7 @@
           "version": 20,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "arcilingir/CloudStreamHub",
@@ -8039,7 +7724,7 @@
           "version": 20,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "manitux-app/cs-plugins",
@@ -8047,7 +7732,7 @@
           "version": 13,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "Bymesut1/cs-plugins",
@@ -8055,7 +7740,7 @@
           "version": 13,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "Ripplay/cloudstream-repo",
@@ -8063,7 +7748,7 @@
           "version": 12,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "arcilingir/Dizi_Film_2",
@@ -8111,7 +7796,7 @@
           "version": 10,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "pisovo-5031/TurkSinema",
@@ -8119,7 +7804,7 @@
           "version": 10,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "arcilingir/TurkSinema",
@@ -8127,7 +7812,7 @@
           "version": 10,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "Wiojelt/WioSinema",
@@ -8135,7 +7820,7 @@
           "version": 10,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "pisovo-5031/WioSinema",
@@ -8143,7 +7828,7 @@
           "version": 10,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "bilhan50/BilhanTR",
@@ -8151,7 +7836,7 @@
           "version": 9,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "galipgokalp/tv-cloudstream",
@@ -8159,7 +7844,7 @@
           "version": 8,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "Sertel392/gencler",
@@ -8167,7 +7852,7 @@
           "version": 8,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "Bymesut1/Eklenti",
@@ -8175,7 +7860,7 @@
           "version": 8,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "adilem/MyTV",
@@ -8183,7 +7868,7 @@
           "version": 8,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "berr49300/cloudstream-film-repo",
@@ -8191,7 +7876,7 @@
           "version": 7,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "baristomruk-max/BTVault",
@@ -8199,7 +7884,7 @@
           "version": 6,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "JustSadY/Cloudstream-Lykia",
@@ -8207,7 +7892,7 @@
           "version": 6,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "lepotane/MRC-builds",
@@ -8215,7 +7900,7 @@
           "version": 6,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "F0Rextasy/bigbullapp-cs",
@@ -8223,7 +7908,7 @@
           "version": 5,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "neoser1984/neowatch",
@@ -8231,7 +7916,7 @@
           "version": 5,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "Kayracs3/Kayra",
@@ -8239,7 +7924,7 @@
           "version": 4,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "Bymesut1/Kartaloglu-cs",
@@ -8247,7 +7932,7 @@
           "version": 2,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "miskin1702/aslan-pub",
@@ -8255,7 +7940,7 @@
           "version": 2,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         },
         {
           "repository": "miskin1702/aslan-dist",
@@ -8263,7 +7948,7 @@
           "version": 2,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
         }
       ]
     },
@@ -8398,68 +8083,6 @@
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "www.hdfilmcehennemi.nl:http-451"
-        }
-      ]
-    },
-    {
-      "internal_name": "hintfilmizle",
-      "status": "rejected",
-      "attempts": [
-        {
-          "repository": "qera18/apple",
-          "url": "https://raw.githubusercontent.com/csprofesor/nik-cloudstream/builds/HintFilmIzle.cs3",
-          "version": 41,
-          "result": "hash-mismatch",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
-          "repository": "liberta09/Kekik-cloudstream",
-          "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/HintFilmIzle.cs3",
-          "version": 16,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.hintfilmizle.com:http-403"
-        },
-        {
-          "repository": "Wiojelt/TurkSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/36471a864731fdcf3d74bc858aec89c1c3d51136/HintFilmIzle.cs3",
-          "version": 2,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.hintfilmizle.com:http-403"
-        },
-        {
-          "repository": "pisovo-5031/TurkSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/36471a864731fdcf3d74bc858aec89c1c3d51136/HintFilmIzle.cs3",
-          "version": 2,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.hintfilmizle.com:http-403"
-        },
-        {
-          "repository": "arcilingir/TurkSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/36471a864731fdcf3d74bc858aec89c1c3d51136/HintFilmIzle.cs3",
-          "version": 2,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.hintfilmizle.com:http-403"
-        },
-        {
-          "repository": "Wiojelt/WioAsya",
-          "url": "https://raw.githubusercontent.com/Wiojelt/WioAsya/builds/HintFilmIzle.cs3?v=7c530048788e",
-          "version": 2,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.hintfilmizle.com:http-403"
-        },
-        {
-          "repository": "liberta09/Kekik-cloudstream",
-          "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/HintFilmIzle.cs3",
-          "version": 2,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.hintfilmizle.com:http-403"
         }
       ]
     },
@@ -8754,20 +8377,6 @@
           "result": "status-down",
           "provider_check": "not-checked",
           "provider_reason": null
-        }
-      ]
-    },
-    {
-      "internal_name": "newtv",
-      "status": "rejected",
-      "attempts": [
-        {
-          "repository": "Kayracs3/Kayra",
-          "url": "https://raw.githubusercontent.com/Kayracs3/Kayra/builds/Newtv.cs3",
-          "version": 12,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "beyazelma78.com:unreachable"
         }
       ]
     },
