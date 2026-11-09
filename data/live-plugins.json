@@ -41,6 +41,26 @@
     "apiVersion": 1
   },
   {
+    "internalName": "AcikTV",
+    "name": "AcikTV",
+    "version": 1001,
+    "url": "https://raw.githubusercontent.com/merb2y/cs-builds/builds/AcikTV.cs3",
+    "fileHash": "sha256-8b9863850cc984c57a416403060be153feb5cbed820445c17e4f2e94bc0004b6",
+    "fileSize": 21783,
+    "status": 1,
+    "apiVersion": 1,
+    "language": "tr",
+    "authors": [
+      "CS"
+    ],
+    "description": "Açık TV - Ulusal ve yerel televizyon kanalları",
+    "tvTypes": [
+      "Live"
+    ],
+    "iconUrl": "https://www.google.com/s2/favicons?domain=iptv-org.github.io&sz=%size%",
+    "repositoryUrl": "https://github.com/merb2y/cs-builds"
+  },
+  {
     "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/ArdaSpor.cs3?v=2944961cee66",
     "status": 3,
     "version": 12,
@@ -129,7 +149,7 @@
       "berkdemir18"
     ],
     "description": "Turkce film, dizi, anime, belgesel ve canli TV kaynaklarinin tamamini tek eklentide toplayan BerkStream medya merkezi.",
-    "fileSize": 1696904,
+    "fileSize": 1702841,
     "repositoryUrl": "https://github.com/berkdemir18/BerkStream-Hub",
     "language": "tr",
     "tvTypes": [
@@ -144,7 +164,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/berkdemir18/BerkStream-Hub/main/assets/berkstream-icon.png",
     "apiVersion": 1,
-    "fileHash": "sha256-81d6fdc54b60a8950bdf0cebffbf03d461289e7cbb193832f5bb0d0c83a8665a"
+    "fileHash": "sha256-6ecc1c4c5fc43a9dccc50146c78f02088a0836639cb5c6a86a74a07c34f0ce9a"
   },
   {
     "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/BetmatikTV.cs3?v=b6304052c9e7",
@@ -187,32 +207,31 @@
     "fileHash": "sha256-4948e352375d04fad0510847b0127aa8226176e7ac1aaf048ae7ff7d058adcd6"
   },
   {
-    "url": "https://raw.githubusercontent.com/feroxx/Kekik-cloudstream/builds/CanliTV.cs3",
-    "status": 1,
-    "version": 10,
-    "name": "CanliTV",
     "internalName": "CanliTV",
-    "authors": [
-      "Adippe",
-      "keyiflerolsun"
-    ],
-    "description": "Canlı TV",
-    "fileSize": 20480,
-    "repositoryUrl": "https://github.com/feroxx/Kekik-cloudstream",
+    "name": "CanliTV",
+    "version": 1010,
+    "url": "https://raw.githubusercontent.com/merb2y/cs-builds/builds/CanliTV.cs3",
+    "fileHash": "sha256-4eb5760947f673c98d19a22967e8cc8bb433d77f254469c21616873902b9c6fa",
+    "fileSize": 20430,
+    "status": 1,
+    "apiVersion": 1,
     "language": "tr",
+    "authors": [
+      "CS"
+    ],
+    "description": "Canlı TV - Ulusal televizyon kanalları",
     "tvTypes": [
       "Live"
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=tr.canlitv.team&sz=%size%",
-    "apiVersion": 1,
-    "fileHash": "sha256-d4e8de61fd99275ecda7a2c1a53da5b1643cfa42e8f6bba0c32383b722de14db"
+    "repositoryUrl": "https://github.com/merb2y/cs-builds"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain={base}&sz=%size%",
-    "fileHash": "sha256-651031d76bbe1e0f79b084288d42108aa3cb85b0b800a885ad6cc9dc2573c5a4",
+    "fileHash": "sha256-64ab43a94269b2511e03861b4eeecd4089f297c5dddc6572c1bb4858098b11ca",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/F0Rextasy/bigbullapp-cs",
-    "fileSize": 19903,
+    "fileSize": 24672,
     "status": 1,
     "language": "tr",
     "authors": [
@@ -306,6 +325,26 @@
     "iconUrl": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/main/assets/providers/DomatesTV.webp",
     "apiVersion": 1,
     "fileHash": "sha256-a458f3331ff41fd1191a3ba07a5aaeabde10dc4b6aff953a8687abc2e1a0622c"
+  },
+  {
+    "internalName": "DunyaTV",
+    "name": "DunyaTV",
+    "version": 1001,
+    "url": "https://raw.githubusercontent.com/merb2y/cs-builds/builds/DunyaTV.cs3",
+    "fileHash": "sha256-5f7be28588f4ab6fc9f86b6739cad40d44412fd4b8e71488bb882e9bcea914ab",
+    "fileSize": 21780,
+    "status": 1,
+    "apiVersion": 1,
+    "language": "tr",
+    "authors": [
+      "CS"
+    ],
+    "description": "Dünya TV - Uluslararası televizyon kanalları",
+    "tvTypes": [
+      "Live"
+    ],
+    "iconUrl": "https://www.google.com/s2/favicons?domain=iptv-org.github.io&sz=%size%",
+    "repositoryUrl": "https://github.com/merb2y/cs-builds"
   },
   {
     "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/GinikoCanli.cs3",
@@ -499,28 +538,6 @@
     "description": "İnatBoxYedek: InatBox ana eklentisinden ayrı, test ve yedek amaçlı sağlayıcı.",
     "url": "https://raw.githubusercontent.com/Kayracs3/Kayra/builds/InatBoxYedek.cs3",
     "name": "InatBoxYedek"
-  },
-  {
-    "iconUrl": "https://www.google.com/s2/favicons?domain=diziboxen.help&sz=%size%",
-    "fileHash": "sha256-0e4e0c35f7a5ce4f2e4d14bc1614226534503f8d7f6b9565779001bbd5ba1d64",
-    "apiVersion": 1,
-    "repositoryUrl": "https://github.com/F0Rextasy/bigbullapp-cs",
-    "fileSize": 65229,
-    "status": 1,
-    "language": "tr",
-    "authors": [
-      "F0Rextasy"
-    ],
-    "tvTypes": [
-      "TvSeries",
-      "Movie",
-      "Live"
-    ],
-    "version": 2,
-    "internalName": "InatTV",
-    "description": "İnatTV — imzalı API üzerinden film, dizi, platform ve canlı yayın katalogları (host: diziboxen.help)",
-    "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/InatTV.cs3",
-    "name": "InatTV"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=dizilabmedia.click&sz=%size%",
@@ -869,6 +886,26 @@
     "fileSize": 114407,
     "fileHash": "sha256-ecf2693227c62a7509f61bd909b6dfd19b367c87063d6d1eac2b212b8b48462a",
     "apiVersion": 1
+  },
+  {
+    "internalName": "NetSpor",
+    "name": "NetSpor",
+    "version": 3,
+    "url": "https://raw.githubusercontent.com/merb2y/cs-builds/builds/NetSpor.cs3",
+    "fileHash": "sha256-deb3fd8653edc6491c58810fc3d7bb5352934a5aa12d8d12bdcaa65ff94b94a0",
+    "fileSize": 21067,
+    "status": 1,
+    "apiVersion": 1,
+    "language": "tr",
+    "authors": [
+      "CS"
+    ],
+    "description": "NetSpor - 1080p canlı spor yayınları",
+    "tvTypes": [
+      "Live"
+    ],
+    "iconUrl": "https://www.google.com/s2/favicons?domain=mackolik.com&sz=128",
+    "repositoryUrl": "https://github.com/merb2y/cs-builds"
   },
   {
     "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/NetVGold.cs3?v=d1bf7dcba3da",
@@ -1458,23 +1495,24 @@
     "fileHash": "sha256-59ed9c4f560eadbb92bbbab56f572eb6265ace16cbdfa922e8a874df92556749"
   },
   {
-    "fileHash": "sha256-75efe917d508687f65e6ba3cbbe34b3ac246d7c3c80edc8bbace005dcdc2e662",
-    "apiVersion": 1,
-    "repositoryUrl": "https://github.com/Eikosa/tv",
-    "fileSize": 44089,
-    "status": 1,
-    "authors": [
-      "Eikosa"
-    ],
-    "tvTypes": [
-      "Live",
-      "TvSeries"
-    ],
-    "version": 8,
     "internalName": "TurkiyeTV",
-    "description": "Türkiye ulusal televizyon kanallarını CloudStream üzerinden izleyin.",
-    "url": "https://raw.githubusercontent.com/Eikosa/tv/builds/TurkiyeTV.cs3",
-    "name": "TurkiyeTV"
+    "name": "TurkiyeTV",
+    "version": 1001,
+    "url": "https://raw.githubusercontent.com/merb2y/cs-builds/builds/TurkiyeTV.cs3",
+    "fileHash": "sha256-01944495d3290de745c70f6c556b8c1d8d2040149fd5d12b3978656f9aec8849",
+    "fileSize": 21769,
+    "status": 1,
+    "apiVersion": 1,
+    "language": "tr",
+    "authors": [
+      "CS"
+    ],
+    "description": "Türkiye TV - TRT ve ulusal kanalların canlı yayın listesi",
+    "tvTypes": [
+      "Live"
+    ],
+    "iconUrl": "https://www.google.com/s2/favicons?domain=trt1.com.tr&sz=%size%",
+    "repositoryUrl": "https://github.com/merb2y/cs-builds"
   },
   {
     "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/TurkSpor.cs3?v=21c99ad664d4",
