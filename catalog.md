@@ -22,7 +22,7 @@ Otomatik doğrulanan ve aktif Türkçe CloudStream eklenti depoları:
 - [WioLand](cloudstreamrepo://raw.githubusercontent.com/Wiojelt/WioLand/builds/repo.json) — RepoScore 82.5/100 — 1 eklenti — ana kaynak
 - [arcilingir](cloudstreamrepo://raw.githubusercontent.com/arcilingir/Dizi_Film_2/master/repo.json) — RepoScore 82.5/100 — 41 eklenti
 - [CloudStream TÃ¼rkÃ§e Eklenti Deposu](cloudstreamrepo://raw.githubusercontent.com/merb2y/cs-builds/builds/repo.json) — RepoScore 82.0/100 — 35 eklenti
-- [Kartaloglu-cs](cloudstreamrepo://raw.githubusercontent.com/Bymesut1/Kartaloglu-cs/main/repo.json) — RepoScore 80.6/100 — 28 eklenti
+- [Kartaloglu-cs](cloudstreamrepo://raw.githubusercontent.com/Bymesut1/Kartaloglu-cs/main/repo.json) — RepoScore 80.8/100 — 29 eklenti
 - [WioAsya](cloudstreamrepo://raw.githubusercontent.com/Wiojelt/WioAsya/builds/repo.json) — RepoScore 79.9/100 — 7 eklenti — ana kaynak
 - [WioKids](cloudstreamrepo://raw.githubusercontent.com/Wiojelt/WioKids/builds/repo.json) — RepoScore 79.4/100 — 10 eklenti — ana kaynak
 - [blackhope01](cloudstreamrepo://raw.githubusercontent.com/blackhope01/cloudstream-plugins/main/repo.json) — RepoScore 79.3/100 — 13 eklenti
