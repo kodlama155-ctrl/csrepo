@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-14T22:17:12Z",
-  "candidate_plugin_count": 420,
-  "healthy_plugin_count": 345,
-  "rejected_plugin_count": 75,
+  "generated_at": "2026-11-15T05:59:23Z",
+  "candidate_plugin_count": 421,
+  "healthy_plugin_count": 347,
+  "rejected_plugin_count": 74,
   "fallback_used_count": 43,
-  "provider_unverified_count": 62,
+  "provider_unverified_count": 63,
   "rejection_attempt_counts": {
     "blacklisted": 24,
     "corrupted-cs3-missing-dex": 1,
@@ -2456,6 +2456,20 @@
       "attempts": null
     },
     {
+      "internal_name": "filmifullizle",
+      "name": "FilmiFullizle",
+      "status": "healthy",
+      "repository": "dr-octagon/BronzeCloud",
+      "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/FilmiFullizle_v2.cs3",
+      "version": 2,
+      "size": 42555,
+      "hash_checked": false,
+      "provider_check": "reachable",
+      "provider_reason": "www.filmifullizle.news:alive",
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
       "internal_name": "filmizle",
       "name": "Filmizle",
       "status": "healthy",
@@ -2759,6 +2773,14 @@
           "provider_reason": "filmmakinesi.sh:http-451"
         },
         {
+          "repository": "Bymesut1/Kartaloglu-cs",
+          "url": "https://raw.githubusercontent.com/Bymesut1/Kartaloglu-cs/builds/Filmmakinesi.cs3",
+          "version": 38,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "filmmakinesi.to:http-451"
+        },
+        {
           "repository": "berr49300/cloudstream-film-repo",
           "url": "https://raw.githubusercontent.com/berr49300/cloudstream-film-repo/builds/FilmMakinesi.cs3",
           "version": 29,
@@ -2813,14 +2835,6 @@
           "result": "http-404",
           "provider_check": "not-checked",
           "provider_reason": null
-        },
-        {
-          "repository": "Bymesut1/Kartaloglu-cs",
-          "url": "https://raw.githubusercontent.com/Bymesut1/Kartaloglu-cs/builds/Filmmakinesi.cs3",
-          "version": 22,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "filmmakinesi.to:http-451"
         },
         {
           "repository": "Sertel392/gencler",
@@ -7129,6 +7143,20 @@
       "attempts": null
     },
     {
+      "internal_name": "youtubeoriginal",
+      "name": "YouTubeOriginal",
+      "status": "healthy",
+      "repository": "Bymesut1/Kartaloglu-cs",
+      "url": "https://raw.githubusercontent.com/Bymesut1/Kartaloglu-cs/builds/YouTubeOriginal.cs3",
+      "version": 1,
+      "size": 15248,
+      "hash_checked": true,
+      "provider_check": "unverified",
+      "provider_reason": "no-urls",
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
       "internal_name": "yts",
       "name": "YTS",
       "status": "healthy",
@@ -7953,20 +7981,6 @@
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "filmbip.com:unreachable"
-        }
-      ]
-    },
-    {
-      "internal_name": "filmifullizle",
-      "status": "rejected",
-      "attempts": [
-        {
-          "repository": "dr-octagon/BronzeCloud",
-          "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/FilmiFullizle_v2.cs3",
-          "version": 2,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.filmifullizle.news:unreachable"
         }
       ]
     },
