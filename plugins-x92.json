@@ -2254,7 +2254,9 @@
     "status": 1,
     "fileSize": 112566,
     "fileHash": "sha256-de539d6031902ff26f9427195f05bb00639a867c2a0d8fa122cd0e5fcba1ef22",
-    "apiVersion": 1
+    "apiVersion": 1,
+    "filesize": 112566,
+    "hash": "072bfab3fc533b6386e6bd597ccac11d"
   },
   {
     "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/DomatesTV.cs3?v=a458f3331ff4",
@@ -2298,25 +2300,25 @@
     "fileHash": "sha256-d27256f3fd9c5ae0246d41f429bfa8f40b7423c50f428431f726aca9c5921ad1"
   },
   {
+    "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/DramaBox.cs3",
+    "status": 1,
+    "version": 16,
     "name": "DramaBox",
     "internalName": "DramaBox",
-    "version": 17,
-    "description": "DramaBox · Türkçe dublajlı & altyazılı dikey kısa drama dizileri.",
     "authors": [
       "Wiojelt"
     ],
-    "repositoryUrl": "https://github.com/Wiojelt/WioDrama",
-    "url": "https://raw.githubusercontent.com/Wiojelt/WioDrama/builds/DramaBox.cs3?v=d7816406c2f5",
-    "iconUrl": "https://raw.githubusercontent.com/Wiojelt/WioDrama/main/assets/dboxDRAMA.png",
+    "description": "dboxDRAMA · Popüler dikey kısa drama ve trend dizi akışları.",
+    "fileSize": 104515,
+    "repositoryUrl": "https://github.com/Wiojelt/test",
+    "language": "tr",
     "tvTypes": [
       "AsianDrama",
       "TvSeries"
     ],
-    "language": "tr",
-    "status": 1,
-    "fileSize": 110963,
-    "fileHash": "sha256-d7816406c2f57b229e56f34b435edb621de56ebbdc4a7da4a9d8c76e3083c36c",
-    "apiVersion": 1
+    "iconUrl": "https://raw.githubusercontent.com/Wiojelt/test/main/assets/dboxDRAMA.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-e57f8dbbaba603083a7177d5965249d74e1cc611e2a4f36ebfc692e76eb8739f"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?sz=128&domain=dramadizilerim.com",
@@ -2358,7 +2360,9 @@
     "status": 1,
     "fileSize": 107653,
     "fileHash": "sha256-d0b953cd19588a1e34f479fda4094e7bd444e49d90de89d0c7a620d69304565c",
-    "apiVersion": 1
+    "apiVersion": 1,
+    "filesize": 107653,
+    "hash": "5c151f1c755a08f0960057837c1000a4"
   },
   {
     "internalName": "DunyaTV",
@@ -2717,6 +2721,28 @@
     "name": "FilmMakinesi"
   },
   {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=filmakinesi.cafe&sz=%size%",
+    "fileHash": "sha256-bb27ff53589d8e3c83985a2d03a636f5ee9d8c275cd4a0da4958b570d480fed6",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/Bymesut1/Kartaloglu-cs",
+    "fileSize": 35280,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "Bymesut1"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries",
+      "Anime"
+    ],
+    "version": 2,
+    "internalName": "FilmMakinesiCafe",
+    "description": "FilmMakinesiCafe - Film, Dizi, Anime (TMDB bilgileriyle)",
+    "url": "https://raw.githubusercontent.com/Bymesut1/Kartaloglu-cs/builds/FilmMakinesiCafe.cs3",
+    "name": "FilmMakinesiCafe"
+  },
+  {
     "url": "https://raw.githubusercontent.com/ctnkyaumt/cstest/builds/Filmmirasım.cs3",
     "status": 1,
     "version": 5,
@@ -3043,7 +3069,9 @@
     "status": 1,
     "fileSize": 104981,
     "fileHash": "sha256-2d3b343011dca7fdf36c8754193db096b685fa8e62257eee633830802ee01a6d",
-    "apiVersion": 1
+    "apiVersion": 1,
+    "filesize": 104981,
+    "hash": "71a7acb252c8bb468132537e4ee2bd00"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=haberglobal.com&sz=%size%",
@@ -3320,25 +3348,27 @@
     "name": "Hdkore"
   },
   {
-    "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/HiDrama.cs3",
-    "status": 1,
-    "version": 4,
-    "name": "HiDrama",
+    "name": "hiDRAMA",
     "internalName": "HiDrama",
+    "version": 4,
+    "description": "hiDRAMA · Popüler dikey kısa drama ve trend dizi akışları.",
     "authors": [
       "Wiojelt"
     ],
-    "description": "hiDRAMA · Popüler dikey kısa drama ve trend dizi akışları.",
-    "fileSize": 111110,
-    "repositoryUrl": "https://github.com/Wiojelt/test",
-    "language": "tr",
+    "repositoryUrl": "https://github.com/Wiojelt/WioDrama",
+    "url": "https://raw.githubusercontent.com/Wiojelt/WioDrama/builds/hiDRAMA.cs3?v=dd7a806741bf",
+    "iconUrl": "https://raw.githubusercontent.com/Wiojelt/WioDrama/main/assets/hiDRAMA.png",
     "tvTypes": [
       "AsianDrama",
       "TvSeries"
     ],
-    "iconUrl": "https://raw.githubusercontent.com/Wiojelt/test/main/assets/hiDRAMA.png",
+    "language": "tr",
+    "status": 1,
+    "fileSize": 111110,
+    "fileHash": "sha256-dd7a806741bff1fd2c3f64b0a3629b8033e242763307545dc39f6fd44d4bd223",
     "apiVersion": 1,
-    "fileHash": "sha256-dd7a806741bff1fd2c3f64b0a3629b8033e242763307545dc39f6fd44d4bd223"
+    "filesize": 111110,
+    "hash": "67d9c09120979033e7cd7c55a7952956"
   },
   {
     "url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepofull/builds/HintDizi.cs3",
@@ -3850,9 +3880,9 @@
     "fileHash": "sha256-b42b08a9105f61305057fa928f01f7eff94e95fba04fd4dbaba7a37d990aacfa"
   },
   {
-    "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/JetFilmizle.cs3",
+    "url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepofull/builds/JetFilmizle.cs3",
     "status": 1,
-    "version": 63,
+    "version": 60,
     "name": "JetFilmizle",
     "internalName": "JetFilmizle",
     "authors": [
@@ -3860,15 +3890,15 @@
       "ByAyzen"
     ],
     "description": "Binlerce Film İzleme Seçeneğiyle En İyi Film İzleme Sitesi",
-    "fileSize": 64337,
-    "repositoryUrl": "https://github.com/aytzey/cs-kraptor",
+    "fileSize": 61952,
+    "repositoryUrl": "https://github.com/hrtestingx/hrcsrepofull",
     "language": "tr",
     "tvTypes": [
       "Movie"
     ],
     "iconUrl": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://jetfilmizle.de&size=128",
     "apiVersion": 1,
-    "fileHash": "sha256-c1685d599eab24faf67ec7ee019701eacf6c1e7db21039e87b892d14d9f4585e"
+    "fileHash": "sha256-834376fc45083f40847fafc3ec7ad42305e12a3e74ec67545253fe356350898f"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=www.kalite18.net&sz=%size%",
@@ -4189,25 +4219,27 @@
     "fileHash": "sha256-34b2a187a4d3490174a1cd8b0e6a2085735653ff5cc1236ed6d9381c5fde2854"
   },
   {
-    "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/LoveDrama.cs3",
-    "status": 1,
-    "version": 5,
-    "name": "LoveDrama",
+    "name": "loveDRAMA",
     "internalName": "LoveDrama",
+    "version": 5,
+    "description": "loveDRAMA · 1080p Full HD dikey kısa diziler ve romantik bölümler (Canlı Firebase RTDB).",
     "authors": [
       "Wiojelt"
     ],
-    "description": "loveDRAMA · 1080p Full HD dikey kısa diziler ve romantik bölümler (Canlı Firebase RTDB).",
-    "fileSize": 107112,
     "repositoryUrl": "https://github.com/Wiojelt/WioDrama",
-    "language": "tr",
+    "url": "https://raw.githubusercontent.com/Wiojelt/WioDrama/builds/loveDRAMA.cs3?v=95f437e3f257",
+    "iconUrl": "https://raw.githubusercontent.com/Wiojelt/WioDrama/main/assets/loveDRAMA.png",
     "tvTypes": [
       "AsianDrama",
       "TvSeries"
     ],
-    "iconUrl": "https://raw.githubusercontent.com/Wiojelt/WioDrama/main/assets/loveDRAMA.png",
+    "language": "tr",
+    "status": 1,
+    "fileSize": 107112,
+    "fileHash": "sha256-95f437e3f257679445282a083f2b1a75f85a8ec6275d28fb41ba499fa463d827",
     "apiVersion": 1,
-    "fileHash": "sha256-95f437e3f257679445282a083f2b1a75f85a8ec6275d28fb41ba499fa463d827"
+    "filesize": 107112,
+    "hash": "474d834d6941c838d1aebb64e2bb1b89"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=lovefilmizle.net&sz=%size%",
@@ -4373,25 +4405,27 @@
     "name": "MilliyetTV"
   },
   {
-    "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/MiniDiziIzle.cs3",
-    "status": 1,
-    "version": 1,
-    "name": "MiniDiziIzle",
+    "name": "Mini Dizi İzle",
     "internalName": "MiniDiziIzle",
+    "version": 1,
+    "description": "Mini Dizi İzle – Türkçe dublajlı ve altyazılı mini dizi platformu.",
     "authors": [
       "Wiojelt"
     ],
-    "description": "Mini Dizi İzle — Türkçe dublajlı ve altyazılı mini dizi platformu.",
-    "fileSize": 110753,
-    "repositoryUrl": "https://github.com/Wiojelt/test",
-    "language": "tr",
+    "repositoryUrl": "https://github.com/Wiojelt/WioDrama",
+    "url": "https://raw.githubusercontent.com/Wiojelt/WioDrama/builds/MiniDiziIzle.cs3?v=8aac6b2adcf4",
+    "iconUrl": "https://raw.githubusercontent.com/Wiojelt/WioDrama/main/assets/logo.svg",
     "tvTypes": [
       "AsianDrama",
       "TvSeries"
     ],
-    "iconUrl": "https://raw.githubusercontent.com/Wiojelt/test/main/assets/minidiziizle.png",
+    "language": "tr",
+    "status": 1,
+    "fileSize": 110753,
+    "fileHash": "sha256-8aac6b2adcf4f331ab3b4897bddfe28ebba62d842ca39ff07ccb4d99257f9c4e",
     "apiVersion": 1,
-    "fileHash": "sha256-8aac6b2adcf4f331ab3b4897bddfe28ebba62d842ca39ff07ccb4d99257f9c4e"
+    "filesize": 110753,
+    "hash": "ecd7d69f6f417f92e6e24ee1923b4410"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=minikacocuk.com.tr&sz=%size%",
@@ -4533,46 +4567,50 @@
     "name": "MultiStream"
   },
   {
-    "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/MuseDrama.cs3",
-    "status": 1,
-    "version": 7,
     "name": "MuseDrama",
     "internalName": "MuseDrama",
+    "version": 7,
+    "description": "MuseDrama — Türkçe altyazılı dikey kısa drama dizileri ve mini diziler.",
     "authors": [
       "Wiojelt"
     ],
-    "description": "muse drama — Türkçe altyazılı dikey kısa drama dizileri ve mini diziler.",
-    "fileSize": 115593,
-    "repositoryUrl": "https://github.com/Wiojelt/test",
-    "language": "tr",
+    "repositoryUrl": "https://github.com/Wiojelt/WioDrama",
+    "url": "https://raw.githubusercontent.com/Wiojelt/WioDrama/builds/MuseDrama.cs3?v=e557c4e2567d",
+    "iconUrl": "https://raw.githubusercontent.com/Wiojelt/WioDrama/main/assets/musedrama.png",
     "tvTypes": [
       "AsianDrama",
       "TvSeries"
     ],
-    "iconUrl": "https://raw.githubusercontent.com/Wiojelt/test/main/assets/musedrama.png",
+    "language": "tr",
+    "status": 1,
+    "fileSize": 115593,
+    "fileHash": "sha256-e557c4e2567d9e7463e882ed3d4e0d6242c3dcd408794d102c38c2639578c25d",
     "apiVersion": 1,
-    "fileHash": "sha256-e557c4e2567d9e7463e882ed3d4e0d6242c3dcd408794d102c38c2639578c25d"
+    "filesize": 115593,
+    "hash": "bf0646fc85dcbf44563011c34b2fcca5"
   },
   {
-    "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/MyDrama.cs3",
-    "status": 1,
-    "version": 2,
-    "name": "MyDrama",
+    "name": "My Drama",
     "internalName": "MyDrama",
+    "version": 2,
+    "description": "My Drama — Türkçe altyazılı dikey kısa drama ve romantizm dizileri.",
     "authors": [
       "Wiojelt"
     ],
-    "description": "My Drama — Türkçe altyazılı dikey kısa drama ve romantizm dizileri.",
-    "fileSize": 115784,
-    "repositoryUrl": "https://github.com/Wiojelt/test",
-    "language": "tr",
+    "repositoryUrl": "https://github.com/Wiojelt/WioDrama",
+    "url": "https://raw.githubusercontent.com/Wiojelt/WioDrama/builds/MyDrama.cs3?v=8156294f1a79",
+    "iconUrl": "https://raw.githubusercontent.com/Wiojelt/WioDrama/main/assets/logo.png",
     "tvTypes": [
       "AsianDrama",
       "TvSeries"
     ],
-    "iconUrl": "https://raw.githubusercontent.com/Wiojelt/test/main/assets/mydrama.png",
+    "language": "tr",
+    "status": 1,
+    "fileSize": 115784,
+    "fileHash": "sha256-8156294f1a79cfb2a923f465dfe0b9583bf567be453a092a00fa001379e611ef",
     "apiVersion": 1,
-    "fileHash": "sha256-8156294f1a79cfb2a923f465dfe0b9583bf567be453a092a00fa001379e611ef"
+    "filesize": 115784,
+    "hash": "f9dc85b30340ad8a30e43847fa2278ca"
   },
   {
     "iconUrl": "https://raw.githubusercontent.com/GitLatte/temporarylists/refs/heads/main/img/mywaytv.png",
@@ -4841,7 +4879,9 @@
     "status": 1,
     "fileSize": 112423,
     "fileHash": "sha256-3b72f04b0ba1ee8ab1193c2d4d00491470f89dce30a7abfbd76169346ef77289",
-    "apiVersion": 1
+    "apiVersion": 1,
+    "filesize": 112423,
+    "hash": "72e276febf25a3f45d878ada5e935ac7"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=ok.ru&sz=%size%",
@@ -5437,25 +5477,19 @@
     "fileHash": "sha256-fbf700566931c69dda13cb1eed73fff8363c3087e9e6e347ab952c08c1ff5c7a"
   },
   {
+    "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/ShortMax.cs3?v=7b7f60188608",
+    "status": 1,
+    "version": 2,
     "name": "ShortMax",
     "internalName": "ShortMax",
-    "version": 3,
-    "description": "ShortMax · Türkçe dublajlı ve altyazılı dikey mini diziler (HD/1080p).",
     "authors": [
       "Wiojelt"
     ],
-    "repositoryUrl": "https://github.com/Wiojelt/WioDrama",
-    "url": "https://raw.githubusercontent.com/Wiojelt/WioDrama/builds/ShortMax.cs3?v=052574ece183",
-    "iconUrl": "https://raw.githubusercontent.com/Wiojelt/WioDrama/main/assets/ShortMax.png",
-    "tvTypes": [
-      "AsianDrama",
-      "TvSeries"
-    ],
-    "language": "tr",
-    "status": 1,
-    "fileSize": 114817,
-    "fileHash": "sha256-052574ece1831a1802d2a052d547f2fdfd72845e6578bbb949dd414d6b254858",
-    "apiVersion": 1
+    "description": "ShortMax – Türkçe dublajlı ve altyazılı dikey kısa drama dizileri ve mini diziler.",
+    "fileSize": 111953,
+    "repositoryUrl": "https://github.com/Wiojelt/test",
+    "apiVersion": 1,
+    "fileHash": "sha256-7b7f6018860814600b923052cdca48f366605b81128895961f8ef50713ef36b7"
   },
   {
     "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/ShortsWave.cs3",
@@ -5479,25 +5513,19 @@
     "fileHash": "sha256-615715eedd00a46daea69f2fea3ef197650b6819b12d02097b621e56941d3e60"
   },
   {
-    "name": "Shot Short",
-    "internalName": "ShotShort",
+    "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/ShotShort.cs3",
+    "status": 3,
     "version": 1,
-    "description": "Shot Short — Türkçe altyazılı dikey kısa drama dizileri ve mini diziler.",
+    "name": "ShotShort",
+    "internalName": "ShotShort",
     "authors": [
       "Wiojelt"
     ],
-    "repositoryUrl": "https://github.com/Wiojelt/WioDrama",
-    "url": "https://raw.githubusercontent.com/Wiojelt/WioDrama/builds/ShotShort.cs3?v=4c1dd5783224",
-    "iconUrl": "https://raw.githubusercontent.com/Wiojelt/WioDrama/main/assets/shotshort.png",
-    "tvTypes": [
-      "AsianDrama",
-      "TvSeries"
-    ],
-    "language": "tr",
-    "status": 1,
+    "description": "Shot Short — Türkçe altyazılı dikey kısa drama dizileri ve mini diziler.",
     "fileSize": 110330,
-    "fileHash": "sha256-4c1dd5783224fe9cbd96fa9eebcb42c590d4644ae54e3ea7d550b211ff976b4b",
-    "apiVersion": 1
+    "repositoryUrl": "https://github.com/Wiojelt/test",
+    "apiVersion": 1,
+    "fileHash": "sha256-4c1dd5783224fe9cbd96fa9eebcb42c590d4644ae54e3ea7d550b211ff976b4b"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=showtv.com.tr&sz=%size%",
@@ -5583,6 +5611,27 @@
     "iconUrl": "https://www.google.com/s2/favicons?domain=sinemacc.com&sz=128",
     "apiVersion": 1,
     "fileHash": "sha256-0af192012a76ba180091460ed8f47a1eb67a10f14388fb676056ecaa52b63b63"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=sinemaizle.org&sz=%size%",
+    "fileHash": "sha256-dddf9a0ec2d586d4494666763fb628b65b066b13d32f802fccb4273b26cf22da",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/Bymesut1/Kartaloglu-cs",
+    "fileSize": 47558,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "Bymesut1"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 5,
+    "internalName": "SinemaIzle",
+    "description": "Sinemaizle - film ve dizi izle",
+    "url": "https://raw.githubusercontent.com/Bymesut1/Kartaloglu-cs/builds/SinemaIzle.cs3",
+    "name": "SinemaIzle"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=sinemakolik.com&sz=%size%",
@@ -6961,25 +7010,25 @@
     "apiVersion": 1
   },
   {
+    "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/WioShort.cs3?v=7f2964275cae",
+    "status": 1,
+    "version": 5,
     "name": "WioShort",
     "internalName": "WioShort",
-    "version": 5,
-    "description": "WioShort · Dikey kısa dizi ve mini drama Türkçe dublaj/altyazılı akışları.",
     "authors": [
       "Wiojelt"
     ],
+    "description": "WioShort · Dikey kısa dizi ve mini drama Türkçe dublaj/altyazılı akışları.",
+    "fileSize": 111689,
     "repositoryUrl": "https://github.com/Wiojelt/WioDrama",
-    "url": "https://raw.githubusercontent.com/Wiojelt/WioDrama/builds/WioShort.cs3?v=7f2964275cae",
-    "iconUrl": "https://raw.githubusercontent.com/Wiojelt/WioDrama/main/assets/logo.png",
+    "language": "tr",
     "tvTypes": [
       "AsianDrama",
       "TvSeries"
     ],
-    "language": "tr",
-    "status": 1,
-    "fileSize": 111689,
-    "fileHash": "sha256-7f2964275caed28004902d10eb7f67f58d6be929aef1643e9909371925be3a15",
-    "apiVersion": 1
+    "iconUrl": "https://raw.githubusercontent.com/Wiojelt/WioDrama/main/assets/logo.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-7f2964275caed28004902d10eb7f67f58d6be929aef1643e9909371925be3a15"
   },
   {
     "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/WioSync.cs3?v=05839cdc2a86",
