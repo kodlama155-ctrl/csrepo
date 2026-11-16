@@ -750,9 +750,9 @@
     "name": "BloombergHT"
   },
   {
-    "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/BOAT_v90.cs3",
+    "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/BOAT_v91.cs3",
     "status": 1,
-    "version": 90,
+    "version": 91,
     "name": "BOAT",
     "internalName": "BOAT",
     "authors": [
@@ -772,7 +772,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/logos/boat_v2.png",
     "apiVersion": 1,
-    "fileHash": "sha256-ca58fbec1e98c842328da51eb3d0c8ec1e7b4f61786234a8bbb83d4e5948b6fa"
+    "fileHash": "sha256-7f545cf1e86cd318d053e6cbc7e91d2573265e32d8ae0167aa03a719554ab61e"
   },
   {
     "iconUrl": "https://www.buzfilmizle3.com/wp-content/uploads/cropped-unnamed-192x192.png",
@@ -3110,6 +3110,26 @@
     "name": "FilmMakinesiCafe"
   },
   {
+    "iconUrl": "https://filmmirasim.ktb.gov.tr/favicon-r.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/Nikkoshoptr/Pamuktv",
+    "fileSize": 15162,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "byayzen"
+    ],
+    "tvTypes": [
+      "Documentary"
+    ],
+    "version": 5,
+    "internalName": "FilmmirasÄ±m",
+    "description": "KÃ¼ltÃ¼r ve Turizm BakanlÄ±ÄŸÄ±, kÃ¼ltÃ¼rel mirasÄ±mÄ±zÄ±n gÃ¶rsel belleÄŸini oluÅŸturan filmlerin muhafazasÄ± ve gelecek kuÅŸaklara aktarÄ±lmasÄ± amacÄ±yla Sinema Genel MÃ¼dÃ¼rlÃ¼ÄŸÃ¼ bÃ¼nyesinde oluÅŸturduÄŸu arÅŸivdeki filmleri dijital ortama aktarmakta ve restore etmektedir. ",
+    "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/Filmmirasim.cs3",
+    "name": "FilmmirasÄ±m",
+    "fileHash": "sha256-45482b68a9eb43b52fed18f102c68269c3ce478117300da71ea9c6977da3e03f"
+  },
+  {
     "url": "https://raw.githubusercontent.com/ctnkyaumt/cstest/builds/Filmmirasım.cs3",
     "status": 1,
     "version": 5,
@@ -4185,6 +4205,26 @@
     "fileHash": "sha256-edb8f888196e357a04edc46ef115f9b129ba7f68719ff41f8ebc0bd2d05b10f1"
   },
   {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=tr.canlitv.team&sz=128",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/Nikkoshoptr/Pamuktv",
+    "fileSize": 18683,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "patr0n"
+    ],
+    "tvTypes": [
+      "Live"
+    ],
+    "version": 3,
+    "internalName": "iptvSevenler",
+    "description": "iptvSevenler",
+    "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/iptvSevenler.cs3",
+    "name": "iptvSevenler",
+    "fileHash": "sha256-df4b5b89bf02c01c0402e180f1a04f978e5bd8b39152d77496b77df1143214f1"
+  },
+  {
     "iconUrl": "https://www.google.com/s2/favicons?domain=izle7.com&sz=%size%",
     "fileHash": "sha256-3648ab31a0e1227860d9edd4b4299ce556e23804aa656b757242ce33b5759515",
     "apiVersion": 1,
@@ -5067,7 +5107,7 @@
   {
     "iconUrl": "https://raw.githubusercontent.com/GitLatte/temporarylists/refs/heads/main/img/mywaytv.png",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/GitLatte/Sinetech",
+    "repositoryUrl": "https://github.com/Nikkoshoptr/Pamuktv",
     "fileSize": 19932,
     "status": 1,
     "language": "tr",
@@ -5082,10 +5122,31 @@
     ],
     "version": 3,
     "internalName": "myway TV - Latte",
-    "description": "Sinetech.tr Forum myway canlı tv listesi",
-    "url": "https://raw.githubusercontent.com/GitLatte/Sinetech/builds/myway TV - Latte.cs3",
+    "description": "Sinetech.tr Forum myway canlÄ± tv listesi",
+    "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/myway_TV_-_Latte.cs3",
     "name": "myway TV - Latte",
     "fileHash": "sha256-d8a76eaca80e333e339dcb33fb17d9e7a49f65db471585964adf57ec22fc082d"
+  },
+  {
+    "iconUrl": "https://raw.githubusercontent.com/GitLatte/temporarylists/refs/heads/main/img/muzikkanallari.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/Nikkoshoptr/Pamuktv",
+    "fileSize": 23377,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "GitLatte",
+      "patr0nq"
+    ],
+    "tvTypes": [
+      "Live"
+    ],
+    "version": 3,
+    "internalName": "MÃ¼zik TV ve Radyo - Latte",
+    "description": "MÃ¼zik KanallarÄ±na Ã¶zel canlÄ± tv eklentisidir.",
+    "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/Muzik_TV_ve_Radyo_-_Latte.cs3",
+    "name": "MÃ¼zik TV ve Radyo - Latte",
+    "fileHash": "sha256-58a5942d879521d0f5af0e3ce8eb889f05e62c86fa81746a3a31ec155428c0ba"
   },
   {
     "iconUrl": "https://raw.githubusercontent.com/GitLatte/temporarylists/refs/heads/main/img/muzikkanallari.png",
@@ -5376,25 +5437,25 @@
     "fileHash": "sha256-e0393ea5e8048a0afdb9e3fd8863441416116200352689f58166c18e5b20790d"
   },
   {
-    "url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepofull/builds/OpenAnime.cs3",
+    "iconUrl": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://openani.me/&size=24",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/Nikkoshoptr/Pamuktv",
+    "fileSize": 67615,
     "status": 1,
-    "version": 25,
-    "name": "OpenAnime",
-    "internalName": "OpenAnime",
+    "language": "tr",
     "authors": [
       "kraptor",
       "ByAyzen"
     ],
-    "description": "Anime izleme deneyiminizi zenginleştiren, hızlı ve etkileyici özelliklerle donatılmış, şık bir tasarıma sahip anime platformu. Anime izleme deneyiminiz, kolaylaştırıldı.",
-    "fileSize": 67615,
-    "repositoryUrl": "https://github.com/hrtestingx/hrcsrepofull",
-    "language": "tr",
     "tvTypes": [
       "Anime",
       "AnimeMovie"
     ],
-    "iconUrl": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://openani.me/&size=24",
-    "apiVersion": 1,
+    "version": 28,
+    "internalName": "OpenAnime",
+    "description": "Anime izleme deneyiminizi zenginleÅŸtiren, hÄ±zlÄ± ve etkileyici Ã¶zelliklerle donatÄ±lmÄ±ÅŸ, ÅŸÄ±k bir tasarÄ±ma sahip anime platformu. Anime izleme deneyiminiz, kolaylaÅŸtÄ±rÄ±ldÄ±.",
+    "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/OpenAnime.cs3",
+    "name": "OpenAnime",
     "fileHash": "sha256-eed28bebf342b67d1d5ae9b870c73c9acd0b6fd7bac1ffb7ff46bce6aaabc1f5"
   },
   {
@@ -5520,7 +5581,7 @@
   {
     "iconUrl": "https://raw.githubusercontent.com/GitLatte/temporarylists/refs/heads/main/img/powerdizi.png",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/GitLatte/Sinetech",
+    "repositoryUrl": "https://github.com/Nikkoshoptr/Pamuktv",
     "fileSize": 34237,
     "status": 1,
     "language": "tr",
@@ -5534,15 +5595,15 @@
     ],
     "version": 6,
     "internalName": "powerboard Dizi - Latte",
-    "description": "powerboard`un yabancı dizi arşivi",
-    "url": "https://raw.githubusercontent.com/GitLatte/Sinetech/builds/powerboard Dizi - Latte.cs3",
+    "description": "powerboard`un yabancÄ± dizi arÅŸivi",
+    "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/powerboard_Dizi_-_Latte.cs3",
     "name": "powerboard Dizi - Latte",
     "fileHash": "sha256-1e7595cd3a30c623d542695436408b0e97561a7177fa1dc148bbcca410b1bffa"
   },
   {
     "iconUrl": "https://raw.githubusercontent.com/GitLatte/temporarylists/refs/heads/main/img/powersinema.png",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/GitLatte/Sinetech",
+    "repositoryUrl": "https://github.com/Nikkoshoptr/Pamuktv",
     "fileSize": 38795,
     "status": 1,
     "language": "tr",
@@ -5556,50 +5617,50 @@
     ],
     "version": 5,
     "internalName": "powerboard Sinema - Latte",
-    "description": "powerboard`un sinema arşivi",
-    "url": "https://raw.githubusercontent.com/GitLatte/Sinetech/builds/powerboard Sinema - Latte.cs3",
+    "description": "powerboard`un sinema arÅŸivi",
+    "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/powerboard_Sinema_-_Latte.cs3",
     "name": "powerboard Sinema - Latte",
     "fileHash": "sha256-a34223e6589a8b31a2755a5ccac0be4c26a9a8de6bd9fb5abe79d82297b909ac"
   },
   {
-    "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film_2/builds/powerDizi.cs3",
+    "iconUrl": "https://www.google.com/s2/favicons?domain=tr.canlitv.team&sz=128",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/Nikkoshoptr/Pamuktv",
+    "fileSize": 18697,
     "status": 1,
-    "version": 3,
-    "name": "powerDizi",
-    "internalName": "powerDizi",
+    "language": "tr",
     "authors": [
       "patr0n"
     ],
-    "description": "powerDizi",
-    "fileSize": 20507,
-    "repositoryUrl": "https://github.com/arcilingir/Dizi_Film_2",
-    "language": "tr",
     "tvTypes": [
       "TvSeries"
     ],
-    "iconUrl": "https://www.google.com/s2/favicons?domain=tr.canlitv.team&sz=%size%",
-    "apiVersion": 1,
-    "fileHash": "sha256-fcb3722ca138eb03700b86b51b43943139e0294f89d16ab16239b90dce16509f"
+    "version": 3,
+    "internalName": "powerDizi",
+    "description": "powerDizi",
+    "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/powerDizi.cs3",
+    "name": "powerDizi",
+    "fileHash": "sha256-3f2641e7b34f171527ab7e8ab29739701d68d18d80a110d96cfe7c20ae6342fa"
   },
   {
-    "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film_2/builds/powerSinema.cs3",
+    "iconUrl": "https://www.google.com/s2/favicons?domain=tr.canlitv.team&sz=128",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/Nikkoshoptr/Pamuktv",
+    "fileSize": 18690,
     "status": 1,
-    "version": 3,
-    "name": "powerSinema",
-    "internalName": "powerSinema",
+    "language": "tr",
     "authors": [
       "patr0n"
     ],
-    "description": "powerSinema",
-    "fileSize": 20489,
-    "repositoryUrl": "https://github.com/arcilingir/Dizi_Film_2",
-    "language": "tr",
     "tvTypes": [
       "Movie"
     ],
-    "iconUrl": "https://www.google.com/s2/favicons?domain=tr.canlitv.team&sz=%size%",
-    "apiVersion": 1,
-    "fileHash": "sha256-2e637ea633bf40a51ca27f6b10a423614d7e8e8686d306f254817bbd5495a474"
+    "version": 3,
+    "internalName": "powerSinema",
+    "description": "powerSinema",
+    "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/powerSinema.cs3",
+    "name": "powerSinema",
+    "fileHash": "sha256-bdd939a3cb1355b787c0f9ad6afa3c122af231009d3cadcd601c9545f0479dad"
   },
   {
     "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/Puhu_v4.cs3",
@@ -5988,24 +6049,24 @@
     "fileHash": "sha256-9444ebd08ad4b87270f14d93b2ac7be71e3230c986d41dcd5d518f0e12ef374f"
   },
   {
-    "iconUrl": "https://www.google.com/s2/favicons?domain=sezonlukdizi.one&sz=%size%",
-    "fileHash": "sha256-7bb2443d50102679b10f01acd29e1f356fc2ea517c3c4ab8d428b348c732fa39",
+    "iconUrl": "https://www.google.com/s2/favicons?domain=sezonlukdizi.one&sz=128",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
-    "fileSize": 19978,
+    "repositoryUrl": "https://github.com/Nikkoshoptr/Pamuktv",
+    "fileSize": 20018,
     "status": 1,
     "language": "tr",
     "authors": [
-      "JustSadY"
+      "bilhan50"
     ],
     "tvTypes": [
       "Movie"
     ],
     "version": 1,
     "internalName": "SezonlukFilm",
-    "description": "SezonlukFilm - Türkçe dublaj ve altyazılı film arşivi",
-    "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/SezonlukFilm.cs3",
-    "name": "SezonlukFilm"
+    "description": "SezonlukFilm - en yeni filmleri full HD, turkce dublaj veya altyazili 4K kalitesinde izleyin.",
+    "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/SezonlukFilm.cs3",
+    "name": "SezonlukFilm",
+    "fileHash": "sha256-7cd7559bc09b8c702acc545377d87e60a4fc1390f41477630defa037b2ff7923"
   },
   {
     "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/Shortizle.cs3?v=fbf700566931",
@@ -6120,25 +6181,25 @@
     "iconUrl": "https://www.sinefilmizlesen.cc/favicon.ico"
   },
   {
-    "iconUrl": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://sinefy3.com/&size=128",
-    "fileHash": "sha256-62eb02ffdbf65ea6ca7ca8d4433a785e0588d3a86f3b01cc7160896141321f59",
-    "apiVersion": 1,
-    "repositoryUrl": "https://github.com/lepotane/MRC-builds",
-    "fileSize": 54983,
+    "url": "https://raw.githubusercontent.com/UmayTrade/MyTV/builds/Sinefy.cs3",
     "status": 1,
-    "language": "tr",
+    "version": 14,
+    "name": "Sinefy",
+    "internalName": "Sinefy",
     "authors": [
-      "MRC"
+      "kraptor"
     ],
+    "description": "Yabancı film izle olarak vizyondaki en yeni yabancı filmleri türkçe dublaj ve altyazılı olarak en hızlı şekilde full hd olarak sizlere sunuyoruz.",
+    "fileSize": 21437,
+    "repositoryUrl": "https://github.com/UmayTrade/MyTV",
+    "language": "tr",
     "tvTypes": [
       "Movie",
       "TvSeries"
     ],
-    "version": 5,
-    "internalName": "Sinefy",
-    "description": "Sinefy - Vizyondaki yabancı filmler ve diziler Türkçe dublaj ve altyazılı.",
-    "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/Sinefy.cs3",
-    "name": "Sinefy"
+    "iconUrl": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://sinefy3.com/&size=128",
+    "apiVersion": 1,
+    "fileHash": "sha256-af18ed54db98ab304003e1ff01667da8a34d680d68fce7668d0022df57336a7d"
   },
   {
     "name": "SinekFilmizle",
@@ -6455,6 +6516,26 @@
     "fileHash": "sha256-f14b71bfebd63fb4fe601605017cdb07d95ec9cb6542794f9aad690d00e6c222"
   },
   {
+    "iconUrl": "https://www.turksatkablo.com.tr/images/icerik/ssportplus.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/Nikkoshoptr/Pamuktv",
+    "fileSize": 24425,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "Makoto Tokioki"
+    ],
+    "tvTypes": [
+      "Live"
+    ],
+    "version": 8,
+    "internalName": "SSportPlus",
+    "description": "SSport+ canlÄ± yayÄ±nlarÄ± ve arÅŸiv iÃ§erikleri",
+    "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/SSportPlus.cs3",
+    "name": "SSportPlus",
+    "fileHash": "sha256-ba5c707f08cf36f72d2dacfe4c284e1907c00b8777dd8665982441df9f63dace"
+  },
+  {
     "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/StardustTV.cs3",
     "status": 1,
     "version": 1,
@@ -6761,6 +6842,27 @@
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=www.tlctv.com.tr&sz=%size%",
     "repositoryUrl": "https://github.com/merb2y/cs-builds"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=upload.wikimedia.org&sz=128",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/Nikkoshoptr/Pamuktv",
+    "fileSize": 19290,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "Makoto Tokioki"
+    ],
+    "tvTypes": [
+      "Movie",
+      "Torrent"
+    ],
+    "version": 2,
+    "internalName": "TorrentFilm",
+    "description": "TÃ¼rkÃ§e altyazÄ±lÄ± torrentleri buradan 4K kalitesinde izleyebilirsiniz.",
+    "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/TorrentFilm.cs3",
+    "name": "TorrentFilm",
+    "fileHash": "sha256-c10e441a15781fad75d9e704c3d7e94123ce2520aa68a294d5a6018711ed1330"
   },
   {
     "name": "TR Sesli Kitap",
@@ -7157,6 +7259,44 @@
     "repositoryUrl": "https://github.com/merb2y/cs-builds"
   },
   {
+    "iconUrl": "",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/Nikkoshoptr/Pamuktv",
+    "fileSize": 7954,
+    "status": 1,
+    "language": "tr",
+    "authors": [],
+    "tvTypes": [],
+    "version": 2,
+    "internalName": "TurkMegaSaglayici",
+    "description": "Bu eklenti, uygulama her aÃ§Ä±ldÄ±ÄŸÄ±nda tÃ¼m depolarÄ± ekler. EÄŸer tÃ¼m depolarÄ± eklemek istemiyorsanÄ±z, tek bir Ã§alÄ±ÅŸtÄ±rmadan sonra eklentiyi kaldÄ±rÄ±n. Depo listesi otomatik olarak yenilenmez.",
+    "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/TurkMegaSaglayici.cs3",
+    "name": "TurkMegaSaglayici",
+    "fileHash": "sha256-281121b418cb3fc4137c57fc3878454ecc3bb4fa8109eec1e09abf70d93cbd1b"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=tr.canlitv.team&sz=128",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/Nikkoshoptr/Pamuktv",
+    "fileSize": 18030,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "Adippe",
+      "keyiflerolsun",
+      "nikyokki"
+    ],
+    "tvTypes": [
+      "Live"
+    ],
+    "version": 6,
+    "internalName": "TurkSCanliTV",
+    "description": "TurkS CanlÄ± TV",
+    "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/TurkSCanliTV.cs3",
+    "name": "TurkSCanliTV",
+    "fileHash": "sha256-5f3639513230275f5c77d860daabc1194416db92702bc42b4ba8df2ebef1d5bf"
+  },
+  {
     "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/TurkSpor.cs3?v=21c99ad664d4",
     "status": 3,
     "version": 6,
@@ -7175,6 +7315,28 @@
     "iconUrl": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/main/assets/logo.png",
     "apiVersion": 1,
     "fileHash": "sha256-21c99ad664d4d3f7c29a3340d761fb3e2ce83c162e02d7f6a9549e921d255aff"
+  },
+  {
+    "iconUrl": "https://raw.githubusercontent.com/GitLatte/temporarylists/refs/heads/main/img/bahcesitv.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/Nikkoshoptr/Pamuktv",
+    "fileSize": 20365,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "GitLatte",
+      "patr0nq",
+      "keyiflerolsun"
+    ],
+    "tvTypes": [
+      "Live"
+    ],
+    "version": 3,
+    "internalName": "Tv BahÃ§esi - Latte",
+    "description": "TvGarden televizyon listesi. @keyiflerolsun CanlÄ± TV eklentisinden yararlanÄ±lmÄ±ÅŸtÄ±r.",
+    "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/Tv_Bahcesi_-_Latte.cs3",
+    "name": "Tv BahÃ§esi - Latte",
+    "fileHash": "sha256-d62ba08f59efc5095399009a4cd53293a85341a0a88666c7d3b3ede4a03a37e7"
   },
   {
     "iconUrl": "https://raw.githubusercontent.com/GitLatte/temporarylists/refs/heads/main/img/bahcesitv.png",
@@ -7577,25 +7739,25 @@
     "name": "Weboo"
   },
   {
-    "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film_2/builds/WebteIzle.cs3",
+    "iconUrl": "https://www.google.com/s2/favicons?domain=webteizle2.com&sz=128",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/Nikkoshoptr/Pamuktv",
+    "fileSize": 30581,
     "status": 1,
-    "version": 59,
-    "name": "WebteIzle",
-    "internalName": "WebteIzle",
+    "language": "tr",
     "authors": [
       "keyiflerolsun",
       "nikyokki"
     ],
-    "description": "Her türlü filmi ister dublaj ister altyazılı, en kaliteli bir şekilde izleyebileceğiniz arşivi en geniş gerçek film izleme siteniz.",
-    "fileSize": 35303,
-    "repositoryUrl": "https://github.com/arcilingir/Dizi_Film_2",
-    "language": "tr",
     "tvTypes": [
       "Movie"
     ],
-    "iconUrl": "https://www.google.com/s2/favicons?domain=webteizle2.com&sz=%size%",
-    "apiVersion": 1,
-    "fileHash": "sha256-cdfa54fcb567d500705525c1c7d2764d1522c751383e3ed2c9b3e6097918e7fc"
+    "version": 59,
+    "internalName": "WebteIzle",
+    "description": "Her tÃ¼rlÃ¼ filmi ister dublaj ister altyazÄ±lÄ±, en kaliteli bir ÅŸekilde izleyebileceÄŸiniz arÅŸivi en geniÅŸ gerÃ§ek film izleme siteniz.",
+    "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/WebteIzle.cs3",
+    "name": "WebteIzle",
+    "fileHash": "sha256-1be5eda25491e71bd1b457c8587505ecc23b17fd8e560a4d2dc9cd278f1f4384"
   },
   {
     "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/WFilmizle.cs3",
@@ -7823,6 +7985,26 @@
     "description": "YouTube, izlediğiniz videolarla önerilerini iyileştirir. İlginizi çekebilecek içeriklerle dolu bir akış oluşturmak için video izlemeye başlayın.",
     "url": "https://raw.githubusercontent.com/Bymesut1/Kartaloglu-cs/builds/YouTube.cs3",
     "name": "YouTube"
+  },
+  {
+    "iconUrl": "https://raw.githubusercontent.com/GitLatte/temporarylists/refs/heads/main/Latte%20Tube/latte-tube.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/Nikkoshoptr/Pamuktv",
+    "fileSize": 13644,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "GitLatte"
+    ],
+    "tvTypes": [
+      "Live"
+    ],
+    "version": 1,
+    "internalName": "YouTube Ã–zel - Latte",
+    "description": "Youtube 7/24 iÃ§eriklerinden derlemeler iÃ§erir. Orijinal youtube ile oynatÄ±larak kullanÄ±lmaktadÄ±r. Bu konuda @feroxx`un geliÅŸtirdiÄŸi youtube extractor iÃ§in teÅŸekkÃ¼rler.",
+    "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/YouTube_Ozel_-_Latte.cs3",
+    "name": "YouTube Ã–zel - Latte",
+    "fileHash": "sha256-4e2db2310a254d7d3377ea5303123181254091831af53460517e118612fd7cf3"
   },
   {
     "iconUrl": "https://raw.githubusercontent.com/GitLatte/temporarylists/refs/heads/main/Latte%20Tube/latte-tube.png",
