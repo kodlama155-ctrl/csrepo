@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-11-17T01:51:13Z",
-  "candidate_plugin_count": 491,
-  "healthy_plugin_count": 400,
-  "rejected_plugin_count": 91,
-  "fallback_used_count": 41,
-  "provider_unverified_count": 72,
+  "generated_at": "2026-11-18T15:33:12Z",
+  "candidate_plugin_count": 440,
+  "healthy_plugin_count": 362,
+  "rejected_plugin_count": 78,
+  "fallback_used_count": 42,
+  "provider_unverified_count": 62,
   "rejection_attempt_counts": {
-    "blacklisted": 26,
+    "blacklisted": 24,
     "corrupted-cs3-missing-dex": 1,
-    "hash-mismatch": 19,
-    "http-404": 58,
+    "hash-mismatch": 20,
+    "http-404": 62,
     "invalid-status": 16,
-    "provider-unverified": 530,
-    "status-down": 31
+    "provider-unverified": 498,
+    "status-down": 26
   },
   "checks": {
     "status_zero_rejected": true,
@@ -35,8 +35,8 @@
       "internal_name": "wiosinema",
       "name": "0 WioSinema",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/turk/WioSinema.cs3",
+      "repository": "Wiojelt/WioSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/main/WioSinema.cs3?v=65e0635404bf",
       "version": 91,
       "size": 2389254,
       "hash_checked": true,
@@ -49,55 +49,13 @@
       "internal_name": "wiospor",
       "name": "0 WioSpor",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/spor/WioSpor.cs3",
+      "repository": "Wiojelt/WioSpor",
+      "url": "https://raw.githubusercontent.com/Wiojelt/WioSpor/builds/WioSpor.cs3?v=9f820774e1ff",
       "version": 57,
       "size": 837265,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "atomsportv519.top:alive",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "00_pars_tv",
-      "name": "00_PARS_TV",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/00_PARS_TV.cs3",
-      "version": 4,
-      "size": 17415,
-      "hash_checked": true,
-      "provider_check": "unverified",
-      "provider_reason": "no-urls",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "turkishcinestream",
-      "name": "1 TurkishCineStream",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/turk/TurkishCineStream.cs3",
-      "version": 488,
-      "size": 2329079,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "animecix.tv:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "birdirbiriptv",
-      "name": "1 v10 Spor",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/spor/BirdirbirIPTV.cs3",
-      "version": 28,
-      "size": 238394,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "www.ntvs.cx:alive",
       "fallback_used": false,
       "attempts": null
     },
@@ -122,7 +80,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/AniArsiv.cs3",
       "version": 5,
-      "size": 37348,
+      "size": 75475,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "aniarsiv.com:alive-tr",
@@ -164,7 +122,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/AnimeTR.cs3",
       "version": 1,
-      "size": 36884,
+      "size": 74989,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "animetr.co:alive",
@@ -231,11 +189,11 @@
       "internal_name": "ardaspor",
       "name": "ArdaSpor",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/spor/ArdaSpor.cs3",
+      "repository": "MrKonce/ozel-cs-repom",
+      "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/TurkSpor_ArdaSpor_v12.cs3",
       "version": 12,
       "size": 182830,
-      "hash_checked": true,
+      "hash_checked": false,
       "provider_check": "reachable",
       "provider_reason": "ardaspor.live:alive",
       "fallback_used": false,
@@ -245,11 +203,11 @@
       "internal_name": "aslantv",
       "name": "AslanTV",
       "status": "healthy",
-      "repository": "Wiojelt/TurkSpor",
-      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/AslanTV.cs3?v=c7ad4d0ca654",
+      "repository": "MrKonce/ozel-cs-repom",
+      "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/TurkSpor_AslanTV_v13.cs3",
       "version": 13,
       "size": 266887,
-      "hash_checked": true,
+      "hash_checked": false,
       "provider_check": "reachable",
       "provider_reason": "www.ntvs.cx:alive",
       "fallback_used": false,
@@ -276,7 +234,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/AsyaBox.cs3",
       "version": 7,
-      "size": 46435,
+      "size": 84021,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "asyabox.co:alive",
@@ -290,7 +248,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/AsyaDizi.cs3",
       "version": 7,
-      "size": 46966,
+      "size": 84512,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "asyadizi.com:alive",
@@ -304,7 +262,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Asyadizileriizle.cs3",
       "version": 7,
-      "size": 46406,
+      "size": 83976,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "asyadizileriizle.com:alive",
@@ -317,8 +275,8 @@
       "status": "healthy",
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/AsyaFanatikleri.cs3",
-      "version": 1,
-      "size": 38757,
+      "version": 2,
+      "size": 80834,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "asyafanatikleri.vip:alive",
@@ -360,7 +318,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/AsyaLog.cs3",
       "version": 9,
-      "size": 38880,
+      "size": 76960,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "asyalog.co:alive",
@@ -374,7 +332,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/AsyaMax.cs3",
       "version": 1,
-      "size": 37323,
+      "size": 75406,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "asyamax.com:alive",
@@ -401,14 +359,6 @@
           "result": "status-down",
           "provider_check": "not-checked",
           "provider_reason": null
-        },
-        {
-          "repository": "Nikkoshoptr/Pamuktv",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/AsyaMinik.cs3",
-          "version": 17,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "asyaminik.com:unreachable"
         },
         {
           "repository": "adilem/cs-kraptor",
@@ -454,8 +404,8 @@
       "internal_name": "atomspor",
       "name": "AtomSpor",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/spor/AtomSpor.cs3",
+      "repository": "Wiojelt/WioSpor",
+      "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/AtomSpor.cs3?v=bd733112e552",
       "version": 2,
       "size": 158179,
       "hash_checked": true,
@@ -472,8 +422,8 @@
           "provider_reason": "no-urls"
         },
         {
-          "repository": "Nikkoshoptr/PamukVip",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/spor/AtomSpor.cs3",
+          "repository": "Wiojelt/WioSpor",
+          "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/AtomSpor.cs3?v=bd733112e552",
           "version": 2,
           "result": "ok",
           "provider_check": "reachable",
@@ -488,20 +438,12 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/ATV.cs3",
       "version": 4,
-      "size": 36835,
+      "size": 75001,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "www.atv.com.tr:alive",
       "fallback_used": true,
       "attempts": [
-        {
-          "repository": "Nikkoshoptr/PamukVip",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/mrc/Atv.cs3",
-          "version": 8,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "no-urls"
-        },
         {
           "repository": "lepotane/MRC-builds",
           "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/Atv.cs3",
@@ -539,20 +481,6 @@
       "hash_checked": true,
       "provider_check": "unverified",
       "provider_reason": "no-urls",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "atvdiziler",
-      "name": "AtvDiziler",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/AtvDiziler.cs3",
-      "version": 2,
-      "size": 28016,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "www.atv.com.tr:alive",
       "fallback_used": false,
       "attempts": null
     },
@@ -602,8 +530,8 @@
       "internal_name": "betmatiktv",
       "name": "BetmatikTV",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/spor/BetmatikTV.cs3",
+      "repository": "Wiojelt/WioSpor",
+      "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/BetmatikTV.cs3?v=b6304052c9e7",
       "version": 3,
       "size": 219101,
       "hash_checked": true,
@@ -616,8 +544,8 @@
       "internal_name": "beyazelma",
       "name": "BeyazElma",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/spor/BeyazElma.cs3",
+      "repository": "Wiojelt/WioSpor",
+      "url": "https://raw.githubusercontent.com/Wiojelt/WioSpor/builds/BeyazElma.cs3",
       "version": 12,
       "size": 219121,
       "hash_checked": true,
@@ -634,8 +562,8 @@
           "provider_reason": "no-urls"
         },
         {
-          "repository": "Nikkoshoptr/PamukVip",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/spor/BeyazElma.cs3",
+          "repository": "Wiojelt/WioSpor",
+          "url": "https://raw.githubusercontent.com/Wiojelt/WioSpor/builds/BeyazElma.cs3",
           "version": 12,
           "result": "ok",
           "provider_check": "reachable",
@@ -664,10 +592,24 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/BirAsyaDizi.cs3",
       "version": 8,
-      "size": 49264,
+      "size": 86443,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "www.birasyadizi.cx:alive",
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "birdirbiriptv",
+      "name": "BirdirbirIPTV",
+      "status": "healthy",
+      "repository": "MrKonce/ozel-cs-repom",
+      "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/TurkSpor_BirdirbirIPTV_v28.cs3",
+      "version": 28,
+      "size": 238394,
+      "hash_checked": false,
+      "provider_check": "reachable",
+      "provider_reason": "www.ntvs.cx:alive",
       "fallback_used": false,
       "attempts": null
     },
@@ -690,8 +632,8 @@
       "name": "BOAT",
       "status": "healthy",
       "repository": "dr-octagon/BronzeCloud",
-      "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/BOAT_v92.cs3",
-      "version": 92,
+      "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/BOAT_v95.cs3",
+      "version": 95,
       "size": 746131,
       "hash_checked": false,
       "provider_check": "unverified",
@@ -720,24 +662,10 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/CanliDizi.cs3",
       "version": 7,
-      "size": 45215,
+      "size": 82926,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "canlidizi.sbs:alive",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "canliradyo",
-      "name": "CanliRadyo",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/CanliRadyo.cs3",
-      "version": 1,
-      "size": 22213,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "www.canliradyodinle.fm:alive",
       "fallback_used": false,
       "attempts": null
     },
@@ -756,95 +684,11 @@
       "attempts": null
     },
     {
-      "internal_name": "canlitv3",
-      "name": "CanliTV3",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/CanliTV3.cs3",
-      "version": 1,
-      "size": 29945,
-      "hash_checked": true,
-      "provider_check": "unverified",
-      "provider_reason": "no-urls",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "canlitv4",
-      "name": "CanliTV4",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/CanliTV4.cs3",
-      "version": 2,
-      "size": 45776,
-      "hash_checked": true,
-      "provider_check": "unverified",
-      "provider_reason": "no-urls",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "canlitv5",
-      "name": "CanliTV5",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/CanliTV5.cs3",
-      "version": 2,
-      "size": 50261,
-      "hash_checked": true,
-      "provider_check": "unverified",
-      "provider_reason": "no-urls",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "canlitv6",
-      "name": "CanliTV6",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/CanliTV6.cs3",
-      "version": 2,
-      "size": 28495,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "saraydorf.de:alive",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "canlitv7",
-      "name": "CanliTV7",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/CanliTV7.cs3",
-      "version": 3,
-      "size": 42556,
-      "hash_checked": true,
-      "provider_check": "unverified",
-      "provider_reason": "dynamic-domain-missing",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "canlitv8",
-      "name": "CanliTV8",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/CanliTV8.cs3",
-      "version": 3,
-      "size": 30449,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "varsports.online:alive",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
       "internal_name": "catcast",
       "name": "Catcast TV",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/turk/Catcast.cs3",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/Catcast.cs3?v=5a332e04a042",
       "version": 3,
       "size": 123479,
       "hash_checked": true,
@@ -864,20 +708,6 @@
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "cinecat.eu:alive",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "cinehd",
-      "name": "CineHD",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/CineHD.cs3",
-      "version": 8,
-      "size": 62316,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "cinehd.vc:alive",
       "fallback_used": false,
       "attempts": null
     },
@@ -986,7 +816,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/CizgiSite.cs3",
       "version": 8,
-      "size": 35554,
+      "size": 73694,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "www.cizgi.site:alive",
@@ -1140,7 +970,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/DDizimag.cs3",
       "version": 5,
-      "size": 39644,
+      "size": 77746,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "ddizimag.icu:alive",
@@ -1148,39 +978,11 @@
       "attempts": null
     },
     {
-      "internal_name": "ddizimom",
-      "name": "DDiziMom",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/DDiziMom.cs3",
-      "version": 3,
-      "size": 18847,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "ddizimom.net:alive",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "ddizipal",
-      "name": "DDiziPal",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/DDiziPal.cs3",
-      "version": 2,
-      "size": 18535,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "ddizipal.com:alive",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
       "internal_name": "deokwave",
       "name": "Deokwave",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/turk/Deokwave.cs3",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/Deokwave.cs3?v=6accd7841331",
       "version": 13,
       "size": 132083,
       "hash_checked": true,
@@ -1193,11 +995,11 @@
       "internal_name": "dexter",
       "name": "Dexter",
       "status": "healthy",
-      "repository": "Wiojelt/TurkSpor",
-      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/Dexter.cs3?v=84b89555038d",
+      "repository": "MrKonce/ozel-cs-repom",
+      "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/TurkSpor_Dexter_v1.cs3",
       "version": 1,
       "size": 169006,
-      "hash_checked": true,
+      "hash_checked": false,
       "provider_check": "reachable",
       "provider_reason": "dexter.pw:alive",
       "fallback_used": false,
@@ -1224,7 +1026,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/DiziAbi.cs3",
       "version": 6,
-      "size": 45124,
+      "size": 82888,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "www.diziabi.net:alive",
@@ -1266,7 +1068,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Dizibaba.cs3",
       "version": 6,
-      "size": 30334,
+      "size": 68487,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "dizibaba.net:alive",
@@ -1301,14 +1103,6 @@
       "fallback_used": true,
       "attempts": [
         {
-          "repository": "Nikkoshoptr/PamukVip",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/turk/DiziBol.cs3",
-          "version": 8,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "dynamic-domain-missing"
-        },
-        {
           "repository": "Wiojelt/TurkSinema",
           "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/DiziBol.cs3",
           "version": 8,
@@ -1327,6 +1121,14 @@
         {
           "repository": "arcilingir/TurkSinema",
           "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/DiziBol.cs3",
+          "version": 8,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "dynamic-domain-missing"
+        },
+        {
+          "repository": "MrKonce/ozel-cs-repom",
+          "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/TurkSinema_DiziBol_v8.cs3",
           "version": 8,
           "result": "provider-unverified",
           "provider_check": "unverified",
@@ -1412,17 +1214,17 @@
           "provider_reason": "www.dizibox.live:http-403"
         },
         {
-          "repository": "feroxx/Kekik-cloudstream",
-          "url": "https://raw.githubusercontent.com/feroxx/Kekik-cloudstream/builds/DiziBox.cs3",
+          "repository": "MrKonce/ozel-cs-repom",
+          "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/FeroxxKekik_DiziBox_v26.cs3",
           "version": 26,
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "www.dizibox.live:http-403"
         },
         {
-          "repository": "Nikkoshoptr/Pamuktv",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/DiziBox.cs3",
-          "version": 23,
+          "repository": "feroxx/Kekik-cloudstream",
+          "url": "https://raw.githubusercontent.com/feroxx/Kekik-cloudstream/builds/DiziBox.cs3",
+          "version": 26,
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "www.dizibox.live:http-403"
@@ -1458,14 +1260,6 @@
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "www.dizibox.live:http-403"
-        },
-        {
-          "repository": "Nikkoshoptr/PamukVip",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/mrc/DiziBox.cs3",
-          "version": 21,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "no-urls"
         },
         {
           "repository": "lepotane/MRC-builds",
@@ -1628,7 +1422,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/DiziboxIzle.cs3",
       "version": 11,
-      "size": 41601,
+      "size": 79525,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "diziboxizle.com:alive",
@@ -1642,7 +1436,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/DiziBoxTv.cs3",
       "version": 6,
-      "size": 45239,
+      "size": 82938,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "diziboxtv.com:alive",
@@ -1656,10 +1450,10 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/DiziCaN.cs3",
       "version": 11,
-      "size": 50465,
+      "size": 87650,
       "hash_checked": true,
       "provider_check": "reachable",
-      "provider_reason": "dizican.cc:alive-tr",
+      "provider_reason": "dizican.cc:alive",
       "fallback_used": false,
       "attempts": null
     },
@@ -1725,8 +1519,8 @@
       "status": "healthy",
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Dizifon.cs3",
-      "version": 7,
-      "size": 43469,
+      "version": 9,
+      "size": 85517,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "www.dizifon.cc:alive",
@@ -1751,8 +1545,8 @@
       "internal_name": "dizigom",
       "name": "DiziGom",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/mrc/DiziGom.cs3",
+      "repository": "lepotane/MRC-builds",
+      "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/DiziGom.cs3",
       "version": 19,
       "size": 46357,
       "hash_checked": true,
@@ -1769,8 +1563,8 @@
           "provider_reason": "dynamic-domain-missing"
         },
         {
-          "repository": "Nikkoshoptr/PamukVip",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/mrc/DiziGom.cs3",
+          "repository": "lepotane/MRC-builds",
+          "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/DiziGom.cs3",
           "version": 19,
           "result": "ok",
           "provider_check": "reachable",
@@ -1796,11 +1590,11 @@
       "internal_name": "dizikorea",
       "name": "DiziKorea",
       "status": "healthy",
-      "repository": "feroxx/Kekik-cloudstream",
-      "url": "https://raw.githubusercontent.com/feroxx/Kekik-cloudstream/builds/DiziKorea.cs3",
+      "repository": "MrKonce/ozel-cs-repom",
+      "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/FeroxxKekik_DiziKorea_v41.cs3",
       "version": 41,
       "size": 23562,
-      "hash_checked": true,
+      "hash_checked": false,
       "provider_check": "reachable",
       "provider_reason": "dizikorea3.com:alive",
       "fallback_used": false,
@@ -1813,7 +1607,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Dizikorea3.cs3",
       "version": 8,
-      "size": 41424,
+      "size": 79218,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "dizikorea3.com:alive",
@@ -1840,8 +1634,8 @@
       "status": "healthy",
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/DiziKutusu.cs3",
-      "version": 1,
-      "size": 38811,
+      "version": 2,
+      "size": 77099,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "dizikutusu.com:alive",
@@ -1854,8 +1648,8 @@
       "status": "healthy",
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Dizilab.cs3",
-      "version": 6,
-      "size": 31326,
+      "version": 7,
+      "size": 69479,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "dizilab.cc:alive-tr",
@@ -1886,7 +1680,7 @@
       "size": 150199,
       "hash_checked": true,
       "provider_check": "reachable",
-      "provider_reason": "dizilla.now:alive-tr",
+      "provider_reason": "dizilla.la:alive-tr",
       "fallback_used": false,
       "attempts": null
     },
@@ -1942,24 +1736,10 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Dizimanya.cs3",
       "version": 3,
-      "size": 41907,
+      "size": 79819,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "dizimanya.com:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "dizimodu",
-      "name": "DiziModu",
-      "status": "healthy",
-      "repository": "F0Rextasy/bigbullapp-cs",
-      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/DiziModu.cs3",
-      "version": 1,
-      "size": 35890,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "dizimodu.com:alive",
       "fallback_used": false,
       "attempts": null
     },
@@ -1985,20 +1765,20 @@
           "provider_reason": "www.dizidad.com:unreachable"
         },
         {
-          "repository": "feroxx/Kekik-cloudstream",
-          "url": "https://raw.githubusercontent.com/feroxx/Kekik-cloudstream/builds/DiziMom.cs3",
+          "repository": "MrKonce/ozel-cs-repom",
+          "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/FeroxxKekik_DiziMom_v64.cs3",
           "version": 64,
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "www.dizidad.com:unreachable"
         },
         {
-          "repository": "Nikkoshoptr/Pamuktv",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/DiziMom.cs3",
-          "version": 63,
+          "repository": "feroxx/Kekik-cloudstream",
+          "url": "https://raw.githubusercontent.com/feroxx/Kekik-cloudstream/builds/DiziMom.cs3",
+          "version": 64,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.dizimom.cafe:unreachable"
+          "provider_reason": "www.dizidad.com:unreachable"
         },
         {
           "repository": "aytzey/cs-kraptor",
@@ -2162,11 +1942,53 @@
       ]
     },
     {
+      "internal_name": "dizipaloriginal_feroxxkekik",
+      "name": "DiziPal (Orijinal) [Feroxx Kekik]",
+      "status": "healthy",
+      "repository": "MrKonce/ozel-cs-repom",
+      "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/FeroxxKekik_DiziPalOriginal_v115.cs3",
+      "version": 115,
+      "size": 32227,
+      "hash_checked": false,
+      "provider_check": "reachable",
+      "provider_reason": "dizipal2149.com:alive",
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "dizipaloriginal_turksinema",
+      "name": "DiziPal (Orijinal) [TurkSinema]",
+      "status": "healthy",
+      "repository": "MrKonce/ozel-cs-repom",
+      "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/TurkSinema_DiziPalOriginal_v10.cs3",
+      "version": 10,
+      "size": 236781,
+      "hash_checked": false,
+      "provider_check": "reachable",
+      "provider_reason": "ddizipal.com:alive",
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "dizipal_feroxxkekik",
+      "name": "DiziPal [Feroxx Kekik]",
+      "status": "healthy",
+      "repository": "MrKonce/ozel-cs-repom",
+      "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/FeroxxKekik_DiziPal_v122.cs3",
+      "version": 122,
+      "size": 38327,
+      "hash_checked": false,
+      "provider_check": "reachable",
+      "provider_reason": "dizipal1595.com:alive-tr",
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
       "internal_name": "dizipal2",
       "name": "DiziPal2",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/mrc/DiziPal2.cs3",
+      "repository": "lepotane/MRC-builds",
+      "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/DiziPal2.cs3",
       "version": 8,
       "size": 38776,
       "hash_checked": true,
@@ -2195,8 +2017,8 @@
       "status": "healthy",
       "repository": "neoser1984/neowatch",
       "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/DiziPalGuncel.cs3",
-      "version": 6,
-      "size": 48930,
+      "version": 8,
+      "size": 49767,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "dizipal1595.com:alive-tr",
@@ -2207,8 +2029,8 @@
       "internal_name": "dizipalhub",
       "name": "DiziPalHub",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/turk/DiziPalHub.cs3",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/DiziPalHub.cs3?v=c9bc8c46b45f",
       "version": 27,
       "size": 234530,
       "hash_checked": true,
@@ -2277,23 +2099,15 @@
       "internal_name": "dizirella",
       "name": "Dizirella",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/Dizirella.cs3",
-      "version": 7,
-      "size": 31334,
+      "repository": "F0Rextasy/bigbullapp-cs",
+      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Dizirella.cs3",
+      "version": 6,
+      "size": 79089,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "dizirella.one:alive-tr",
       "fallback_used": true,
       "attempts": [
-        {
-          "repository": "Nikkoshoptr/PamukVip",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/turk/DiziRella.cs3",
-          "version": 11,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "dynamic-domain-missing"
-        },
         {
           "repository": "Wiojelt/TurkSinema",
           "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/DiziRella.cs3?v=986928647db7",
@@ -2313,6 +2127,14 @@
         {
           "repository": "arcilingir/TurkSinema",
           "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/DiziRella.cs3?v=986928647db7",
+          "version": 11,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "dynamic-domain-missing"
+        },
+        {
+          "repository": "MrKonce/ozel-cs-repom",
+          "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/TurkSinema_DiziRella_v11.cs3",
           "version": 11,
           "result": "provider-unverified",
           "provider_check": "unverified",
@@ -2343,9 +2165,9 @@
           "provider_reason": "dynamic-domain-missing"
         },
         {
-          "repository": "Nikkoshoptr/PamukVip",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/Dizirella.cs3",
-          "version": 7,
+          "repository": "F0Rextasy/bigbullapp-cs",
+          "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Dizirella.cs3",
+          "version": 6,
           "result": "ok",
           "provider_check": "reachable",
           "provider_reason": "dizirella.one:alive-tr"
@@ -2376,7 +2198,7 @@
       "size": 99425,
       "hash_checked": true,
       "provider_check": "reachable",
-      "provider_reason": "dizisol.com:alive-tr",
+      "provider_reason": "dizisol.com:alive",
       "fallback_used": false,
       "attempts": null
     },
@@ -2386,8 +2208,8 @@
       "status": "healthy",
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Dizist.cs3",
-      "version": 7,
-      "size": 44295,
+      "version": 9,
+      "size": 82046,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "dizist.live:alive-tr",
@@ -2404,7 +2226,7 @@
         {
           "repository": "F0Rextasy/bigbullapp-cs",
           "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Dizist.cs3",
-          "version": 7,
+          "version": 9,
           "result": "ok",
           "provider_check": "reachable",
           "provider_reason": "dizist.live:alive-tr"
@@ -2415,8 +2237,8 @@
       "internal_name": "diziwatch",
       "name": "DiziWatch",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/turk/DiziWatch.cs3",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/DiziWatch.cs3?v=22a24ab5f0d8",
       "version": 12,
       "size": 110804,
       "hash_checked": true,
@@ -2445,14 +2267,6 @@
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "www.diziyo.so:dns-error"
-        },
-        {
-          "repository": "Nikkoshoptr/Pamuktv",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/DiziYo.cs3",
-          "version": 74,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.diziyo.nl:dns-error"
         },
         {
           "repository": "adilem/cs-kraptor",
@@ -2534,8 +2348,8 @@
       "internal_name": "domatestv",
       "name": "DomatesTV",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/spor/DomatesTV.cs3",
+      "repository": "Wiojelt/WioSpor",
+      "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/DomatesTV.cs3?v=a458f3331ff4",
       "version": 6,
       "size": 171289,
       "hash_checked": true,
@@ -2550,14 +2364,6 @@
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "domatestv.com:dns-error"
-        },
-        {
-          "repository": "Nikkoshoptr/PamukVip",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/spor/DomatesTV.cs3",
-          "version": 6,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "no-urls"
         },
         {
           "repository": "Wiojelt/WioSpor",
@@ -2624,16 +2430,16 @@
       "attempts": null
     },
     {
-      "internal_name": "donkeyaltyazi",
-      "name": "DonkeyAltyazi",
+      "internal_name": "dramabox",
+      "name": "DramaBox",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/DonkeyAltyazi.cs3",
-      "version": 4,
-      "size": 36196,
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/DramaBox.cs3",
+      "version": 22,
+      "size": 118007,
       "hash_checked": true,
-      "provider_check": "unverified",
-      "provider_reason": "no-urls",
+      "provider_check": "reachable",
+      "provider_reason": "www.dramabox.com:alive-tr",
       "fallback_used": false,
       "attempts": null
     },
@@ -2655,41 +2461,13 @@
       "internal_name": "dramavakti",
       "name": "DramaVakti",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/DramaVakti.cs3",
-      "version": 2,
-      "size": 24238,
+      "repository": "Wiojelt/WioDrama",
+      "url": "https://raw.githubusercontent.com/Wiojelt/WioDrama/builds/DramaVakti.cs3?v=d0b953cd1958",
+      "version": 1,
+      "size": 107653,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "dramavakti.com:alive",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "dublajfilmizle",
-      "name": "DublajFilmIzle",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/DublajFilmIzle.cs3",
-      "version": 2,
-      "size": 33678,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "dublajfilmizle.com:alive",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "dunyaspor",
-      "name": "DunyaSpor",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/DunyaSpor.cs3",
-      "version": 2,
-      "size": 30831,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "tflix.su:alive",
       "fallback_used": false,
       "attempts": null
     },
@@ -2739,10 +2517,10 @@
       "internal_name": "filmdozu",
       "name": "FilmDozu",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/FilmDozu.cs3",
+      "repository": "Bymesut1/Kartaloglu-cs",
+      "url": "https://raw.githubusercontent.com/Bymesut1/Kartaloglu-cs/builds/FilmDozu.cs3",
       "version": 5,
-      "size": 23586,
+      "size": 33649,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "filmdozu.com:alive",
@@ -2769,8 +2547,8 @@
       "status": "healthy",
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Filmgecesi.cs3",
-      "version": 1,
-      "size": 39821,
+      "version": 3,
+      "size": 77735,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "www.filmgecesi.vip:alive",
@@ -2848,34 +2626,6 @@
       "attempts": null
     },
     {
-      "internal_name": "filmizleking",
-      "name": "FilmIzleKing",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/FilmIzleKing.cs3",
-      "version": 2,
-      "size": 33917,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "filmizleking.com:alive",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "filmizletv",
-      "name": "FilmizleTv",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/FilmizleTv.cs3",
-      "version": 1,
-      "size": 43661,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "filmizletv.to:alive",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
       "internal_name": "filmizyon",
       "name": "FilmIzyon",
       "status": "healthy",
@@ -2888,14 +2638,6 @@
       "provider_reason": "www.filmizyon.net:alive",
       "fallback_used": true,
       "attempts": [
-        {
-          "repository": "Nikkoshoptr/PamukVip",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/mrc/FilmIzyon.cs3",
-          "version": 9,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "no-urls"
-        },
         {
           "repository": "lepotane/MRC-builds",
           "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/FilmIzyon.cs3",
@@ -3034,16 +2776,16 @@
           "provider_reason": "filmmakinesi.to:http-451"
         },
         {
-          "repository": "feroxx/Kekik-cloudstream",
-          "url": "https://raw.githubusercontent.com/feroxx/Kekik-cloudstream/builds/FilmMakinesi.cs3",
+          "repository": "MrKonce/ozel-cs-repom",
+          "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/FeroxxKekik_FilmMakinesi_v59.cs3",
           "version": 59,
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "filmmakinesi.to:http-451"
         },
         {
-          "repository": "Nikkoshoptr/Pamuktv",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/FilmMakinesi.cs3",
+          "repository": "feroxx/Kekik-cloudstream",
+          "url": "https://raw.githubusercontent.com/feroxx/Kekik-cloudstream/builds/FilmMakinesi.cs3",
           "version": 59,
           "result": "provider-unverified",
           "provider_check": "unverified",
@@ -3178,14 +2920,6 @@
           "provider_reason": "filmmakinesi.to:http-451"
         },
         {
-          "repository": "Nikkoshoptr/PamukVip",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/FilmMakinesi.cs3",
-          "version": 10,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "filmmakinesi.to:http-451"
-        },
-        {
           "repository": "Wiojelt/TurkSinema",
           "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/FilmMakinesi.cs3?v=049e87eedac4",
           "version": 10,
@@ -3206,20 +2940,6 @@
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "filmakinesi.cafe:alive",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "filmmirasä±m",
-      "name": "FilmmirasÄ±m",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/Pamuktv",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/Filmmirasim.cs3",
-      "version": 5,
-      "size": 15162,
-      "hash_checked": false,
-      "provider_check": "reachable",
-      "provider_reason": "filmmirasim.ktb.gov.tr:alive",
       "fallback_used": false,
       "attempts": null
     },
@@ -3378,20 +3098,6 @@
       "attempts": null
     },
     {
-      "internal_name": "fullhdfilmizle",
-      "name": "FullHDFilmizle",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/FullHDFilmizle.cs3",
-      "version": 5,
-      "size": 32636,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "fullhdfilmizle.now:alive",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
       "internal_name": "fullhdizle",
       "name": "FullHDIzle",
       "status": "healthy",
@@ -3436,14 +3142,6 @@
           "repository": "bilhan50/BilhanTR",
           "url": "https://raw.githubusercontent.com/bilhan50/BilhanTR/builds/GolgeTV.cs3",
           "version": 7,
-          "result": "status-down",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
-          "repository": "Nikkoshoptr/Pamuktv",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/GolgeTV.cs3",
-          "version": 6,
           "result": "status-down",
           "provider_check": "not-checked",
           "provider_reason": null
@@ -3570,16 +3268,16 @@
           "provider_reason": "www.hdfilmcehennemi.nl:http-451"
         },
         {
-          "repository": "Nikkoshoptr/Pamuktv",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/HDFilmCehennemi.cs3",
-          "version": 63,
+          "repository": "dr-octagon/BronzeCloud",
+          "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/HDFilmCehennemi_v58.cs3",
+          "version": 58,
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "www.hdfilmcehennemi.nl:http-451"
         },
         {
-          "repository": "dr-octagon/BronzeCloud",
-          "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/HDFilmCehennemi_v58.cs3",
+          "repository": "MrKonce/ozel-cs-repom",
+          "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/FeroxxKekik_HDFilmCehennemi_v58.cs3",
           "version": 58,
           "result": "provider-unverified",
           "provider_check": "unverified",
@@ -3589,14 +3287,6 @@
           "repository": "feroxx/Kekik-cloudstream",
           "url": "https://raw.githubusercontent.com/feroxx/Kekik-cloudstream/builds/HDFilmCehennemi.cs3",
           "version": 58,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.hdfilmcehennemi.nl:http-451"
-        },
-        {
-          "repository": "Nikkoshoptr/PamukVip",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/HDFilmCehennemi.cs3",
-          "version": 54,
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "www.hdfilmcehennemi.nl:http-451"
@@ -3738,17 +3428,17 @@
           "provider_reason": "www.hdfilmcehennemi.la:http-451"
         },
         {
-          "repository": "bilhan50/BilhanTR",
-          "url": "https://raw.githubusercontent.com/bilhan50/BilhanTR/builds/HDFilmCehennemi.cs3",
+          "repository": "neoser1984/neowatch",
+          "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/HDFilmCehennemi.cs3",
           "version": 21,
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "www.hdfilmcehennemi.nl:http-451"
         },
         {
-          "repository": "neoser1984/neowatch",
-          "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/HDFilmCehennemi.cs3",
-          "version": 20,
+          "repository": "bilhan50/BilhanTR",
+          "url": "https://raw.githubusercontent.com/bilhan50/BilhanTR/builds/HDFilmCehennemi.cs3",
+          "version": 21,
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "www.hdfilmcehennemi.nl:http-451"
@@ -3836,7 +3526,7 @@
         {
           "repository": "faruktunc/frukon",
           "url": "https://raw.githubusercontent.com/faruktunc/frukon/builds/HDFilmCehennemi.cs3",
-          "version": 3,
+          "version": 4,
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "www.hdfilmcehennemi.nl:http-451"
@@ -3888,20 +3578,6 @@
       "attempts": null
     },
     {
-      "internal_name": "hdfilmcehennemiyedek",
-      "name": "HDFilmCehennemiYedek",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/HDFilmCehennemiYedek.cs3",
-      "version": 8,
-      "size": 42244,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "www.hdfilmcehennemi.land:alive",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
       "internal_name": "hdfilmdelisi",
       "name": "HDFilmDelisi",
       "status": "healthy",
@@ -3919,10 +3595,10 @@
       "internal_name": "hdfilmdiziizle",
       "name": "HDFilmDiziIzle",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/HDFilmDiziIzle.cs3",
-      "version": 9,
-      "size": 78263,
+      "repository": "F0Rextasy/bigbullapp-cs",
+      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/HDFilmDiziIzle.cs3",
+      "version": 7,
+      "size": 91812,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "www.hdfilmdiziizle.com:alive-tr",
@@ -3950,7 +3626,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/HDFilmizleBest.cs3",
       "version": 6,
-      "size": 50171,
+      "size": 87276,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "www.hdfilmizle.best:alive",
@@ -3961,8 +3637,8 @@
       "internal_name": "hdfilmizleink",
       "name": "HDFilmIzleInk",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/turk/HDFilmIzleInk.cs3",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/HDFilmIzleInk.cs3?v=90520e065def",
       "version": 11,
       "size": 131377,
       "hash_checked": true,
@@ -3975,8 +3651,8 @@
       "internal_name": "hdfilmizlevip",
       "name": "HDFilmIzleVip",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/turk/HDFilmIzleVip.cs3",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/HDFilmIzleVip.cs3?v=9f2a0e4a4ca1",
       "version": 11,
       "size": 131394,
       "hash_checked": true,
@@ -4185,20 +3861,6 @@
       "attempts": null
     },
     {
-      "internal_name": "huhutr",
-      "name": "HUHUTR",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/HUHUTR.cs3",
-      "version": 7,
-      "size": 22340,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "huhu.to:alive",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
       "internal_name": "hurriyettv",
       "name": "HurriyetTV",
       "status": "healthy",
@@ -4261,8 +3923,8 @@
       "internal_name": "inatboxbc",
       "name": "InatBoxBC",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/mrc/InatBoxBC.cs3",
+      "repository": "lepotane/MRC-builds",
+      "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/InatBoxBC.cs3",
       "version": 5,
       "size": 54180,
       "hash_checked": true,
@@ -4359,27 +4021,13 @@
       ]
     },
     {
-      "internal_name": "iptvsevenler",
-      "name": "iptvSevenler",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/Pamuktv",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/iptvSevenler.cs3",
-      "version": 3,
-      "size": 18683,
-      "hash_checked": false,
-      "provider_check": "reachable",
-      "provider_reason": "raw.githubusercontent.com:alive",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
       "internal_name": "izle7",
       "name": "Izle7",
       "status": "healthy",
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Izle7.cs3",
-      "version": 1,
-      "size": 33087,
+      "version": 2,
+      "size": 73799,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "www.izle7.com:alive",
@@ -4387,28 +4035,14 @@
       "attempts": null
     },
     {
-      "internal_name": "izle720",
-      "name": "Izle720",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/Izle720.cs3",
-      "version": 7,
-      "size": 35871,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "720izle.net:alive",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
       "internal_name": "izleai",
       "name": "IzleAI",
       "status": "healthy",
-      "repository": "baristomruk-max/BTVault",
-      "url": "https://raw.githubusercontent.com/baristomruk-max/BTVault/builds/IzleAI.cs3",
+      "repository": "MrKonce/ozel-cs-repom",
+      "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/BTVault_IzleAI_v6.cs3",
       "version": 6,
       "size": 29488,
-      "hash_checked": true,
+      "hash_checked": false,
       "provider_check": "reachable",
       "provider_reason": "selcukflix.app:alive-tr",
       "fallback_used": false,
@@ -4421,7 +4055,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/IzleFilm.cs3",
       "version": 3,
-      "size": 34248,
+      "size": 72196,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "izlefilm.net:alive",
@@ -4446,8 +4080,8 @@
       "internal_name": "jestyayin",
       "name": "JestYayin",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/spor/JestYayin.cs3",
+      "repository": "Wiojelt/WioSpor",
+      "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/JestYayin.cs3?v=b42b08a9105f",
       "version": 3,
       "size": 235405,
       "hash_checked": true,
@@ -4460,15 +4094,328 @@
       "internal_name": "jetfilmizle",
       "name": "JetFilmizle",
       "status": "healthy",
-      "repository": "aytzey/cs-kraptor",
-      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/JetFilmizle.cs3",
-      "version": 63,
-      "size": 64337,
+      "repository": "hrtestingx/hrcsrepofull",
+      "url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepofull/builds/JetFilmizle.cs3",
+      "version": 60,
+      "size": 61952,
       "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "jetfilmizle.app:alive",
-      "fallback_used": false,
-      "attempts": null
+      "provider_check": "unverified",
+      "provider_reason": "dynamic-domain-missing",
+      "fallback_used": true,
+      "attempts": [
+        {
+          "repository": "aytzey/cs-kraptor",
+          "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/JetFilmizle.cs3",
+          "version": 63,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "jetfilmizle.app:http-404"
+        },
+        {
+          "repository": "adilem/cs-kraptor",
+          "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/JetFilmizle.cs3",
+          "version": 62,
+          "result": "http-404",
+          "provider_check": "not-checked",
+          "provider_reason": null
+        },
+        {
+          "repository": "qera18/cs-kraptor",
+          "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/JetFilmizle.cs3",
+          "version": 62,
+          "result": "http-404",
+          "provider_check": "not-checked",
+          "provider_reason": null
+        },
+        {
+          "repository": "hrtestingx/hrcsrepofull",
+          "url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepofull/builds/JetFilmizle.cs3",
+          "version": 60,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "dynamic-domain-missing"
+        },
+        {
+          "repository": "dr-octagon/BronzeCloud",
+          "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/JetFilmizle_v51.cs3",
+          "version": 51,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "jetfilmizle.app:http-404"
+        },
+        {
+          "repository": "MrKonce/ozel-cs-repom",
+          "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/FeroxxKekik_JetFilmizle_v48.cs3",
+          "version": 48,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "jetfilmizle.app:http-404"
+        },
+        {
+          "repository": "feroxx/Kekik-cloudstream",
+          "url": "https://raw.githubusercontent.com/feroxx/Kekik-cloudstream/builds/JetFilmizle.cs3",
+          "version": 48,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "jetfilmizle.app:http-404"
+        },
+        {
+          "repository": "qera18/apple",
+          "url": "https://raw.githubusercontent.com/csprofesor/nik-cloudstream/builds/JetFilmizle.cs3",
+          "version": 47,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "jetfilmizle.now:http-404"
+        },
+        {
+          "repository": "liberta09/Kekik-cloudstream",
+          "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/JetFilmizle.cs3",
+          "version": 47,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "jetfilmizle.now:http-404"
+        },
+        {
+          "repository": "21nek/nektv",
+          "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/JetFilmizle.cs3",
+          "version": 41,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "jetfilmizle.website:http-404"
+        },
+        {
+          "repository": "burak-ayd/cs-Kekik-old",
+          "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/JetFilmizle.cs3",
+          "version": 41,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "jetfilmizle.website:http-404"
+        },
+        {
+          "repository": "Ripplay/cloudstream-repo",
+          "url": "https://raw.githubusercontent.com/Ripplay/cloudstream-repo/builds/JetFilmizle.cs3",
+          "version": 33,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "jetfilmizle.now:http-404"
+        },
+        {
+          "repository": "Sertel392/gencler",
+          "url": "https://raw.githubusercontent.com/UmayTrade/MyTV/builds/JetFilmizle.cs3",
+          "version": 32,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "jetfilmizle.now:http-404"
+        },
+        {
+          "repository": "Bymesut1/Eklenti",
+          "url": "https://raw.githubusercontent.com/UmayTrade/MyTV/builds/JetFilmizle.cs3",
+          "version": 32,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "jetfilmizle.now:http-404"
+        },
+        {
+          "repository": "adilem/MyTV",
+          "url": "https://raw.githubusercontent.com/UmayTrade/MyTV/builds/JetFilmizle.cs3",
+          "version": 32,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "jetfilmizle.now:http-404"
+        },
+        {
+          "repository": "arcilingir/Dizi_Film_2",
+          "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film_2/builds/JetFilmizle.cs3",
+          "version": 32,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "jetfilmizle.website:http-404"
+        },
+        {
+          "repository": "arcilingir/nik-cloudstream",
+          "url": "https://raw.githubusercontent.com/arcilingir/nik-cloudstream/builds/JetFilmizle.cs3",
+          "version": 32,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "jetfilmizle.website:http-404"
+        },
+        {
+          "repository": "safarxe/CloudStream",
+          "url": "https://raw.githubusercontent.com/safarxe/CloudStream/builds/JetFilmizle.cs3",
+          "version": 32,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "jetfilmizle.website:http-404"
+        },
+        {
+          "repository": "arcilingir/Dizi_Film",
+          "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film/builds/JetFilmizle.cs3",
+          "version": 31,
+          "result": "http-404",
+          "provider_check": "not-checked",
+          "provider_reason": null
+        },
+        {
+          "repository": "Bymesut1/Dizi_Film",
+          "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film/builds/JetFilmizle.cs3",
+          "version": 31,
+          "result": "http-404",
+          "provider_check": "not-checked",
+          "provider_reason": null
+        },
+        {
+          "repository": "Kayracs3/Kayra",
+          "url": "https://raw.githubusercontent.com/Kayracs3/Kayra/builds/JetFilmizle.cs3",
+          "version": 26,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "jetfilmizle.app:http-404"
+        },
+        {
+          "repository": "neoser1984/neowatch",
+          "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/JetFilmizle.cs3",
+          "version": 23,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "jetfilmizle.app:http-404"
+        },
+        {
+          "repository": "bilhan50/BilhanTR",
+          "url": "https://raw.githubusercontent.com/bilhan50/BilhanTR/builds/JetFilmizle.cs3",
+          "version": 23,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "jetfilmizle.now:http-404"
+        },
+        {
+          "repository": "Bymesut1/Kartaloglu-cs",
+          "url": "https://raw.githubusercontent.com/Bymesut1/Kartaloglu-cs/builds/JetFilmizle.cs3",
+          "version": 21,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "jetfilmizle.now:http-404"
+        },
+        {
+          "repository": "baristomruk-max/BTVault",
+          "url": "https://raw.githubusercontent.com/baristomruk-max/BTVault/builds/JetFilmizle.cs3",
+          "version": 21,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "jetfilmizle.app:http-404"
+        },
+        {
+          "repository": "Emre-Kahveci/CloudStreamHub",
+          "url": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/JetFilmIzle.cs3",
+          "version": 20,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "jetfilmizle.app:http-404"
+        },
+        {
+          "repository": "arcilingir/CloudStreamHub",
+          "url": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/JetFilmIzle.cs3",
+          "version": 20,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "jetfilmizle.app:http-404"
+        },
+        {
+          "repository": "Wiojelt/TurkSinema",
+          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/JetFilmizle.cs3?v=223227635bf0",
+          "version": 9,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "jetfilmizle.app:http-404"
+        },
+        {
+          "repository": "pisovo-5031/TurkSinema",
+          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/JetFilmizle.cs3?v=223227635bf0",
+          "version": 9,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "jetfilmizle.app:http-404"
+        },
+        {
+          "repository": "arcilingir/TurkSinema",
+          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/JetFilmizle.cs3?v=223227635bf0",
+          "version": 9,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "jetfilmizle.app:http-404"
+        },
+        {
+          "repository": "Wiojelt/WioSinema",
+          "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/main/JetFilmizle.cs3?v=223227635bf0",
+          "version": 9,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "jetfilmizle.app:http-404"
+        },
+        {
+          "repository": "F0Rextasy/bigbullapp-cs",
+          "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/JetFilmizle.cs3",
+          "version": 8,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "jetfilmizle.app:http-404"
+        },
+        {
+          "repository": "pisovo-5031/WioSinema",
+          "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/sinema/JetFilmizle.cs3?v=89c2ca6b9ba7",
+          "version": 8,
+          "result": "hash-mismatch",
+          "provider_check": "not-checked",
+          "provider_reason": null
+        },
+        {
+          "repository": "lepotane/MRC-builds",
+          "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/JetFilmizle.cs3",
+          "version": 4,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "jetfilmizle.app:http-404"
+        },
+        {
+          "repository": "Jung1330/StreamTest",
+          "url": "https://raw.githubusercontent.com/Jung1330/StreamTest/builds/Jetfilmizle.cs3",
+          "version": 4,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "jetfilmizle.app:http-404"
+        },
+        {
+          "repository": "miskin1702/aslan-pub",
+          "url": "https://raw.githubusercontent.com/miskin1702/aslan-pub/main/JetFilmizle.cs3",
+          "version": 2,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "jetfilmizle.app:http-404"
+        },
+        {
+          "repository": "miskin1702/aslan-dist",
+          "url": "https://raw.githubusercontent.com/miskin1702/aslan-dist/builds/JetFilmizle.cs3",
+          "version": 2,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "jetfilmizle.app:http-404"
+        },
+        {
+          "repository": "JustSadY/Cloudstream-Lykia",
+          "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/JetFilmizle.cs3",
+          "version": 1,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "jetfilmizle.app:http-404"
+        },
+        {
+          "repository": "blackhope01/cloudstream-plugins",
+          "url": "https://raw.githubusercontent.com/blackhope01/cloudstream-plugins/builds/JetFilmizle.cs3",
+          "version": 1,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "jetfilmizle.now:http-404"
+        }
+      ]
     },
     {
       "internal_name": "kalite18",
@@ -4505,7 +4452,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/KanalD.cs3",
       "version": 5,
-      "size": 33506,
+      "size": 71696,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "www.kanald.com.tr:alive",
@@ -4575,8 +4522,8 @@
       "internal_name": "kooltv",
       "name": "Kool TV",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/spor/KoolTV.cs3",
+      "repository": "Wiojelt/WioSpor",
+      "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/KoolTV.cs3?v=bf354d6dcbf4",
       "version": 1,
       "size": 26410,
       "hash_checked": true,
@@ -4595,7 +4542,7 @@
       "size": 20624,
       "hash_checked": true,
       "provider_check": "reachable",
-      "provider_reason": "koreanturk.tv:alive-tr",
+      "provider_reason": "koreanturk.tv:alive",
       "fallback_used": false,
       "attempts": null
     },
@@ -4603,8 +4550,8 @@
       "internal_name": "kralsporhd",
       "name": "KralSporHD",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/spor/KralSporHD.cs3",
+      "repository": "Wiojelt/WioSpor",
+      "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/KralSporHD.cs3?v=62c6cd0bd055",
       "version": 5,
       "size": 176010,
       "hash_checked": true,
@@ -4659,8 +4606,8 @@
       "internal_name": "leotv",
       "name": "LeoTV",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/spor/LeoTV.cs3",
+      "repository": "Wiojelt/WioSpor",
+      "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/LeoTV.cs3?v=dbce2939ae71",
       "version": 2,
       "size": 157849,
       "hash_checked": true,
@@ -4670,25 +4617,11 @@
       "attempts": null
     },
     {
-      "internal_name": "liderfilm",
-      "name": "LiderFilm",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/LiderFilm.cs3",
-      "version": 6,
-      "size": 47954,
-      "hash_checked": true,
-      "provider_check": "unverified",
-      "provider_reason": "no-urls",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
       "internal_name": "liderfilmizle",
       "name": "LiderFilmIzle",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/turk/LiderFilmIzle.cs3",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/LiderFilmIzle.cs3?v=e4760e93c9c2",
       "version": 10,
       "size": 139271,
       "hash_checked": true,
@@ -4729,8 +4662,8 @@
       "internal_name": "lovefilm",
       "name": "LoveFilm",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/mrc/LoveFilm.cs3",
+      "repository": "lepotane/MRC-builds",
+      "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/LoveFilm.cs3",
       "version": 7,
       "size": 52350,
       "hash_checked": true,
@@ -4763,7 +4696,7 @@
       "size": 219039,
       "hash_checked": true,
       "provider_check": "reachable",
-      "provider_reason": "www.canlimaclar615.sbs:alive",
+      "provider_reason": "www.mackeyfi605.sbs:alive",
       "fallback_used": false,
       "attempts": null
     },
@@ -4771,8 +4704,8 @@
       "internal_name": "mahsunsports",
       "name": "MahsunSports",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/spor/MahsunSports.cs3",
+      "repository": "Wiojelt/WioSpor",
+      "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/MahsunSports.cs3?v=25e1f1d1f863",
       "version": 9,
       "size": 178888,
       "hash_checked": true,
@@ -4858,7 +4791,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/MinikaCocuk.cs3",
       "version": 8,
-      "size": 31557,
+      "size": 69645,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "www.minikacocuk.com.tr:alive",
@@ -4872,7 +4805,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/MinikaGO.cs3",
       "version": 7,
-      "size": 31251,
+      "size": 69426,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "www.minikago.com.tr:alive",
@@ -4897,8 +4830,8 @@
       "internal_name": "mrc-live",
       "name": "MRC-Live",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/mrc/MRC-Live.cs3",
+      "repository": "lepotane/MRC-builds",
+      "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/MRC-Live.cs3",
       "version": 9,
       "size": 71551,
       "hash_checked": true,
@@ -4925,8 +4858,8 @@
       "internal_name": "mrc-plus",
       "name": "MRC-Plus",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/mrc/MRC-Plus.cs3",
+      "repository": "lepotane/MRC-builds",
+      "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/MRC-Plus.cs3",
       "version": 7,
       "size": 217604,
       "hash_checked": true,
@@ -4981,27 +4914,13 @@
       "internal_name": "myway tv - latte",
       "name": "myway TV - Latte",
       "status": "healthy",
-      "repository": "Nikkoshoptr/Pamuktv",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/myway_TV_-_Latte.cs3",
+      "repository": "GitLatte/Sinetech",
+      "url": "https://raw.githubusercontent.com/GitLatte/Sinetech/builds/myway TV - Latte.cs3",
       "version": 3,
       "size": 19932,
       "hash_checked": false,
       "provider_check": "reachable",
       "provider_reason": "raw.githubusercontent.com:alive",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "mã¼zik tv ve radyo - latte",
-      "name": "MÃ¼zik TV ve Radyo - Latte",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/Pamuktv",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/Muzik_TV_ve_Radyo_-_Latte.cs3",
-      "version": 3,
-      "size": 23377,
-      "hash_checked": false,
-      "provider_check": "reachable",
-      "provider_reason": "avatars.githubusercontent.com:alive",
       "fallback_used": false,
       "attempts": null
     },
@@ -5095,7 +5014,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/NetFilmizle.cs3",
       "version": 5,
-      "size": 32876,
+      "size": 70906,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "netfilmizle.com:alive",
@@ -5134,8 +5053,8 @@
       "internal_name": "netvgold",
       "name": "NetVGold",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/spor/NetVGold.cs3",
+      "repository": "Wiojelt/WioSpor",
+      "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/NetVGold.cs3?v=d1bf7dcba3da",
       "version": 3,
       "size": 230994,
       "hash_checked": true,
@@ -5162,11 +5081,11 @@
       "internal_name": "newtvlive",
       "name": "NewTVLive",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/spor/NewTVLive.cs3",
+      "repository": "MrKonce/ozel-cs-repom",
+      "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/TurkSpor_NewTVLive_v4.cs3",
       "version": 4,
       "size": 180632,
-      "hash_checked": true,
+      "hash_checked": false,
       "provider_check": "reachable",
       "provider_reason": "tv.newtane.com:alive",
       "fallback_used": false,
@@ -5179,7 +5098,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/NowTV.cs3",
       "version": 1,
-      "size": 38250,
+      "size": 76383,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "www.nowtv.com.tr:alive",
@@ -5274,7 +5193,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/OnlineDizi.cs3",
       "version": 1,
-      "size": 34862,
+      "size": 72978,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "onlinedizi.sbs:alive",
@@ -5285,11 +5204,11 @@
       "internal_name": "openanime",
       "name": "OpenAnime",
       "status": "healthy",
-      "repository": "Nikkoshoptr/Pamuktv",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/OpenAnime.cs3",
-      "version": 28,
+      "repository": "hrtestingx/hrcsrepofull",
+      "url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepofull/builds/OpenAnime.cs3",
+      "version": 25,
       "size": 67615,
-      "hash_checked": false,
+      "hash_checked": true,
       "provider_check": "unverified",
       "provider_reason": "dynamic-domain-missing",
       "fallback_used": true,
@@ -5301,14 +5220,6 @@
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "openani.me:http-403"
-        },
-        {
-          "repository": "Nikkoshoptr/Pamuktv",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/OpenAnime.cs3",
-          "version": 28,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "dynamic-domain-missing"
         },
         {
           "repository": "adilem/cs-kraptor",
@@ -5333,14 +5244,6 @@
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "dynamic-domain-missing"
-        },
-        {
-          "repository": "Nikkoshoptr/PamukVip",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/mrc/OpenAnime.cs3",
-          "version": 14,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "openani.me:http-403"
         },
         {
           "repository": "lepotane/MRC-builds",
@@ -5388,11 +5291,11 @@
       "internal_name": "ownedsites",
       "name": "OwnedSites",
       "status": "healthy",
-      "repository": "Ripplay/cloudstream-repo",
-      "url": "https://raw.githubusercontent.com/Ripplay/cloudstream-repo/builds/OwnedSites.cs3",
+      "repository": "MrKonce/ozel-cs-repom",
+      "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/Ripplay_OwnedSites_v2.cs3",
       "version": 2,
       "size": 45209,
-      "hash_checked": true,
+      "hash_checked": false,
       "provider_check": "unverified",
       "provider_reason": "no-urls",
       "fallback_used": false,
@@ -5405,7 +5308,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/P720pizle.cs3",
       "version": 1,
-      "size": 46307,
+      "size": 84018,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "720pizle.my:alive-tr",
@@ -5413,39 +5316,11 @@
       "attempts": null
     },
     {
-      "internal_name": "parsspor2",
-      "name": "PARSSPOR2",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/PARSSPOR2.cs3",
-      "version": 4,
-      "size": 17081,
-      "hash_checked": true,
-      "provider_check": "unverified",
-      "provider_reason": "no-urls",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "parsspor3",
-      "name": "PARSSPOR3",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/PARSSPOR3.cs3",
-      "version": 4,
-      "size": 17262,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "www.betmarinotv1101.site:alive",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
       "internal_name": "patronhd",
       "name": "PatronHD",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/spor/PatronHD.cs3",
+      "repository": "Wiojelt/WioSpor",
+      "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/PatronHD.cs3?v=0a23118baf66",
       "version": 17,
       "size": 219019,
       "hash_checked": true,
@@ -5486,8 +5361,8 @@
       "internal_name": "powerboard dizi - latte",
       "name": "powerboard Dizi - Latte",
       "status": "healthy",
-      "repository": "Nikkoshoptr/Pamuktv",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/powerboard_Dizi_-_Latte.cs3",
+      "repository": "GitLatte/Sinetech",
+      "url": "https://raw.githubusercontent.com/GitLatte/Sinetech/builds/powerboard Dizi - Latte.cs3",
       "version": 6,
       "size": 34237,
       "hash_checked": false,
@@ -5500,8 +5375,8 @@
       "internal_name": "powerboard sinema - latte",
       "name": "powerboard Sinema - Latte",
       "status": "healthy",
-      "repository": "Nikkoshoptr/Pamuktv",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/powerboard_Sinema_-_Latte.cs3",
+      "repository": "GitLatte/Sinetech",
+      "url": "https://raw.githubusercontent.com/GitLatte/Sinetech/builds/powerboard Sinema - Latte.cs3",
       "version": 5,
       "size": 38795,
       "hash_checked": false,
@@ -5514,11 +5389,11 @@
       "internal_name": "powerdizi",
       "name": "powerDizi",
       "status": "healthy",
-      "repository": "Nikkoshoptr/Pamuktv",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/powerDizi.cs3",
+      "repository": "arcilingir/Dizi_Film_2",
+      "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film_2/builds/powerDizi.cs3",
       "version": 3,
-      "size": 18697,
-      "hash_checked": false,
+      "size": 20507,
+      "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "raw.githubusercontent.com:alive",
       "fallback_used": false,
@@ -5528,11 +5403,11 @@
       "internal_name": "powersinema",
       "name": "powerSinema",
       "status": "healthy",
-      "repository": "Nikkoshoptr/Pamuktv",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/powerSinema.cs3",
+      "repository": "arcilingir/Dizi_Film_2",
+      "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film_2/builds/powerSinema.cs3",
       "version": 3,
-      "size": 18690,
-      "hash_checked": false,
+      "size": 20489,
+      "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "raw.githubusercontent.com:alive",
       "fallback_used": false,
@@ -5559,24 +5434,10 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/PuhuTV.cs3",
       "version": 3,
-      "size": 42936,
+      "size": 80890,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "puhutv.com:alive",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "puunetv",
-      "name": "PuuNetV",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/PuuNetV.cs3",
-      "version": 7,
-      "size": 24849,
-      "hash_checked": true,
-      "provider_check": "unverified",
-      "provider_reason": "no-urls",
       "fallback_used": false,
       "attempts": null
     },
@@ -5598,11 +5459,11 @@
       "internal_name": "rectv",
       "name": "RecTV",
       "status": "healthy",
-      "repository": "feroxx/Kekik-cloudstream",
-      "url": "https://raw.githubusercontent.com/feroxx/Kekik-cloudstream/builds/RecTV.cs3",
+      "repository": "MrKonce/ozel-cs-repom",
+      "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/FeroxxKekik_RecTV_v118.cs3",
       "version": 118,
       "size": 31177,
-      "hash_checked": true,
+      "hash_checked": false,
       "provider_check": "reachable",
       "provider_reason": "a.psrectv80.xyz:alive",
       "fallback_used": false,
@@ -5612,8 +5473,8 @@
       "internal_name": "rectvbc",
       "name": "RecTVBC",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/mrc/RecTVBC.cs3",
+      "repository": "lepotane/MRC-builds",
+      "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/RecTVBC.cs3",
       "version": 6,
       "size": 44771,
       "hash_checked": true,
@@ -5637,40 +5498,18 @@
       "attempts": null
     },
     {
-      "internal_name": "rfilmizle",
-      "name": "RFilmizle",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/RFilmizle.cs3",
-      "version": 3,
-      "size": 41631,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "rfilmizle.com:alive",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
       "internal_name": "roketdizi",
       "name": "RoketDizi",
       "status": "healthy",
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/RoketDizi.cs3",
       "version": 1,
-      "size": 42377,
+      "size": 80322,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "roketdizi.life:alive-tr",
       "fallback_used": true,
       "attempts": [
-        {
-          "repository": "Nikkoshoptr/Pamuktv",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/RoketDizi.cs3",
-          "version": 15,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.roketdizi.live:unreachable"
-        },
         {
           "repository": "emrahonuraras/cloudstream-ozel-depo",
           "url": "https://raw.githubusercontent.com/nikyokki/nik-cloudstream/builds/RoketDizi.cs3",
@@ -5818,11 +5657,11 @@
       "internal_name": "selcuksports",
       "name": "SelcukSports",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/spor/SelcukSports.cs3",
+      "repository": "MrKonce/ozel-cs-repom",
+      "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/TurkSpor_SelcukSports_v12.cs3",
       "version": 12,
       "size": 174357,
-      "hash_checked": true,
+      "hash_checked": false,
       "provider_check": "reachable",
       "provider_reason": "www.selcuksportshd14e17ba2ad.xyz:alive",
       "fallback_used": false,
@@ -5832,10 +5671,10 @@
       "internal_name": "setfilm",
       "name": "SetFilm",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/SetFilm.cs3",
+      "repository": "manitux-app/cs-plugins",
+      "url": "https://raw.githubusercontent.com/manitux-app/cs-plugins/main/builds/SetFilm.cs3",
       "version": 6,
-      "size": 52943,
+      "size": 56873,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "www.setfilmizle.ltd:alive",
@@ -5876,22 +5715,8 @@
       "status": "healthy",
       "repository": "Bymesut1/Kartaloglu-cs",
       "url": "https://raw.githubusercontent.com/Bymesut1/Kartaloglu-cs/builds/SezonlukDizi.cs3",
-      "version": 48,
-      "size": 158259,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "sezonlukdizi.cc:alive",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "sezonlukdizipars",
-      "name": "SezonlukDiziPars",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/SezonlukDiziPars.cs3",
-      "version": 9,
-      "size": 47013,
+      "version": 50,
+      "size": 158258,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "sezonlukdizi.cc:alive",
@@ -5916,11 +5741,11 @@
       "internal_name": "sezonlukfilm",
       "name": "SezonlukFilm",
       "status": "healthy",
-      "repository": "Nikkoshoptr/Pamuktv",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/SezonlukFilm.cs3",
+      "repository": "JustSadY/Cloudstream-Lykia",
+      "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/SezonlukFilm.cs3",
       "version": 1,
-      "size": 20018,
-      "hash_checked": false,
+      "size": 19978,
+      "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "sezonlukdizi.one:alive",
       "fallback_used": false,
@@ -6018,31 +5843,34 @@
     },
     {
       "internal_name": "showtv",
-      "name": "ShowTV",
+      "name": "Showtv",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/ShowTV.cs3",
-      "version": 5,
-      "size": 40954,
+      "repository": "lepotane/MRC-builds",
+      "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/Showtv.cs3",
+      "version": 4,
+      "size": 26028,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "www.showtv.com.tr:alive",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "sinefilmizlesen",
-      "name": "SineFilmizlesen",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/SineFilmizlesen.cs3",
-      "version": 6,
-      "size": 20152,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "www.sinefilmizlesen.cc:alive",
-      "fallback_used": false,
-      "attempts": null
+      "fallback_used": true,
+      "attempts": [
+        {
+          "repository": "hrtestingx/hrcsrepofull",
+          "url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepofull/builds/ShowTv.cs3",
+          "version": 5,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "dynamic-domain-missing"
+        },
+        {
+          "repository": "lepotane/MRC-builds",
+          "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/Showtv.cs3",
+          "version": 4,
+          "result": "ok",
+          "provider_check": "reachable",
+          "provider_reason": "www.showtv.com.tr:alive"
+        }
+      ]
     },
     {
       "internal_name": "sinefy",
@@ -6055,34 +5883,6 @@
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "sinefy3.com:alive",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "sinekfilmizle",
-      "name": "SinekFilmizle",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/SinekFilmizle.cs3",
-      "version": 1,
-      "size": 32494,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "sinekfilmizle.net:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "sinemacc",
-      "name": "SinemaCC",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/SinemaCC.cs3",
-      "version": 6,
-      "size": 25067,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "sinemacc.com:alive",
       "fallback_used": false,
       "attempts": null
     },
@@ -6118,10 +5918,10 @@
       "internal_name": "sinemaizle",
       "name": "SinemaIzle",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/SinemaIzle.cs3",
+      "repository": "Bymesut1/Kartaloglu-cs",
+      "url": "https://raw.githubusercontent.com/Bymesut1/Kartaloglu-cs/builds/SinemaIzle.cs3",
       "version": 5,
-      "size": 38667,
+      "size": 47558,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "sinemaizle.org:alive",
@@ -6132,10 +5932,10 @@
       "internal_name": "sinemakolik",
       "name": "Sinemakolik",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/Sinemakolik.cs3",
-      "version": 4,
-      "size": 37512,
+      "repository": "F0Rextasy/bigbullapp-cs",
+      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Sinemakolik.cs3",
+      "version": 3,
+      "size": 71034,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "sinemakolik.com:alive",
@@ -6149,7 +5949,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Sinemetrik.cs3",
       "version": 1,
-      "size": 43735,
+      "size": 81612,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "www.sinemetrik.com:alive-tr",
@@ -6199,27 +5999,13 @@
       "attempts": null
     },
     {
-      "internal_name": "siyahfilmizle",
-      "name": "SiyahFilmIzle",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/SiyahFilmIzle.cs3",
-      "version": 3,
-      "size": 24322,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "siyahfilmizle.vip:alive",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
       "internal_name": "sonanime",
       "name": "SonAnime",
       "status": "healthy",
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/SonAnime.cs3",
       "version": 5,
-      "size": 45352,
+      "size": 83147,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "sonanime.com:alive-tr",
@@ -6258,11 +6044,11 @@
       "internal_name": "sportv",
       "name": "SporTV",
       "status": "healthy",
-      "repository": "baristomruk-max/BTVault",
-      "url": "https://raw.githubusercontent.com/baristomruk-max/BTVault/builds/SporTV.cs3",
+      "repository": "MrKonce/ozel-cs-repom",
+      "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/BTVault_SporTV_v1.cs3",
       "version": 1,
       "size": 13714,
-      "hash_checked": true,
+      "hash_checked": false,
       "provider_check": "reachable",
       "provider_reason": "iptv-org.github.io:alive",
       "fallback_used": true,
@@ -6276,28 +6062,14 @@
           "provider_reason": "no-urls"
         },
         {
-          "repository": "baristomruk-max/BTVault",
-          "url": "https://raw.githubusercontent.com/baristomruk-max/BTVault/builds/SporTV.cs3",
+          "repository": "MrKonce/ozel-cs-repom",
+          "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/BTVault_SporTV_v1.cs3",
           "version": 1,
           "result": "ok",
           "provider_check": "reachable",
           "provider_reason": "iptv-org.github.io:alive"
         }
       ]
-    },
-    {
-      "internal_name": "ssportplus",
-      "name": "SSportPlus",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/Pamuktv",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/SSportPlus.cs3",
-      "version": 8,
-      "size": 24425,
-      "hash_checked": false,
-      "provider_check": "unverified",
-      "provider_reason": "no-urls",
-      "fallback_used": false,
-      "attempts": null
     },
     {
       "internal_name": "stardusttv",
@@ -6320,7 +6092,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/StarTV.cs3",
       "version": 7,
-      "size": 37222,
+      "size": 75326,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "www.startv.com.tr:alive",
@@ -6331,8 +6103,8 @@
       "internal_name": "stbtv",
       "name": "StbTV",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/spor/StbTV.cs3",
+      "repository": "Wiojelt/WioSpor",
+      "url": "https://raw.githubusercontent.com/Wiojelt/WioSpor/builds/StbTV.cs3?v=64e0adef2cc4",
       "version": 7,
       "size": 284811,
       "hash_checked": true,
@@ -6423,14 +6195,6 @@
           "provider_reason": "www.superfilmgeldi13.art:parked-domain:domain for sale"
         },
         {
-          "repository": "Nikkoshoptr/Pamuktv",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/SuperFilmGeldi.cs3",
-          "version": 24,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.superfilmgeldi12.art:dns-error"
-        },
-        {
           "repository": "arcilingir/Dizi_Film",
           "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film/builds/SuperFilmGeldi.cs3",
           "version": 24,
@@ -6481,20 +6245,6 @@
       ]
     },
     {
-      "internal_name": "superfilmizle",
-      "name": "SuperFilmIzle",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/SuperFilmIzle.cs3",
-      "version": 2,
-      "size": 31612,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "superfilmizle.icu:alive",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
       "internal_name": "tabii",
       "name": "Tabii",
       "status": "healthy",
@@ -6505,32 +6255,15 @@
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "www.tabii.com:alive",
-      "fallback_used": true,
-      "attempts": [
-        {
-          "repository": "Nikkoshoptr/Pamuktv",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/Tabii.cs3",
-          "version": 9,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "androidtv.site:dns-error"
-        },
-        {
-          "repository": "JustSadY/Cloudstream-Lykia",
-          "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/Tabii.cs3",
-          "version": 1,
-          "result": "ok",
-          "provider_check": "reachable",
-          "provider_reason": "www.tabii.com:alive"
-        }
-      ]
+      "fallback_used": false,
+      "attempts": null
     },
     {
       "internal_name": "tabiiprovider",
       "name": "TabiiProvider",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/karayel/TabiiProvider.cs3",
+      "repository": "karayel90/cloudplug",
+      "url": "https://raw.githubusercontent.com/karayel90/cloudplug/builds/TabiiProvider.cs3",
       "version": 37,
       "size": 71480,
       "hash_checked": true,
@@ -6543,13 +6276,27 @@
       "internal_name": "taraftarium24",
       "name": "Taraftarium24",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/spor/Taraftarium24.cs3",
+      "repository": "MrKonce/ozel-cs-repom",
+      "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/TurkSpor_Taraftarium24_v14.cs3",
       "version": 14,
       "size": 175648,
-      "hash_checked": true,
+      "hash_checked": false,
       "provider_check": "reachable",
       "provider_reason": "taraftarium24.io:alive",
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "tekfullfilmizle",
+      "name": "TekFullFilmizle",
+      "status": "healthy",
+      "repository": "Bymesut1/Kartaloglu-cs",
+      "url": "https://raw.githubusercontent.com/Bymesut1/Kartaloglu-cs/builds/TekFullFilmizle.cs3",
+      "version": 10,
+      "size": 52389,
+      "hash_checked": true,
+      "provider_check": "reachable",
+      "provider_reason": "www.tekfullfilmizle6.com:alive",
       "fallback_used": false,
       "attempts": null
     },
@@ -6599,8 +6346,8 @@
       "internal_name": "tlc",
       "name": "TLC",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/mrc/TLC.cs3",
+      "repository": "lepotane/MRC-builds",
+      "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/TLC.cs3",
       "version": 3,
       "size": 14440,
       "hash_checked": true,
@@ -6625,8 +6372,8 @@
           "provider_reason": null
         },
         {
-          "repository": "Nikkoshoptr/PamukVip",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/mrc/TLC.cs3",
+          "repository": "lepotane/MRC-builds",
+          "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/TLC.cs3",
           "version": 3,
           "result": "ok",
           "provider_check": "reachable",
@@ -6649,27 +6396,13 @@
       "attempts": null
     },
     {
-      "internal_name": "torrentfilm",
-      "name": "TorrentFilm",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/Pamuktv",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/TorrentFilm.cs3",
-      "version": 2,
-      "size": 19290,
-      "hash_checked": false,
-      "provider_check": "reachable",
-      "provider_reason": "turkcealtyazi.org:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
       "internal_name": "toruko",
       "name": "Toruko",
       "status": "healthy",
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Toruko.cs3",
-      "version": 1,
-      "size": 39584,
+      "version": 3,
+      "size": 77651,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "turkceanime.com:alive",
@@ -6694,11 +6427,11 @@
       "internal_name": "tranimaci",
       "name": "TRanimaci",
       "status": "healthy",
-      "repository": "feroxx/Kekik-cloudstream",
-      "url": "https://raw.githubusercontent.com/feroxx/Kekik-cloudstream/builds/TRanimaci.cs3",
+      "repository": "MrKonce/ozel-cs-repom",
+      "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/FeroxxKekik_TRanimaci_v19.cs3",
       "version": 19,
       "size": 16863,
-      "hash_checked": true,
+      "hash_checked": false,
       "provider_check": "reachable",
       "provider_reason": "tranimaci.com:alive-tr",
       "fallback_used": false,
@@ -6782,6 +6515,14 @@
           "provider_reason": "www.tranimeizle.live:http-403"
         },
         {
+          "repository": "MrKonce/ozel-cs-repom",
+          "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/TurkSinema_TrAnimeIzle_v4.cs3",
+          "version": 4,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.tranimeizle.live:http-403"
+        },
+        {
           "repository": "Wiojelt/WioAnime",
           "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/anime/TrAnimeIzle.cs3?v=4848d40ee081",
           "version": 3,
@@ -6819,11 +6560,11 @@
       "internal_name": "trasyalog",
       "name": "TRasyalog",
       "status": "healthy",
-      "repository": "feroxx/Kekik-cloudstream",
-      "url": "https://raw.githubusercontent.com/feroxx/Kekik-cloudstream/builds/TRasyalog.cs3",
+      "repository": "MrKonce/ozel-cs-repom",
+      "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/FeroxxKekik_TRasyalog_v66.cs3",
       "version": 66,
       "size": 23188,
-      "hash_checked": true,
+      "hash_checked": false,
       "provider_check": "reachable",
       "provider_reason": "asyalog.co:alive",
       "fallback_used": false,
@@ -6847,11 +6588,11 @@
       "internal_name": "trgoals",
       "name": "TRGoals",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/spor/TRGoals.cs3",
+      "repository": "MrKonce/ozel-cs-repom",
+      "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/TurkSpor_TRGoals_v3.cs3",
       "version": 3,
       "size": 232719,
-      "hash_checked": true,
+      "hash_checked": false,
       "provider_check": "unverified",
       "provider_reason": "dynamic-domain-missing",
       "fallback_used": false,
@@ -6861,11 +6602,11 @@
       "internal_name": "trlive",
       "name": "TRLive",
       "status": "healthy",
-      "repository": "Wiojelt/TurkSpor",
-      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/TRLive.cs3?v=cc2a0bdc3476",
+      "repository": "MrKonce/ozel-cs-repom",
+      "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/TurkSpor_TRLive_v1.cs3",
       "version": 1,
       "size": 12265,
-      "hash_checked": true,
+      "hash_checked": false,
       "provider_check": "unverified",
       "provider_reason": "no-urls",
       "fallback_used": false,
@@ -6878,7 +6619,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/TRT1.cs3",
       "version": 1,
-      "size": 34706,
+      "size": 72890,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "www.trt1.com.tr:alive",
@@ -6956,11 +6697,11 @@
       "internal_name": "turkanime",
       "name": "TurkAnime",
       "status": "healthy",
-      "repository": "feroxx/Kekik-cloudstream",
-      "url": "https://raw.githubusercontent.com/feroxx/Kekik-cloudstream/builds/TurkAnime.cs3",
+      "repository": "MrKonce/ozel-cs-repom",
+      "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/FeroxxKekik_TurkAnime_v14.cs3",
       "version": 14,
       "size": 19087,
-      "hash_checked": true,
+      "hash_checked": false,
       "provider_check": "reachable",
       "provider_reason": "www.turkanime.tv:alive",
       "fallback_used": true,
@@ -6998,8 +6739,8 @@
           "provider_reason": "dynamic-domain-missing"
         },
         {
-          "repository": "feroxx/Kekik-cloudstream",
-          "url": "https://raw.githubusercontent.com/feroxx/Kekik-cloudstream/builds/TurkAnime.cs3",
+          "repository": "MrKonce/ozel-cs-repom",
+          "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/FeroxxKekik_TurkAnime_v14.cs3",
           "version": 14,
           "result": "ok",
           "provider_check": "reachable",
@@ -7014,7 +6755,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/TurkAnimeTV.cs3",
       "version": 1,
-      "size": 42087,
+      "size": 79936,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "turkanime.live:alive",
@@ -7042,7 +6783,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/TurkceDizi.cs3",
       "version": 12,
-      "size": 62961,
+      "size": 99856,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "turkcedizi.com:alive",
@@ -7092,6 +6833,37 @@
       "attempts": null
     },
     {
+      "internal_name": "turkishcinestream",
+      "name": "TurkishCineStream",
+      "status": "healthy",
+      "repository": "Wiojelt/WioCinema",
+      "url": "https://github.com/Wiojelt/WioSinema/releases/download/wiosinema-artifacts-2026-10-03-r7/TurkishCineStream.cs3",
+      "version": 487,
+      "size": 840939,
+      "hash_checked": true,
+      "provider_check": "reachable",
+      "provider_reason": "simkl.com:alive",
+      "fallback_used": true,
+      "attempts": [
+        {
+          "repository": "pisovo-5031/WioSinema",
+          "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/sinema/TurkishCineStream.cs3?v=ca1989aeea4c",
+          "version": 487,
+          "result": "hash-mismatch",
+          "provider_check": "not-checked",
+          "provider_reason": null
+        },
+        {
+          "repository": "Wiojelt/WioCinema",
+          "url": "https://github.com/Wiojelt/WioSinema/releases/download/wiosinema-artifacts-2026-10-03-r7/TurkishCineStream.cs3",
+          "version": 487,
+          "result": "ok",
+          "provider_check": "reachable",
+          "provider_reason": "simkl.com:alive"
+        }
+      ]
+    },
+    {
       "internal_name": "turkishw",
       "name": "TurkishW",
       "status": "healthy",
@@ -7120,58 +6892,16 @@
       "attempts": null
     },
     {
-      "internal_name": "turkmegasaglayici",
-      "name": "TurkMegaSaglayici",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/Pamuktv",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/TurkMegaSaglayici.cs3",
-      "version": 2,
-      "size": 7954,
-      "hash_checked": false,
-      "provider_check": "unverified",
-      "provider_reason": "no-urls",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "turkscanlitv",
-      "name": "TurkSCanliTV",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/Pamuktv",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/TurkSCanliTV.cs3",
-      "version": 6,
-      "size": 18030,
-      "hash_checked": false,
-      "provider_check": "reachable",
-      "provider_reason": "core-api.kablowebtv.com:alive",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
       "internal_name": "turkspor",
       "name": "TurkSpor",
       "status": "healthy",
-      "repository": "Wiojelt/TurkSpor",
-      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/TurkSpor.cs3?v=21c99ad664d4",
+      "repository": "MrKonce/ozel-cs-repom",
+      "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/TurkSpor_TurkSpor_v6.cs3",
       "version": 6,
       "size": 451878,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "kralsportshd7.xyz:alive",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "tv bahã§esi - latte",
-      "name": "Tv BahÃ§esi - Latte",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/Pamuktv",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/Tv_Bahcesi_-_Latte.cs3",
-      "version": 3,
-      "size": 20365,
       "hash_checked": false,
       "provider_check": "reachable",
-      "provider_reason": "raw.githubusercontent.com:alive",
+      "provider_reason": "kralsportshd7.xyz:alive",
       "fallback_used": false,
       "attempts": null
     },
@@ -7210,7 +6940,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/TV2.cs3",
       "version": 1,
-      "size": 36343,
+      "size": 74612,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "www.tv2.com.tr:alive",
@@ -7221,8 +6951,8 @@
       "internal_name": "tv8",
       "name": "Tv8",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/mrc/Tv8.cs3",
+      "repository": "lepotane/MRC-builds",
+      "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/Tv8.cs3",
       "version": 3,
       "size": 22687,
       "hash_checked": true,
@@ -7239,8 +6969,8 @@
           "provider_reason": "dynamic-domain-missing"
         },
         {
-          "repository": "Nikkoshoptr/PamukVip",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/mrc/Tv8.cs3",
+          "repository": "lepotane/MRC-builds",
+          "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/Tv8.cs3",
           "version": 3,
           "result": "ok",
           "provider_check": "reachable",
@@ -7322,8 +7052,8 @@
       "internal_name": "ultrafilmizle",
       "name": "UltraFilmizle",
       "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/mrc/UltraFilmizle.cs3",
+      "repository": "lepotane/MRC-builds",
+      "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/UltraFilmizle.cs3",
       "version": 15,
       "size": 31117,
       "hash_checked": true,
@@ -7350,11 +7080,11 @@
       "internal_name": "vavoospor",
       "name": "vavooSpor",
       "status": "healthy",
-      "repository": "baristomruk-max/BTVault",
-      "url": "https://raw.githubusercontent.com/baristomruk-max/BTVault/builds/vavooSpor.cs3",
+      "repository": "MrKonce/ozel-cs-repom",
+      "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/BTVault_vavooSpor_v2.cs3",
       "version": 2,
       "size": 21792,
-      "hash_checked": true,
+      "hash_checked": false,
       "provider_check": "reachable",
       "provider_reason": "iptv-org.github.io:alive",
       "fallback_used": false,
@@ -7367,7 +7097,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/VenusFilmizle.cs3",
       "version": 1,
-      "size": 39859,
+      "size": 77570,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "venusfilmizle.com:alive",
@@ -7465,7 +7195,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/WebFilmizle.cs3",
       "version": 1,
-      "size": 32666,
+      "size": 70775,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "webfilmizle.com:alive",
@@ -7479,7 +7209,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Weboo.cs3",
       "version": 5,
-      "size": 43584,
+      "size": 81310,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "weboo.com.tr:alive",
@@ -7490,11 +7220,11 @@
       "internal_name": "webteizle",
       "name": "WebteIzle",
       "status": "healthy",
-      "repository": "Nikkoshoptr/Pamuktv",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/WebteIzle.cs3",
+      "repository": "arcilingir/Dizi_Film_2",
+      "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film_2/builds/WebteIzle.cs3",
       "version": 59,
-      "size": 30581,
-      "hash_checked": false,
+      "size": 35303,
+      "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "webteizle.info:alive",
       "fallback_used": false,
@@ -7563,11 +7293,11 @@
       "internal_name": "wiosync",
       "name": "WioSync",
       "status": "healthy",
-      "repository": "Wiojelt/TurkSpor",
-      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/WioSync.cs3?v=05839cdc2a86",
+      "repository": "MrKonce/ozel-cs-repom",
+      "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/TurkSpor_WioSync_v2.cs3",
       "version": 2,
       "size": 167262,
-      "hash_checked": true,
+      "hash_checked": false,
       "provider_check": "reachable",
       "provider_reason": "wiojelt-auth.hdf-worker.workers.dev:alive",
       "fallback_used": false,
@@ -7584,81 +7314,8 @@
       "hash_checked": true,
       "provider_check": "unverified",
       "provider_reason": "no-urls",
-      "fallback_used": true,
-      "attempts": [
-        {
-          "repository": "Nikkoshoptr/Pamuktv",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/XPrime.cs3",
-          "version": 6,
-          "result": "status-down",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
-          "repository": "arcilingir/Dizi_Film_2",
-          "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film_2/builds/XPrime.cs3",
-          "version": 6,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "no-urls"
-        },
-        {
-          "repository": "arcilingir/nik-cloudstream",
-          "url": "https://raw.githubusercontent.com/arcilingir/nik-cloudstream/builds/XPrime.cs3",
-          "version": 6,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "no-urls"
-        },
-        {
-          "repository": "arcilingir/Dizi_Film",
-          "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film/builds/XPrime.cs3",
-          "version": 6,
-          "result": "http-404",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
-          "repository": "Bymesut1/Dizi_Film",
-          "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film/builds/XPrime.cs3",
-          "version": 6,
-          "result": "http-404",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
-          "repository": "qera18/apple",
-          "url": "https://raw.githubusercontent.com/csprofesor/nik-cloudstream/builds/XPrime.cs3",
-          "version": 6,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "no-urls"
-        },
-        {
-          "repository": "liberta09/Kekik-cloudstream",
-          "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/XPrime.cs3",
-          "version": 6,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "no-urls"
-        },
-        {
-          "repository": "safarxe/CloudStream",
-          "url": "https://raw.githubusercontent.com/safarxe/CloudStream/builds/XPrime.cs3",
-          "version": 6,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "no-urls"
-        },
-        {
-          "repository": "baristomruk-max/BTVault",
-          "url": "https://raw.githubusercontent.com/baristomruk-max/BTVault/builds/XPrime.cs3",
-          "version": 1,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "no-urls"
-        }
-      ]
+      "fallback_used": false,
+      "attempts": null
     },
     {
       "internal_name": "yabancidizi",
@@ -7667,7 +7324,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Yabancidizi.cs3",
       "version": 12,
-      "size": 47620,
+      "size": 85032,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "ybncidizi.com:alive-tr",
@@ -7677,14 +7334,6 @@
           "repository": "aytzey/cs-kraptor",
           "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/YabanciDizi.cs3",
           "version": 19,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "yabancidizi.news:http-403"
-        },
-        {
-          "repository": "Nikkoshoptr/PamukVip",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/mrc/YabanciDizi.cs3",
-          "version": 18,
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "yabancidizi.news:http-403"
@@ -7766,7 +7415,7 @@
       "repository": "F0Rextasy/bigbullapp-cs",
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/YerliDiziler.cs3",
       "version": 1,
-      "size": 42202,
+      "size": 79722,
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "yerlidiziler.com.tr:alive",
@@ -7805,11 +7454,11 @@
       "internal_name": "youtube",
       "name": "YouTube",
       "status": "healthy",
-      "repository": "baristomruk-max/BTVault",
-      "url": "https://raw.githubusercontent.com/baristomruk-max/BTVault/builds/YouTube.cs3",
+      "repository": "MrKonce/ozel-cs-repom",
+      "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/BTVault_YouTube_v5.cs3",
       "version": 5,
       "size": 17063,
-      "hash_checked": true,
+      "hash_checked": false,
       "provider_check": "reachable",
       "provider_reason": "yt.chocolatemoo53.com:alive",
       "fallback_used": true,
@@ -7863,36 +7512,14 @@
           "provider_reason": "no-urls"
         },
         {
-          "repository": "Nikkoshoptr/Pamuktv",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/YouTube.cs3",
-          "version": 6,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "iv.ggtyler.dev:unreachable"
-        },
-        {
-          "repository": "baristomruk-max/BTVault",
-          "url": "https://raw.githubusercontent.com/baristomruk-max/BTVault/builds/YouTube.cs3",
+          "repository": "MrKonce/ozel-cs-repom",
+          "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/BTVault_YouTube_v5.cs3",
           "version": 5,
           "result": "ok",
           "provider_check": "reachable",
           "provider_reason": "yt.chocolatemoo53.com:alive"
         }
       ]
-    },
-    {
-      "internal_name": "youtube ã–zel - latte",
-      "name": "YouTube Ã–zel - Latte",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/Pamuktv",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/YouTube_Ozel_-_Latte.cs3",
-      "version": 1,
-      "size": 13644,
-      "hash_checked": false,
-      "provider_check": "reachable",
-      "provider_reason": "www.youtube.com.tr:alive",
-      "fallback_used": false,
-      "attempts": null
     },
     {
       "internal_name": "youtube özel - latte",
@@ -7905,20 +7532,6 @@
       "hash_checked": false,
       "provider_check": "reachable",
       "provider_reason": "www.youtube.com.tr:alive",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "youtubefilm",
-      "name": "YouTubeFilm",
-      "status": "healthy",
-      "repository": "Nikkoshoptr/PamukVip",
-      "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/YouTubeFilm.cs3",
-      "version": 5,
-      "size": 27089,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "yandex.com.tr:alive",
       "fallback_used": false,
       "attempts": null
     },
@@ -7946,7 +7559,7 @@
       "size": 92944,
       "hash_checked": true,
       "provider_check": "reachable",
-      "provider_reason": "web.yts.gg:alive",
+      "provider_reason": "yts.pw:alive",
       "fallback_used": false,
       "attempts": null
     },
@@ -7996,14 +7609,6 @@
       "internal_name": "4kfilmizlesene",
       "status": "rejected",
       "attempts": [
-        {
-          "repository": "Nikkoshoptr/Pamuktv",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/4KFilmIzlesene.cs3",
-          "version": 6,
-          "result": "blacklisted",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
         {
           "repository": "arcilingir/Dizi_Film_2",
           "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film_2/builds/4KFilmIzlesene.cs3",
@@ -8073,6 +7678,14 @@
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "79.76.45.87:unreachable"
+        },
+        {
+          "repository": "MrKonce/ozel-cs-repom",
+          "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/TurkSinema_AileTV_v5.cs3",
+          "version": 5,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "79.76.45.87:unreachable"
         }
       ]
     },
@@ -8099,6 +7712,14 @@
         {
           "repository": "arcilingir/TurkSinema",
           "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/AltiYuzAltmisAltiFilmIzle.cs3",
+          "version": 8,
+          "result": "blacklisted",
+          "provider_check": "not-checked",
+          "provider_reason": null
+        },
+        {
+          "repository": "MrKonce/ozel-cs-repom",
+          "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/TurkSinema_AltiYuzAltmisAltiFilmIzle_v8.cs3",
           "version": 8,
           "result": "blacklisted",
           "provider_check": "not-checked",
@@ -8159,14 +7780,6 @@
           "provider_reason": null
         },
         {
-          "repository": "Nikkoshoptr/Pamuktv",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/Animeler.cs3",
-          "version": 16,
-          "result": "blacklisted",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
           "repository": "F0Rextasy/bigbullapp-cs",
           "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Animeler.cs3",
           "version": 11,
@@ -8200,14 +7813,6 @@
           "repository": "aytzey/cs-kraptor",
           "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/Animely.cs3",
           "version": 5,
-          "result": "blacklisted",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
-          "repository": "Nikkoshoptr/Pamuktv",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/Animely.cs3",
-          "version": 4,
           "result": "blacklisted",
           "provider_check": "not-checked",
           "provider_reason": null
@@ -8291,20 +7896,6 @@
       ]
     },
     {
-      "internal_name": "asyafilmizlesene",
-      "status": "rejected",
-      "attempts": [
-        {
-          "repository": "Nikkoshoptr/Pamuktv",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/AsyaFilmIzlesene.cs3",
-          "version": 2,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "asyafilmizlesene.org:dns-error"
-        }
-      ]
-    },
-    {
       "internal_name": "asyaluna",
       "status": "rejected",
       "attempts": [
@@ -8365,14 +7956,6 @@
       "status": "rejected",
       "attempts": [
         {
-          "repository": "Nikkoshoptr/PamukVip",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/spor/CiftD2M.cs3",
-          "version": 2,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "ciftd2m.tv:dns-error"
-        },
-        {
           "repository": "Wiojelt/WioSpor",
           "url": "https://raw.githubusercontent.com/Wiojelt/WioSpor/builds/CiftD2M.cs3?v=b6896901f518",
           "version": 2,
@@ -8412,8 +7995,8 @@
       "attempts": [
         {
           "repository": "dr-octagon/BronzeCloud",
-          "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/CineStream_v591.cs3",
-          "version": 591,
+          "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/CineStream_v594.cs3",
+          "version": 594,
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "cinemeta-catalogs.strem.io:http-404"
@@ -8424,14 +8007,6 @@
       "internal_name": "cizgidizi",
       "status": "rejected",
       "attempts": [
-        {
-          "repository": "Nikkoshoptr/PamukVip",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/mrc/CizgiDizi.cs3",
-          "version": 4,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.cizgidizi.net:http-403"
-        },
         {
           "repository": "lepotane/MRC-builds",
           "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/CizgiDizi.cs3",
@@ -8507,6 +8082,14 @@
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "net52.cc:http-404"
+        },
+        {
+          "repository": "MrKonce/ozel-cs-repom",
+          "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/TurkSinema_CNCVerseDisneyPlus_v8.cs3",
+          "version": 8,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "net52.cc:http-404"
         }
       ]
     },
@@ -8537,6 +8120,14 @@
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "net52.cc:http-404"
+        },
+        {
+          "repository": "MrKonce/ozel-cs-repom",
+          "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/TurkSinema_CNCVerseNetflix_v8.cs3",
+          "version": 8,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "net52.cc:http-404"
         }
       ]
     },
@@ -8563,6 +8154,14 @@
         {
           "repository": "arcilingir/TurkSinema",
           "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/CNCVersePrimeVideo.cs3",
+          "version": 8,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "net52.cc:http-404"
+        },
+        {
+          "repository": "MrKonce/ozel-cs-repom",
+          "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/TurkSinema_CNCVersePrimeVideo_v8.cs3",
           "version": 8,
           "result": "provider-unverified",
           "provider_check": "unverified",
@@ -8603,14 +8202,6 @@
       "status": "rejected",
       "attempts": [
         {
-          "repository": "Nikkoshoptr/Pamuktv",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/DiziFun_-_Latte.cs3",
-          "version": 5,
-          "result": "status-down",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
           "repository": "GitLatte/Sinetech",
           "url": "https://raw.githubusercontent.com/GitLatte/Sinetech/builds/DiziFun - Latte.cs3",
           "version": 5,
@@ -8649,16 +8240,16 @@
       ]
     },
     {
-      "internal_name": "dizitime",
+      "internal_name": "dizipal_ripplay",
       "status": "rejected",
       "attempts": [
         {
-          "repository": "Nikkoshoptr/PamukVip",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/Dizitime.cs3",
-          "version": 4,
+          "repository": "MrKonce/ozel-cs-repom",
+          "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/Ripplay_DiziPal_v48.cs3",
+          "version": 48,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "dizitime.co:http-403"
+          "provider_reason": "dizipal2216.com:http-403"
         }
       ]
     },
@@ -8699,55 +8290,9 @@
       ]
     },
     {
-      "internal_name": "dramabox",
-      "status": "rejected",
-      "attempts": [
-        {
-          "repository": "Wiojelt/TurkSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/DramaBox.cs3",
-          "version": 21,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.dramabox.com:http-403"
-        },
-        {
-          "repository": "pisovo-5031/TurkSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/DramaBox.cs3",
-          "version": 21,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.dramabox.com:http-403"
-        },
-        {
-          "repository": "arcilingir/TurkSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/DramaBox.cs3",
-          "version": 21,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.dramabox.com:http-403"
-        },
-        {
-          "repository": "Wiojelt/WioDrama",
-          "url": "https://raw.githubusercontent.com/Wiojelt/WioDrama/builds/DramaBox.cs3?v=f30c762c0528",
-          "version": 21,
-          "result": "hash-mismatch",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        }
-      ]
-    },
-    {
       "internal_name": "dramadunyam",
       "status": "rejected",
       "attempts": [
-        {
-          "repository": "Nikkoshoptr/PamukVip",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/DramaDunyam.cs3",
-          "version": 2,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "dramadunyam.com:http-403"
-        },
         {
           "repository": "Wiojelt/TurkSinema",
           "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/DramaDunyam.cs3",
@@ -8875,14 +8420,6 @@
       "status": "rejected",
       "attempts": [
         {
-          "repository": "Nikkoshoptr/Pamuktv",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/FilmBip.cs3",
-          "version": 11,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "filmbip.com:unreachable"
-        },
-        {
           "repository": "21nek/nektv",
           "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/FilmBip.cs3",
           "version": 11,
@@ -8935,14 +8472,6 @@
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "www.filmizleilk.site:unreachable"
-        },
-        {
-          "repository": "Nikkoshoptr/Pamuktv",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/FilmIzleIlk.cs3",
-          "version": 5,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.filmizleilk.vip:dns-error"
         },
         {
           "repository": "arcilingir/Dizi_Film",
@@ -9021,20 +8550,6 @@
           "result": "status-down",
           "provider_check": "not-checked",
           "provider_reason": null
-        }
-      ]
-    },
-    {
-      "internal_name": "filmä°zlesene",
-      "status": "rejected",
-      "attempts": [
-        {
-          "repository": "Nikkoshoptr/Pamuktv",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/FilmIzlesene.cs3",
-          "version": 3,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.filmizlesene.plus:dns-error"
         }
       ]
     },
@@ -9118,19 +8633,11 @@
           "version": 37,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.pw:http-403"
+          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
         },
         {
           "repository": "feroxx/Kekik-cloudstream",
           "url": "https://raw.githubusercontent.com/feroxx/Kekik-cloudstream/builds/FullHDFilmizlesene.cs3",
-          "version": 33,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
-        },
-        {
-          "repository": "Nikkoshoptr/Pamuktv",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/FullHDFilmizlesene.cs3",
           "version": 33,
           "result": "provider-unverified",
           "provider_check": "unverified",
@@ -9204,14 +8711,6 @@
           "repository": "Ripplay/cloudstream-repo",
           "url": "https://raw.githubusercontent.com/Ripplay/cloudstream-repo/builds/FullHDFilmizlesene.cs3",
           "version": 12,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-403"
-        },
-        {
-          "repository": "Nikkoshoptr/PamukVip",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/turk/FullHDFilmizlesene.cs3",
-          "version": 11,
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "www.fullhdfilmizlesene.now:http-403"
@@ -9465,31 +8964,9 @@
       ]
     },
     {
-      "internal_name": "fullhdfilmä°zlede",
-      "status": "rejected",
-      "attempts": [
-        {
-          "repository": "Nikkoshoptr/Pamuktv",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/FullHDFilmIzlede.cs3",
-          "version": 5,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "fullhdfilmizlede.org:dns-error"
-        }
-      ]
-    },
-    {
       "internal_name": "gofilmizle - latte",
       "status": "rejected",
       "attempts": [
-        {
-          "repository": "Nikkoshoptr/Pamuktv",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/GoFilmIzle_-_Latte.cs3",
-          "version": 3,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "gofilmizle.com:parked-domain:afternic"
-        },
         {
           "repository": "GitLatte/Sinetech",
           "url": "https://raw.githubusercontent.com/GitLatte/Sinetech/builds/GoFilmIzle - Latte.cs3",
@@ -9603,20 +9080,6 @@
       ]
     },
     {
-      "internal_name": "izlesenefilm",
-      "status": "rejected",
-      "attempts": [
-        {
-          "repository": "Nikkoshoptr/PamukVip",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/IzleseneFilm.cs3",
-          "version": 3,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.izlesene.film:http-403"
-        }
-      ]
-    },
-    {
       "internal_name": "kacakspor",
       "status": "rejected",
       "attempts": [
@@ -9650,14 +9113,6 @@
       "internal_name": "koalatv",
       "status": "rejected",
       "attempts": [
-        {
-          "repository": "Nikkoshoptr/PamukVip",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/spor/KoalaTV.cs3",
-          "version": 5,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "easyapi.sh:http-404"
-        },
         {
           "repository": "Wiojelt/WioSpor",
           "url": "https://raw.githubusercontent.com/Wiojelt/WioSpor/builds/KoalaTV.cs3",
@@ -9697,20 +9152,6 @@
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "easyapi.sh:http-404"
-        }
-      ]
-    },
-    {
-      "internal_name": "liderdrama",
-      "status": "rejected",
-      "attempts": [
-        {
-          "repository": "Nikkoshoptr/PamukVip",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/LiderDrama.cs3",
-          "version": 8,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "liderdrama.com:http-403"
         }
       ]
     },
@@ -9833,14 +9274,6 @@
           "provider_reason": "net52.cc:http-404"
         },
         {
-          "repository": "Nikkoshoptr/Pamuktv",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/MirrorVerse.cs3",
-          "version": 38,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "net52.cc:http-404"
-        },
-        {
           "repository": "adilem/cs-kraptor",
           "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/MirrorVerse.cs3",
           "version": 38,
@@ -9897,6 +9330,20 @@
       ]
     },
     {
+      "internal_name": "neoteshis",
+      "status": "rejected",
+      "attempts": [
+        {
+          "repository": "neoser1984/neowatch",
+          "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/NeoTeshis.cs3",
+          "version": 3,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "neowatch.teshis:dns-error"
+        }
+      ]
+    },
+    {
       "internal_name": "netshortlegacy",
       "status": "rejected",
       "attempts": [
@@ -9914,14 +9361,6 @@
       "internal_name": "papazsports",
       "status": "rejected",
       "attempts": [
-        {
-          "repository": "Nikkoshoptr/PamukVip",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/spor/PapazSports.cs3",
-          "version": 1,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.papazsports1031.pro:http-403"
-        },
         {
           "repository": "Wiojelt/WioSpor",
           "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/PapazSports.cs3?v=1c6e2b5b8aca",
@@ -9965,34 +9404,6 @@
       ]
     },
     {
-      "internal_name": "parsspor1",
-      "status": "rejected",
-      "attempts": [
-        {
-          "repository": "Nikkoshoptr/PamukVip",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/PARSSPOR1.cs3",
-          "version": 8,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "tambettv26.com:dns-error"
-        }
-      ]
-    },
-    {
-      "internal_name": "parsspor4",
-      "status": "rejected",
-      "attempts": [
-        {
-          "repository": "Nikkoshoptr/PamukVip",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/PARSSPOR4.cs3",
-          "version": 4,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "vegoltv982.com:dns-error"
-        }
-      ]
-    },
-    {
       "internal_name": "penguin squad",
       "status": "rejected",
       "attempts": [
@@ -10003,20 +9414,6 @@
           "result": "invalid-status",
           "provider_check": "not-checked",
           "provider_reason": null
-        }
-      ]
-    },
-    {
-      "internal_name": "puubeles",
-      "status": "rejected",
-      "attempts": [
-        {
-          "repository": "Nikkoshoptr/PamukVip",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/PuuBeles.cs3",
-          "version": 4,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "core.belestivi.workers.dev:http-403"
         }
       ]
     },
@@ -10133,14 +9530,6 @@
       "status": "rejected",
       "attempts": [
         {
-          "repository": "Nikkoshoptr/Pamuktv",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/Tafdi.cs3",
-          "version": 3,
-          "result": "status-down",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
           "repository": "arcilingir/Dizi_Film",
           "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film/builds/Tafdi.cs3",
           "version": 3,
@@ -10186,14 +9575,6 @@
       "internal_name": "timstreams",
       "status": "rejected",
       "attempts": [
-        {
-          "repository": "Nikkoshoptr/PamukVip",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/spor/TimStreams.cs3",
-          "version": 4,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "timst.top:dns-error"
-        },
         {
           "repository": "Wiojelt/WioSpor",
           "url": "https://raw.githubusercontent.com/Wiojelt/WioSpor/main/TimStreams.cs3?v=0512185930a0",
@@ -10361,14 +9742,6 @@
       "status": "rejected",
       "attempts": [
         {
-          "repository": "Nikkoshoptr/PamukVip",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/spor/VionTV.cs3",
-          "version": 3,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "mahmutabi.qzz.io:http-404"
-        },
-        {
           "repository": "Wiojelt/WioSpor",
           "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/VionTV.cs3?v=884ee3683da9",
           "version": 3,
@@ -10441,20 +9814,6 @@
       ]
     },
     {
-      "internal_name": "volotv",
-      "status": "rejected",
-      "attempts": [
-        {
-          "repository": "Nikkoshoptr/PamukVip",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/VoloTV.cs3",
-          "version": 1,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "tv.canlitvvolo.com:http-403"
-        }
-      ]
-    },
-    {
       "internal_name": "webnoveloku",
       "status": "rejected",
       "attempts": [
@@ -10523,20 +9882,6 @@
         {
           "repository": "safarxe/CloudStream",
           "url": "https://raw.githubusercontent.com/safarxe/CloudStream/builds/WFilmİzle.cs3",
-          "version": 7,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.wfilmizle.art:dns-error"
-        }
-      ]
-    },
-    {
-      "internal_name": "wfilmä°zle",
-      "status": "rejected",
-      "attempts": [
-        {
-          "repository": "Nikkoshoptr/Pamuktv",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/WFilmIzle.cs3",
           "version": 7,
           "result": "provider-unverified",
           "provider_check": "unverified",
@@ -10643,20 +9988,6 @@
       ]
     },
     {
-      "internal_name": "yabancidizi2",
-      "status": "rejected",
-      "attempts": [
-        {
-          "repository": "Nikkoshoptr/PamukVip",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/PamukVip/main/plugins/pars/YabanciDizi2.cs3",
-          "version": 3,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "yabancidizi.news:http-403"
-        }
-      ]
-    },
-    {
       "internal_name": "yabancidiziprovider",
       "status": "rejected",
       "attempts": [
@@ -10667,34 +9998,6 @@
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "yabancidizi.news:http-403"
-        }
-      ]
-    },
-    {
-      "internal_name": "yereldiziler",
-      "status": "rejected",
-      "attempts": [
-        {
-          "repository": "Nikkoshoptr/Pamuktv",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/YerelDiziler.cs3",
-          "version": 14,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "androidtv.site:dns-error"
-        }
-      ]
-    },
-    {
-      "internal_name": "yerelprogramlar",
-      "status": "rejected",
-      "attempts": [
-        {
-          "repository": "Nikkoshoptr/Pamuktv",
-          "url": "https://raw.githubusercontent.com/Nikkoshoptr/Pamuktv/main/cs3/YerelProgramlar.cs3",
-          "version": 1,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "androidtv.site:dns-error"
         }
       ]
     }
