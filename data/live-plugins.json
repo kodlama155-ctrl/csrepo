@@ -378,14 +378,14 @@
   {
     "url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepo/builds/HRLive.cs3",
     "status": 1,
-    "version": 3,
+    "version": 4,
     "name": "HR Live",
     "internalName": "HRLive",
     "authors": [
       "hrtestingx"
     ],
     "description": "HR Live - Toplu Canlı TV",
-    "fileSize": 32682,
+    "fileSize": 35006,
     "repositoryUrl": "https://github.com/hrtestingx/hrcsrepo",
     "language": "tr",
     "tvTypes": [
@@ -393,19 +393,19 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/hrtestingx/hrcsrepo/hrcslogo/hrcslive.webp",
     "apiVersion": 1,
-    "fileHash": "sha256-0147779933654c9a354cdd5e7a71219bc8475b1c6dd99a2025d0ebdf292b5d6c"
+    "fileHash": "sha256-70eb3da33e8c31c0e6376f6f63356fdfc8b56c8801ae93003f6ba5091fced3e4"
   },
   {
     "url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepo/builds/HRStream.cs3",
     "status": 1,
-    "version": 4,
+    "version": 5,
     "name": "HR Stream",
     "internalName": "HRStream",
     "authors": [
       "hrtestingx"
     ],
     "description": "HR Stream - Toplu Canlı Yayın Kaynakları",
-    "fileSize": 67650,
+    "fileSize": 69919,
     "repositoryUrl": "https://github.com/hrtestingx/hrcsrepo",
     "language": "tr",
     "tvTypes": [
@@ -414,7 +414,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/hrtestingx/hrcsrepo/hrcslogo/hrcsstream.webp",
     "apiVersion": 1,
-    "fileHash": "sha256-8f30b59b9db660312b3b2c59ad5393876a9040941bca1c9d56e32e1d2bdb9707"
+    "fileHash": "sha256-12b6e774ae8099b1624363ba4fe2cbff13199070677533fc681264a20ef4f398"
   },
   {
     "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/InatBox.cs3",
@@ -462,10 +462,10 @@
   },
   {
     "iconUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh3vCp6N1K4bECoYRQD-cisJF2_6V_Hk01ZhDmoPR2JuM8O5qr4MqrPO1munM9cRlleBBSK6odYhLtDBWv4E3vhPhynlmS5hVVtJZShHoGA5REQ8_3v8SIlccTEqzVQu2UJyNYQdJNrKIfWy66RQeT0D-CcmFCbHPz5023H6p2v5fv4NVloZ5Rqo_yGrIY/s320/iNat-Box-App.png",
-    "fileHash": "sha256-74db2b734d919c6bbbebbef1cf9e5d81014ba4b9e3f1bb26f735d086624973e6",
+    "fileHash": "sha256-dc317cfc6d2035b0674e6ce0ed4602a398ad8a43d27f938a2939e9f6cd10bac7",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/lepotane/MRC-builds",
-    "fileSize": 54180,
+    "fileSize": 62382,
     "status": 1,
     "language": "tr",
     "authors": [
@@ -476,9 +476,9 @@
       "TvSeries",
       "Live"
     ],
-    "version": 5,
+    "version": 6,
     "internalName": "InatBoxBC",
-    "description": "İnatBox BC - Canlı kanallar, spor, film ve diziler.",
+    "description": "İnatBox BC - Canlı TV, spor, dizi ve film (v16 APK sunucu zinciriyle).",
     "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/InatBoxBC.cs3",
     "name": "InatBoxBC"
   },
@@ -632,6 +632,25 @@
     "description": "Kanal 7 ve Kanal 7 Avrupa'nın resmî canlı yayınlarını izleyin",
     "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/Kanal7Canli.cs3",
     "name": "Kanal7Canli"
+  },
+  {
+    "fileHash": "sha256-55f075c4d2aade702eb0878ec0a48456c0eb3fb9d91064218e6dfb9a8548bb57",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/Kayracs3/Kayra",
+    "fileSize": 19374,
+    "status": 3,
+    "language": "tr",
+    "authors": [
+      "Kayracs3"
+    ],
+    "tvTypes": [
+      "Live"
+    ],
+    "version": 3,
+    "internalName": "KayraLive",
+    "description": "Kullanıcının yetkili M3U/M3U8 listeleri için canlı TV sağlayıcısı",
+    "url": "https://raw.githubusercontent.com/Kayracs3/Kayra/builds/KayraLive.cs3",
+    "name": "KayraLive"
   },
   {
     "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/KickTR.cs3",
@@ -1079,10 +1098,10 @@
   },
   {
     "iconUrl": "https://rectv.org.tr/wp-content/uploads/2024/11/rectv-modified.webp",
-    "fileHash": "sha256-b50f21ba44b85ed32c29050b077a8dd617e0f32b180779724622ed819bcacd07",
+    "fileHash": "sha256-44a7bf5726e9b48768060319e43183fcc3fbd33670efb7d56e00a8e149755eff",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/lepotane/MRC-builds",
-    "fileSize": 44771,
+    "fileSize": 45786,
     "status": 1,
     "language": "tr",
     "authors": [
@@ -1093,9 +1112,9 @@
       "Live",
       "TvSeries"
     ],
-    "version": 6,
+    "version": 7,
     "internalName": "RecTVBC",
-    "description": "RecTV BC - Canlı kanallar, spor yayınları, film ve diziler.",
+    "description": "RecTV BC - Canlı kanallar, spor yayınları, film ve diziler (API tabanlı).",
     "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/RecTVBC.cs3",
     "name": "RecTVBC"
   },
