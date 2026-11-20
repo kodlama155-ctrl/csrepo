@@ -150,7 +150,7 @@
     "fileHash": "sha256-a369f96871bccf85f19975ee2dfecc98d84c500daa86cdb7fcb0d07fdd4af5e1"
   },
   {
-    "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/BetmatikTV.cs3?v=b6304052c9e7",
+    "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/BetmatikTV.cs3?v=ff17447c948b",
     "status": 3,
     "version": 3,
     "name": "BetmatikTV",
@@ -159,7 +159,7 @@
       "Wiojelt"
     ],
     "description": "Betmatik TV canlÄ± spor kanallarÄ± Â· otomatik alan gÃ¼ncelleme",
-    "fileSize": 219101,
+    "fileSize": 219083,
     "repositoryUrl": "https://github.com/Wiojelt/WioSpor",
     "language": "tr",
     "tvTypes": [
@@ -167,7 +167,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/main/assets/providers/BetmatikTV.png",
     "apiVersion": 1,
-    "fileHash": "sha256-b6304052c9e77ea36c957e55e66e2706aba4a1023cdf350fb019609fab09b8a8"
+    "fileHash": "sha256-ff17447c948bcd73f6935236ff878d83d903d9b2958fba35284dc0997c0ae9ca"
   },
   {
     "url": "https://raw.githubusercontent.com/Wiojelt/WioSpor/builds/BeyazElma.cs3",
@@ -230,24 +230,24 @@
     "repositoryUrl": "https://github.com/merb2y/cs-builds"
   },
   {
-    "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/main/Catcast.cs3?v=5a332e04a042",
-    "status": 3,
-    "version": 3,
     "name": "Catcast TV",
     "internalName": "Catcast",
+    "version": 3,
+    "description": "Catcast TV · Sadece Türkçe Canlı Kanallar (Ulusal, Haber, Sinema, Dizi, Spor, Müzik, Çocuk, Belgesel)",
     "authors": [
       "Wiojelt"
     ],
-    "description": "Catcast TV · Sadece Türkçe Canlı Kanallar (Ulusal, Haber, Sinema, Dizi, Spor, Müzik, Çocuk, Belgesel)",
-    "fileSize": 123479,
-    "repositoryUrl": "https://github.com/Wiojelt/WioSinema",
-    "language": "tr",
+    "repositoryUrl": "https://github.com/Wiojelt/TurkSinema",
+    "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/Catcast.cs3?v=5a332e04a042",
+    "iconUrl": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/assets/catcast.png",
     "tvTypes": [
       "Live"
     ],
-    "iconUrl": "https://raw.githubusercontent.com/Wiojelt/test/builds/assets/catcast.png",
-    "apiVersion": 1,
+    "language": "tr",
+    "status": 1,
+    "fileSize": 123479,
     "fileHash": "sha256-5a332e04a042d061baf516bc240e945cb3e93953653d95b48e5a557a317c9684",
+    "apiVersion": 1,
     "filesize": 123479,
     "hash": "5a332e04a042d061baf516bc240e945cb3e93953653d95b48e5a557a317c9684"
   },
@@ -507,28 +507,6 @@
     "fileHash": "sha256-f1fc2ce7dda220ee97667578d4c6538acbf8a8faac50d8485bca2f31f8304fd4"
   },
   {
-    "iconUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh3vCp6N1K4bECoYRQD-cisJF2_6V_Hk01ZhDmoPR2JuM8O5qr4MqrPO1munM9cRlleBBSK6odYhLtDBWv4E3vhPhynlmS5hVVtJZShHoGA5REQ8_3v8SIlccTEqzVQu2UJyNYQdJNrKIfWy66RQeT0D-CcmFCbHPz5023H6p2v5fv4NVloZ5Rqo_yGrIY/s320/iNat-Box-App.png",
-    "fileHash": "sha256-5157f451ccae14ba0458b0081a9be12c0b05df008a0edf2edc13629524b756e3",
-    "apiVersion": 1,
-    "repositoryUrl": "https://github.com/Kayracs3/Kayra",
-    "fileSize": 98491,
-    "status": 3,
-    "language": "tr",
-    "authors": [
-      "Kayracs3"
-    ],
-    "tvTypes": [
-      "Movie",
-      "TvSeries",
-      "Live"
-    ],
-    "version": 8,
-    "internalName": "InatBoxYedek",
-    "description": "İnatBoxYedek: InatBox ana eklentisinden ayrı, test ve yedek amaçlı sağlayıcı.",
-    "url": "https://raw.githubusercontent.com/Kayracs3/Kayra/builds/InatBoxYedek.cs3",
-    "name": "InatBoxYedek"
-  },
-  {
     "iconUrl": "https://www.google.com/s2/favicons?domain=dizilabmedia.click&sz=%size%",
     "fileHash": "sha256-a961aac51fd4ecc0534e70ff18f71bb35292933494168f76a61defa38fe578f3",
     "apiVersion": 1,
@@ -591,27 +569,6 @@
     "iconUrl": "https://www.jestyayin970.com/logo.png",
     "apiVersion": 1,
     "fileHash": "sha256-b42b08a9105f61305057fa928f01f7eff94e95fba04fd4dbaba7a37d990aacfa"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/KacakSpor.cs3?v=7932cf040989",
-    "status": 3,
-    "version": 1,
-    "name": "KacakSpor",
-    "internalName": "KacakSpor",
-    "authors": [
-      "Wiojelt"
-    ],
-    "description": "Kacakspor canli spor kanallari ve kesintisiz mac yayinlari",
-    "fileSize": 158964,
-    "repositoryUrl": "https://github.com/Wiojelt/TurkSpor",
-    "language": "tr",
-    "tvTypes": [
-      "Live"
-    ],
-    "apiVersion": 1,
-    "fileHash": "sha256-7932cf04098961f00c646efd54e4ab6fa564d8cad6bb08fba7d2f6754d17fdf0",
-    "filesize": 158964,
-    "hash": "7932cf04098961f00c646efd54e4ab6fa564d8cad6bb08fba7d2f6754d17fdf0"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=kanal7.com&sz=%size%",
@@ -1017,15 +974,15 @@
       "Wiojelt"
     ],
     "repositoryUrl": "https://github.com/Wiojelt/WioSpor",
-    "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/PatronHD.cs3?v=0a23118baf66",
+    "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/PatronHD.cs3?v=ee04166393f2",
     "iconUrl": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/main/assets/providers/PatronHD.png",
     "tvTypes": [
       "Live"
     ],
     "language": "tr",
     "status": 3,
-    "fileSize": 219019,
-    "fileHash": "sha256-0a23118baf665692d78258be70bc7e833440c8c7674a0625067e0f0e82965475",
+    "fileSize": 219044,
+    "fileHash": "sha256-ee04166393f2320c11ed8722d209ab4b7ba0a2f1a1b32fbc5ed08560824d49b3",
     "apiVersion": 1
   },
   {
@@ -1128,7 +1085,7 @@
       "Wiojelt"
     ],
     "description": "🟢 Kaynak: SelçukSports · Emeği için teşekkürler ♥ · @wiojelt",
-    "fileSize": 174357,
+    "fileSize": 174401,
     "repositoryUrl": "https://github.com/Wiojelt/TurkSpor",
     "language": "tr",
     "tvTypes": [
@@ -1136,8 +1093,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/main/assets/providers/SelcukSports.png",
     "apiVersion": 1,
-    "filesize": 174357,
-    "fileHash": "sha256-ab026e75dd18ed3c4e02355cb19ade60c1aa53250f6204b3a8d090218d1573d3"
+    "fileHash": "sha256-2c7813632c35dc645d652c03923124455b8acde7a8454cc922e65670b6ecf4b8"
   },
   {
     "name": "SeyirTURK",
