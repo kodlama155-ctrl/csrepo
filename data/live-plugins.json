@@ -591,10 +591,10 @@
     "name": "Kanal7Canli"
   },
   {
-    "fileHash": "sha256-55f075c4d2aade702eb0878ec0a48456c0eb3fb9d91064218e6dfb9a8548bb57",
+    "fileHash": "sha256-8a1231d621f5ed9453144ac3f0ec02b0d268669da9520debfd0a8c2a6a228bbe",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/Kayracs3/Kayra",
-    "fileSize": 19374,
+    "fileSize": 24045,
     "status": 3,
     "language": "tr",
     "authors": [
@@ -603,7 +603,7 @@
     "tvTypes": [
       "Live"
     ],
-    "version": 3,
+    "version": 8,
     "internalName": "KayraLive",
     "description": "Kullanıcının yetkili M3U/M3U8 listeleri için canlı TV sağlayıcısı",
     "url": "https://raw.githubusercontent.com/Kayracs3/Kayra/builds/KayraLive.cs3",
@@ -1029,7 +1029,7 @@
     "fileHash": "sha256-1031d2c3fb301ac4017913c250bc264fba1751dc90368472685d0fddce89755b"
   },
   {
-    "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/FeroxxKekik_RecTV_v118.cs3",
+    "url": "https://raw.githubusercontent.com/feroxx/Kekik-cloudstream/builds/RecTV.cs3",
     "status": 1,
     "version": 118,
     "name": "RecTV",
@@ -1052,6 +1052,28 @@
     "iconUrl": "https://rectv.org.tr/wp-content/uploads/2024/11/rectv-modified.webp",
     "apiVersion": 1,
     "fileHash": "sha256-a2214ae0f06c69a2bea97febf98a058e75fd5437161a8716d9f3f69496dea751"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/rectv-bc_v10.cs3",
+    "status": 1,
+    "version": 10,
+    "name": "rectv-bc",
+    "internalName": "rectv-bc",
+    "authors": [
+      "Dr.Octagon"
+    ],
+    "description": "RecTV BronzeCloud Edition v160 - Canlı TV, Spor, Dizi ve Film",
+    "fileSize": 55243,
+    "repositoryUrl": "https://github.com/dr-octagon/Cloudstream-BronzeCloud",
+    "language": "tr",
+    "tvTypes": [
+      "Movie",
+      "Live",
+      "TvSeries"
+    ],
+    "iconUrl": "https://rectv.org.tr/wp-content/uploads/2024/11/rectv-modified.webp",
+    "apiVersion": 1,
+    "fileHash": "sha256-e111dd59579095b554f661d9b0260a006b91685668766bde0512c3e1b8943de9"
   },
   {
     "iconUrl": "https://rectv.org.tr/wp-content/uploads/2024/11/rectv-modified.webp",
@@ -1584,23 +1606,23 @@
     "name": "TVNET"
   },
   {
-    "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/Vavoo_v9.cs3",
+    "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/Vavoo_v10.cs3",
     "status": 1,
-    "version": 9,
+    "version": 10,
     "name": "Vavoo",
     "internalName": "Vavoo",
     "authors": [
       "Dr.Octagon"
     ],
     "description": "Vavoo canlı TV eklentisi. Türkiye ve Arnavutluk kanalları kategorili olarak listelenir.",
-    "fileSize": 52689,
+    "fileSize": 51043,
     "repositoryUrl": "https://github.com/dr-octagon/Cloudstream-BronzeCloud",
     "tvTypes": [
       "Live"
     ],
     "iconUrl": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/master/Vavoo/Vavoo.jpg",
     "apiVersion": 1,
-    "fileHash": "sha256-0ff74465ff319c6de377fa045b25ed1236081fc9b6700c2dfe80e13b8e722f3a"
+    "fileHash": "sha256-fad9f90d1ec05165ad778b836d32b4743ab070c26246759521fe5e625b1548ff"
   },
   {
     "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/BTVault_vavooSpor_v3.cs3",
