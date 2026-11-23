@@ -2,22 +2,23 @@
   {
     "internalName": "AcikTV",
     "name": "AcikTV",
-    "version": 1001,
-    "url": "https://raw.githubusercontent.com/merb2y/cs-builds/builds/AcikTV.cs3",
-    "fileHash": "sha256-8b9863850cc984c57a416403060be153feb5cbed820445c17e4f2e94bc0004b6",
-    "fileSize": 21783,
+    "version": 1002,
+    "url": "https://raw.githubusercontent.com/merb2y/cloudstream-tr-repo/main/plugins/AcikTV.cs3",
+    "fileHash": "sha256-9fb997192ca334f1acb21124cb193a2544f918e84bcbe3f4f3b8c0d3f38e1a06",
+    "fileSize": 22034,
     "status": 1,
     "apiVersion": 1,
     "language": "tr",
     "authors": [
-      "CS"
+      "merby",
+      "keyiflerolsun"
     ],
-    "description": "Açık TV - Ulusal ve yerel televizyon kanalları",
+    "description": "Açık TV - iptv-org Türkiye kanal listesi (172 kanal)",
     "tvTypes": [
       "Live"
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=iptv-org.github.io&sz=%size%",
-    "repositoryUrl": "https://github.com/merb2y/cs-builds"
+    "repositoryUrl": "https://raw.githubusercontent.com/merb2y/cloudstream-tr-repo/main"
   },
   {
     "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/TurkSpor_ArdaSpor_v12.cs3",
@@ -110,7 +111,7 @@
       "berkdemir18"
     ],
     "description": "Turkce film, dizi, anime, belgesel ve canli TV kaynaklarinin tamamini tek eklentide toplayan BerkStream medya merkezi.",
-    "fileSize": 1727418,
+    "fileSize": 1862918,
     "repositoryUrl": "https://github.com/berkdemir18/BerkStream-Hub",
     "language": "tr",
     "tvTypes": [
@@ -125,7 +126,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/berkdemir18/BerkStream-Hub/main/assets/berkstream-icon.png",
     "apiVersion": 1,
-    "fileHash": "sha256-a369f96871bccf85f19975ee2dfecc98d84c500daa86cdb7fcb0d07fdd4af5e1"
+    "fileHash": "sha256-123146a5f315ced8036fe54510edc2a4b740aa64ad74e847ce78dba5953b3f08"
   },
   {
     "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/BetmatikTV.cs3?v=ff17447c948b",
@@ -190,22 +191,43 @@
   {
     "internalName": "CanliTV",
     "name": "CanliTV",
-    "version": 1010,
-    "url": "https://raw.githubusercontent.com/merb2y/cs-builds/builds/CanliTV.cs3",
-    "fileHash": "sha256-4eb5760947f673c98d19a22967e8cc8bb433d77f254469c21616873902b9c6fa",
-    "fileSize": 20430,
+    "version": 1012,
+    "url": "https://raw.githubusercontent.com/merb2y/cloudstream-tr-repo/main/plugins/CanliTV.cs3",
+    "fileHash": "sha256-e127062c81bf34dd70186f2eefd10f24b520311035f878248ac6e7377db4b3cd",
+    "fileSize": 21439,
     "status": 1,
     "apiVersion": 1,
     "language": "tr",
     "authors": [
-      "CS"
+      "Adippe",
+      "keyiflerolsun"
     ],
-    "description": "Canlı TV - Ulusal televizyon kanalları",
+    "description": "Canlı TV",
     "tvTypes": [
       "Live"
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=tr.canlitv.team&sz=%size%",
-    "repositoryUrl": "https://github.com/merb2y/cs-builds"
+    "repositoryUrl": "https://raw.githubusercontent.com/merb2y/cloudstream-tr-repo/main"
+  },
+  {
+    "internalName": "CanliYayinKanallari",
+    "name": "CanliYayinKanallari",
+    "version": 4,
+    "url": "https://raw.githubusercontent.com/merb2y/cloudstream-tr-repo/main/plugins/CanliYayinKanallari.cs3",
+    "fileHash": "sha256-bd796121bbd9bc30350a06c8505e4a95e70206667df8c1c897115ed905e628ff",
+    "fileSize": 14208,
+    "status": 1,
+    "apiVersion": 1,
+    "language": "tr",
+    "authors": [
+      "F0Rextasy"
+    ],
+    "description": "CanliYayinKanallari — Türkçe canlı TV (seçilmiş HLS)",
+    "tvTypes": [
+      "Live"
+    ],
+    "iconUrl": "https://www.google.com/s2/favicons?domain=tr.canlitv.team&sz=%size%",
+    "repositoryUrl": "https://raw.githubusercontent.com/merb2y/cloudstream-tr-repo/main"
   },
   {
     "name": "Catcast TV",
@@ -296,22 +318,23 @@
   {
     "internalName": "DunyaTV",
     "name": "DunyaTV",
-    "version": 1001,
-    "url": "https://raw.githubusercontent.com/merb2y/cs-builds/builds/DunyaTV.cs3",
-    "fileHash": "sha256-5f7be28588f4ab6fc9f86b6739cad40d44412fd4b8e71488bb882e9bcea914ab",
-    "fileSize": 21780,
+    "version": 1002,
+    "url": "https://raw.githubusercontent.com/merb2y/cloudstream-tr-repo/main/plugins/DunyaTV.cs3",
+    "fileHash": "sha256-0614ebf117a767651ba92217fed316abafaf0b941b3be8169157dbf1c9c22d50",
+    "fileSize": 22035,
     "status": 1,
     "apiVersion": 1,
     "language": "tr",
     "authors": [
-      "CS"
+      "merby",
+      "keyiflerolsun"
     ],
-    "description": "Dünya TV - Uluslararası televizyon kanalları",
+    "description": "Dünya TV - Türkçe yayın yapan uluslararası kanallar (iptv-org)",
     "tvTypes": [
       "Live"
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=iptv-org.github.io&sz=%size%",
-    "repositoryUrl": "https://github.com/merb2y/cs-builds"
+    "repositoryUrl": "https://raw.githubusercontent.com/merb2y/cloudstream-tr-repo/main"
   },
   {
     "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/GinikoCanli.cs3",
@@ -547,6 +570,27 @@
     "iconUrl": "https://www.jestyayin970.com/logo.png",
     "apiVersion": 1,
     "fileHash": "sha256-b42b08a9105f61305057fa928f01f7eff94e95fba04fd4dbaba7a37d990aacfa"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/KacakSpor.cs3?v=7932cf040989",
+    "status": 3,
+    "version": 1,
+    "name": "KacakSpor",
+    "internalName": "KacakSpor",
+    "authors": [
+      "Wiojelt"
+    ],
+    "description": "Kacakspor canli spor kanallari ve kesintisiz mac yayinlari",
+    "fileSize": 158964,
+    "repositoryUrl": "https://github.com/Wiojelt/TurkSpor",
+    "language": "tr",
+    "tvTypes": [
+      "Live"
+    ],
+    "apiVersion": 1,
+    "fileHash": "sha256-7932cf04098961f00c646efd54e4ab6fa564d8cad6bb08fba7d2f6754d17fdf0",
+    "filesize": 158964,
+    "hash": "7932cf04098961f00c646efd54e4ab6fa564d8cad6bb08fba7d2f6754d17fdf0"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=kanal7.com&sz=%size%",
@@ -843,22 +887,22 @@
   {
     "internalName": "NetSpor",
     "name": "NetSpor",
-    "version": 3,
-    "url": "https://raw.githubusercontent.com/merb2y/cs-builds/builds/NetSpor.cs3",
-    "fileHash": "sha256-deb3fd8653edc6491c58810fc3d7bb5352934a5aa12d8d12bdcaa65ff94b94a0",
-    "fileSize": 21067,
+    "version": 5,
+    "url": "https://raw.githubusercontent.com/merb2y/cloudstream-tr-repo/main/plugins/NetSpor.cs3",
+    "fileHash": "sha256-619719ae517c09a02042025870847ef7defd8f881d82e7f4b0a33a20117058e5",
+    "fileSize": 20647,
     "status": 1,
     "apiVersion": 1,
     "language": "tr",
     "authors": [
-      "CS"
+      "merby"
     ],
-    "description": "NetSpor - 1080p canlı spor yayınları",
+    "description": "NetSpor & MahsunSports - 1080p beIN Sports 1-5 ve CanlÄ± Spor YayÄ±nlarÄ±",
     "tvTypes": [
       "Live"
     ],
-    "iconUrl": "https://www.google.com/s2/favicons?domain=mackolik.com&sz=128",
-    "repositoryUrl": "https://github.com/merb2y/cs-builds"
+    "iconUrl": "https://raw.githubusercontent.com/merb1y/cloudstream-tr-repo/main/assets/logos/bein3.png",
+    "repositoryUrl": "https://raw.githubusercontent.com/merb2y/cloudstream-tr-repo/main"
   },
   {
     "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/NetVGold.cs3?v=d1bf7dcba3da",
@@ -1076,6 +1120,26 @@
     "name": "RecTVBC"
   },
   {
+    "internalName": "SelcukSporLive",
+    "name": "SelcukSporLive",
+    "version": 1003,
+    "url": "https://raw.githubusercontent.com/merb2y/cloudstream-tr-repo/main/plugins/SelcukSporLive.cs3",
+    "fileHash": "sha256-748bb504db2a57b4fe7a3a2e205b63fc4e2ce69915db65bc8b98d1e6c9bf8176",
+    "fileSize": 20041,
+    "status": 1,
+    "apiVersion": 1,
+    "language": "tr",
+    "authors": [
+      "merby"
+    ],
+    "description": "SporExtra - Domates/PatronSkor + MahsunSports çoklu sunucu ile beIN Sports 1-5, S Sport 1-2, Tivibu Spor 1-3, Smart Spor, Tabii Spor canlı maç yayınları",
+    "tvTypes": [
+      "Live"
+    ],
+    "iconUrl": "https://raw.githubusercontent.com/merb1y/cloudstream-tr-repo/main/assets/logos/bein1.png",
+    "repositoryUrl": "https://raw.githubusercontent.com/merb2y/cloudstream-tr-repo/main"
+  },
+  {
     "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/TurkSpor_SelcukSports_v12.cs3",
     "status": 3,
     "version": 12,
@@ -1117,27 +1181,6 @@
     "apiVersion": 1,
     "filesize": 219696,
     "fileHash": "sha256-eb79546afa084edc1881087bd7abf45ade7335965db61a245e2b4103b5b61ee3"
-  },
-  {
-    "iconUrl": "https://www.google.com/s2/favicons?domain=www.showtv.com.tr&sz=%size%",
-    "fileHash": "sha256-2d6d2c3b91cc9a12e43decf459d91632269041f955ebc07d002269896402ffb6",
-    "apiVersion": 1,
-    "repositoryUrl": "https://github.com/lepotane/MRC-builds",
-    "fileSize": 26028,
-    "status": 1,
-    "language": "tr",
-    "authors": [
-      "MRC"
-    ],
-    "tvTypes": [
-      "TvSeries",
-      "Live"
-    ],
-    "version": 4,
-    "internalName": "Showtv",
-    "description": "Show TV - Diziler, programlar ve canlı yayın.",
-    "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/Showtv.cs3",
-    "name": "Showtv"
   },
   {
     "iconUrl": "https://cdn.jsdelivr.net/gh/Wiojelt/TurkSpor@main/assets/logo.png",
@@ -1412,24 +1455,24 @@
     "name": "TrtBelgesel"
   },
   {
-    "iconUrl": "https://www.google.com/s2/favicons?domain=trt1.com.tr&sz=%size%",
-    "fileHash": "sha256-426e053f5a603bf53abe33768ad39925b3a9ef161ce6b332da80e3fe8c0fcd93",
-    "apiVersion": 1,
-    "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
-    "fileSize": 9611,
+    "internalName": "TRTCanli",
+    "name": "TRTCanli",
+    "version": 1,
+    "url": "https://raw.githubusercontent.com/merb2y/cloudstream-tr-repo/main/plugins/TRTCanli.cs3",
+    "fileHash": "sha256-45944ab2962a580fc5483dda09d74c5216be368f3abca6814519a5eb9948e169",
+    "fileSize": 10183,
     "status": 1,
+    "apiVersion": 1,
     "language": "tr",
     "authors": [
-      "JustSadY"
+      "merby"
     ],
+    "description": "TRT Canlı - Resmi TRT 1, TRT 2, TRT Spor, TRT Spor Yıldız, TRT Haber, TRT Belgesel, TRT Çocuk ve Diğer TRT Kanalları",
     "tvTypes": [
       "Live"
     ],
-    "version": 1,
-    "internalName": "TRTCanli",
-    "description": "TRT'nin resmî canlı TV kanallarını tek listede izleyin",
-    "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/TRTCanli.cs3",
-    "name": "TRTCanli"
+    "iconUrl": "https://raw.githubusercontent.com/merb1y/cloudstream-tr-repo/main/assets/logos/trtspor.png",
+    "repositoryUrl": "https://raw.githubusercontent.com/merb2y/cloudstream-tr-repo/main"
   },
   {
     "url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepofull/builds/TrtCocuk.cs3",
@@ -1503,22 +1546,23 @@
   {
     "internalName": "TurkiyeTV",
     "name": "TurkiyeTV",
-    "version": 1001,
-    "url": "https://raw.githubusercontent.com/merb2y/cs-builds/builds/TurkiyeTV.cs3",
-    "fileHash": "sha256-01944495d3290de745c70f6c556b8c1d8d2040149fd5d12b3978656f9aec8849",
-    "fileSize": 21769,
+    "version": 1002,
+    "url": "https://raw.githubusercontent.com/merb2y/cloudstream-tr-repo/main/plugins/TurkiyeTV.cs3",
+    "fileHash": "sha256-433d89cee9e8c0f2aad0d5574119d61538904fcfab0df5034ec7acb9c22f8454",
+    "fileSize": 22059,
     "status": 1,
     "apiVersion": 1,
     "language": "tr",
     "authors": [
-      "CS"
+      "merby",
+      "keyiflerolsun"
     ],
-    "description": "Türkiye TV - TRT ve ulusal kanalların canlı yayın listesi",
+    "description": "Türkiye TV - TRT ve ulusal kanalların canlı yayın listesi (Free-TV)",
     "tvTypes": [
       "Live"
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=trt1.com.tr&sz=%size%",
-    "repositoryUrl": "https://github.com/merb2y/cs-builds"
+    "repositoryUrl": "https://raw.githubusercontent.com/merb2y/cloudstream-tr-repo/main"
   },
   {
     "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/TurkSpor_TurkSpor_v6.cs3",
@@ -1705,5 +1749,25 @@
     "fileHash": "sha256-390973708658c0debebe7f76d6d7f6be3b788dc57d4d2ef18789aa45b71dfd63",
     "filesize": 219051,
     "hash": "390973708658c0debebe7f76d6d7f6be3b788dc57d4d2ef18789aa45b71dfd63"
+  },
+  {
+    "internalName": "ZirveSpor",
+    "name": "ZirveSpor",
+    "version": 1,
+    "url": "https://raw.githubusercontent.com/merb2y/cloudstream-tr-repo/main/plugins/ZirveSpor.cs3",
+    "fileHash": "sha256-65d61fbc420d2ee096361640639822b650ec7ca8d23dbaab16a91f83530ea916",
+    "fileSize": 16915,
+    "status": 1,
+    "apiVersion": 1,
+    "language": "tr",
+    "authors": [
+      "merby"
+    ],
+    "description": "ZirveSpor - Canlı beIN Sports 1-5, Max 1-2, S Sport, Tivibu Spor, Smart Spor ve Günlük Maç Yayınları",
+    "tvTypes": [
+      "Live"
+    ],
+    "iconUrl": "https://raw.githubusercontent.com/merb1y/cloudstream-tr-repo/main/assets/logos/bein1.png",
+    "repositoryUrl": "https://raw.githubusercontent.com/merb2y/cloudstream-tr-repo/main"
   }
 ]

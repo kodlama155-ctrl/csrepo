@@ -8,16 +8,18 @@ Otomatik doğrulanan ve aktif Türkçe CloudStream eklenti depoları:
 - [BigBullApp](cloudstreamrepo://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/master/repo.json) — RepoScore 93.2/100 — 112 eklenti
 - [TurkSpor](cloudstreamrepo://raw.githubusercontent.com/Wiojelt/TurkSpor/builds/repo.json) — RepoScore 91.6/100 — 46 eklenti — ana kaynak
 - [WioSinema](cloudstreamrepo://raw.githubusercontent.com/Wiojelt/WioSinema/builds/repo.json) — RepoScore 89.3/100 — 42 eklenti — ana kaynak
-- [Turkish Providers Repository | @feroxxcs3](cloudstreamrepo://raw.githubusercontent.com/feroxx/Kekik-cloudstream/builds/repo.json) — RepoScore 89.0/100 — 37 eklenti — ana kaynak, fork
+- [Turkish Providers Repository | @feroxxcs3](cloudstreamrepo://raw.githubusercontent.com/feroxx/Kekik-cloudstream/builds/repo.json) — RepoScore 88.9/100 — 37 eklenti — ana kaynak, fork
 - [WioSpor](cloudstreamrepo://raw.githubusercontent.com/Wiojelt/WioSpor/builds/repo.json) — RepoScore 88.8/100 — 29 eklenti — ana kaynak
-- [Kraptor'un CloudStream Reposu | @kraptor123](cloudstreamrepo://raw.githubusercontent.com/aytzey/cs-kraptor/master/repo.json) — RepoScore 88.4/100 — 68 eklenti
+- [Kraptor'un CloudStream Reposu | @kraptor123](cloudstreamrepo://raw.githubusercontent.com/aytzey/cs-kraptor/master/repo.json) — RepoScore 87.7/100 — 48 eklenti
 - [MRC - CloudStream Türkçe Eklenti Deposu](cloudstreamrepo://raw.githubusercontent.com/lepotane/MRC-builds/builds/repo.json) — RepoScore 87.5/100 — 73 eklenti — ana kaynak
 - [NeO | Türkçe Eklentiler](cloudstreamrepo://raw.githubusercontent.com/neoser1984/neowatch/main/repo.json) — RepoScore 86.2/100 — 37 eklenti
+- [Merby TÃ¼rkÃ§e Repo](cloudstreamrepo://raw.githubusercontent.com/merb2y/cloudstream-tr-repo/main/repo.json) — RepoScore 85.0/100 — 73 eklenti
 - [Cloudstream-Lykia | Türkçe Eklentiler](cloudstreamrepo://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/master/repo.json) — RepoScore 84.9/100 — 66 eklenti
 - [BTVault](cloudstreamrepo://raw.githubusercontent.com/baristomruk-max/BTVault/main/repo.json) — RepoScore 84.7/100 — 31 eklenti — ana kaynak
 - [CloudStream Süper Repo](cloudstreamrepo://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/repo.json) — RepoScore 84.6/100 — 87 eklenti
 - [Turkish Providers Repository | @KekikAkademi @Kayracs3](cloudstreamrepo://raw.githubusercontent.com/Kayracs3/Kayra/master/repo.json) — RepoScore 84.6/100 — 41 eklenti
 - [Safarxe CloudStream](cloudstreamrepo://raw.githubusercontent.com/safarxe/CloudStream/builds/repo.json) — RepoScore 83.2/100 — 52 eklenti
+- [CloudStream TÃ¼rkÃ§e Eklenti Deposu](cloudstreamrepo://raw.githubusercontent.com/merb2y/cs-builds/builds/repo.json) — RepoScore 83.2/100 — 41 eklenti
 - [WioDrama](cloudstreamrepo://raw.githubusercontent.com/Wiojelt/WioDrama/builds/repo.json) — RepoScore 82.9/100 — 20 eklenti — ana kaynak
 - [CloudStream TR](cloudstreamrepo://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/repo.json) — RepoScore 82.8/100 — 25 eklenti — ana kaynak
 - [Kartaloglu-cs](cloudstreamrepo://raw.githubusercontent.com/Bymesut1/Kartaloglu-cs/main/repo.json) — RepoScore 82.2/100 — 36 eklenti
@@ -29,7 +31,6 @@ Otomatik doğrulanan ve aktif Türkçe CloudStream eklenti depoları:
 - [WioKids](cloudstreamrepo://raw.githubusercontent.com/Wiojelt/WioKids/builds/repo.json) — RepoScore 79.6/100 — 11 eklenti — ana kaynak
 - [arcilingir](cloudstreamrepo://raw.githubusercontent.com/arcilingir/Dizi_Film_2/master/repo.json) — RepoScore 79.5/100 — 41 eklenti
 - [blackhope01](cloudstreamrepo://raw.githubusercontent.com/blackhope01/cloudstream-plugins/main/repo.json) — RepoScore 79.3/100 — 13 eklenti
-- [CloudStream TÃ¼rkÃ§e Eklenti Deposu](cloudstreamrepo://raw.githubusercontent.com/merb2y/cs-builds/builds/repo.json) — RepoScore 79.0/100 — 35 eklenti
 - [HR Cloudstream Repo v1](cloudstreamrepo://raw.githubusercontent.com/hrtestingx/hrcsrepo/master/repo.json) — RepoScore 79.0/100 — 8 eklenti
 - [WioCinema](cloudstreamrepo://raw.githubusercontent.com/Wiojelt/WioCinema/builds/repo.json) — RepoScore 77.6/100 — 14 eklenti
 - [CloudStream Türkçe Eklentileri](cloudstreamrepo://raw.githubusercontent.com/sanjarkola-collab/cloudstream-turkce-dist/main/repo.json) — RepoScore 77.6/100 — 13 eklenti
@@ -42,6 +43,7 @@ Otomatik doğrulanan ve aktif Türkçe CloudStream eklenti depoları:
 - [HR Cloudstream Repo Full](cloudstreamrepo://raw.githubusercontent.com/hrtestingx/hrcsrepofull/master/repo.json) — RepoScore 75.9/100 — 97 eklenti
 - [Emir Repository](cloudstreamrepo://raw.githubusercontent.com/kodlama155-ctrl/emir/main/repo.json) — RepoScore 75.2/100 — 1 eklenti — ana kaynak
 - [CloudStream Film Repo](cloudstreamrepo://raw.githubusercontent.com/berr49300/cloudstream-film-repo/builds/repo.json) — RepoScore 74.9/100 — 7 eklenti
+- [Vahşi Kelebek](cloudstreamrepo://raw.githubusercontent.com/castiel430/vahsikelebek/main/repo.json) — RepoScore 74.8/100 — 138 eklenti
 - [Aslan - Türkçe Yayın Eklentileri](cloudstreamrepo://raw.githubusercontent.com/miskin1702/aslan-dist/builds/repo.json) — RepoScore 74.8/100 — 14 eklenti
 - [Aslan - Türkçe Yayın Eklentileri](cloudstreamrepo://raw.githubusercontent.com/miskin1702/aslan-pub/main/repo.json) — RepoScore 74.8/100 — 14 eklenti
 - [Galip TV](cloudstreamrepo://raw.githubusercontent.com/galipgokalp/tv-cloudstream/builds/repo.json) — RepoScore 74.8/100 — 2 eklenti
