@@ -15,6 +15,7 @@ Otomatik doğrulanan ve aktif Türkçe CloudStream eklenti depoları:
 - [NeO | Türkçe Eklentiler](cloudstreamrepo://raw.githubusercontent.com/neoser1984/neowatch/main/repo.json) — RepoScore 86.2/100 — 37 eklenti
 - [Merby TÃ¼rkÃ§e Repo](cloudstreamrepo://raw.githubusercontent.com/merb2y/cloudstream-tr-repo/main/repo.json) — RepoScore 85.0/100 — 73 eklenti
 - [Cloudstream-Lykia | Türkçe Eklentiler](cloudstreamrepo://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/master/repo.json) — RepoScore 84.9/100 — 66 eklenti
+- [Vahşi Kelebek](cloudstreamrepo://raw.githubusercontent.com/castiel430/vahsikelebek-builds/main/repo.json) — RepoScore 84.8/100 — 138 eklenti
 - [BTVault](cloudstreamrepo://raw.githubusercontent.com/baristomruk-max/BTVault/main/repo.json) — RepoScore 84.7/100 — 31 eklenti — ana kaynak
 - [CloudStream Süper Repo](cloudstreamrepo://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/repo.json) — RepoScore 84.6/100 — 87 eklenti
 - [Turkish Providers Repository | @KekikAkademi @Kayracs3](cloudstreamrepo://raw.githubusercontent.com/Kayracs3/Kayra/master/repo.json) — RepoScore 84.6/100 — 41 eklenti
