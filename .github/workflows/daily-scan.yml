@@ -50,6 +50,10 @@ jobs:
         # Keep per-stage records outside the repository so they can be uploaded for analysis.
         run: python scanner/discover.py --state-dir "$RUNNER_TEMP/scan-state"
 
+      # Telefon köprüsünün yazdığı gerçek çalışma raporunu listeye işle.
+      - name: Merge bridge health
+        run: python scanner/bridge_health.py
+
       # Stage records (inputs, results, durations) for debugging; kept 15 days, never committed.
       - name: Upload stage records
         if: always()
@@ -63,12 +67,12 @@ jobs:
 
       - name: Commit scan results
         run: |
-          if git diff --quiet -- README.md repo.json plugins.json repo-x92.json plugins-x92.json repos-db.json catalog.md data/catalog.json data/plugin-health.json data/live-plugins.json data/ranking.json data/repos.json data/turkish_all.json data/global.json data/candidates.json data/changes.json data/owner-probes.json data/code-search.json; then
+          if git diff --quiet -- README.md repo.json plugins.json repo-x92.json plugins-x92.json repos-db.json catalog.md data/catalog.json data/plugin-health.json data/bridge-health.json data/live-plugins.json data/ranking.json data/repos.json data/turkish_all.json data/global.json data/candidates.json data/changes.json data/owner-probes.json data/code-search.json; then
             echo "No changes."
             exit 0
           fi
           git config user.name "csrepo-bot"
           git config user.email "csrepo-bot@users.noreply.github.com"
-          git add README.md repo.json plugins.json repo-x92.json plugins-x92.json repos-db.json catalog.md data/catalog.json data/plugin-health.json data/live-plugins.json data/ranking.json data/repos.json data/turkish_all.json data/global.json data/candidates.json data/changes.json data/owner-probes.json data/code-search.json
+          git add README.md repo.json plugins.json repo-x92.json plugins-x92.json repos-db.json catalog.md data/catalog.json data/plugin-health.json data/bridge-health.json data/live-plugins.json data/ranking.json data/repos.json data/turkish_all.json data/global.json data/candidates.json data/changes.json data/owner-probes.json data/code-search.json
           git commit -m "chore: update CloudStream repo scan"
           git push
