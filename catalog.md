@@ -44,7 +44,6 @@ Otomatik doğrulanan ve aktif Türkçe CloudStream eklenti depoları:
 - [HR Cloudstream Repo Full](cloudstreamrepo://raw.githubusercontent.com/hrtestingx/hrcsrepofull/master/repo.json) — RepoScore 75.9/100 — 97 eklenti
 - [Emir Repository](cloudstreamrepo://raw.githubusercontent.com/kodlama155-ctrl/emir/main/repo.json) — RepoScore 75.2/100 — 1 eklenti — ana kaynak
 - [CloudStream Film Repo](cloudstreamrepo://raw.githubusercontent.com/berr49300/cloudstream-film-repo/builds/repo.json) — RepoScore 74.9/100 — 7 eklenti
-- [Aslan - Türkçe Yayın Eklentileri](cloudstreamrepo://raw.githubusercontent.com/miskin1702/aslan-dist/builds/repo.json) — RepoScore 74.8/100 — 14 eklenti
 - [Aslan - Türkçe Yayın Eklentileri](cloudstreamrepo://raw.githubusercontent.com/miskin1702/aslan-pub/main/repo.json) — RepoScore 74.8/100 — 14 eklenti
 - [Galip TV](cloudstreamrepo://raw.githubusercontent.com/galipgokalp/tv-cloudstream/builds/repo.json) — RepoScore 74.8/100 — 2 eklenti
 - [TurkSinema](cloudstreamrepo://raw.githubusercontent.com/pisovo-5031/TurkSinema/main/repo.json) — RepoScore 74.6/100 — 122 eklenti
@@ -56,6 +55,7 @@ Otomatik doğrulanan ve aktif Türkçe CloudStream eklenti depoları:
 - [Ozel CloudStream Depom](cloudstreamrepo://raw.githubusercontent.com/emrahonuraras/cloudstream-ozel-depo/main/repo.json) — RepoScore 72.8/100 — 4 eklenti
 - [Mustafa CloudStream Deposu](cloudstreamrepo://raw.githubusercontent.com/vustomusto/cs-eklentilerim/builds/repo.json) — RepoScore 72.2/100 — 1 eklenti
 - [WioKitap](cloudstreamrepo://raw.githubusercontent.com/Wiojelt/WioKitap/main/repo.json) — RepoScore 71.6/100 — 8 eklenti
+- [Aslan - Türkçe Yayın Eklentileri](cloudstreamrepo://raw.githubusercontent.com/miskin1702/aslan-dist/builds/repo.json) — RepoScore 69.8/100 — 14 eklenti
 - [cstest](cloudstreamrepo://raw.githubusercontent.com/ctnkyaumt/cstest/master/repo.json) — RepoScore 69.8/100 — 3 eklenti
 - [TurkSinema](cloudstreamrepo://raw.githubusercontent.com/arcilingir/TurkSinema/main/repo.json) — RepoScore 69.6/100 — 122 eklenti — fork
 - [arcilingir](cloudstreamrepo://raw.githubusercontent.com/arcilingir/nik-cloudstream/master/repo.json) — RepoScore 69.5/100 — 41 eklenti — fork
