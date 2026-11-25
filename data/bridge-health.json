@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-25T18:28:16Z",
+  "generated_at": "2026-11-25T19:27:04Z",
   "source": "https://raw.githubusercontent.com/kodlama155-ctrl/csrepo/main/plugins-x92.json",
-  "total": 360,
-  "done": 360,
-  "ok": 179,
+  "total": 351,
+  "done": 351,
+  "ok": 173,
   "empty": null,
-  "dead": 47,
-  "matched": 348,
+  "dead": 53,
+  "matched": 350,
   "plugins": [
     {
       "name": "0 WioSinema",
@@ -425,22 +425,6 @@
       "error": ""
     },
     {
-      "name": "BerkStream",
-      "internalName": "BerkStream",
-      "url": "https://raw.githubusercontent.com/berkdemir18/BerkStream-Hub/builds/BerkStream.cs3",
-      "version": 47,
-      "hash": "",
-      "status": "ok",
-      "home": 192,
-      "search": 0,
-      "links": 1,
-      "verified": 1,
-      "providers": 95,
-      "ms": 33674,
-      "checkedAt": 1795627030879,
-      "error": ""
-    },
-    {
       "name": "BetmatikTV",
       "internalName": "BetmatikTV",
       "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/BetmatikTV.cs3?v=ff17447c948b",
@@ -758,6 +742,22 @@
       "providers": 1,
       "ms": 8796,
       "checkedAt": 1795627208283,
+      "error": ""
+    },
+    {
+      "name": "CizgiPortal",
+      "internalName": "CizgiPortal",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/CizgiPortal.cs3?v=5cc9e719367b",
+      "version": 4,
+      "hash": "5cc9e719367b1126f22e5d0bf3c6202fd75c400e5c15fce89c5776b010ece5cd",
+      "status": "unknown",
+      "home": 0,
+      "search": 0,
+      "links": 0,
+      "verified": 0,
+      "providers": 1,
+      "ms": 30848,
+      "checkedAt": 1795633060885,
       "error": ""
     },
     {
@@ -1481,20 +1481,20 @@
       "error": ""
     },
     {
-      "name": "DiziPal",
-      "internalName": "DiziPal",
-      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/DiziPal.cs3",
-      "version": 91,
+      "name": "Dizipal",
+      "internalName": "Dizipal",
+      "url": "https://raw.githubusercontent.com/Jung1330/StreamTest/builds/Dizipal.cs3",
+      "version": 1,
       "hash": "",
-      "status": "unknown",
+      "status": "dead",
       "home": 0,
       "search": 0,
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 40600,
-      "checkedAt": 1795627530897,
-      "error": ""
+      "ms": 30430,
+      "checkedAt": 1795633061303,
+      "error": "SSL handshake aborted: ssl=0x7534416488: I/O error during system call, Connection reset by peer"
     },
     {
       "name": "DiziPal (Orijinal) [Feroxx Kekik]",
@@ -1526,22 +1526,6 @@
       "providers": 1,
       "ms": 15694,
       "checkedAt": 1795627574494,
-      "error": ""
-    },
-    {
-      "name": "DiziPal2",
-      "internalName": "DiziPal2",
-      "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/DiziPal2.cs3",
-      "version": 9,
-      "hash": "",
-      "status": "unknown",
-      "home": 0,
-      "search": 0,
-      "links": 0,
-      "verified": 0,
-      "providers": 1,
-      "ms": 13711,
-      "checkedAt": 1795627576478,
       "error": ""
     },
     {
@@ -2585,22 +2569,6 @@
       "error": ""
     },
     {
-      "name": "Hdkore",
-      "internalName": "Hdkore",
-      "url": "https://raw.githubusercontent.com/Jung1330/StreamTest/builds/Hdkore.cs3",
-      "version": 4,
-      "hash": "",
-      "status": "ok",
-      "home": 128,
-      "search": 0,
-      "links": 1,
-      "verified": 1,
-      "providers": 1,
-      "ms": 6037,
-      "checkedAt": 1795628241246,
-      "error": ""
-    },
-    {
       "name": "HiDrama",
       "internalName": "HiDrama",
       "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/HiDrama.cs3?v=dd7a806741bf",
@@ -2649,54 +2617,6 @@
       "error": ""
     },
     {
-      "name": "HR Anime",
-      "internalName": "HRAnime",
-      "url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepo/builds/HRAnime.cs3",
-      "version": 6,
-      "hash": "",
-      "status": "ok",
-      "home": 58,
-      "search": 0,
-      "links": 3,
-      "verified": 2,
-      "providers": 8,
-      "ms": 36106,
-      "checkedAt": 1795628286128,
-      "error": ""
-    },
-    {
-      "name": "HR AsianDrama",
-      "internalName": "HRAsianDrama",
-      "url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepo/builds/HRAsianDrama.cs3",
-      "version": 8,
-      "hash": "",
-      "status": "alive",
-      "home": 132,
-      "search": 0,
-      "links": 5,
-      "verified": 0,
-      "providers": 6,
-      "ms": 34381,
-      "checkedAt": 1795628287853,
-      "error": ""
-    },
-    {
-      "name": "HR Kids",
-      "internalName": "HRKids",
-      "url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepo/builds/HRKids.cs3",
-      "version": 6,
-      "hash": "",
-      "status": "alive",
-      "home": 53,
-      "search": 0,
-      "links": 0,
-      "verified": 0,
-      "providers": 3,
-      "ms": 33011,
-      "checkedAt": 1795628289223,
-      "error": "Unable to resolve host \"www.trtcocuk.net.tr2\": No address associated with hostname"
-    },
-    {
       "name": "HR Live",
       "internalName": "HRLive",
       "url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepo/builds/HRLive.cs3",
@@ -2727,22 +2647,6 @@
       "ms": 12565,
       "checkedAt": 1795628323537,
       "error": "Eklenti yüklenemedi: Failed resolution of: Lcom/google/gson/Gson;"
-    },
-    {
-      "name": "HR Series",
-      "internalName": "HRSeries",
-      "url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepo/builds/HRSeries.cs3",
-      "version": 7,
-      "hash": "",
-      "status": "ok",
-      "home": 4894,
-      "search": 0,
-      "links": 2,
-      "verified": 2,
-      "providers": 20,
-      "ms": 11176,
-      "checkedAt": 1795628324926,
-      "error": ""
     },
     {
       "name": "HR ShortDrama",
@@ -2971,18 +2875,18 @@
     {
       "name": "JetFilmizle",
       "internalName": "JetFilmizle",
-      "url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepofull/builds/JetFilmizle.cs3",
-      "version": 60,
+      "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film_2/builds/JetFilmizle.cs3",
+      "version": 32,
       "hash": "",
-      "status": "alive",
-      "home": 550,
+      "status": "dead",
+      "home": 0,
       "search": 0,
-      "links": 3,
+      "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 50391,
-      "checkedAt": 1795628402877,
-      "error": ""
+      "ms": 26918,
+      "checkedAt": 1795633064815,
+      "error": "SSL handshake aborted: ssl=0x7534418588: I/O error during system call, Connection reset by peer"
     },
     {
       "name": "KacakSpor",
@@ -2996,9 +2900,9 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 24338,
-      "checkedAt": 1795628453632,
-      "error": "SSL handshake aborted: ssl=0x755ece1808: I/O error during system call, Connection reset by peer"
+      "ms": 12086,
+      "checkedAt": 1795633278717,
+      "error": "SSL handshake aborted: ssl=0x75583b3308: I/O error during system call, Connection reset by peer"
     },
     {
       "name": "Kanal7Canli",
@@ -3012,8 +2916,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 22652,
-      "checkedAt": 1795628455318,
+      "ms": 10402,
+      "checkedAt": 1795633280401,
       "error": ""
     },
     {
@@ -3028,8 +2932,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 21845,
-      "checkedAt": 1795628456125,
+      "ms": 9176,
+      "checkedAt": 1795633281628,
       "error": "java.security.cert.CertPathValidatorException: Trust anchor for certification path not found."
     },
     {
@@ -3044,8 +2948,8 @@
       "links": 1,
       "verified": 0,
       "providers": 1,
-      "ms": 7826,
-      "checkedAt": 1795628478344,
+      "ms": 8368,
+      "checkedAt": 1795633291169,
       "error": ""
     },
     {
@@ -3060,8 +2964,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 6882,
-      "checkedAt": 1795628479288,
+      "ms": 7621,
+      "checkedAt": 1795633291917,
       "error": ""
     },
     {
@@ -3076,24 +2980,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 5887,
-      "checkedAt": 1795628480283,
-      "error": ""
-    },
-    {
-      "name": "Konflix",
-      "internalName": "Konflix",
-      "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/TurkSinema_Konflix_v1.cs3",
-      "version": 1,
-      "hash": "",
-      "status": "ok",
-      "home": 74,
-      "search": 0,
-      "links": 1,
-      "verified": 1,
-      "providers": 1,
-      "ms": 13613,
-      "checkedAt": 1795628486546,
+      "ms": 6824,
+      "checkedAt": 1795633292714,
       "error": ""
     },
     {
@@ -3108,8 +2996,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 12462,
-      "checkedAt": 1795628487697,
+      "ms": 7885,
+      "checkedAt": 1795633299926,
       "error": "Kool katalog yanıtı: HTTP 500"
     },
     {
@@ -3124,8 +3012,8 @@
       "links": 1,
       "verified": 0,
       "providers": 1,
-      "ms": 11790,
-      "checkedAt": 1795628488369,
+      "ms": 7225,
+      "checkedAt": 1795633300587,
       "error": ""
     },
     {
@@ -3134,15 +3022,15 @@
       "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/KralSporHD.cs3?v=62c6cd0bd055",
       "version": 5,
       "hash": "",
-      "status": "dead",
-      "home": 0,
+      "status": "alive",
+      "home": 7,
       "search": 0,
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 41918,
-      "checkedAt": 1795628500527,
-      "error": "Timed out waiting for 15000 ms"
+      "ms": 6727,
+      "checkedAt": 1795633301085,
+      "error": ""
     },
     {
       "name": "KraptorPlus",
@@ -3153,11 +3041,11 @@
       "status": "ok",
       "home": 320,
       "search": 0,
-      "links": 5,
+      "links": 38,
       "verified": 2,
       "providers": 1,
-      "ms": 41084,
-      "checkedAt": 1795628501361,
+      "ms": 16916,
+      "checkedAt": 1795633308164,
       "error": ""
     },
     {
@@ -3172,8 +3060,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 37655,
-      "checkedAt": 1795628504790,
+      "ms": 14369,
+      "checkedAt": 1795633310711,
       "error": ""
     },
     {
@@ -3188,9 +3076,25 @@
       "links": 1,
       "verified": 0,
       "providers": 1,
-      "ms": 13273,
-      "checkedAt": 1795628542819,
+      "ms": 13424,
+      "checkedAt": 1795633311656,
       "error": ""
+    },
+    {
+      "name": "LeoTV",
+      "internalName": "LeoTV",
+      "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/LeoTV.cs3?v=dbce2939ae71",
+      "version": 2,
+      "hash": "",
+      "status": "dead",
+      "home": 0,
+      "search": 0,
+      "links": 0,
+      "verified": 0,
+      "providers": 0,
+      "ms": 0,
+      "checkedAt": 1795633278617,
+      "error": "eklenti coktu"
     },
     {
       "name": "LiderFilmIzle",
@@ -3204,8 +3108,8 @@
       "links": 1,
       "verified": 0,
       "providers": 1,
-      "ms": 12334,
-      "checkedAt": 1795628543758,
+      "ms": 8743,
+      "checkedAt": 1795633325429,
       "error": ""
     },
     {
@@ -3220,8 +3124,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 11151,
-      "checkedAt": 1795628544941,
+      "ms": 8293,
+      "checkedAt": 1795633325879,
       "error": ""
     },
     {
@@ -3236,8 +3140,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 12230,
-      "checkedAt": 1795628556461,
+      "ms": 6452,
+      "checkedAt": 1795633327721,
       "error": ""
     },
     {
@@ -3252,8 +3156,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 11163,
-      "checkedAt": 1795628557528,
+      "ms": 15066,
+      "checkedAt": 1795633334554,
       "error": ""
     },
     {
@@ -3268,8 +3172,8 @@
       "links": 3,
       "verified": 2,
       "providers": 1,
-      "ms": 10023,
-      "checkedAt": 1795628558668,
+      "ms": 14567,
+      "checkedAt": 1795633335053,
       "error": ""
     },
     {
@@ -3284,8 +3188,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 19342,
-      "checkedAt": 1795628569066,
+      "ms": 14115,
+      "checkedAt": 1795633335505,
       "error": ""
     },
     {
@@ -3294,15 +3198,15 @@
       "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/MahsunSports.cs3?v=25e1f1d1f863",
       "version": 9,
       "hash": "",
-      "status": "ok",
-      "home": 53,
+      "status": "dead",
+      "home": 0,
       "search": 0,
-      "links": 3,
-      "verified": 2,
-      "providers": 1,
-      "ms": 18036,
-      "checkedAt": 1795628570372,
-      "error": ""
+      "links": 0,
+      "verified": 0,
+      "providers": 0,
+      "ms": 0,
+      "checkedAt": 1795633664184,
+      "error": "eklenti coktu"
     },
     {
       "name": "MailRu",
@@ -3310,15 +3214,15 @@
       "url": "https://raw.githubusercontent.com/Bymesut1/Kartaloglu-cs/builds/MailRu.cs3",
       "version": 13,
       "hash": "",
-      "status": "ok",
-      "home": 62,
+      "status": "dead",
+      "home": 0,
       "search": 0,
-      "links": 2,
-      "verified": 2,
-      "providers": 1,
-      "ms": 17215,
-      "checkedAt": 1795628571193,
-      "error": ""
+      "links": 0,
+      "verified": 0,
+      "providers": 0,
+      "ms": 0,
+      "checkedAt": 1795633664184,
+      "error": "eklenti coktu"
     },
     {
       "name": "Matchora Live",
@@ -3333,7 +3237,7 @@
       "verified": 0,
       "providers": 0,
       "ms": 0,
-      "checkedAt": 1795629947179,
+      "checkedAt": 1795633664185,
       "error": "eklenti coktu"
     },
     {
@@ -3342,15 +3246,15 @@
       "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/MedyaHaber.cs3",
       "version": 1,
       "hash": "",
-      "status": "dead",
-      "home": 0,
+      "status": "ok",
+      "home": 20,
       "search": 0,
-      "links": 0,
-      "verified": 0,
-      "providers": 0,
-      "ms": 0,
-      "checkedAt": 1795629947179,
-      "error": "eklenti coktu"
+      "links": 1,
+      "verified": 1,
+      "providers": 1,
+      "ms": 9618,
+      "checkedAt": 1795633664289,
+      "error": ""
     },
     {
       "name": "MegaWio",
@@ -3364,9 +3268,9 @@
       "links": 0,
       "verified": 0,
       "providers": 0,
-      "ms": 0,
-      "checkedAt": 1795629947179,
-      "error": "eklenti coktu"
+      "ms": 9273,
+      "checkedAt": 1795633664634,
+      "error": "saglayici yok"
     },
     {
       "name": "MilliyetTV",
@@ -3380,8 +3284,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 14146,
-      "checkedAt": 1795629947222,
+      "ms": 8916,
+      "checkedAt": 1795633664991,
       "error": "java.security.cert.CertPathValidatorException: Trust anchor for certification path not found."
     },
     {
@@ -3391,13 +3295,13 @@
       "version": 1,
       "hash": "8aac6b2adcf4f331ab3b4897bddfe28ebba62d842ca39ff07ccb4d99257f9c4e",
       "status": "ok",
-      "home": 173,
+      "home": 171,
       "search": 0,
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 12297,
-      "checkedAt": 1795629949072,
+      "ms": 9113,
+      "checkedAt": 1795633674334,
       "error": ""
     },
     {
@@ -3412,8 +3316,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 11295,
-      "checkedAt": 1795629950074,
+      "ms": 8698,
+      "checkedAt": 1795633674749,
       "error": ""
     },
     {
@@ -3422,15 +3326,15 @@
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/MinikaGO.cs3",
       "version": 9,
       "hash": "",
-      "status": "dead",
-      "home": 0,
+      "status": "ok",
+      "home": 42,
       "search": 0,
-      "links": 0,
-      "verified": 0,
-      "providers": 0,
-      "ms": 0,
-      "checkedAt": 1795630147382,
-      "error": "eklenti coktu"
+      "links": 1,
+      "verified": 1,
+      "providers": 1,
+      "ms": 8327,
+      "checkedAt": 1795633675120,
+      "error": ""
     },
     {
       "name": "MoreShort",
@@ -3445,7 +3349,7 @@
       "verified": 0,
       "providers": 0,
       "ms": 0,
-      "checkedAt": 1795630147382,
+      "checkedAt": 1795633885736,
       "error": "eklenti coktu"
     },
     {
@@ -3461,7 +3365,7 @@
       "verified": 0,
       "providers": 0,
       "ms": 0,
-      "checkedAt": 1795630147382,
+      "checkedAt": 1795633885737,
       "error": "eklenti coktu"
     },
     {
@@ -3470,15 +3374,15 @@
       "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/MRC-Naughty.cs3",
       "version": 5,
       "hash": "",
-      "status": "unknown",
+      "status": "dead",
       "home": 0,
       "search": 0,
       "links": 0,
       "verified": 0,
-      "providers": 1,
-      "ms": 30984,
-      "checkedAt": 1795630147528,
-      "error": ""
+      "providers": 0,
+      "ms": 0,
+      "checkedAt": 1795633885737,
+      "error": "eklenti coktu"
     },
     {
       "name": "MRC-Plus",
@@ -3492,24 +3396,8 @@
       "links": 4,
       "verified": 2,
       "providers": 1,
-      "ms": 29933,
-      "checkedAt": 1795630148579,
-      "error": ""
-    },
-    {
-      "name": "MultiStream",
-      "internalName": "MultiStream",
-      "url": "https://raw.githubusercontent.com/vustomusto/cs-eklentilerim/builds/MultiStream.cs3",
-      "version": 7,
-      "hash": "",
-      "status": "alive",
-      "home": 268,
-      "search": 0,
-      "links": 0,
-      "verified": 0,
-      "providers": 2,
-      "ms": 28687,
-      "checkedAt": 1795630149825,
+      "ms": 26901,
+      "checkedAt": 1795633885805,
       "error": ""
     },
     {
@@ -3524,8 +3412,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 11850,
-      "checkedAt": 1795630178943,
+      "ms": 26284,
+      "checkedAt": 1795633886422,
       "error": ""
     },
     {
@@ -3540,8 +3428,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 10658,
-      "checkedAt": 1795630180135,
+      "ms": 25898,
+      "checkedAt": 1795633886808,
       "error": ""
     },
     {
@@ -3556,8 +3444,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 9759,
-      "checkedAt": 1795630181034,
+      "ms": 3878,
+      "checkedAt": 1795633913108,
       "error": ""
     },
     {
@@ -3572,8 +3460,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 6353,
-      "checkedAt": 1795630191177,
+      "ms": 3524,
+      "checkedAt": 1795633913462,
       "error": ""
     },
     {
@@ -3583,13 +3471,13 @@
       "version": 3,
       "hash": "2fce527406e70253ffced09a8d5fe9eac077fb15884c0b3160a90e23969fd51f",
       "status": "alive",
-      "home": 566,
+      "home": 549,
       "search": 0,
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 5438,
-      "checkedAt": 1795630192092,
+      "ms": 3202,
+      "checkedAt": 1795633913784,
       "error": ""
     },
     {
@@ -3604,8 +3492,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 4204,
-      "checkedAt": 1795630193326,
+      "ms": 6206,
+      "checkedAt": 1795633917365,
       "error": ""
     },
     {
@@ -3620,8 +3508,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 9813,
-      "checkedAt": 1795630197920,
+      "ms": 5788,
+      "checkedAt": 1795633917783,
       "error": ""
     },
     {
@@ -3636,8 +3524,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 8538,
-      "checkedAt": 1795630199195,
+      "ms": 5567,
+      "checkedAt": 1795633918004,
       "error": ""
     },
     {
@@ -3652,8 +3540,8 @@
       "links": 8,
       "verified": 1,
       "providers": 1,
-      "ms": 7678,
-      "checkedAt": 1795630200055,
+      "ms": 3752,
+      "checkedAt": 1795633923953,
       "error": ""
     },
     {
@@ -3668,8 +3556,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 8119,
-      "checkedAt": 1795630208111,
+      "ms": 3280,
+      "checkedAt": 1795633924425,
       "error": ""
     },
     {
@@ -3684,8 +3572,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 6632,
-      "checkedAt": 1795630209598,
+      "ms": 2345,
+      "checkedAt": 1795633925360,
       "error": ""
     },
     {
@@ -3700,8 +3588,8 @@
       "links": 1,
       "verified": 0,
       "providers": 1,
-      "ms": 5363,
-      "checkedAt": 1795630210867,
+      "ms": 9180,
+      "checkedAt": 1795633928082,
       "error": ""
     },
     {
@@ -3716,8 +3604,8 @@
       "links": 4,
       "verified": 2,
       "providers": 1,
-      "ms": 6693,
-      "checkedAt": 1795630216598,
+      "ms": 8074,
+      "checkedAt": 1795633929188,
       "error": ""
     },
     {
@@ -3732,8 +3620,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 5379,
-      "checkedAt": 1795630217912,
+      "ms": 7675,
+      "checkedAt": 1795633929587,
       "error": ""
     },
     {
@@ -3748,8 +3636,8 @@
       "links": 4,
       "verified": 2,
       "providers": 1,
-      "ms": 4309,
-      "checkedAt": 1795630218982,
+      "ms": 11450,
+      "checkedAt": 1795633937618,
       "error": ""
     },
     {
@@ -3759,13 +3647,13 @@
       "version": 10,
       "hash": "",
       "status": "ok",
-      "home": 26,
+      "home": 43,
       "search": 0,
       "links": 3,
       "verified": 2,
       "providers": 1,
-      "ms": 6808,
-      "checkedAt": 1795630223667,
+      "ms": 11022,
+      "checkedAt": 1795633938046,
       "error": ""
     },
     {
@@ -3780,8 +3668,8 @@
       "links": 1,
       "verified": 0,
       "providers": 1,
-      "ms": 5822,
-      "checkedAt": 1795630224653,
+      "ms": 7159,
+      "checkedAt": 1795633941909,
       "error": ""
     },
     {
@@ -3796,8 +3684,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 5298,
-      "checkedAt": 1795630225177,
+      "ms": 6324,
+      "checkedAt": 1795633949445,
       "error": ""
     },
     {
@@ -3812,8 +3700,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 9049,
-      "checkedAt": 1795630230853,
+      "ms": 4620,
+      "checkedAt": 1795633951150,
       "error": ""
     },
     {
@@ -3828,24 +3716,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 7782,
-      "checkedAt": 1795630232121,
-      "error": ""
-    },
-    {
-      "name": "OwnedSites",
-      "internalName": "OwnedSites",
-      "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/Ripplay_OwnedSites_v2.cs3",
-      "version": 2,
-      "hash": "",
-      "status": "alive",
-      "home": 406,
-      "search": 0,
-      "links": 0,
-      "verified": 0,
-      "providers": 7,
-      "ms": 6794,
-      "checkedAt": 1795630233109,
+      "ms": 4228,
+      "checkedAt": 1795633951542,
       "error": ""
     },
     {
@@ -3860,8 +3732,8 @@
       "links": 1,
       "verified": 0,
       "providers": 1,
-      "ms": 25944,
-      "checkedAt": 1795630240281,
+      "ms": 18528,
+      "checkedAt": 1795633956124,
       "error": ""
     },
     {
@@ -3876,8 +3748,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 24677,
-      "checkedAt": 1795630241548,
+      "ms": 18093,
+      "checkedAt": 1795633956559,
       "error": ""
     },
     {
@@ -3892,8 +3764,8 @@
       "links": 2,
       "verified": 2,
       "providers": 1,
-      "ms": 23744,
-      "checkedAt": 1795630242481,
+      "ms": 17794,
+      "checkedAt": 1795633956858,
       "error": ""
     },
     {
@@ -3908,8 +3780,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 38666,
-      "checkedAt": 1795630266607,
+      "ms": 35885,
+      "checkedAt": 1795633975035,
       "error": ""
     },
     {
@@ -3924,8 +3796,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 37787,
-      "checkedAt": 1795630267486,
+      "ms": 35500,
+      "checkedAt": 1795633975420,
       "error": ""
     },
     {
@@ -3940,8 +3812,8 @@
       "links": 1,
       "verified": 0,
       "providers": 1,
-      "ms": 36912,
-      "checkedAt": 1795630268361,
+      "ms": 35137,
+      "checkedAt": 1795633975783,
       "error": ""
     },
     {
@@ -3956,8 +3828,8 @@
       "links": 1,
       "verified": 0,
       "providers": 1,
-      "ms": 27187,
-      "checkedAt": 1795630305614,
+      "ms": 24166,
+      "checkedAt": 1795634011248,
       "error": ""
     },
     {
@@ -3972,8 +3844,8 @@
       "links": 6,
       "verified": 2,
       "providers": 1,
-      "ms": 26142,
-      "checkedAt": 1795630306659,
+      "ms": 23333,
+      "checkedAt": 1795634012081,
       "error": ""
     },
     {
@@ -3988,8 +3860,8 @@
       "links": 5,
       "verified": 2,
       "providers": 1,
-      "ms": 25105,
-      "checkedAt": 1795630307696,
+      "ms": 22843,
+      "checkedAt": 1795634012571,
       "error": ""
     },
     {
@@ -4004,8 +3876,8 @@
       "links": 6,
       "verified": 2,
       "providers": 1,
-      "ms": 15164,
-      "checkedAt": 1795630333152,
+      "ms": 14496,
+      "checkedAt": 1795634035766,
       "error": ""
     },
     {
@@ -4020,8 +3892,8 @@
       "links": 2,
       "verified": 2,
       "providers": 1,
-      "ms": 13985,
-      "checkedAt": 1795630334331,
+      "ms": 13350,
+      "checkedAt": 1795634036912,
       "error": ""
     },
     {
@@ -4036,8 +3908,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 12922,
-      "checkedAt": 1795630335394,
+      "ms": 12960,
+      "checkedAt": 1795634037302,
       "error": ""
     },
     {
@@ -4052,8 +3924,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 9908,
-      "checkedAt": 1795630348703,
+      "ms": 7875,
+      "checkedAt": 1795634050654,
       "error": ""
     },
     {
@@ -4068,8 +3940,8 @@
       "links": 1,
       "verified": 0,
       "providers": 1,
-      "ms": 9225,
-      "checkedAt": 1795630349386,
+      "ms": 7534,
+      "checkedAt": 1795634050995,
       "error": ""
     },
     {
@@ -4084,8 +3956,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 8013,
-      "checkedAt": 1795630350598,
+      "ms": 7107,
+      "checkedAt": 1795634051422,
       "error": ""
     },
     {
@@ -4100,8 +3972,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 8950,
-      "checkedAt": 1795630358964,
+      "ms": 8381,
+      "checkedAt": 1795634058908,
       "error": ""
     },
     {
@@ -4116,8 +3988,8 @@
       "links": 4,
       "verified": 1,
       "providers": 1,
-      "ms": 7867,
-      "checkedAt": 1795630360048,
+      "ms": 7461,
+      "checkedAt": 1795634059828,
       "error": ""
     },
     {
@@ -4132,8 +4004,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 7034,
-      "checkedAt": 1795630360881,
+      "ms": 6586,
+      "checkedAt": 1795634060703,
       "error": ""
     },
     {
@@ -4148,8 +4020,8 @@
       "links": 1,
       "verified": 0,
       "providers": 1,
-      "ms": 57859,
-      "checkedAt": 1795630368258,
+      "ms": 65231,
+      "checkedAt": 1795634067626,
       "error": ""
     },
     {
@@ -4164,8 +4036,8 @@
       "links": 2,
       "verified": 2,
       "providers": 1,
-      "ms": 55602,
-      "checkedAt": 1795630370515,
+      "ms": 64823,
+      "checkedAt": 1795634068034,
       "error": ""
     },
     {
@@ -4174,15 +4046,15 @@
       "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/TurkSinema_SeyirTURK_v13.cs3",
       "version": 13,
       "hash": "",
-      "status": "alive",
-      "home": 315,
+      "status": "dead",
+      "home": 0,
       "search": 0,
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 54473,
-      "checkedAt": 1795630371644,
-      "error": ""
+      "ms": 64381,
+      "checkedAt": 1795634068476,
+      "error": "Timed out waiting for 12000 ms"
     },
     {
       "name": "SezonlukDizi",
@@ -4196,8 +4068,8 @@
       "links": 2,
       "verified": 2,
       "providers": 1,
-      "ms": 50506,
-      "checkedAt": 1795630426483,
+      "ms": 48351,
+      "checkedAt": 1795634133232,
       "error": ""
     },
     {
@@ -4212,8 +4084,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 48742,
-      "checkedAt": 1795630428247,
+      "ms": 47610,
+      "checkedAt": 1795634133973,
       "error": ""
     },
     {
@@ -4228,8 +4100,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 47715,
-      "checkedAt": 1795630429274,
+      "ms": 47110,
+      "checkedAt": 1795634134473,
       "error": ""
     },
     {
@@ -4244,8 +4116,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 19906,
-      "checkedAt": 1795630477360,
+      "ms": 19112,
+      "checkedAt": 1795634181914,
       "error": ""
     },
     {
@@ -4260,8 +4132,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 18972,
-      "checkedAt": 1795630478294,
+      "ms": 18669,
+      "checkedAt": 1795634182357,
       "error": ""
     },
     {
@@ -4276,8 +4148,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 17888,
-      "checkedAt": 1795630479378,
+      "ms": 18195,
+      "checkedAt": 1795634182831,
       "error": "Timed out waiting for 15000 ms"
     },
     {
@@ -4287,13 +4159,13 @@
       "version": 2,
       "hash": "92d5fdfde5df9b173245c7adcd92e6d6400751ec400afc8cf55463ee05612d34",
       "status": "ok",
-      "home": 92,
+      "home": 84,
       "search": 0,
       "links": 2,
       "verified": 2,
       "providers": 1,
-      "ms": 16983,
-      "checkedAt": 1795630497658,
+      "ms": 14714,
+      "checkedAt": 1795634201403,
       "error": ""
     },
     {
@@ -4308,8 +4180,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 15972,
-      "checkedAt": 1795630498669,
+      "ms": 14255,
+      "checkedAt": 1795634201862,
       "error": ""
     },
     {
@@ -4324,8 +4196,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 14777,
-      "checkedAt": 1795630499864,
+      "ms": 13761,
+      "checkedAt": 1795634202356,
       "error": "Connection reset"
     },
     {
@@ -4340,8 +4212,8 @@
       "links": 4,
       "verified": 0,
       "providers": 1,
-      "ms": 12910,
-      "checkedAt": 1795630515026,
+      "ms": 11259,
+      "checkedAt": 1795634216496,
       "error": ""
     },
     {
@@ -4356,8 +4228,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 11929,
-      "checkedAt": 1795630516008,
+      "ms": 10888,
+      "checkedAt": 1795634216867,
       "error": ""
     },
     {
@@ -4372,8 +4244,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 10915,
-      "checkedAt": 1795630517022,
+      "ms": 10386,
+      "checkedAt": 1795634217369,
       "error": ""
     },
     {
@@ -4388,8 +4260,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 47350,
-      "checkedAt": 1795630528332,
+      "ms": 35089,
+      "checkedAt": 1795634228130,
       "error": ""
     },
     {
@@ -4398,15 +4270,15 @@
       "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Sinemetrik.cs3",
       "version": 3,
       "hash": "",
-      "status": "alive",
-      "home": 113,
-      "search": 0,
+      "status": "ok",
+      "home": 0,
+      "search": 2,
       "links": 2,
-      "verified": 0,
+      "verified": 2,
       "providers": 1,
-      "ms": 46012,
-      "checkedAt": 1795630529670,
-      "error": ""
+      "ms": 34692,
+      "checkedAt": 1795634228528,
+      "error": "Timed out waiting for 15000 ms"
     },
     {
       "name": "SineWix",
@@ -4420,8 +4292,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 44864,
-      "checkedAt": 1795630530818,
+      "ms": 34137,
+      "checkedAt": 1795634229083,
       "error": ""
     },
     {
@@ -4436,8 +4308,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 42260,
-      "checkedAt": 1795630576032,
+      "ms": 27917,
+      "checkedAt": 1795634263617,
       "error": ""
     },
     {
@@ -4452,8 +4324,8 @@
       "links": 1,
       "verified": 0,
       "providers": 1,
-      "ms": 40852,
-      "checkedAt": 1795630577440,
+      "ms": 27006,
+      "checkedAt": 1795634264528,
       "error": ""
     },
     {
@@ -4468,8 +4340,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 36622,
-      "checkedAt": 1795630581670,
+      "ms": 26535,
+      "checkedAt": 1795634264999,
       "error": ""
     },
     {
@@ -4478,15 +4350,31 @@
       "url": "https://raw.githubusercontent.com/miskin1702/aslan-pub/main/SporPaketi.cs3",
       "version": 5,
       "hash": "",
-      "status": "ok",
-      "home": 79,
+      "status": "dead",
+      "home": 0,
       "search": 0,
-      "links": 7,
-      "verified": 1,
-      "providers": 1,
-      "ms": 5426,
-      "checkedAt": 1795630618645,
-      "error": ""
+      "links": 0,
+      "verified": 0,
+      "providers": 0,
+      "ms": 0,
+      "checkedAt": 1795634313829,
+      "error": "eklenti coktu"
+    },
+    {
+      "name": "Sports Replay",
+      "internalName": "SportsReplay",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/SportsReplay.cs3?v=bdb446fce3fc",
+      "version": 2,
+      "hash": "bdb446fce3fcb4e5f2b4cbbd75e24f209ecfc5a2bf92d1917589b664910153c5",
+      "status": "dead",
+      "home": 0,
+      "search": 0,
+      "links": 0,
+      "verified": 0,
+      "providers": 0,
+      "ms": 0,
+      "checkedAt": 1795634313830,
+      "error": "eklenti coktu"
     },
     {
       "name": "SporTV",
@@ -4494,15 +4382,15 @@
       "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/BTVault_SporTV_v2.cs3",
       "version": 2,
       "hash": "",
-      "status": "ok",
-      "home": 28,
+      "status": "dead",
+      "home": 0,
       "search": 0,
-      "links": 1,
-      "verified": 1,
-      "providers": 1,
-      "ms": 4229,
-      "checkedAt": 1795630619842,
-      "error": ""
+      "links": 0,
+      "verified": 0,
+      "providers": 0,
+      "ms": 0,
+      "checkedAt": 1795634313830,
+      "error": "eklenti coktu"
     },
     {
       "name": "StardustTV",
@@ -4516,8 +4404,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 3317,
-      "checkedAt": 1795630620754,
+      "ms": 7356,
+      "checkedAt": 1795634314014,
       "error": ""
     },
     {
@@ -4532,8 +4420,8 @@
       "links": 2,
       "verified": 2,
       "providers": 1,
-      "ms": 10467,
-      "checkedAt": 1795630624465,
+      "ms": 6477,
+      "checkedAt": 1795634314893,
       "error": ""
     },
     {
@@ -4548,8 +4436,8 @@
       "links": 2,
       "verified": 0,
       "providers": 1,
-      "ms": 9208,
-      "checkedAt": 1795630625725,
+      "ms": 5771,
+      "checkedAt": 1795634315599,
       "error": ""
     },
     {
@@ -4564,8 +4452,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 7845,
-      "checkedAt": 1795630627088,
+      "ms": 14400,
+      "checkedAt": 1795634321725,
       "error": "Kaynak yanıt vermiyor (403)."
     },
     {
@@ -4580,8 +4468,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 24315,
-      "checkedAt": 1795630635330,
+      "ms": 13878,
+      "checkedAt": 1795634322247,
       "error": "Unexpected character ('<' (code 60)): expected a valid value (JSON String, Number, Array, Object or token 'null', 'true' or 'false')\n at [Source: REDACTED (`Str"
     },
     {
@@ -4590,15 +4478,15 @@
       "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/SuperFilmGeldi.cs3",
       "version": 8,
       "hash": "",
-      "status": "dead",
+      "status": "unknown",
       "home": 0,
       "search": 0,
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 22968,
-      "checkedAt": 1795630636677,
-      "error": "Timed out waiting for 15000 ms"
+      "ms": 12953,
+      "checkedAt": 1795634323172,
+      "error": ""
     },
     {
       "name": "Tabii",
@@ -4612,8 +4500,8 @@
       "links": 2,
       "verified": 2,
       "providers": 1,
-      "ms": 22582,
-      "checkedAt": 1795630637063,
+      "ms": 6100,
+      "checkedAt": 1795634336474,
       "error": ""
     },
     {
@@ -4628,8 +4516,8 @@
       "links": 1,
       "verified": 1,
       "providers": 2,
-      "ms": 9926,
-      "checkedAt": 1795630660000,
+      "ms": 5768,
+      "checkedAt": 1795634336806,
       "error": ""
     },
     {
@@ -4644,8 +4532,8 @@
       "links": 1,
       "verified": 0,
       "providers": 1,
-      "ms": 9071,
-      "checkedAt": 1795630660855,
+      "ms": 5192,
+      "checkedAt": 1795634337382,
       "error": ""
     },
     {
@@ -4660,8 +4548,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 7809,
-      "checkedAt": 1795630662117,
+      "ms": 11662,
+      "checkedAt": 1795634342943,
       "error": ""
     },
     {
@@ -4676,8 +4564,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 6406,
-      "checkedAt": 1795630670290,
+      "ms": 11254,
+      "checkedAt": 1795634343351,
       "error": ""
     },
     {
@@ -4692,8 +4580,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 5248,
-      "checkedAt": 1795630671448,
+      "ms": 10910,
+      "checkedAt": 1795634343695,
       "error": "java.security.cert.CertPathValidatorException: Trust anchor for certification path not found."
     },
     {
@@ -4708,8 +4596,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 4258,
-      "checkedAt": 1795630672438,
+      "ms": 3213,
+      "checkedAt": 1795634354956,
       "error": ""
     },
     {
@@ -4724,8 +4612,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 21393,
-      "checkedAt": 1795630677088,
+      "ms": 2841,
+      "checkedAt": 1795634355328,
       "error": ""
     },
     {
@@ -4740,8 +4628,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 20604,
-      "checkedAt": 1795630677877,
+      "ms": 2567,
+      "checkedAt": 1795634355602,
       "error": ""
     },
     {
@@ -4756,8 +4644,8 @@
       "links": 2,
       "verified": 2,
       "providers": 1,
-      "ms": 19227,
-      "checkedAt": 1795630679254,
+      "ms": 19783,
+      "checkedAt": 1795634358523,
       "error": ""
     },
     {
@@ -4772,8 +4660,8 @@
       "links": 1,
       "verified": 0,
       "providers": 1,
-      "ms": 13305,
-      "checkedAt": 1795630698869,
+      "ms": 19242,
+      "checkedAt": 1795634359064,
       "error": ""
     },
     {
@@ -4788,8 +4676,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 11972,
-      "checkedAt": 1795630700203,
+      "ms": 18330,
+      "checkedAt": 1795634359976,
       "error": ""
     },
     {
@@ -4804,8 +4692,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 11187,
-      "checkedAt": 1795630700988,
+      "ms": 129693,
+      "checkedAt": 1795634378709,
       "error": ""
     },
     {
@@ -4820,8 +4708,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 126751,
-      "checkedAt": 1795630712564,
+      "ms": 129216,
+      "checkedAt": 1795634379186,
       "error": "Timed out waiting for 12000 ms"
     },
     {
@@ -4836,8 +4724,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 125906,
-      "checkedAt": 1795630713409,
+      "ms": 128683,
+      "checkedAt": 1795634379720,
       "error": ""
     },
     {
@@ -4852,8 +4740,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 124630,
-      "checkedAt": 1795630714685,
+      "ms": 9399,
+      "checkedAt": 1795634508732,
       "error": "Unexpected character (':' (code 58)): Expected space separating root-level values\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled"
     },
     {
@@ -4868,8 +4756,8 @@
       "links": 12,
       "verified": 2,
       "providers": 1,
-      "ms": 15967,
-      "checkedAt": 1795630839650,
+      "ms": 8900,
+      "checkedAt": 1795634509231,
       "error": ""
     },
     {
@@ -4884,8 +4772,8 @@
       "links": 12,
       "verified": 2,
       "providers": 1,
-      "ms": 14771,
-      "checkedAt": 1795630840846,
+      "ms": 8178,
+      "checkedAt": 1795634509953,
       "error": ""
     },
     {
@@ -4900,8 +4788,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 13944,
-      "checkedAt": 1795630841673,
+      "ms": 4895,
+      "checkedAt": 1795634518510,
       "error": ""
     },
     {
@@ -4916,8 +4804,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 6997,
-      "checkedAt": 1795630856010,
+      "ms": 4535,
+      "checkedAt": 1795634518870,
       "error": ""
     },
     {
@@ -4932,8 +4820,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 6146,
-      "checkedAt": 1795630856862,
+      "ms": 4144,
+      "checkedAt": 1795634519261,
       "error": ""
     },
     {
@@ -4948,8 +4836,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 5238,
-      "checkedAt": 1795630857770,
+      "ms": 7009,
+      "checkedAt": 1795634523790,
       "error": ""
     },
     {
@@ -4964,8 +4852,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 9926,
-      "checkedAt": 1795630863403,
+      "ms": 6503,
+      "checkedAt": 1795634524296,
       "error": ""
     },
     {
@@ -4980,8 +4868,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 8357,
-      "checkedAt": 1795630864972,
+      "ms": 6021,
+      "checkedAt": 1795634524778,
       "error": ""
     },
     {
@@ -4996,24 +4884,8 @@
       "links": 1,
       "verified": 1,
       "providers": 3,
-      "ms": 7070,
-      "checkedAt": 1795630866259,
-      "error": ""
-    },
-    {
-      "name": "Turkdizileri",
-      "internalName": "Turkdizileri",
-      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/Turkdizileri.cs3",
-      "version": 34,
-      "hash": "",
-      "status": "unknown",
-      "home": 0,
-      "search": 0,
-      "links": 0,
-      "verified": 0,
-      "providers": 12,
-      "ms": 7792,
-      "checkedAt": 1795630873722,
+      "ms": 4290,
+      "checkedAt": 1795634531153,
       "error": ""
     },
     {
@@ -5028,8 +4900,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 5863,
-      "checkedAt": 1795630875652,
+      "ms": 3394,
+      "checkedAt": 1795634532049,
       "error": ""
     },
     {
@@ -5044,8 +4916,8 @@
       "links": 0,
       "verified": 0,
       "providers": 3,
-      "ms": 4824,
-      "checkedAt": 1795630876691,
+      "ms": 2916,
+      "checkedAt": 1795634532527,
       "error": ""
     },
     {
@@ -5060,24 +4932,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 87297,
-      "checkedAt": 1795630881905,
-      "error": ""
-    },
-    {
-      "name": "TurkSpor",
-      "internalName": "TurkSpor",
-      "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/TurkSpor_TurkSpor_v6.cs3",
-      "version": 6,
-      "hash": "",
-      "status": "alive",
-      "home": 38,
-      "search": 0,
-      "links": 0,
-      "verified": 0,
-      "providers": 13,
-      "ms": 85617,
-      "checkedAt": 1795630883585,
+      "ms": 86259,
+      "checkedAt": 1795634535797,
       "error": ""
     },
     {
@@ -5092,8 +4948,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 83528,
-      "checkedAt": 1795630885674,
+      "ms": 85906,
+      "checkedAt": 1795634536150,
       "error": "Timed out waiting for 12000 ms"
     },
     {
@@ -5108,8 +4964,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 19671,
-      "checkedAt": 1795630969532,
+      "ms": 85625,
+      "checkedAt": 1795634536431,
       "error": ""
     },
     {
@@ -5124,8 +4980,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 18923,
-      "checkedAt": 1795630970281,
+      "ms": 5685,
+      "checkedAt": 1795634622386,
       "error": "java.security.cert.CertPathValidatorException: Trust anchor for certification path not found."
     },
     {
@@ -5140,8 +4996,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 17696,
-      "checkedAt": 1795630971508,
+      "ms": 5349,
+      "checkedAt": 1795634622722,
       "error": ""
     },
     {
@@ -5156,8 +5012,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 7774,
-      "checkedAt": 1795630989602,
+      "ms": 4629,
+      "checkedAt": 1795634623442,
       "error": ""
     },
     {
@@ -5172,8 +5028,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 5244,
-      "checkedAt": 1795630992132,
+      "ms": 3339,
+      "checkedAt": 1795634628439,
       "error": ""
     },
     {
@@ -5188,8 +5044,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 4454,
-      "checkedAt": 1795630992922,
+      "ms": 3031,
+      "checkedAt": 1795634628747,
       "error": ""
     },
     {
@@ -5204,8 +5060,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 20730,
-      "checkedAt": 1795630997743,
+      "ms": 2493,
+      "checkedAt": 1795634629285,
       "error": ""
     },
     {
@@ -5220,8 +5076,8 @@
       "links": 24,
       "verified": 2,
       "providers": 1,
-      "ms": 19803,
-      "checkedAt": 1795630998671,
+      "ms": 18486,
+      "checkedAt": 1795634632168,
       "error": ""
     },
     {
@@ -5236,8 +5092,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 18744,
-      "checkedAt": 1795630999730,
+      "ms": 18016,
+      "checkedAt": 1795634632638,
       "error": ""
     },
     {
@@ -5252,9 +5108,9 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 8635,
-      "checkedAt": 1795631018870,
-      "error": "SSL handshake aborted: ssl=0x7541cb1108: I/O error during system call, Connection reset by peer"
+      "ms": 17675,
+      "checkedAt": 1795634632979,
+      "error": "SSL handshake aborted: ssl=0x7539553888: I/O error during system call, Connection reset by peer"
     },
     {
       "name": "vavooSpor",
@@ -5268,8 +5124,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 7637,
-      "checkedAt": 1795631019868,
+      "ms": 5965,
+      "checkedAt": 1795634651044,
       "error": ""
     },
     {
@@ -5284,8 +5140,8 @@
       "links": 10,
       "verified": 2,
       "providers": 1,
-      "ms": 6776,
-      "checkedAt": 1795631020729,
+      "ms": 5454,
+      "checkedAt": 1795634651555,
       "error": ""
     },
     {
@@ -5300,8 +5156,8 @@
       "links": 3,
       "verified": 2,
       "providers": 1,
-      "ms": 25697,
-      "checkedAt": 1795631027900,
+      "ms": 4689,
+      "checkedAt": 1795634652320,
       "error": ""
     },
     {
@@ -5316,8 +5172,8 @@
       "links": 24,
       "verified": 1,
       "providers": 1,
-      "ms": 24712,
-      "checkedAt": 1795631028885,
+      "ms": 22623,
+      "checkedAt": 1795634657370,
       "error": ""
     },
     {
@@ -5329,11 +5185,11 @@
       "status": "ok",
       "home": 629,
       "search": 0,
-      "links": 2,
+      "links": 3,
       "verified": 2,
       "providers": 1,
-      "ms": 23353,
-      "checkedAt": 1795631030244,
+      "ms": 22099,
+      "checkedAt": 1795634657894,
       "error": ""
     },
     {
@@ -5348,8 +5204,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 10017,
-      "checkedAt": 1795631053994,
+      "ms": 21618,
+      "checkedAt": 1795634658375,
       "error": ""
     },
     {
@@ -5364,8 +5220,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 8954,
-      "checkedAt": 1795631055057,
+      "ms": 7006,
+      "checkedAt": 1795634680350,
       "error": ""
     },
     {
@@ -5380,8 +5236,8 @@
       "links": 3,
       "verified": 1,
       "providers": 1,
-      "ms": 8046,
-      "checkedAt": 1795631055965,
+      "ms": 6660,
+      "checkedAt": 1795634680696,
       "error": ""
     },
     {
@@ -5396,8 +5252,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 16637,
-      "checkedAt": 1795631106889,
+      "ms": 6294,
+      "checkedAt": 1795634681062,
       "error": ""
     },
     {
@@ -5412,8 +5268,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 15344,
-      "checkedAt": 1795631108182,
+      "ms": 12629,
+      "checkedAt": 1795634687733,
       "error": ""
     },
     {
@@ -5428,8 +5284,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 14044,
-      "checkedAt": 1795631109482,
+      "ms": 12217,
+      "checkedAt": 1795634688145,
       "error": ""
     },
     {
@@ -5444,9 +5300,9 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 15554,
-      "checkedAt": 1795631123906,
-      "error": "SSL handshake aborted: ssl=0x755e0fdb88: I/O error during system call, Connection reset by peer"
+      "ms": 11725,
+      "checkedAt": 1795634688637,
+      "error": "SSL handshake aborted: ssl=0x750fe8bf08: I/O error during system call, Connection reset by peer"
     },
     {
       "name": "WioDB",
@@ -5460,8 +5316,8 @@
       "links": 2,
       "verified": 2,
       "providers": 1,
-      "ms": 14494,
-      "checkedAt": 1795631124966,
+      "ms": 17974,
+      "checkedAt": 1795634700750,
       "error": ""
     },
     {
@@ -5476,8 +5332,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 13377,
-      "checkedAt": 1795631126083,
+      "ms": 17659,
+      "checkedAt": 1795634701065,
       "error": ""
     },
     {
@@ -5489,11 +5345,11 @@
       "status": "ok",
       "home": 84,
       "search": 0,
-      "links": 18,
+      "links": 21,
       "verified": 1,
       "providers": 1,
-      "ms": 21405,
-      "checkedAt": 1795631139859,
+      "ms": 17097,
+      "checkedAt": 1795634701627,
       "error": ""
     },
     {
@@ -5508,8 +5364,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 19407,
-      "checkedAt": 1795631141857,
+      "ms": 10056,
+      "checkedAt": 1795634719055,
       "error": ""
     },
     {
@@ -5524,8 +5380,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 18196,
-      "checkedAt": 1795631143068,
+      "ms": 9649,
+      "checkedAt": 1795634719462,
       "error": ""
     },
     {
@@ -5540,8 +5396,8 @@
       "links": 2,
       "verified": 0,
       "providers": 1,
-      "ms": 13274,
-      "checkedAt": 1795631161646,
+      "ms": 9055,
+      "checkedAt": 1795634720056,
       "error": ""
     },
     {
@@ -5556,8 +5412,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 12018,
-      "checkedAt": 1795631162902,
+      "ms": 4042,
+      "checkedAt": 1795634729473,
       "error": ""
     },
     {
@@ -5572,8 +5428,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 10863,
-      "checkedAt": 1795631164057,
+      "ms": 3704,
+      "checkedAt": 1795634729811,
       "error": "Expected URL scheme 'http' or 'https' but no scheme was found for /?s=on..."
     },
     {
@@ -5588,8 +5444,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 9168,
-      "checkedAt": 1795631175282,
+      "ms": 3391,
+      "checkedAt": 1795634730124,
       "error": ""
     },
     {
@@ -5604,8 +5460,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 7845,
-      "checkedAt": 1795631176605,
+      "ms": 25572,
+      "checkedAt": 1795634733886,
       "error": ""
     },
     {
@@ -5620,8 +5476,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 7368,
-      "checkedAt": 1795631177082,
+      "ms": 25090,
+      "checkedAt": 1795634734368,
       "error": ""
     },
     {
@@ -5631,14 +5487,14 @@
       "version": 6,
       "hash": "",
       "status": "ok",
-      "home": 0,
-      "search": 20,
-      "links": 13,
+      "home": 95,
+      "search": 0,
+      "links": 2,
       "verified": 2,
       "providers": 1,
-      "ms": 36786,
-      "checkedAt": 1795631184846,
-      "error": "Timed out waiting for 15000 ms"
+      "ms": 24812,
+      "checkedAt": 1795634734646,
+      "error": ""
     },
     {
       "name": "YouTube Özel - Latte",
@@ -5652,8 +5508,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 35877,
-      "checkedAt": 1795631185755,
+      "ms": 9723,
+      "checkedAt": 1795634759858,
       "error": ""
     },
     {
@@ -5668,8 +5524,8 @@
       "links": 2,
       "verified": 2,
       "providers": 1,
-      "ms": 34464,
-      "checkedAt": 1795631187168,
+      "ms": 9384,
+      "checkedAt": 1795634760197,
       "error": ""
     },
     {
@@ -5684,8 +5540,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 21333,
-      "checkedAt": 1795631222030,
+      "ms": 8960,
+      "checkedAt": 1795634760621,
       "error": "Unexpected character ('<' (code 60)): expected a valid value (JSON String, Number, Array, Object or token 'null', 'true' or 'false')\n at [Source: REDACTED (`Str"
     },
     {
@@ -5700,8 +5556,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 19401,
-      "checkedAt": 1795631223962,
+      "ms": 50603,
+      "checkedAt": 1795634769936,
       "error": ""
     },
     {
@@ -5716,8 +5572,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 18064,
-      "checkedAt": 1795631225299,
+      "ms": 49679,
+      "checkedAt": 1795634770860,
       "error": ""
     },
     {
@@ -5732,8 +5588,8 @@
       "links": 0,
       "verified": 0,
       "providers": 1,
-      "ms": 52555,
-      "checkedAt": 1795631243760,
+      "ms": 49081,
+      "checkedAt": 1795634771458,
       "error": ""
     },
     {
@@ -5748,8 +5604,8 @@
       "links": 1,
       "verified": 0,
       "providers": 1,
-      "ms": 50622,
-      "checkedAt": 1795631245693,
+      "ms": 3293,
+      "checkedAt": 1795634820957,
       "error": ""
     },
     {
@@ -5764,8 +5620,8 @@
       "links": 1,
       "verified": 1,
       "providers": 1,
-      "ms": 49625,
-      "checkedAt": 1795631246690,
+      "ms": 2935,
+      "checkedAt": 1795634821316,
       "error": ""
     }
   ]
