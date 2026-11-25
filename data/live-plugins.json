@@ -102,33 +102,6 @@
     "fileHash": "sha256-0848cc7077364b3476207739864a1c970346430432091104ba2f819039bbce2f"
   },
   {
-    "url": "https://raw.githubusercontent.com/berkdemir18/BerkStream-Hub/builds/BerkStream.cs3",
-    "status": 1,
-    "version": 47,
-    "name": "BerkStream",
-    "internalName": "BerkStream",
-    "authors": [
-      "berkdemir18"
-    ],
-    "description": "Turkce film, dizi, anime, belgesel ve canli TV kaynaklarinin tamamini tek eklentide toplayan BerkStream medya merkezi.",
-    "fileSize": 1862918,
-    "repositoryUrl": "https://github.com/berkdemir18/BerkStream-Hub",
-    "language": "tr",
-    "tvTypes": [
-      "Movie",
-      "TvSeries",
-      "Anime",
-      "AsianDrama",
-      "Cartoon",
-      "Documentary",
-      "Live",
-      "Others"
-    ],
-    "iconUrl": "https://raw.githubusercontent.com/berkdemir18/BerkStream-Hub/main/assets/berkstream-icon.png",
-    "apiVersion": 1,
-    "fileHash": "sha256-123146a5f315ced8036fe54510edc2a4b740aa64ad74e847ce78dba5953b3f08"
-  },
-  {
     "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/BetmatikTV.cs3?v=ff17447c948b",
     "status": 3,
     "version": 3,
@@ -690,6 +663,26 @@
     "fileHash": "sha256-62c6cd0bd05570fa39c84f529de619ac61fe2b2d7fab83603311ab4af35ebb29"
   },
   {
+    "name": "LeoTV",
+    "internalName": "LeoTV",
+    "version": 2,
+    "description": "LeoTV / LeoGrand canlı spor ve TV yayınları (Dinamik AES-CBC akış çözücü)",
+    "authors": [
+      "Wiojelt"
+    ],
+    "repositoryUrl": "https://github.com/Wiojelt/WioSpor",
+    "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/LeoTV.cs3?v=dbce2939ae71",
+    "iconUrl": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/main/assets/providers/LeoTV.png",
+    "tvTypes": [
+      "Live"
+    ],
+    "language": "tr",
+    "status": 3,
+    "fileSize": 157849,
+    "fileHash": "sha256-dbce2939ae71d3d7e2f3ba69eab4e09a36689050eca6e5a91202280afddb9b3e",
+    "apiVersion": 1
+  },
+  {
     "url": "https://raw.githubusercontent.com/sanjarkola-collab/cloudstream-turkce-dist/main/plugins/LiveIptvProvider.cs3",
     "status": 1,
     "version": 8,
@@ -1216,6 +1209,29 @@
     "name": "SporPaketi"
   },
   {
+    "name": "Sports Replay",
+    "internalName": "SportsReplay",
+    "version": 2,
+    "description": "Sports Replay · Formula 1, MotoGP, Futbol, NFL ve Spor Arşivi maç ve yarış tekrarları.",
+    "authors": [
+      "Wiojelt"
+    ],
+    "repositoryUrl": "https://github.com/Wiojelt/TurkSinema",
+    "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/SportsReplay.cs3?v=bdb446fce3fc",
+    "iconUrl": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/assets/sportsreplay.png",
+    "tvTypes": [
+      "Live",
+      "TvSeries",
+      "Movie"
+    ],
+    "language": "tr",
+    "status": 1,
+    "fileSize": 140623,
+    "fileHash": "sha256-bdb446fce3fcb4e5f2b4cbbd75e24f209ecfc5a2bf92d1917589b664910153c5",
+    "apiVersion": 1,
+    "hash": "bdb446fce3fcb4e5f2b4cbbd75e24f209ecfc5a2bf92d1917589b664910153c5"
+  },
+  {
     "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/BTVault_SporTV_v2.cs3",
     "status": 1,
     "version": 2,
@@ -1552,27 +1568,6 @@
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=trt1.com.tr&sz=%size%",
     "repositoryUrl": "https://raw.githubusercontent.com/merb2y/cloudstream-tr-repo/main"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/TurkSpor_TurkSpor_v6.cs3",
-    "status": 3,
-    "version": 6,
-    "name": "TurkSpor",
-    "internalName": "TurkSpor",
-    "authors": [
-      "Wiojelt"
-    ],
-    "description": "17 spor sağlayıcısı tek pakette. İstenen sağlayıcı eklenti ayarlarından açılıp kapatılabilir.",
-    "fileSize": 451878,
-    "repositoryUrl": "https://github.com/Wiojelt/TurkSpor",
-    "language": "tr",
-    "tvTypes": [
-      "Live"
-    ],
-    "iconUrl": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/main/assets/logo.png",
-    "apiVersion": 1,
-    "filesize": 451878,
-    "fileHash": "sha256-21c99ad664d4d3f7c29a3340d761fb3e2ce83c162e02d7f6a9549e921d255aff"
   },
   {
     "iconUrl": "https://raw.githubusercontent.com/GitLatte/temporarylists/refs/heads/main/img/bahcesitv.png",
