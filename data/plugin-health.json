@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-11-24T22:42:24Z",
+  "generated_at": "2026-11-25T08:58:41Z",
   "candidate_plugin_count": 447,
-  "healthy_plugin_count": 355,
-  "rejected_plugin_count": 92,
-  "fallback_used_count": 53,
-  "provider_unverified_count": 64,
+  "healthy_plugin_count": 359,
+  "rejected_plugin_count": 88,
+  "fallback_used_count": 51,
+  "provider_unverified_count": 63,
   "rejection_attempt_counts": {
     "bad-zip-file": 8,
     "blacklisted": 22,
     "corrupted-cs3-missing-dex": 1,
-    "hash-mismatch": 10,
-    "http-404": 93,
-    "invalid-status": 8,
-    "provider-unverified": 567,
-    "status-down": 35
+    "hash-mismatch": 6,
+    "http-404": 83,
+    "invalid-status": 7,
+    "provider-unverified": 476,
+    "status-down": 31
   },
   "checks": {
     "status_zero_rejected": true,
@@ -42,7 +42,7 @@
       "size": 2426479,
       "hash_checked": true,
       "provider_check": "reachable",
-      "provider_reason": "bingebang.st:alive-tr",
+      "provider_reason": "belgeselx.com:alive",
       "fallback_used": false,
       "attempts": null
     },
@@ -327,6 +327,20 @@
       "attempts": null
     },
     {
+      "internal_name": "asyamax",
+      "name": "AsyaMax",
+      "status": "healthy",
+      "repository": "F0Rextasy/bigbullapp-cs",
+      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/AsyaMax.cs3",
+      "version": 3,
+      "size": 114820,
+      "hash_checked": true,
+      "provider_check": "reachable",
+      "provider_reason": "asyamax.com:alive",
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
       "internal_name": "asyaminik",
       "name": "AsyaMinik",
       "status": "healthy",
@@ -522,280 +536,15 @@
       "internal_name": "belgeselx",
       "name": "BelgeselX",
       "status": "healthy",
-      "repository": "hrtestingx/hrcsrepofull",
-      "url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepofull/builds/BelgeselX.cs3",
-      "version": 36,
-      "size": 42446,
+      "repository": "Emre-Kahveci/CloudStreamHub",
+      "url": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/BelgeselX.cs3",
+      "version": 110,
+      "size": 151758,
       "hash_checked": true,
-      "provider_check": "unverified",
-      "provider_reason": "dynamic-domain-missing",
-      "fallback_used": true,
-      "attempts": [
-        {
-          "repository": "Emre-Kahveci/CloudStreamHub",
-          "url": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/BelgeselX.cs3",
-          "version": 110,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "belgeselx.com:unreachable"
-        },
-        {
-          "repository": "arcilingir/CloudStreamHub",
-          "url": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/BelgeselX.cs3",
-          "version": 110,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "belgeselx.com:unreachable"
-        },
-        {
-          "repository": "aytzey/cs-kraptor",
-          "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/BelgeselX.cs3",
-          "version": 42,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "belgeselx.com:unreachable"
-        },
-        {
-          "repository": "adilem/cs-kraptor",
-          "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/BelgeselX.cs3",
-          "version": 41,
-          "result": "http-404",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
-          "repository": "qera18/cs-kraptor",
-          "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/BelgeselX.cs3",
-          "version": 41,
-          "result": "http-404",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
-          "repository": "hrtestingx/hrcsrepofull",
-          "url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepofull/builds/BelgeselX.cs3",
-          "version": 36,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "dynamic-domain-missing"
-        },
-        {
-          "repository": "dr-octagon/BronzeCloud",
-          "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/BelgeselX_v22.cs3",
-          "version": 22,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "belgeselx.com:unreachable"
-        },
-        {
-          "repository": "MrKonce/ozel-cs-repom",
-          "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/FeroxxKekik_BelgeselX_v17.cs3",
-          "version": 17,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "belgeselx.com:unreachable"
-        },
-        {
-          "repository": "feroxx/Kekik-cloudstream",
-          "url": "https://raw.githubusercontent.com/feroxx/Kekik-cloudstream/builds/BelgeselX.cs3",
-          "version": 17,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "belgeselx.com:unreachable"
-        },
-        {
-          "repository": "Sertel392/gencler",
-          "url": "https://raw.githubusercontent.com/UmayTrade/MyTV/builds/BelgeselX.cs3",
-          "version": 17,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "belgeselx.com:unreachable"
-        },
-        {
-          "repository": "Bymesut1/Eklenti",
-          "url": "https://raw.githubusercontent.com/UmayTrade/MyTV/builds/BelgeselX.cs3",
-          "version": 17,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "belgeselx.com:unreachable"
-        },
-        {
-          "repository": "adilem/MyTV",
-          "url": "https://raw.githubusercontent.com/UmayTrade/MyTV/builds/BelgeselX.cs3",
-          "version": 17,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "belgeselx.com:unreachable"
-        },
-        {
-          "repository": "qera18/apple",
-          "url": "https://raw.githubusercontent.com/csprofesor/nik-cloudstream/builds/BelgeselX.cs3",
-          "version": 17,
-          "result": "http-404",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
-          "repository": "liberta09/Kekik-cloudstream",
-          "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/BelgeselX.cs3",
-          "version": 17,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "belgeselx.com:unreachable"
-        },
-        {
-          "repository": "MakotoTokioki/MakotoSkystream",
-          "url": "https://raw.githubusercontent.com/MakotoTokioki/MakotoSkystream/plugins/dist/com.makototokioki.belgeselx.sky",
-          "version": 16,
-          "result": "invalid-status",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
-          "repository": "PobloMert/PobloStream",
-          "url": "https://raw.githubusercontent.com/PobloMert/PobloStream/builds/BelgeselX.cs3",
-          "version": 12,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "belgeselx.com:unreachable"
-        },
-        {
-          "repository": "21nek/nektv",
-          "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/BelgeselX.cs3",
-          "version": 12,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "belgeselx.com:unreachable"
-        },
-        {
-          "repository": "burak-ayd/cs-Kekik-old",
-          "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/BelgeselX.cs3",
-          "version": 12,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "belgeselx.com:unreachable"
-        },
-        {
-          "repository": "Wiojelt/WioSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/main/BelgeselX.cs3?v=5a281f86ddd5",
-          "version": 10,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "belgeselx.com:unreachable"
-        },
-        {
-          "repository": "Wiojelt/TurkSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/BelgeselX.cs3?v=5a281f86ddd5",
-          "version": 10,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "belgeselx.com:unreachable"
-        },
-        {
-          "repository": "pisovo-5031/TurkSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/BelgeselX.cs3?v=5a281f86ddd5",
-          "version": 10,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "belgeselx.com:unreachable"
-        },
-        {
-          "repository": "arcilingir/TurkSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/BelgeselX.cs3?v=5a281f86ddd5",
-          "version": 10,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "belgeselx.com:unreachable"
-        },
-        {
-          "repository": "pisovo-5031/WioSinema",
-          "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/sinema/BelgeselX.cs3?v=00996f7478e8",
-          "version": 9,
-          "result": "hash-mismatch",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
-          "repository": "bilhan50/BilhanTR",
-          "url": "https://raw.githubusercontent.com/bilhan50/BilhanTR/builds/BelgeselX.cs3",
-          "version": 8,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "belgeselx.com:unreachable"
-        },
-        {
-          "repository": "F0Rextasy/bigbullapp-cs",
-          "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/BelgeselX.cs3",
-          "version": 7,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "belgeselx.com:unreachable"
-        },
-        {
-          "repository": "lepotane/MRC-builds",
-          "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/BelgeselX.cs3",
-          "version": 6,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "belgeselx.com:unreachable"
-        },
-        {
-          "repository": "neoser1984/neowatch",
-          "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/BelgeselX.cs3",
-          "version": 6,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "belgeselx.com:unreachable"
-        },
-        {
-          "repository": "arcilingir/Dizi_Film",
-          "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film/builds/BelgeselX.cs3",
-          "version": 6,
-          "result": "http-404",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
-          "repository": "Bymesut1/Dizi_Film",
-          "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film/builds/BelgeselX.cs3",
-          "version": 6,
-          "result": "http-404",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
-          "repository": "safarxe/CloudStream",
-          "url": "https://raw.githubusercontent.com/safarxe/CloudStream/builds/BelgeselX.cs3",
-          "version": 6,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "belgeselx.com:unreachable"
-        },
-        {
-          "repository": "baristomruk-max/BTVault",
-          "url": "https://raw.githubusercontent.com/baristomruk-max/BTVault/builds/BelgeselX.cs3",
-          "version": 5,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "belgeselx.com:unreachable"
-        },
-        {
-          "repository": "merb2y/cloudstream-tr-repo",
-          "url": "https://raw.githubusercontent.com/merb2y/cloudstream-tr-repo/main/plugins/BelgeselX.cs3",
-          "version": 4,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "belgeselx.com:unreachable"
-        },
-        {
-          "repository": "JustSadY/Cloudstream-Lykia",
-          "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/BelgeselX.cs3",
-          "version": 1,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "belgeselx.com:unreachable"
-        }
-      ]
+      "provider_check": "reachable",
+      "provider_reason": "belgeselx.com:alive",
+      "fallback_used": false,
+      "attempts": null
     },
     {
       "internal_name": "berkstream",
@@ -875,6 +624,20 @@
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "www.beyaztv.com.tr:alive",
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "birasyadizi",
+      "name": "BirAsyaDizi",
+      "status": "healthy",
+      "repository": "F0Rextasy/bigbullapp-cs",
+      "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/BirAsyaDizi.cs3",
+      "version": 11,
+      "size": 123013,
+      "hash_checked": true,
+      "provider_check": "reachable",
+      "provider_reason": "www.birasyadizi.cx:alive",
       "fallback_used": false,
       "attempts": null
     },
@@ -980,8 +743,8 @@
       "internal_name": "catcast",
       "name": "Catcast TV",
       "status": "healthy",
-      "repository": "Wiojelt/WioSinema",
-      "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/main/Catcast.cs3?v=5a332e04a042",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/Catcast.cs3?v=5a332e04a042",
       "version": 3,
       "size": 123479,
       "hash_checked": true,
@@ -1047,6 +810,34 @@
       "attempts": null
     },
     {
+      "internal_name": "cizgifilmizleinfo",
+      "name": "CizgiFilmIzleInfo",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/CizgiFilmIzleInfo.cs3?v=920e4ba209a7",
+      "version": 3,
+      "size": 108219,
+      "hash_checked": true,
+      "provider_check": "reachable",
+      "provider_reason": "www.cizgifilmizle.info:alive",
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "cizgifilmtv",
+      "name": "CizgiFilmTv",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/CizgiFilmTv.cs3?v=f79fbf793139",
+      "version": 3,
+      "size": 107818,
+      "hash_checked": true,
+      "provider_check": "reachable",
+      "provider_reason": "www.cizgifilm.tv:alive",
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
       "internal_name": "cizgimax",
       "name": "CizgiMax",
       "status": "healthy",
@@ -1071,20 +862,6 @@
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "cizgimax.online:alive-tr",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "cizgiportal",
-      "name": "CizgiPortal",
-      "status": "healthy",
-      "repository": "Wiojelt/TurkSinema",
-      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/CizgiPortal.cs3?v=5cc9e719367b",
-      "version": 4,
-      "size": 107088,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "www.cizgiportal.net:alive",
       "fallback_used": false,
       "attempts": null
     },
@@ -1237,43 +1014,296 @@
       "internal_name": "ddizi",
       "name": "Ddizi",
       "status": "healthy",
-      "repository": "merb2y/cloudstream-tr-repo",
-      "url": "https://raw.githubusercontent.com/merb2y/cloudstream-tr-repo/main/plugins/Ddizi.cs3",
-      "version": 1026,
-      "size": 20164,
+      "repository": "hrtestingx/hrcsrepofull",
+      "url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepofull/builds/Ddizi.cs3",
+      "version": 14,
+      "size": 26820,
       "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "www.ddizi.tel:alive",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "ddizi - latte",
-      "name": "DDizi - Latte",
-      "status": "healthy",
-      "repository": "GitLatte/Sinetech",
-      "url": "https://raw.githubusercontent.com/GitLatte/Sinetech/builds/DDizi - Latte.cs3",
-      "version": 4,
-      "size": 23749,
-      "hash_checked": false,
-      "provider_check": "reachable",
-      "provider_reason": "www.ddizi.im:alive",
-      "fallback_used": false,
-      "attempts": null
-    },
-    {
-      "internal_name": "ddizialternatif",
-      "name": "DDiziAlternatif",
-      "status": "healthy",
-      "repository": "Wiojelt/TurkSinema",
-      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/DDiziAlternatif.cs3?v=4918bbc2cf17",
-      "version": 8,
-      "size": 119156,
-      "hash_checked": true,
-      "provider_check": "reachable",
-      "provider_reason": "www.ddizi.tel:alive",
-      "fallback_used": false,
-      "attempts": null
+      "provider_check": "unverified",
+      "provider_reason": "dynamic-domain-missing",
+      "fallback_used": true,
+      "attempts": [
+        {
+          "repository": "merb2y/cloudstream-tr-repo",
+          "url": "https://raw.githubusercontent.com/merb2y/cloudstream-tr-repo/main/plugins/Ddizi.cs3",
+          "version": 1026,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.ddizi.tel:http-403"
+        },
+        {
+          "repository": "merb2y/cs-builds",
+          "url": "https://raw.githubusercontent.com/merb2y/cs-builds/builds/Ddizi.cs3",
+          "version": 1025,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.ddizi.tel:http-403"
+        },
+        {
+          "repository": "dr-octagon/BronzeCloud",
+          "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/Ddizi_v27.cs3",
+          "version": 27,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.ddizi.tel:http-403"
+        },
+        {
+          "repository": "MrKonce/ozel-cs-repom",
+          "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/FeroxxKekik_Ddizi_v24.cs3",
+          "version": 24,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.ddizi.tel:http-403"
+        },
+        {
+          "repository": "feroxx/Kekik-cloudstream",
+          "url": "https://raw.githubusercontent.com/feroxx/Kekik-cloudstream/builds/Ddizi.cs3",
+          "version": 24,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.ddizi.tel:http-403"
+        },
+        {
+          "repository": "aytzey/cs-kraptor",
+          "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/Ddizi.cs3",
+          "version": 21,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.ddizi.tel:http-403"
+        },
+        {
+          "repository": "adilem/cs-kraptor",
+          "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/Ddizi.cs3",
+          "version": 19,
+          "result": "http-404",
+          "provider_check": "not-checked",
+          "provider_reason": null
+        },
+        {
+          "repository": "qera18/cs-kraptor",
+          "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/Ddizi.cs3",
+          "version": 19,
+          "result": "http-404",
+          "provider_check": "not-checked",
+          "provider_reason": null
+        },
+        {
+          "repository": "hrtestingx/hrcsrepofull",
+          "url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepofull/builds/Ddizi.cs3",
+          "version": 14,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "dynamic-domain-missing"
+        },
+        {
+          "repository": "PobloMert/PobloStream",
+          "url": "https://raw.githubusercontent.com/PobloMert/PobloStream/builds/Ddizi.cs3",
+          "version": 11,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.ddizi.tel:http-403"
+        },
+        {
+          "repository": "F0Rextasy/bigbullapp-cs",
+          "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Ddizi.cs3",
+          "version": 10,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.ddizi.tel:http-403"
+        },
+        {
+          "repository": "21nek/nektv",
+          "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/Ddizi.cs3",
+          "version": 10,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.ddizi.im:http-403"
+        },
+        {
+          "repository": "burak-ayd/cs-Kekik-old",
+          "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/Ddizi.cs3",
+          "version": 10,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.ddizi.im:http-403"
+        },
+        {
+          "repository": "Wiojelt/TurkSinema",
+          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/DDizi.cs3?v=3881353583d1",
+          "version": 8,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.ddizi.tel:http-403"
+        },
+        {
+          "repository": "pisovo-5031/TurkSinema",
+          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/DDizi.cs3?v=3881353583d1",
+          "version": 8,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.ddizi.tel:http-403"
+        },
+        {
+          "repository": "arcilingir/TurkSinema",
+          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/DDizi.cs3?v=3881353583d1",
+          "version": 8,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.ddizi.tel:http-403"
+        },
+        {
+          "repository": "Wiojelt/WioSinema",
+          "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/main/DDizi.cs3?v=3881353583d1",
+          "version": 8,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.ddizi.tel:http-403"
+        },
+        {
+          "repository": "pisovo-5031/WioSinema",
+          "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/sinema/DDizi.cs3?v=3881353583d1",
+          "version": 8,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.ddizi.tel:http-403"
+        },
+        {
+          "repository": "berr49300/cloudstream-film-repo",
+          "url": "https://raw.githubusercontent.com/berr49300/cloudstream-film-repo/builds/DDizi.cs3",
+          "version": 8,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.ddizi.tel:http-403"
+        },
+        {
+          "repository": "lepotane/MRC-builds",
+          "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/DDizi.cs3",
+          "version": 6,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "ddizi.tel:http-403"
+        },
+        {
+          "repository": "baristomruk-max/BTVault",
+          "url": "https://raw.githubusercontent.com/baristomruk-max/BTVault/builds/DDizi.cs3",
+          "version": 3,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.ddizi.tel:http-403"
+        },
+        {
+          "repository": "Kayracs3/Kayra",
+          "url": "https://raw.githubusercontent.com/Kayracs3/Kayra/builds/DDizi.cs3",
+          "version": 2,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "no-urls"
+        },
+        {
+          "repository": "Sertel392/gencler",
+          "url": "https://raw.githubusercontent.com/UmayTrade/MyTV/builds/DDizi.cs3",
+          "version": 2,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "ddizi.tel:http-403"
+        },
+        {
+          "repository": "Bymesut1/Eklenti",
+          "url": "https://raw.githubusercontent.com/UmayTrade/MyTV/builds/DDizi.cs3",
+          "version": 2,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "ddizi.tel:http-403"
+        },
+        {
+          "repository": "adilem/MyTV",
+          "url": "https://raw.githubusercontent.com/UmayTrade/MyTV/builds/DDizi.cs3",
+          "version": 2,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "ddizi.tel:http-403"
+        },
+        {
+          "repository": "Ripplay/cloudstream-repo",
+          "url": "https://raw.githubusercontent.com/Ripplay/cloudstream-repo/builds/DDizi.cs3",
+          "version": 2,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.ddizi.im:http-403"
+        },
+        {
+          "repository": "JustSadY/Cloudstream-Lykia",
+          "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/DDizi.cs3",
+          "version": 1,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.ddizi.tel:http-403"
+        },
+        {
+          "repository": "arcilingir/Dizi_Film_2",
+          "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film_2/builds/DDizi.cs3",
+          "version": 1,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.ddizi.im:http-403"
+        },
+        {
+          "repository": "arcilingir/nik-cloudstream",
+          "url": "https://raw.githubusercontent.com/arcilingir/nik-cloudstream/builds/DDizi.cs3",
+          "version": 1,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.ddizi.im:http-403"
+        },
+        {
+          "repository": "Saloo1575/SalooRepo",
+          "url": "https://raw.githubusercontent.com/Saloo1575/SalooRepo/builds/DDizi.cs3",
+          "version": 1,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.ddizi.im:http-403"
+        },
+        {
+          "repository": "arcilingir/Dizi_Film",
+          "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film/builds/DDizi.cs3",
+          "version": 1,
+          "result": "http-404",
+          "provider_check": "not-checked",
+          "provider_reason": null
+        },
+        {
+          "repository": "Bymesut1/Dizi_Film",
+          "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film/builds/DDizi.cs3",
+          "version": 1,
+          "result": "http-404",
+          "provider_check": "not-checked",
+          "provider_reason": null
+        },
+        {
+          "repository": "qera18/apple",
+          "url": "https://raw.githubusercontent.com/csprofesor/nik-cloudstream/builds/DDizi.cs3",
+          "version": 1,
+          "result": "http-404",
+          "provider_check": "not-checked",
+          "provider_reason": null
+        },
+        {
+          "repository": "liberta09/Kekik-cloudstream",
+          "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/DDizi.cs3",
+          "version": 1,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.ddizi.im:http-403"
+        },
+        {
+          "repository": "safarxe/CloudStream",
+          "url": "https://raw.githubusercontent.com/safarxe/CloudStream/builds/DDizi.cs3",
+          "version": 1,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.ddizi.im:http-403"
+        }
+      ]
     },
     {
       "internal_name": "ddizimag",
@@ -1293,8 +1323,8 @@
       "internal_name": "deokwave",
       "name": "Deokwave",
       "status": "healthy",
-      "repository": "Wiojelt/WioSinema",
-      "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/main/Deokwave.cs3?v=6accd7841331",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/Deokwave.cs3?v=6accd7841331",
       "version": 13,
       "size": 132083,
       "hash_checked": true,
@@ -1440,14 +1470,6 @@
       "fallback_used": true,
       "attempts": [
         {
-          "repository": "Wiojelt/WioSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/main/DiziBol.cs3?v=80d33a6d0d43",
-          "version": 8,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "dynamic-domain-missing"
-        },
-        {
           "repository": "Wiojelt/TurkSinema",
           "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/DiziBol.cs3?v=80d33a6d0d43",
           "version": 8,
@@ -1474,6 +1496,14 @@
         {
           "repository": "MrKonce/ozel-cs-repom",
           "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/TurkSinema_DiziBol_v8.cs3",
+          "version": 8,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "dynamic-domain-missing"
+        },
+        {
+          "repository": "Wiojelt/WioSinema",
+          "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/main/DiziBol.cs3?v=80d33a6d0d43",
           "version": 8,
           "result": "provider-unverified",
           "provider_check": "unverified",
@@ -1631,14 +1661,6 @@
           "provider_reason": "www.dizibox.live:http-403"
         },
         {
-          "repository": "Wiojelt/WioSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/main/DiziBox.cs3?v=cadb8a6abaa0",
-          "version": 11,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.dizibox.live:http-403"
-        },
-        {
           "repository": "Wiojelt/TurkSinema",
           "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/DiziBox.cs3?v=cadb8a6abaa0",
           "version": 11,
@@ -1657,6 +1679,14 @@
         {
           "repository": "arcilingir/TurkSinema",
           "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/DiziBox.cs3?v=cadb8a6abaa0",
+          "version": 11,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.dizibox.live:http-403"
+        },
+        {
+          "repository": "Wiojelt/WioSinema",
+          "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/main/DiziBox.cs3?v=cadb8a6abaa0",
           "version": 11,
           "result": "provider-unverified",
           "provider_check": "unverified",
@@ -2200,7 +2230,7 @@
       "size": 43227,
       "hash_checked": true,
       "provider_check": "reachable",
-      "provider_reason": "dizipal2150.com:alive-tr",
+      "provider_reason": "dizipal2150.com:alive",
       "fallback_used": true,
       "attempts": [
         {
@@ -2233,7 +2263,7 @@
           "version": 122,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "dizipal1597.com:http-403"
+          "provider_reason": "dizipal1598.com:http-403"
         },
         {
           "repository": "qera18/apple",
@@ -2257,7 +2287,7 @@
           "version": 91,
           "result": "ok",
           "provider_check": "reachable",
-          "provider_reason": "dizipal2150.com:alive-tr"
+          "provider_reason": "dizipal2150.com:alive"
         }
       ]
     },
@@ -2299,7 +2329,7 @@
       "size": 40969,
       "hash_checked": true,
       "provider_check": "reachable",
-      "provider_reason": "dizipal2150.com:alive-tr",
+      "provider_reason": "dizipal2150.com:alive",
       "fallback_used": false,
       "attempts": null
     },
@@ -2321,8 +2351,8 @@
       "internal_name": "dizipalhub",
       "name": "DiziPalHub",
       "status": "healthy",
-      "repository": "Wiojelt/WioSinema",
-      "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/main/DiziPalHub.cs3?v=c9bc8c46b45f",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/DiziPalHub.cs3?v=d7d1e1b94b7b",
       "version": 28,
       "size": 242385,
       "hash_checked": true,
@@ -2458,14 +2488,6 @@
       "fallback_used": true,
       "attempts": [
         {
-          "repository": "Wiojelt/WioSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/main/DiziRella.cs3?v=986928647db7",
-          "version": 11,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "dynamic-domain-missing"
-        },
-        {
           "repository": "Wiojelt/TurkSinema",
           "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/DiziRella.cs3?v=986928647db7",
           "version": 11,
@@ -2492,6 +2514,14 @@
         {
           "repository": "MrKonce/ozel-cs-repom",
           "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/TurkSinema_DiziRella_v11.cs3",
+          "version": 11,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "dynamic-domain-missing"
+        },
+        {
+          "repository": "Wiojelt/WioSinema",
+          "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/main/DiziRella.cs3?v=986928647db7",
           "version": 11,
           "result": "provider-unverified",
           "provider_check": "unverified",
@@ -2570,8 +2600,8 @@
       "internal_name": "diziwatch",
       "name": "DiziWatch",
       "status": "healthy",
-      "repository": "Wiojelt/WioSinema",
-      "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/main/DiziWatch.cs3?v=22a24ab5f0d8",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/DiziWatch.cs3?v=22a24ab5f0d8",
       "version": 12,
       "size": 110804,
       "hash_checked": true,
@@ -3146,7 +3176,7 @@
           "version": 1062,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "filmmakinesi.to:http-403"
+          "provider_reason": "filmmakinesi.to:http-451"
         },
         {
           "repository": "merb2y/cs-builds",
@@ -3154,7 +3184,7 @@
           "version": 1061,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "filmmakinesi.to:http-403"
+          "provider_reason": "filmmakinesi.to:http-451"
         },
         {
           "repository": "Emre-Kahveci/CloudStreamHub",
@@ -3162,7 +3192,7 @@
           "version": 110,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "filmmakinesi.to:http-403"
+          "provider_reason": "filmmakinesi.to:http-451"
         },
         {
           "repository": "arcilingir/CloudStreamHub",
@@ -3170,15 +3200,15 @@
           "version": 110,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "filmmakinesi.to:http-403"
+          "provider_reason": "filmmakinesi.to:http-451"
         },
         {
           "repository": "aytzey/cs-kraptor",
           "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/FilmMakinesi.cs3",
-          "version": 77,
-          "result": "hash-mismatch",
-          "provider_check": "not-checked",
-          "provider_reason": null
+          "version": 78,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "filmmakinesi.to:http-451"
         },
         {
           "repository": "dr-octagon/BronzeCloud",
@@ -3228,7 +3258,7 @@
       "size": 15764,
       "hash_checked": true,
       "provider_check": "reachable",
-      "provider_reason": "www.filmmodu.one:alive-tr",
+      "provider_reason": "www.filmmodu.one:alive",
       "fallback_used": false,
       "attempts": null
     },
@@ -3341,6 +3371,20 @@
       "hash_checked": true,
       "provider_check": "reachable",
       "provider_reason": "hdfilm.us:alive",
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
+      "internal_name": "fullhdfilmizlesene",
+      "name": "FullHDFilmizlesene",
+      "status": "healthy",
+      "repository": "aytzey/cs-kraptor",
+      "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/FullHDFilmizlesene.cs3",
+      "version": 74,
+      "size": 144765,
+      "hash_checked": true,
+      "provider_check": "reachable",
+      "provider_reason": "www.fullhdfilmizlesene.now:alive",
       "fallback_used": false,
       "attempts": null
     },
@@ -3493,10 +3537,10 @@
         {
           "repository": "aytzey/cs-kraptor",
           "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/HDFilmCehennemi.cs3",
-          "version": 109,
-          "result": "hash-mismatch",
-          "provider_check": "not-checked",
-          "provider_reason": null
+          "version": 110,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.hdfilmcehennemi.nl:http-451"
         },
         {
           "repository": "adilem/cs-kraptor",
@@ -3589,7 +3633,7 @@
         {
           "repository": "Bymesut1/Kartaloglu-cs",
           "url": "https://raw.githubusercontent.com/Bymesut1/Kartaloglu-cs/builds/HDFilmCehennemi.cs3",
-          "version": 41,
+          "version": 43,
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "hdfilmcehennemi.nl:http-451"
@@ -3608,7 +3652,7 @@
           "version": 36,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.hdfilmcehennemi.com:http-403"
+          "provider_reason": "www.hdfilmcehennemi.com:http-451"
         },
         {
           "repository": "arcilingir/Dizi_Film_2",
@@ -3616,7 +3660,7 @@
           "version": 36,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.hdfilmcehennemi.com:http-403"
+          "provider_reason": "www.hdfilmcehennemi.com:http-451"
         },
         {
           "repository": "arcilingir/nik-cloudstream",
@@ -3624,7 +3668,7 @@
           "version": 36,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.hdfilmcehennemi.com:http-403"
+          "provider_reason": "www.hdfilmcehennemi.com:http-451"
         },
         {
           "repository": "arcilingir/Dizi_Film",
@@ -3648,7 +3692,7 @@
           "version": 36,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.hdfilmcehennemi.com:http-403"
+          "provider_reason": "www.hdfilmcehennemi.com:http-451"
         },
         {
           "repository": "manitux-app/cs-plugins",
@@ -3680,7 +3724,7 @@
           "version": 23,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.hdfilmcehennemi.la:http-403"
+          "provider_reason": "www.hdfilmcehennemi.la:http-451"
         },
         {
           "repository": "burak-ayd/cs-Kekik-old",
@@ -3688,7 +3732,7 @@
           "version": 23,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.hdfilmcehennemi.la:http-403"
+          "provider_reason": "www.hdfilmcehennemi.la:http-451"
         },
         {
           "repository": "neoser1984/neowatch",
@@ -3739,14 +3783,6 @@
           "provider_reason": "www.hdfilmcehennemi.nl:http-451"
         },
         {
-          "repository": "Wiojelt/WioSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/main/HDFilmCehennemi.cs3?v=c43091af7f9a",
-          "version": 8,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.hdfilmcehennemi.to:dns-error"
-        },
-        {
           "repository": "Wiojelt/TurkSinema",
           "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/HDFilmCehennemi.cs3?v=c43091af7f9a",
           "version": 8,
@@ -3765,6 +3801,14 @@
         {
           "repository": "arcilingir/TurkSinema",
           "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/HDFilmCehennemi.cs3?v=c43091af7f9a",
+          "version": 8,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.hdfilmcehennemi.to:dns-error"
+        },
+        {
+          "repository": "Wiojelt/WioSinema",
+          "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/main/HDFilmCehennemi.cs3?v=c43091af7f9a",
           "version": 8,
           "result": "provider-unverified",
           "provider_check": "unverified",
@@ -3878,7 +3922,7 @@
       "size": 72092,
       "hash_checked": true,
       "provider_check": "reachable",
-      "provider_reason": "www.hdfilmizle.live:alive-tr",
+      "provider_reason": "www.hdfilmizle.live:alive",
       "fallback_used": false,
       "attempts": null
     },
@@ -3900,8 +3944,8 @@
       "internal_name": "hdfilmizleink",
       "name": "HDFilmIzleInk",
       "status": "healthy",
-      "repository": "Wiojelt/WioSinema",
-      "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/main/HDFilmIzleInk.cs3?v=90520e065def",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/HDFilmIzleInk.cs3?v=90520e065def",
       "version": 11,
       "size": 131377,
       "hash_checked": true,
@@ -3914,8 +3958,8 @@
       "internal_name": "hdfilmizlevip",
       "name": "HDFilmIzleVip",
       "status": "healthy",
-      "repository": "Wiojelt/WioSinema",
-      "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/main/HDFilmIzleVip.cs3?v=9f2a0e4a4ca1",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/HDFilmIzleVip.cs3?v=9f2a0e4a4ca1",
       "version": 11,
       "size": 131394,
       "hash_checked": true,
@@ -4323,6 +4367,20 @@
       "attempts": null
     },
     {
+      "internal_name": "izleoyna",
+      "name": "IzleOyna",
+      "status": "healthy",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/IzleOyna.cs3?v=bcd8b61b979d",
+      "version": 3,
+      "size": 103804,
+      "hash_checked": true,
+      "provider_check": "reachable",
+      "provider_reason": "www.izleoyna.com:alive",
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
       "internal_name": "jestyayin",
       "name": "JestYayin",
       "status": "healthy",
@@ -4346,7 +4404,7 @@
       "size": 64337,
       "hash_checked": true,
       "provider_check": "reachable",
-      "provider_reason": "jetfilmizle.app:alive-tr",
+      "provider_reason": "jetfilmizle.app:alive",
       "fallback_used": false,
       "attempts": null
     },
@@ -4564,8 +4622,8 @@
       "internal_name": "liderfilmizle",
       "name": "LiderFilmIzle",
       "status": "healthy",
-      "repository": "Wiojelt/WioSinema",
-      "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/main/LiderFilmIzle.cs3?v=e4760e93c9c2",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/LiderFilmIzle.cs3?v=e4760e93c9c2",
       "version": 10,
       "size": 139271,
       "hash_checked": true,
@@ -5695,7 +5753,7 @@
       "size": 158258,
       "hash_checked": true,
       "provider_check": "reachable",
-      "provider_reason": "sezonlukdizi.cc:alive-tr",
+      "provider_reason": "sezonlukdizi.cc:alive",
       "fallback_used": false,
       "attempts": null
     },
@@ -5709,7 +5767,7 @@
       "size": 129973,
       "hash_checked": true,
       "provider_check": "reachable",
-      "provider_reason": "sezonlukdizi.cc:alive-tr",
+      "provider_reason": "sezonlukdizi.cc:alive",
       "fallback_used": false,
       "attempts": null
     },
@@ -5801,48 +5859,15 @@
       "internal_name": "sinefy",
       "name": "Sinefy",
       "status": "healthy",
-      "repository": "lepotane/MRC-builds",
-      "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/Sinefy.cs3",
-      "version": 6,
-      "size": 62563,
+      "repository": "Sertel392/gencler",
+      "url": "https://raw.githubusercontent.com/UmayTrade/MyTV/builds/Sinefy.cs3",
+      "version": 14,
+      "size": 21437,
       "hash_checked": true,
       "provider_check": "reachable",
-      "provider_reason": "selcukflix.app:alive-tr",
-      "fallback_used": true,
-      "attempts": [
-        {
-          "repository": "Sertel392/gencler",
-          "url": "https://raw.githubusercontent.com/UmayTrade/MyTV/builds/Sinefy.cs3",
-          "version": 14,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "sinefy3.com:http-429"
-        },
-        {
-          "repository": "Bymesut1/Eklenti",
-          "url": "https://raw.githubusercontent.com/UmayTrade/MyTV/builds/Sinefy.cs3",
-          "version": 14,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "sinefy3.com:http-429"
-        },
-        {
-          "repository": "adilem/MyTV",
-          "url": "https://raw.githubusercontent.com/UmayTrade/MyTV/builds/Sinefy.cs3",
-          "version": 14,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "sinefy3.com:http-429"
-        },
-        {
-          "repository": "lepotane/MRC-builds",
-          "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/Sinefy.cs3",
-          "version": 6,
-          "result": "ok",
-          "provider_check": "reachable",
-          "provider_reason": "selcukflix.app:alive-tr"
-        }
-      ]
+      "provider_reason": "sinefy3.com:alive",
+      "fallback_used": false,
+      "attempts": null
     },
     {
       "internal_name": "sinemacx",
@@ -5943,7 +5968,7 @@
       "size": 119120,
       "hash_checked": true,
       "provider_check": "reachable",
-      "provider_reason": "www.sinemetrik.com:alive",
+      "provider_reason": "www.sinemetrik.com:alive-tr",
       "fallback_used": false,
       "attempts": null
     },
@@ -6296,7 +6321,7 @@
       "size": 52389,
       "hash_checked": true,
       "provider_check": "reachable",
-      "provider_reason": "www.tekfullfilmizle6.com:alive-tr",
+      "provider_reason": "www.tekfullfilmizle6.com:alive",
       "fallback_used": false,
       "attempts": null
     },
@@ -6456,7 +6481,7 @@
           "version": 16,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.tranimeizle.live:http-404"
+          "provider_reason": "www.tranimeizle.live:http-403"
         },
         {
           "repository": "adilem/cs-kraptor",
@@ -6488,7 +6513,7 @@
           "version": 5,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.tranimeizle.live:http-404"
+          "provider_reason": "www.tranimeizle.live:http-403"
         },
         {
           "repository": "Wiojelt/TurkSinema",
@@ -6496,7 +6521,7 @@
           "version": 4,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.tranimeizle.live:http-404"
+          "provider_reason": "www.tranimeizle.live:http-403"
         },
         {
           "repository": "pisovo-5031/TurkSinema",
@@ -6504,7 +6529,7 @@
           "version": 4,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.tranimeizle.live:http-404"
+          "provider_reason": "www.tranimeizle.live:http-403"
         },
         {
           "repository": "arcilingir/TurkSinema",
@@ -6512,7 +6537,7 @@
           "version": 4,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.tranimeizle.live:http-404"
+          "provider_reason": "www.tranimeizle.live:http-403"
         },
         {
           "repository": "MrKonce/ozel-cs-repom",
@@ -6520,7 +6545,7 @@
           "version": 4,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.tranimeizle.live:http-404"
+          "provider_reason": "www.tranimeizle.live:http-403"
         },
         {
           "repository": "Wiojelt/WioAnime",
@@ -6528,7 +6553,7 @@
           "version": 4,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.tranimeizle.live:http-404"
+          "provider_reason": "www.tranimeizle.live:http-403"
         },
         {
           "repository": "Sertel392/gencler",
@@ -6560,8 +6585,8 @@
       "internal_name": "trdiziizle",
       "name": "TrDiziIzle",
       "status": "healthy",
-      "repository": "Wiojelt/WioSinema",
-      "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/main/TrDiziIzle.cs3?v=43085f24e496",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/TrDiziIzle.cs3?v=43085f24e496",
       "version": 9,
       "size": 139163,
       "hash_checked": true,
@@ -6576,14 +6601,6 @@
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "www.trdiziizle.tv:http-403"
-        },
-        {
-          "repository": "Wiojelt/WioSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/main/TrDiziIzle.cs3?v=43085f24e496",
-          "version": 9,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "dynamic-domain-missing"
         },
         {
           "repository": "Wiojelt/TurkSinema",
@@ -6604,6 +6621,14 @@
         {
           "repository": "arcilingir/TurkSinema",
           "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/TrDiziIzle.cs3?v=43085f24e496",
+          "version": 9,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "dynamic-domain-missing"
+        },
+        {
+          "repository": "Wiojelt/WioSinema",
+          "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/main/TrDiziIzle.cs3?v=43085f24e496",
           "version": 9,
           "result": "provider-unverified",
           "provider_check": "unverified",
@@ -7220,11 +7245,25 @@
       "attempts": null
     },
     {
+      "internal_name": "webteizle",
+      "name": "WebteIzle",
+      "status": "healthy",
+      "repository": "arcilingir/Dizi_Film_2",
+      "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film_2/builds/WebteIzle.cs3",
+      "version": 59,
+      "size": 35303,
+      "hash_checked": true,
+      "provider_check": "reachable",
+      "provider_reason": "webteizle.info:alive",
+      "fallback_used": false,
+      "attempts": null
+    },
+    {
       "internal_name": "wfilmizle",
       "name": "Wfilmizle",
       "status": "healthy",
-      "repository": "Wiojelt/WioSinema",
-      "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/main/Wfilmizle.cs3",
+      "repository": "Wiojelt/TurkSinema",
+      "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/Wfilmizle.cs3",
       "version": 1,
       "size": 118964,
       "hash_checked": true,
@@ -7257,8 +7296,8 @@
           "provider_reason": "dynamic-domain-missing"
         },
         {
-          "repository": "Wiojelt/WioSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/main/Wfilmizle.cs3",
+          "repository": "Wiojelt/TurkSinema",
+          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/Wfilmizle.cs3",
           "version": 1,
           "result": "ok",
           "provider_check": "reachable",
@@ -7445,168 +7484,15 @@
       "internal_name": "yesilcamtv",
       "name": "YesilCamTv",
       "status": "healthy",
-      "repository": "hrtestingx/hrcsrepofull",
-      "url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepofull/builds/YesilCamTv.cs3",
-      "version": 8,
-      "size": 20768,
+      "repository": "Emre-Kahveci/CloudStreamHub",
+      "url": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/YesilCamTv.cs3",
+      "version": 31,
+      "size": 149413,
       "hash_checked": true,
-      "provider_check": "unverified",
-      "provider_reason": "dynamic-domain-missing",
-      "fallback_used": true,
-      "attempts": [
-        {
-          "repository": "Emre-Kahveci/CloudStreamHub",
-          "url": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/YesilCamTv.cs3",
-          "version": 31,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "yesilcamtv.com.tr:unreachable"
-        },
-        {
-          "repository": "arcilingir/CloudStreamHub",
-          "url": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/YesilCamTv.cs3",
-          "version": 31,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "yesilcamtv.com.tr:unreachable"
-        },
-        {
-          "repository": "Sertel392/gencler",
-          "url": "https://raw.githubusercontent.com/UmayTrade/MyTV/builds/YesilCamTv.cs3",
-          "version": 11,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "yesilcamtv.com.tr:unreachable"
-        },
-        {
-          "repository": "Bymesut1/Eklenti",
-          "url": "https://raw.githubusercontent.com/UmayTrade/MyTV/builds/YesilCamTv.cs3",
-          "version": 11,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "yesilcamtv.com.tr:unreachable"
-        },
-        {
-          "repository": "adilem/MyTV",
-          "url": "https://raw.githubusercontent.com/UmayTrade/MyTV/builds/YesilCamTv.cs3",
-          "version": 11,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "yesilcamtv.com.tr:unreachable"
-        },
-        {
-          "repository": "aytzey/cs-kraptor",
-          "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/YesilCamTv.cs3",
-          "version": 10,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "yesilcamtv.com.tr:unreachable"
-        },
-        {
-          "repository": "adilem/cs-kraptor",
-          "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/YesilCamTv.cs3",
-          "version": 9,
-          "result": "http-404",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
-          "repository": "qera18/cs-kraptor",
-          "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/YesilCamTv.cs3",
-          "version": 9,
-          "result": "http-404",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
-          "repository": "F0Rextasy/bigbullapp-cs",
-          "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/YesilCamTv.cs3",
-          "version": 8,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "yesilcamtv.com.tr:unreachable"
-        },
-        {
-          "repository": "hrtestingx/hrcsrepofull",
-          "url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepofull/builds/YesilCamTv.cs3",
-          "version": 8,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "dynamic-domain-missing"
-        },
-        {
-          "repository": "merb2y/cloudstream-tr-repo",
-          "url": "https://raw.githubusercontent.com/merb2y/cloudstream-tr-repo/main/plugins/YesilCamTv.cs3",
-          "version": 5,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "yesilcamtv.com.tr:unreachable"
-        },
-        {
-          "repository": "manitux-app/cs-plugins",
-          "url": "https://raw.githubusercontent.com/manitux-app/cs-plugins/main/builds/YesilcamTV.cs3",
-          "version": 5,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "yesilcamtv.com.tr:unreachable"
-        },
-        {
-          "repository": "Bymesut1/cs-plugins",
-          "url": "https://raw.githubusercontent.com/manitux-app/cs-plugins/main/builds/YesilcamTV.cs3",
-          "version": 5,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "yesilcamtv.com.tr:unreachable"
-        },
-        {
-          "repository": "lepotane/MRC-builds",
-          "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/YesilCamTv.cs3",
-          "version": 4,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "yesilcamtv.com.tr:unreachable"
-        },
-        {
-          "repository": "Wiojelt/WioSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/main/YesilCamTv.cs3?v=55e75de0e2bf",
-          "version": 1,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "yesilcamtv.com.tr:unreachable"
-        },
-        {
-          "repository": "Wiojelt/TurkSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/YesilCamTv.cs3?v=55e75de0e2bf",
-          "version": 1,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "yesilcamtv.com.tr:unreachable"
-        },
-        {
-          "repository": "pisovo-5031/TurkSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/YesilCamTv.cs3?v=55e75de0e2bf",
-          "version": 1,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "yesilcamtv.com.tr:unreachable"
-        },
-        {
-          "repository": "arcilingir/TurkSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/YesilCamTv.cs3?v=55e75de0e2bf",
-          "version": 1,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "yesilcamtv.com.tr:unreachable"
-        },
-        {
-          "repository": "pisovo-5031/WioSinema",
-          "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/sinema/YesilCamTv.cs3?v=144c2cf233e3",
-          "version": 1,
-          "result": "hash-mismatch",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        }
-      ]
+      "provider_check": "reachable",
+      "provider_reason": "yesilcamtv.com.tr:alive",
+      "fallback_used": false,
+      "attempts": null
     },
     {
       "internal_name": "yirmidorttv",
@@ -7632,7 +7518,7 @@
       "size": 17063,
       "hash_checked": false,
       "provider_check": "reachable",
-      "provider_reason": "yt.chocolatemoo53.com:alive-tr",
+      "provider_reason": "yt.chocolatemoo53.com:alive",
       "fallback_used": true,
       "attempts": [
         {
@@ -7681,7 +7567,7 @@
           "version": 6,
           "result": "ok",
           "provider_check": "reachable",
-          "provider_reason": "yt.chocolatemoo53.com:alive-tr"
+          "provider_reason": "yt.chocolatemoo53.com:alive"
         }
       ]
     },
@@ -8072,20 +7958,6 @@
       ]
     },
     {
-      "internal_name": "asyamax",
-      "status": "rejected",
-      "attempts": [
-        {
-          "repository": "F0Rextasy/bigbullapp-cs",
-          "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/AsyaMax.cs3",
-          "version": 3,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "asyamax.com:unreachable"
-        }
-      ]
-    },
-    {
       "internal_name": "belgeseltv",
       "status": "rejected",
       "attempts": [
@@ -8132,52 +8004,6 @@
           "result": "provider-unverified",
           "provider_check": "unverified",
           "provider_reason": "www.bicaps.live:http-403"
-        }
-      ]
-    },
-    {
-      "internal_name": "birasyadizi",
-      "status": "rejected",
-      "attempts": [
-        {
-          "repository": "F0Rextasy/bigbullapp-cs",
-          "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/BirAsyaDizi.cs3",
-          "version": 11,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.birasyadizi.cx:unreachable"
-        },
-        {
-          "repository": "Sertel392/gencler",
-          "url": "https://raw.githubusercontent.com/UmayTrade/MyTV/builds/BirAsyaDizi.cs3",
-          "version": 8,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.birasyadizi.cx:unreachable"
-        },
-        {
-          "repository": "Bymesut1/Eklenti",
-          "url": "https://raw.githubusercontent.com/UmayTrade/MyTV/builds/BirAsyaDizi.cs3",
-          "version": 8,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.birasyadizi.cx:unreachable"
-        },
-        {
-          "repository": "adilem/MyTV",
-          "url": "https://raw.githubusercontent.com/UmayTrade/MyTV/builds/BirAsyaDizi.cs3",
-          "version": 8,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.birasyadizi.cx:unreachable"
-        },
-        {
-          "repository": "lepotane/MRC-builds",
-          "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/BirAsyaDizi.cs3",
-          "version": 5,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.birasyadizi.cx:unreachable"
         }
       ]
     },
@@ -8248,78 +8074,40 @@
       ]
     },
     {
-      "internal_name": "cizgifilmizleinfo",
+      "internal_name": "cizgiportal",
       "status": "rejected",
       "attempts": [
         {
           "repository": "Wiojelt/TurkSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/CizgiFilmIzleInfo.cs3?v=920e4ba209a7",
-          "version": 3,
+          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/CizgiPortal.cs3?v=5cc9e719367b",
+          "version": 4,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.cizgifilmizle.info:unreachable"
+          "provider_reason": "www.cizgiportal.net:unreachable"
         },
         {
           "repository": "pisovo-5031/TurkSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/CizgiFilmIzleInfo.cs3?v=920e4ba209a7",
-          "version": 3,
+          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/CizgiPortal.cs3?v=5cc9e719367b",
+          "version": 4,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.cizgifilmizle.info:unreachable"
+          "provider_reason": "www.cizgiportal.net:unreachable"
         },
         {
           "repository": "arcilingir/TurkSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/CizgiFilmIzleInfo.cs3?v=920e4ba209a7",
-          "version": 3,
+          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/CizgiPortal.cs3?v=5cc9e719367b",
+          "version": 4,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.cizgifilmizle.info:unreachable"
+          "provider_reason": "www.cizgiportal.net:unreachable"
         },
         {
           "repository": "Wiojelt/WioKids",
-          "url": "https://raw.githubusercontent.com/Wiojelt/WioKids/builds/CizgiFilmIzleInfo.cs3?v=920e4ba209a7",
-          "version": 3,
+          "url": "https://raw.githubusercontent.com/Wiojelt/WioKids/builds/CizgiPortal.cs3?v=5cc9e719367b",
+          "version": 4,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "www.cizgifilmizle.info:unreachable"
-        }
-      ]
-    },
-    {
-      "internal_name": "cizgifilmtv",
-      "status": "rejected",
-      "attempts": [
-        {
-          "repository": "Wiojelt/TurkSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/CizgiFilmTv.cs3?v=f79fbf793139",
-          "version": 3,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.cizgifilm.tv:unreachable"
-        },
-        {
-          "repository": "pisovo-5031/TurkSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/CizgiFilmTv.cs3?v=f79fbf793139",
-          "version": 3,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.cizgifilm.tv:unreachable"
-        },
-        {
-          "repository": "arcilingir/TurkSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/CizgiFilmTv.cs3?v=f79fbf793139",
-          "version": 3,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.cizgifilm.tv:unreachable"
-        },
-        {
-          "repository": "Wiojelt/WioKids",
-          "url": "https://raw.githubusercontent.com/Wiojelt/WioKids/builds/CizgiFilmTv.cs3?v=f79fbf793139",
-          "version": 3,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.cizgifilm.tv:unreachable"
+          "provider_reason": "www.cizgiportal.net:unreachable"
         }
       ]
     },
@@ -8333,7 +8121,7 @@
           "version": 8,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "net52.cc:http-403"
+          "provider_reason": "net52.cc:http-404"
         },
         {
           "repository": "pisovo-5031/TurkSinema",
@@ -8341,7 +8129,7 @@
           "version": 8,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "net52.cc:http-403"
+          "provider_reason": "net52.cc:http-404"
         },
         {
           "repository": "arcilingir/TurkSinema",
@@ -8349,7 +8137,7 @@
           "version": 8,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "net52.cc:http-403"
+          "provider_reason": "net52.cc:http-404"
         },
         {
           "repository": "MrKonce/ozel-cs-repom",
@@ -8357,7 +8145,7 @@
           "version": 8,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "net52.cc:http-403"
+          "provider_reason": "net52.cc:http-404"
         }
       ]
     },
@@ -8371,7 +8159,7 @@
           "version": 8,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "net52.cc:http-403"
+          "provider_reason": "net52.cc:http-404"
         },
         {
           "repository": "pisovo-5031/TurkSinema",
@@ -8379,7 +8167,7 @@
           "version": 8,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "net52.cc:http-403"
+          "provider_reason": "net52.cc:http-404"
         },
         {
           "repository": "arcilingir/TurkSinema",
@@ -8387,7 +8175,7 @@
           "version": 8,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "net52.cc:http-403"
+          "provider_reason": "net52.cc:http-404"
         },
         {
           "repository": "MrKonce/ozel-cs-repom",
@@ -8395,7 +8183,7 @@
           "version": 8,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "net52.cc:http-403"
+          "provider_reason": "net52.cc:http-404"
         }
       ]
     },
@@ -8409,7 +8197,7 @@
           "version": 8,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "net52.cc:http-403"
+          "provider_reason": "net52.cc:http-404"
         },
         {
           "repository": "pisovo-5031/TurkSinema",
@@ -8417,7 +8205,7 @@
           "version": 8,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "net52.cc:http-403"
+          "provider_reason": "net52.cc:http-404"
         },
         {
           "repository": "arcilingir/TurkSinema",
@@ -8425,7 +8213,7 @@
           "version": 8,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "net52.cc:http-403"
+          "provider_reason": "net52.cc:http-404"
         },
         {
           "repository": "MrKonce/ozel-cs-repom",
@@ -8433,7 +8221,59 @@
           "version": 8,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "net52.cc:http-403"
+          "provider_reason": "net52.cc:http-404"
+        }
+      ]
+    },
+    {
+      "internal_name": "ddizi - latte",
+      "status": "rejected",
+      "attempts": [
+        {
+          "repository": "GitLatte/Sinetech",
+          "url": "https://raw.githubusercontent.com/GitLatte/Sinetech/builds/DDizi - Latte.cs3",
+          "version": 4,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.ddizi.im:http-403"
+        }
+      ]
+    },
+    {
+      "internal_name": "ddizialternatif",
+      "status": "rejected",
+      "attempts": [
+        {
+          "repository": "Wiojelt/TurkSinema",
+          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/DDiziAlternatif.cs3?v=4918bbc2cf17",
+          "version": 8,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.ddizi.tel:http-403"
+        },
+        {
+          "repository": "pisovo-5031/TurkSinema",
+          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/DDiziAlternatif.cs3?v=4918bbc2cf17",
+          "version": 8,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.ddizi.tel:http-403"
+        },
+        {
+          "repository": "arcilingir/TurkSinema",
+          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/DDiziAlternatif.cs3?v=4918bbc2cf17",
+          "version": 8,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.ddizi.tel:http-403"
+        },
+        {
+          "repository": "MrKonce/ozel-cs-repom",
+          "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/TurkSinema_DDiziAlternatif_v8.cs3",
+          "version": 8,
+          "result": "provider-unverified",
+          "provider_check": "unverified",
+          "provider_reason": "www.ddizi.tel:http-403"
         }
       ]
     },
@@ -8896,356 +8736,6 @@
       ]
     },
     {
-      "internal_name": "fullhdfilmizlesene",
-      "status": "rejected",
-      "attempts": [
-        {
-          "repository": "aytzey/cs-kraptor",
-          "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/FullHDFilmizlesene.cs3",
-          "version": 74,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
-        },
-        {
-          "repository": "hrtestingx/hrcsrepofull",
-          "url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepofull/builds/FullHDFilmizlesene.cs3",
-          "version": 73,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
-        },
-        {
-          "repository": "adilem/cs-kraptor",
-          "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/FullHDFilmizlesene.cs3",
-          "version": 72,
-          "result": "http-404",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
-          "repository": "qera18/cs-kraptor",
-          "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/FullHDFilmizlesene.cs3",
-          "version": 72,
-          "result": "http-404",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
-          "repository": "dr-octagon/BronzeCloud",
-          "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/FullHDFilmizlesene_v37.cs3",
-          "version": 37,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
-        },
-        {
-          "repository": "feroxx/Kekik-cloudstream",
-          "url": "https://raw.githubusercontent.com/feroxx/Kekik-cloudstream/builds/FullHDFilmizlesene.cs3",
-          "version": 34,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
-        },
-        {
-          "repository": "qera18/apple",
-          "url": "https://raw.githubusercontent.com/csprofesor/nik-cloudstream/builds/FullHDFilmizlesene.cs3",
-          "version": 33,
-          "result": "http-404",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
-          "repository": "liberta09/Kekik-cloudstream",
-          "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/FullHDFilmizlesene.cs3",
-          "version": 33,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
-        },
-        {
-          "repository": "PobloMert/PobloStream",
-          "url": "https://raw.githubusercontent.com/PobloMert/PobloStream/builds/FullHDFilmizlesene.cs3",
-          "version": 27,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.tv:unreachable"
-        },
-        {
-          "repository": "21nek/nektv",
-          "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/FullHDFilmizlesene.cs3",
-          "version": 27,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.tv:unreachable"
-        },
-        {
-          "repository": "burak-ayd/cs-Kekik-old",
-          "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/FullHDFilmizlesene.cs3",
-          "version": 27,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.tv:unreachable"
-        },
-        {
-          "repository": "Emre-Kahveci/CloudStreamHub",
-          "url": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/FullHDFilmizlesene.cs3",
-          "version": 20,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
-        },
-        {
-          "repository": "arcilingir/CloudStreamHub",
-          "url": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/FullHDFilmizlesene.cs3",
-          "version": 20,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
-        },
-        {
-          "repository": "manitux-app/cs-plugins",
-          "url": "https://raw.githubusercontent.com/manitux-app/cs-plugins/main/builds/FullHDFilmizlesene.cs3",
-          "version": 13,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
-        },
-        {
-          "repository": "Bymesut1/cs-plugins",
-          "url": "https://raw.githubusercontent.com/manitux-app/cs-plugins/main/builds/FullHDFilmizlesene.cs3",
-          "version": 13,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
-        },
-        {
-          "repository": "Wiojelt/WioSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/main/FullHDFilmizlesene.cs3?v=e6bc82db13d0",
-          "version": 12,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
-        },
-        {
-          "repository": "Wiojelt/TurkSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/FullHDFilmizlesene.cs3?v=e6bc82db13d0",
-          "version": 12,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
-        },
-        {
-          "repository": "pisovo-5031/TurkSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/FullHDFilmizlesene.cs3?v=e6bc82db13d0",
-          "version": 12,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
-        },
-        {
-          "repository": "arcilingir/TurkSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/FullHDFilmizlesene.cs3?v=e6bc82db13d0",
-          "version": 12,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
-        },
-        {
-          "repository": "Ripplay/cloudstream-repo",
-          "url": "https://raw.githubusercontent.com/Ripplay/cloudstream-repo/builds/FullHDFilmizlesene.cs3",
-          "version": 12,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
-        },
-        {
-          "repository": "pisovo-5031/WioSinema",
-          "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/sinema/FullHDFilmizlesene.cs3?v=e6bc82db13d0",
-          "version": 11,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
-        },
-        {
-          "repository": "arcilingir/Dizi_Film_2",
-          "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film_2/builds/FullHDFilmizlesene.cs3",
-          "version": 11,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.so:dns-error"
-        },
-        {
-          "repository": "arcilingir/nik-cloudstream",
-          "url": "https://raw.githubusercontent.com/arcilingir/nik-cloudstream/builds/FullHDFilmizlesene.cs3",
-          "version": 11,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.so:dns-error"
-        },
-        {
-          "repository": "arcilingir/Dizi_Film",
-          "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film/builds/FullHDFilmizlesene.cs3",
-          "version": 11,
-          "result": "http-404",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
-          "repository": "Bymesut1/Dizi_Film",
-          "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film/builds/FullHDFilmizlesene.cs3",
-          "version": 11,
-          "result": "http-404",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
-          "repository": "safarxe/CloudStream",
-          "url": "https://raw.githubusercontent.com/safarxe/CloudStream/builds/FullHDFilmizlesene.cs3",
-          "version": 11,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.so:dns-error"
-        },
-        {
-          "repository": "F0Rextasy/bigbullapp-cs",
-          "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/FullHDFilmizlesene.cs3",
-          "version": 10,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
-        },
-        {
-          "repository": "bilhan50/BilhanTR",
-          "url": "https://raw.githubusercontent.com/bilhan50/BilhanTR/builds/FullHDFilmizlesene.cs3",
-          "version": 9,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
-        },
-        {
-          "repository": "galipgokalp/tv-cloudstream",
-          "url": "https://raw.githubusercontent.com/galipgokalp/tv-cloudstream/builds/FullHDFilmizlesene.cs3",
-          "version": 8,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
-        },
-        {
-          "repository": "Sertel392/gencler",
-          "url": "https://raw.githubusercontent.com/UmayTrade/MyTV/builds/FullHDFilmizlesene.cs3",
-          "version": 8,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
-        },
-        {
-          "repository": "Bymesut1/Eklenti",
-          "url": "https://raw.githubusercontent.com/UmayTrade/MyTV/builds/FullHDFilmizlesene.cs3",
-          "version": 8,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
-        },
-        {
-          "repository": "adilem/MyTV",
-          "url": "https://raw.githubusercontent.com/UmayTrade/MyTV/builds/FullHDFilmizlesene.cs3",
-          "version": 8,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
-        },
-        {
-          "repository": "lepotane/MRC-builds",
-          "url": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/FullHDFilmizlesene.cs3",
-          "version": 7,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
-        },
-        {
-          "repository": "berr49300/cloudstream-film-repo",
-          "url": "https://raw.githubusercontent.com/berr49300/cloudstream-film-repo/builds/FullHDFilmizlesene.cs3",
-          "version": 7,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
-        },
-        {
-          "repository": "neoser1984/neowatch",
-          "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/FullHDFilmizlesene.cs3",
-          "version": 6,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
-        },
-        {
-          "repository": "JustSadY/Cloudstream-Lykia",
-          "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/FullHDFilmizlesene.cs3",
-          "version": 6,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
-        },
-        {
-          "repository": "Kayracs3/Kayra",
-          "url": "https://raw.githubusercontent.com/Kayracs3/Kayra/builds/FullHDFilmizlesene.cs3",
-          "version": 4,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
-        },
-        {
-          "repository": "merb2y/cloudstream-tr-repo",
-          "url": "https://raw.githubusercontent.com/merb2y/cloudstream-tr-repo/main/plugins/FullHDFilmizlesene.cs3",
-          "version": 4,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
-        },
-        {
-          "repository": "re-cox/cloudstream-dizi-repo",
-          "url": "https://raw.githubusercontent.com/re-cox/cloudstream-dizi-repo/builds/FullHDFilmizlesene.cs3",
-          "version": 3,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
-        },
-        {
-          "repository": "Bymesut1/Kartaloglu-cs",
-          "url": "https://raw.githubusercontent.com/Bymesut1/Kartaloglu-cs/builds/FullHDFilmizlesene.cs3",
-          "version": 2,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
-        },
-        {
-          "repository": "miskin1702/aslan-pub",
-          "url": "https://raw.githubusercontent.com/miskin1702/aslan-pub/main/FullHDFilmizlesene.cs3",
-          "version": 2,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
-        },
-        {
-          "repository": "miskin1702/aslan-dist",
-          "url": "https://raw.githubusercontent.com/miskin1702/aslan-dist/builds/FullHDFilmizlesene.cs3",
-          "version": 2,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
-        },
-        {
-          "repository": "Jung1330/StreamTest",
-          "url": "https://raw.githubusercontent.com/Jung1330/StreamTest/builds/Fullhdfilmizlesene.cs3",
-          "version": 1,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.fullhdfilmizlesene.now:http-404"
-        }
-      ]
-    },
-    {
       "internal_name": "fullhdfilmi̇zlede",
       "status": "rejected",
       "attempts": [
@@ -9516,52 +9006,6 @@
       ]
     },
     {
-      "internal_name": "izleoyna",
-      "status": "rejected",
-      "attempts": [
-        {
-          "repository": "Wiojelt/TurkSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/IzleOyna.cs3?v=bcd8b61b979d",
-          "version": 3,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.izleoyna.com:unreachable"
-        },
-        {
-          "repository": "pisovo-5031/TurkSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/IzleOyna.cs3?v=bcd8b61b979d",
-          "version": 3,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.izleoyna.com:unreachable"
-        },
-        {
-          "repository": "arcilingir/TurkSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/IzleOyna.cs3?v=bcd8b61b979d",
-          "version": 3,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.izleoyna.com:unreachable"
-        },
-        {
-          "repository": "MrKonce/ozel-cs-repom",
-          "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/TurkSinema_IzleOyna_v3.cs3",
-          "version": 3,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.izleoyna.com:unreachable"
-        },
-        {
-          "repository": "Wiojelt/WioKids",
-          "url": "https://raw.githubusercontent.com/Wiojelt/WioKids/builds/IzleOyna.cs3?v=bcd8b61b979d",
-          "version": 3,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "www.izleoyna.com:unreachable"
-        }
-      ]
-    },
-    {
       "internal_name": "koalatv",
       "status": "rejected",
       "attempts": [
@@ -9723,7 +9167,7 @@
           "version": 39,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "net52.cc:http-403"
+          "provider_reason": "net52.cc:http-404"
         },
         {
           "repository": "adilem/cs-kraptor",
@@ -9747,7 +9191,7 @@
           "version": 31,
           "result": "provider-unverified",
           "provider_check": "unverified",
-          "provider_reason": "net52.cc:http-403"
+          "provider_reason": "net52.cc:http-404"
         }
       ]
     },
@@ -10384,308 +9828,6 @@
           "result": "bad-zip-file",
           "provider_check": "not-checked",
           "provider_reason": null
-        }
-      ]
-    },
-    {
-      "internal_name": "webteizle",
-      "status": "rejected",
-      "attempts": [
-        {
-          "repository": "arcilingir/Dizi_Film_2",
-          "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film_2/builds/WebteIzle.cs3",
-          "version": 59,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "webteizle.info:http-403"
-        },
-        {
-          "repository": "arcilingir/nik-cloudstream",
-          "url": "https://raw.githubusercontent.com/arcilingir/nik-cloudstream/builds/WebteIzle.cs3",
-          "version": 59,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "webteizle.info:http-403"
-        },
-        {
-          "repository": "arcilingir/Dizi_Film",
-          "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film/builds/WebteIzle.cs3",
-          "version": 59,
-          "result": "http-404",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
-          "repository": "Bymesut1/Dizi_Film",
-          "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film/builds/WebteIzle.cs3",
-          "version": 59,
-          "result": "http-404",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
-          "repository": "safarxe/CloudStream",
-          "url": "https://raw.githubusercontent.com/safarxe/CloudStream/builds/WebteIzle.cs3",
-          "version": 59,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "webteizle.info:http-403"
-        },
-        {
-          "repository": "aytzey/cs-kraptor",
-          "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/WebteIzle.cs3",
-          "version": 54,
-          "result": "status-down",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
-          "repository": "hrtestingx/hrcsrepofull",
-          "url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepofull/builds/WebteIzle.cs3",
-          "version": 53,
-          "result": "status-down",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
-          "repository": "adilem/cs-kraptor",
-          "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/WebteIzle.cs3",
-          "version": 53,
-          "result": "status-down",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
-          "repository": "qera18/cs-kraptor",
-          "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/WebteIzle.cs3",
-          "version": 53,
-          "result": "status-down",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
-          "repository": "dr-octagon/BronzeCloud",
-          "url": "https://raw.githubusercontent.com/dr-octagon/Cloudstream-BronzeCloud/builds/WebteIzle_v25.cs3",
-          "version": 25,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "webteizle.info:http-403"
-        },
-        {
-          "repository": "MrKonce/ozel-cs-repom",
-          "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/FeroxxKekik_WebteIzle_v21.cs3",
-          "version": 21,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "webteizle.info:http-403"
-        },
-        {
-          "repository": "feroxx/Kekik-cloudstream",
-          "url": "https://raw.githubusercontent.com/feroxx/Kekik-cloudstream/builds/WebteIzle.cs3",
-          "version": 21,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "webteizle.info:http-403"
-        },
-        {
-          "repository": "qera18/apple",
-          "url": "https://raw.githubusercontent.com/csprofesor/nik-cloudstream/builds/WebteIzle.cs3",
-          "version": 21,
-          "result": "http-404",
-          "provider_check": "not-checked",
-          "provider_reason": null
-        },
-        {
-          "repository": "liberta09/Kekik-cloudstream",
-          "url": "https://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/WebteIzle.cs3",
-          "version": 20,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "webteizle3.xyz:unreachable"
-        },
-        {
-          "repository": "baristomruk-max/BTVault",
-          "url": "https://raw.githubusercontent.com/baristomruk-max/BTVault/builds/WebteIzle.cs3",
-          "version": 18,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "webteizle.info:http-403"
-        },
-        {
-          "repository": "neoser1984/neowatch",
-          "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/WebteIzle.cs3",
-          "version": 18,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "webteizle.info:http-403"
-        },
-        {
-          "repository": "bilhan50/BilhanTR",
-          "url": "https://raw.githubusercontent.com/bilhan50/BilhanTR/builds/WebteIzle.cs3",
-          "version": 17,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "webteizle.info:http-403"
-        },
-        {
-          "repository": "Wiojelt/WioSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/WioSinema/main/WebteIzle.cs3?v=86a07d90d8c3",
-          "version": 16,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "webteizle.info:http-403"
-        },
-        {
-          "repository": "Wiojelt/TurkSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/WebteIzle.cs3?v=86a07d90d8c3",
-          "version": 16,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "webteizle.info:http-403"
-        },
-        {
-          "repository": "pisovo-5031/TurkSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/WebteIzle.cs3?v=86a07d90d8c3",
-          "version": 16,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "webteizle.info:http-403"
-        },
-        {
-          "repository": "arcilingir/TurkSinema",
-          "url": "https://raw.githubusercontent.com/Wiojelt/TurkSinema/builds/WebteIzle.cs3?v=86a07d90d8c3",
-          "version": 16,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "webteizle.info:http-403"
-        },
-        {
-          "repository": "pisovo-5031/WioSinema",
-          "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/sinema/WebteIzle.cs3?v=86a07d90d8c3",
-          "version": 16,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "webteizle.info:http-403"
-        },
-        {
-          "repository": "JustSadY/Cloudstream-Lykia",
-          "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/WebteIzle.cs3",
-          "version": 16,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "webteizle.info:http-403"
-        },
-        {
-          "repository": "merb2y/cloudstream-tr-repo",
-          "url": "https://raw.githubusercontent.com/merb2y/cloudstream-tr-repo/main/plugins/WebteIzle.cs3",
-          "version": 15,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "webteizle.info:http-403"
-        },
-        {
-          "repository": "merb2y/cs-builds",
-          "url": "https://raw.githubusercontent.com/merb2y/cs-builds/builds/WebteIzle.cs3",
-          "version": 15,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "webteizle.info:http-403"
-        },
-        {
-          "repository": "21nek/nektv",
-          "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/WebteIzle.cs3",
-          "version": 15,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "webteizle.info:http-403"
-        },
-        {
-          "repository": "burak-ayd/cs-Kekik-old",
-          "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/WebteIzle.cs3",
-          "version": 15,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "webteizle.info:http-403"
-        },
-        {
-          "repository": "Bymesut1/Kartaloglu-cs",
-          "url": "https://raw.githubusercontent.com/Bymesut1/Kartaloglu-cs/builds/Webteizle.cs3",
-          "version": 13,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "webteizle.info:http-403"
-        },
-        {
-          "repository": "F0Rextasy/bigbullapp-cs",
-          "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/WebteIzle.cs3",
-          "version": 8,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "webteizle.info:http-403"
-        },
-        {
-          "repository": "berr49300/cloudstream-film-repo",
-          "url": "https://raw.githubusercontent.com/berr49300/cloudstream-film-repo/builds/WebteIzle.cs3",
-          "version": 5,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "webteizle.info:http-403"
-        },
-        {
-          "repository": "re-cox/cloudstream-dizi-repo",
-          "url": "https://raw.githubusercontent.com/re-cox/cloudstream-dizi-repo/builds/WebteIzle.cs3",
-          "version": 3,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "webteizle.info:http-403"
-        },
-        {
-          "repository": "miskin1702/aslan-pub",
-          "url": "https://raw.githubusercontent.com/miskin1702/aslan-pub/main/WebteIzle.cs3",
-          "version": 2,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "webteizle.info:http-403"
-        },
-        {
-          "repository": "miskin1702/aslan-dist",
-          "url": "https://raw.githubusercontent.com/miskin1702/aslan-dist/builds/WebteIzle.cs3",
-          "version": 2,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "webteizle.info:http-403"
-        },
-        {
-          "repository": "Sertel392/gencler",
-          "url": "https://raw.githubusercontent.com/UmayTrade/MyTV/builds/Webteizle.cs3",
-          "version": 2,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "webteizle.info:http-403"
-        },
-        {
-          "repository": "Bymesut1/Eklenti",
-          "url": "https://raw.githubusercontent.com/UmayTrade/MyTV/builds/Webteizle.cs3",
-          "version": 2,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "webteizle.info:http-403"
-        },
-        {
-          "repository": "adilem/MyTV",
-          "url": "https://raw.githubusercontent.com/UmayTrade/MyTV/builds/Webteizle.cs3",
-          "version": 2,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "webteizle.info:http-403"
-        },
-        {
-          "repository": "blackhope01/cloudstream-plugins",
-          "url": "https://raw.githubusercontent.com/blackhope01/cloudstream-plugins/builds/Webteizle.cs3",
-          "version": 1,
-          "result": "provider-unverified",
-          "provider_check": "unverified",
-          "provider_reason": "webteizle3.xyz:unreachable"
         }
       ]
     },
