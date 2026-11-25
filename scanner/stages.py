@@ -25,7 +25,7 @@ BUNDLE_FILES = (
 OUTPUT_FILES = BUNDLE_FILES + (
     "README.md", "repos-db.json", "catalog.md", "data/catalog.json", "data/ranking.json",
     "data/repos.json", "data/turkish_all.json", "data/global.json", "data/candidates.json", "data/changes.json",
-    "data/owner-probes.json", "data/code-search.json",
+    "data/owner-probes.json", "data/code-search.json", "data/skipped.json",
 )
 
 

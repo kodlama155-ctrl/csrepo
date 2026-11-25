@@ -122,8 +122,20 @@ class ScannerAuthenticationTests(unittest.TestCase):
     def test_blocked_repository_is_skipped(self):
         self.adapter.respond("https://api.github.com/repos/example/blocked", {"message": "Repository access blocked"}, status=451)
 
-        self.assertIsNone(self.scanner.inspect_repo("example/blocked", {"registry"}))
+        result = self.scanner.inspect_repo("example/blocked", {"registry"})
+
+        self.assertEqual(result["status"], "skipped")
+        self.assertEqual(result["skip_reason"], "access-blocked")
+        self.assertTrue(result["checked_at"])
         self.assertEqual(len(self.adapter.requests), 1)
+
+    def test_missing_repository_records_its_reason(self):
+        self.adapter.respond("https://api.github.com/repos/example/gone", {}, status=404)
+
+        result = self.scanner.inspect_repo("example/gone", {"registry"})
+
+        self.assertEqual(result["skip_reason"], "repo-not-found")
+        self.assertEqual(result["skip_detail"], "github-http-404")
 
     def test_temporary_metadata_failure_still_stops_inspection(self):
         self.adapter.respond("https://api.github.com/repos/example/repo", {}, status=503)

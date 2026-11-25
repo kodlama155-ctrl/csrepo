@@ -767,10 +767,12 @@ def inspect_repo(full_name: str, discovery_sources: set[str]):
     except requests.HTTPError as error:
         if error.response is not None and error.response.status_code == 451:
             print(f"[skip] {full_name}: GitHub repository access blocked (HTTP 451)")
-            return None
+            return skip_repo(full_name, "access-blocked", "github-http-451")
         raise
-    if not meta or meta.get("private"):
-        return None
+    if not meta:
+        return skip_repo(full_name, "repo-not-found", "github-http-404")
+    if meta.get("private"):
+        return skip_repo(full_name, "repo-private", "github-private")
     if repo_is_stale(meta.get("pushed_at")):
         return {
             "repository": full_name,
@@ -795,7 +797,7 @@ def inspect_repo(full_name: str, discovery_sources: set[str]):
     if not manifest_hit:
         if manifest_error is not None:
             raise manifest_error
-        return None
+        return skip_repo(full_name, "no-repo-json", "manifest-not-found")
 
     branch, repo_json_url, manifest = manifest_hit
     list_updates = {}
@@ -881,6 +883,19 @@ def inspect_repo(full_name: str, discovery_sources: set[str]):
         "discovered_by": sorted(discovery_sources),
         "checked_at": now_iso(),
     }
+
+
+def skip_repo(full_name: str, reason: str, detail: str | None = None):
+    """Every rejected candidate keeps one fixed reason and its date."""
+    row = {
+        "repository": full_name,
+        "status": "skipped",
+        "skip_reason": reason,
+        "checked_at": now_iso(),
+    }
+    if detail:
+        row["skip_detail"] = detail
+    return row
 
 
 def inspect_repositories(candidates: dict[str, set[str]]):
@@ -2119,6 +2134,8 @@ def build_cloudstream_bundle(app_ready: list[dict], seed_repos: set[str], *, out
             health_rows.append({
                 "internal_name": key,
                 "status": "rejected",
+                "reason": reason or "unknown",
+                "checked_at": now_iso(),
                 "attempts": attempts,
             })
             continue
@@ -2353,9 +2370,13 @@ def inspect_candidates(candidates: dict[str, set[str]], old_tr: list[dict], seed
                 raise RuntimeError("Previously active repository access denied; previous results retained.")
             if not item:
                 print(f"[skip] {full_name}: no valid CloudStream repo.json")
-                # Covers missing/private repositories, HTTP 451 and absent or invalid repo.json.
-                skipped.append({"repository": full_name, "reason": "no-valid-repo-json",
+                skipped.append({"repository": full_name, "skip_reason": "no-repo-json",
+                                "checked_at": now_iso(),
                                 "discovered_by": sorted(candidates[full_name])})
+                continue
+            if item.get("status") == "skipped":
+                print(f"[skip] {full_name}: {item.get('skip_reason')}")
+                skipped.append({**item, "discovered_by": sorted(candidates[full_name])})
                 continue
             if item.get("status") == "stale":
                 stale_repositories.append(item)
@@ -2415,6 +2436,39 @@ def inspect_candidates(candidates: dict[str, set[str]], old_tr: list[dict], seed
             "stale_repositories": stale_repositories, "app_ready": app_ready, "skipped": skipped}
 
 
+def build_skip_report(candidates: dict[str, set[str]], inspection: dict, seed_repos: set[str]) -> dict[str, dict]:
+    """One row per repository that did not enter the feed, with a fixed reason and its date.
+
+    Every rejected candidate has to be accounted for here: stale, skipped, or sorted out as
+    non-Turkish. Without the row we cannot tell why a repository disappeared.
+    """
+    rows = {}
+
+    def put(row):
+        name = row.get("repository")
+        if not name:
+            return
+        rows[name] = {
+            "repository": name,
+            "skip_reason": row.get("skip_reason") or "unknown",
+            "skip_detail": row.get("skip_detail"),
+            "checked_at": row.get("checked_at") or now_iso(),
+            "discovered_by": sorted(candidates.get(name) or []),
+        }
+
+    for row in inspection.get("stale_repositories") or []:
+        put(row)
+    for row in inspection.get("skipped") or []:
+        put(row)
+
+    feed = {x.get("repository") for x in inspection.get("app_ready") or []}
+    others = {x.get("repository") for x in (inspection.get("turkish") or []) + (inspection.get("global_other") or [])}
+    for name in others - feed:
+        put({"repository": name, "skip_reason": "not-in-feed"})
+
+    return dict(sorted(rows.items()))
+
+
 def write_scan_outputs(candidates, inspection, old_tr, seeds, bundle_counts, *, output_root=None,
                        owner_probes=None, code_search=None):
     target_data = DATA if output_root is None else output_root / "data"
@@ -2429,7 +2483,9 @@ def write_scan_outputs(candidates, inspection, old_tr, seeds, bundle_counts, *, 
     live_plugin_count = len(load_json(target_data / "live-plugins.json", []))
 
     changes = summarize_changes(old_tr, app_ready)
+    skipped_repositories = build_skip_report(candidates, inspection, seed_repos)
     save_json(target_data / "candidates.json", sorted(candidates))
+    save_json(target_data / "skipped.json", skipped_repositories)
     # Repositories checked and found without repo.json, keyed to their last push.
     save_json(target_data / "owner-probes.json", dict(sorted((owner_probes or {}).items())))
     save_json(target_data / "code-search.json", code_search or {})
@@ -2451,6 +2507,8 @@ def write_scan_outputs(candidates, inspection, old_tr, seeds, bundle_counts, *, 
     save_json(target_data / "changes.json", {
         "generated_at": now_iso(),
         "candidate_count": len(candidates),
+        "skipped_repo_count": len(skipped_repositories),
+        "skipped_repositories": list(skipped_repositories.values()),
         "stale_repo_count": len(stale_repositories),
         "stale_repositories": stale_repositories,
         "verified_count": len(turkish) + len(global_other),

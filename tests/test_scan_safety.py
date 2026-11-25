@@ -231,6 +231,32 @@ class ScanSafetyTests(unittest.TestCase):
         self.assertEqual(readme.call_args.args[0], "example/fresh")
         entries.assert_called_once()
 
+    def test_every_skipped_repository_records_one_fixed_reason(self):
+        gone = self.scanner.skip_repo("example/gone", "repo-not-found", "github-http-404")
+        empty = self.scanner.skip_repo("example/empty", "no-repo-json", "manifest-not-found")
+        verified = {"ok": True, "reason": "ok", "size": 123, "actual_hash": "sha256-" + "1" * 64,
+                    "provider_check": "reachable"}
+        with patch.object(self.scanner, "discover_candidates",
+                          return_value={"example/repo": {"seed"}, "example/gone": {"registry"},
+                                       "example/empty": {"registry"}}), \
+             patch.object(self.scanner, "inspect_repo",
+                          side_effect=lambda name, sources: {"example/gone": gone,
+                                                           "example/empty": empty}.get(name, dict(self.repo))), \
+             patch.object(self.scanner, "readme_short_addresses", return_value=[]), \
+             patch.object(self.scanner, "fetch_plugin_entries", return_value=[self.plugin]), \
+             patch.object(self.scanner, "validate_plugin_file", return_value=verified), \
+             contextlib.redirect_stdout(io.StringIO()):
+            self.scanner.main()
+
+        changes = json.loads((self.scanner.DATA / "changes.json").read_text(encoding="utf-8"))
+        rows = {row["repository"]: row for row in changes["skipped_repositories"]}
+        self.assertEqual(changes["skipped_repo_count"], 2)
+        self.assertEqual(rows["example/gone"]["skip_reason"], "repo-not-found")
+        self.assertEqual(rows["example/empty"]["skip_reason"], "no-repo-json")
+        self.assertEqual(rows["example/gone"]["discovered_by"], ["registry"])
+        for row in rows.values():
+            self.assertTrue(row["checked_at"])
+
     def test_all_stale_repositories_do_not_overwrite_existing_lists(self):
         stale = {"repository": "example/repo", "status": "stale", "last_repo_push": "2020-01-01T00:00:00Z"}
         with patch.object(self.scanner, "discover_candidates", return_value={"example/repo": {"registry"}}), \
