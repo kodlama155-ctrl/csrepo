@@ -2,10 +2,11 @@
 
 from __future__ import annotations
 
+from datetime import datetime, timezone
 from pathlib import Path
 
 from . import scan_utils
-from .scan_utils import load_json, now_iso, save_json
+from .scan_utils import load_json, now_iso, parse_iso, save_json
 
 
 IMPORTANT_REPOSITORIES = (
@@ -26,6 +27,37 @@ def markdown_cell(value) -> str:
     return str(value or "").replace("|", "\\|").replace("\n", " ").strip()
 
 
+def bridge_age_text(minutes: int) -> str:
+    if minutes < 60:
+        return f"{max(minutes, 1)} dakika önce"
+    hours = minutes // 60
+    if hours < 24:
+        return f"{hours} saat önce"
+    return f"{hours // 24} gün önce"
+
+
+def bridge_status_line() -> str | None:
+    """Telefon köprüsünün son tarama özeti (README için)."""
+    payload = scan_utils.load_json(scan_utils.DATA / "health.json", None)
+    if not isinstance(payload, dict) or not payload.get("generated_at"):
+        return None
+    stamp = parse_iso(payload.get("generated_at"))
+    if stamp == datetime.min.replace(tzinfo=timezone.utc):
+        return None
+    minutes = max(int((datetime.now(timezone.utc) - stamp).total_seconds() // 60), 0)
+    counts = {key: int(payload.get(key) or 0) for key in ("ok", "alive", "dead", "unknown")}
+    total = int(payload.get("total") or 0)
+    done = int(payload.get("done") or 0)
+    line = (
+        f"**Köprü:** son tarama {bridge_age_text(minutes)} — "
+        f"son turda ok {counts['ok']}, alive {counts['alive']}, dead {counts['dead']}, unknown {counts['unknown']} "
+        f"({done}/{total} eklenti)"
+    )
+    if minutes >= 24 * 60:
+        line += " — **UYARI: telefon sessiz**"
+    return line
+
+
 def build_main_readme(repos: list[dict], bundle: dict, generated_at: str, *, output_root: Path | None = None):
     by_repo = {item.get("repository"): item for item in repos}
     featured = [by_repo[x] for x in IMPORTANT_REPOSITORIES if x in by_repo]
@@ -38,9 +70,15 @@ def build_main_readme(repos: list[dict], bundle: dict, generated_at: str, *, out
         "",
         f"**Son tarama:** <code>{generated_at}</code>",
         "",
+    ]
+    bridge = bridge_status_line()
+    if bridge:
+        lines.append(bridge)
+        lines.append("")
+    lines.extend([
         "| Repo | Durum | Eklenti | Kısa kod / adres | Uzun repo.json |",
         "|---|---|---:|---|---|",
-    ]
+    ])
 
     for item in featured:
         repo_name = markdown_cell(item.get("name") or item.get("repository"))
