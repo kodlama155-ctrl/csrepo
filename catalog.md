@@ -34,11 +34,12 @@ Otomatik doğrulanan ve aktif Türkçe CloudStream eklenti depoları:
 - [HR Cloudstream Repo v1](cloudstreamrepo://raw.githubusercontent.com/hrtestingx/hrcsrepo/master/repo.json) — RepoScore 79.0/100 — 8 eklenti
 - [WioCinema](cloudstreamrepo://raw.githubusercontent.com/Wiojelt/WioCinema/builds/repo.json) — RepoScore 77.6/100 — 14 eklenti
 - [CloudStream Türkçe Eklentileri](cloudstreamrepo://raw.githubusercontent.com/sanjarkola-collab/cloudstream-turkce-dist/main/repo.json) — RepoScore 77.6/100 — 13 eklenti
-- [Özel Dizi Repo](cloudstreamrepo://raw.githubusercontent.com/re-cox/cloudstream-dizi-repo/main/repo.json) — RepoScore 77.6/100 — 13 eklenti
+- [re-cox TR (CloudStream & NuvioTV)](cloudstreamrepo://raw.githubusercontent.com/re-cox/cloudstream-dizi-repo/main/repo.json) — RepoScore 77.6/100 — 13 eklenti
 - [BerkStream](cloudstreamrepo://raw.githubusercontent.com/berkdemir18/BerkStream-Hub/builds/repo.json) — RepoScore 77.6/100 — 1 eklenti
 - [WioAnime](cloudstreamrepo://raw.githubusercontent.com/Wiojelt/WioAnime/builds/repo.json) — RepoScore 77.5/100 — 10 eklenti — ana kaynak
 - [gsrepo](cloudstreamrepo://raw.githubusercontent.com/liberta09/Kekik-cloudstream/builds/repo.json) — RepoScore 77.3/100 — 61 eklenti
 - [DiziFilm](cloudstreamrepo://raw.githubusercontent.com/arcilingir/Dizi_Film/builds/repo.json) — RepoScore 76.7/100 — 52 eklenti
+- [PobloStream](cloudstreamrepo://raw.githubusercontent.com/PobloMert/PobloStream/builds/repo.json) — RepoScore 76.6/100 — 18 eklenti
 - [frukon](cloudstreamrepo://raw.githubusercontent.com/faruktunc/frukon/builds/repo.json) — RepoScore 76.4/100 — 7 eklenti
 - [Latte - Sinetech.TR](cloudstreamrepo://raw.githubusercontent.com/GitLatte/Sinetech/main/repo.json) — RepoScore 76.1/100 — 12 eklenti
 - [HR Cloudstream Repo Full](cloudstreamrepo://raw.githubusercontent.com/hrtestingx/hrcsrepofull/master/repo.json) — RepoScore 75.9/100 — 97 eklenti
@@ -53,7 +54,6 @@ Otomatik doğrulanan ve aktif Türkçe CloudStream eklenti depoları:
 - [BronzeCloud](cloudstreamrepo://raw.githubusercontent.com/dr-octagon/BronzeCloud/builds/repo.json) — RepoScore 73.0/100 — 63 eklenti
 - [Ozel CloudStream Depom](cloudstreamrepo://raw.githubusercontent.com/emrahonuraras/cloudstream-ozel-depo/main/repo.json) — RepoScore 72.8/100 — 4 eklenti
 - [Mustafa CloudStream Deposu](cloudstreamrepo://raw.githubusercontent.com/vustomusto/cs-eklentilerim/builds/repo.json) — RepoScore 72.2/100 — 1 eklenti
-- [WioKitap](cloudstreamrepo://raw.githubusercontent.com/Wiojelt/WioKitap/main/repo.json) — RepoScore 71.6/100 — 8 eklenti
 - [Aslan - Türkçe Yayın Eklentileri](cloudstreamrepo://raw.githubusercontent.com/miskin1702/aslan-dist/builds/repo.json) — RepoScore 69.8/100 — 14 eklenti
 - [Aslan - Türkçe Yayın Eklentileri](cloudstreamrepo://raw.githubusercontent.com/miskin1702/aslan-pub/main/repo.json) — RepoScore 69.8/100 — 14 eklenti
 - [cstest](cloudstreamrepo://raw.githubusercontent.com/ctnkyaumt/cstest/master/repo.json) — RepoScore 69.8/100 — 3 eklenti
@@ -61,6 +61,7 @@ Otomatik doğrulanan ve aktif Türkçe CloudStream eklenti depoları:
 - [arcilingir](cloudstreamrepo://raw.githubusercontent.com/arcilingir/nik-cloudstream/master/repo.json) — RepoScore 69.5/100 — 41 eklenti — fork
 - [WioSinema](cloudstreamrepo://raw.githubusercontent.com/pisovo-5031/WioSinema/builds/repo.json) — RepoScore 69.2/100 — 36 eklenti
 - [Oygy8b5F Cloudstream Repo](cloudstreamrepo://raw.githubusercontent.com/Ripplay/cloudstream-repo/main/repo.json) — RepoScore 69.1/100 — 13 eklenti — ana kaynak
+- [WioKitap](cloudstreamrepo://raw.githubusercontent.com/Wiojelt/WioKitap/main/repo.json) — RepoScore 68.6/100 — 8 eklenti
 - [TurkSpor](cloudstreamrepo://raw.githubusercontent.com/arcilingir/TurkSpor/main/repo.json) — RepoScore 68.1/100 — 46 eklenti — fork
 - [EmRe-35 Cloudstream Eklentileri](cloudstreamrepo://raw.githubusercontent.com/EmRe-35/cloudstream-eklentim/main/repo.json) — RepoScore 67.4/100 — 2 eklenti
 - [cloudstream-repo](cloudstreamrepo://raw.githubusercontent.com/qera18/cloudstream-repo/builds/repo.json) — RepoScore 67.2/100 — 1 eklenti
