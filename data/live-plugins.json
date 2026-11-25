@@ -690,26 +690,6 @@
     "fileHash": "sha256-62c6cd0bd05570fa39c84f529de619ac61fe2b2d7fab83603311ab4af35ebb29"
   },
   {
-    "name": "LeoTV",
-    "internalName": "LeoTV",
-    "version": 2,
-    "description": "LeoTV / LeoGrand canlı spor ve TV yayınları (Dinamik AES-CBC akış çözücü)",
-    "authors": [
-      "Wiojelt"
-    ],
-    "repositoryUrl": "https://github.com/Wiojelt/WioSpor",
-    "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/LeoTV.cs3?v=dbce2939ae71",
-    "iconUrl": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/main/assets/providers/LeoTV.png",
-    "tvTypes": [
-      "Live"
-    ],
-    "language": "tr",
-    "status": 3,
-    "fileSize": 157849,
-    "fileHash": "sha256-dbce2939ae71d3d7e2f3ba69eab4e09a36689050eca6e5a91202280afddb9b3e",
-    "apiVersion": 1
-  },
-  {
     "url": "https://raw.githubusercontent.com/sanjarkola-collab/cloudstream-turkce-dist/main/plugins/LiveIptvProvider.cs3",
     "status": 1,
     "version": 8,
@@ -771,6 +751,24 @@
     "iconUrl": "https://raw.githubusercontent.com/Wiojelt/TurkSpor/main/assets/providers/MahsunSports.jpg",
     "apiVersion": 1,
     "fileHash": "sha256-25e1f1d1f863015e5c530db2be18148158281e4663e845bc46eea7be0306ded6"
+  },
+  {
+    "name": "Matchora Live",
+    "internalName": "Matchora",
+    "version": 1,
+    "tvTypes": [
+      "Live"
+    ],
+    "lang": "tr",
+    "iconUrl": "https://raw.githubusercontent.com/Wiojelt/test/builds/assets/matchora.png",
+    "description": "Matchora Live · Canlı spor karşılaşmaları ve uluslararası spor kanalları (beIN, S Sport, Sky, Canal+).",
+    "authors": [
+      "Wiojelt"
+    ],
+    "status": 1,
+    "fileSize": 157456,
+    "fileHash": "sha256-0d13aa9b19f8adb67e5cced391a3d56af37b68c80a7cf6b151ee0ee8d0bf3499",
+    "url": "https://raw.githubusercontent.com/Wiojelt/test/builds/Matchora.cs3?v=0d13aa9b19f8"
   },
   {
     "iconUrl": "https://raw.githubusercontent.com/lepotane/MRC-builds/builds/icon.png",
@@ -986,6 +984,24 @@
     "hash": "e102ed9fad9f9c72df3051fb8bf01e678f161d91dde6b7213028be67575b1d13"
   },
   {
+    "name": "OnDemand TV",
+    "internalName": "OnDemand",
+    "version": 1,
+    "tvTypes": [
+      "Live"
+    ],
+    "lang": "tr",
+    "iconUrl": "https://raw.githubusercontent.com/Wiojelt/test/builds/assets/ondemand.png",
+    "description": "OnDemand TV · 500+ canlı spor ve uluslararası TV kanalı (beIN, Sky, DAZN, ESPN).",
+    "authors": [
+      "Wiojelt"
+    ],
+    "status": 1,
+    "fileSize": 156680,
+    "fileHash": "sha256-1c33d5cb777c69ed088fb62175ea9fc753f8313e3564eed69e82f0a472ebabce",
+    "url": "https://raw.githubusercontent.com/Wiojelt/test/builds/OnDemand.cs3?v=1c33d5cb777c"
+  },
+  {
     "name": "PatronHD",
     "internalName": "PatronHD",
     "version": 17,
@@ -1093,7 +1109,7 @@
     ],
     "iconUrl": "https://rectv.org.tr/wp-content/uploads/2024/11/rectv-modified.webp",
     "apiVersion": 1,
-    "fileHash": "sha256-d6fed07858850e862272902d7ed7df5314af2e0d6e5e91d6ea1a6fb10b9d5593"
+    "fileHash": "sha256-d469bf5ccbdcbc91852c5811e30d836d8cdf82efb0596f78d8f7cd41591dd20a"
   },
   {
     "iconUrl": "https://rectv.org.tr/wp-content/uploads/2024/11/rectv-modified.webp",
@@ -1766,5 +1782,23 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/merb1y/cloudstream-tr-repo/main/assets/logos/bein1.png",
     "repositoryUrl": "https://raw.githubusercontent.com/merb2y/cloudstream-tr-repo/main"
+  },
+  {
+    "name": "ZLive Spor",
+    "internalName": "ZLive",
+    "version": 1,
+    "tvTypes": [
+      "Live"
+    ],
+    "lang": "tr",
+    "iconUrl": "https://raw.githubusercontent.com/Wiojelt/test/builds/assets/zlive.png",
+    "description": "ZLive Spor · Canlı spor ve dünya kanalları (beIN Sports, TRT, Sky Sports, DAZN).",
+    "authors": [
+      "Wiojelt"
+    ],
+    "status": 1,
+    "fileSize": 155998,
+    "fileHash": "sha256-8c16b26fdfd602f26b559f4ea62d3a30e80cd6aefaf937a593008eeaccb0c3cc",
+    "url": "https://raw.githubusercontent.com/Wiojelt/test/builds/ZLive.cs3?v=8c16b26fdfd6"
   }
 ]
