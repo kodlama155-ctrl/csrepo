@@ -1,14 +1,10 @@
-import importlib.util
-import os
 import unittest
-from pathlib import Path
-from unittest.mock import patch
 from urllib.parse import parse_qs, urlparse
 
-from test_discover import RecordingAdapter
+from scanner import repository_discovery, repository_inspection
+from test_discover import RecordingAdapter, use_recording_session
 
 
-SCANNER_PATH = Path(__file__).resolve().parents[1] / "scanner" / "discover.py"
 API_URL = "https://api.github.com/repos/example/repo"
 RAW_URL = "https://raw.githubusercontent.com/example/repo"
 PLUGIN_DATE = "2026-10-24T09:15:08Z"
@@ -36,15 +32,8 @@ class CommitDateAdapter(RecordingAdapter):
 
 class GitHubUpdateDateTests(unittest.TestCase):
     def setUp(self):
-        spec = importlib.util.spec_from_file_location("github_dates_under_test", SCANNER_PATH)
-        self.scanner = importlib.util.module_from_spec(spec)
-        with patch.dict(os.environ, {"GITHUB_TOKEN": ""}):
-            spec.loader.exec_module(self.scanner)
         self.adapter = CommitDateAdapter()
-        self.scanner.SESSION.trust_env = False
-        self.scanner.SESSION.mount("https://", self.adapter)
-        self.scanner.SESSION.mount("http://", self.adapter)
-        self.addCleanup(self.scanner.SESSION.close)
+        use_recording_session(self, self.adapter)
         self.adapter.respond(API_URL, {
             "default_branch": "builds", "html_url": "https://github.com/example/repo",
             "pushed_at": "2026-11-01T00:00:00Z",
@@ -58,7 +47,7 @@ class GitHubUpdateDateTests(unittest.TestCase):
         self.adapter.respond(plugin_url.split("?", 1)[0], [
             {"name": "Example", "internalName": "Example", "language": "tr", "status": 1},
         ])
-        return self.scanner.inspect_repo("example/repo", {"registry"})
+        return repository_inspection.inspect_repo("example/repo", {"registry"})
 
     def assert_plugin_date(self, result):
         self.assertEqual(result["status"], "active")
@@ -101,7 +90,7 @@ class GitHubUpdateDateTests(unittest.TestCase):
             "https://cdn.jsdelivr.net/gh/example/repo@/plugins.json",
         ):
             with self.subTest(url=url):
-                self.assertIsNone(self.scanner.parse_raw_github(url))
+                self.assertIsNone(repository_discovery.parse_raw_github(url))
 
     def test_missing_commit_history_keeps_update_date_unknown(self):
         del self.adapter.commit_dates["plugins.json"]

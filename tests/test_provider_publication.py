@@ -1,7 +1,5 @@
 import hashlib
-import importlib.util
 import json
-import os
 import socket
 import tempfile
 import unittest
@@ -11,11 +9,18 @@ from unittest.mock import patch
 
 import requests
 
+from scanner import (
+    plugin_bundle,
+    plugin_validation,
+    provider_addresses,
+    provider_checks,
+    repository_discovery,
+    scan_utils,
+)
+from test_discover import use_scan_root
 from test_plugin_validation import DownloadResponse, dex_fixture, package
 from test_provider_addresses import linked_provider_dex
 
-
-SCANNER_PATH = Path(__file__).resolve().parents[1] / "scanner" / "discover.py"
 
 
 def provider_package(url):
@@ -36,16 +41,10 @@ def site_response(status=200, body=b"Available"):
 
 class ProviderPublicationTests(unittest.TestCase):
     def setUp(self):
-        spec = importlib.util.spec_from_file_location("provider_publication", SCANNER_PATH)
-        self.scanner = importlib.util.module_from_spec(spec)
-        with patch.dict(os.environ, {"GITHUB_TOKEN": ""}):
-            spec.loader.exec_module(self.scanner)
-        self.addCleanup(self.scanner.SESSION.close)
         temporary = tempfile.TemporaryDirectory()
         self.addCleanup(temporary.cleanup)
-        self.scanner.ROOT = Path(temporary.name)
-        self.scanner.DATA = self.scanner.ROOT / "data"
-        self.scanner.DATA.mkdir()
+        use_scan_root(self, Path(temporary.name))
+        scan_utils.DATA.mkdir()
         self.repo = {"repository": "example/repo", "plugin_lists": [{"url": "https://example.invalid/plugins.json"}]}
         self.good = {"name": "Good", "internalName": "Good", "language": "tr", "status": 1,
                      "version": 1, "url": "https://example.invalid/good.cs3"}
@@ -54,12 +53,17 @@ class ProviderPublicationTests(unittest.TestCase):
         self.good_site = "https://good-provider.invalid"
         self.bad_site = "https://blocked-provider.invalid"
 
-    def build(self, plugins, packages, blocked_response=None, dns_failure=False):
+    def build(self, plugins, packages, blocked_response=None, dns_failure=False,
+              good_response=None, extra_sites=None):
+        extra_sites = extra_sites or {}
+
         def get(url, **kwargs):
             if url in packages:
                 return DownloadResponse(packages[url])
             if url == self.good_site:
-                return site_response()
+                return good_response if good_response is not None else site_response()
+            if url in extra_sites:
+                return extra_sites[url]
             if url == self.bad_site:
                 if isinstance(blocked_response, Exception):
                     raise blocked_response
@@ -71,13 +75,14 @@ class ProviderPublicationTests(unittest.TestCase):
                 raise socket.gaierror("Controlled DNS failure")
             return "192.0.2.1"
 
-        with patch.object(self.scanner, "fetch_plugin_entries", return_value=plugins), \
-             patch.object(self.scanner.requests, "get", side_effect=get), \
-             patch.object(self.scanner, "query_ttnet_dns", return_value=[]), \
-             patch.object(self.scanner.socket, "gethostbyname", side_effect=resolve):
-            counts = self.scanner.build_cloudstream_bundle([self.repo], set())
-        published = json.loads((self.scanner.ROOT / "plugins-x92.json").read_text(encoding="utf-8"))
-        health = json.loads((self.scanner.DATA / "plugin-health.json").read_text(encoding="utf-8"))
+        with patch.object(repository_discovery, "fetch_plugin_entries", return_value=plugins), \
+             patch.object(requests, "get", side_effect=get), \
+             patch.object(provider_checks, "TR_PROBE_ENABLED", False), \
+             patch.object(provider_checks, "query_ttnet_dns", return_value=[]), \
+             patch.object(socket, "gethostbyname", side_effect=resolve):
+            counts = plugin_bundle.build_cloudstream_bundle([self.repo], set())
+        published = json.loads((scan_utils.ROOT / "plugins-x92.json").read_text(encoding="utf-8"))
+        health = json.loads((scan_utils.DATA / "plugin-health.json").read_text(encoding="utf-8"))
         return counts, published, health
 
     def test_site_failures_do_not_enter_published_list(self):
@@ -145,7 +150,7 @@ class ProviderPublicationTests(unittest.TestCase):
         self.assertTrue(health["checks"]["provider_reachable_required"])
 
     def test_missing_dynamic_address_is_published_as_unverified(self):
-        with patch.object(self.scanner, "extract_provider_urls", side_effect=lambda data, name, *args:
+        with patch.object(provider_addresses, "extract_provider_urls", side_effect=lambda data, name, *args:
                           ([self.good_site], False) if name == "Good" else ([], True)):
             counts, published, health = self.build([self.good, self.bad], {
                 self.good["url"]: package(), self.bad["url"]: package(),
@@ -156,12 +161,12 @@ class ProviderPublicationTests(unittest.TestCase):
                          ("healthy", "unverified", "dynamic-domain-missing"))
 
     def test_all_unverified_plugins_preserve_existing_outputs(self):
-        previous = self.scanner.ROOT / "plugins-x92.json"
+        previous = scan_utils.ROOT / "plugins-x92.json"
         previous.write_text('[{"internalName":"Existing"}]\n', encoding="utf-8")
-        before = {p.relative_to(self.scanner.ROOT): p.read_bytes() for p in self.scanner.ROOT.rglob("*") if p.is_file()}
+        before = {p.relative_to(scan_utils.ROOT): p.read_bytes() for p in scan_utils.ROOT.rglob("*") if p.is_file()}
         with self.assertRaises(RuntimeError):
             self.build([self.bad], {self.bad["url"]: provider_package(self.bad_site)})
-        after = {p.relative_to(self.scanner.ROOT): p.read_bytes() for p in self.scanner.ROOT.rglob("*") if p.is_file()}
+        after = {p.relative_to(scan_utils.ROOT): p.read_bytes() for p in scan_utils.ROOT.rglob("*") if p.is_file()}
         self.assertEqual(after, before)
 
     def test_live_plugins_get_their_own_published_list(self):
@@ -173,8 +178,69 @@ class ProviderPublicationTests(unittest.TestCase):
             live["url"]: provider_package(self.good_site),
             vod["url"]: provider_package(self.good_site),
         })
-        rows = json.loads((self.scanner.DATA / "live-plugins.json").read_text(encoding="utf-8"))
+        rows = json.loads((scan_utils.DATA / "live-plugins.json").read_text(encoding="utf-8"))
         self.assertEqual([row["internalName"] for row in rows], ["LiveGood"])
+
+    def test_transient_site_error_keeps_previous_record_for_one_scan(self):
+        archive = provider_package(self.good_site)
+        digest = hashlib.sha256(archive).hexdigest()
+        stable = dict(self.good, name="Stable", internalName="Stable",
+                      url="https://example.invalid/stable.cs3")
+        stable_site = "https://stable-provider.invalid"
+        packages = {self.good["url"]: archive, stable["url"]: provider_package(stable_site)}
+        extra = {stable_site: site_response()}
+
+        scan_utils.save_json(scan_utils.ROOT / "plugins-x92.json", [
+            dict(self.good, fileHash="sha256-" + digest),
+        ])
+
+        counts, published, health = self.build(
+            [self.good, stable], packages, good_response=site_response(500), extra_sites=extra,
+        )
+        kept = next(p for p in published if p["internalName"] == "Good")
+        self.assertTrue(kept["recheck"])
+        self.assertEqual(kept["fileHash"], "sha256-" + digest)
+        self.assertEqual(counts, (2, 0, 0))
+        row = next(r for r in health["plugins"] if r["internal_name"] == "good")
+        self.assertEqual(row["status"], "recheck")
+        self.assertIn("http-500", row["reason"])
+        self.assertEqual(health["recheck_plugin_count"], 1)
+
+        # İkinci tarama: işaretli kayıt bir daha tutulmaz.
+        counts, published, health = self.build(
+            [self.good, stable], packages, good_response=site_response(500), extra_sites=extra,
+        )
+        self.assertEqual([p["internalName"] for p in published], ["Stable"])
+        row = next(r for r in health["plugins"] if r["internal_name"] == "good")
+        self.assertEqual(row["status"], "rejected")
+        self.assertEqual(health["recheck_plugin_count"], 0)
+
+    def test_changed_file_or_non_transient_error_does_not_keep_previous_record(self):
+        archive = provider_package(self.good_site)
+        digest = hashlib.sha256(archive).hexdigest()
+        stable = dict(self.good, name="Stable", internalName="Stable",
+                      url="https://example.invalid/stable.cs3")
+        stable_site = "https://stable-provider.invalid"
+        packages = {self.good["url"]: archive, stable["url"]: provider_package(stable_site)}
+        extra = {stable_site: site_response()}
+
+        # Dosya değişmiş: eski kayıt tutulmaz.
+        scan_utils.save_json(scan_utils.ROOT / "plugins-x92.json", [
+            dict(self.good, fileHash="sha256-" + "0" * 64),
+        ])
+        _, published, _ = self.build(
+            [self.good, stable], packages, good_response=site_response(500), extra_sites=extra,
+        )
+        self.assertEqual([p["internalName"] for p in published], ["Stable"])
+
+        # Geçici olmayan hata (403): eski kayıt tutulmaz.
+        scan_utils.save_json(scan_utils.ROOT / "plugins-x92.json", [
+            dict(self.good, fileHash="sha256-" + digest),
+        ])
+        _, published, _ = self.build(
+            [self.good, stable], packages, good_response=site_response(403), extra_sites=extra,
+        )
+        self.assertEqual([p["internalName"] for p in published], ["Stable"])
 
     def test_file_only_success_cannot_bypass_site_requirement(self):
         def check(plugin, *args):
@@ -183,10 +249,10 @@ class ProviderPublicationTests(unittest.TestCase):
                 result["provider_check"] = "reachable"
             return result
 
-        with patch.object(self.scanner, "fetch_plugin_entries", return_value=[self.good, self.bad]), \
-             patch.object(self.scanner, "validate_plugin_file", side_effect=check):
-            self.scanner.build_cloudstream_bundle([self.repo], set())
-        published = json.loads((self.scanner.ROOT / "plugins-x92.json").read_text(encoding="utf-8"))
+        with patch.object(repository_discovery, "fetch_plugin_entries", return_value=[self.good, self.bad]), \
+             patch.object(plugin_validation, "validate_plugin_file", side_effect=check):
+            plugin_bundle.build_cloudstream_bundle([self.repo], set())
+        published = json.loads((scan_utils.ROOT / "plugins-x92.json").read_text(encoding="utf-8"))
         self.assertEqual([p["internalName"] for p in published], ["Good"])
 
 

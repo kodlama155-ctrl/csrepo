@@ -1,15 +1,13 @@
-import importlib.util
 import json
-import os
 import unittest
-from pathlib import Path
 from unittest.mock import patch
 
 import requests
 from requests.adapters import BaseAdapter
 
+from scanner import repository_discovery, repository_inspection, scan_utils
 
-SCANNER_PATH = Path(__file__).resolve().parents[1] / "scanner" / "discover.py"
+
 DUMMY_TOKEN = "test-placeholder-not-a-real-token"
 
 
@@ -44,23 +42,35 @@ class RecordingAdapter(BaseAdapter):
         pass
 
 
+def use_recording_session(test, adapter, token=""):
+    session = requests.Session()
+    test.addCleanup(session.close)
+    session.headers.update(repository_discovery.HEADERS)
+    session.trust_env = False
+    session.mount("https://", adapter)
+    session.mount("http://", adapter)
+
+    overrides = patch.multiple(repository_discovery, SESSION=session, TOKEN=token)
+    overrides.start()
+    test.addCleanup(overrides.stop)
+
+
+def use_scan_root(test, root):
+    paths = patch.multiple(scan_utils, ROOT=root, DATA=root / "data")
+    paths.start()
+    test.addCleanup(paths.stop)
+
+
 class ScannerAuthenticationTests(unittest.TestCase):
     def setUp(self):
-        spec = importlib.util.spec_from_file_location("discover_under_test", SCANNER_PATH)
-        self.scanner = importlib.util.module_from_spec(spec)
-        with patch.dict(os.environ, {"GITHUB_TOKEN": DUMMY_TOKEN}):
-            spec.loader.exec_module(self.scanner)
         self.adapter = RecordingAdapter()
-        self.scanner.SESSION.trust_env = False
-        self.scanner.SESSION.mount("https://", self.adapter)
-        self.scanner.SESSION.mount("http://", self.adapter)
-        self.addCleanup(self.scanner.SESSION.close)
+        use_recording_session(self, self.adapter, DUMMY_TOKEN)
 
     def test_api_request_keeps_authentication_and_query(self):
         url = "https://api.github.com/search/repositories"
         self.adapter.respond(url, {"items": []})
 
-        result = self.scanner.api_get("/search/repositories", {"q": "cloudstream"})
+        result = repository_discovery.api_get("/search/repositories", {"q": "cloudstream"})
 
         self.assertEqual(result, {"items": []})
         request = self.adapter.requests[0]
@@ -77,7 +87,7 @@ class ScannerAuthenticationTests(unittest.TestCase):
             with self.subTest(url=url):
                 self.adapter.respond(url, "[]", headers={"Last-Modified": "test-date"})
 
-                self.assertEqual(self.scanner.text_get(url), ("[]", "test-date"))
+                self.assertEqual(repository_discovery.text_get(url), ("[]", "test-date"))
                 self.assertNotIn("Authorization", self.adapter.requests[-1].headers)
 
     def test_api_helper_does_not_authenticate_untrusted_addresses(self):
@@ -90,7 +100,7 @@ class ScannerAuthenticationTests(unittest.TestCase):
             with self.subTest(url=url):
                 self.adapter.respond(url, {})
 
-                self.assertEqual(self.scanner.api_get(url), {})
+                self.assertEqual(repository_discovery.api_get(url), {})
                 self.assertNotIn("Authorization", self.adapter.requests[-1].headers)
 
     def test_api_redirect_does_not_forward_token_to_other_site(self):
@@ -99,7 +109,7 @@ class ScannerAuthenticationTests(unittest.TestCase):
         self.adapter.respond(source, "", status=302, headers={"Location": destination})
         self.adapter.respond(destination, {"name": "redirected"})
 
-        self.assertEqual(self.scanner.api_get(source), {"name": "redirected"})
+        self.assertEqual(repository_discovery.api_get(source), {"name": "redirected"})
         self.assertEqual(self.adapter.requests[0].headers.get("Authorization"), f"Bearer {DUMMY_TOKEN}")
         self.assertNotIn("Authorization", self.adapter.requests[1].headers)
 
@@ -109,20 +119,20 @@ class ScannerAuthenticationTests(unittest.TestCase):
         self.adapter.respond(source, "", status=302, headers={"Location": destination})
         self.adapter.respond(destination, "[]")
 
-        self.assertEqual(self.scanner.text_get(source), ("[]", None))
+        self.assertEqual(repository_discovery.text_get(source), ("[]", None))
         self.assertTrue(all("Authorization" not in r.headers for r in self.adapter.requests))
 
     def test_api_without_token_still_works(self):
-        self.scanner.TOKEN = ""
+        repository_discovery.TOKEN = ""
         self.adapter.respond("https://api.github.com/repos/example/repo", {"name": "repo"})
 
-        self.assertEqual(self.scanner.api_get("/repos/example/repo"), {"name": "repo"})
+        self.assertEqual(repository_discovery.api_get("/repos/example/repo"), {"name": "repo"})
         self.assertNotIn("Authorization", self.adapter.requests[0].headers)
 
     def test_blocked_repository_is_skipped(self):
         self.adapter.respond("https://api.github.com/repos/example/blocked", {"message": "Repository access blocked"}, status=451)
 
-        result = self.scanner.inspect_repo("example/blocked", {"registry"})
+        result = repository_inspection.inspect_repo("example/blocked", {"registry"})
 
         self.assertEqual(result["status"], "skipped")
         self.assertEqual(result["skip_reason"], "access-blocked")
@@ -132,7 +142,7 @@ class ScannerAuthenticationTests(unittest.TestCase):
     def test_missing_repository_records_its_reason(self):
         self.adapter.respond("https://api.github.com/repos/example/gone", {}, status=404)
 
-        result = self.scanner.inspect_repo("example/gone", {"registry"})
+        result = repository_inspection.inspect_repo("example/gone", {"registry"})
 
         self.assertEqual(result["skip_reason"], "repo-not-found")
         self.assertEqual(result["skip_detail"], "github-http-404")
@@ -141,7 +151,7 @@ class ScannerAuthenticationTests(unittest.TestCase):
         self.adapter.respond("https://api.github.com/repos/example/repo", {}, status=503)
 
         with self.assertRaises(requests.HTTPError):
-            self.scanner.inspect_repo("example/repo", {"seed"})
+            repository_inspection.inspect_repo("example/repo", {"seed"})
 
     def test_repository_scan_and_plugin_list_download_still_work(self):
         api_url = "https://api.github.com/repos/example/repo"
@@ -154,12 +164,12 @@ class ScannerAuthenticationTests(unittest.TestCase):
         self.adapter.respond(manifest_url, {"name": "Example", "manifestVersion": 1, "pluginLists": [plugins_url]})
         self.adapter.respond(plugins_url, plugins)
 
-        result = self.scanner.inspect_repo("example/repo", {"seed"})
+        result = repository_inspection.inspect_repo("example/repo", {"seed"})
 
         self.assertEqual(result["status"], "active")
         self.assertEqual(result["plugin_count"], 1)
         self.assertEqual(result["plugin_lists"][0]["turkish_language_count"], 1)
-        self.assertEqual(self.scanner.fetch_plugin_entries(plugins_url), plugins)
+        self.assertEqual(repository_discovery.fetch_plugin_entries(plugins_url), plugins)
         for request in self.adapter.requests:
             if request.url.startswith("https://api.github.com/"):
                 self.assertEqual(request.headers.get("Authorization"), f"Bearer {DUMMY_TOKEN}")

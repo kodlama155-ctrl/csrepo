@@ -1,28 +1,20 @@
-import importlib.util
 import json
-import os
 import threading
 import unittest
-from pathlib import Path
 from unittest.mock import Mock, patch
 
 import requests
 
+from scanner import repository_discovery, repository_inspection
 from test_discover import RecordingAdapter
 
 
-SCANNER_PATH = Path(__file__).resolve().parents[1] / "scanner" / "discover.py"
 SHARED_URL = "https://raw.githubusercontent.com/source/shared/builds/plugins.json"
 ORIGINAL_SESSION_REQUEST = requests.sessions.Session.request
 
 
 class ParallelRepositoryTests(unittest.TestCase):
     def setUp(self):
-        spec = importlib.util.spec_from_file_location("parallel_repos", SCANNER_PATH)
-        self.scanner = importlib.util.module_from_spec(spec)
-        with patch.dict(os.environ, {"GITHUB_TOKEN": ""}):
-            spec.loader.exec_module(self.scanner)
-        self.addCleanup(self.scanner.SESSION.close)
         network = patch.object(requests.sessions.Session, "request", side_effect=AssertionError("Unexpected network request"))
         network.start()
         self.addCleanup(network.stop)
@@ -36,22 +28,22 @@ class ParallelRepositoryTests(unittest.TestCase):
 
         def inspect(name, sources):
             nonlocal active, peak
-            session = self.scanner._HTTP_SESSION.value
+            session = repository_discovery._HTTP_SESSION.value
             with lock:
                 active += 1
                 peak = max(peak, active)
                 sessions.setdefault(threading.get_ident(), set()).add(id(session))
             try:
-                self.assertIsNot(session, self.scanner.SESSION)
-                self.assertEqual(session.headers["User-Agent"], self.scanner.HEADERS["User-Agent"])
+                self.assertIsNot(session, repository_discovery.SESSION)
+                self.assertEqual(session.headers["User-Agent"], repository_discovery.HEADERS["User-Agent"])
                 barrier.wait()
                 return {"repository": name, "sources": sources}
             finally:
                 with lock:
                     active -= 1
 
-        with patch.object(self.scanner, "inspect_repo", side_effect=inspect):
-            rows = list(self.scanner.inspect_repositories(candidates))
+        with patch.object(repository_inspection, "inspect_repo", side_effect=inspect):
+            rows = list(repository_inspection.inspect_repositories(candidates))
         self.assertEqual(peak, 4)
         self.assertEqual(len(sessions), 4)
         self.assertTrue(all(len(values) == 1 for values in sessions.values()))
@@ -59,7 +51,7 @@ class ParallelRepositoryTests(unittest.TestCase):
         self.assertEqual([name for name, _, _ in rows], sorted(candidates))
         self.assertTrue(all(error is None for _, _, error in rows))
         self.assertEqual([item["repository"] for _, item, _ in rows], sorted(candidates))
-        self.assertFalse(hasattr(self.scanner._HTTP_SESSION, "value"))
+        self.assertFalse(hasattr(repository_discovery._HTTP_SESSION, "value"))
 
     def test_worker_failure_is_returned_with_other_results_and_sessions_close(self):
         failure = requests.Timeout("Controlled failure")
@@ -78,9 +70,9 @@ class ParallelRepositoryTests(unittest.TestCase):
                 raise failure
             return {"repository": name}
 
-        with patch.object(self.scanner.requests, "Session", side_effect=make_session), \
-             patch.object(self.scanner, "inspect_repo", side_effect=inspect):
-            rows = list(self.scanner.inspect_repositories({"example/good": {"seed"}, "example/bad": {"registry"}}))
+        with patch.object(requests, "Session", side_effect=make_session), \
+             patch.object(repository_inspection, "inspect_repo", side_effect=inspect):
+            rows = list(repository_inspection.inspect_repositories({"example/good": {"seed"}, "example/bad": {"registry"}}))
         self.assertIs(rows[0][2], failure)
         self.assertIsNone(rows[0][1])
         self.assertEqual(rows[1][1], {"repository": "example/good"})
@@ -95,18 +87,18 @@ class ParallelRepositoryTests(unittest.TestCase):
 
         def inspect(name, sources):
             barrier.wait()
-            return self.scanner.plugin_list_info(SHARED_URL)
+            return repository_discovery.plugin_list_info(SHARED_URL)
 
-        with patch.object(self.scanner, "inspect_repo", side_effect=inspect), \
-             patch.object(self.scanner, "text_get", return_value=(json.dumps([plugin]), None)) as download, \
-             patch.object(self.scanner, "latest_commit_for_path", return_value="2026-11-01T00:00:00Z") as update:
-            with self.scanner.shared_plugin_lists():
-                rows = list(self.scanner.inspect_repositories({f"example/{i}": {"seed"} for i in range(4)}))
+        with patch.object(repository_inspection, "inspect_repo", side_effect=inspect), \
+             patch.object(repository_discovery, "text_get", return_value=(json.dumps([plugin]), None)) as download, \
+             patch.object(repository_discovery, "latest_commit_for_path", return_value="2026-11-01T00:00:00Z") as update:
+            with repository_discovery.shared_plugin_lists():
+                rows = list(repository_inspection.inspect_repositories({f"example/{i}": {"seed"} for i in range(4)}))
                 self.assertTrue(all(error is None for _, _, error in rows))
                 self.assertEqual([item["count"] for _, item, _ in rows], [1] * 4)
-                self.assertEqual(self.scanner.fetch_plugin_entries(SHARED_URL), [plugin])
-                self.assertEqual(self.scanner.plugin_list_update_info(SHARED_URL)[0], "2026-11-01T00:00:00Z")
-            self.assertIsNone(self.scanner._PLUGIN_LIST_CACHE.get())
+                self.assertEqual(repository_discovery.fetch_plugin_entries(SHARED_URL), [plugin])
+                self.assertEqual(repository_discovery.plugin_list_update_info(SHARED_URL)[0], "2026-11-01T00:00:00Z")
+            self.assertIsNone(repository_discovery._PLUGIN_LIST_CACHE.get())
             download.assert_called_once()
             update.assert_called_once()
 
@@ -128,15 +120,15 @@ class ParallelRepositoryTests(unittest.TestCase):
 
         def inspect(name, sources):
             barrier.wait()
-            self.scanner.api_get("/repos/example/repo")
-            return self.scanner.text_get(raw)
+            repository_discovery.api_get("/repos/example/repo")
+            return repository_discovery.text_get(raw)
 
         # Session.request is restored for prepared requests; adapter.send never opens a socket.
         with patch.object(requests.sessions.Session, "request", ORIGINAL_SESSION_REQUEST), \
-             patch.object(self.scanner.requests, "Session", side_effect=make_session), \
-             patch.object(self.scanner, "TOKEN", "placeholder-test-token"), \
-             patch.object(self.scanner, "inspect_repo", side_effect=inspect):
-            rows = list(self.scanner.inspect_repositories({"example/a": {"seed"}, "example/b": {"seed"}}))
+             patch.object(requests, "Session", side_effect=make_session), \
+             patch.object(repository_discovery, "TOKEN", "placeholder-test-token"), \
+             patch.object(repository_inspection, "inspect_repo", side_effect=inspect):
+            rows = list(repository_inspection.inspect_repositories({"example/a": {"seed"}, "example/b": {"seed"}}))
         self.assertTrue(all(error is None for _, _, error in rows))
         self.assertEqual(len(adapter.requests), 4)
         for request in adapter.requests:
@@ -146,8 +138,8 @@ class ParallelRepositoryTests(unittest.TestCase):
                 self.assertNotIn("Authorization", request.headers)
 
     def test_empty_candidates_do_not_open_worker_connections(self):
-        with patch.object(self.scanner.requests, "Session") as make_session:
-            self.assertEqual(list(self.scanner.inspect_repositories({})), [])
+        with patch.object(requests, "Session") as make_session:
+            self.assertEqual(list(repository_inspection.inspect_repositories({})), [])
         make_session.assert_not_called()
 
 

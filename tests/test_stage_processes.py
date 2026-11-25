@@ -14,7 +14,7 @@ from test_plugin_validation import package
 from test_provider_addresses import declared_url_dex
 
 
-SCANNER = Path(__file__).resolve().parents[1] / "scanner/discover.py"
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
 
 class StageProcessTests(unittest.TestCase):
@@ -56,21 +56,21 @@ class StageProcessTests(unittest.TestCase):
             (root / "plugins-x92.json").write_text("[]")
             bootstrap = root / "run_step.py"
             bootstrap.write_text(
-                "import importlib.util, sys\n"
+                "import sys\n"
                 "from pathlib import Path\n"
-                f"sys.path.insert(0, {str(SCANNER.parent.parent)!r})\n"
-                f"spec=importlib.util.spec_from_file_location('stage_process', {str(SCANNER)!r})\n"
-                "s=importlib.util.module_from_spec(spec); spec.loader.exec_module(s)\n"
-                "s.ROOT=Path(__file__).parent; s.DATA=s.ROOT/'data'\n"
+                f"sys.path.insert(0, {str(PROJECT_ROOT)!r})\n"
+                "from scanner import discover, provider_checks, repository_discovery, repository_inspection, scan_utils\n"
+                "scan_utils.ROOT = Path(__file__).parent\n"
+                "scan_utils.DATA = scan_utils.ROOT / 'data'\n"
                 "def forbidden(*args, **kwargs): raise AssertionError('Earlier stage was repeated')\n"
-                "s.discover_candidates=(lambda **kwargs: {'example/repo': {'seed'}}) if sys.argv[1]=='1' else forbidden\n"
-                f"s.inspect_repo=(lambda *args: {{'repository':'example/repo', 'name':'Example', 'status':'active',"
+                "discover.discover_candidates = (lambda **kwargs: {'example/repo': {'seed'}}) if sys.argv[1]=='1' else forbidden\n"
+                f"repository_inspection.inspect_repo = (lambda *args: {{'repository':'example/repo', 'name':'Example', 'status':'active',"
                 f"'plugin_count':1, 'repo_url':{(base + '/repo.json')!r}, 'plugin_lists':[{{'url':{(base + '/plugins.json')!r},"
                 "'count':1,'reachable':True,'languages':{'tr':1},'turkish_language_count':1}]}) "
                 "if sys.argv[1]=='2' else forbidden\n"
-                "s.readme_short_addresses=lambda *args: []\n"
-                "s.query_ttnet_dns=lambda *args: []\n"
-                "s.cli(['--stage',sys.argv[1]])\n",
+                "repository_discovery.readme_short_addresses = lambda *args: []\n"
+                "provider_checks.query_ttnet_dns = lambda *args: []\n"
+                "discover.cli(['--stage',sys.argv[1]])\n",
                 encoding="utf-8",
             )
             env = dict(os.environ, GITHUB_TOKEN="", PYTHONIOENCODING="utf-8", NO_PROXY="*")

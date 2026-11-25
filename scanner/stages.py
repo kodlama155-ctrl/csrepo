@@ -65,23 +65,26 @@ def work_lock(directory):
 
 
 @contextmanager
-def publish_outputs(source, target):
-    contents = {name: (source / name).read_bytes() for name in OUTPUT_FILES}
-    before = {name: (target / name).read_bytes() if (target / name).exists() else None for name in OUTPUT_FILES}
+def publish_files(contents):
+    before = {path: path.read_bytes() if path.exists() else None for path in contents}
     changed = []
     try:
-        for name, content in contents.items():
-            if content != before[name]:
-                atomic_bytes(target / name, content)
-                changed.append(name)
+        for path, content in contents.items():
+            if content != before[path]:
+                atomic_bytes(path, content)
+                changed.append(path)
         yield
     except BaseException:
-        for name in reversed(changed):
-            if before[name] is None:
-                (target / name).unlink(missing_ok=True)
+        for path in reversed(changed):
+            if before[path] is None:
+                path.unlink(missing_ok=True)
             else:
-                atomic_bytes(target / name, before[name])
+                atomic_bytes(path, before[path])
         raise
+
+
+def publish_outputs(source, target):
+    return publish_files({target / name: (source / name).read_bytes() for name in OUTPUT_FILES})
 
 
 class StageStore:

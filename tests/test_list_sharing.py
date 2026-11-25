@@ -1,8 +1,6 @@
 import contextlib
-import importlib.util
 import io
 import json
-import os
 import tempfile
 import unittest
 from datetime import datetime, timezone
@@ -12,29 +10,20 @@ from urllib.parse import urlparse
 
 import requests
 
-from test_discover import RecordingAdapter
+from scanner import discover, plugin_validation, repository_discovery, scan_utils
+from test_discover import RecordingAdapter, use_recording_session, use_scan_root
 
-
-SCANNER_PATH = Path(__file__).resolve().parents[1] / "scanner" / "discover.py"
 SHARED_URL = "https://raw.githubusercontent.com/source/shared/builds/plugins.json"
 
 
 class ListSharingTests(unittest.TestCase):
     def setUp(self):
-        spec = importlib.util.spec_from_file_location("list_sharing_under_test", SCANNER_PATH)
-        self.scanner = importlib.util.module_from_spec(spec)
-        with patch.dict(os.environ, {"GITHUB_TOKEN": ""}):
-            spec.loader.exec_module(self.scanner)
         self.adapter = RecordingAdapter()
-        self.scanner.SESSION.trust_env = False
-        self.scanner.SESSION.mount("https://", self.adapter)
-        self.scanner.SESSION.mount("http://", self.adapter)
-        self.addCleanup(self.scanner.SESSION.close)
+        use_recording_session(self, self.adapter)
         temporary = tempfile.TemporaryDirectory()
         self.addCleanup(temporary.cleanup)
-        self.scanner.ROOT = Path(temporary.name)
-        self.scanner.DATA = self.scanner.ROOT / "data"
-        self.scanner.save_json(self.scanner.DATA / "seeds.json", [{"repository": "example/repo-a"}])
+        use_scan_root(self, Path(temporary.name))
+        scan_utils.save_json(scan_utils.DATA / "seeds.json", [{"repository": "example/repo-a"}])
         self.plugin = {"name": "Example", "internalName": "Example", "language": "tr", "status": 1,
                        "version": 1, "url": "https://example.invalid/Example.cs3"}
         self.adapter.respond(SHARED_URL, [self.plugin])
@@ -64,13 +53,13 @@ class ListSharingTests(unittest.TestCase):
             session.mount("http://", self.adapter)
             return session
 
-        with patch.object(self.scanner.requests, "Session", side_effect=worker_session), \
-             patch.object(self.scanner, "discover_candidates", return_value={
+        with patch.object(requests, "Session", side_effect=worker_session), \
+             patch.object(discover, "discover_candidates", return_value={
             "example/repo-a": {"seed"}, "example/repo-b": {"registry"},
-        }), patch.object(self.scanner, "readme_short_addresses", return_value=[]), \
-             patch.object(self.scanner, "validate_plugin_file", return_value=verified), \
+        }), patch.object(repository_discovery, "readme_short_addresses", return_value=[]), \
+             patch.object(plugin_validation, "validate_plugin_file", return_value=verified), \
              contextlib.redirect_stdout(io.StringIO()):
-            self.scanner.main()
+            discover.main()
 
     def list_requests(self):
         return [r for r in self.adapter.requests
@@ -83,9 +72,9 @@ class ListSharingTests(unittest.TestCase):
         updates = [r for r in self.adapter.requests
                    if r.url.startswith("https://api.github.com/repos/source/shared/commits")]
         self.assertEqual(len(updates), 1)
-        repos = json.loads((self.scanner.DATA / "repos.json").read_text(encoding="utf-8"))
-        plugins = json.loads((self.scanner.ROOT / "plugins-x92.json").read_text(encoding="utf-8"))
-        health = json.loads((self.scanner.DATA / "plugin-health.json").read_text(encoding="utf-8"))
+        repos = json.loads((scan_utils.DATA / "repos.json").read_text(encoding="utf-8"))
+        plugins = json.loads((scan_utils.ROOT / "plugins-x92.json").read_text(encoding="utf-8"))
+        health = json.loads((scan_utils.DATA / "plugin-health.json").read_text(encoding="utf-8"))
         self.assertEqual(len(repos), 2)
         self.assertEqual([r["plugin_count"] for r in repos], [1, 1])
         self.assertEqual(len(plugins), 1)
@@ -103,7 +92,7 @@ class ListSharingTests(unittest.TestCase):
         self.run_scan()
 
         self.assertEqual(len(self.list_requests()), 1)
-        repos = json.loads((self.scanner.DATA / "repos.json").read_text(encoding="utf-8"))
+        repos = json.loads((scan_utils.DATA / "repos.json").read_text(encoding="utf-8"))
         self.assertEqual({r["plugin_lists"][0]["url"] for r in repos}, {first, second})
 
     def test_next_scan_downloads_updated_list_again(self):
@@ -113,7 +102,7 @@ class ListSharingTests(unittest.TestCase):
         self.run_scan()
 
         self.assertEqual(len(self.list_requests()), 2)
-        plugins = json.loads((self.scanner.ROOT / "plugins-x92.json").read_text(encoding="utf-8"))
+        plugins = json.loads((scan_utils.ROOT / "plugins-x92.json").read_text(encoding="utf-8"))
         self.assertEqual(plugins[0]["version"], 2)
 
     def test_failed_scan_does_not_keep_cached_lists_for_next_scan(self):
@@ -124,26 +113,26 @@ class ListSharingTests(unittest.TestCase):
         self.run_scan()
 
         self.assertEqual(len(self.list_requests()), 2)
-        plugins = json.loads((self.scanner.ROOT / "plugins-x92.json").read_text(encoding="utf-8"))
+        plugins = json.loads((scan_utils.ROOT / "plugins-x92.json").read_text(encoding="utf-8"))
         self.assertEqual(plugins[0]["version"], 2)
 
     def test_download_errors_are_not_cached_as_success(self):
-        with self.scanner.shared_plugin_lists():
+        with repository_discovery.shared_plugin_lists():
             self.adapter.respond(SHARED_URL, {}, status=503)
             with self.assertRaises(requests.HTTPError):
-                self.scanner.fetch_plugin_entries(SHARED_URL)
+                repository_discovery.fetch_plugin_entries(SHARED_URL)
             self.adapter.respond(SHARED_URL, [self.plugin])
-            self.assertEqual(self.scanner.fetch_plugin_entries(SHARED_URL), [self.plugin])
-            self.assertEqual(self.scanner.plugin_list_info(SHARED_URL)["count"], 1)
+            self.assertEqual(repository_discovery.fetch_plugin_entries(SHARED_URL), [self.plugin])
+            self.assertEqual(repository_discovery.plugin_list_info(SHARED_URL)["count"], 1)
         self.assertEqual(len(self.list_requests()), 2)
 
     def test_missing_list_is_not_cached_as_a_valid_empty_list(self):
-        with self.scanner.shared_plugin_lists():
+        with repository_discovery.shared_plugin_lists():
             self.adapter.respond(SHARED_URL, {}, status=404)
-            self.assertEqual(self.scanner.fetch_plugin_entries(SHARED_URL), [])
+            self.assertEqual(repository_discovery.fetch_plugin_entries(SHARED_URL), [])
             self.adapter.respond(SHARED_URL, [self.plugin])
-            self.assertEqual(self.scanner.fetch_plugin_entries(SHARED_URL), [self.plugin])
-            self.assertEqual(self.scanner.plugin_list_info(SHARED_URL)["count"], 1)
+            self.assertEqual(repository_discovery.fetch_plugin_entries(SHARED_URL), [self.plugin])
+            self.assertEqual(repository_discovery.plugin_list_info(SHARED_URL)["count"], 1)
         self.assertEqual(len(self.list_requests()), 2)
 
     def test_other_hosts_query_parameters_and_file_case_stay_distinct(self):
@@ -156,10 +145,10 @@ class ListSharingTests(unittest.TestCase):
             "https://raw.githubusercontent.com/source/shared/builds/Plugins.json",
             SHARED_URL + "?format=other",
         )
-        with self.scanner.shared_plugin_lists():
+        with repository_discovery.shared_plugin_lists():
             for index, url in enumerate(urls):
                 self.adapter.respond(url.split("?", 1)[0], [dict(self.plugin, version=index)])
-                self.assertEqual(self.scanner.fetch_plugin_entries(url)[0]["version"], index)
+                self.assertEqual(repository_discovery.fetch_plugin_entries(url)[0]["version"], index)
         self.assertEqual(len(self.adapter.requests), len(urls))
 
 

@@ -12,6 +12,7 @@ import contextlib
 import importlib.util
 import io
 import os
+import socket
 import unittest
 from pathlib import Path
 from unittest.mock import Mock, patch
@@ -19,7 +20,7 @@ from unittest.mock import Mock, patch
 import requests
 
 
-SCANNER_PATH = Path(__file__).resolve().parents[1] / "scanner" / "discover.py"
+MODULE_PATH = Path(__file__).resolve().parents[1] / "scanner" / "provider_checks.py"
 
 
 def site_response(status, body=b""):
@@ -35,20 +36,24 @@ def api_response(status, payload=None, headers=None):
     return response
 
 
+def load_probe(*, enabled=True, token=""):
+    spec = importlib.util.spec_from_file_location("tr_probe_under_test", MODULE_PATH)
+    probe = importlib.util.module_from_spec(spec)
+    with patch.dict(os.environ, {"CSREPO_TR_PROBE": "1" if enabled else "", "GLOBALPING_TOKEN": token}):
+        spec.loader.exec_module(probe)
+    return probe
+
+
 class TurkishProbeTests(unittest.TestCase):
     def setUp(self):
-        spec = importlib.util.spec_from_file_location("tr_probe", SCANNER_PATH)
-        self.scanner = importlib.util.module_from_spec(spec)
-        with patch.dict(os.environ, {"GITHUB_TOKEN": "", "CSREPO_TR_PROBE": "1", "GLOBALPING_TOKEN": ""}):
-            spec.loader.exec_module(self.scanner)
-        self.addCleanup(self.scanner.SESSION.close)
+        self.probe = load_probe()
 
     def check(self, local_status, answers, url="https://provider.invalid"):
-        with patch.object(self.scanner, "query_ttnet_dns", return_value=[]), \
-             patch.object(self.scanner.socket, "gethostbyname", return_value="192.0.2.1"), \
-             patch.object(self.scanner.requests, "get", return_value=site_response(local_status)), \
-             patch.object(self.scanner, "globalping_http", side_effect=answers) as probe:
-            failed, reason = self.scanner.is_provider_dead([url], {})
+        with patch.object(self.probe, "query_ttnet_dns", return_value=[]), \
+             patch.object(socket, "gethostbyname", return_value="192.0.2.1"), \
+             patch.object(requests, "get", return_value=site_response(local_status)), \
+             patch.object(self.probe, "globalping_http", side_effect=answers) as probe:
+            failed, reason = self.probe.is_provider_dead([url], {})
         return failed, reason, probe
 
     def test_blocked_site_that_opens_from_turkey_is_alive(self):
@@ -97,12 +102,8 @@ class TurkishProbeTests(unittest.TestCase):
         probe.assert_not_called()
 
     def test_probe_is_off_unless_enabled(self):
-        with patch.dict(os.environ, {"CSREPO_TR_PROBE": ""}):
-            spec = importlib.util.spec_from_file_location("tr_probe_off", SCANNER_PATH)
-            scanner = importlib.util.module_from_spec(spec)
-            spec.loader.exec_module(scanner)
-        self.addCleanup(scanner.SESSION.close)
-        with patch.object(scanner.requests, "post") as post:
+        scanner = load_probe(enabled=False)
+        with patch.object(requests, "post") as post:
             self.assertIsNone(scanner.globalping_http("https://provider.invalid"))
         post.assert_not_called()
 
@@ -111,9 +112,9 @@ class TurkishProbeTests(unittest.TestCase):
         finished = api_response(200, {"status": "finished", "results": [{"result": {
             "statusCode": 301, "headers": {"location": ["https://next.invalid/"]}, "rawBody": "Moved",
         }}]})
-        with patch.object(self.scanner.requests, "post", return_value=created) as post, \
-             patch.object(self.scanner.requests, "get", return_value=finished):
-            answer = self.scanner.globalping_http("http://provider.invalid:8080/base?x=1")
+        with patch.object(requests, "post", return_value=created) as post, \
+             patch.object(requests, "get", return_value=finished):
+            answer = self.probe.globalping_http("http://provider.invalid:8080/base?x=1")
         body = post.call_args.kwargs["json"]
         self.assertEqual(body["target"], "provider.invalid")
         self.assertEqual(body["locations"], [{"country": "TR"}])
@@ -123,31 +124,23 @@ class TurkishProbeTests(unittest.TestCase):
         self.assertEqual(answer, {"status": 301, "location": "https://next.invalid/", "body": "moved"})
 
     def test_quota_exhaustion_stops_further_measurements(self):
-        with patch.object(self.scanner.requests, "post", return_value=api_response(429)) as post:
-            self.assertIsNone(self.scanner.globalping_http("https://first.invalid"))
-            self.assertIsNone(self.scanner.globalping_http("https://second.invalid"))
+        with patch.object(requests, "post", return_value=api_response(429)) as post:
+            self.assertIsNone(self.probe.globalping_http("https://first.invalid"))
+            self.assertIsNone(self.probe.globalping_http("https://second.invalid"))
         self.assertEqual(post.call_count, 1)
 
-    def load_with_token(self, token):
-        with patch.dict(os.environ, {"GITHUB_TOKEN": "", "CSREPO_TR_PROBE": "1", "GLOBALPING_TOKEN": token}):
-            spec = importlib.util.spec_from_file_location("tr_probe_token", SCANNER_PATH)
-            scanner = importlib.util.module_from_spec(spec)
-            spec.loader.exec_module(scanner)
-        self.addCleanup(scanner.SESSION.close)
-        return scanner
-
     def test_token_is_sent_when_configured(self):
-        scanner = self.load_with_token("secret-value")
-        with patch.object(scanner.requests, "post", return_value=api_response(500)) as post:
+        scanner = load_probe(token="secret-value")
+        with patch.object(requests, "post", return_value=api_response(500)) as post:
             scanner.globalping_http("https://provider.invalid")
         self.assertEqual(post.call_args.kwargs["headers"]["Authorization"], "Bearer secret-value")
 
     def test_rejected_or_spent_token_falls_back_to_anonymous_once(self):
         for status in (401, 403, 429):
             with self.subTest(status=status):
-                scanner = self.load_with_token("secret-value")
+                scanner = load_probe(token="secret-value")
                 output = io.StringIO()
-                with patch.object(scanner.requests, "post", side_effect=[api_response(status), api_response(500), api_response(500)]) as post, \
+                with patch.object(requests, "post", side_effect=[api_response(status), api_response(500), api_response(500)]) as post, \
                      contextlib.redirect_stdout(output):
                     scanner.globalping_http("https://provider.invalid")
                     scanner.globalping_http("https://second.invalid")
@@ -160,9 +153,9 @@ class TurkishProbeTests(unittest.TestCase):
     def test_first_measurement_logs_token_presence_once_without_value(self):
         for token, expected in (("secret-value", "token: var"), ("", "token: yok")):
             with self.subTest(token=bool(token)):
-                scanner = self.load_with_token(token)
+                scanner = load_probe(token=token)
                 output = io.StringIO()
-                with patch.object(scanner.requests, "post", return_value=api_response(500)), \
+                with patch.object(requests, "post", return_value=api_response(500)), \
                      contextlib.redirect_stdout(output):
                     scanner.globalping_http("https://first.invalid")
                     scanner.globalping_http("https://second.invalid")
@@ -170,13 +163,13 @@ class TurkishProbeTests(unittest.TestCase):
                 self.assertNotIn("secret-value", output.getvalue())
 
     def test_no_token_sends_no_authorization(self):
-        with patch.object(self.scanner.requests, "post", return_value=api_response(500)) as post:
-            self.scanner.globalping_http("https://provider.invalid")
+        with patch.object(requests, "post", return_value=api_response(500)) as post:
+            self.probe.globalping_http("https://provider.invalid")
         self.assertNotIn("Authorization", post.call_args.kwargs["headers"])
 
     def test_api_failure_means_no_answer(self):
-        with patch.object(self.scanner.requests, "post", side_effect=requests.ConnectionError("down")):
-            self.assertIsNone(self.scanner.globalping_http("https://provider.invalid"))
+        with patch.object(requests, "post", side_effect=requests.ConnectionError("down")):
+            self.assertIsNone(self.probe.globalping_http("https://provider.invalid"))
 
 
 if __name__ == "__main__":

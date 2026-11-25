@@ -1,16 +1,16 @@
 import hashlib
-import importlib.util
 import io
 import json
-import os
 import unittest
 import zipfile
 import zlib
-from pathlib import Path
 from unittest.mock import patch
 
+import requests
 
-SCANNER_PATH = Path(__file__).resolve().parents[1] / "scanner" / "discover.py"
+from scanner import plugin_validation
+
+
 
 
 def dex_fixture():
@@ -50,17 +50,12 @@ class DownloadResponse:
 
 class PluginValidationTests(unittest.TestCase):
     def setUp(self):
-        spec = importlib.util.spec_from_file_location("plugin_validation", SCANNER_PATH)
-        self.scanner = importlib.util.module_from_spec(spec)
-        with patch.dict(os.environ, {"GITHUB_TOKEN": ""}):
-            spec.loader.exec_module(self.scanner)
-        self.addCleanup(self.scanner.SESSION.close)
         self.plugin = {"name": "Example", "internalName": "Example", "status": 1,
                        "url": "https://example.invalid/Example.cs3"}
 
     def validate(self, content, **changes):
-        with patch.object(self.scanner.requests, "get", return_value=DownloadResponse(content)):
-            return self.scanner.validate_plugin_file(dict(self.plugin, **changes), {})
+        with patch.object(requests, "get", return_value=DownloadResponse(content)):
+            return plugin_validation.validate_plugin_file(dict(self.plugin, **changes), {})
 
     def test_well_formed_manifest_and_dex_pass_integrity_checks(self):
         content = package()
@@ -87,8 +82,8 @@ class PluginValidationTests(unittest.TestCase):
 
     def test_malformed_declared_hash_is_rejected_before_downloading(self):
         for value in ("sha256-invalid", "", 123):
-            with self.subTest(value=value), patch.object(self.scanner.requests, "get") as download:
-                result = self.scanner.validate_plugin_file(dict(self.plugin, fileHash=value), {})
+            with self.subTest(value=value), patch.object(requests, "get") as download:
+                result = plugin_validation.validate_plugin_file(dict(self.plugin, fileHash=value), {})
                 self.assertEqual(result["reason"], "invalid-file-hash")
                 download.assert_not_called()
 
