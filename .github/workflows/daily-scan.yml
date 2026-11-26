@@ -67,13 +67,13 @@ jobs:
 
       - name: Commit scan results
         run: |
-          if git diff --quiet -- README.md repo.json plugins.json repo-x92.json plugins-x92.json repos-db.json catalog.md data/catalog.json data/plugin-health.json data/bridge-health.json data/live-plugins.json data/ranking.json data/repos.json data/turkish_all.json data/global.json data/candidates.json data/changes.json data/owner-probes.json data/code-search.json data/skipped.json; then
+          if git diff --quiet -- README.md repo.json plugins.json repo-x92.json plugins-x92.json repos-db.json catalog.md data/catalog.json data/plugin-health.json data/bridge-health.json data/bridge-results.json data/live-plugins.json data/ranking.json data/repos.json data/turkish_all.json data/global.json data/candidates.json data/changes.json data/owner-probes.json data/code-search.json data/skipped.json; then
             echo "No changes."
             exit 0
           fi
           git config user.name "csrepo-bot"
           git config user.email "csrepo-bot@users.noreply.github.com"
-          git add README.md repo.json plugins.json repo-x92.json plugins-x92.json repos-db.json catalog.md data/catalog.json data/plugin-health.json data/bridge-health.json data/live-plugins.json data/ranking.json data/repos.json data/turkish_all.json data/global.json data/candidates.json data/changes.json data/owner-probes.json data/code-search.json data/skipped.json
+          git add README.md repo.json plugins.json repo-x92.json plugins-x92.json repos-db.json catalog.md data/catalog.json data/plugin-health.json data/bridge-health.json data/bridge-results.json data/live-plugins.json data/ranking.json data/repos.json data/turkish_all.json data/global.json data/candidates.json data/changes.json data/owner-probes.json data/code-search.json data/skipped.json
           git commit -m "chore: update CloudStream repo scan"
           # Telefon köprüsü aynı anda health.json yazabildiği için rebase + tekrar dene.
           for attempt in 1 2 3 4; do

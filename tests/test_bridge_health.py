@@ -26,6 +26,7 @@ class BridgeHealthTests(unittest.TestCase):
         self.module.PLUGINS_PATH = root / "plugins-x92.json"
         self.module.LIVE_PLUGINS_PATH = root / "data" / "live-plugins.json"
         self.module.SUMMARY_PATH = root / "data" / "bridge-health.json"
+        self.module.RESULTS_PATH = root / "data" / "bridge-results.json"
         self.root = root
 
     def write(self, path, value):
@@ -91,7 +92,9 @@ class BridgeHealthTests(unittest.TestCase):
             with self.subTest(health_row=health_row):
                 entries = [dict(plugin)]
                 health = {"generated_at": self.stamp(), "plugins": [health_row]}
-                self.assertEqual(self.module.merge(health, entries), expected)
+                results = self.module.update_results({}, health, entries)
+                matched, _, _ = self.module.apply_results(results, entries)
+                self.assertEqual(matched, expected)
                 self.assertEqual("bridge" in entries[0], bool(expected))
 
     def test_requires_version_and_url_when_report_has_no_hash(self):
@@ -111,7 +114,9 @@ class BridgeHealthTests(unittest.TestCase):
             with self.subTest(health_row=health_row):
                 entries = [dict(plugin)]
                 health = {"generated_at": self.stamp(), "plugins": [health_row]}
-                self.assertEqual(self.module.merge(health, entries), expected)
+                results = self.module.update_results({}, health, entries)
+                matched, _, _ = self.module.apply_results(results, entries)
+                self.assertEqual(matched, expected)
                 self.assertEqual("bridge" in entries[0], bool(expected))
 
     def test_live_list_uses_bridge_status_from_main_list(self):
@@ -150,6 +155,105 @@ class BridgeHealthTests(unittest.TestCase):
         self.assertEqual(self.module.main(), 0)
         plugins = json.loads(self.module.PLUGINS_PATH.read_text(encoding="utf-8"))
         self.assertNotIn("bridge", plugins[0])
+
+    def run_scan(self, status, plugins, stamp=None):
+        def status_of(plugin):
+            return status.get(plugin["internalName"], "unknown") if isinstance(status, dict) else status
+
+        self.write(self.module.PLUGINS_PATH, plugins)
+        self.write(self.module.HEALTH_PATH, {
+            "generated_at": stamp or self.stamp(),
+            "total": len(plugins), "done": len(plugins),
+            "ok": sum(1 for p in plugins if status_of(p) == "ok"),
+            "empty": 0,
+            "dead": sum(1 for p in plugins if status_of(p) == "dead"),
+            "plugins": [{**plugin, "status": status_of(plugin)} for plugin in plugins],
+        })
+        self.assertEqual(self.module.main(), 0)
+        return json.loads(self.module.PLUGINS_PATH.read_text(encoding="utf-8"))
+
+    def results(self):
+        return json.loads(self.module.RESULTS_PATH.read_text(encoding="utf-8"))
+
+    def test_three_consecutive_dead_scans_remove_plugin(self):
+        dead = {"internalName": "Olu", "name": "Olu", "version": 1, "url": "https://example.org/olu.cs3"}
+        live = {**dead, "internalName": "Sag", "name": "Sag", "url": "https://example.org/sag.cs3"}
+        live["tvTypes"] = ["Live"]
+
+        for expected_streak in (1, 2):
+            plugins = self.run_scan({"Olu": "dead", "Sag": "ok"}, [dict(dead), dict(live)])
+            self.assertEqual([p["internalName"] for p in plugins], ["Olu", "Sag"])
+            self.assertEqual(plugins[0]["bridge"]["dead_streak"], expected_streak)
+
+        plugins = self.run_scan({"Olu": "dead", "Sag": "ok"}, [dict(dead), dict(live)])
+        self.assertEqual([p["internalName"] for p in plugins], ["Sag"])
+        self.assertEqual(self.results()["plugins"][0]["dead_streak"], 3)
+        summary = json.loads(self.module.SUMMARY_PATH.read_text(encoding="utf-8"))
+        self.assertEqual(summary["removed_count"], 1)
+        self.assertEqual(summary["removed"][0]["internal_name"], "olu")
+        live_plugins = json.loads(self.module.LIVE_PLUGINS_PATH.read_text(encoding="utf-8"))
+        self.assertEqual([p["internalName"] for p in live_plugins], ["Sag"])
+
+    def test_unknown_does_not_count_or_reset_dead_streak(self):
+        plugin = {"internalName": "Olu", "name": "Olu", "version": 1, "url": "https://example.org/olu.cs3"}
+        self.run_scan("dead", [dict(plugin)])
+        self.run_scan("dead", [dict(plugin)])
+        self.run_scan("unknown", [dict(plugin)])
+        self.assertEqual(self.results()["plugins"][0]["dead_streak"], 2)
+
+        plugins = self.run_scan("dead", [dict(plugin)])
+        self.assertEqual(plugins, [])
+        self.assertEqual(self.results()["plugins"][0]["dead_streak"], 3)
+
+    def test_ok_resets_dead_streak(self):
+        plugin = {"internalName": "Alfa", "name": "Alfa", "version": 1, "url": "https://example.org/alfa.cs3"}
+        self.run_scan("dead", [dict(plugin)])
+        self.run_scan("dead", [dict(plugin)])
+        self.run_scan("ok", [dict(plugin)])
+        plugins = self.run_scan("dead", [dict(plugin)])
+        self.assertEqual(len(plugins), 1)
+        self.assertEqual(plugins[0]["bridge"]["dead_streak"], 1)
+
+    def test_results_survive_a_scan_without_health(self):
+        plugin = {"internalName": "Alfa", "name": "Alfa", "version": 1, "url": "https://example.org/alfa.cs3"}
+        self.run_scan("ok", [dict(plugin)])
+        self.module.HEALTH_PATH.unlink()
+
+        self.write(self.module.PLUGINS_PATH, [dict(plugin)])
+        self.assertEqual(self.module.main(), 0)
+
+        plugins = json.loads(self.module.PLUGINS_PATH.read_text(encoding="utf-8"))
+        self.assertEqual(plugins[0]["bridge"]["status"], "ok")
+        self.assertEqual(plugins[0]["bridge"]["dead_streak"], 0)
+
+    def test_old_results_are_pruned(self):
+        plugin = {"internalName": "Alfa", "name": "Alfa", "version": 1, "url": "https://example.org/alfa.cs3"}
+        self.write(self.module.RESULTS_PATH, {
+            "generated_at": self.stamp(days_ago=self.module.RESULTS_MAX_AGE_DAYS + 1),
+            "plugins": [{
+                **plugin, "internal_name": "alfa", "status": "dead", "dead_streak": 3,
+                "checked_at": self.stamp(days_ago=self.module.RESULTS_MAX_AGE_DAYS + 1),
+            }],
+        })
+        self.write(self.module.PLUGINS_PATH, [dict(plugin)])
+
+        self.assertEqual(self.module.main(), 0)
+
+        plugins = json.loads(self.module.PLUGINS_PATH.read_text(encoding="utf-8"))
+        self.assertEqual(len(plugins), 1)
+        self.assertNotIn("bridge", plugins[0])
+        self.assertEqual(self.results()["plugins"], [])
+
+    def test_changed_file_does_not_inherit_dead_streak(self):
+        old = {"internalName": "Alfa", "version": 1, "url": "https://example.org/alfa.cs3"}
+        new = {**old, "version": 2, "url": "https://example.org/alfa-v2.cs3"}
+        self.run_scan("dead", [dict(old)])
+        self.run_scan("dead", [dict(old)])
+        self.assertEqual(self.results()["plugins"][0]["dead_streak"], 2)
+
+        plugins = self.run_scan("dead", [dict(new)])
+        self.assertEqual(len(plugins), 1)
+        self.assertEqual(plugins[0]["bridge"]["dead_streak"], 1)
 
 
 if __name__ == "__main__":
