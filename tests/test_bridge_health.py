@@ -28,6 +28,7 @@ class BridgeHealthTests(unittest.TestCase):
         self.module.SUMMARY_PATH = root / "data" / "bridge-health.json"
         self.module.RESULTS_PATH = root / "data" / "bridge-results.json"
         self.root = root
+        self.scan_tick = 0
 
     def write(self, path, value):
         path.parent.mkdir(parents=True, exist_ok=True)
@@ -160,6 +161,9 @@ class BridgeHealthTests(unittest.TestCase):
         def status_of(plugin):
             return status.get(plugin["internalName"], "unknown") if isinstance(status, dict) else status
 
+        self.scan_tick += 1
+        stamp = stamp or (datetime.now(timezone.utc) + timedelta(minutes=self.scan_tick)).replace(
+            microsecond=0).isoformat().replace("+00:00", "Z")
         self.write(self.module.PLUGINS_PATH, plugins)
         self.write(self.module.HEALTH_PATH, {
             "generated_at": stamp or self.stamp(),
@@ -204,6 +208,14 @@ class BridgeHealthTests(unittest.TestCase):
         plugins = self.run_scan("dead", [dict(plugin)])
         self.assertEqual(plugins, [])
         self.assertEqual(self.results()["plugins"][0]["dead_streak"], 3)
+
+    def test_same_report_is_not_counted_twice(self):
+        plugin = {"internalName": "Olu", "name": "Olu", "version": 1, "url": "https://example.org/olu.cs3"}
+        stamp = self.stamp()
+        self.run_scan("dead", [dict(plugin)], stamp=stamp)
+        plugins = self.run_scan("dead", [dict(plugin)], stamp=stamp)
+        self.assertEqual(plugins[0]["bridge"]["dead_streak"], 1)
+        self.assertEqual(self.results()["plugins"][0]["dead_streak"], 1)
 
     def test_ok_resets_dead_streak(self):
         plugin = {"internalName": "Alfa", "name": "Alfa", "version": 1, "url": "https://example.org/alfa.cs3"}

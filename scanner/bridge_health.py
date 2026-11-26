@@ -139,6 +139,7 @@ def update_results(results, health, plugins):
     """Taze köprü raporunu kalıcı kayıtlara işler; unknown sayılmaz."""
     index = {plugin_key(plugin): plugin for plugin in plugins}
     stamp = health.get("generated_at")
+    report_time = parse_stamp(stamp)
     for row in health.get("plugins") or []:
         key = plugin_key(row)
         plugin = index.get(key)
@@ -150,6 +151,12 @@ def update_results(results, health, plugins):
             continue
 
         previous = results.get(key)
+        if previous is not None and report_time is not None:
+            previous_time = parse_stamp(previous.get("checked_at"))
+            if previous_time is not None and report_time <= previous_time:
+                # Aynı rapor tekrar okundu; ölü sayısı iki kez artmasın.
+                continue
+
         same_file = previous is not None and record_matches_plugin(previous, plugin)
         streak = int(previous.get("dead_streak") or 0) if same_file else 0
         if status == "dead":
