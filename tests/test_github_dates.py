@@ -2,13 +2,14 @@ import unittest
 from urllib.parse import parse_qs, urlparse
 
 from scanner import repository_discovery, repository_inspection
-from test_discover import RecordingAdapter, use_recording_session
+from test_discover import RecordingAdapter, repository_date, use_recording_session, use_repository_clock
 
 
 API_URL = "https://api.github.com/repos/example/repo"
 RAW_URL = "https://raw.githubusercontent.com/example/repo"
-PLUGIN_DATE = "2026-10-24T09:15:08Z"
-MANIFEST_DATE = "2026-10-30T00:00:00Z"
+PLUGIN_DATE = repository_date(days_ago=33)
+MANIFEST_DATE = repository_date(days_ago=27)
+PUSH_DATE = repository_date(days_ago=25)
 
 
 class CommitDateAdapter(RecordingAdapter):
@@ -32,11 +33,12 @@ class CommitDateAdapter(RecordingAdapter):
 
 class GitHubUpdateDateTests(unittest.TestCase):
     def setUp(self):
+        use_repository_clock(self)
         self.adapter = CommitDateAdapter()
         use_recording_session(self, self.adapter)
         self.adapter.respond(API_URL, {
             "default_branch": "builds", "html_url": "https://github.com/example/repo",
-            "pushed_at": "2026-11-01T00:00:00Z",
+            "pushed_at": PUSH_DATE,
         })
         self.adapter.respond(API_URL + "/branches", [{"name": "builds"}])
 
@@ -55,7 +57,7 @@ class GitHubUpdateDateTests(unittest.TestCase):
         self.assertEqual(result["plugin_lists"][0]["updated_at"], PLUGIN_DATE)
         self.assertEqual(result["last_plugins_update"], PLUGIN_DATE)
         self.assertEqual(result["last_manifest_update"], MANIFEST_DATE)
-        self.assertEqual(result["last_repo_push"], "2026-11-01T00:00:00Z")
+        self.assertEqual(result["last_repo_push"], PUSH_DATE)
 
     def test_short_raw_url_preserves_plugin_update_date(self):
         result = self.inspect(RAW_URL + "/builds/plugins.json")

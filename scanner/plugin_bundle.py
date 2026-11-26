@@ -61,9 +61,9 @@ def is_transient_provider_failure(reason) -> bool:
     return bool(parts) and all(_is_transient_reason_part(part) for part in parts)
 
 
-def previous_published(output_root: Path | None = None) -> dict[str, dict]:
+def previous_published(root: Path | None = None) -> dict[str, dict]:
     """Last published list, used to keep verified records through a temporary outage."""
-    root = scan_utils.ROOT if output_root is None else output_root
+    root = scan_utils.ROOT if root is None else root
     rows = scan_utils.load_json(root / "plugins-x92.json", [])
     index = {}
     if isinstance(rows, list):
@@ -75,22 +75,26 @@ def previous_published(output_root: Path | None = None) -> dict[str, dict]:
     return index
 
 
-def keep_previous_verified(previous_row, transient) -> dict | None:
+def keep_previous_verified(previous_row, actual_hash) -> dict | None:
     """Keep the previous record for one scan if only the site check failed and the file is unchanged."""
     if not isinstance(previous_row, dict) or previous_row.get("recheck"):
         return None
-    if transient is None:
-        return None
     previous_hash = normalize_sha256(previous_row.get("fileHash"))
-    current_hash = normalize_sha256(transient[2].get("actual_hash"))
-    if not previous_hash or not current_hash or previous_hash != current_hash:
+    current_hash = normalize_sha256(actual_hash)
+    if not previous_hash or previous_hash != current_hash:
         return None
     kept = dict(previous_row)
     kept["recheck"] = True
     return kept
 
 
-def build_cloudstream_bundle(app_ready: list[dict], seed_repos: set[str], *, output_root: Path | None = None):
+def build_cloudstream_bundle(
+    app_ready: list[dict],
+    seed_repos: set[str],
+    *,
+    output_root: Path | None = None,
+    published_root: Path | None = None,
+):
     candidates: dict[str, list[tuple[dict, dict]]] = {}
 
     for repo_item in app_ready:
@@ -130,7 +134,7 @@ def build_cloudstream_bundle(app_ready: list[dict], seed_repos: set[str], *, out
     rejection_counts = Counter()
     fallback_count = 0
     recheck_count = 0
-    previous = previous_published(output_root)
+    previous = previous_published(published_root if published_root is not None else output_root)
 
     # Pre-validate in parallel, one variant rank per round: round N checks the N-th best
     # variant only for plugins with no publishable variant yet. This downloads the same
@@ -175,7 +179,8 @@ def build_cloudstream_bundle(app_ready: list[dict], seed_repos: set[str], *, out
 
         selected = None
         unverifiable = None
-        transient = None
+        recheck = None
+        previous_row = previous.get(key)
         attempts = []
         for variant_index, (plugin, source_repo) in enumerate(ranked):
             check = plugin_validation.validate_plugin_file(
@@ -190,6 +195,7 @@ def build_cloudstream_bundle(app_ready: list[dict], seed_repos: set[str], *, out
             if reason in ("request-error", "http-408", "http-425", "http-429") or reason.startswith("http-5"):
                 raise RuntimeError("Plugin download could not be verified; previous results retained.")
             publishable = bool(check.get("ok")) and check.get("provider_check") == "reachable"
+            provider_reason = check.get("provider_reason")
             if check.get("ok") and not publishable:
                 reason = "provider-unverified"
             attempts.append({
@@ -198,18 +204,20 @@ def build_cloudstream_bundle(app_ready: list[dict], seed_repos: set[str], *, out
                 "version": plugin.get("version"),
                 "result": reason,
                 "provider_check": check.get("provider_check", "not-checked"),
-                "provider_reason": check.get("provider_reason"),
+                "provider_reason": provider_reason,
             })
             if publishable:
                 selected = (plugin, source_repo, check, variant_index)
                 break
             if (unverifiable is None and check.get("ok")
-                    and check.get("provider_reason") in CHECKER_LIMIT_REASONS):
+                    and provider_reason in CHECKER_LIMIT_REASONS):
                 unverifiable = (plugin, source_repo, check, variant_index)
-            if (transient is None and check.get("ok")
+            if (recheck is None and check.get("ok")
                     and check.get("provider_check") == "unverified"
-                    and is_transient_provider_failure(check.get("provider_reason"))):
-                transient = (plugin, source_repo, check, variant_index)
+                    and is_transient_provider_failure(provider_reason)):
+                kept = keep_previous_verified(previous_row, check.get("actual_hash"))
+                if kept is not None:
+                    recheck = kept, provider_reason
             rejection_counts[reason or "unknown"] += 1
 
         if not selected and unverifiable:
@@ -217,15 +225,15 @@ def build_cloudstream_bundle(app_ready: list[dict], seed_repos: set[str], *, out
             selected = unverifiable
 
         if not selected:
-            kept = keep_previous_verified(previous.get(key), transient)
-            if kept is not None:
+            if recheck is not None:
+                kept, recheck_reason = recheck
                 published.append(kept)
                 recheck_count += 1
                 health_rows.append({
                     "internal_name": key,
                     "name": kept.get("name"),
                     "status": "recheck",
-                    "reason": transient[2].get("provider_reason") or "provider-unverified",
+                    "reason": recheck_reason or "provider-unverified",
                     "url": kept.get("url"),
                     "version": kept.get("version"),
                     "checked_at": now_iso(),

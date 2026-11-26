@@ -192,6 +192,7 @@ class StageStore:
                 counts = self.api["build_cloudstream_bundle"](
                     parent["payload"]["app_ready"], {item["repository"] for item in first["seeds"]},
                     output_root=artifact,
+                    published_root=self.root,
                 )
                 payload = {
                     "bundle_counts": list(counts), "artifact_dir": str(artifact.relative_to(self.directory)),

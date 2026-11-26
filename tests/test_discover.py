@@ -1,5 +1,6 @@
 import json
 import unittest
+from datetime import datetime, timedelta, timezone
 from unittest.mock import patch
 
 import requests
@@ -9,6 +10,7 @@ from scanner import repository_discovery, repository_inspection, scan_utils
 
 
 DUMMY_TOKEN = "test-placeholder-not-a-real-token"
+REPOSITORY_TEST_TIME = datetime(2026, 11, 26, 12, tzinfo=timezone.utc)
 
 
 class RecordingAdapter(BaseAdapter):
@@ -40,6 +42,24 @@ class RecordingAdapter(BaseAdapter):
 
     def close(self):
         pass
+
+
+class _FixedRepositoryDateTime(datetime):
+    @classmethod
+    def now(cls, tz=None):
+        if tz is None:
+            return REPOSITORY_TEST_TIME.replace(tzinfo=None)
+        return REPOSITORY_TEST_TIME.astimezone(tz)
+
+
+def use_repository_clock(test):
+    clock = patch.object(repository_discovery, "datetime", _FixedRepositoryDateTime)
+    clock.start()
+    test.addCleanup(clock.stop)
+
+
+def repository_date(*, days_ago: int) -> str:
+    return (REPOSITORY_TEST_TIME - timedelta(days=days_ago)).isoformat().replace("+00:00", "Z")
 
 
 def use_recording_session(test, adapter, token=""):
@@ -154,13 +174,16 @@ class ScannerAuthenticationTests(unittest.TestCase):
             repository_inspection.inspect_repo("example/repo", {"seed"})
 
     def test_repository_scan_and_plugin_list_download_still_work(self):
+        use_repository_clock(self)
         api_url = "https://api.github.com/repos/example/repo"
         manifest_url = "https://raw.githubusercontent.com/example/repo/builds/repo.json"
         plugins_url = "https://cdn.jsdelivr.net/gh/example/repo@builds/plugins.json"
         plugins = [{"name": "Example", "internalName": "Example", "language": "tr", "status": 1}]
         self.adapter.respond(api_url, {"default_branch": "main", "html_url": "https://github.com/example/repo"})
         self.adapter.respond(api_url + "/branches", [{"name": "builds"}])
-        self.adapter.respond(api_url + "/commits", [{"commit": {"committer": {"date": "2026-10-30T00:00:00Z"}}}])
+        self.adapter.respond(api_url + "/commits", [
+            {"commit": {"committer": {"date": repository_date(days_ago=27)}}},
+        ])
         self.adapter.respond(manifest_url, {"name": "Example", "manifestVersion": 1, "pluginLists": [plugins_url]})
         self.adapter.respond(plugins_url, plugins)
 

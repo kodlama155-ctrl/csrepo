@@ -81,6 +81,29 @@ class ScanStageTests(unittest.TestCase):
         self.validate.assert_called()
         self.assertEqual(self.store.load(4)["stage"], 4)
 
+    def test_stage_three_reads_published_list_for_transient_site_errors(self):
+        stable = dict(self.plugin, name="Stable", internalName="Stable",
+                      url="https://example.invalid/stable.cs3")
+        self.entries.return_value = [self.plugin, stable]
+        self.run_steps(1, 2, 3, 4)
+        published_path = self.root / "plugins-x92.json"
+        before = scan_utils.load_json(published_path, [])
+
+        verified = self.validate.return_value
+        temporary_failure = dict(verified, provider_check="unverified", provider_reason="provider.invalid:http-500")
+
+        def validate(plugin, *args):
+            return temporary_failure if plugin["internalName"] == "Example" else verified
+
+        self.validate.side_effect = validate
+        self.run_steps(3)
+        self.assertEqual(scan_utils.load_json(published_path, []), before)
+        self.run_steps(4)
+
+        published = scan_utils.load_json(published_path, [])
+        self.assertEqual([plugin["internalName"] for plugin in published], ["Example", "Stable"])
+        self.assertEqual(published[0], dict(before[0], recheck=True))
+
     def test_continue_from_three_skips_discovery_and_inspection(self):
         self.run_steps(1, 2)
         self.discover.reset_mock()

@@ -1,9 +1,9 @@
 import unittest
-from datetime import datetime, timedelta, timezone
+from datetime import timedelta, timezone
 from unittest.mock import patch
 
 from scanner import repository_discovery, repository_inspection
-from test_discover import RecordingAdapter, use_recording_session
+from test_discover import REPOSITORY_TEST_TIME, RecordingAdapter, use_recording_session, use_repository_clock
 
 
 API_URL = "https://api.github.com/repos/example/repo"
@@ -14,7 +14,8 @@ class RepositoryRecencyTests(unittest.TestCase):
     def setUp(self):
         self.adapter = RecordingAdapter()
         use_recording_session(self, self.adapter)
-        self.now = datetime.now(timezone.utc)
+        use_repository_clock(self)
+        self.now = REPOSITORY_TEST_TIME
         self.old = (self.now - timedelta(days=366)).isoformat()
         self.recent = (self.now - timedelta(days=2)).isoformat()
         self.metadata = {"default_branch": "builds", "pushed_at": self.recent}

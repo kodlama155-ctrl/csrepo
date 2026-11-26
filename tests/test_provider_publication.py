@@ -215,6 +215,40 @@ class ProviderPublicationTests(unittest.TestCase):
         self.assertEqual(row["status"], "rejected")
         self.assertEqual(health["recheck_plugin_count"], 0)
 
+    def test_transient_site_error_keeps_matching_variant_after_newer_one(self):
+        newer = dict(self.good, version=2, url="https://example.invalid/newer.cs3")
+        stable = dict(self.good, name="Stable", internalName="Stable",
+                      url="https://example.invalid/stable.cs3")
+        stable_site = "https://stable-provider.invalid"
+        plugins = [self.good, newer, stable]
+        packages = {
+            self.good["url"]: provider_package(self.good_site),
+            newer["url"]: provider_package(self.bad_site),
+            stable["url"]: provider_package(stable_site),
+        }
+        extra_sites = {stable_site: site_response()}
+        _, published, _ = self.build(
+            plugins, packages, blocked_response=site_response(404), extra_sites=extra_sites,
+        )
+        previous = next(plugin for plugin in published if plugin["internalName"] == "Good")
+        self.assertEqual(previous["version"], 1)
+
+        outage = {
+            "good_response": site_response(500),
+            "blocked_response": site_response(500),
+            "extra_sites": extra_sites,
+        }
+        _, published, health = self.build(plugins, packages, **outage)
+        self.assertEqual(
+            [plugin for plugin in published if plugin["internalName"] == "Good"],
+            [dict(previous, recheck=True)],
+        )
+        row = next(row for row in health["plugins"] if row["internal_name"] == "good")
+        self.assertEqual((row["status"], row["reason"]), ("recheck", "good-provider.invalid:http-500"))
+
+        _, published, _ = self.build(plugins, packages, **outage)
+        self.assertEqual([plugin["internalName"] for plugin in published], ["Stable"])
+
     def test_changed_file_or_non_transient_error_does_not_keep_previous_record(self):
         archive = provider_package(self.good_site)
         digest = hashlib.sha256(archive).hexdigest()
