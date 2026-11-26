@@ -127,7 +127,14 @@
     "internalName": "AnimeTR",
     "description": "AnimeTR — anime ve donghua arşivi (animetr.co)",
     "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/AnimeTR.cs3",
-    "name": "AnimeTR"
+    "name": "AnimeTR",
+    "bridge": {
+      "status": "ok",
+      "links": 12,
+      "ms": 9730,
+      "checked_at": "2026-11-26T02:19:11Z",
+      "dead_streak": 0
+    }
   },
   {
     "url": "https://raw.githubusercontent.com/UmayTrade/MyTV/builds/Anizium.cs3",
@@ -498,25 +505,25 @@
     "fileHash": "sha256-0848cc7077364b3476207739864a1c970346430432091104ba2f819039bbce2f"
   },
   {
-    "iconUrl": "https://www.google.com/s2/favicons?sz=128&domain=belgeselx.com",
-    "fileHash": "sha256-44a7a5e2f4898e6412b983be7e5f8d9421af8dc59e2730400708edd565f2ddf7",
-    "apiVersion": 1,
-    "repositoryUrl": "https://github.com/Emre-Kahveci/CloudStreamHub",
-    "fileSize": 151758,
+    "url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepofull/builds/BelgeselX.cs3",
     "status": 1,
-    "language": "tr",
+    "version": 36,
+    "name": "BelgeselX",
+    "internalName": "BelgeselX",
     "authors": [
-      "CloudStreamTR",
-      "keyiflerolsun"
+      "kraptor",
+      "ByAyzen"
     ],
+    "description": "En yeni belgeseller, türkçe altyazılı yada dublaj olarak 1080p kalitesinde HD belgesel izle.",
+    "fileSize": 42446,
+    "repositoryUrl": "https://github.com/hrtestingx/hrcsrepofull",
+    "language": "tr",
     "tvTypes": [
       "Documentary"
     ],
-    "version": 110,
-    "internalName": "BelgeselX",
-    "description": "BelgeselX - Türkçe dublaj ve altyazılı belgesel arşivi",
-    "url": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/BelgeselX.cs3",
-    "name": "BelgeselX"
+    "iconUrl": "https://www.google.com/s2/favicons?sz=64&domain=belgeselx.com",
+    "apiVersion": 1,
+    "fileHash": "sha256-cbf5629bc1e72752f55ae1121d9ff65811e5414045c5543e06017caf7e9570f9"
   },
   {
     "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/BetmatikTV.cs3?v=ff17447c948b",
@@ -898,7 +905,8 @@
     "iconUrl": "https://www.google.com/s2/favicons?domain=cizgifilm.tv&sz=128",
     "apiVersion": 1,
     "fileHash": "sha256-f79fbf79313915f019c93aa99e9cfb982e22a00953965b90ba956d4128d192af",
-    "hash": "f79fbf79313915f019c93aa99e9cfb982e22a00953965b90ba956d4128d192af"
+    "hash": "f79fbf79313915f019c93aa99e9cfb982e22a00953965b90ba956d4128d192af",
+    "recheck": true
   },
   {
     "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/CizgiMax.cs3",
@@ -964,8 +972,7 @@
     "iconUrl": "https://www.google.com/s2/favicons?domain=cizgiportal.net&sz=128",
     "apiVersion": 1,
     "fileHash": "sha256-5cc9e719367b1126f22e5d0bf3c6202fd75c400e5c15fce89c5776b010ece5cd",
-    "hash": "5cc9e719367b1126f22e5d0bf3c6202fd75c400e5c15fce89c5776b010ece5cd",
-    "recheck": true
+    "hash": "5cc9e719367b1126f22e5d0bf3c6202fd75c400e5c15fce89c5776b010ece5cd"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=cizgi.site&sz=%size%",
@@ -2750,27 +2757,6 @@
     "fileHash": "sha256-4f7b6c3bebee270444dc2432cc06648adf22a618f6c162e09a599554bb44fc7e"
   },
   {
-    "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/FullHDFilmizlesene.cs3",
-    "status": 1,
-    "version": 74,
-    "name": "FullHDFilmizlesene",
-    "internalName": "FullHDFilmizlesene",
-    "authors": [
-      "kraptor",
-      "ByAyzen"
-    ],
-    "description": "Sinema zevkini evinize kadar getirdik. Türkiye'nin lider Film sitesinde, en yeni filmleri Full HD izleyin.",
-    "fileSize": 144765,
-    "repositoryUrl": "https://github.com/aytzey/cs-kraptor",
-    "language": "tr",
-    "tvTypes": [
-      "Movie"
-    ],
-    "iconUrl": "https://www.google.com/s2/favicons?sz=64&domain=www.fullhdfilmizlesene.de",
-    "apiVersion": 1,
-    "fileHash": "sha256-a5e16f294f5d7fcc093e918560fe8b9dbbf42f8df84cb46de105ac9849c15d36"
-  },
-  {
     "url": "https://raw.githubusercontent.com/aytzey/cs-kraptor/builds/GinikoCanli.cs3",
     "status": 1,
     "version": 17,
@@ -3367,8 +3353,7 @@
     "internalName": "IzleFilm",
     "description": "IzleFilm — izlefilm.net Full HD Türkçe dublaj/altyazılı film arşivi",
     "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/IzleFilm.cs3",
-    "name": "IzleFilm",
-    "recheck": true
+    "name": "IzleFilm"
   },
   {
     "url": "https://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/builds/TurkSinema_IzleOyna_v3.cs3",
@@ -3390,7 +3375,8 @@
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=izleoyna.com&sz=128",
     "apiVersion": 1,
-    "fileHash": "sha256-bcd8b61b979deae506e570fa9c6678ad35613fbc72b6b75c3d7cf679c3e7786f"
+    "fileHash": "sha256-bcd8b61b979deae506e570fa9c6678ad35613fbc72b6b75c3d7cf679c3e7786f",
+    "recheck": true
   },
   {
     "url": "https://wiojelt-auth.hdf-worker.workers.dev/dl/spor/JestYayin.cs3?v=b42b08a9105f",
@@ -4445,8 +4431,7 @@
     "internalName": "OnlineDizi",
     "description": "OnlineDizi — Türkçe dublaj & altyazılı yabancı/Asya dizileri (onlinedizi.sbs)",
     "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/OnlineDizi.cs3",
-    "name": "OnlineDizi",
-    "recheck": true
+    "name": "OnlineDizi"
   },
   {
     "url": "https://raw.githubusercontent.com/hrtestingx/hrcsrepofull/builds/OpenAnime.cs3",
@@ -6382,27 +6367,6 @@
     "description": "Weboo — Türkçe içerik",
     "url": "https://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/builds/Weboo.cs3",
     "name": "Weboo"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film_2/builds/WebteIzle.cs3",
-    "status": 1,
-    "version": 59,
-    "name": "WebteIzle",
-    "internalName": "WebteIzle",
-    "authors": [
-      "keyiflerolsun",
-      "nikyokki"
-    ],
-    "description": "Her türlü filmi ister dublaj ister altyazılı, en kaliteli bir şekilde izleyebileceğiniz arşivi en geniş gerçek film izleme siteniz.",
-    "fileSize": 35303,
-    "repositoryUrl": "https://github.com/arcilingir/Dizi_Film_2",
-    "language": "tr",
-    "tvTypes": [
-      "Movie"
-    ],
-    "iconUrl": "https://www.google.com/s2/favicons?domain=webteizle2.com&sz=%size%",
-    "apiVersion": 1,
-    "fileHash": "sha256-cdfa54fcb567d500705525c1c7d2764d1522c751383e3ed2c9b3e6097918e7fc"
   },
   {
     "name": "WioDB",
