@@ -17,7 +17,7 @@ Otomatik doğrulanan ve aktif Türkçe CloudStream eklenti depoları:
 - [MRC - CloudStream Türkçe Eklenti Deposu](cloudstreamrepo://raw.githubusercontent.com/lepotane/MRC-builds/builds/repo.json) — RepoScore 84.7/100 — 73 eklenti — ana kaynak
 - [PobloStream](cloudstreamrepo://raw.githubusercontent.com/PobloMert/PobloStream/builds/repo.json) — RepoScore 84.7/100 — 52 eklenti
 - [CloudStream Süper Repo](cloudstreamrepo://raw.githubusercontent.com/MrKonce/ozel-cs-repom/main/repo.json) — RepoScore 84.6/100 — 88 eklenti
-- [BigBullApp](cloudstreamrepo://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/master/repo.json) — RepoScore 83.4/100 — 141 eklenti
+- [BigBullApp](cloudstreamrepo://raw.githubusercontent.com/F0Rextasy/bigbullapp-cs/master/repo.json) — RepoScore 83.5/100 — 141 eklenti
 - [Safarxe CloudStream](cloudstreamrepo://raw.githubusercontent.com/safarxe/CloudStream/builds/repo.json) — RepoScore 83.2/100 — 52 eklenti
 - [CloudStream TÃ¼rkÃ§e Eklenti Deposu](cloudstreamrepo://raw.githubusercontent.com/merb2y/cs-builds/builds/repo.json) — RepoScore 83.2/100 — 41 eklenti
 - [WioDrama](cloudstreamrepo://raw.githubusercontent.com/Wiojelt/WioDrama/builds/repo.json) — RepoScore 82.9/100 — 20 eklenti — ana kaynak
